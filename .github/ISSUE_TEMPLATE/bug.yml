@@ -1,0 +1,24 @@
+name: Bug report / 问题反馈
+description: Report an index or website problem / 反馈索引或网站问题
+title: "[Bug] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened? / 发生了什么？
+      description: Include the URL or package name and steps to reproduce. / 请附地址或包名，以及复现步骤。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result / 预期结果
+  - type: input
+    id: version
+    attributes:
+      label: DSH version or browser / DSH 版本或浏览器
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error message / 错误信息
+      description: Remove credentials and personal information. / 请移除密钥和个人信息。

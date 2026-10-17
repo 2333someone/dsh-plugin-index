@@ -1,0 +1,419 @@
+[
+  {
+    "name": "@michengai/dsh-skills-manager",
+    "title": {
+      "en": "Skills Manager",
+      "zh": "技能管理器"
+    },
+    "description": {
+      "en": "Manage local and project skills with repository installs, update previews, backups, and restoration.",
+      "zh": "管理本机与项目技能，支持仓库安装、更新预览及备份恢复。"
+    },
+    "category": "skills",
+    "repository": {
+      "url": "https://github.com/MichengAI/dsh-skills-manager"
+    },
+    "license": "Apache-2.0"
+  },
+  {
+    "name": "dsh-any-background",
+    "title": {
+      "en": "Custom Background",
+      "zh": "自定义背景"
+    },
+    "description": {
+      "en": "Customize theme colors and image or video wallpapers with separate opacity and blur controls for interface areas.",
+      "zh": "自定义主题色与图片或视频壁纸，分别调整各区域的透明度和模糊度。"
+    },
+    "category": "appearance",
+    "repository": {
+      "url": "https://github.com/Tkingxiao/dsh-any-background"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-auto-title",
+    "title": {
+      "en": "Auto Titles",
+      "zh": "自动会话标题"
+    },
+    "description": {
+      "en": "Generate session titles from recent user messages while preserving manually assigned titles.",
+      "zh": "根据会话最近的用户消息生成标题，并保留手动命名。"
+    },
+    "category": "interface",
+    "repository": {
+      "url": "https://github.com/WhatCannotBeSaid/dsh-auto-title"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-bottom-info-bar",
+    "title": {
+      "en": "Bottom Info Bar",
+      "zh": "底部信息栏"
+    },
+    "description": {
+      "en": "Show the current model, account balance or subscription quota, and session or historical spending beneath the composer.",
+      "zh": "在输入框下方显示模型、余额或订阅额度，以及会话与历史费用。"
+    },
+    "category": "usage",
+    "repository": {
+      "url": "https://github.com/songoao25/dsh-bottom-info-bar"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-cad",
+    "title": {
+      "en": "CAD Tools",
+      "zh": "CAD 查看与建模"
+    },
+    "description": {
+      "en": "View 2D and 3D CAD files and use parametric modeling and export tools from a conversation.",
+      "zh": "在会话中查看二维与三维 CAD 文件，并调用参数化建模与导出工具。"
+    },
+    "category": "tools",
+    "repository": {
+      "url": "https://github.com/LAU-MARS/dsh-cad"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-calendar",
+    "title": {
+      "en": "CalDAV Calendar",
+      "zh": "CalDAV 日历"
+    },
+    "description": {
+      "en": "Connect CalDAV calendars to view, create, reschedule, and import events from DSH.",
+      "zh": "连接 CalDAV 日历，在会话中查看、创建和调整日程，并导入日历文件。"
+    },
+    "category": "integrations",
+    "repository": {
+      "url": "https://github.com/STARDUSTLC666/dsh-calendar"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-cert-mcp",
+    "title": {
+      "en": "Plugin Evidence Lookup",
+      "zh": "插件评估查询"
+    },
+    "description": {
+      "en": "Query community plugin assessment records, evidence snapshots, and scoring rules through read-only DSH or MCP tools.",
+      "zh": "通过只读工具查询社区插件评估记录、证据快照与评分规范。"
+    },
+    "category": "tools",
+    "repository": {
+      "url": "https://github.com/PerryLink/dsh-cert-mcp"
+    },
+    "license": "Apache-2.0"
+  },
+  {
+    "name": "dsh-codex-subscription",
+    "title": {
+      "en": "Codex Subscription",
+      "zh": "Codex 订阅接入"
+    },
+    "description": {
+      "en": "Connect eligible ChatGPT and Codex subscriptions through OAuth and view account quotas in DSH.",
+      "zh": "通过 OAuth 接入 ChatGPT 与 Codex 订阅模型，并查看账户额度。"
+    },
+    "category": "providers",
+    "repository": {
+      "url": "https://github.com/WSL043/dsh-codex-subscription"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-cost-meter",
+    "title": {
+      "en": "Cost Meter",
+      "zh": "费用统计"
+    },
+    "description": {
+      "en": "Track session and daily model costs alongside account balances, budgets, and subscription usage.",
+      "zh": "统计会话与每日模型费用，显示账户余额、预算和订阅套餐用量。"
+    },
+    "category": "usage",
+    "repository": {
+      "url": "https://github.com/Han-1413141/dsh-cost-meter"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-dhe-lore",
+    "title": {
+      "en": "Project Lore",
+      "zh": "项目共享记忆"
+    },
+    "description": {
+      "en": "Store project knowledge in editable Markdown files shared across sessions in the same project.",
+      "zh": "将项目知识保存为可编辑的 Markdown 文件，供同一项目的多个会话共享。"
+    },
+    "category": "memory",
+    "repository": {
+      "url": "https://gitee.com/darren_ho/dsh-plugins",
+      "directory": "dsh-dhe-lore"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-email",
+    "title": {
+      "en": "Email",
+      "zh": "邮件"
+    },
+    "description": {
+      "en": "Connect multiple mail accounts to send, receive, and search messages with attachments, drafts, and sending approvals.",
+      "zh": "连接多个邮箱，在会话中收发和搜索邮件，并管理附件、本地草稿与发信审批。"
+    },
+    "category": "integrations",
+    "repository": {
+      "url": "https://github.com/STARDUSTLC666/dsh-email"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-fonttune",
+    "title": {
+      "en": "FontTune",
+      "zh": "字体与排版"
+    },
+    "description": {
+      "en": "Adjust conversation, interface, and code typography and save, import, or export presets.",
+      "zh": "分别调整对话、界面和代码的字体样式，并保存、导入和导出排版预设。"
+    },
+    "category": "appearance",
+    "repository": {
+      "url": "https://github.com/LyaxZ/dsh-fonttune"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-image-viewer",
+    "title": {
+      "en": "Image Viewer",
+      "zh": "图片查看器"
+    },
+    "description": {
+      "en": "Zoom, browse, download, and annotate image regions in the DSH conversation viewer.",
+      "zh": "为会话图片提供缩放、多图浏览、原图下载和区域标注。"
+    },
+    "category": "interface",
+    "repository": {
+      "url": "https://github.com/WSL043/dsh-image-viewer"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-kimi-subscription",
+    "title": {
+      "en": "Kimi Subscription",
+      "zh": "Kimi 订阅接入"
+    },
+    "description": {
+      "en": "Connect Kimi Code subscription models using API keys or device sign-in, with web search and quota displays.",
+      "zh": "接入 Kimi Code 订阅模型，支持设备登录、网页搜索和额度查询。"
+    },
+    "category": "providers",
+    "repository": {
+      "url": "https://github.com/BaronCyrus/dsh-kimi-subscription"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-memento",
+    "title": {
+      "en": "Memento",
+      "zh": "Memento 分层记忆"
+    },
+    "description": {
+      "en": "Keep layered cross-session memories in local SQLite with retrieval, write approvals, and context injection.",
+      "zh": "以本地 SQLite 保存分层跨会话记忆，提供检索、写入审批和上下文注入。"
+    },
+    "category": "memory",
+    "repository": {
+      "url": "https://github.com/PerryLink/dsh-memento"
+    },
+    "license": "Apache-2.0"
+  },
+  {
+    "name": "dsh-office-tools",
+    "title": {
+      "en": "Office Tools",
+      "zh": "Office 文档工具"
+    },
+    "description": {
+      "en": "Create and read documents, spreadsheets, and presentations in the session workspace, and update documents and spreadsheets.",
+      "zh": "在会话工作区中创建和读取文档、表格与演示文稿，并更新文档和表格。"
+    },
+    "category": "tools",
+    "repository": {
+      "url": "https://github.com/kw78/dsh-office-tools"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-opencode-go",
+    "title": {
+      "en": "OpenCode Go",
+      "zh": "OpenCode Go 接入"
+    },
+    "description": {
+      "en": "Manage OpenCode Go models and multiple accounts with subscription quota displays in DSH.",
+      "zh": "在 DSH 中管理 OpenCode Go 模型与多个账号，并显示订阅额度。"
+    },
+    "category": "providers",
+    "repository": {
+      "url": "https://github.com/Duskriver/dsh-opencode-go"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-quick-toc",
+    "title": {
+      "en": "Conversation Outline",
+      "zh": "对话大纲"
+    },
+    "description": {
+      "en": "Turn conversation Markdown headings into a searchable outline with previews and navigation.",
+      "zh": "把会话中的 Markdown 标题整理为可搜索大纲，支持预览与跳转。"
+    },
+    "category": "interface",
+    "repository": {
+      "url": "https://github.com/LyaxZ/dsh-quick-toc"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-skill-hub",
+    "title": {
+      "en": "Skill Hub",
+      "zh": "技能中枢"
+    },
+    "description": {
+      "en": "Browse and toggle skills, diagnose metadata problems, and import or track updates from repositories.",
+      "zh": "在设置页浏览和开关技能，检查格式问题，并从仓库导入及跟踪更新。"
+    },
+    "category": "skills",
+    "repository": {
+      "url": "https://github.com/cheshireez/dsh-skill-hub"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-skills-anywhere",
+    "title": {
+      "en": "Skills Anywhere",
+      "zh": "跨来源技能加载"
+    },
+    "description": {
+      "en": "Discover skills from local directories and Git sources for on-demand loading through DSH or local MCP.",
+      "zh": "汇总本地与 Git 来源的技能，供 DSH 或本地 MCP 按需加载。"
+    },
+    "category": "skills",
+    "repository": {
+      "url": "https://github.com/noteflowai/dsh-skills-anywhere"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-smooth-cursor",
+    "title": {
+      "en": "Smooth Cursor",
+      "zh": "平滑彗星光标"
+    },
+    "description": {
+      "en": "Add a smoothly moving comet cursor to the chat composer with configurable trails, colors, and thickness.",
+      "zh": "为聊天输入框添加平滑移动的彗星光标，可调整拖尾、颜色与粗细。"
+    },
+    "category": "appearance",
+    "repository": {
+      "url": "https://github.com/Lacquervii/smooth-cursor"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-superpowers",
+    "title": {
+      "en": "Superpowers",
+      "zh": "Superpowers 开发技能"
+    },
+    "description": {
+      "en": "Register Superpowers development skills and session guidance with the DSH skills and prompt services.",
+      "zh": "接入 Superpowers 开发技能，并向会话提示词添加使用引导。"
+    },
+    "category": "skills",
+    "repository": {
+      "url": "https://github.com/codeAnqiang-ma/dsh-superpowers"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-tinyfish",
+    "title": {
+      "en": "TinyFish Web",
+      "zh": "TinyFish 网页工具"
+    },
+    "description": {
+      "en": "Connect native web search and fetch tools to TinyFish through direct or Monid access.",
+      "zh": "为网页搜索与抓取接入 TinyFish，支持直连或 Monid 通道。"
+    },
+    "category": "tools",
+    "repository": {
+      "url": "https://github.com/viztor/dsh-tinyfish"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-usage-state",
+    "title": {
+      "en": "Usage State",
+      "zh": "用量状态"
+    },
+    "description": {
+      "en": "Display the current model provider’s balance, subscription quotas, and reset times above the composer.",
+      "zh": "在输入框上方显示当前模型供应商的账户余额、套餐额度及重置时间。"
+    },
+    "category": "usage",
+    "repository": {
+      "url": "https://github.com/takboo/dsh-usage-state"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "dsh-zotero",
+    "title": {
+      "en": "Zotero",
+      "zh": "Zotero 文献工具"
+    },
+    "description": {
+      "en": "Search a local Zotero library, read notes and annotations, extract evidence, and generate citations.",
+      "zh": "检索本地 Zotero 文献库，读取笔记和标注，提取证据并生成引用。"
+    },
+    "category": "integrations",
+    "repository": {
+      "url": "https://github.com/Vncntvx/dsh-zotero"
+    },
+    "license": "MIT"
+  },
+  {
+    "name": "sage-mem",
+    "title": {
+      "en": "Sage Memory",
+      "zh": "Sage 文件记忆"
+    },
+    "description": {
+      "en": "Keep cross-session memories in local Markdown files and retrieve relevant content for context injection.",
+      "zh": "将跨会话记忆保存为本地 Markdown 文件，按问题检索并注入相关内容。"
+    },
+    "category": "memory",
+    "repository": {
+      "url": "https://github.com/gezi-wen/sage-mem"
+    },
+    "license": "Apache-2.0"
+  }
+]

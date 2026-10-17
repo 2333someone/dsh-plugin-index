@@ -1,0 +1,44 @@
+name: Plugin submission / 插件收录
+description: Suggest, correct or remove a listing / 推荐、更正或移除条目
+title: "[Plugin] "
+body:
+  - type: dropdown
+    id: request
+    attributes:
+      label: Request / 请求
+      options:
+        - Add a plugin / 收录插件
+        - Correct an entry / 更正信息
+        - Remove an entry / 移除条目
+    validations:
+      required: true
+  - type: input
+    id: package
+    attributes:
+      label: npm package / npm 包名
+      placeholder: "@owner/dsh-plugin"
+    validations:
+      required: true
+  - type: input
+    id: repository
+    attributes:
+      label: Source repository / 源码仓库
+      placeholder: https://github.com/owner/plugin
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description / 简介
+      description: One sentence in English and Chinese, or explain the correction. / 各写一句中英文介绍，或说明需要更正的内容。
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License / 许可证
+  - type: textarea
+    id: tested
+    attributes:
+      label: DSH version tested / 已测试的 DSH 版本
+      description: Optional. State what you actually tested. / 可选，请描述实际测试情况。

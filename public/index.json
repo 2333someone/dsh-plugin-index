@@ -1,0 +1,1155 @@
+{
+  "format": 1,
+  "title": {
+    "en": "DSH Plugin Index",
+    "zh": "DSH 插件索引"
+  },
+  "description": {
+    "en": "Community plugins for DeepSeek Harness.",
+    "zh": "DeepSeek Harness 社区插件索引。"
+  },
+  "metadata": {
+    "categories": {
+      "interface": {
+        "title": {
+          "en": "Interface",
+          "zh": "界面"
+        }
+      },
+      "tools": {
+        "title": {
+          "en": "Tools",
+          "zh": "工具"
+        }
+      },
+      "skills": {
+        "title": {
+          "en": "Skills",
+          "zh": "技能"
+        }
+      },
+      "memory": {
+        "title": {
+          "en": "Memory",
+          "zh": "记忆"
+        }
+      },
+      "providers": {
+        "title": {
+          "en": "Providers",
+          "zh": "模型供应商"
+        }
+      },
+      "usage": {
+        "title": {
+          "en": "Usage & costs",
+          "zh": "用量与费用"
+        }
+      },
+      "integrations": {
+        "title": {
+          "en": "Integrations",
+          "zh": "集成"
+        }
+      },
+      "appearance": {
+        "title": {
+          "en": "Appearance",
+          "zh": "外观"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "@michengai/dsh-skills-manager",
+      "title": {
+        "en": "Skills Manager",
+        "zh": "技能管理器"
+      },
+      "description": {
+        "en": "Manage local and project skills with repository installs, update previews, backups, and restoration.",
+        "zh": "管理本机与项目技能，支持仓库安装、更新预览及备份恢复。"
+      },
+      "repository": {
+        "url": "https://github.com/MichengAI/dsh-skills-manager"
+      },
+      "homepage": "https://github.com/MichengAI/dsh-skills-manager#readme",
+      "metadata": {
+        "category": "skills",
+        "keywords": [
+          "deepseek-harness",
+          "dsh",
+          "dsh-plugin",
+          "skill",
+          "skills",
+          "cordis"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.2.5",
+          "publishTimestamp": 1792251360,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": "0.2.0-rc.1 || 0.2.0-rc.2 || 0.2.1-rc.1 || 0.2.1-rc.2"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-any-background",
+      "title": {
+        "en": "Custom Background",
+        "zh": "自定义背景"
+      },
+      "description": {
+        "en": "Customize theme colors and image or video wallpapers with separate opacity and blur controls for interface areas.",
+        "zh": "自定义主题色与图片或视频壁纸，分别调整各区域的透明度和模糊度。"
+      },
+      "author": "Tkingxiao",
+      "repository": {
+        "url": "https://github.com/Tkingxiao/dsh-any-background"
+      },
+      "homepage": "https://github.com/Tkingxiao/dsh-any-background#readme",
+      "metadata": {
+        "category": "appearance",
+        "keywords": [
+          "deepseek-harness",
+          "dsh",
+          "plugin",
+          "dsh-plugin",
+          "theme",
+          "wallpaper",
+          "web-ui"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.3.8",
+          "publishTimestamp": 1792250267,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": "0.2.0-rc.1 || 0.2.0-rc.2 || 0.2.1-alpha.1 || 0.2.1-alpha.2 || 0.2.1-alpha.3 || 0.2.1-alpha.4 || 0.2.1-alpha.5 || 0.2.1-rc.1 || 0.2.1-rc.2 || >=0.2.0-rc.1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-auto-title",
+      "title": {
+        "en": "Auto Titles",
+        "zh": "自动会话标题"
+      },
+      "description": {
+        "en": "Generate session titles from recent user messages while preserving manually assigned titles.",
+        "zh": "根据会话最近的用户消息生成标题，并保留手动命名。"
+      },
+      "author": "WhatCannotBeSaid",
+      "repository": {
+        "url": "https://github.com/WhatCannotBeSaid/dsh-auto-title"
+      },
+      "homepage": "https://github.com/WhatCannotBeSaid/dsh-auto-title#readme",
+      "metadata": {
+        "category": "interface",
+        "keywords": [
+          "dsh",
+          "dsh-plugin",
+          "deepseek-harness",
+          "session-title",
+          "auto-title"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.7.0",
+          "publishTimestamp": 1791178162,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        }
+      ]
+    },
+    {
+      "name": "dsh-bottom-info-bar",
+      "title": {
+        "en": "Bottom Info Bar",
+        "zh": "底部信息栏"
+      },
+      "description": {
+        "en": "Show the current model, account balance or subscription quota, and session or historical spending beneath the composer.",
+        "zh": "在输入框下方显示模型、余额或订阅额度，以及会话与历史费用。"
+      },
+      "author": "songoao25",
+      "repository": {
+        "url": "https://github.com/songoao25/dsh-bottom-info-bar"
+      },
+      "homepage": "https://github.com/songoao25/dsh-bottom-info-bar",
+      "metadata": {
+        "category": "usage",
+        "keywords": [
+          "deepseek",
+          "deepseek-harness",
+          "dsh",
+          "dsh-bottom-info-bar",
+          "balance",
+          "usage",
+          "plugin"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.21.8",
+          "publishTimestamp": 1792222591,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        }
+      ]
+    },
+    {
+      "name": "dsh-cad",
+      "title": {
+        "en": "CAD Tools",
+        "zh": "CAD 查看与建模"
+      },
+      "description": {
+        "en": "View 2D and 3D CAD files and use parametric modeling and export tools from a conversation.",
+        "zh": "在会话中查看二维与三维 CAD 文件，并调用参数化建模与导出工具。"
+      },
+      "author": "LAU-MARS",
+      "repository": {
+        "url": "https://github.com/LAU-MARS/dsh-cad"
+      },
+      "homepage": "https://lau-mars.github.io/dsh-cad/",
+      "metadata": {
+        "category": "tools",
+        "keywords": [
+          "deepseek-harness",
+          "dsh",
+          "dsh-plugin",
+          "cad",
+          "3d",
+          "2d",
+          "occt",
+          "opencascade",
+          "threejs",
+          "step",
+          "iges",
+          "dxf",
+          "svg"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.13.2",
+          "publishTimestamp": 1791454207,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.0-rc.7"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-calendar",
+      "title": {
+        "en": "CalDAV Calendar",
+        "zh": "CalDAV 日历"
+      },
+      "description": {
+        "en": "Connect CalDAV calendars to view, create, reschedule, and import events from DSH.",
+        "zh": "连接 CalDAV 日历，在会话中查看、创建和调整日程，并导入日历文件。"
+      },
+      "author": "stardustlc",
+      "repository": {
+        "url": "https://github.com/STARDUSTLC666/dsh-calendar"
+      },
+      "homepage": "https://github.com/STARDUSTLC666/dsh-calendar#readme",
+      "metadata": {
+        "category": "integrations",
+        "keywords": [
+          "dsh",
+          "deepseek-harness",
+          "dsh-plugin",
+          "plugin",
+          "calendar",
+          "caldav",
+          "ical"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.11.0",
+          "publishTimestamp": 1792250494,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        }
+      ]
+    },
+    {
+      "name": "dsh-cert-mcp",
+      "title": {
+        "en": "Plugin Evidence Lookup",
+        "zh": "插件评估查询"
+      },
+      "description": {
+        "en": "Query community plugin assessment records, evidence snapshots, and scoring rules through read-only DSH or MCP tools.",
+        "zh": "通过只读工具查询社区插件评估记录、证据快照与评分规范。"
+      },
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-cert-mcp"
+      },
+      "metadata": {
+        "category": "tools",
+        "keywords": [
+          "mcp",
+          "mcp-server",
+          "model-context-protocol",
+          "deepseek-harness",
+          "dsh-plugin",
+          "dsh",
+          "certification",
+          "supply-chain-security"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.6",
+          "publishTimestamp": 1791594822,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-codex-subscription",
+      "title": {
+        "en": "Codex Subscription",
+        "zh": "Codex 订阅接入"
+      },
+      "description": {
+        "en": "Connect eligible ChatGPT and Codex subscriptions through OAuth and view account quotas in DSH.",
+        "zh": "通过 OAuth 接入 ChatGPT 与 Codex 订阅模型，并查看账户额度。"
+      },
+      "author": "WSL043",
+      "repository": {
+        "url": "https://github.com/WSL043/dsh-codex-subscription"
+      },
+      "homepage": "https://github.com/WSL043/dsh-codex-subscription",
+      "metadata": {
+        "category": "providers",
+        "keywords": [
+          "dsh-plugin",
+          "deepseek",
+          "deepseek-harness",
+          "dsh",
+          "openai-codex",
+          "chatgpt-oauth",
+          "chatgpt",
+          "chatgpt-plus",
+          "subscription",
+          "quota",
+          "quota-reset",
+          "fast-mode",
+          "usage",
+          "oauth",
+          "web-search",
+          "image-generation"
+        ]
+      },
+      "versions": [
+        {
+          "version": "3.0.0",
+          "publishTimestamp": 1792234481,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": "0.1.7-rc.2 || 0.2.0-rc.1 || 0.2.0-rc.2 || 0.2.1-alpha.1 || 0.2.1-alpha.2 || 0.2.1-alpha.3 || 0.2.1-alpha.4 || 0.2.1-alpha.5 || 0.2.1-rc.1 || 0.2.1-rc.2"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-cost-meter",
+      "title": {
+        "en": "Cost Meter",
+        "zh": "费用统计"
+      },
+      "description": {
+        "en": "Track session and daily model costs alongside account balances, budgets, and subscription usage.",
+        "zh": "统计会话与每日模型费用，显示账户余额、预算和订阅套餐用量。"
+      },
+      "repository": {
+        "url": "https://github.com/Han-1413141/dsh-cost-meter"
+      },
+      "homepage": "https://github.com/Han-1413141/dsh-cost-meter#readme",
+      "metadata": {
+        "category": "usage",
+        "keywords": [
+          "deepseek",
+          "deepseek-harness",
+          "dsh",
+          "dsh-plugin",
+          "client-plugin",
+          "cost",
+          "usage",
+          "billing",
+          "budget",
+          "i18n",
+          "bilingual",
+          "zh",
+          "en",
+          "language"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.8.36",
+          "publishTimestamp": 1792250157,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-dhe-lore",
+      "title": {
+        "en": "Project Lore",
+        "zh": "项目共享记忆"
+      },
+      "description": {
+        "en": "Store project knowledge in editable Markdown files shared across sessions in the same project.",
+        "zh": "将项目知识保存为可编辑的 Markdown 文件，供同一项目的多个会话共享。"
+      },
+      "author": "darren.ho",
+      "repository": {
+        "url": "https://gitee.com/darren_ho/dsh-plugins",
+        "directory": "dsh-dhe-lore"
+      },
+      "homepage": "https://gitee.com/darren_ho/dsh-plugins/tree/master/dsh-dhe-lore",
+      "metadata": {
+        "category": "memory",
+        "keywords": [
+          "deepseek",
+          "deepseek-harness",
+          "dsh",
+          "dsh-plugin",
+          "cordis",
+          "cordis-plugin",
+          "plugin",
+          "memory",
+          "project-memory",
+          "shared-memory",
+          "context"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.5.1",
+          "publishTimestamp": 1790754923,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.5-rc.1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-email",
+      "title": {
+        "en": "Email",
+        "zh": "邮件"
+      },
+      "description": {
+        "en": "Connect multiple mail accounts to send, receive, and search messages with attachments, drafts, and sending approvals.",
+        "zh": "连接多个邮箱，在会话中收发和搜索邮件，并管理附件、本地草稿与发信审批。"
+      },
+      "author": "stardustlc",
+      "repository": {
+        "url": "https://github.com/STARDUSTLC666/dsh-email"
+      },
+      "homepage": "https://github.com/STARDUSTLC666/dsh-email#readme",
+      "metadata": {
+        "category": "integrations",
+        "keywords": [
+          "dsh-plugin",
+          "deepseek-harness",
+          "dsh",
+          "email",
+          "imap",
+          "smtp"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.17.0",
+          "publishTimestamp": 1792250441,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        }
+      ]
+    },
+    {
+      "name": "dsh-fonttune",
+      "title": {
+        "en": "FontTune",
+        "zh": "字体与排版"
+      },
+      "description": {
+        "en": "Adjust conversation, interface, and code typography and save, import, or export presets.",
+        "zh": "分别调整对话、界面和代码的字体样式，并保存、导入和导出排版预设。"
+      },
+      "repository": {
+        "url": "https://github.com/LyaxZ/dsh-fonttune"
+      },
+      "metadata": {
+        "category": "appearance",
+        "keywords": [
+          "dsh",
+          "deepseek-harness",
+          "dsh-plugin",
+          "font",
+          "font-family",
+          "font-size",
+          "font-weight",
+          "typography"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.6.2",
+          "publishTimestamp": 1792231961,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.7-alpha.1 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-image-viewer",
+      "title": {
+        "en": "Image Viewer",
+        "zh": "图片查看器"
+      },
+      "description": {
+        "en": "Zoom, browse, download, and annotate image regions in the DSH conversation viewer.",
+        "zh": "为会话图片提供缩放、多图浏览、原图下载和区域标注。"
+      },
+      "author": "WSL043",
+      "repository": {
+        "url": "https://github.com/WSL043/dsh-image-viewer"
+      },
+      "homepage": "https://github.com/WSL043/dsh-image-viewer#readme",
+      "metadata": {
+        "category": "interface",
+        "keywords": [
+          "dsh-plugin",
+          "deepseek-harness",
+          "image-viewer",
+          "lightbox",
+          "zoom",
+          "annotation"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.15",
+          "publishTimestamp": 1792235987,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": "0.2.1-rc.2 || 0.2.1-rc.1 || 0.2.1-alpha.5 || 0.2.0-rc.2"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-kimi-subscription",
+      "title": {
+        "en": "Kimi Subscription",
+        "zh": "Kimi 订阅接入"
+      },
+      "description": {
+        "en": "Connect Kimi Code subscription models using API keys or device sign-in, with web search and quota displays.",
+        "zh": "接入 Kimi Code 订阅模型，支持设备登录、网页搜索和额度查询。"
+      },
+      "author": "BaronCyrus",
+      "repository": {
+        "url": "https://github.com/BaronCyrus/dsh-kimi-subscription"
+      },
+      "homepage": "https://github.com/BaronCyrus/dsh-kimi-subscription#readme",
+      "metadata": {
+        "category": "providers",
+        "keywords": [
+          "dsh-plugin",
+          "deepseek-harness",
+          "kimi-code",
+          "kimi-subscription",
+          "oauth",
+          "quota",
+          "usage",
+          "llm"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.3.10",
+          "publishTimestamp": 1792237688,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.1-rc.2 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-memento",
+      "title": {
+        "en": "Memento",
+        "zh": "Memento 分层记忆"
+      },
+      "description": {
+        "en": "Keep layered cross-session memories in local SQLite with retrieval, write approvals, and context injection.",
+        "zh": "以本地 SQLite 保存分层跨会话记忆，提供检索、写入审批和上下文注入。"
+      },
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-memento"
+      },
+      "homepage": "https://github.com/PerryLink/dsh-memento#readme",
+      "metadata": {
+        "category": "memory",
+        "keywords": [
+          "dsh",
+          "dsh-plugin",
+          "deepseek-harness",
+          "memory",
+          "agent-memory",
+          "approval",
+          "audit",
+          "sqlite",
+          "cordis",
+          "llm"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.5.25",
+          "publishTimestamp": 1791818381,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-office-tools",
+      "title": {
+        "en": "Office Tools",
+        "zh": "Office 文档工具"
+      },
+      "description": {
+        "en": "Create and read documents, spreadsheets, and presentations in the session workspace, and update documents and spreadsheets.",
+        "zh": "在会话工作区中创建和读取文档、表格与演示文稿，并更新文档和表格。"
+      },
+      "author": "kw78",
+      "repository": {
+        "url": "https://github.com/kw78/dsh-office-tools"
+      },
+      "homepage": "https://github.com/kw78/dsh-office-tools#readme",
+      "metadata": {
+        "category": "tools",
+        "keywords": [
+          "dsh",
+          "dsh-plugin",
+          "deepseek-harness",
+          "office",
+          "word",
+          "excel",
+          "powerpoint",
+          "docx",
+          "xlsx",
+          "pptx",
+          "tools"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.0.6",
+          "publishTimestamp": 1791875546,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": "^0.1.0-rc.6 || ^0.1.1-rc.0 || ^0.1.2-alpha.0 || ^0.1.5-alpha.0 || >=0.2.0-rc.1 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-opencode-go",
+      "title": {
+        "en": "OpenCode Go",
+        "zh": "OpenCode Go 接入"
+      },
+      "description": {
+        "en": "Manage OpenCode Go models and multiple accounts with subscription quota displays in DSH.",
+        "zh": "在 DSH 中管理 OpenCode Go 模型与多个账号，并显示订阅额度。"
+      },
+      "repository": {
+        "url": "https://github.com/Duskriver/dsh-opencode-go"
+      },
+      "homepage": "https://github.com/Duskriver/dsh-opencode-go#readme",
+      "metadata": {
+        "category": "providers",
+        "keywords": [
+          "deepseek-harness",
+          "dsh-plugin",
+          "dsh",
+          "opencode",
+          "opencode-go",
+          "llm",
+          "cordis"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.24",
+          "publishTimestamp": 1792089970,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.5-rc.1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-quick-toc",
+      "title": {
+        "en": "Conversation Outline",
+        "zh": "对话大纲"
+      },
+      "description": {
+        "en": "Turn conversation Markdown headings into a searchable outline with previews and navigation.",
+        "zh": "把会话中的 Markdown 标题整理为可搜索大纲，支持预览与跳转。"
+      },
+      "repository": {
+        "url": "https://github.com/LyaxZ/dsh-quick-toc"
+      },
+      "metadata": {
+        "category": "interface",
+        "keywords": [
+          "dsh",
+          "deepseek-harness",
+          "plugin",
+          "toc",
+          "outline",
+          "markdown",
+          "navigation",
+          "search"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.9.5",
+          "publishTimestamp": 1792159096,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.5-rc.3 <0.1.7-0 || >=0.1.7-alpha.1 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-skill-hub",
+      "title": {
+        "en": "Skill Hub",
+        "zh": "技能中枢"
+      },
+      "description": {
+        "en": "Browse and toggle skills, diagnose metadata problems, and import or track updates from repositories.",
+        "zh": "在设置页浏览和开关技能，检查格式问题，并从仓库导入及跟踪更新。"
+      },
+      "repository": {
+        "url": "https://github.com/cheshireez/dsh-skill-hub"
+      },
+      "homepage": "https://github.com/cheshireez/dsh-skill-hub",
+      "metadata": {
+        "category": "skills",
+        "keywords": [
+          "dsh-plugin",
+          "dsh",
+          "deepseek-harness",
+          "skill",
+          "skills",
+          "skill-manager",
+          "agent-skills",
+          "skill-hub"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.3.23",
+          "publishTimestamp": 1792180696,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.7-alpha.1 <0.3.0-0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-skills-anywhere",
+      "title": {
+        "en": "Skills Anywhere",
+        "zh": "跨来源技能加载"
+      },
+      "description": {
+        "en": "Discover skills from local directories and Git sources for on-demand loading through DSH or local MCP.",
+        "zh": "汇总本地与 Git 来源的技能，供 DSH 或本地 MCP 按需加载。"
+      },
+      "author": "Note Flow AI",
+      "repository": {
+        "url": "https://github.com/noteflowai/dsh-skills-anywhere"
+      },
+      "homepage": "https://github.com/noteflowai/dsh-skills-anywhere",
+      "metadata": {
+        "category": "skills",
+        "keywords": [
+          "deepseek-harness",
+          "dsh",
+          "dsh-plugin",
+          "cordis",
+          "agent-skills",
+          "skills",
+          "SKILL.md",
+          "claude-code",
+          "codex",
+          "cursor",
+          "plugin",
+          "mcp",
+          "mcp-server",
+          "model-context-protocol",
+          "dsh-client"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.19.0",
+          "publishTimestamp": 1791610701,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.5-rc.1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-smooth-cursor",
+      "title": {
+        "en": "Smooth Cursor",
+        "zh": "平滑彗星光标"
+      },
+      "description": {
+        "en": "Add a smoothly moving comet cursor to the chat composer with configurable trails, colors, and thickness.",
+        "zh": "为聊天输入框添加平滑移动的彗星光标，可调整拖尾、颜色与粗细。"
+      },
+      "repository": {
+        "url": "https://github.com/Lacquervii/smooth-cursor"
+      },
+      "homepage": "https://github.com/Lacquervii/smooth-cursor#readme",
+      "metadata": {
+        "category": "appearance",
+        "keywords": [
+          "dsh",
+          "dsh-plugin",
+          "cursor",
+          "caret",
+          "composer"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.9",
+          "publishTimestamp": 1788946806,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        }
+      ]
+    },
+    {
+      "name": "dsh-superpowers",
+      "title": {
+        "en": "Superpowers",
+        "zh": "Superpowers 开发技能"
+      },
+      "description": {
+        "en": "Register Superpowers development skills and session guidance with the DSH skills and prompt services.",
+        "zh": "接入 Superpowers 开发技能，并向会话提示词添加使用引导。"
+      },
+      "author": "codeAnqiang-ma",
+      "repository": {
+        "url": "https://github.com/codeAnqiang-ma/dsh-superpowers"
+      },
+      "homepage": "https://github.com/codeAnqiang-ma/dsh-superpowers#readme",
+      "metadata": {
+        "category": "skills",
+        "keywords": [
+          "dsh-plugin",
+          "deepseek-harness",
+          "superpowers",
+          "skills",
+          "tdd",
+          "agent"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1786637124,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        }
+      ]
+    },
+    {
+      "name": "dsh-tinyfish",
+      "title": {
+        "en": "TinyFish Web",
+        "zh": "TinyFish 网页工具"
+      },
+      "description": {
+        "en": "Connect native web search and fetch tools to TinyFish through direct or Monid access.",
+        "zh": "为网页搜索与抓取接入 TinyFish，支持直连或 Monid 通道。"
+      },
+      "repository": {
+        "url": "https://github.com/viztor/dsh-tinyfish"
+      },
+      "metadata": {
+        "category": "tools",
+        "keywords": [
+          "cordis",
+          "deepseek-harness",
+          "dsh",
+          "dsh-bundle",
+          "dsh-plugin",
+          "monid",
+          "scraping",
+          "search",
+          "tinyfish",
+          "web-fetch",
+          "web-search"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.13.0",
+          "publishTimestamp": 1792232287,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": "^0.2.0-rc.1 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-usage-state",
+      "title": {
+        "en": "Usage State",
+        "zh": "用量状态"
+      },
+      "description": {
+        "en": "Display the current model provider’s balance, subscription quotas, and reset times above the composer.",
+        "zh": "在输入框上方显示当前模型供应商的账户余额、套餐额度及重置时间。"
+      },
+      "repository": {
+        "url": "https://github.com/takboo/dsh-usage-state"
+      },
+      "homepage": "https://github.com/takboo/dsh-usage-state#readme",
+      "metadata": {
+        "category": "usage",
+        "keywords": [
+          "deepseek",
+          "dsh",
+          "dsh-plugin",
+          "usage",
+          "balance",
+          "quota",
+          "coding-plan"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.4.8",
+          "publishTimestamp": 1792237319,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": "^0.2.0-rc.2 || ^0.2.1-rc.1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-zotero",
+      "title": {
+        "en": "Zotero",
+        "zh": "Zotero 文献工具"
+      },
+      "description": {
+        "en": "Search a local Zotero library, read notes and annotations, extract evidence, and generate citations.",
+        "zh": "检索本地 Zotero 文献库，读取笔记和标注，提取证据并生成引用。"
+      },
+      "author": "Wenjie Xu",
+      "repository": {
+        "url": "https://github.com/Vncntvx/dsh-zotero"
+      },
+      "metadata": {
+        "category": "integrations",
+        "keywords": [
+          "zotero",
+          "dsh",
+          "deepseek-harness",
+          "plugin",
+          "research",
+          "literature"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.12.1",
+          "publishTimestamp": 1790883369,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2"
+          }
+        }
+      ]
+    },
+    {
+      "name": "sage-mem",
+      "title": {
+        "en": "Sage Memory",
+        "zh": "Sage 文件记忆"
+      },
+      "description": {
+        "en": "Keep cross-session memories in local Markdown files and retrieve relevant content for context injection.",
+        "zh": "将跨会话记忆保存为本地 Markdown 文件，按问题检索并注入相关内容。"
+      },
+      "repository": {
+        "url": "https://github.com/gezi-wen/sage-mem"
+      },
+      "homepage": "https://github.com/gezi-wen/sage-mem#readme",
+      "metadata": {
+        "category": "memory",
+        "keywords": [
+          "memory",
+          "ai-memory",
+          "agent-memory",
+          "long-term-memory",
+          "cross-session-memory",
+          "context-management",
+          "knowledge-management",
+          "markdown",
+          "dsh",
+          "dsh-plugin",
+          "deepseek",
+          "deepseek-harness",
+          "cordis",
+          "typert",
+          "plugin",
+          "ai-agent",
+          "agent",
+          "claude-code"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.0.2",
+          "publishTimestamp": 1792205838,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-rc.1"
+          }
+        }
+      ]
+    }
+  ]
+}

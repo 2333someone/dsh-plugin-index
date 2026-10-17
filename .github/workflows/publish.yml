@@ -1,0 +1,73 @@
+name: Check and publish index
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: index-${{ github.event_name == 'pull_request' && github.ref || 'publish' }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.28.5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - run: pnpm test
+      - run: pnpm build
+      - run: pnpm validate
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm exec playwright test
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: browser-failure-details
+          path: test-results/
+          retention-days: 7
+      - uses: actions/upload-artifact@v4
+        with:
+          name: validated-index
+          path: public/
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request' && vars.PUBLISH_INDEX == 'true'
+        with:
+          path: public/
+
+  deploy:
+    needs: build
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && vars.PUBLISH_INDEX == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish validated artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Check final JSON URL without redirects
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          curl --fail --silent --show-error --max-time 30 --output /tmp/index.json --write-out '%{http_code}' "${PAGE_URL%/}/index.json" > /tmp/status
+          test "$(cat /tmp/status)" = 200
+          node -e 'const d = JSON.parse(require("node:fs").readFileSync("/tmp/index.json", "utf8")); if (d.format !== 1 || !Array.isArray(d.plugins) || !d.plugins.length) process.exit(1); console.log(`Published ${d.plugins.length} plugins`);'

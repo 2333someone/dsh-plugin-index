@@ -1,0 +1,685 @@
+{
+  "generatedAt": "2026-10-17T18:04:26.027Z",
+  "validator": {
+    "name": "@deepseek-ai/dsh-plugin-market-index",
+    "version": "0.2.1-rc.2"
+  },
+  "packages": [
+    {
+      "name": "@michengai/dsh-skills-manager",
+      "version": "1.2.5",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/MichengAI/dsh-skills-manager",
+      "metadataUrl": "https://registry.npmjs.org/%40michengai%2Fdsh-skills-manager",
+      "tarball": "https://registry.npmjs.org/@michengai/dsh-skills-manager/-/dsh-skills-manager-1.2.5.tgz",
+      "integrity": "sha512-1e7UNneNU3sr8/+s7g1seeh1Mvz3Up7597NJewDdVoPrsqcSTtBui+mRAokZPQvhMOXrPMKt9qMIqqvUIUQM9w==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 49,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-any-background",
+      "version": "0.3.8",
+      "license": "MIT",
+      "repository": "https://github.com/Tkingxiao/dsh-any-background",
+      "metadataUrl": "https://registry.npmjs.org/dsh-any-background",
+      "tarball": "https://registry.npmjs.org/dsh-any-background/-/dsh-any-background-0.3.8.tgz",
+      "integrity": "sha512-Yg/dqWgTP0timSmUe3EviQp9JK1VFmIeTrbJ3P86B7OR+F/XFdcuMsBAVidcsLwyE/vLKEQvfuT1WWc2FYPlJg==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 8,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-auto-title",
+      "version": "1.7.0",
+      "license": "MIT",
+      "repository": "https://github.com/WhatCannotBeSaid/dsh-auto-title",
+      "metadataUrl": "https://registry.npmjs.org/dsh-auto-title",
+      "tarball": "https://registry.npmjs.org/dsh-auto-title/-/dsh-auto-title-1.7.0.tgz",
+      "integrity": "sha512-HfJOxppWNWQJqA8uzSv1n5YhyRBL8Z+RMhp3Il1aQnvBnTg41ou3GUakX7eDW/RHo7ipmvqRpY9FHLBClajp6w==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 11,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-bottom-info-bar",
+      "version": "1.21.8",
+      "license": "MIT",
+      "repository": "https://github.com/songoao25/dsh-bottom-info-bar",
+      "metadataUrl": "https://registry.npmjs.org/dsh-bottom-info-bar",
+      "tarball": "https://registry.npmjs.org/dsh-bottom-info-bar/-/dsh-bottom-info-bar-1.21.8.tgz",
+      "integrity": "sha512-1zlHCS8OE8Ri5cFK0PwWiK58iCHRSWz2yIftMj69bjRzss7RqB768WlQ+jevNB6X6vhS3KLmNBbqZFeHM/pcGA==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 28,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-cad",
+      "version": "0.13.2",
+      "license": "MIT",
+      "repository": "https://github.com/LAU-MARS/dsh-cad",
+      "metadataUrl": "https://registry.npmjs.org/dsh-cad",
+      "tarball": "https://registry.npmjs.org/dsh-cad/-/dsh-cad-0.13.2.tgz",
+      "integrity": "sha512-hg+yluuA6pw759wxtiKl8PgUVgFpEwrx6FCuSv/QKinj7lEy2Xt87rL7weNmNblSIlxqr5IMEMuxuQak4TEEKw==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 130,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-calendar",
+      "version": "0.11.0",
+      "license": "MIT",
+      "repository": "https://github.com/STARDUSTLC666/dsh-calendar",
+      "metadataUrl": "https://registry.npmjs.org/dsh-calendar",
+      "tarball": "https://registry.npmjs.org/dsh-calendar/-/dsh-calendar-0.11.0.tgz",
+      "integrity": "sha512-RV7G23ZdPbuwewg+7vJfXIlNDxOeiOrjS0Cg24MXmCC642Y+ZsDg5oZR5KdpATV2CbH8YdotvAKqq8s4BMxMeA==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 47,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-cert-mcp",
+      "version": "0.2.6",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/PerryLink/dsh-cert-mcp",
+      "metadataUrl": "https://registry.npmjs.org/dsh-cert-mcp",
+      "tarball": "https://registry.npmjs.org/dsh-cert-mcp/-/dsh-cert-mcp-0.2.6.tgz",
+      "integrity": "sha512-Vg9x6RmhXJI4B9iSZLH5qPQoPD76EYmb/+HMcJX6HHQ6uf40JM6nxMxH/P7k+G4iymaTALDPQ7Jjc0HX7UI4xQ==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 14,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-codex-subscription",
+      "version": "3.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/WSL043/dsh-codex-subscription",
+      "metadataUrl": "https://registry.npmjs.org/dsh-codex-subscription",
+      "tarball": "https://registry.npmjs.org/dsh-codex-subscription/-/dsh-codex-subscription-3.0.0.tgz",
+      "integrity": "sha512-ckFKtsFUUsGK2yf8FdZ30vghgSYeD1zUhFlsldy9jt8JddLcLftu7XJKhAhHjhAN7LotUQavLbdaztR8YKbyhg==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 14,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-cost-meter",
+      "version": "1.8.36",
+      "license": "MIT",
+      "repository": "https://github.com/Han-1413141/dsh-cost-meter",
+      "metadataUrl": "https://registry.npmjs.org/dsh-cost-meter",
+      "tarball": "https://registry.npmjs.org/dsh-cost-meter/-/dsh-cost-meter-1.8.36.tgz",
+      "integrity": "sha512-5i3zJ4wJMpkCxHpayISKyYUloE+/f2PVDKc4s8B7Lpaf99ji4A4af9SZvKe6CXiqDb4aM5kb691U903beDRoSQ==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 124,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-dhe-lore",
+      "version": "0.5.1",
+      "license": "MIT",
+      "repository": "https://gitee.com/darren_ho/dsh-plugins",
+      "metadataUrl": "https://registry.npmjs.org/dsh-dhe-lore",
+      "tarball": "https://registry.npmjs.org/dsh-dhe-lore/-/dsh-dhe-lore-0.5.1.tgz",
+      "integrity": "sha512-72/hgTxqjCWMKH7DB+nvgKagsdujKJMNDpQ+vXkzkbq6C0yKw+/Ntcun4YpKioE/y4teV6KlAzJp/IiGjPLD5Q==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 23,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-email",
+      "version": "0.17.0",
+      "license": "MIT",
+      "repository": "https://github.com/STARDUSTLC666/dsh-email",
+      "metadataUrl": "https://registry.npmjs.org/dsh-email",
+      "tarball": "https://registry.npmjs.org/dsh-email/-/dsh-email-0.17.0.tgz",
+      "integrity": "sha512-EsMrgIbS56w205L3flD55MeoBrQOc08Ej8Ngiut96rXt22caA4JAmB8/vRRSKJEpWm67D0A2/XXLWiAsO0+REw==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 58,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-fonttune",
+      "version": "0.6.2",
+      "license": "MIT",
+      "repository": "https://github.com/LyaxZ/dsh-fonttune",
+      "metadataUrl": "https://registry.npmjs.org/dsh-fonttune",
+      "tarball": "https://registry.npmjs.org/dsh-fonttune/-/dsh-fonttune-0.6.2.tgz",
+      "integrity": "sha512-Rhy1Ha9GvGWuoSTPD+vd8zKgXke1/vLTUVZdBD7whcw3BdQ9VlSbZGGBurSpnYMozdAMrjIIbRuRFiPTbLMwsw==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 14,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-image-viewer",
+      "version": "0.1.15",
+      "license": "MIT",
+      "repository": "https://github.com/WSL043/dsh-image-viewer",
+      "metadataUrl": "https://registry.npmjs.org/dsh-image-viewer",
+      "tarball": "https://registry.npmjs.org/dsh-image-viewer/-/dsh-image-viewer-0.1.15.tgz",
+      "integrity": "sha512-RVHKM4ysYOgjc9VnNbpBhe4Bc8Y+5TC9+nHjASKc0JI0dbXgAk4nu4hoobGvmu9B3Dpn8Lctdo8yONLNCprA+A==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 16,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-kimi-subscription",
+      "version": "1.3.10",
+      "license": "MIT",
+      "repository": "https://github.com/BaronCyrus/dsh-kimi-subscription",
+      "metadataUrl": "https://registry.npmjs.org/dsh-kimi-subscription",
+      "tarball": "https://registry.npmjs.org/dsh-kimi-subscription/-/dsh-kimi-subscription-1.3.10.tgz",
+      "integrity": "sha512-j/9SIFqN5DO46NmOyGTN9t7MFr2J9Tevv7BckWlWToS4ll5MEg5VwESjdf+u2LiBXdXmihprZyMZoakDa1DOeQ==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 18,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-memento",
+      "version": "0.5.25",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/PerryLink/dsh-memento",
+      "metadataUrl": "https://registry.npmjs.org/dsh-memento",
+      "tarball": "https://registry.npmjs.org/dsh-memento/-/dsh-memento-0.5.25.tgz",
+      "integrity": "sha512-UBQ/ZhEScuRK/TKpIefXeFVkSGBiNV4q+mol8SO6f4P7ujwKpxUH+isIM72lndoprRw6uU5qi5zxKkJc22zJ3Q==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 44,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-office-tools",
+      "version": "1.0.6",
+      "license": "MIT",
+      "repository": "https://github.com/kw78/dsh-office-tools",
+      "metadataUrl": "https://registry.npmjs.org/dsh-office-tools",
+      "tarball": "https://registry.npmjs.org/dsh-office-tools/-/dsh-office-tools-1.0.6.tgz",
+      "integrity": "sha512-o48Ddpy7AqTLXTIvsTXkN0VST7EaXaNL7VnBQfHqa9/Hu2cGa+gBWpoJDxDMPFXlkUKalKkvLv8d7xV4ZzN67A==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 17,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-opencode-go",
+      "version": "0.1.24",
+      "license": "MIT",
+      "repository": "https://github.com/Duskriver/dsh-opencode-go",
+      "metadataUrl": "https://registry.npmjs.org/dsh-opencode-go",
+      "tarball": "https://registry.npmjs.org/dsh-opencode-go/-/dsh-opencode-go-0.1.24.tgz",
+      "integrity": "sha512-tnKnvULaP166iGKXZEDVPU0BXxtWO1HREilrUhWvpRhpZxkyyVuo2m/8FgcljW8PBZj/pji3aVUN4Qt4stOFbA==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 86,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-quick-toc",
+      "version": "0.9.5",
+      "license": "MIT",
+      "repository": "https://github.com/LyaxZ/dsh-quick-toc",
+      "metadataUrl": "https://registry.npmjs.org/dsh-quick-toc",
+      "tarball": "https://registry.npmjs.org/dsh-quick-toc/-/dsh-quick-toc-0.9.5.tgz",
+      "integrity": "sha512-P7UVYf/Asank5OaM3TXWteNrcJBDdZUPKsZ2GFulm+u0RQhDbO+KSSTRp9uWu+XqNjFT/fmFO0Lb52SGoN4pNg==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 11,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-skill-hub",
+      "version": "0.3.23",
+      "license": "MIT",
+      "repository": "https://github.com/cheshireez/dsh-skill-hub",
+      "metadataUrl": "https://registry.npmjs.org/dsh-skill-hub",
+      "tarball": "https://registry.npmjs.org/dsh-skill-hub/-/dsh-skill-hub-0.3.23.tgz",
+      "integrity": "sha512-Bbt5nNNKQJK2VV19xuddhbnQxWzcu5MxHrtfST4xCEm3XZIgJtK1TecDnCFB6ovw2Oc1+fCDlitBU/f2iGDWsw==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 215,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-skills-anywhere",
+      "version": "0.19.0",
+      "license": "MIT",
+      "repository": "https://github.com/noteflowai/dsh-skills-anywhere",
+      "metadataUrl": "https://registry.npmjs.org/dsh-skills-anywhere",
+      "tarball": "https://registry.npmjs.org/dsh-skills-anywhere/-/dsh-skills-anywhere-0.19.0.tgz",
+      "integrity": "sha512-hqCftNlAHSkBvzzmz87SCfOrElg3c+UBCbgprt13ukilIXcJ+9I450/PBXGg/3XMsNUp5J9cTrwPES0criKNqQ==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 22,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-smooth-cursor",
+      "version": "0.1.9",
+      "license": "MIT",
+      "repository": "https://github.com/Lacquervii/smooth-cursor",
+      "metadataUrl": "https://registry.npmjs.org/dsh-smooth-cursor",
+      "tarball": "https://registry.npmjs.org/dsh-smooth-cursor/-/dsh-smooth-cursor-0.1.9.tgz",
+      "integrity": "sha512-5EcHmRDKQ3bueMOWSmzKAGOvtDhzIKh/LBGdbvaw1Oiy0qfTeZCnOnKR/CmKWlBsw2FZq97GsrwkSeTN3z+jTw==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 22,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-superpowers",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/codeAnqiang-ma/dsh-superpowers",
+      "metadataUrl": "https://registry.npmjs.org/dsh-superpowers",
+      "tarball": "https://registry.npmjs.org/dsh-superpowers/-/dsh-superpowers-0.1.0.tgz",
+      "integrity": "sha512-/BT4/Kb93rav1sgcw67Kz40BHyA6oL9t91JyL6Eubs3oSBYIN0BQpRXwmz1cMBY2HidTmee8XfPHEmRsd9xHjQ==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 60,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-tinyfish",
+      "version": "0.13.0",
+      "license": "MIT",
+      "repository": "https://github.com/viztor/dsh-tinyfish",
+      "metadataUrl": "https://registry.npmjs.org/dsh-tinyfish",
+      "tarball": "https://registry.npmjs.org/dsh-tinyfish/-/dsh-tinyfish-0.13.0.tgz",
+      "integrity": "sha512-jhgqxAYDuRmoBzjL+x5ZPOyEWaemP1ciCKrSdd92UbQbsEwK4kkMI6FrPqNqhmEjSq5qSMVdB68tpgXDz6Kkvg==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 12,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-usage-state",
+      "version": "0.4.8",
+      "license": "MIT",
+      "repository": "https://github.com/takboo/dsh-usage-state",
+      "metadataUrl": "https://registry.npmjs.org/dsh-usage-state",
+      "tarball": "https://registry.npmjs.org/dsh-usage-state/-/dsh-usage-state-0.4.8.tgz",
+      "integrity": "sha512-K/iKq8qNouSWaNaJsei3L6BpoHXx6ubZqLZjWodTNP/4OFIUV6mFYprCM9bPsYxStH4302REbXvJeqqDdoIkOg==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 10,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-zotero",
+      "version": "0.12.1",
+      "license": "MIT",
+      "repository": "https://github.com/Vncntvx/dsh-zotero",
+      "metadataUrl": "https://registry.npmjs.org/dsh-zotero",
+      "tarball": "https://registry.npmjs.org/dsh-zotero/-/dsh-zotero-0.12.1.tgz",
+      "integrity": "sha512-RmUK8LWXUNHUG2i1zbLmCUNKf4F1Wee2fv7fgIJm1p+ak8h3BJA6A0+5xdTnmAIGtg9jOlGVFJKmWrkG4PUSvg==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 298,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "sage-mem",
+      "version": "1.0.2",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/gezi-wen/sage-mem",
+      "metadataUrl": "https://registry.npmjs.org/sage-mem",
+      "tarball": "https://registry.npmjs.org/sage-mem/-/sage-mem-1.0.2.tgz",
+      "integrity": "sha512-whz/0Aa7F/OLyRyU+xG+Pk5bOzeks3HPby4Ta1xLV78jeDO950Qy2u3drpG0zCer2Up3GNLRWsdkWsXKk3TzAA==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 47,
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    }
+  ]
+}
