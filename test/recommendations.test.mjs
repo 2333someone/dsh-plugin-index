@@ -25,3 +25,16 @@ test('recently maintained projects can precede an archived high-star repository'
   const github={repositories:{'big/old':{status:'ok',stars:1000000,archived:true,pushedAt:new Date(now).toISOString()}}};
   assert.equal(recommendIndex({plugins:[old,fresh]},{github,now}).plugins[0].name,'fresh');
 });
+
+test('random resources use a complete independent shuffle without changing default recommendations',()=>{
+  const plugins=['a','b','c','d'].map(name=>plugin(name,name));
+  const bounds=[];
+  const first=recommendIndex({plugins},{now,randomIntImpl:bound=>{bounds.push(bound);return 0;}});
+  const second=recommendIndex({plugins},{now,randomIntImpl:bound=>bound-1});
+  assert.deepEqual(bounds,[4,3,2]);
+  assert.deepEqual(first.plugins.map(p=>p.name),second.plugins.map(p=>p.name));
+  const ranks=result=>result.plugins.map(p=>p.metadata.sortKeys['random-resources']);
+  assert.deepEqual([...ranks(first)].sort((a,b)=>a-b),[1,2,3,4]);
+  assert.notDeepEqual(ranks(first),ranks(second));
+  assert.equal(first.metadata.sortKeys['random-resources'].title.zh,'随机资源');
+});

@@ -13,6 +13,10 @@ export function checkMarketDisplay(index, github, downloads, display, publishers
   if (index.metadata?.sortKeys?.recommended) {
     for (const [position, plugin] of index.plugins.entries()) if (plugin.metadata?.sortKeys?.recommended !== index.plugins.length - position) throw new Error('Default recommendation order mismatch: ' + plugin.name);
   }
+  if (index.metadata?.sortKeys?.['random-resources']) {
+    const ranks = index.plugins.map(plugin => plugin.metadata?.sortKeys?.['random-resources']).sort((a,b)=>a-b);
+    if (ranks.some((rank, position) => rank !== position + 1)) throw new Error('Random resources must contain one rank per plugin');
+  }
   for (const plugin of index.plugins) {
     const presentation = display.plugins?.[plugin.name];
     if (!presentation) throw new Error('Missing DSH row evidence: ' + plugin.name);

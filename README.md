@@ -26,6 +26,8 @@ If Discover is missing, enable DSH's **Custom plugin markets** bundle first. DSH
 
 Default recommendations balance recent maintenance, categories and developer exposure, with periodic rotation to help more developers get discovered. You can also sort by stars or downloads.
 
+The default index also offers “Random resources”, a complete random shuffle renewed with each index update.
+
 The directory covers interface tools, skills, memory, providers, usage tracking, integrations, themes, workflows, development and research. Entries link to their source and exact npm versions, with author icons and localized names and descriptions when available.
 
 The DSH list and website show **★ GitHub stars, ↓ npm downloads over 30 days, and days since the listed release**. DSH can sort by stars or downloads. Reviewed company accounts and developers carry identity labels. [Metric and identity sources](docs/market-display.md). Missing counts never appear as zero; downloads count npm package requests.

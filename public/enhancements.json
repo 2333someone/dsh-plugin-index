@@ -27,12 +27,12 @@
       },
       "versions": [
         {
-          "version": "0.1.0",
-          "publishTimestamp": 1792318325,
+          "version": "0.1.1",
+          "publishTimestamp": 1792320739,
           "source": {
             "type": "git",
             "url": "https://github.com/polang233/dsh-plugin-index",
-            "commit": "fc5a74b5d4f249cf7f4bdd21193dc20bd9d17ad9",
+            "commit": "f4670c59adde8a3a4a2614f0547e9cdc1c19622b",
             "path": "packages/market-listing-ui"
           },
           "engines": {

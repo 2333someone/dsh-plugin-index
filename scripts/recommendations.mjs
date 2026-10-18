@@ -1,4 +1,4 @@
-import {createHash} from 'node:crypto';
+import {createHash, randomInt} from 'node:crypto';
 import {githubRepository} from './github.mjs';
 
 const DAY = 86_400_000;
@@ -6,7 +6,7 @@ const KEY = 'recommended';
 const age = (timestamp, now) => Number.isFinite(timestamp) && timestamp <= now ? (now - timestamp) / DAY : Infinity;
 
 /** Balance recent maintenance with category and developer exposure; popularity has a bounded influence. */
-export function recommendIndex(index, {github = {}, now = Date.now()} = {}) {
+export function recommendIndex(index, {github = {}, now = Date.now(), randomIntImpl = randomInt} = {}) {
   const week = Math.floor(now / (7 * DAY));
   const candidates = index.plugins.map(plugin => {
     const repo = githubRepository(plugin.repository?.url);
@@ -36,9 +36,16 @@ export function recommendIndex(index, {github = {}, now = Date.now()} = {}) {
     developers.set(chosen.developer, (developers.get(chosen.developer) ?? 0) + 1);
     categories.set(chosen.category, (categories.get(chosen.category) ?? 0) + 1);
   }
+  // Fisher–Yates gives every complete permutation equal probability, independent of recommendation signals.
+  const shuffled = [...ordered];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = randomIntImpl(i + 1);
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  const randomRanks = new Map(shuffled.map((plugin, position) => [plugin.name, shuffled.length - position]));
   return {
     ...index,
-    metadata: {...index.metadata, sortKeys: {...index.metadata?.sortKeys, [KEY]: {title: {en: 'Recommended', zh: '推荐排序'}, order: 'desc'}}},
-    plugins: ordered.map((plugin, position) => ({...plugin, metadata: {...plugin.metadata, sortKeys: {...plugin.metadata?.sortKeys, [KEY]: ordered.length - position}}}))
+    metadata: {...index.metadata, sortKeys: {...index.metadata?.sortKeys, [KEY]: {title: {en: 'Smart recommendations', zh: '智能推荐'}, order: 'desc'}, 'random-resources': {title: {en: 'Random resources', zh: '随机资源'}, order: 'desc'}}},
+    plugins: ordered.map((plugin, position) => ({...plugin, metadata: {...plugin.metadata, sortKeys: {...plugin.metadata?.sortKeys, [KEY]: ordered.length - position, 'random-resources': randomRanks.get(plugin.name)}}}))
   };
 }
