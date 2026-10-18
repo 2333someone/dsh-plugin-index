@@ -42,9 +42,9 @@ A local SQLite task board with agent assignments, execution tracking and human r
 
 ## Listing outcome / 收录结果
 
-ModSearch is included. Univer Office is deferred because its unpacked archive is 226,850,899 bytes, above this generator's 100 MiB inspection limit; the local download also exceeded the request timeout. Taskboard is deferred because its published package omits the repository field, despite an independently identified public GitHub repository. No limits or metadata requirements were relaxed for these entries.
+ModSearch and Taskboard are included. Taskboard 0.1.9 is pinned with a [repository provenance review](taskboard-review.md): the npm archive matches the GitHub release asset digest, despite the package's missing repository field. Univer Office remains deferred pending bounded large-archive support; its unpacked archive is 226,850,899 bytes.
 
-ModSearch 已收录。Univer Office 解压后为 226,850,899 字节，超过生成器的 100 MiB 检查上限，本地下载也发生超时；Taskboard 虽能核实公开 GitHub 仓库，但发布包没有声明 repository，暂不进入自动更新目录。两项保留作后续适配候选。
+ModSearch 与 Taskboard 已收录。Taskboard 0.1.9 的 npm 归档与 GitHub 发行资产哈希一致，已通过[源码对应核查](taskboard-review.md)，以固定版本收录。Univer Office 解压后为 226,850,899 字节，等待受限的大包读取支持。
 
 ## Deferred / 暂缓
 

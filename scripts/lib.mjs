@@ -137,6 +137,27 @@ export function repositoryFrom(manifest) {
   return { url: url.href, ...(validDirectory ? { directory } : {}) };
 }
 
+export function resolveRepository(manifest, input, version, integrity) {
+  const declared = repositoryFrom(manifest);
+  const review = input.repositoryReview;
+  if (review === undefined) return { repository: declared, provenance: declared ? 'package' : null };
+  if (input.version !== version || review.version !== version || review.integrity !== integrity) {
+    throw new Error('Repository review must match the pinned package version and integrity');
+  }
+  if (typeof review.commit !== 'string' || !/^[0-9a-f]{40}$/.test(review.commit)) throw new Error('Repository review requires an immutable commit');
+  if (typeof review.url !== 'string' || !URL.canParse(review.url)) throw new Error('Repository review requires a canonical GitHub repository URL');
+  const url = new URL(review.url);
+  if (url.protocol !== 'https:' || url.hostname !== 'github.com' || url.username || url.password || url.search || url.hash || !/^\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(url.pathname) || url.href !== review.url) {
+    throw new Error('Repository review requires a canonical GitHub repository URL');
+  }
+  if (declared && declared.url.toLowerCase() !== review.url.toLowerCase()) throw new Error('Repository review conflicts with the published manifest');
+  return {
+    repository: declared ?? { url: review.url },
+    provenance: declared ? 'package' : 'review',
+    review: { version, integrity, commit: review.commit, url: review.url, evidence: `${review.url}/blob/${review.commit}/package.json` }
+  };
+}
+
 export async function collectPackage(input, { fetchImpl = fetch, now = Date.now() } = {}) {
   if (!PACKAGE.test(input.name) || input.name.length > 214) throw new Error('Invalid npm package name');
   const metadataUrl = `${REGISTRY}${encodeURIComponent(input.name)}`;
@@ -151,7 +172,8 @@ export async function collectPackage(input, { fetchImpl = fetch, now = Date.now(
   verifyIntegrity(bytes, published.dist?.integrity);
   const { manifest, files } = await inspectArchive(bytes);
   const patch = checkBundle(manifest, files, input.name, version);
-  const repository = repositoryFrom(manifest);
+  const repositoryInfo = resolveRepository(manifest, input, version, published.dist.integrity);
+  const repository = repositoryInfo.repository;
   const author = typeof manifest.author === 'string' ? manifest.author.replace(/\s*<[^>]*>/g, '').replace(/\s*\([^)]*\)/g, '').trim() : manifest.author?.name;
   const description = input.description ?? manifest.description;
   const entry = {
@@ -170,7 +192,7 @@ export async function collectPackage(input, { fetchImpl = fetch, now = Date.now(
   const lifecycleScripts = Object.keys(manifest.scripts ?? {}).filter(key => ['preinstall', 'install', 'postinstall'].includes(key));
   return {
     entry,
-    evidence: { name: manifest.name, version, license: typeof manifest.license === 'string' ? manifest.license : null, repository: repository?.url ?? null, metadataUrl, tarball: published.dist.tarball, integrity: published.dist.integrity, patch, filesChecked: files.size, lifecycleScripts, checks: ['registry-identity', 'sha512-integrity', 'archive-manifest-identity', 'bundle-patch-present', ...(manifest.main ? ['main-file-present'] : [])], limitations: ['No runtime installation test', 'No code audit', 'Patch references and transitive dependencies are not validated'] }
+    evidence: { name: manifest.name, version, license: typeof manifest.license === 'string' ? manifest.license : null, repository: repository?.url ?? null, repositorySource: repositoryInfo.provenance, ...(repositoryInfo.review ? { repositoryReview: repositoryInfo.review } : {}), metadataUrl, tarball: published.dist.tarball, integrity: published.dist.integrity, patch, filesChecked: files.size, lifecycleScripts, checks: ['registry-identity', 'sha512-integrity', 'archive-manifest-identity', 'bundle-patch-present', ...(manifest.main ? ['main-file-present'] : [])], limitations: ['No runtime installation test', 'No code audit', 'Patch references and transitive dependencies are not validated'] }
   };
 }
 

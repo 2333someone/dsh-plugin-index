@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { gzipSync } from 'node:zlib';
 import { createHash } from 'node:crypto';
-import { buildIndex, checkBundle, collectPackage, download, dshEngines, inspectArchive, repositoryFrom, verifyIntegrity } from '../scripts/lib.mjs';
+import { buildIndex, checkBundle, collectPackage, download, dshEngines, inspectArchive, repositoryFrom, resolveRepository, verifyIntegrity } from '../scripts/lib.mjs';
 import { marketInstallTarget, parseMarketIndex } from '@deepseek-ai/dsh-plugin-market-index';
 
 function archive(entries) {
@@ -115,6 +115,31 @@ test('repository metadata preserves package directories and strips git transport
 test('single peer ranges retain wildcard and prerelease semantics', () => {
   assert.deepEqual(dshEngines({ peerDependencies: { '@deepseek-ai/dsh': '0.2.x' } }), { dsh: '0.2.x' });
   assert.doesNotThrow(() => dshEngines({ peerDependencies: { '@deepseek-ai/dsh': '0.2.x', '@deepseek-ai/dsh-core': '>=0.2.0-rc.1 <0.2.0' } }));
+});
+test('reviewed repositories are tied to an exact release, integrity and source commit', () => {
+  const review = { version: '1.2.3', url: 'https://github.com/example/plugin', commit: 'a'.repeat(40), integrity: 'sha512-fixture' };
+  const input = { version: '1.2.3', repositoryReview: review };
+  const result = resolveRepository({}, input, '1.2.3', 'sha512-fixture');
+  assert.equal(result.provenance, 'review');
+  assert.equal(result.repository.url, review.url);
+  assert.equal(result.review.evidence, `${review.url}/blob/${review.commit}/package.json`);
+  assert.throws(() => resolveRepository({}, { repositoryReview: review }, '1.2.3', 'sha512-fixture'), /pinned/);
+  assert.throws(() => resolveRepository({}, input, '1.2.4', 'sha512-fixture'), /pinned/);
+  assert.throws(() => resolveRepository({}, input, '1.2.3', 'sha512-changed'), /integrity/);
+  assert.throws(() => resolveRepository({ repository: 'https://github.com/other/plugin' }, input, '1.2.3', 'sha512-fixture'), /conflicts/);
+  for (const url of ['http://github.com/example/plugin', 'https://secret@github.com/example/plugin', 'https://github.com/example/plugin?x=1', 'https://evil.example/example/plugin']) {
+    assert.throws(() => resolveRepository({}, { ...input, repositoryReview: { ...review, url } }, '1.2.3', 'sha512-fixture'), /canonical/);
+  }
+  assert.throws(() => resolveRepository({}, { ...input, repositoryReview: { ...review, commit: 'main' } }, '1.2.3', 'sha512-fixture'), /immutable/);
+});
+test('source reviews are disclosed by collectPackage after archive verification', async () => {
+  const source = fixture();
+  const metadata = await (await source.fetchImpl('https://registry.npmjs.org/example', { redirect: 'error' })).json();
+  const input = { ...config.packages[0], version: '1.2.3', repositoryReview: { version: '1.2.3', url: 'https://github.com/example/plugin', commit: 'a'.repeat(40), integrity: metadata.versions['1.2.3'].dist.integrity } };
+  const result = await collectPackage(input, source);
+  assert.equal(result.entry.repository.url, input.repositoryReview.url);
+  assert.equal(result.evidence.repositorySource, 'review');
+  assert.equal(result.evidence.repositoryReview.commit, 'a'.repeat(40));
 });
 test('publication time comes from registry rather than generation time', async () => {
   await assert.rejects(collectPackage(config.packages[0], { ...fixture(), now: 0 }), /publication date/);

@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-18",
+  "packageName": "@shengsheng/dsh-taskboard",
+  "version": "0.1.9",
+  "sourceUrl": "https://github.com/shengsheng90/DSH-taskboard",
+  "sourceCommit": "f55b1dd9657783d55b2fc2758c1b297942678e3e",
+  "tag": "v0.1.9",
+  "annotatedTagObject": "56b098a99d15e69add4168695f4b83dc2fee8640",
+  "decision": "verified-repository-override",
+  "registry": {
+    "url": "https://registry.npmjs.org/@shengsheng%2Fdsh-taskboard/0.1.9",
+    "gitHead": null,
+    "repository": null,
+    "homepage": null,
+    "maintainers": ["shengsheng"],
+    "publisher": "shengsheng",
+    "tarball": "https://registry.npmjs.org/@shengsheng/dsh-taskboard/-/dsh-taskboard-0.1.9.tgz",
+    "integrity": "sha512-o+E6Qo8GFjLQj9pWFFIkVuidkj5Lu1/p9JTFLjtk5DWsxYCulJtqorcph3X/3Jvp/kqrQsdORyBBa6WoWnfLRg==",
+    "sha256": "03382a863dc02eacc377651ba372749dab3843660d295ec94c37932ff844b62d"
+  },
+  "evidence": [
+    {
+      "url": "https://api.github.com/repos/shengsheng90/DSH-taskboard/releases/assets/636205093",
+      "finding": "GitHub release asset SHA-256 equals the downloaded npm tarball SHA-256. Registry SHA-512 integrity also matches."
+    },
+    {
+      "url": "https://github.com/shengsheng90/DSH-taskboard/releases/tag/v0.1.9",
+      "finding": "Release publishes shengsheng-dsh-taskboard-0.1.9.tgz and its SHA-256 file; uploader is shengsheng90."
+    },
+    {
+      "url": "https://api.github.com/repos/shengsheng90/DSH-taskboard/git/tags/56b098a99d15e69add4168695f4b83dc2fee8640",
+      "finding": "Annotated v0.1.9 tag resolves to sourceCommit; tag is unsigned."
+    },
+    {
+      "url": "https://github.com/shengsheng90/DSH-taskboard/blob/f55b1dd9657783d55b2fc2758c1b297942678e3e/package.json",
+      "finding": "Exact release commit declares name @shengsheng/dsh-taskboard and version 0.1.9."
+    },
+    {
+      "url": "https://github.com/shengsheng90/DSH-taskboard/blob/f55b1dd9657783d55b2fc2758c1b297942678e3e/README.md#L9-L10",
+      "finding": "Repository README names the npm package and repository; identical README bytes occur in the npm tarball. No independently verified npm-to-GitHub maintainer identity link is claimed."
+    },
+    {
+      "url": "https://github.com/shengsheng90/DSH-taskboard/actions/runs/38360467541",
+      "finding": "Successful CI at sourceCommit: check plus eight Harness/Node compatibility jobs."
+    },
+    {
+      "url": "https://github.com/shengsheng90/DSH-taskboard/blob/f55b1dd9657783d55b2fc2758c1b297942678e3e/.github/workflows/ci.yml",
+      "finding": "Only workflow at the release commit: PR/main CI, not tag publication. Checks package, types, tests, build, committed lib freshness, package smoke and example; compatibility matrix uses Harness 0.1.7-rc.1/rc.2 and 0.2.0-rc.1/rc.2 with Node 22/24. No automated npm-publish run established."
+    }
+  ],
+  "contentComparison": {
+    "npmFiles": 134,
+    "byteIdenticalToCommit": 131,
+    "missingFromCommit": [],
+    "differences": {
+      "LICENSE": "CRLF versus LF only",
+      "docs/acceptance-audit.md": "CRLF versus LF only",
+      "package.json": "packageManager omitted, scripts key moved, trailing newline removed; package name/version unchanged"
+    }
+  },
+  "localValidation": {
+    "node": "24.21.0",
+    "source": "exact v0.1.9 commit archive",
+    "packageManifestVerification": "passed: node scripts/verify-package.mjs --source",
+    "unitTests": "passed: 6/6 original tests in domain.spec.ts and markdown.spec.ts; zero failures",
+    "tooling": "tsx 4.22.4 installed separately with pnpm 11.28.5 --ignore-scripts; no full project dependency install",
+    "isolation": "Child environment allowlist; isolated HOME/USERPROFILE/APPDATA/LOCALAPPDATA/TEMP/TMP; no GH_TOKEN, API keys or DSH configuration inherited; no external service started"
+  },
+  "limitations": [
+    "npm metadata omits gitHead/repository/homepage; override relies on artifact digest, package contents and exact release tag.",
+    "No public tag-to-npm-publish workflow was found at the release commit; CI success is validation evidence, not proof of who invoked npm publish.",
+    "Local checks do not establish full GUI, real Harness installation or model execution compatibility."
+  ]
+}

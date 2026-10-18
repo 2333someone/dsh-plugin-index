@@ -31,6 +31,12 @@ pnpm exec playwright test
 
 构建失败时查看 Actions 日志，修正来源或连接问题后重新运行。撤回或停止维护的插件通过修改收录列表移除，不会在生成过程中被悄悄跳过。
 
+## 经核查的源码补充
+
+发布包缺少 `repository` 时，维护者只有在确认该 npm 归档与上游发行对应后，才能添加 `repositoryReview`。条目必须固定 `version`，核查记录绑定相同版本、npm SHA-512、规范 GitHub 地址和不可变源码提交。版本或哈希变化、发布包声明的仓库冲突都会让构建失败。`status.json` 用 `repositorySource: "review"` 与 `"package"` 区分来源，并链接核查的源码清单。这类插件升级需要重新核查，不自动跟随 `latest`。
+
+首个条目的[Taskboard 来源记录](taskboard-review.md)包含 npm 与 GitHub 发行资产的相同哈希。
+
 ## GitHub star
 
 每次构建对同一仓库只请求一次 GitHub 公开 API，并生成 `public/github.json`，记录准确的 star 数、获取时间和最近推送时间。计数同时写入官方索引的 `github-stars` 排序字段，DSH 内也可以据此排序。

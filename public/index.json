@@ -199,6 +199,38 @@
       ]
     },
     {
+      "name": "@shengsheng/dsh-taskboard",
+      "title": {
+        "en": "Taskboard",
+        "zh": "项目任务看板"
+      },
+      "description": {
+        "en": "Manage project tasks in a local SQLite board with agent assignments, execution tracking and human review.",
+        "zh": "用本地 SQLite 看板管理项目任务，支持 Agent 领取、执行跟踪和人工验收。"
+      },
+      "repository": {
+        "url": "https://github.com/shengsheng90/DSH-taskboard"
+      },
+      "metadata": {
+        "category": "tools",
+        "keywords": [],
+        "sortKeys": {
+          "github-stars": 336
+        }
+      },
+      "versions": [
+        {
+          "version": "0.1.9",
+          "publishTimestamp": 1791876907,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        }
+      ]
+    },
+    {
       "name": "dsh-any-background",
       "title": {
         "en": "Custom Background",
@@ -525,8 +557,8 @@
       },
       "versions": [
         {
-          "version": "3.0.0",
-          "publishTimestamp": 1792234481,
+          "version": "3.0.1",
+          "publishTimestamp": 1792303188,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org/"

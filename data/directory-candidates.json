@@ -415,7 +415,8 @@
           }
         ],
         "status": "upstream-ci-success",
-        "localTestsExecuted": false
+        "localTestsExecuted": true,
+        "localResult": "Exact release commit: package verification and 6/6 domain/Markdown unit tests passed; see taskboard-provenance.json."
       },
       "compatibility": {
         "declared": "DSH peers *，README称无宿主版本门槛；Node ^22.19.0 || >=24.0.0。",
@@ -460,8 +461,8 @@
         "fileCount": 134
       },
       "npmMetadataUrl": "https://registry.npmjs.org/@shengsheng/dsh-taskboard/latest",
-      "listingStatus": "deferred",
-      "deferralReason": "Published npm manifest omits repository; independently found GitHub source is recorded but does not satisfy current ingestion policy."
+      "listingStatus": "included-pinned-with-source-review",
+      "provenanceReview": "taskboard-provenance.json"
     },
     {
       "repo": "Fishquito7/dsh-skill-mcp-panel",

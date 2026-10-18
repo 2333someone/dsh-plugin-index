@@ -31,6 +31,12 @@ The build lists one version per package. DSH reads compatibility from `engines.d
 
 On a failure, inspect the Actions log, fix the source or connection, and rerun. Remove a withdrawn or unmaintained listing through a source-list change. No failed source is silently omitted from a successful deployment.
 
+## Reviewed repository metadata
+
+If a published package omits `repository`, maintainers may add `repositoryReview` only after matching that exact npm archive to an upstream release. The source entry must pin `version`; the review records the same version, npm SHA-512 integrity, canonical GitHub URL and immutable source commit. A version/hash mismatch or a conflicting published repository stops the build. `status.json` distinguishes `repositorySource: "review"` from `"package"` and links the reviewed source manifest. Updates to reviewed packages require a new review; they do not follow `latest` automatically.
+
+[Taskboard provenance](taskboard-review.md) documents the first such entry, including the matching npm/release-asset digest.
+
 ## GitHub stars
 
 Each build reads the public GitHub API once per unique repository and writes `public/github.json`. It records the exact star count, fetch time and last push time. Counts also populate the official index's `github-stars` sort key, so DSH can sort by stars.
