@@ -102,7 +102,8 @@ function pluginRow(plugin, language, categories, text, snapshot, root) {
   const date = version?.publishTimestamp != null ? dateLabel(version.publishTimestamp * 1000, language) : undefined;
   const namedTitle = title && title !== name;
   const icon = typeof plugin.icon === 'string' && /^icons\/[a-f0-9]{64}\.(?:svg|png|jpg|webp)$/.test(plugin.icon) ? root + plugin.icon : undefined;
-  const avatar = icon ? `<img src="${esc(icon)}" alt="" width="44" height="44" loading="lazy" decoding="async">` : esc(Array.from(title || name)[0]);
+  const initialName = title && title !== name ? title : name.replace(/^@[^/]+\//, '').replace(/^dsh[-_]/, '');
+  const avatar = icon ? `<img src="${esc(icon)}" alt="" width="44" height="44" loading="lazy" decoding="async">` : esc(Array.from(initialName)[0].toUpperCase());
   return `<li class="plugin" data-plugin data-category="${esc(categoryId)}" data-search="${esc(search)}">
     <article class="plugin-main" aria-label="${esc(title || name)}">
       <div class="plugin-heading"><span class="plugin-avatar" aria-hidden="true">${avatar}</span><div>${namedTitle ? `<h3 class="plugin-title">${esc(title)}</h3><p class="package-name">${esc(packageName)}</p>` : `<h3 class="package-name is-title">${esc(packageName)}</h3>`}</div></div>

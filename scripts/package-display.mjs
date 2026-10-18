@@ -59,9 +59,9 @@ function imageType(path, bytes) {
   if (['.jpg', '.jpeg'].includes(extension) && !(bytes[0] === 255 && bytes[1] === 216 && bytes[2] === 255)) throw new Error('Invalid JPEG signature');
   if (extension === '.webp' && !(bytes.toString('ascii', 0, 4) === 'RIFF' && bytes.toString('ascii', 8, 12) === 'WEBP')) throw new Error('Invalid WebP signature');
   if (extension === '.svg') {
-    const svg = bytes.toString('utf8');
+    const svg = bytes.toString('utf8').replace(/<!--[\s\S]*?-->/g, '');
     const tags = [...svg.matchAll(/<\/?([A-Za-z][\w:.-]*)\b/g)].map(match => match[1]);
-    const allowed = /^(?:svg|g|path|rect|circle|ellipse|line|polyline|polygon|defs|linearGradient|radialGradient|stop|clipPath|mask|title|desc|use|style|symbol|filter|fe[A-Za-z]+)$/;
+    const allowed = /^(?:svg|g|path|rect|circle|ellipse|line|polyline|polygon|defs|linearGradient|radialGradient|stop|clipPath|mask|title|desc|text|tspan|use|style|symbol|filter|fe[A-Za-z]+)$/;
     if (!/<svg\b/i.test(svg) || tags.some(tag => !allowed.test(tag)) || /<!DOCTYPE|<!ENTITY|&#|\son[\w:-]*\s*=|@|\\|<\?(?!xml\s)/i.test(svg)) throw new Error('SVG contains unsupported active content');
     for (const match of svg.matchAll(/(?:href|xlink:href)\s*=\s*(['"])(.*?)\1/gi)) {
       if (!/^#[A-Za-z_][\w:.-]*$/.test(match[2])) throw new Error('SVG references an external resource');

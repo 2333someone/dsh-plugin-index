@@ -20,3 +20,10 @@ test('a claimed raster extension must match the image signature', () => {
   assert.equal(result.icon, undefined);
   assert.match(result.evidence.warnings[0].reason, /PNG signature/);
 });
+test('inactive SVG comments and visible text do not hide author artwork', () => {
+  const manifest = {name: 'example', icon: './icon.svg'};
+  const bytes = Buffer.from('<!-- Used in <img>; contact author@example.org --><svg xmlns="http://www.w3.org/2000/svg"><text x="0" y="12">DSH</text></svg>');
+  const result = packageDisplay(manifest, displayFiles(manifest, new Set(['package/icon.svg'])), new Map([['package/icon.svg', bytes]]));
+  assert.equal(result.evidence.icon.status, 'included');
+  assert.equal(result.asset.bytes, bytes);
+});

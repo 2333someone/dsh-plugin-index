@@ -22,7 +22,7 @@ https://polang233.github.io/dsh-plugin-index/index.json
 
 ## 收录内容
 
-涵盖界面工具、技能、记忆、模型供应商、用量统计、外部服务和主题。条目提供介绍、源码链接和明确的 npm 版本，并读取作者随包发布的图标与多语言名称。
+涵盖界面工具、技能、记忆、模型供应商、用量统计、外部服务、主题、工作流、开发与研究。条目提供介绍、源码链接和明确的 npm 版本，并读取作者随包发布的图标与多语言名称。
 
 目录显示 GitHub star，点击可查看仓库关注者；DSH 内也支持按 star 排序。数据随构建更新，请求失败时保留带日期的近期缓存，无法获取时不显示为 0。
 
@@ -30,7 +30,7 @@ https://polang233.github.io/dsh-plugin-index/index.json
 
 每六小时更新一次。构建失败时保留已发布的索引。DSH 默认缓存十分钟，也可手动刷新。
 
-[近期插件测试记录](docs/plugin-review-2026-10-18.md) · [目录发现与核查](docs/directory-discovery-2026-10-18.md)
+[近期插件测试记录](docs/plugin-review-2026-10-18.md) · [本轮扩充与证据](docs/catalog-expansion-2026-10-18.md) · [目录发现与核查](docs/directory-discovery-2026-10-18.md)
 
 ## 参与维护
 

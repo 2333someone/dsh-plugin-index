@@ -45,6 +45,22 @@ for (const language of ['en', 'zh']) {
       await icons.first().scrollIntoViewIfNeeded();
       await expect.poll(() => icons.first().evaluate(image => image.complete && image.naturalWidth > 0)).toBe(true);
     }
+    if (language === 'en' && info.project.name === 'desktop') {
+      const broken = await page.evaluate(async paths => {
+        let next = 0;
+        const failures = [];
+        await Promise.all(Array.from({length: Math.min(8, paths.length)}, async () => {
+          while (next < paths.length) {
+            const path = paths[next++];
+            const image = new Image();
+            image.src = new URL(path, location.href).href;
+            try { await image.decode(); } catch { failures.push(path); }
+          }
+        }));
+        return failures;
+      }, [...new Set(index.plugins.map(plugin => plugin.icon).filter(Boolean))]);
+      expect(broken).toEqual([]);
+    }
     await page.locator('#plugins').scrollIntoViewIfNeeded();
     await page.screenshot({ path: info.outputPath(`${language}-directory.png`) });
     await page.evaluate(() => scrollTo(0, 0));

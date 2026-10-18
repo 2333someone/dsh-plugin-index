@@ -22,7 +22,7 @@ If Discover is missing, enable DSH's **Custom plugin markets** bundle first. DSH
 
 ## What's included
 
-The directory covers interface tools, skills, memory, providers, usage tracking, integrations and themes. Entries link to their source and exact npm versions, with author icons and localized names and descriptions when available.
+The directory covers interface tools, skills, memory, providers, usage tracking, integrations, themes, workflows, development and research. Entries link to their source and exact npm versions, with author icons and localized names and descriptions when available.
 
 GitHub stars appear beside each entry and link to the repository's stargazers. DSH can also sort by stars. Counts refresh during builds; a failed request keeps a dated recent snapshot or shows the count as unavailable, never as a fabricated zero.
 
@@ -30,7 +30,7 @@ Every build checks published package integrity, package identity, bundle patch f
 
 Updates run every six hours. A failed build leaves the published index in place. DSH may cache the index for ten minutes; use Refresh to fetch it again.
 
-[Recent plugin checks](docs/plugin-review-2026-10-18.md) · [Directory discoveries](docs/directory-discovery-2026-10-18.md)
+[Recent plugin checks](docs/plugin-review-2026-10-18.md) · [Catalog expansion and evidence](docs/catalog-expansion-2026-10-18.md) · [Directory discoveries](docs/directory-discovery-2026-10-18.md)
 
 ## Contribute
 
