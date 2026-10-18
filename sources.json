@@ -62,6 +62,30 @@
   },
   "packages": [
     {
+      "name": "@changfenhuang/dsh-genui",
+      "title": {
+        "en": "GenUI",
+        "zh": "交互式生成界面"
+      },
+      "description": {
+        "en": "Render interactive charts, forms, diagrams and other UI inside assistant replies.",
+        "zh": "在助手回复中呈现交互图表、表单、流程图等界面。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "@liustack/modsearch",
+      "title": {
+        "en": "ModSearch",
+        "zh": "ModSearch 网页搜索"
+      },
+      "description": {
+        "en": "Search the web and X, fetch page content, and switch between search engines when a request fails.",
+        "zh": "搜索网页和 X 内容、抓取正文，并在请求失败时切换搜索引擎。"
+      },
+      "category": "tools"
+    },
+    {
       "name": "@michengai/dsh-skills-manager",
       "title": {
         "en": "Skills Manager",
@@ -84,18 +108,6 @@
         "zh": "自定义主题色与图片或视频壁纸，分别调整各区域的透明度和模糊度。"
       },
       "category": "appearance"
-    },
-    {
-      "name": "dsh-auto-title",
-      "title": {
-        "en": "Auto Titles",
-        "zh": "自动会话标题"
-      },
-      "description": {
-        "en": "Generate session titles from recent user messages while preserving manually assigned titles.",
-        "zh": "根据会话最近的用户消息生成标题，并保留手动命名。"
-      },
-      "category": "interface"
     },
     {
       "name": "dsh-bottom-info-bar",
@@ -142,6 +154,18 @@
       "description": {
         "en": "Query community plugin assessment records, evidence snapshots, and scoring rules through read-only DSH or MCP tools.",
         "zh": "通过只读工具查询社区插件评估记录、证据快照与评分规范。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-chat-import",
+      "title": {
+        "en": "Chat Import",
+        "zh": "聊天记录导入"
+      },
+      "description": {
+        "en": "Import AI coding agent conversations as resumable DeepSeek Harness sessions.",
+        "zh": "将 AI 编程助手聊天记录导入为可继续对话的 DeepSeek Harness 会话。"
       },
       "category": "tools"
     },
@@ -238,6 +262,18 @@
       "description": {
         "en": "Keep layered cross-session memories in local SQLite with retrieval, write approvals, and context injection.",
         "zh": "以本地 SQLite 保存分层跨会话记忆，提供检索、写入审批和上下文注入。"
+      },
+      "category": "memory"
+    },
+    {
+      "name": "dsh-mnemon",
+      "title": {
+        "en": "Mnemon",
+        "zh": "Mnemon 长期记忆"
+      },
+      "description": {
+        "en": "Composable memory with pluggable sources and strategies for DeepSeek Harness.",
+        "zh": "为 DeepSeek Harness 提供可组合记忆、可插拔来源与记忆策略。"
       },
       "category": "memory"
     },

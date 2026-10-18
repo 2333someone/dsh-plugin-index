@@ -71,6 +71,92 @@
   },
   "plugins": [
     {
+      "name": "@changfenhuang/dsh-genui",
+      "title": {
+        "en": "GenUI",
+        "zh": "交互式生成界面"
+      },
+      "description": {
+        "en": "Render interactive charts, forms, diagrams and other UI inside assistant replies.",
+        "zh": "在助手回复中呈现交互图表、表单、流程图等界面。"
+      },
+      "repository": {
+        "url": "https://github.com/omdsh-dev/dsh-genui"
+      },
+      "homepage": "https://github.com/omdsh-dev/dsh-genui",
+      "metadata": {
+        "category": "interface",
+        "keywords": [
+          "dsh",
+          "deepseek-harness",
+          "generative-ui",
+          "plugin",
+          "ui"
+        ],
+        "sortKeys": {
+          "github-stars": 626
+        }
+      },
+      "versions": [
+        {
+          "version": "0.13.0",
+          "publishTimestamp": 1792253293,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": "^0.2.0-rc.1 || ^0.2.1-rc.1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@liustack/modsearch",
+      "title": {
+        "en": "ModSearch",
+        "zh": "ModSearch 网页搜索"
+      },
+      "description": {
+        "en": "Search the web and X, fetch page content, and switch between search engines when a request fails.",
+        "zh": "搜索网页和 X 内容、抓取正文，并在请求失败时切换搜索引擎。"
+      },
+      "author": "Leon Liu",
+      "repository": {
+        "url": "https://github.com/liustack/modsearch"
+      },
+      "homepage": "https://github.com/liustack/modsearch#readme",
+      "metadata": {
+        "category": "tools",
+        "keywords": [
+          "search",
+          "web-fetch",
+          "cli",
+          "llm",
+          "agent",
+          "agent-skill",
+          "antigravity",
+          "modsearch",
+          "dsh-plugin",
+          "deepseek-harness"
+        ],
+        "sortKeys": {
+          "github-stars": 739
+        }
+      },
+      "versions": [
+        {
+          "version": "5.10.7",
+          "publishTimestamp": 1792090019,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        }
+      ]
+    },
+    {
       "name": "@michengai/dsh-skills-manager",
       "title": {
         "en": "Skills Manager",
@@ -153,44 +239,6 @@
           "engines": {
             "dsh": "0.2.0-rc.1 || 0.2.0-rc.2 || 0.2.1-alpha.1 || 0.2.1-alpha.2 || 0.2.1-alpha.3 || 0.2.1-alpha.4 || 0.2.1-alpha.5 || 0.2.1-rc.1 || 0.2.1-rc.2 || >=0.2.0-rc.1"
           }
-        }
-      ]
-    },
-    {
-      "name": "dsh-auto-title",
-      "title": {
-        "en": "Auto Titles",
-        "zh": "自动会话标题"
-      },
-      "description": {
-        "en": "Generate session titles from recent user messages while preserving manually assigned titles.",
-        "zh": "根据会话最近的用户消息生成标题，并保留手动命名。"
-      },
-      "author": "WhatCannotBeSaid",
-      "repository": {
-        "url": "https://github.com/WhatCannotBeSaid/dsh-auto-title"
-      },
-      "homepage": "https://github.com/WhatCannotBeSaid/dsh-auto-title#readme",
-      "metadata": {
-        "category": "interface",
-        "keywords": [
-          "dsh",
-          "dsh-plugin",
-          "deepseek-harness",
-          "session-title",
-          "auto-title"
-        ],
-        "sortKeys": {}
-      },
-      "versions": [
-        {
-          "version": "1.7.0",
-          "publishTimestamp": 1791178162,
-          "source": {
-            "type": "npm",
-            "registry": "https://registry.npmjs.org/"
-          },
-          "engines": {}
         }
       ]
     },
@@ -372,6 +420,71 @@
       ]
     },
     {
+      "name": "dsh-chat-import",
+      "title": {
+        "en": "Chat Import",
+        "zh": "聊天记录导入"
+      },
+      "description": {
+        "en": "Import AI coding agent conversations as resumable DeepSeek Harness sessions.",
+        "zh": "将 AI 编程助手聊天记录导入为可继续对话的 DeepSeek Harness 会话。"
+      },
+      "author": "Nwflower",
+      "repository": {
+        "url": "https://github.com/Nwflower/dsh-chat-import"
+      },
+      "homepage": "https://github.com/Nwflower/dsh-chat-import",
+      "metadata": {
+        "category": "tools",
+        "keywords": [
+          "deepseek-harness",
+          "dsh-plugin",
+          "dsh",
+          "claude-code",
+          "codex",
+          "chatgpt",
+          "cursor",
+          "gemini",
+          "antigravity",
+          "reasonix",
+          "pi-coding-agent",
+          "opencode",
+          "zcode",
+          "grokbuild",
+          "openclaw",
+          "hermes",
+          "kimi",
+          "kimi-cli",
+          "qoder",
+          "qoder-cli",
+          "workbuddy",
+          "trae",
+          "trae-work",
+          "sqlite",
+          "import",
+          "jsonl",
+          "migration",
+          "transcript"
+        ],
+        "sortKeys": {
+          "github-stars": 238
+        }
+      },
+      "versions": [
+        {
+          "version": "0.26.1",
+          "publishTimestamp": 1792241036,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.5-rc.1 >=0.1.0-rc.6 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
       "name": "dsh-codex-subscription",
       "title": {
         "en": "Codex Subscription",
@@ -547,7 +660,7 @@
           "smtp"
         ],
         "sortKeys": {
-          "github-stars": 20
+          "github-stars": 21
         }
       },
       "versions": [
@@ -735,6 +848,72 @@
           },
           "engines": {
             "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-mnemon",
+      "title": {
+        "en": "Mnemon",
+        "zh": "Mnemon 长期记忆"
+      },
+      "description": {
+        "en": "Composable memory with pluggable sources and strategies for DeepSeek Harness.",
+        "zh": "为 DeepSeek Harness 提供可组合记忆、可插拔来源与记忆策略。"
+      },
+      "repository": {
+        "url": "https://github.com/omdsh-dev/dsh-mnemon"
+      },
+      "homepage": "https://github.com/omdsh-dev/dsh-mnemon#readme",
+      "metadata": {
+        "category": "memory",
+        "keywords": [
+          "deepseek-harness",
+          "deepseek-harness-plugin",
+          "dsh-plugin",
+          "agent-memory",
+          "llm-memory",
+          "persistent-memory",
+          "long-term-memory",
+          "runtime-memory",
+          "working-memory",
+          "cross-session-memory",
+          "multi-agent-memory",
+          "shared-agent-memory",
+          "memory-orchestration",
+          "memory-provider",
+          "pluggable-memory",
+          "context-management",
+          "project-memory",
+          "project-documents",
+          "document-search",
+          "semantic-recall",
+          "local-first",
+          "mnemon",
+          "openviking",
+          "honcho",
+          "mem0",
+          "hindsight",
+          "holographic-memory",
+          "retaindb",
+          "byterover",
+          "supermemory"
+        ],
+        "sortKeys": {
+          "github-stars": 579
+        }
+      },
+      "versions": [
+        {
+          "version": "0.5.32",
+          "publishTimestamp": 1792265958,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-rc.2 <0.2.1-0 || >=0.2.1-rc.1 <0.3.0-0"
           }
         }
       ]

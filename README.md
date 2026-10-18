@@ -20,9 +20,13 @@ If Discover is missing, enable DSH's **Custom plugin markets** bundle first. DSH
 
 The directory covers interface tools, skills, memory, providers, usage tracking, integrations and themes. Entries have English and Chinese descriptions, links to their source, and exact npm versions.
 
+GitHub stars appear beside each entry and link to the repository's stargazers. DSH can also sort by stars. Counts refresh during builds; a failed request keeps a dated recent snapshot or shows the count as unavailable, never as a fabricated zero.
+
 Every build checks published package integrity, package identity, bundle patch files and declared main files, then validates the index with DSH's official format validator. These are package checks, not an installation test or a code audit. [Check details and update time](https://polang233.github.io/dsh-plugin-index/status.json).
 
 Updates run every six hours. A failed build leaves the published index in place. DSH may cache the index for ten minutes; use Refresh to fetch it again.
+
+[Recent plugin checks](docs/plugin-review-2026-10-18.md) · [Directory discoveries](docs/directory-discovery-2026-10-18.md)
 
 ## Contribute
 
