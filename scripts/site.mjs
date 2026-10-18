@@ -13,6 +13,7 @@ const output = new URL('../public/', import.meta.url);
 const COPY = {
   en: {
     brand: 'Open Plugin Market', lang: 'en', locale: 'en_US', title: 'Open Plugin Market — Add one URL to DSH',
+    eyebrow: 'Community plugin index', statPlugins: 'plugins', statCategories: 'categories', more: 'Show {n} more', shown: 'Showing {shown} of {count}',
     description: 'A community plugin index for DeepSeek Harness. Copy one URL into DSH, browse the directory, and choose the plugins you need.',
     skip: 'Skip to content', plugins: 'Plugins', docs: 'Docs', language: 'Language',
     headline: 'Add one URL<br>to DSH.', intro: 'Browse community plugins in DeepSeek Harness. Add this index to the built-in plugin market.',
@@ -35,6 +36,7 @@ const COPY = {
   },
   zh: {
     brand: '开放插件市场', lang: 'zh-CN', locale: 'zh_CN', title: '开放插件市场 — 把插件索引加进 DSH',
+    eyebrow: '社区插件索引', statPlugins: '个插件', statCategories: '个分类', more: '再看 {n} 个', shown: '已显示 {shown} / {count}',
     description: '为 DeepSeek Harness 提供的社区插件索引。复制一个地址，添加到 DSH，在内置市场中查找和选择插件。',
     skip: '跳到正文', plugins: '插件目录', docs: '文档', language: '语言',
     headline: '把插件索引<br>加进 DSH。', intro: '在 DeepSeek Harness 里浏览社区插件。复制这个地址，添加到内置插件市场。',
@@ -100,6 +102,8 @@ function pluginRow(plugin, language, categories, text, snapshot, root, downloads
   if (npmUrl) links.push(`<a href="${esc(npmUrl)}" rel="noopener noreferrer">${esc(text.npm)}</a>`);
   if (!sourceUrl && homepage) links.push(`<a href="${esc(homepage)}" rel="noopener noreferrer">${esc(text.website)}</a>`);
   const search = [name, packageName, title, description, ...(plugin.metadata?.keywords ?? [])].join(' ');
+  // Stable pastel tone per category so cards read as grouped without extra data.
+  const tone = Array.from(categoryId).reduce((sum, char) => (sum * 31 + char.codePointAt(0)) % 997, 7) % 6;
   const date = version?.publishTimestamp != null ? releaseAge(version.publishTimestamp, Date.parse(display.generatedAt), language) : undefined;
   const npm = downloads.packages?.[plugin.name];
   const npmMeasured = npm && ['ok', 'stale'].includes(npm.status) && Number.isSafeInteger(npm.downloads) && npm.downloads >= 0;
@@ -109,18 +113,18 @@ function pluginRow(plugin, language, categories, text, snapshot, root, downloads
   const icon = typeof plugin.icon === 'string' && /^icons\/[a-f0-9]{64}\.(?:svg|png|jpg|webp)$/.test(plugin.icon) ? root + plugin.icon : undefined;
   const initialName = title && title !== name ? title : name.replace(/^@[^/]+\//, '').replace(/^dsh[-_]/, '');
   const avatar = icon ? `<img src="${esc(icon)}" alt="" width="44" height="44" loading="lazy" decoding="async">` : esc(Array.from(initialName)[0].toUpperCase());
-  return `<li class="plugin" data-plugin data-category="${esc(categoryId)}" data-search="${esc(search)}">
+  return `<li class="plugin" data-plugin data-tone="${tone}" data-category="${esc(categoryId)}" data-search="${esc(search)}">
     <article class="plugin-main" aria-label="${esc(title || name)}">
       <div class="plugin-heading"><span class="plugin-avatar" aria-hidden="true">${avatar}</span><div>${namedTitle ? `<h3 class="plugin-title">${esc(title)}</h3><p class="package-name">${esc(packageName)}</p>` : `<h3 class="package-name is-title">${esc(packageName)}</h3>`}</div></div>
-      ${badges ? `<div class="publisher-badges">${badges}</div>` : ''}
+      ${categoryId || badges ? `<div class="plugin-tags">${categoryId ? `<span class="plugin-tag">${esc(categoryTitle)}</span>` : ''}${badges}</div>` : ''}
       <p class="plugin-description">${esc(description)}</p>
-      <div class="plugin-links">${links.join('')}</div>
     <div class="plugin-detail">
       ${renderStars(plugin, snapshot, language)}
       ${npmMeasured ? `<a class="npm-downloads" data-downloads="${npm.downloads}" href="${esc(npm.source)}" title="${esc(npmTitle)}">↓ ${esc(new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en-US').format(npm.downloads))}${npm.status === 'stale' ? (language === 'zh' ? ' · 缓存' : ' · cached') : ''}</a>` : ''}
       ${date ? `<time datetime="${esc(new Date(version.publishTimestamp * 1000).toISOString())}" title="${esc(dateLabel(version.publishTimestamp * 1000, language))}">◷ ${esc(date)}</time>` : ''}
     </div>
-    <details class="plugin-facts"><summary>${language === 'zh' ? '详情' : 'Details'}</summary><p class="version">${version ? `${esc(text.version)} ${esc(version.version)}` : esc(text.noVersion)}</p>${categoryId ? `<p>${esc(categoryTitle)}</p>` : ''}${version?.engines?.dsh ? `<p>${esc(text.compatibility)} ${esc(version.engines.dsh)}</p>` : ''}</details>
+    <div class="plugin-foot"><div class="plugin-links">${links.join('')}</div>
+    <details class="plugin-facts"><summary>${language === 'zh' ? '详情' : 'Details'}</summary><p class="version">${version ? `${esc(text.version)} ${esc(version.version)}` : esc(text.noVersion)}</p>${version?.engines?.dsh ? `<p>${esc(text.compatibility)} ${esc(version.engines.dsh)}</p>` : ''}</details></div>
     </article>
   </li>`;
 }
@@ -133,9 +137,15 @@ function page(index, evidence, language, snapshot, downloads, display) {
   const categories = index.metadata?.categories ?? {};
   const usedCategories = [...new Set(plugins.map(plugin => plugin.metadata?.category).filter(Boolean))];
   const hasUncategorized = plugins.some(plugin => !plugin.metadata?.category);
-  const categoriesHtml = usedCategories.map(id => `<option value="${esc(id)}">${esc(localize(categories[id]?.title, language, id))}</option>`).join('');
+  const countBy = id => plugins.filter(plugin => (plugin.metadata?.category ?? '') === id).length;
+  const chip = (value, label, count, extra = '') => `<button type="button" class="chip" data-chip="${esc(value)}"${extra} aria-pressed="false">${esc(label)}<small>${count}</small></button>`;
+  const categoriesHtml = chip('', text.all, plugins.length)
+    + usedCategories.map(id => chip(id, localize(categories[id]?.title, language, id), countBy(id))).join('')
+    + (hasUncategorized ? chip('__uncategorized__', text.other, countBy(''), ' data-uncategorized') : '');
   const updated = evidence?.generatedAt ? dateLabel(evidence.generatedAt, language) : undefined;
-  const messages = JSON.stringify({ copy: text.copy, copied: text.copied, copySuccess: text.copySuccess, copyFailure: text.copyFailure, results: text.results }).replace(/</g, '\\u003c');
+  const stickers = ['tools', 'skills', 'memory'].filter(id => usedCategories.includes(id))
+    .map((id, at) => `<span class="sticker sticker-${at + 1}">${esc(localize(categories[id]?.title, language, id))}</span>`).join('');
+  const messages = JSON.stringify({ copy: text.copy, copied: text.copied, copySuccess: text.copySuccess, copyFailure: text.copyFailure, results: text.results, more: text.more, shown: text.shown }).replace(/</g, '\\u003c');
   const structured = JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebSite', name: text.brand, url: ORIGIN, inLanguage: ['en', 'zh-CN'], description: text.description }).replace(/</g, '\\u003c');
   return `<!doctype html>
 <html lang="${text.lang}">
@@ -181,13 +191,18 @@ function page(index, evidence, language, snapshot, downloads, display) {
   </header>
   <main id="main">
     <section class="hero shell" aria-labelledby="page-title">
-      <div class="hero-intro"><h1 id="page-title">${text.headline}</h1><p>${esc(text.intro)}</p></div>
+      <div class="hero-copy">
+      <p class="eyebrow">${esc(text.eyebrow)}</p>
+      <h1 id="page-title">${text.headline}</h1><p class="hero-lead">${esc(text.intro)}</p>
       <label class="address-label" for="index-url">${esc(text.address)}</label>
       <div class="address-bar">
         <textarea id="index-url" rows="2" readonly spellcheck="false" aria-describedby="copy-status">${INDEX_URL}</textarea>
         <button class="copy-button" type="button" data-copy hidden><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 8h12v13H8zM16 8V3H3v13h5"/></svg><span>${esc(text.copy)}</span></button>
       </div>
       <p class="copy-status" id="copy-status" role="status" aria-live="polite">${esc(text.copyHint)}</p>
+      <ul class="stats"><li><strong>${plugins.length}</strong> ${esc(text.statPlugins)}</li><li><strong>${usedCategories.length}</strong> ${esc(text.statCategories)}</li>${updated ? `<li>${esc(text.updated)} <strong>${esc(updated)}</strong></li>` : ''}</ul>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="art-blob"></div><img src="${root}assets/logo.png" alt="" width="560" height="560" decoding="async">${stickers}</div>
     </section>
     <section class="setup shell" aria-labelledby="setup-title">
       <h2 id="setup-title">${esc(text.setup)}</h2>
@@ -199,10 +214,11 @@ function page(index, evidence, language, snapshot, downloads, display) {
       <p class="stars-note">${language === 'zh' ? '★ GitHub 仓库 star · ↓ npm 近 30 天下载 · 所收录版本发布至今的天数，随索引更新。' : '★ GitHub repository stars · ↓ npm downloads over 30 days · Days since the listed release, refreshed with the index.'} <a href="${root}downloads.json">${language === 'zh' ? '下载快照' : 'Download snapshot'}</a> · <a href="${root}github.json">${language === 'zh' ? 'Star 快照' : 'Star snapshot'}</a></p>
       <form class="filters" data-filters hidden role="search" aria-label="${esc(text.search)}">
         <div class="field"><label for="plugin-search">${esc(text.search)}</label><input type="search" id="plugin-search" placeholder="${esc(text.searchPlaceholder)}" autocomplete="off"></div>
-        <div class="field"><label for="plugin-category">${esc(text.category)}</label><select id="plugin-category"><option value="">${esc(text.all)}</option>${categoriesHtml}${hasUncategorized ? `<option value="__uncategorized__" data-uncategorized>${esc(text.other)}</option>` : ''}</select></div>
+        <div class="field chips-field"><span class="field-label" id="category-label">${esc(text.category)}</span><div class="chips" role="group" aria-labelledby="category-label">${categoriesHtml}</div></div>
       </form>
       <noscript><p class="no-js">${esc(text.noJs)}</p></noscript>
       <ul class="plugin-list">${plugins.map(plugin => pluginRow(plugin, language, categories, text, snapshot, root, downloads, display, index.metadata?.labels ?? {})).join('\n')}</ul>
+      <div class="more" data-more-wrap hidden><p class="more-progress" data-progress role="status" aria-live="polite"></p><span class="more-bar" aria-hidden="true"><i data-bar></i></span><button type="button" class="more-button" data-more></button><div class="more-sentinel" data-sentinel></div></div>
       <div class="empty" id="empty-results" ${plugins.length ? 'hidden' : ''}><h3>${esc(text.noResults)}</h3><p>${esc(text.noResultsHelp)}</p><button type="button" class="text-button" data-reset hidden>${esc(text.reset)}</button></div>
     </div></section>
     <section class="contribute shell" aria-labelledby="contribute-title">
