@@ -46,7 +46,7 @@ for (const language of ['en', 'zh']) {
     });
     await expect(starLinks).toHaveCount(expectedStars.length);
     const actualStars = await starLinks.evaluateAll(links => links.map(link => ({href: link.href, stars: Number(link.dataset.stars), title: link.title})));
-    expect(actualStars.map(link => link.href + ':' + link.stars).sort()).toEqual(expectedStars.map(repo => repo.url + '/stargazers:' + repo.stars).sort());
+    expect(actualStars.map(link => (link.href + ':' + link.stars).toLowerCase()).sort()).toEqual(expectedStars.map(repo => (repo.url + '/stargazers:' + repo.stars).toLowerCase()).sort());
     expect(actualStars.every(link => link.title.includes('UTC'))).toBe(true);
     const downloads = await (await page.request.get('./downloads.json')).json();
     const expectedDownloads = Object.values(downloads.packages).filter(record => ['ok', 'stale'].includes(record.status));

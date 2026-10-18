@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-19
+
+- Redesigned the website with a playful sticker-style interface, batched directory loading, category chips and a clearer index address field.
+- Expanded the catalog from 320 to 579 plugins. New entries are published npm bundles with a public source repository, a declared license, a recent release and measurable monthly downloads.
+
 ## 2026-10-18
 
 - Expanded the catalog from 31 to 320 plugins, with bilingual descriptions and new workflow, development and knowledge categories.
