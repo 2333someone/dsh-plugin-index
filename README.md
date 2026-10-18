@@ -24,7 +24,7 @@ If Discover is missing, enable DSH's **Custom plugin markets** bundle first. DSH
 
 The directory covers interface tools, skills, memory, providers, usage tracking, integrations, themes, workflows, development and research. Entries link to their source and exact npm versions, with author icons and localized names and descriptions when available.
 
-GitHub stars appear beside each entry and link to the repository's stargazers. DSH can also sort by stars. Counts refresh during builds; a failed request keeps a dated recent snapshot or shows the count as unavailable, never as a fabricated zero.
+The DSH list and website show **★ GitHub stars, ↓ npm downloads over 30 days, and days since the listed release**. DSH can sort by stars or downloads. Reviewed company accounts and developers carry identity labels. [Metric and identity sources](docs/market-display.md). Missing counts never appear as zero; downloads count npm package requests.
 
 Every build checks published package integrity, package identity, bundle patch files and declared main files, then validates the index with DSH's official format validator. These are package checks, not an installation test or a code audit. [Check details and update time](https://polang233.github.io/dsh-plugin-index/status.json).
 
@@ -48,7 +48,7 @@ pnpm validate
 pnpm preview
 ```
 
-`pnpm build` fetches the listed packages and generates the index and both website languages in `public/`. `pnpm build:site` rebuilds the website from the existing snapshot without fetching packages.
+`pnpm build` fetches the listed packages and generates the index and both website languages in `public/`. Use `pnpm build:site` for website changes, or `pnpm build:metadata` to refresh metrics, names and identity labels while retaining the validated package versions.
 
 [Maintenance and deployment](docs/maintenance.md) · [中文维护说明](docs/maintenance.zh-CN.md)
 

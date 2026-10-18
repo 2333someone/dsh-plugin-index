@@ -32,7 +32,9 @@ jobs:
       - run: pnpm test
       - uses: actions/cache@v4
         with:
-          path: .cache/github.json
+          path: |
+            .cache/github.json
+            .cache/downloads.json
           key: github-metadata-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: github-metadata-
       - run: pnpm build

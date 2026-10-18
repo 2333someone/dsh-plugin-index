@@ -53,6 +53,8 @@ Set `DSH_INDEX_PREVIEW_PORT` for both the preview server and browser checks when
 
 ## GitHub stars
 
+Use `pnpm build:metadata` to refresh metrics, the market title and identity labels while preserving validated package versions and their original check timestamps. A changed allowlist or pinned version requires a full build. `publishers.json` records identity evidence; `public/downloads.json` and `public/display.json` record download readings and DSH row text. See [market metrics and identity labels](market-display.md) for definitions and client limits.
+
 Each build reads the public GitHub API once per unique repository and writes `public/github.json`. It records the exact star count, fetch time and last push time. Counts also populate the official index's `github-stars` sort key, so DSH can sort by stars.
 
 GitHub Actions supplies a read-only `GITHUB_TOKEN`. Local builds can use `GITHUB_TOKEN` or `GH_TOKEN`; without either, GitHub's anonymous rate limit applies. Tokens are used only for requests to `api.github.com` and are never written to snapshots. The browser does not request the GitHub API.

@@ -23,6 +23,8 @@ pnpm exec playwright test
 
 仅修改页面时运行 `pnpm build:site`，再用 `pnpm preview` 访问 `http://127.0.0.1:4173/dsh-plugin-index/`。
 
+仅刷新指标、市场名称和作者身份时运行 `pnpm build:metadata`。它保留已检查的包版本与原始包检查时间；收录列表或固定版本改变时会要求完整构建。`publishers.json` 记录身份依据，`public/downloads.json` 与 `public/display.json` 记录下载数据和 DSH 展示内容。指标含义与客户端限制见[市场指标与身份标签](market-display.md)。
+
 ## 更新收录
 
 未指定 `version` 时跟踪 npm `latest`；指定后固定为该版本。生成器最多并发读取四个来源，并重试临时网络错误。下载限于公共 npm registry，不执行被收录插件的代码。全部来源与官方校验器通过后才允许发布。

@@ -1,5 +1,6 @@
 import { mkdir, readFile, writeFile, copyFile } from 'node:fs/promises';
 import { githubRepository } from './github.mjs';
+import { releaseAge } from './market-display.mjs';
 
 const ORIGIN = 'https://polang233.github.io/dsh-plugin-index/';
 const INDEX_URL = `${ORIGIN}index.json`;
@@ -83,11 +84,11 @@ export function renderStars(plugin, snapshot, language) {
   const tooltip = `${repo.stars} GitHub stars · ${zh ? '获取于' : 'Fetched'} ${date}${repo.status === 'stale' ? (zh ? '（缓存，最新请求失败）' : ' (cached; latest request failed)') : ''}`;
   return `<span class="stars-group"><a class="github-stars" data-stars="${repo.stars}" href="${esc(repository.url)}/stargazers" title="${esc(tooltip)}" aria-label="${esc(tooltip)}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/></svg>${count}<span class="stars-label">GitHub</span></a>${repo.status === 'stale' ? `<small class="stars-cache">${zh ? '缓存于' : 'Cached'} ${esc(repo.fetchedAt.slice(0, 10))}</small>` : ''}</span>`;
 }
-function pluginRow(plugin, language, categories, text, snapshot, root) {
+function pluginRow(plugin, language, categories, text, snapshot, root, downloads, display, labels) {
   const name = localize(plugin.name, language);
   const packageName = localize(plugin.name, 'en', name);
   const title = localize(plugin.title, language, name);
-  const description = plainDescription(localize(plugin.description, language, text.noDescription));
+  const description = plainDescription(localize(display.plugins?.[plugin.name]?.description ?? plugin.description, language, text.noDescription));
   const version = newestVersion(plugin.versions);
   const categoryId = plugin.metadata?.category ?? '';
   const categoryTitle = localize(categories[categoryId]?.title, language, text.other);
@@ -99,7 +100,11 @@ function pluginRow(plugin, language, categories, text, snapshot, root) {
   if (npmUrl) links.push(`<a href="${esc(npmUrl)}" rel="noopener noreferrer">${esc(text.npm)}</a>`);
   if (!sourceUrl && homepage) links.push(`<a href="${esc(homepage)}" rel="noopener noreferrer">${esc(text.website)}</a>`);
   const search = [name, packageName, title, description, ...(plugin.metadata?.keywords ?? [])].join(' ');
-  const date = version?.publishTimestamp != null ? dateLabel(version.publishTimestamp * 1000, language) : undefined;
+  const date = version?.publishTimestamp != null ? releaseAge(version.publishTimestamp, Date.parse(display.generatedAt), language) : undefined;
+  const npm = downloads.packages?.[plugin.name];
+  const npmMeasured = npm && ['ok', 'stale'].includes(npm.status) && Number.isSafeInteger(npm.downloads) && npm.downloads >= 0;
+  const npmTitle = npmMeasured ? `npm · ${npm.start} – ${npm.end} · ${language === 'zh' ? '获取于' : 'Fetched'} ${npm.fetchedAt}${npm.status === 'stale' ? (language === 'zh' ? '（缓存）' : ' (cached)') : ''}` : '';
+  const badges = (plugin.metadata?.labels ?? []).filter(id => id.startsWith('publisher-') && labels[id]).map(id => `<span class="publisher-badge" data-publisher="${esc(id)}">${esc(localize(labels[id].title, language))}</span>`).join('');
   const namedTitle = title && title !== name;
   const icon = typeof plugin.icon === 'string' && /^icons\/[a-f0-9]{64}\.(?:svg|png|jpg|webp)$/.test(plugin.icon) ? root + plugin.icon : undefined;
   const initialName = title && title !== name ? title : name.replace(/^@[^/]+\//, '').replace(/^dsh[-_]/, '');
@@ -107,19 +112,21 @@ function pluginRow(plugin, language, categories, text, snapshot, root) {
   return `<li class="plugin" data-plugin data-category="${esc(categoryId)}" data-search="${esc(search)}">
     <article class="plugin-main" aria-label="${esc(title || name)}">
       <div class="plugin-heading"><span class="plugin-avatar" aria-hidden="true">${avatar}</span><div>${namedTitle ? `<h3 class="plugin-title">${esc(title)}</h3><p class="package-name">${esc(packageName)}</p>` : `<h3 class="package-name is-title">${esc(packageName)}</h3>`}</div></div>
+      ${badges ? `<div class="publisher-badges">${badges}</div>` : ''}
       <p class="plugin-description">${esc(description)}</p>
       <div class="plugin-links">${links.join('')}</div>
     </article>
     <div class="plugin-detail">
       ${renderStars(plugin, snapshot, language)}
+      ${npmMeasured ? `<a class="npm-downloads" data-downloads="${npm.downloads}" href="${esc(npm.source)}" title="${esc(npmTitle)}">↓ ${esc(new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en-US').format(npm.downloads))}<span> ${language === 'zh' ? '/30天' : '/30d'}${npm.status === 'stale' ? (language === 'zh' ? ' · 缓存' : ' · cached') : ''}</span></a>` : ''}
       <span class="version">${version ? `${esc(text.version)} ${esc(version.version)}` : esc(text.noVersion)}</span>
       ${categoryId ? `<span>${esc(categoryTitle)}</span>` : ''}
-      ${date ? `<time datetime="${esc(new Date(version.publishTimestamp * 1000).toISOString())}">${esc(date)}</time>` : ''}
+      ${date ? `<time datetime="${esc(new Date(version.publishTimestamp * 1000).toISOString())}" title="${esc(dateLabel(version.publishTimestamp * 1000, language))}">${esc(date)}</time>` : ''}
       ${version?.engines?.dsh ? `<details class="compatibility"><summary>${esc(text.compatibility)}</summary><p>${esc(version.engines.dsh)}</p></details>` : ''}
     </div>
   </li>`;
 }
-function page(index, evidence, language, snapshot) {
+function page(index, evidence, language, snapshot, downloads, display) {
   const text = COPY[language];
   const docsUrl = language === 'zh' ? `${REPOSITORY}/blob/main/README.zh-CN.md` : DOCS;
   const root = language === 'zh' ? '../' : './';
@@ -191,13 +198,13 @@ function page(index, evidence, language, snapshot) {
     </section>
     <section class="directory-surface" id="plugins" aria-labelledby="directory-title"><div class="directory shell">
       <div class="directory-heading"><h2 id="directory-title">${esc(text.directory)}</h2><p class="result-count" id="result-count" role="status" aria-live="polite">${esc(text.initialCount(plugins.length))}</p></div>
-      <p class="stars-note">${language === 'zh' ? 'Star 来自 GitHub 仓库，随索引更新。关注度不等于质量。' : 'Stars come from GitHub repositories and refresh with the index. Popularity is not a quality rating.'} <a href="${root}github.json">${language === 'zh' ? '查看快照' : 'View snapshot'}</a></p>
+      <p class="stars-note">${language === 'zh' ? '★ GitHub 仓库 star · ↓ npm 近 30 天下载 · 所收录版本发布至今的天数，随索引更新。' : '★ GitHub repository stars · ↓ npm downloads over 30 days · Days since the listed release, refreshed with the index.'} <a href="${root}downloads.json">${language === 'zh' ? '下载快照' : 'Download snapshot'}</a> · <a href="${root}github.json">${language === 'zh' ? 'Star 快照' : 'Star snapshot'}</a></p>
       <form class="filters" data-filters hidden role="search" aria-label="${esc(text.search)}">
         <div class="field"><label for="plugin-search">${esc(text.search)}</label><input type="search" id="plugin-search" placeholder="${esc(text.searchPlaceholder)}" autocomplete="off"></div>
         <div class="field"><label for="plugin-category">${esc(text.category)}</label><select id="plugin-category"><option value="">${esc(text.all)}</option>${categoriesHtml}${hasUncategorized ? `<option value="__uncategorized__" data-uncategorized>${esc(text.other)}</option>` : ''}</select></div>
       </form>
       <noscript><p class="no-js">${esc(text.noJs)}</p></noscript>
-      <ul class="plugin-list">${plugins.map(plugin => pluginRow(plugin, language, categories, text, snapshot, root)).join('\n')}</ul>
+      <ul class="plugin-list">${plugins.map(plugin => pluginRow(plugin, language, categories, text, snapshot, root, downloads, display, index.metadata?.labels ?? {})).join('\n')}</ul>
       <div class="empty" id="empty-results" ${plugins.length ? 'hidden' : ''}><h3>${esc(text.noResults)}</h3><p>${esc(text.noResultsHelp)}</p><button type="button" class="text-button" data-reset hidden>${esc(text.reset)}</button></div>
     </div></section>
     <section class="contribute shell" aria-labelledby="contribute-title">
@@ -224,15 +231,15 @@ function notFound(css) {
 }
 
 /** Write the bilingual static site alongside the canonical format-1 index. */
-export async function writeSite(index, evidence, snapshot = {}) {
+export async function writeSite(index, evidence, snapshot = {}, downloads = {}, display = {}) {
   if (index?.format !== 1 || !Array.isArray(index.plugins)) throw new Error('writeSite expects a format-1 plugin index');
   await mkdir(new URL('assets/', output), { recursive: true });
   await mkdir(new URL('zh/', output), { recursive: true });
   for (const asset of ['site.css', 'site.js', 'logo.png', 'logo-256.png', 'favicon.png', 'apple-touch-icon.png', 'social.svg', 'social.png']) {
     await copyFile(new URL(asset, source), new URL(`assets/${asset}`, output));
   }
-  await writeFile(new URL('index.html', output), page(index, evidence, 'en', snapshot).replace(/[\t ]+$/gm, ''), 'utf8');
-  await writeFile(new URL('zh/index.html', output), page(index, evidence, 'zh', snapshot).replace(/[\t ]+$/gm, ''), 'utf8');
+  await writeFile(new URL('index.html', output), page(index, evidence, 'en', snapshot, downloads, display).replace(/[\t ]+$/gm, ''), 'utf8');
+  await writeFile(new URL('zh/index.html', output), page(index, evidence, 'zh', snapshot, downloads, display).replace(/[\t ]+$/gm, ''), 'utf8');
   await writeFile(new URL('sitemap.xml', output), sitemap(), 'utf8');
   await writeFile(new URL('404.html', output), notFound(await readFile(new URL('site.css', source), 'utf8')), 'utf8');
 }

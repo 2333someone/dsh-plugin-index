@@ -6,5 +6,6 @@ const index = JSON.parse(await readFile(new URL('../public/index.json', import.m
 const evidence = JSON.parse(await readFile(new URL('../public/status.json', import.meta.url), 'utf8'));
 parseMarketIndex(index, 'https://polang233.github.io/dsh-plugin-index/index.json');
 const github = JSON.parse(await readFile(new URL('../public/github.json', import.meta.url), 'utf8'));
-await writeSite(index, evidence, github);
+const optional = async name => { try { return JSON.parse(await readFile(new URL('../public/' + name, import.meta.url), 'utf8')); } catch { return {}; } };
+await writeSite(index, evidence, github, await optional('downloads.json'), await optional('display.json'));
 console.log(`Built English and Chinese pages for ${index.plugins.length} plugins.`);

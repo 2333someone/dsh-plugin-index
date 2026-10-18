@@ -5,6 +5,44 @@ import {pathToFileURL} from 'node:url';
 
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 
+/** Verify the text DSH actually renders against independent source snapshots. */
+export function checkMarketDisplay(index, github, downloads, display, publishers) {
+  if (display.schema !== 1 || downloads.schema !== 1 || !Number.isFinite(Date.parse(display.generatedAt))) throw new Error('Missing market snapshots');
+  const now = Date.parse(display.generatedAt);
+  const counts = { stars: 0, downloads: 0, identities: 0 };
+  for (const plugin of index.plugins) {
+    const presentation = display.plugins?.[plugin.name];
+    if (!presentation) throw new Error('Missing DSH row evidence: ' + plugin.name);
+    const repoKey = plugin.repository?.url?.replace(/^https?:\/\/(?:www\.)?github\.com\//, '').replace(/\.git\/?$/, '').replace(/\/$/, '').toLowerCase();
+    const repo = github.repositories?.[repoKey], npm = downloads.packages?.[plugin.name];
+    const hasStars = repo && ['ok', 'stale'].includes(repo.status) && Number.isSafeInteger(repo.stars) && repo.stars >= 0;
+    const hasDownloads = npm && ['ok', 'stale'].includes(npm.status) && Number.isSafeInteger(npm.downloads) && npm.downloads >= 0;
+    if (plugin.metadata?.sortKeys?.['github-stars'] !== (hasStars ? repo.stars : undefined)) throw new Error('Published star mismatch: ' + plugin.name);
+    if (plugin.metadata?.sortKeys?.['npm-downloads-month'] !== (hasDownloads ? npm.downloads : undefined)) throw new Error('Published downloads mismatch: ' + plugin.name);
+    const days = Math.floor((now - plugin.versions[0].publishTimestamp * 1000) / 86_400_000);
+    for (const language of ['en', 'zh']) {
+      const summary = presentation.summary?.[language], description = plugin.description?.[language];
+      const original = presentation.description?.[language];
+      if (!summary || typeof description !== 'string' || description !== summary + (original ? ' — ' + original : '')) throw new Error('Missing visible DSH metrics: ' + plugin.name);
+      const format = value => new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en-US').format(value);
+      if (hasStars && !summary.includes('★ ' + format(repo.stars))) throw new Error('Star missing from DSH row: ' + plugin.name);
+      if (hasDownloads && !summary.includes('↓ ' + format(npm.downloads) + (language === 'zh' ? '/30天' : '/30d'))) throw new Error('Downloads missing from DSH row: ' + plugin.name);
+      if (days >= 0) {
+        const age = language === 'zh' ? (days === 0 ? '今天更新' : days + ' 天前更新') : (days === 0 ? 'Updated today' : `Updated ${days} ${days === 1 ? 'day' : 'days'} ago`);
+        if (!summary.includes(age)) throw new Error('Release age missing from DSH row: ' + plugin.name);
+      }
+    }
+    const publisher = publishers?.entries.find(entry => entry.packages.includes(plugin.name) && entry.repository.toLowerCase() === plugin.repository?.url?.toLowerCase());
+    const identities = (plugin.metadata?.labels ?? []).filter(id => id.startsWith('publisher-'));
+    if (publishers && JSON.stringify(identities) !== JSON.stringify(publisher ? ['publisher-' + publisher.id] : [])) throw new Error('Publisher identity mismatch: ' + plugin.name);
+    if (publisher && JSON.stringify(index.metadata.labels['publisher-' + publisher.id]?.title) !== JSON.stringify(publisher.title)) throw new Error('Publisher title mismatch: ' + plugin.name);
+    counts.stars += Number(Boolean(hasStars));
+    counts.downloads += Number(Boolean(hasDownloads));
+    counts.identities += identities.length;
+  }
+  return counts;
+}
+
 async function readUrl(url, fetchImpl, maxBytes = 8 * 1024 * 1024) {
   const response = await fetchImpl(url, {redirect: 'error', signal: AbortSignal.timeout(30000)});
   if (!response.ok || !response.body) throw new Error('HTTP ' + response.status + ': ' + url);
@@ -19,7 +57,7 @@ async function readUrl(url, fetchImpl, maxBytes = 8 * 1024 * 1024) {
 }
 
 /** Check the deployed catalog and every referenced author icon, without redirects. */
-export async function checkPublished(indexUrl, {expectedNames, fetchImpl = fetch, brandAssets = []} = {}) {
+export async function checkPublished(indexUrl, {expectedNames, expectedTitle, verifyMarket = false, publishers, fetchImpl = fetch, brandAssets = []} = {}) {
   const raw = await readUrl(indexUrl, fetchImpl);
   if (!/application\/json/i.test(raw.type)) throw new Error('Index is not served as JSON');
   const index = JSON.parse(raw.bytes);
@@ -27,6 +65,12 @@ export async function checkPublished(indexUrl, {expectedNames, fetchImpl = fetch
   const names = index.plugins.map(plugin => plugin.name);
   if (new Set(names).size !== names.length) throw new Error('Published package names are duplicated');
   if (expectedNames && JSON.stringify([...names].sort()) !== JSON.stringify([...expectedNames].sort())) throw new Error('Published catalog differs from the source allowlist');
+  if (expectedTitle && JSON.stringify(index.title) !== JSON.stringify(expectedTitle)) throw new Error('Published market title differs from this release');
+  let market;
+  if (verifyMarket) {
+    const snapshots = await Promise.all(['github.json', 'downloads.json', 'display.json'].map(async path => JSON.parse((await readUrl(new URL(path, indexUrl), fetchImpl)).bytes)));
+    market = checkMarketDisplay(index, ...snapshots, publishers);
+  }
   const status = JSON.parse((await readUrl(new URL('status.json', indexUrl), fetchImpl)).bytes);
   for (const plugin of index.plugins) {
     const record = status.packages?.find(item => item.name === plugin.name);
@@ -54,13 +98,14 @@ export async function checkPublished(indexUrl, {expectedNames, fetchImpl = fetch
     const published = await readUrl(new URL('assets/' + asset.name, indexUrl), fetchImpl, 2 * 1024 * 1024);
     if (digest(published.bytes) !== digest(asset.bytes)) throw new Error('Brand asset differs from this release: ' + asset.name);
   }
-  return {plugins: index.plugins.length, pluginsWithIcons: index.plugins.filter(plugin => plugin.icon).length, uniqueIcons: icons.length, brandAssets: brandAssets.length, indexUrl: String(indexUrl), redirectedRequests: false};
+  return {plugins: index.plugins.length, pluginsWithIcons: index.plugins.filter(plugin => plugin.icon).length, uniqueIcons: icons.length, brandAssets: brandAssets.length, ...(market ? {market} : {}), indexUrl: String(indexUrl), redirectedRequests: false};
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   const indexUrl = process.argv[2] ?? 'https://polang233.github.io/dsh-plugin-index/index.json';
   const config = JSON.parse(await readFile(new URL('../sources.json', import.meta.url), 'utf8'));
   const brandAssets = await Promise.all(['logo.png', 'logo-256.png', 'favicon.png', 'apple-touch-icon.png', 'social.png'].map(async name => ({name, bytes: await readFile(new URL('../site/' + name, import.meta.url))})));
-  const result = await checkPublished(indexUrl, {expectedNames: config.packages.map(input => input.name), brandAssets});
+  const publishers = JSON.parse(await readFile(new URL('../publishers.json', import.meta.url), 'utf8'));
+  const result = await checkPublished(indexUrl, {expectedNames: config.packages.map(input => input.name), expectedTitle: config.title, verifyMarket: true, publishers, brandAssets});
   console.log(JSON.stringify(result));
 }

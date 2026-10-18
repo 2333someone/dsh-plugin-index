@@ -39,6 +39,16 @@ for (const language of ['en', 'zh']) {
     const actualStars = await starLinks.evaluateAll(links => links.map(link => ({href: link.href, stars: Number(link.dataset.stars), title: link.title})));
     expect(actualStars.map(link => link.href + ':' + link.stars).sort()).toEqual(expectedStars.map(repo => repo.url + '/stargazers:' + repo.stars).sort());
     expect(actualStars.every(link => link.title.includes('UTC'))).toBe(true);
+    const downloads = await (await page.request.get('./downloads.json')).json();
+    const expectedDownloads = Object.values(downloads.packages).filter(record => ['ok', 'stale'].includes(record.status));
+    const downloadLinks = page.locator('[data-downloads]');
+    await expect(downloadLinks).toHaveCount(expectedDownloads.length);
+    const actualDownloads = await downloadLinks.evaluateAll(links => links.map(link => ({ count: Number(link.dataset.downloads), href: link.href, title: link.title })));
+    expect(actualDownloads.map(item => item.href + ':' + item.count).sort()).toEqual(expectedDownloads.map(item => item.source + ':' + item.downloads).sort());
+    expect(actualDownloads.every(item => /\d{4}-\d{2}-\d{2}/.test(item.title))).toBe(true);
+    await expect(page.locator('[data-publisher]')).toHaveCount(index.plugins.filter(plugin => plugin.metadata.labels.some(id => id.startsWith('publisher-'))).length);
+    await expect(page.locator('.brand')).toContainText(language === 'en' ? 'Open Plugin Market' : '开放插件市场');
+    expect(await page.locator('.plugin-detail time').allTextContents()).toEqual(expect.arrayContaining([expect.stringMatching(language === 'en' ? /Updated/ : /更新/)]));
     const icons = page.locator('.plugin-avatar img');
     await expect(icons).toHaveCount(index.plugins.filter(plugin => plugin.icon).length);
     if (await icons.count()) {

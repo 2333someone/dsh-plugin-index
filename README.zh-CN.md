@@ -24,7 +24,7 @@ https://polang233.github.io/dsh-plugin-index/index.json
 
 涵盖界面工具、技能、记忆、模型供应商、用量统计、外部服务、主题、工作流、开发与研究。条目提供介绍、源码链接和明确的 npm 版本，并读取作者随包发布的图标与多语言名称。
 
-目录显示 GitHub star，点击可查看仓库关注者；DSH 内也支持按 star 排序。数据随构建更新，请求失败时保留带日期的近期缓存，无法获取时不显示为 0。
+DSH 的实际列表和网页目录显示 **★ GitHub star、↓ npm 近 30 天下载量、版本更新天数**，并支持按 star 或下载量排序。已核实的公司官号与开发者带有身份标签。[指标与身份来源](docs/market-display.md)。数据随构建更新，缺失值不显示为 0；下载量是 npm 包下载次数。
 
 每次构建都会检查发布包的完整性、包名与版本、组合包补丁及声明的入口文件，再使用 DSH 官方校验器验证索引格式。这些检查不等同于安装测试或代码审计。[查看检查记录和更新时间](https://polang233.github.io/dsh-plugin-index/status.json)。
 
@@ -48,7 +48,7 @@ pnpm validate
 pnpm preview
 ```
 
-`pnpm build` 获取插件并在 `public/` 生成索引与中英文页面。只修改网站时，可用 `pnpm build:site` 基于现有快照生成页面，无需重新下载插件。
+`pnpm build` 获取插件并在 `public/` 生成索引与中英文页面。只修改网站时运行 `pnpm build:site`；只更新指标、名称或身份标签时运行 `pnpm build:metadata`，复用已校验的插件版本。
 
 [维护与部署](docs/maintenance.zh-CN.md) · [Maintenance](docs/maintenance.md)
 

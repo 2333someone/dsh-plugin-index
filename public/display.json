@@ -1,0 +1,3211 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-10-18T09:35:25.227Z",
+  "plugins": {
+    "@a9i5k4/dsh-auto-memory": {
+      "description": {
+        "en": "Recall and consolidate project memory with handoff ledgers, planning notes and context tracking.",
+        "zh": "召回并整理项目记忆，保存交接账本、计划笔记与上下文状态。"
+      },
+      "summary": {
+        "en": "★ 135 · ↓ 13,722/30d · Updated today",
+        "zh": "★ 135 · ↓ 13,722/30天 · 今天更新"
+      }
+    },
+    "@anionex/dsh-computer-use": {
+      "description": {
+        "en": "Accessibility-first macOS Computer Use capability for DeepSeek Harness with stale-observation protection, app leases, confirmations, screenshots, and Web diagnostics",
+        "zh": "通过辅助功能、截图与应用控制工具操作 macOS 桌面。"
+      },
+      "summary": {
+        "en": "★ 60 · ↓ 3,389/30d · Updated today",
+        "zh": "★ 60 · ↓ 3,389/30天 · 今天更新"
+      }
+    },
+    "@anionex/dsh-turn-rewind": {
+      "description": {
+        "en": "Turn-level conversation and workspace rewind for DeepSeek Harness, powered by a persistent Change Ledger",
+        "zh": "基于持久变更账本回退会话轮次和工作区文件。"
+      },
+      "summary": {
+        "en": "★ 133 · ↓ 4,920/30d · Updated today",
+        "zh": "★ 133 · ↓ 4,920/30天 · 今天更新"
+      }
+    },
+    "@anionex/dsh-vision-toolkit": {
+      "description": {
+        "en": "Use image questions, OCR, grounding, UI reconstruction and pixel comparisons in DSH.",
+        "zh": "在 DSH 中进行图片问答、OCR、定位、界面还原与像素比较。"
+      },
+      "summary": {
+        "en": "★ 896 · ↓ 12,326/30d · Updated today",
+        "zh": "★ 896 · ↓ 12,326/30天 · 今天更新"
+      }
+    },
+    "@anysearch/anysearch-dsh": {
+      "description": {
+        "en": "Connect AnySearch web search, page fetching and advanced search tools to DSH.",
+        "zh": "为 DSH 接入 AnySearch 网页搜索、正文抓取与高级检索工具。"
+      },
+      "summary": {
+        "en": "★ 523 · ↓ 9,542/30d · Updated 8 days ago",
+        "zh": "★ 523 · ↓ 9,542/30天 · 8 天前更新"
+      }
+    },
+    "@bihangchi9/lark-agent-bridge": {
+      "description": {
+        "en": "Feishu/Lark bridge for local coding agents — one group, one conversation, one pinned runtime. Bridges dsh, CLI agents (traex/codex), an IDE window, or a custom agent behind one gateway.",
+        "zh": "通过飞书群组连接本机 DSH、编程命令行或 IDE 助手。"
+      },
+      "summary": {
+        "en": "★ 34 · ↓ 947/30d · Updated 30 days ago",
+        "zh": "★ 34 · ↓ 947/30天 · 30 天前更新"
+      }
+    },
+    "@caob23/dsh-browser-control": {
+      "description": {
+        "en": "Local WebSocket bridge between dsh and the DSH Browser Control browser extension, with model-facing browser_* tools and a Settings-managed on/off switch",
+        "zh": "连接浏览器扩展，向 Agent 提供网页操作工具与开关。"
+      },
+      "summary": {
+        "en": "★ 36 · ↓ 2,993/30d · Updated 4 days ago",
+        "zh": "★ 36 · ↓ 2,993/30天 · 4 天前更新"
+      }
+    },
+    "@changfenhuang/dsh-annotation": {
+      "description": {
+        "en": "DSH Web selection-annotation plugin: select assistant text, annotate (optional), and press Enter to send the annotation block with your message — the model replies to each annotation by number, with hoverable chips in the reply.",
+        "zh": "选择助手回复中的文字并添加批注，让模型按编号逐条回应。"
+      },
+      "summary": {
+        "en": "★ 148 · ↓ 3,543/30d · Updated 17 days ago",
+        "zh": "★ 148 · ↓ 3,543/30天 · 17 天前更新"
+      }
+    },
+    "@changfenhuang/dsh-genui": {
+      "description": {
+        "en": "Render interactive charts, forms, diagrams and other UI inside assistant replies.",
+        "zh": "在助手回复中呈现交互图表、表单、流程图等界面。"
+      },
+      "summary": {
+        "en": "★ 631 · ↓ 35,271/30d · Updated today",
+        "zh": "★ 631 · ↓ 35,271/30天 · 今天更新"
+      }
+    },
+    "@cloudbase/dsh-plugin": {
+      "description": {
+        "en": "Manage CloudBase databases, storage, authentication and application deployment from DSH.",
+        "zh": "在 DSH 中管理 CloudBase 数据库、存储、身份认证与应用部署。"
+      },
+      "summary": {
+        "en": "★ 1,138 · ↓ 2,231/30d · Updated 18 days ago",
+        "zh": "★ 1,138 · ↓ 2,231/30天 · 18 天前更新"
+      },
+      "publisher": "tencent-cloudbase"
+    },
+    "@cocofhu/anime-find": {
+      "description": {
+        "en": "Search anime sources, inspect details and access playback links inside a conversation.",
+        "zh": "在会话中搜索动画来源、查看详情并使用播放入口。"
+      },
+      "summary": {
+        "en": "★ 177 · ↓ 759/30d · Updated 59 days ago",
+        "zh": "★ 177 · ↓ 759/30天 · 59 天前更新"
+      }
+    },
+    "@contexera/dsh-agent-team": {
+      "description": {
+        "en": "A persistent agent team for long-running collaboration in DeepSeek Harness",
+        "zh": "为长期任务保存 Agent 团队与协作状态。"
+      },
+      "summary": {
+        "en": "★ 69 · ↓ 592/30d · Updated today",
+        "zh": "★ 69 · ↓ 592/30天 · 今天更新"
+      }
+    },
+    "@daweifu/capability-menu": {
+      "description": {
+        "en": "Unified capability management for the DeepSeek Harness: catalog (ctx.capability) + meta_search/meta_invoke + Resident/On-demand/Disabled projection policy + 能力菜单 settings tab, in one installable bundle (server + browser).",
+        "zh": "统一管理能力目录，按需检索和调用工具，并设置投影策略。"
+      },
+      "summary": {
+        "en": "★ 89 · ↓ 2,153/30d · Updated 1 day ago",
+        "zh": "★ 89 · ↓ 2,153/30天 · 1 天前更新"
+      }
+    },
+    "@deepseek-harness-tui/dsh-tui": {
+      "description": {
+        "en": "Manage agents, sessions and tools through an interactive terminal interface.",
+        "zh": "通过交互终端界面管理 Agent、会话和工具。"
+      },
+      "summary": {
+        "en": "★ 4,774 · ↓ 45,109/30d · Updated today",
+        "zh": "★ 4,774 · ↓ 45,109/30天 · 今天更新"
+      }
+    },
+    "@deepseekstudio/dsh-deepseek-pet": {
+      "description": {
+        "en": "Hands your DeepSeek account balance to a whale-maid desktop pet floating on Windows. The host polls the balance and serves it over a 127.0.0.1 loopback route; pet_balance and pet_control tools let the agent read the balance or make the pet talk.",
+        "zh": "把 DeepSeek 账户余额交给一只悬浮在 Windows 桌面上的蓝鲸女仆桌宠：宿主端查询余额并通过 127.0.0.1 回环接口推送，另附 pet_balance / pet_control 两个工具，可直接问余额或让桌宠说话。"
+      },
+      "summary": {
+        "en": "★ 18 · ↓ 2,024/30d · Updated 11 days ago",
+        "zh": "★ 18 · ↓ 2,024/30天 · 11 天前更新"
+      }
+    },
+    "@dely0/dsh-personal-workbench": {
+      "description": {
+        "en": "Combine a calendar, hierarchical tasks, AI planning, execution reviews and desktop reminders.",
+        "zh": "组合日历、分层任务、AI 拆解、执行复盘与桌面提醒。"
+      },
+      "summary": {
+        "en": "★ 38 · ↓ 4,200/30d · Updated 12 days ago",
+        "zh": "★ 38 · ↓ 4,200/30天 · 12 天前更新"
+      }
+    },
+    "@dickpy/dsh-imagegen": {
+      "description": {
+        "en": "Generate and edit images through configurable provider channels in the web interface.",
+        "zh": "在网页界面配置供应商通道，生成或编辑图片。"
+      },
+      "summary": {
+        "en": "★ 123 · ↓ 11,071/30d · Updated today",
+        "zh": "★ 123 · ↓ 11,071/30天 · 今天更新"
+      }
+    },
+    "@dingtalk-real-ai/dsh-dingtalk": {
+      "description": {
+        "en": "Official DingTalk connector for DeepSeek Harness",
+        "zh": "通过钉钉连接 DSH 会话与消息。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 1,917/30d · Updated 4 days ago",
+        "zh": "★ 20 · ↓ 1,917/30天 · 4 天前更新"
+      }
+    },
+    "@dingyi222666/dsh-session-notification": {
+      "description": {
+        "en": "Session-state notification plugin for the dsh web GUI: session completed/failed, question-asked, and permission-requested alerts with configurable built-in or custom sounds and browser notifications, plus a Notifications settings section",
+        "zh": "为会话完成、失败、提问和权限请求配置声音与浏览器通知。"
+      },
+      "summary": {
+        "en": "★ 28 · ↓ 3,002/30d · Updated 7 days ago",
+        "zh": "★ 28 · ↓ 3,002/30天 · 7 天前更新"
+      }
+    },
+    "@dsh-plugins/dsh-env-inspector": {
+      "description": {
+        "en": "Inspect local tools, model configuration, hardware and listening ports, and export diagnostics.",
+        "zh": "检查系统、命令行工具、模型配置、硬件与监听端口，并导出诊断。"
+      },
+      "summary": {
+        "en": "★ 52 · ↓ 2,264/30d · Updated 5 days ago",
+        "zh": "★ 52 · ↓ 2,264/30天 · 5 天前更新"
+      }
+    },
+    "@dsh-plugins/dsh-llm-hub": {
+      "description": {
+        "en": "Inspect model catalogs, provider status, balances and usage, and connect locally installed coding agents.",
+        "zh": "查看模型目录、供应商状态、余额配额与用量，并接入本机编程助手。"
+      },
+      "summary": {
+        "en": "★ 50 · ↓ 5,158/30d · Updated 5 days ago",
+        "zh": "★ 50 · ↓ 5,158/30天 · 5 天前更新"
+      }
+    },
+    "@feiyang666/dsh-usage-plugin": {
+      "description": {
+        "en": "Track token and cache usage, account balances and billing, with exportable records.",
+        "zh": "追踪 Token 与缓存用量、账户余额和费用，并导出记录。"
+      },
+      "summary": {
+        "en": "★ 37 · ↓ 1,376/30d · Updated 23 days ago",
+        "zh": "★ 37 · ↓ 1,376/30天 · 23 天前更新"
+      }
+    },
+    "@furongjun1999/dsh-memory": {
+      "description": {
+        "en": "Store conversation knowledge in Markdown cognitive graphs with recall and reflection tools.",
+        "zh": "将会话知识保存到 Markdown 认知图，提供召回与反思工具。"
+      },
+      "summary": {
+        "en": "★ 408 · ↓ 27,996/30d · Updated 11 days ago",
+        "zh": "★ 408 · ↓ 27,996/30天 · 11 天前更新"
+      }
+    },
+    "@fylar/dsh-fylar-office-editor": {
+      "description": {
+        "en": "Fylar Office Editor integration for the DeepSeek Harness Web profile, powered by Fylar Office SDK",
+        "zh": "在 DSH 网页中接入 Fylar Office SDK 文档编辑器。"
+      },
+      "summary": {
+        "en": "★ 204 · ↓ 243/30d · Updated 3 days ago",
+        "zh": "★ 204 · ↓ 243/30天 · 3 天前更新"
+      }
+    },
+    "@geml/dsh-plugin": {
+      "description": {
+        "en": "Agent-Native document handling for DSH — addressable blocks let an agent read and edit one section instead of the whole file. Ships the geml MCP server and the authoring and code-graph skills.",
+        "zh": "按可寻址内容块读取和编辑文档，并提供文档与代码图技能。"
+      },
+      "summary": {
+        "en": "★ 29 · ↓ 1,022/30d · Updated 20 days ago",
+        "zh": "★ 29 · ↓ 1,022/30天 · 20 天前更新"
+      }
+    },
+    "@ggboy123/dsh-paper-reader": {
+      "description": {
+        "en": "Transcribe and search PDFs, then read papers with a built-in viewer and conversation tools.",
+        "zh": "转录和检索 PDF，通过内置阅读器配合会话阅读论文。"
+      },
+      "summary": {
+        "en": "★ 22 · ↓ 5,422/30d · Updated 1 day ago",
+        "zh": "★ 22 · ↓ 5,422/30天 · 1 天前更新"
+      }
+    },
+    "@goodandready/dsh-russian-lang": {
+      "description": {
+        "en": "Provide switchable Russian localization for DSH and ecosystem plugins.",
+        "zh": "为 DSH 核心与生态插件提供可切换的俄语界面。"
+      },
+      "summary": {
+        "en": "★ 36 · ↓ 14,208/30d · Updated 2 days ago",
+        "zh": "★ 36 · ↓ 14,208/30天 · 2 天前更新"
+      }
+    },
+    "@huiliyi37/dsh-tianshu-tui": {
+      "description": {
+        "en": "dsh-tianshu-tui: an interactive terminal UI plugin for the official DeepSeek Harness — streaming markdown/tool cards, 16+ themes, slash commands, session tabs, LSP diagnostics, cost tracking, self-update (`dsh plugin --profile tui add @huiliyi37/dsh-tianshu-tui`)",
+        "zh": "在终端中浏览流式回复、工具卡片、会话、诊断与费用。"
+      },
+      "summary": {
+        "en": "★ 287 · ↓ 1,809/30d · Updated 17 days ago",
+        "zh": "★ 287 · ↓ 1,809/30天 · 17 天前更新"
+      }
+    },
+    "@hytime/dsh-thinking-effort": {
+      "description": {
+        "en": "Configure reasoning effort for third-party models and default subagent settings.",
+        "zh": "为第三方模型配置思考强度，并设置子 Agent 的默认档位。"
+      },
+      "summary": {
+        "en": "★ 53 · ↓ 8,200/30d · Updated 3 days ago",
+        "zh": "★ 53 · ↓ 8,200/30天 · 3 天前更新"
+      }
+    },
+    "@hyzyn/dsh-plugin-kit": {
+      "description": {
+        "en": "Install reusable plugin templates, development tools and a bundled starter collection.",
+        "zh": "安装可复用的插件模板、开发工具与入门组合包。"
+      },
+      "summary": {
+        "en": "★ 53 · ↓ 5,411/30d · Updated today",
+        "zh": "★ 53 · ↓ 5,411/30天 · 今天更新"
+      }
+    },
+    "@jiesou/dsh-commandcode-go-provider": {
+      "description": {
+        "en": "Command Code Go provider adapter for dsh: scan the Go-plan model catalog dynamically and serve /alpha/generate through the harness LLM seam",
+        "zh": "动态读取 Go 套餐模型目录，并通过 DSH 模型接口调用。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 1,160/30d · Updated 15 days ago",
+        "zh": "★ 20 · ↓ 1,160/30天 · 15 天前更新"
+      }
+    },
+    "@jiesou/dsh-opencode-zen-free-provider": {
+      "description": {
+        "en": "OpenCode Zen free models provider for dsh",
+        "zh": "为 DSH 接入 OpenCode Zen 免费模型通道。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 2,001/30d · Updated 1 day ago",
+        "zh": "★ 20 · ↓ 2,001/30天 · 1 天前更新"
+      }
+    },
+    "@jiyr0119/dsh-workspace-explorer": {
+      "description": {
+        "en": "Browse, search and preview workspace files, then insert references by clicking or dragging.",
+        "zh": "在侧栏浏览、搜索和预览文件，点击或拖拽插入引用。"
+      },
+      "summary": {
+        "en": "★ 40 · ↓ 1,487/30d · Updated 4 days ago",
+        "zh": "★ 40 · ↓ 1,487/30天 · 4 天前更新"
+      }
+    },
+    "@kenz1117/dsh-engram": {
+      "description": {
+        "en": "Cross-session long-term memory for DeepSeek Harness (memory palace · AGI Architecture Exploration on dsh-market): dual-scope SQLite memory graph, hybrid retrieval, provenance audit, and a knowledge flywheel.",
+        "zh": "用 SQLite 记忆图、混合检索和来源记录保存跨会话知识。"
+      },
+      "summary": {
+        "en": "★ 22 · ↓ 6,227/30d · Updated today",
+        "zh": "★ 22 · ↓ 6,227/30天 · 今天更新"
+      }
+    },
+    "@kenz1117/dsh-ui-usage-billing": {
+      "description": {
+        "en": "Usage billing dashboard for DeepSeek Harness: sidebar cost metrics plus a full dashboard modal, priced from a current multi-provider catalog with real usage aggregated from session logs.",
+        "zh": "从会话日志汇总实际用量，显示多供应商价格与侧栏费用指标。"
+      },
+      "summary": {
+        "en": "★ 81 · ↓ 15,636/30d · Updated today",
+        "zh": "★ 81 · ↓ 15,636/30天 · 今天更新"
+      }
+    },
+    "@linxin666/dsh-client-ui-git-graph": {
+      "description": {
+        "en": "Browse branch history and run workspace Git operations from the web interface.",
+        "zh": "在网页界面查看分支历史，并操作工作区 Git 仓库。"
+      },
+      "summary": {
+        "en": "★ 8,932 · ↓ 125,687/30d · Updated today",
+        "zh": "★ 8,932 · ↓ 125,687/30天 · 今天更新"
+      }
+    },
+    "@linxin666/dsh-client-ui-skill-explorer": {
+      "description": {
+        "en": "Browse, enable, create and remove skills grouped by their source.",
+        "zh": "按来源浏览、开关、创建和删除技能。"
+      },
+      "summary": {
+        "en": "★ 8,932 · ↓ 148,604/30d · Updated today",
+        "zh": "★ 8,932 · ↓ 148,604/30天 · 今天更新"
+      }
+    },
+    "@linxin666/dsh-client-ui-skin-center": {
+      "description": {
+        "en": "In-GUI skin center for the dsh web GUI — the single skin package: skins are pure asset directories (built-in plus $DSH_HOME/skins) loaded and rendered only by the skin center; live try-on and one-click apply switch atomically in the page (no reload, no cordis.patch.yml rewrite, no restart)",
+        "zh": "浏览本地主题素材，实时试用并应用网页皮肤。"
+      },
+      "summary": {
+        "en": "★ 21 · ↓ 117,490/30d · Updated today",
+        "zh": "★ 21 · ↓ 117,490/30天 · 今天更新"
+      }
+    },
+    "@linxin666/dsh-client-ui-task-board": {
+      "description": {
+        "en": "Manage agent tasks, scheduled runs and execution state from the web interface.",
+        "zh": "在网页界面管理 Agent 任务、定时执行和运行状态。"
+      },
+      "summary": {
+        "en": "★ 8,932 · ↓ 134,758/30d · Updated today",
+        "zh": "★ 8,932 · ↓ 134,758/30天 · 今天更新"
+      }
+    },
+    "@linxin666/dsh-remote-web-ui": {
+      "description": {
+        "en": "Pair phones and computers with the web interface over LAN or an optional Cloudflare tunnel.",
+        "zh": "通过局域网或 Cloudflare 隧道扫码配对手机与电脑，访问同一网页界面。"
+      },
+      "summary": {
+        "en": "★ 8,932 · ↓ 135,781/30d · Updated today",
+        "zh": "★ 8,932 · ↓ 135,781/30天 · 今天更新"
+      }
+    },
+    "@linxin666/dsh-ssh": {
+      "description": {
+        "en": "Connect SSH hosts with remote commands, terminals, SFTP and port forwarding.",
+        "zh": "连接 SSH 主机，使用远程命令、终端、SFTP 与端口转发。"
+      },
+      "summary": {
+        "en": "★ 8,932 · ↓ 112,286/30d · Updated today",
+        "zh": "★ 8,932 · ↓ 112,286/30天 · 今天更新"
+      }
+    },
+    "@linxin666/dsh-web-all": {
+      "description": {
+        "en": "Install a collection of task, Git, remote-access and appearance extensions for the web interface.",
+        "zh": "组合安装任务、Git、远程访问和界面外观扩展。"
+      },
+      "summary": {
+        "en": "★ 8,932 · ↓ 107,548/30d · Updated today",
+        "zh": "★ 8,932 · ↓ 107,548/30天 · 今天更新"
+      }
+    },
+    "@liustack/modlens": {
+      "description": {
+        "en": "Add image understanding for text-only models through a separate vision provider.",
+        "zh": "通过独立视觉供应商为纯文本模型提供图片理解。"
+      },
+      "summary": {
+        "en": "★ 4,302 · ↓ 96,962/30d · Updated 2 days ago",
+        "zh": "★ 4,302 · ↓ 96,962/30天 · 2 天前更新"
+      }
+    },
+    "@liustack/modsearch": {
+      "description": {
+        "en": "Search the web and X, fetch page content, and switch between search engines when a request fails.",
+        "zh": "搜索网页和 X 内容、抓取正文，并在请求失败时切换搜索引擎。"
+      },
+      "summary": {
+        "en": "★ 742 · ↓ 41,576/30d · Updated today",
+        "zh": "★ 742 · ↓ 41,576/30天 · 今天更新"
+      }
+    },
+    "@liustack/pptwise": {
+      "description": {
+        "en": "A real PowerPoint, not HTML. Editable .pptx decks for AI agents, rendered on your own machine.",
+        "zh": "在本机生成和渲染可编辑的 PowerPoint 演示文稿。"
+      },
+      "summary": {
+        "en": "★ 23 · ↓ 4,541/30d · Updated 1 day ago",
+        "zh": "★ 23 · ↓ 4,541/30天 · 1 天前更新"
+      }
+    },
+    "@loongsuite/dsh-plugin": {
+      "description": {
+        "en": "Standalone OpenTelemetry GenAI observability plugin for DeepSeek Harness",
+        "zh": "为 DSH 接入 OpenTelemetry 生成式 AI 可观测数据。"
+      },
+      "summary": {
+        "en": "★ 28 · ↓ 3,302/30d · Updated 6 days ago",
+        "zh": "★ 28 · ↓ 3,302/30天 · 6 天前更新"
+      }
+    },
+    "@mars-sea/dsh-commandcode-provider": {
+      "description": {
+        "en": "Register Command Code models and a provider configuration card in DSH.",
+        "zh": "在 DSH 中注册 Command Code 模型与供应商配置卡片。"
+      },
+      "summary": {
+        "en": "★ 405 · ↓ 16,627/30d · Updated today",
+        "zh": "★ 405 · ↓ 16,627/30天 · 今天更新"
+      }
+    },
+    "@memef1f1y/dsh-plugin-tts": {
+      "description": {
+        "en": "Configure speech engines such as Edge TTS and read messages manually or automatically.",
+        "zh": "配置 Edge TTS 等语音引擎，手动或自动朗读消息。"
+      },
+      "summary": {
+        "en": "★ 25 · ↓ 2,326/30d · Updated 5 days ago",
+        "zh": "★ 25 · ↓ 2,326/30天 · 5 天前更新"
+      }
+    },
+    "@michengai/dsh-agency-agents": {
+      "description": {
+        "en": "321 summonable domain experts for DeepSeek Harness.",
+        "zh": "为 DeepSeek Harness 提供 321 名可召唤的专业智能体。"
+      },
+      "summary": {
+        "en": "★ 140 · ↓ 154,001/30d · Updated today",
+        "zh": "★ 140 · ↓ 154,001/30天 · 今天更新"
+      }
+    },
+    "@michengai/dsh-archive-manager": {
+      "description": {
+        "en": "Archive, restore, favorite and remove sessions, and diagnose damaged session logs.",
+        "zh": "归档、恢复、收藏和删除会话，并诊断损坏的会话日志。"
+      },
+      "summary": {
+        "en": "★ 167 · ↓ 182,647/30d · Updated today",
+        "zh": "★ 167 · ↓ 182,647/30天 · 今天更新"
+      }
+    },
+    "@michengai/dsh-automation": {
+      "description": {
+        "en": "Schedule and manage coding tasks in isolated sessions.",
+        "zh": "在独立会话中按计划执行和管理编码任务。"
+      },
+      "summary": {
+        "en": "★ 29 · ↓ 119,538/30d · Updated today",
+        "zh": "★ 29 · ↓ 119,538/30天 · 今天更新"
+      }
+    },
+    "@michengai/dsh-btw": {
+      "description": {
+        "en": "Answers from the current context in an independent bubble, without running tools.",
+        "zh": "基于当前上下文回答，独立气泡，不执行工具。"
+      },
+      "summary": {
+        "en": "★ 19 · ↓ 91,422/30d · Updated 1 day ago",
+        "zh": "★ 19 · ↓ 91,422/30天 · 1 天前更新"
+      }
+    },
+    "@michengai/dsh-codex-ui": {
+      "description": {
+        "en": "Codex-style sidebar, workspace tree, global search, and turn navigation.",
+        "zh": "Codex 风格侧栏、工作区会话树、全局搜索和轮次导航。"
+      },
+      "summary": {
+        "en": "★ 169 · ↓ 262,840/30d · Updated today",
+        "zh": "★ 169 · ↓ 262,840/30天 · 今天更新"
+      }
+    },
+    "@michengai/dsh-im-connect": {
+      "description": {
+        "en": "Connect major messaging platforms to local DeepSeek Harness agents.",
+        "zh": "将主流即时通讯平台接入本机 DeepSeek Harness。"
+      },
+      "summary": {
+        "en": "★ 68 · ↓ 138,061/30d · Updated today",
+        "zh": "★ 68 · ↓ 138,061/30天 · 今天更新"
+      }
+    },
+    "@michengai/dsh-pua": {
+      "description": {
+        "en": "Help your agent try another approach and verify its work before calling it done.",
+        "zh": "让 Agent 少一点敷衍，多一点尝试和验证"
+      },
+      "summary": {
+        "en": "★ 21 · ↓ 65,134/30d · Updated 1 day ago",
+        "zh": "★ 21 · ↓ 65,134/30天 · 1 天前更新"
+      }
+    },
+    "@michengai/dsh-skills-manager": {
+      "description": {
+        "en": "Manage local and project skills with repository installs, update previews, backups, and restoration.",
+        "zh": "管理本机与项目技能，支持仓库安装、更新预览及备份恢复。"
+      },
+      "summary": {
+        "en": "★ 219 · ↓ 210,070/30d · Updated today",
+        "zh": "★ 219 · ↓ 210,070/30天 · 今天更新"
+      }
+    },
+    "@modusensus/dsh-mneme": {
+      "description": {
+        "en": "Cross-session memory: auto-distill each session into a local SQLite store, inject on demand, consolidate while idle (autoDream).",
+        "zh": "跨会话记忆：自动把会话沉淀进本机 SQLite，需要时按需注入，空闲时巩固（做梦）。"
+      },
+      "summary": {
+        "en": "★ 157 · ↓ 10,638/30d · Updated 1 day ago",
+        "zh": "★ 157 · ↓ 10,638/30天 · 1 天前更新"
+      }
+    },
+    "@mofeng2223/dsh-claude-provider": {
+      "description": {
+        "en": "Custom Claude provider support for DeepSeek Harness 0.2.1-rc.2",
+        "zh": "为 DSH 0.2.1-rc.2 接入自定义 Claude 供应商。"
+      },
+      "summary": {
+        "en": "★ 33 · ↓ 2,684/30d · Updated 1 day ago",
+        "zh": "★ 33 · ↓ 2,684/30天 · 1 天前更新"
+      }
+    },
+    "@mokuyoaxis/agent-guard": {
+      "description": {
+        "en": "Harness-neutral reliability infrastructure for AI coding agents: reversible destructive actions, pre-emission redaction, recovery evidence, and a shared Decision Protocol with optional native adapters.",
+        "zh": "提供可逆操作、输出脱敏、恢复证据与共享决策协议。"
+      },
+      "summary": {
+        "en": "★ 23 · ↓ 1,198/30d · Updated 10 days ago",
+        "zh": "★ 23 · ↓ 1,198/30天 · 10 天前更新"
+      }
+    },
+    "@mrweicodes/dsh-loop-guard": {
+      "description": {
+        "en": "Detect repeated reasoning and output patterns and interrupt degenerate model calls.",
+        "zh": "检测重复思考与输出模式，中断陷入循环的模型调用。"
+      },
+      "summary": {
+        "en": "★ 24 · ↓ 1,518/30d · Updated 8 days ago",
+        "zh": "★ 24 · ↓ 1,518/30天 · 8 天前更新"
+      }
+    },
+    "@nagi-ovo/dsh-visualize": {
+      "description": {
+        "en": "Render interactive HTML fragments as sandboxed cards inside conversation replies.",
+        "zh": "在会话回复中将交互 HTML 片段渲染为沙箱卡片。"
+      },
+      "summary": {
+        "en": "★ 309 · ↓ 3,001/30d · Updated today",
+        "zh": "★ 309 · ↓ 3,001/30天 · 今天更新"
+      }
+    },
+    "@nanmicoder/dsh-agent-teams": {
+      "description": {
+        "en": "Coordinate agent teams with task dependencies, direct messaging and a web monitor.",
+        "zh": "通过任务依赖、直接消息与网页监视器协调 Agent 团队。"
+      },
+      "summary": {
+        "en": "★ 2,231 · ↓ 46,491/30d · Updated today",
+        "zh": "★ 2,231 · ↓ 46,491/30天 · 今天更新"
+      },
+      "publisher": "nanmicoder"
+    },
+    "@nonamelego/dsh-catppuccin": {
+      "description": {
+        "en": "Apply Catppuccin color schemes and an optional translucent web skin.",
+        "zh": "应用 Catppuccin 配色与可选的半透明网页皮肤。"
+      },
+      "summary": {
+        "en": "★ 63 · ↓ 11,538/30d · Updated 5 days ago",
+        "zh": "★ 63 · ↓ 11,538/30天 · 5 天前更新"
+      }
+    },
+    "@noob-stupid/dsh-plugin-console": {
+      "description": {
+        "en": "Manage plugin sources and framework upgrades with rollback and compatibility gates.",
+        "zh": "管理插件来源与框架升级，使用回滚和兼容性检查。"
+      },
+      "summary": {
+        "en": "★ 103 · ↓ 20,022/30d · Updated today",
+        "zh": "★ 103 · ↓ 20,022/30天 · 今天更新"
+      }
+    },
+    "@opdsh/unity-plugin": {
+      "description": {
+        "en": "DeepSeek Harness plugin: control the Unity Editor through the unity CLI — project management, live-editor pipeline commands, and C# eval as agent tools.",
+        "zh": "通过 Unity 命令行管理项目、执行编辑器流程和 C# 代码。"
+      },
+      "summary": {
+        "en": "★ 61 · ↓ 2,199/30d · Updated 20 days ago",
+        "zh": "★ 61 · ↓ 2,199/30天 · 20 天前更新"
+      }
+    },
+    "@opencode2dsh/dsh-plugin": {
+      "description": {
+        "en": "Free OpenCode Zen models for DeepSeek Harness (DSH): native dsh-llm adapter plugin, no API key.",
+        "zh": "通过原生适配器为 DSH 接入 OpenCode Zen 模型。"
+      },
+      "summary": {
+        "en": "★ 260 · ↓ 10,010/30d · Updated 4 days ago",
+        "zh": "★ 260 · ↓ 10,010/30天 · 4 天前更新"
+      }
+    },
+    "@openma/deepseek-harness-tui": {
+      "description": {
+        "en": "Terminal-native ACP client UI; Cordis client tree, any ACP agent",
+        "zh": "在终端中使用 ACP Agent 与 Cordis 客户端树。"
+      },
+      "summary": {
+        "en": "★ 80 · ↓ 1,184/30d · Updated 56 days ago",
+        "zh": "★ 80 · ↓ 1,184/30天 · 56 天前更新"
+      }
+    },
+    "@openviking/dsh-memory-plugin": {
+      "description": {
+        "en": "Connect OpenViking memory and context services to DSH.",
+        "zh": "为 DSH 接入 OpenViking 记忆与上下文服务。"
+      },
+      "summary": {
+        "en": "★ 40,217 · ↓ 38,700/30d · Updated 2 days ago",
+        "zh": "★ 40,217 · ↓ 38,700/30天 · 2 天前更新"
+      },
+      "publisher": "volcengine-openviking"
+    },
+    "@shengsheng/dsh-taskboard": {
+      "description": {
+        "en": "Manage project tasks in a local SQLite board with agent assignments, execution tracking and human review.",
+        "zh": "用本地 SQLite 看板管理项目任务，支持 Agent 领取、执行跟踪和人工验收。"
+      },
+      "summary": {
+        "en": "★ 336 · ↓ 1,331/30d · Updated 5 days ago",
+        "zh": "★ 336 · ↓ 1,331/30天 · 5 天前更新"
+      }
+    },
+    "@smalltailqwq/dsh-client-ui-skin-maid-atelier": {
+      "description": {
+        "en": "Apply a navy whale-maid theme and character sidebar to the web interface.",
+        "zh": "为网页界面添加深蓝鲸鱼女仆主题与角色侧栏。"
+      },
+      "summary": {
+        "en": "★ 2,666 · ↓ 41,770/30d · Updated 3 days ago",
+        "zh": "★ 2,666 · ↓ 41,770/30天 · 3 天前更新"
+      }
+    },
+    "@tencent-connect/dsh-qqbot": {
+      "description": {
+        "en": "QQ Bot IM channel plugin for deepseek-harness (dsh)",
+        "zh": "通过 QQ Bot 连接 DSH 消息与会话。"
+      },
+      "summary": {
+        "en": "★ 140 · ↓ 3,898/30d · Updated 6 days ago",
+        "zh": "★ 140 · ↓ 3,898/30天 · 6 天前更新"
+      },
+      "publisher": "tencent-qq"
+    },
+    "@tomowang/dsh-tui": {
+      "description": {
+        "en": "Terminal front door for DeepSeek Harness (dsh): an out-of-tree TUI mode bundle over dsh-base",
+        "zh": "为 DSH 配置提供独立的终端界面组合包。"
+      },
+      "summary": {
+        "en": "★ 23 · ↓ 1,608/30d · Updated today",
+        "zh": "★ 23 · ↓ 1,608/30天 · 今天更新"
+      }
+    },
+    "@tt-a1i/archify-dsh": {
+      "description": {
+        "en": "Turn plans and codebases into interactive architecture diagrams through a bundled skill.",
+        "zh": "用内置技能把方案与代码库整理为可交互的架构图。"
+      },
+      "summary": {
+        "en": "★ 85,085 · ↓ 31,340/30d · Updated 13 days ago",
+        "zh": "★ 85,085 · ↓ 31,340/30天 · 13 天前更新"
+      },
+      "publisher": "archify-author"
+    },
+    "@txc2768651338/dsh-effort-slider": {
+      "description": {
+        "en": "Adjust model reasoning effort with a configurable slider in the web interface.",
+        "zh": "通过网页界面的可配置滑块调整模型推理强度。"
+      },
+      "summary": {
+        "en": "★ 19 · ↓ 1,246/30d · Updated 16 days ago",
+        "zh": "★ 19 · ↓ 1,246/30天 · 16 天前更新"
+      }
+    },
+    "@weibaohui/skills-management": {
+      "description": {
+        "en": "Manage local skills from multiple coding agents, import them into DSH and browse a skill market.",
+        "zh": "管理多种编程助手的本地技能，并导入 DSH 与浏览技能市场。"
+      },
+      "summary": {
+        "en": "★ 33 · ↓ 10,078/30d · Updated 11 days ago",
+        "zh": "★ 33 · ↓ 10,078/30天 · 11 天前更新"
+      }
+    },
+    "@wenaixi/dsh-ponytail": {
+      "description": {
+        "en": "DietrichGebert/ponytail lazy senior mode & 7-rung ladder port, 6 skills with bilingual descriptions & per-skill toggles, zero tools, zero-cache-miss.",
+        "zh": "DietrichGebert/ponytail 懒人 senior 模式与七阶梯子完美移植，6 个技能描述双语自由切换，各个技能自由开关，零 tool 注册，全场景零缓存破坏。"
+      },
+      "summary": {
+        "en": "★ 24 · ↓ 4,745/30d · Updated today",
+        "zh": "★ 24 · ↓ 4,745/30天 · 今天更新"
+      }
+    },
+    "@wenaixi/dsh-superpower": {
+      "description": {
+        "en": "DeepSeek Harness plugin: 15 obra/superpowers engineering skills, bilingual descriptions, per-skill toggles",
+        "zh": "DeepSeek Harness 插件：15 个 obra/superpowers 工程纪律技能，技能描述中英双语自由切换，每一个技能本身自由开关"
+      },
+      "summary": {
+        "en": "★ 25 · ↓ 4,420/30d · Updated today",
+        "zh": "★ 25 · ↓ 4,420/30天 · 今天更新"
+      }
+    },
+    "@wenbin_wb/dsh-bridge": {
+      "description": {
+        "en": "Scan the QR code to keep using DeepSeek Harness on mobile or public networks when you're away from your computer. One-tap LAN QR code, Cloudflare public tunnel, self-hosted tunnel, and WeChat / QQ / Lark / Telegram bots (multi-workspace / session persistence / media / card approval / streaming output), no public server required.",
+        "zh": "手机扫码即可在移动端/公网继续用 DeepSeek Harness，人不在电脑前也能接着干。一键局域网二维码、Cloudflare 公网隧道、自建隧道与微信 / QQ / 飞书 / Telegram Bot（多工作区/会话持久化/媒体/卡片审批/流式输出），无需自己搭公网服务器。"
+      },
+      "summary": {
+        "en": "★ 202 · ↓ 12,593/30d · Updated 1 day ago",
+        "zh": "★ 202 · ↓ 12,593/30天 · 1 天前更新"
+      }
+    },
+    "@xgone/dsh-remote": {
+      "description": {
+        "en": "Remote access & authentication for the DeepSeek Harness web UI: login gate, MFA (TOTP), signed session cookies, role-based access, in-browser directory picker, account management settings. Fully localized (zh/en).",
+        "zh": "为网页界面提供登录、多因素认证、角色权限与远程目录选择。"
+      },
+      "summary": {
+        "en": "★ 60 · ↓ 1,915/30d · Updated 19 days ago",
+        "zh": "★ 60 · ↓ 1,915/30天 · 19 天前更新"
+      }
+    },
+    "@xiaoyuyu6420/dsh-backup": {
+      "description": {
+        "en": "Back up, restore and migrate DSH data with scheduled snapshots and session-log diagnostics.",
+        "zh": "通过定时快照备份、恢复和迁移 DSH 数据，并诊断会话日志。"
+      },
+      "summary": {
+        "en": "★ 28 · ↓ 4,232/30d · Updated 8 days ago",
+        "zh": "★ 28 · ↓ 4,232/30天 · 8 天前更新"
+      }
+    },
+    "@xmoon76/dsh-pi-tui": {
+      "description": {
+        "en": "The dsh-pi-tui bundle: a TUI surface for DeepSeek Harness profiles (dsh --profile pi-tui)",
+        "zh": "为 DSH 配置安装 Pi 风格的终端界面。"
+      },
+      "summary": {
+        "en": "★ 19 · ↓ 2,417/30d · Updated 9 days ago",
+        "zh": "★ 19 · ↓ 2,417/30天 · 9 天前更新"
+      }
+    },
+    "@y1x1n/dsh-prompt-optimizer": {
+      "description": {
+        "en": "Analyze and rewrite prompts beside the composer using the current session model.",
+        "zh": "使用当前会话模型，在输入栏旁分析并改写提示词。"
+      },
+      "summary": {
+        "en": "★ 24 · ↓ 1,282/30d · Updated 5 days ago",
+        "zh": "★ 24 · ↓ 1,282/30天 · 5 天前更新"
+      }
+    },
+    "@ychris12138/dsh-usage-stats": {
+      "description": {
+        "en": "Token usage, provider accounts, session cost estimates, budgets, and exports for the dsh web GUI",
+        "zh": "查看 Token 用量、供应商账户、会话费用、预算与导出记录。"
+      },
+      "summary": {
+        "en": "★ 177 · ↓ 7,398/30d · Updated 16 days ago",
+        "zh": "★ 177 · ↓ 7,398/30天 · 16 天前更新"
+      }
+    },
+    "@yejiming/dsh-data-agent": {
+      "description": {
+        "en": "Manage database connections and metadata catalogs, then query them through SQL and catalog tools.",
+        "zh": "管理数据库连接与元数据目录，通过 SQL 和目录工具进行查询。"
+      },
+      "summary": {
+        "en": "★ 209 · ↓ 3,168/30d · Updated 18 days ago",
+        "zh": "★ 209 · ↓ 3,168/30天 · 18 天前更新"
+      }
+    },
+    "@yejiming/dsh-museai-tavern": {
+      "description": {
+        "en": "MuseAI tavern for the dsh web GUI: a MuseAI conversation-view tab (right of Trajectory) with background / chat / adventure / bond / settings pages ported from MuseAI, running entirely on models configured in DeepSeek Harness (no separate API config)",
+        "zh": "在 DSH 模型配置上运行带聊天、冒险与角色页面的 MuseAI 界面。"
+      },
+      "summary": {
+        "en": "★ 26 · ↓ 236/30d · Updated 18 days ago",
+        "zh": "★ 26 · ↓ 236/30天 · 18 天前更新"
+      }
+    },
+    "@yolk_vat-y/dsh-project-memory": {
+      "description": {
+        "en": "Persistent project memory for dsh agents: index docs (PDF/Markdown/text) and code symbols into a searchable per-workspace store, recall them with cited sources, and keep experience entries (problems -> solutions) searchable on demand.",
+        "zh": "索引工作区文档和代码符号，带来源召回项目经验。"
+      },
+      "summary": {
+        "en": "★ 21 · ↓ 4,397/30d · Updated today",
+        "zh": "★ 21 · ↓ 4,397/30天 · 今天更新"
+      }
+    },
+    "@yunmiao/studymate": {
+      "description": {
+        "en": "Use structured learning skills and a lesson engine inside DSH.",
+        "zh": "在 DSH 中使用结构化学习技能与课程引擎。"
+      },
+      "summary": {
+        "en": "★ 1,042 · ↓ 5,566/30d · Updated 2 days ago",
+        "zh": "★ 1,042 · ↓ 5,566/30天 · 2 天前更新"
+      }
+    },
+    "@zaofan/dsh-qqbot": {
+      "description": {
+        "en": "QQ Bot IM channel plugin for deepseek-harness (dsh)",
+        "zh": "通过 QQ Bot 为 DSH 提供即时消息通道。"
+      },
+      "summary": {
+        "en": "★ 38 · ↓ 10,289/30d · Updated 1 day ago",
+        "zh": "★ 38 · ↓ 10,289/30天 · 1 天前更新"
+      }
+    },
+    "@zhangfengshun/dsh-remote-ssh": {
+      "description": {
+        "en": "DSH web plugin: VSCode Remote-SSH-like remote development (SSH to supercomputers/servers, remote workspace, file explorer, integrated terminal), integrated with dsh-better-sidebar and DSH settings.",
+        "zh": "连接服务器或超算，在远程工作区使用文件浏览器与终端。"
+      },
+      "summary": {
+        "en": "★ 32 · ↓ 7,206/30d · Updated today",
+        "zh": "★ 32 · ↓ 7,206/30天 · 今天更新"
+      }
+    },
+    "@zoria-lind/dsh-token-optimizer": {
+      "description": {
+        "en": "Combine output limits, result caching, file diffs, tool pruning and lazy MCP loading.",
+        "zh": "组合使用输出限制、结果缓存、文件差异、工具裁剪与 MCP 延迟加载。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 1,768/30d · Updated 13 days ago",
+        "zh": "★ 20 · ↓ 1,768/30天 · 13 天前更新"
+      }
+    },
+    "@zseven-w/dsh-android": {
+      "description": {
+        "en": "DeepSeek Harness plugin for Android — build, run, and interact with a live emulator or USB device stream inside a conversation, driven entirely through adb. Tested with DSH 0.1.5-rc.1.",
+        "zh": "通过 adb 在会话中构建、运行并操作模拟器或 USB 设备。"
+      },
+      "summary": {
+        "en": "★ 186 · ↓ 2,638/30d · Updated 9 days ago",
+        "zh": "★ 186 · ↓ 2,638/30天 · 9 天前更新"
+      }
+    },
+    "@zseven-w/dsh-crew": {
+      "description": {
+        "en": "DeepSeek Harness plugin: dispatch work to DSH agents from Claude Code / Codex, as native subagents with live progress",
+        "zh": "从 Claude Code 或 Codex 调用 DSH 子 Agent，并查看实时进度。"
+      },
+      "summary": {
+        "en": "★ 167 · ↓ 2,196/30d · Updated 9 days ago",
+        "zh": "★ 167 · ↓ 2,196/30天 · 9 天前更新"
+      }
+    },
+    "@zseven-w/dsh-harbor": {
+      "description": {
+        "en": "A read-only mirror for installed DeepSeek Harness plugins: capability inventory with evidence, cross-plugin conflicts, a diff of what changed since the last scan, and an upgrade preflight that tells you which profiles still boot on a newer DSH",
+        "zh": "只读查看已安装插件的能力、冲突、变更与升级前检查。"
+      },
+      "summary": {
+        "en": "★ 24 · ↓ 264/30d · Updated 12 days ago",
+        "zh": "★ 24 · ↓ 264/30天 · 12 天前更新"
+      }
+    },
+    "@zseven-w/dsh-ios": {
+      "description": {
+        "en": "Build, run and interact with an iOS Simulator stream inside a conversation.",
+        "zh": "在会话中构建、运行并操作 iOS 模拟器画面。"
+      },
+      "summary": {
+        "en": "★ 327 · ↓ 1,727/30d · Updated 34 days ago",
+        "zh": "★ 327 · ↓ 1,727/30天 · 34 天前更新"
+      }
+    },
+    "@zseven-w/dsh-noema": {
+      "description": {
+        "en": "Noema long-term memory plugin for DSH: durable, inspectable agent memory with recall tools and a settings page.",
+        "zh": "提供可检查的持久记忆、召回工具与设置界面。"
+      },
+      "summary": {
+        "en": "★ 129 · ↓ 1,546/30d · Updated 12 days ago",
+        "zh": "★ 129 · ↓ 1,546/30天 · 12 天前更新"
+      }
+    },
+    "@zseven-w/dsh-openpencil": {
+      "description": {
+        "en": "Preview, inspect, and edit real .op OpenPencil design documents inside DSH conversations — headless rendering, a read-only canvas, and a managed editor.",
+        "zh": "在会话中预览、检查与编辑 OpenPencil 设计文档。"
+      },
+      "summary": {
+        "en": "★ 186 · ↓ 2,510/30d · Updated 11 days ago",
+        "zh": "★ 186 · ↓ 2,510/30天 · 11 天前更新"
+      }
+    },
+    "better-dsh-session-deletetool": {
+      "description": {
+        "en": "Inspect related subagent sessions and delete selected conversation families from the sidebar.",
+        "zh": "查看关联子 Agent 会话，并在侧栏选择删除会话组。"
+      },
+      "summary": {
+        "en": "★ 29 · ↓ 914/30d · Updated 1 day ago",
+        "zh": "★ 29 · ↓ 914/30天 · 1 天前更新"
+      }
+    },
+    "clearai-dsh": {
+      "description": {
+        "en": "Organize evidence-backed research as a browsable domain ontology.",
+        "zh": "将有证据支持的研究整理为可浏览的领域本体。"
+      },
+      "summary": {
+        "en": "★ 1,048 · ↓ 5,379/30d · Updated 4 days ago",
+        "zh": "★ 1,048 · ↓ 5,379/30天 · 4 天前更新"
+      }
+    },
+    "deep-read-summarize": {
+      "description": {
+        "en": "Deep reading & summarization for DSH: books/papers/videos/web → structured Markdown notes (Obsidian / Logseq / static sites). Plugin parsers, MapReduce deep-read, JSON Schema-constrained sub-tasks.",
+        "zh": "将书籍、论文、视频和网页整理为结构化 Markdown 笔记。"
+      },
+      "summary": {
+        "en": "★ 32 · ↓ 2,689/30d · Updated today",
+        "zh": "★ 32 · ↓ 2,689/30天 · 今天更新"
+      }
+    },
+    "deepseek-harness-auth": {
+      "description": {
+        "en": "Fail-closed password authentication proxy bundle for the DeepSeek Harness Web profile",
+        "zh": "为 DSH 网页配置提供密码认证代理。"
+      },
+      "summary": {
+        "en": "★ 26 · ↓ 928/30d · Updated 15 days ago",
+        "zh": "★ 26 · ↓ 928/30天 · 15 天前更新"
+      }
+    },
+    "deepseek-harness-zh_pro": {
+      "description": {
+        "en": "Adjust interface layout and conversation prompt behavior through configurable enhancements.",
+        "zh": "通过可配置扩展调整界面布局与会话提示词行为。"
+      },
+      "summary": {
+        "en": "★ 36 · ↓ 5,021/30d · Updated 14 days ago",
+        "zh": "★ 36 · ↓ 5,021/30天 · 14 天前更新"
+      }
+    },
+    "dsh-advisor": {
+      "description": {
+        "en": "Configure the advisor reviewer model that observes the primary transcript and injects severity-ranked advice.",
+        "zh": "配置顾问审阅模型：它观察主会话记录，并注入按严重程度排序的建议。"
+      },
+      "summary": {
+        "en": "★ 27 · ↓ 3,347/30d · Updated today",
+        "zh": "★ 27 · ↓ 3,347/30天 · 今天更新"
+      }
+    },
+    "dsh-agent-studio": {
+      "description": {
+        "en": "Compose prompts, tools, skills, subagents and fallback models in a visual configuration panel.",
+        "zh": "可视化组合提示词、工具、技能、子 Agent 与备用模型。"
+      },
+      "summary": {
+        "en": "★ 38 · ↓ 2,113/30d · Updated 1 day ago",
+        "zh": "★ 38 · ↓ 2,113/30天 · 1 天前更新"
+      }
+    },
+    "dsh-aginxbrowser": {
+      "description": {
+        "en": "Fetch rendered pages, search multiple sources and automate indexed browser sessions.",
+        "zh": "抓取渲染后的网页、检索多个来源，并自动操作浏览器会话。"
+      },
+      "summary": {
+        "en": "★ 40 · ↓ 844/30d · Updated 32 days ago",
+        "zh": "★ 40 · ↓ 844/30天 · 32 天前更新"
+      }
+    },
+    "dsh-agnes-studio": {
+      "description": {
+        "en": "Use a floating workspace for image, video, short-drama and story creation tools.",
+        "zh": "在浮动工作区中使用图片、视频、短剧和故事创作工具。"
+      },
+      "summary": {
+        "en": "★ 19 · ↓ 2,247/30d · Updated 13 days ago",
+        "zh": "★ 19 · ↓ 2,247/30天 · 13 天前更新"
+      }
+    },
+    "dsh-agy": {
+      "description": {
+        "en": "Google Antigravity (agy) OAuth auth + model access plugin for DeepSeek Harness: multi-account pool, 429 rotation, device fingerprinting, CLI and web login.",
+        "zh": "通过 OAuth 连接 Google Antigravity，并管理多账户模型访问。"
+      },
+      "summary": {
+        "en": "★ 58 · ↓ 4,533/30d · Updated 8 days ago",
+        "zh": "★ 58 · ↓ 4,533/30天 · 8 天前更新"
+      }
+    },
+    "dsh-any-background": {
+      "description": {
+        "en": "Customize theme colors and image or video wallpapers with separate opacity and blur controls for interface areas.",
+        "zh": "自定义主题色与图片或视频壁纸，分别调整各区域的透明度和模糊度。"
+      },
+      "summary": {
+        "en": "★ 43 · ↓ 6,450/30d · Updated today",
+        "zh": "★ 43 · ↓ 6,450/30天 · 今天更新"
+      }
+    },
+    "dsh-auto-memory": {
+      "description": {
+        "en": "Claude Code style auto-memory plugin for DeepSeek Harness: typed memory files + MEMORY.md index auto-injected into the system prompt",
+        "zh": "自动注入 MEMORY.md 索引，管理分类的跨会话记忆文件。"
+      },
+      "summary": {
+        "en": "★ 106 · ↓ 3,957/30d · Updated 4 days ago",
+        "zh": "★ 106 · ↓ 3,957/30天 · 4 天前更新"
+      }
+    },
+    "dsh-auto-review": {
+      "description": {
+        "en": "Second-model AI auto-review for DeepSeek Harness approval requests: a read-only reviewer subagent decides allow/deny on the approval answerer chain, with fail-closed fallback and full session-log audit.",
+        "zh": "使用独立只读模型复核权限请求，并记录审批过程。"
+      },
+      "summary": {
+        "en": "★ 234 · ↓ 6,502/30d · Updated today",
+        "zh": "★ 234 · ↓ 6,502/30天 · 今天更新"
+      }
+    },
+    "dsh-background-by-model": {
+      "description": {
+        "en": "Assign wallpapers and appearance settings to model rules and rotate matching images.",
+        "zh": "按模型规则配置壁纸和外观，并轮播匹配的图片。"
+      },
+      "summary": {
+        "en": "★ 19 · ↓ 8,433/30d · Updated 7 days ago",
+        "zh": "★ 19 · ↓ 8,433/30天 · 7 天前更新"
+      }
+    },
+    "dsh-better-display": {
+      "description": {
+        "en": "A calmer reading view for DeepSeek Harness: native process details, live reasoning, and clean final answers.",
+        "zh": "调整过程细节、实时思考与最终回答的显示方式。"
+      },
+      "summary": {
+        "en": "★ 83 · ↓ 3,878/30d · Updated 5 days ago",
+        "zh": "★ 83 · ↓ 3,878/30天 · 5 天前更新"
+      }
+    },
+    "dsh-better-edit": {
+      "description": {
+        "en": "Hash-anchored read/edit/undo_last_edit tools for DeepSeek Harness (dsh). Every line gets a unique 3-char hash (A-Za-z0-9) that stays stable across edits; stale or ambiguous anchors are rejected, never fuzzy-matched. Undo persists across restarts.",
+        "zh": "通过行哈希执行读取、编辑和撤销，拒绝过期或歧义锚点。"
+      },
+      "summary": {
+        "en": "★ 37 · ↓ 2,649/30d · Updated 20 days ago",
+        "zh": "★ 37 · ↓ 2,649/30天 · 20 天前更新"
+      }
+    },
+    "dsh-better-input": {
+      "description": {
+        "en": "Better input experience for DeepSeek Harness: file-to-Markdown, local file input, prompt optimization, and voice input",
+        "zh": "提供文件转 Markdown、本地文件引用、提示词优化与语音输入。"
+      },
+      "summary": {
+        "en": "★ 26 · ↓ 2,242/30d · Updated 8 days ago",
+        "zh": "★ 26 · ↓ 2,242/30天 · 8 天前更新"
+      }
+    },
+    "dsh-better-reasoning-effort": {
+      "description": {
+        "en": "Thinking levels and image input for third-party models, edited right in the Models page.",
+        "zh": "在官方「模型」页为第三方模型配置思考档位与图片输入。"
+      },
+      "summary": {
+        "en": "★ 58 · ↓ 5,141/30d · Updated 4 days ago",
+        "zh": "★ 58 · ↓ 5,141/30天 · 4 天前更新"
+      }
+    },
+    "dsh-better-sidebar": {
+      "description": {
+        "en": "Keep files, an editor, changes, tasks and side chat together in a per-conversation sidebar.",
+        "zh": "在每个会话的侧栏中查看文件、编辑器、变更、任务与旁聊。"
+      },
+      "summary": {
+        "en": "★ 4,266 · ↓ 216,581/30d · Updated 1 day ago",
+        "zh": "★ 4,266 · ↓ 216,581/30天 · 1 天前更新"
+      }
+    },
+    "dsh-better-workspace": {
+      "description": {
+        "en": "Organize workspace navigation by disk paths with optional name-based grouping.",
+        "zh": "按磁盘目录组织工作区导航，并可启用名称分组。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 6,706/30d · Updated today",
+        "zh": "★ 20 · ↓ 6,706/30天 · 今天更新"
+      }
+    },
+    "dsh-bili-scroll": {
+      "description": {
+        "en": "Read video subtitles, select relevant material and produce daily digests and notifications.",
+        "zh": "读取视频字幕并筛选内容，生成日报与消息提醒。"
+      },
+      "summary": {
+        "en": "★ 112 · ↓ 1,594/30d · Updated today",
+        "zh": "★ 112 · ↓ 1,594/30天 · 今天更新"
+      }
+    },
+    "dsh-blender": {
+      "description": {
+        "en": "DeepSeek Harness Blender production, reconstruction, validation, and export plugin",
+        "zh": "在 DSH 中调用 Blender 制作、重建、验证与导出流程。"
+      },
+      "summary": {
+        "en": "★ 46 · ↓ 3,163/30d · Updated 6 days ago",
+        "zh": "★ 46 · ↓ 3,163/30天 · 6 天前更新"
+      }
+    },
+    "dsh-bloom-theme": {
+      "description": {
+        "en": "Apply light-adaptive color schemes and frosted-glass interface styling.",
+        "zh": "应用可自适应深浅模式的配色与磨砂玻璃界面。"
+      },
+      "summary": {
+        "en": "★ 102 · ↓ 4,907/30d · Updated 5 days ago",
+        "zh": "★ 102 · ↓ 4,907/30天 · 5 天前更新"
+      }
+    },
+    "dsh-bottom-info-bar": {
+      "description": {
+        "en": "Show the current model, account balance or subscription quota, and session or historical spending beneath the composer.",
+        "zh": "在输入框下方显示模型、余额或订阅额度，以及会话与历史费用。"
+      },
+      "summary": {
+        "en": "★ 49 · ↓ 13,030/30d · Updated 1 day ago",
+        "zh": "★ 49 · ↓ 13,030/30天 · 1 天前更新"
+      }
+    },
+    "dsh-builtin-browser": {
+      "description": {
+        "en": "Use a visible browser that the agent can automate and the user can take over.",
+        "zh": "使用可由 Agent 自动操作、也可由用户接管的可见浏览器。"
+      },
+      "summary": {
+        "en": "★ 121 · ↓ 19,527/30d · Updated today",
+        "zh": "★ 121 · ↓ 19,527/30天 · 今天更新"
+      }
+    },
+    "dsh-cad": {
+      "description": {
+        "en": "View 2D and 3D CAD files and use parametric modeling and export tools from a conversation.",
+        "zh": "在会话中查看二维与三维 CAD 文件，并调用参数化建模与导出工具。"
+      },
+      "summary": {
+        "en": "★ 18 · ↓ 3,926/30d · Updated 9 days ago",
+        "zh": "★ 18 · ↓ 3,926/30天 · 9 天前更新"
+      }
+    },
+    "dsh-calendar": {
+      "description": {
+        "en": "Connect CalDAV calendars to view, create, reschedule, and import events from DSH.",
+        "zh": "连接 CalDAV 日历，在会话中查看、创建和调整日程，并导入日历文件。"
+      },
+      "summary": {
+        "en": "★ 4 · ↓ 7,033/30d · Updated today",
+        "zh": "★ 4 · ↓ 7,033/30天 · 今天更新"
+      }
+    },
+    "dsh-cert-mcp": {
+      "description": {
+        "en": "Query community plugin assessment records, evidence snapshots, and scoring rules through read-only DSH or MCP tools.",
+        "zh": "通过只读工具查询社区插件评估记录、证据快照与评分规范。"
+      },
+      "summary": {
+        "en": "★ 0 · ↓ 2,210/30d · Updated today",
+        "zh": "★ 0 · ↓ 2,210/30天 · 今天更新"
+      }
+    },
+    "dsh-chat-import": {
+      "description": {
+        "en": "Import AI coding agent conversations as resumable DeepSeek Harness sessions.",
+        "zh": "将 AI 编程助手聊天记录导入为可继续对话的 DeepSeek Harness 会话。"
+      },
+      "summary": {
+        "en": "★ 238 · ↓ 18,043/30d · Updated today",
+        "zh": "★ 238 · ↓ 18,043/30天 · 今天更新"
+      }
+    },
+    "dsh-chat-manager": {
+      "description": {
+        "en": "Search archived conversations, restore sessions, and delete with confirmation.",
+        "zh": "搜索归档内容、恢复会话，确认后永久删除。"
+      },
+      "summary": {
+        "en": "★ 24 · ↓ 10,070/30d · Updated today",
+        "zh": "★ 24 · ↓ 10,070/30天 · 今天更新"
+      }
+    },
+    "dsh-checkpoint-rewind": {
+      "description": {
+        "en": "Snapshot sessions, workspaces and configuration, compare changes and restore a checkpoint.",
+        "zh": "保存会话、工作区和配置快照，查看差异并一键回退。"
+      },
+      "summary": {
+        "en": "★ 25 · ↓ 5,159/30d · Updated 8 days ago",
+        "zh": "★ 25 · ↓ 5,159/30天 · 8 天前更新"
+      }
+    },
+    "dsh-claude-move": {
+      "description": {
+        "en": "Four-source migration wizard: copy Claude Code, Codex, OpenCode and Hermes sessions, memories, skills, instructions and slash commands into DeepSeek Harness as resumable sessions — copy-only, approval-gated, idempotent",
+        "zh": "预览并复制多种编程助手的会话、记忆、技能与指令到 DSH。"
+      },
+      "summary": {
+        "en": "★ 29 · ↓ 3,403/30d · Updated 8 days ago",
+        "zh": "★ 29 · ↓ 3,403/30天 · 8 天前更新"
+      }
+    },
+    "dsh-claude-style": {
+      "description": {
+        "en": "Claude Code Desktop theme for the DeepSeek Harness web GUI — ivory and warm-black canvases, the clay accent, a Claude-style model picker, permission segments and an account drawer.",
+        "zh": "为 DeepSeek Harness 网页界面复刻 Claude Code Desktop 的主题插件——象牙白与暖黑双画布、陶烬橙强调色、Claude 风格模型选择器、权限分段与账户抽屉。"
+      },
+      "summary": {
+        "en": "★ 198 · ↓ 15,011/30d · Updated today",
+        "zh": "★ 198 · ↓ 15,011/30天 · 今天更新"
+      }
+    },
+    "dsh-click": {
+      "description": {
+        "en": "Inspect desktop screens and applications, then use approval-gated mouse and keyboard tools.",
+        "zh": "查看桌面画面与应用，使用需要审批的鼠标和键盘操作工具。"
+      },
+      "summary": {
+        "en": "★ 19 · ↓ 4,702/30d · Updated today",
+        "zh": "★ 19 · ↓ 4,702/30天 · 今天更新"
+      }
+    },
+    "dsh-client-auto-continue": {
+      "description": {
+        "en": "DSH Web UI plugin: automatically sends a localized continue prompt when a request is interrupted by network errors or other non-human causes",
+        "zh": "在网络错误等非人工中断后自动发送继续提示。"
+      },
+      "summary": {
+        "en": "★ 154 · ↓ 10,724/30d · Updated 10 days ago",
+        "zh": "★ 154 · ↓ 10,724/30天 · 10 天前更新"
+      }
+    },
+    "dsh-codex": {
+      "description": {
+        "en": "ChatGPT OAuth, Codex models, search, read_image URL support, and configurable GPT Image generation for DeepSeek Harness",
+        "zh": "通过 ChatGPT OAuth 接入 Codex，并提供搜索、看图与可配置生图工具。"
+      },
+      "summary": {
+        "en": "★ 82 · ↓ 2,656/30d · Updated 19 days ago",
+        "zh": "★ 82 · ↓ 2,656/30天 · 19 天前更新"
+      }
+    },
+    "dsh-codex-subscription": {
+      "description": {
+        "en": "Connect eligible ChatGPT and Codex subscriptions through OAuth and view account quotas in DSH.",
+        "zh": "通过 OAuth 接入 ChatGPT 与 Codex 订阅模型，并查看账户额度。"
+      },
+      "summary": {
+        "en": "★ 195 · ↓ 23,020/30d · Updated today",
+        "zh": "★ 195 · ↓ 23,020/30天 · 今天更新"
+      }
+    },
+    "dsh-comfyui": {
+      "description": {
+        "en": "Run local or remote ComfyUI workflows with asset panels and per-workflow skills.",
+        "zh": "运行本机或远程 ComfyUI 工作流，管理素材面板与工作流技能。"
+      },
+      "summary": {
+        "en": "★ 117 · ↓ 4,382/30d · Updated today",
+        "zh": "★ 117 · ↓ 4,382/30天 · 今天更新"
+      }
+    },
+    "dsh-computer-use": {
+      "description": {
+        "en": "Use screenshots and vision models with virtual-mouse and desktop-operation tools.",
+        "zh": "结合截图与视觉模型，提供虚拟鼠标和桌面操作工具。"
+      },
+      "summary": {
+        "en": "★ 54 · ↓ 3,897/30d · Updated 38 days ago",
+        "zh": "★ 54 · ↓ 3,897/30天 · 38 天前更新"
+      }
+    },
+    "dsh-computer-use-win": {
+      "description": {
+        "en": "Windows computer use for DeepSeek Harness: an MCP stdio server + PowerShell UIA backend, bridged into DSH via @deepseek-ai/dsh-mcp-client. Read/act on real Windows desktop apps (UI Automation tree, screenshots, typed input, OCR, window management).",
+        "zh": "通过 UI Automation、截图、OCR 与 PowerShell 操作 Windows 应用。"
+      },
+      "summary": {
+        "en": "★ 46 · ↓ 6,963/30d · Updated 3 days ago",
+        "zh": "★ 46 · ↓ 6,963/30天 · 3 天前更新"
+      }
+    },
+    "dsh-config-manager": {
+      "description": {
+        "en": "Back up, restore, export, import, migrate and sync your complete DSH configuration: settings, plugins, MCP servers, skills, agent presets and workspaces.",
+        "zh": "DSH 配置的备份、恢复、导出、导入、迁移与同步：设置、插件、MCP 服务器、技能、Agent 预设与工作区，一键搬到新机器。"
+      },
+      "summary": {
+        "en": "★ 205 · ↓ 15,411/30d · Updated today",
+        "zh": "★ 205 · ↓ 15,411/30天 · 今天更新"
+      }
+    },
+    "dsh-connect-trae": {
+      "description": {
+        "en": "Connect locally signed-in Trae models with separate domestic and international providers.",
+        "zh": "接入本机已登录的 Trae 模型，分别管理国内与国际供应商。"
+      },
+      "summary": {
+        "en": "★ 129 · ↓ 10,005/30d · Updated today",
+        "zh": "★ 129 · ↓ 10,005/30天 · 今天更新"
+      }
+    },
+    "dsh-connect-workbuddy": {
+      "description": {
+        "en": "Connect locally signed-in WorkBuddy models and view account credits.",
+        "zh": "接入本机已登录的 WorkBuddy 模型，并查看账户积分。"
+      },
+      "summary": {
+        "en": "★ 181 · ↓ 18,140/30d · Updated today",
+        "zh": "★ 181 · ↓ 18,140/30天 · 今天更新"
+      }
+    },
+    "dsh-context": {
+      "description": {
+        "en": "Inspect context composition, changes and compression from a dashboard and command.",
+        "zh": "通过面板和命令查看上下文组成、变化与压缩情况。"
+      },
+      "summary": {
+        "en": "★ 2,271 · ↓ 152,172/30d · Updated today",
+        "zh": "★ 2,271 · ↓ 152,172/30天 · 今天更新"
+      }
+    },
+    "dsh-continual-evolve": {
+      "description": {
+        "en": "Central SQLite memory and skill store partitioned by workspace: session-start index injection, gated explicit writes and proposal-based extraction, skills materialized as SKILL.md.",
+        "zh": "中央 SQLite 记忆与技能库，按工作区分区：开局注入索引、显式写入与提案制提取全部过代码门禁，技能物化为 SKILL.md。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 8,504/30d · Updated today",
+        "zh": "★ 20 · ↓ 8,504/30天 · 今天更新"
+      }
+    },
+    "dsh-conversation-navigator": {
+      "description": {
+        "en": "Browse a collapsible turn-by-turn outline, jump to messages and track the current scroll position.",
+        "zh": "按轮次查看可折叠大纲，点击跳转并跟踪当前滚动位置。"
+      },
+      "summary": {
+        "en": "★ 23 · ↓ 2,046/30d · Updated 18 days ago",
+        "zh": "★ 23 · ↓ 2,046/30天 · 18 天前更新"
+      }
+    },
+    "dsh-cost-meter": {
+      "description": {
+        "en": "Track session and daily model costs alongside account balances, budgets, and subscription usage.",
+        "zh": "统计会话与每日模型费用，显示账户余额、预算和订阅套餐用量。"
+      },
+      "summary": {
+        "en": "★ 449 · ↓ 105,573/30d · Updated today",
+        "zh": "★ 449 · ↓ 105,573/30天 · 今天更新"
+      }
+    },
+    "dsh-data-quality": {
+      "description": {
+        "en": "Profile, clean and verify structured datasets through deterministic tools.",
+        "zh": "通过确定性工具分析、清理和验证结构化数据。"
+      },
+      "summary": {
+        "en": "★ 54 · ↓ 3,606/30d · Updated today",
+        "zh": "★ 54 · ↓ 3,606/30天 · 今天更新"
+      }
+    },
+    "dsh-deepcanary": {
+      "description": {
+        "en": "Know when your DeepSeek Harness tasks need you. Local alerts, quiet notifications, and a task inbox.",
+        "zh": "通过本机提醒、通知与任务收件箱查看需要关注的会话。"
+      },
+      "summary": {
+        "en": "★ 90 · ↓ 930/30d · Updated 16 days ago",
+        "zh": "★ 90 · ↓ 930/30天 · 16 天前更新"
+      }
+    },
+    "dsh-defend": {
+      "description": {
+        "en": "Apply detection rules to messages, tool arguments and results, with auditable allow, ask or block decisions.",
+        "zh": "对消息、工具参数与结果应用检测规则，记录允许、询问或阻止的决策。"
+      },
+      "summary": {
+        "en": "★ 22 · ↓ 4,256/30d · Updated today",
+        "zh": "★ 22 · ↓ 4,256/30天 · 今天更新"
+      }
+    },
+    "dsh-deja": {
+      "description": {
+        "en": "Search and recall local session histories from other coding agents without an LLM indexer.",
+        "zh": "检索和召回其他编程助手的本地会话历史，无需模型建立索引。"
+      },
+      "summary": {
+        "en": "★ 1,239 · ↓ 4,777/30d · Updated today",
+        "zh": "★ 1,239 · ↓ 4,777/30天 · 今天更新"
+      }
+    },
+    "dsh-delete-chat": {
+      "description": {
+        "en": "Session manager for DeepSeek Harness: list, archive, unarchive and permanently delete sessions from a settings page.",
+        "zh": "在设置页列出、归档、恢复和永久删除会话。"
+      },
+      "summary": {
+        "en": "★ 18 · ↓ 1,221/30d · Updated 35 days ago",
+        "zh": "★ 18 · ↓ 1,221/30天 · 35 天前更新"
+      }
+    },
+    "dsh-desktop-plugin": {
+      "description": {
+        "en": "Download, update and launch a desktop shell with shortcuts and a launch tool.",
+        "zh": "下载、更新并启动桌面外壳，创建快捷方式与启动工具。"
+      },
+      "summary": {
+        "en": "★ 24 · ↓ 1,525/30d · Updated 37 days ago",
+        "zh": "★ 24 · ↓ 1,525/30天 · 37 天前更新"
+      }
+    },
+    "dsh-dhe-lore": {
+      "description": {
+        "en": "Store project knowledge in editable Markdown files shared across sessions in the same project.",
+        "zh": "将项目知识保存为可编辑的 Markdown 文件，供同一项目的多个会话共享。"
+      },
+      "summary": {
+        "en": "↓ 2,284/30d · Updated 18 days ago",
+        "zh": "↓ 2,284/30天 · 18 天前更新"
+      }
+    },
+    "dsh-doublecheck": {
+      "description": {
+        "en": "Delivery quality gate for DeepSeek Harness: grill the requirements, test the implementation, prove the delivery, and gate the handoff with a deliverable/rework decision.",
+        "zh": "通过需求澄清、实现检查与交付证据决定交付或返工。"
+      },
+      "summary": {
+        "en": "★ 55 · ↓ 5,602/30d · Updated today",
+        "zh": "★ 55 · ↓ 5,602/30天 · 今天更新"
+      }
+    },
+    "dsh-drawai": {
+      "description": {
+        "en": "Edit a sidebar canvas and read or update .drawio files through diagram tools.",
+        "zh": "在侧栏编辑画布，并通过语义绘图工具读写 .drawio 文件。"
+      },
+      "summary": {
+        "en": "★ 23 · ↓ 2,778/30d · Updated today",
+        "zh": "★ 23 · ↓ 2,778/30天 · 今天更新"
+      }
+    },
+    "dsh-dream-skin": {
+      "description": {
+        "en": "Switch between shareable themes with wallpapers, accent colors and translucent surfaces.",
+        "zh": "切换可分享的主题，调整壁纸、强调色与半透明界面。"
+      },
+      "summary": {
+        "en": "★ 254 · ↓ 32,786/30d · Updated 2 days ago",
+        "zh": "★ 254 · ↓ 32,786/30天 · 2 天前更新"
+      }
+    },
+    "dsh-ears": {
+      "description": {
+        "en": "Dictate into the composer, then polish the text through a dsh model before sending",
+        "zh": "用语音在输入框写作，发送前可用 dsh 模型润色；支持本地 Whisper 与多家云端识别"
+      },
+      "summary": {
+        "en": "★ 23 · ↓ 2,870/30d · Updated today",
+        "zh": "★ 23 · ↓ 2,870/30天 · 今天更新"
+      }
+    },
+    "dsh-easyrewrite": {
+      "description": {
+        "en": "Recall and re-edit messages in the web conversation.",
+        "zh": "撤回并重新编辑网页会话中的消息。"
+      },
+      "summary": {
+        "en": "★ 125 · ↓ 3,955/30d · Updated 23 days ago",
+        "zh": "★ 125 · ↓ 3,955/30天 · 23 天前更新"
+      }
+    },
+    "dsh-echocat-skill-panel": {
+      "description": {
+        "en": "Inspect per-turn skill usage and manage installed skills and their upstream updates.",
+        "zh": "查看每轮技能调用，并管理已安装技能及其上游更新。"
+      },
+      "summary": {
+        "en": "★ 21 · ↓ 1,737/30d · Updated 23 days ago",
+        "zh": "★ 21 · ↓ 1,737/30天 · 23 天前更新"
+      }
+    },
+    "dsh-ego-browser": {
+      "description": {
+        "en": "Drive browser automation tools and watch or interact with the live browser view.",
+        "zh": "调用浏览器自动化工具，并查看或操作实时浏览器画面。"
+      },
+      "summary": {
+        "en": "★ 252 · ↓ 4,134/30d · Updated 19 days ago",
+        "zh": "★ 252 · ↓ 4,134/30天 · 19 天前更新"
+      }
+    },
+    "dsh-email": {
+      "description": {
+        "en": "Connect multiple mail accounts to send, receive, and search messages with attachments, drafts, and sending approvals.",
+        "zh": "连接多个邮箱，在会话中收发和搜索邮件，并管理附件、本地草稿与发信审批。"
+      },
+      "summary": {
+        "en": "★ 21 · ↓ 7,100/30d · Updated today",
+        "zh": "★ 21 · ↓ 7,100/30天 · 今天更新"
+      }
+    },
+    "dsh-embedded-workbench": {
+      "description": {
+        "en": "Use C/C++ firmware skills covering RTOS, interrupts, storage, debugging and architecture.",
+        "zh": "使用涵盖实时系统、中断、存储、调试和架构的 C/C++ 固件开发技能。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 2,945/30d · Updated today",
+        "zh": "★ 20 · ↓ 2,945/30天 · 今天更新"
+      }
+    },
+    "dsh-emoji": {
+      "description": {
+        "en": "Tiny semantic inline emoji for DSH Agent responses",
+        "zh": "为 DSH Agent 回复添加贴合语义的微型行内表情"
+      },
+      "summary": {
+        "en": "★ 48 · ↓ 2,618/30d · Updated 18 days ago",
+        "zh": "★ 48 · ↓ 2,618/30天 · 18 天前更新"
+      }
+    },
+    "dsh-file-review": {
+      "description": {
+        "en": "Review DeepSeek Harness file changes in native sidebar tabs",
+        "zh": "在原生侧栏标签页中审阅工作区文件变更。"
+      },
+      "summary": {
+        "en": "★ 43 · ↓ 3,541/30d · Updated today",
+        "zh": "★ 43 · ↓ 3,541/30天 · 今天更新"
+      }
+    },
+    "dsh-file-upload": {
+      "description": {
+        "en": "DeepSeek Harness dual-face plugin: Codex-style file references (@path), fully bundled document→Markdown (MarkItDown engine, 20+ formats), mature image handling (read_image for multimodal routes, automatic vision descriptions for text-only models), read_document tool.",
+        "zh": "上传和引用文件，将文档转为 Markdown，并提供图片与文档读取工具。"
+      },
+      "summary": {
+        "en": "★ 26 · ↓ 3,397/30d · Updated 11 days ago",
+        "zh": "★ 26 · ↓ 3,397/30天 · 11 天前更新"
+      }
+    },
+    "dsh-flowglass": {
+      "description": {
+        "en": "Visualize session execution, tool calls and concurrent agent branches.",
+        "zh": "可视化会话执行过程、工具调用与并发 Agent 分支。"
+      },
+      "summary": {
+        "en": "★ 24 · ↓ 3,054/30d · Updated 18 days ago",
+        "zh": "★ 24 · ↓ 3,054/30天 · 18 天前更新"
+      }
+    },
+    "dsh-fonttune": {
+      "description": {
+        "en": "Adjust conversation, interface, and code typography and save, import, or export presets.",
+        "zh": "分别调整对话、界面和代码的字体样式，并保存、导入和导出排版预设。"
+      },
+      "summary": {
+        "en": "★ 7 · ↓ 4,081/30d · Updated today",
+        "zh": "★ 7 · ↓ 4,081/30天 · 今天更新"
+      }
+    },
+    "dsh-free-search": {
+      "description": {
+        "en": "Search and fetch pages through multiple engines with configurable routing, filters and fallbacks.",
+        "zh": "使用多个引擎搜索和抓取网页，自定义路由、筛选与失败切换。"
+      },
+      "summary": {
+        "en": "★ 474 · ↓ 47,617/30d · Updated today",
+        "zh": "★ 474 · ↓ 47,617/30天 · 今天更新"
+      }
+    },
+    "dsh-fund-research": {
+      "description": {
+        "en": "Collect public fund data and inspect holdings, manager history and performance metrics.",
+        "zh": "整理公开基金数据，查看持仓、基金经理履历与业绩指标。"
+      },
+      "summary": {
+        "en": "★ 67 · ↓ 3,698/30d · Updated 8 days ago",
+        "zh": "★ 67 · ↓ 3,698/30天 · 8 天前更新"
+      }
+    },
+    "dsh-game-material-master": {
+      "description": {
+        "en": "Generate game sprites, animation frames, maps, images and music through dedicated tools.",
+        "zh": "通过专用工具生成游戏精灵、动画帧、地图、图片与音乐。"
+      },
+      "summary": {
+        "en": "★ 55 · ↓ 2,698/30d · Updated today",
+        "zh": "★ 55 · ↓ 2,698/30天 · 今天更新"
+      }
+    },
+    "dsh-genui": {
+      "description": {
+        "en": "GenUI for DeepSeek Harness: interactive charts, forms, calculators, dashboards, and mini apps rendered inline in assistant replies, with actions that flow back to the model.",
+        "zh": "在回复中渲染图表、表单、计算器与小应用，并将操作反馈给模型。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 4,630/30d · Updated 9 days ago",
+        "zh": "★ 20 · ↓ 4,630/30天 · 9 天前更新"
+      }
+    },
+    "dsh-gitbash-shell": {
+      "description": {
+        "en": "Run a dedicated Git Bash executor and terminal integration on Windows.",
+        "zh": "在 Windows 上使用独立 Git Bash 命令执行器与终端集成。"
+      },
+      "summary": {
+        "en": "★ 38 · ↓ 12,625/30d · Updated today",
+        "zh": "★ 38 · ↓ 12,625/30天 · 今天更新"
+      }
+    },
+    "dsh-graph": {
+      "description": {
+        "en": "A DeepSeek Harness plugin for graph-based goal management and kanban visualization.",
+        "zh": "通过关系图与看板管理 Agent 目标。"
+      },
+      "summary": {
+        "en": "★ 19 · ↓ 3,668/30d · Updated 2 days ago",
+        "zh": "★ 19 · ↓ 3,668/30天 · 2 天前更新"
+      }
+    },
+    "dsh-harmony": {
+      "description": {
+        "en": "A library for patching, replacing and decorating DeepSeek Harness plugins during runtime",
+        "zh": "在运行时修补、替换或装饰 DSH 插件。"
+      },
+      "summary": {
+        "en": "★ 19 · ↓ 6,121/30d · Updated 2 days ago",
+        "zh": "★ 19 · ↓ 6,121/30天 · 2 天前更新"
+      }
+    },
+    "dsh-hdc-bridge": {
+      "description": {
+        "en": "DSH-native HarmonyOS dev assistant: hdc device debugging, an input-row development panel, official-first versioned API docs, DevEco compile assistance, and standalone Command Line Tools support.",
+        "zh": "接入 hdc 设备调试、版本化 API 文档和 DevEco 编译辅助。"
+      },
+      "summary": {
+        "en": "★ 19 · ↓ 1,665/30d · Updated 6 days ago",
+        "zh": "★ 19 · ↓ 1,665/30天 · 6 天前更新"
+      }
+    },
+    "dsh-im-companion": {
+      "description": {
+        "en": "Inspect assistant presence across workspaces and move assistants between workspaces.",
+        "zh": "查看各工作区助手的在线状态，并调整工作区归属。"
+      },
+      "summary": {
+        "en": "★ 29 · ↓ 3,950/30d · Updated today",
+        "zh": "★ 29 · ↓ 3,950/30天 · 今天更新"
+      }
+    },
+    "dsh-image-gen": {
+      "description": {
+        "en": "Connect image-generation providers and local ComfyUI to the conversation.",
+        "zh": "在会话中接入多家图片生成供应商与本地 ComfyUI。"
+      },
+      "summary": {
+        "en": "★ 625 · ↓ 24,370/30d · Updated 2 days ago",
+        "zh": "★ 625 · ↓ 24,370/30天 · 2 天前更新"
+      }
+    },
+    "dsh-image-viewer": {
+      "description": {
+        "en": "Zoom, browse, download, and annotate image regions in the DSH conversation viewer.",
+        "zh": "为会话图片提供缩放、多图浏览、原图下载和区域标注。"
+      },
+      "summary": {
+        "en": "★ 2 · ↓ 7,996/30d · Updated today",
+        "zh": "★ 2 · ↓ 7,996/30天 · 今天更新"
+      }
+    },
+    "dsh-industry-research": {
+      "description": {
+        "en": "Collect public-source industry and company evidence, map industry chains and draft research reports.",
+        "zh": "整理公开行业与公司证据，绘制产业链并编写研究报告。"
+      },
+      "summary": {
+        "en": "★ 214 · ↓ 4,205/30d · Updated 8 days ago",
+        "zh": "★ 214 · ↓ 4,205/30天 · 8 天前更新"
+      }
+    },
+    "dsh-jev-interceptor": {
+      "description": {
+        "en": "Millisecond System-1 judgement for every tool call in DeepSeek Harness: Jev-powered risk classification and evidence-gated auto-approval, fail-closed by construction.",
+        "zh": "使用 Jev 分类工具调用风险，并基于证据处理自动审批。"
+      },
+      "summary": {
+        "en": "★ 30 · ↓ 2,117/30d · Updated 1 day ago",
+        "zh": "★ 30 · ↓ 2,117/30天 · 1 天前更新"
+      }
+    },
+    "dsh-joi-channel-theme": {
+      "description": {
+        "en": "Apply the Joi Flowers or Joi Library fan theme to the web interface.",
+        "zh": "为网页界面应用 Joi Flowers 或 Joi Library 同人主题。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 2,374/30d · Updated 6 days ago",
+        "zh": "★ 20 · ↓ 2,374/30天 · 6 天前更新"
+      }
+    },
+    "dsh-kimi-subscription": {
+      "description": {
+        "en": "Connect Kimi Code subscription models using API keys or device sign-in, with web search and quota displays.",
+        "zh": "接入 Kimi Code 订阅模型，支持设备登录、网页搜索和额度查询。"
+      },
+      "summary": {
+        "en": "★ 3 · ↓ 5,255/30d · Updated today",
+        "zh": "★ 3 · ↓ 5,255/30天 · 今天更新"
+      }
+    },
+    "dsh-kimino-theme": {
+      "description": {
+        "en": "Kimi no Na wa (Your Name) theme for DeepSeek Harness Web GUI — dynamic Cordis plugin source (host + client halves) plus an installable dsh bundle, with wallpaper/logo assets",
+        "zh": "为网页界面添加《你的名字》主题与壁纸素材。"
+      },
+      "summary": {
+        "en": "★ 42 · ↓ 2,460/30d · Updated 12 days ago",
+        "zh": "★ 42 · ↓ 2,460/30天 · 12 天前更新"
+      }
+    },
+    "dsh-knit": {
+      "description": {
+        "en": "Context retrieval for DeepSeek Harness: ranks docs, code and media by relevance into a sidebar Context Pack. Lexical and fully local by default. Hybrid is off until you configure a provider; it sends your query and file titles/summaries, not bodies.",
+        "zh": "检索并排序文档、代码与媒体，在侧栏组织上下文资料。"
+      },
+      "summary": {
+        "en": "★ 54 · ↓ 4,346/30d · Updated 4 days ago",
+        "zh": "★ 54 · ↓ 4,346/30天 · 4 天前更新"
+      }
+    },
+    "dsh-knowledge": {
+      "description": {
+        "en": "Cherry Studio-style knowledge base system for DeepSeek Harness (DSH): bases, documents, chunking, embeddings (OpenAI-compatible / Ollama / local / lexical fallback), retrieval, model-facing tools, and a browser management panel",
+        "zh": "管理文档、分块与向量检索，并通过工具和面板查询知识库。"
+      },
+      "summary": {
+        "en": "★ 77 · ↓ 2,979/30d · Updated 7 days ago",
+        "zh": "★ 77 · ↓ 2,979/30天 · 7 天前更新"
+      }
+    },
+    "dsh-lark-link": {
+      "description": {
+        "en": "High-reliability Feishu/Lark bridge for DeepSeek Harness — QR one-click auth, multi-mode agents, card-based commands, zero-loss outbox, media in/out, session logs, reusable DSH Web GUI",
+        "zh": "通过扫码登录、卡片命令与媒体消息连接飞书和 DSH。"
+      },
+      "summary": {
+        "en": "★ 41 · ↓ 2,221/30d · Updated today",
+        "zh": "★ 41 · ↓ 2,221/30天 · 今天更新"
+      }
+    },
+    "dsh-library": {
+      "description": {
+        "en": "Index local documents for hybrid search, context retrieval and citation checks.",
+        "zh": "为本地文档建立索引，进行混合检索、上下文召回与引用检查。"
+      },
+      "summary": {
+        "en": "★ 21 · ↓ 4,386/30d · Updated 8 days ago",
+        "zh": "★ 21 · ↓ 4,386/30天 · 8 天前更新"
+      }
+    },
+    "dsh-live2d-pets": {
+      "description": {
+        "en": "Live2D pet plugin for DeepSeek Harness: a characterful agent companion — follows session state, switchable personas, bring-your-own models",
+        "zh": "添加随会话状态变化的 Live2D 角色，支持人设与自有模型。"
+      },
+      "summary": {
+        "en": "★ 31 · ↓ 2,005/30d · Updated 24 days ago",
+        "zh": "★ 31 · ↓ 2,005/30天 · 24 天前更新"
+      }
+    },
+    "dsh-llm-codex": {
+      "description": {
+        "en": "Connect ChatGPT subscription models using locally stored Codex CLI sign-in credentials.",
+        "zh": "复用本机 Codex CLI 登录凭据，为 DSH 接入 ChatGPT 订阅模型。"
+      },
+      "summary": {
+        "en": "★ 21 · ↓ 264/30d · Updated 62 days ago",
+        "zh": "★ 21 · ↓ 264/30天 · 62 天前更新"
+      }
+    },
+    "dsh-llm-verifier": {
+      "description": {
+        "en": "Configurable DSH-native LLM verifier with a Web settings page",
+        "zh": "通过网页设置配置 DSH 原生模型验证器。"
+      },
+      "summary": {
+        "en": "★ 19 · ↓ 4,398/30d · Updated 1 day ago",
+        "zh": "★ 19 · ↓ 4,398/30天 · 1 天前更新"
+      }
+    },
+    "dsh-local-ai": {
+      "description": {
+        "en": "Local-model (Ollama) integration for DeepSeek Harness: discover, pull, remove, and inspect local models, route requests to them by task type or keyword with automatic fallback to the cloud, and get a one-shot status overview via /ollama.",
+        "zh": "发现和管理本地模型，按任务路由调用，并可回退到云端模型。"
+      },
+      "summary": {
+        "en": "★ 21 · ↓ 4,137/30d · Updated 8 days ago",
+        "zh": "★ 21 · ↓ 4,137/30天 · 8 天前更新"
+      }
+    },
+    "dsh-lsp-actions": {
+      "description": {
+        "en": "LSP action surface for DeepSeek Harness: diagnostics, formatting, completion, code actions, symbols, signature help, inlay hints, and rename tools over language servers, plus the editor action protocol (lsp.actions.*) that makes the plugin the IDE integration backend",
+        "zh": "通过语言服务器执行诊断、格式化、补全、符号查询和重命名。"
+      },
+      "summary": {
+        "en": "★ 29 · ↓ 5,646/30d · Updated 8 days ago",
+        "zh": "★ 29 · ↓ 5,646/30天 · 8 天前更新"
+      }
+    },
+    "dsh-maze": {
+      "description": {
+        "en": "The execution maze for DeepSeek Harness agents: see how the agent actually worked — main path, detours and backtracks on one timeline, with data tracks, deterministic analysis, and multi-session comparison",
+        "zh": "在时间线上查看任务路径、绕行与回退，并比较多个会话。"
+      },
+      "summary": {
+        "en": "★ 87 · ↓ 1,899/30d · Updated 10 days ago",
+        "zh": "★ 87 · ↓ 1,899/30天 · 10 天前更新"
+      }
+    },
+    "dsh-mcp": {
+      "description": {
+        "en": "Manage MCP servers visually and discover or load tools on demand.",
+        "zh": "可视化管理 MCP 服务器，并按需检索和加载工具。"
+      },
+      "summary": {
+        "en": "★ 23 · ↓ 1,290/30d · Updated 5 days ago",
+        "zh": "★ 23 · ↓ 1,290/30天 · 5 天前更新"
+      }
+    },
+    "dsh-mcp-connector": {
+      "description": {
+        "en": "DeepSeek Harness MCP Connector: connect servers, search tools across active connections, and troubleshoot discovery. Includes a continuously updated catalog; supports OAuth 2.0 PKCE, API keys, Streamable HTTP/stdio, and mcpServers JSON import.",
+        "zh": "连接 MCP 服务器，检索活跃连接中的工具并诊断发现问题。"
+      },
+      "summary": {
+        "en": "★ 56 · ↓ 22,827/30d · Updated 1 day ago",
+        "zh": "★ 56 · ↓ 22,827/30天 · 1 天前更新"
+      }
+    },
+    "dsh-mcp-panel": {
+      "description": {
+        "en": "Manage MCP servers, inspect health and try tool pipelines from the interface or command.",
+        "zh": "通过界面或命令管理 MCP 服务器、检查状态并试运行工具管道。"
+      },
+      "summary": {
+        "en": "★ 76 · ↓ 9,674/30d · Updated 8 days ago",
+        "zh": "★ 76 · ↓ 9,674/30天 · 8 天前更新"
+      }
+    },
+    "dsh-mcp-studio": {
+      "description": {
+        "en": "Manage MCP servers and skills from a panel in the DSH sidebar; embeds the plugin market when dshmarket is installed.",
+        "zh": "在 DSH 侧边栏面板里管理 MCP 服务器与技能；装了 dshmarket 时内嵌插件市场。"
+      },
+      "summary": {
+        "en": "★ 26 · ↓ 1,675/30d · Updated 14 days ago",
+        "zh": "★ 26 · ↓ 1,675/30天 · 14 天前更新"
+      }
+    },
+    "dsh-meme": {
+      "description": {
+        "en": "One-click meme picker in the composer, plus a searchable multi-pack library: install packs from the marketplace, filter by mood or keyword, and let the model learn new images.",
+        "zh": "输入框一键斗图：多图库开关、情绪与关键词搜图、AI 学图；图库能从市场一键安装，也能导入/导出 ZIP 分享。"
+      },
+      "summary": {
+        "en": "★ 222 · ↓ 10,877/30d · Updated 5 days ago",
+        "zh": "★ 222 · ↓ 10,877/30天 · 5 天前更新"
+      }
+    },
+    "dsh-memento": {
+      "description": {
+        "en": "Keep layered cross-session memories in local SQLite with retrieval, write approvals, and context injection.",
+        "zh": "以本地 SQLite 保存分层跨会话记忆，提供检索、写入审批和上下文注入。"
+      },
+      "summary": {
+        "en": "★ 136 · ↓ 5,742/30d · Updated 5 days ago",
+        "zh": "★ 136 · ↓ 5,742/30天 · 5 天前更新"
+      }
+    },
+    "dsh-memgas": {
+      "description": {
+        "en": "Long-term memory for DeepSeek Harness: multi-channel retrieval and an evolving memory store.",
+        "zh": "通过多通道检索维护和召回长期记忆。"
+      },
+      "summary": {
+        "en": "★ 25 · ↓ 335/30d · Updated 42 days ago",
+        "zh": "★ 25 · ↓ 335/30天 · 42 天前更新"
+      }
+    },
+    "dsh-memoir": {
+      "description": {
+        "en": "DeepSeek Harness (DSH) local-first cross-session project memory: bounded cache-friendly Hot Memory, BM25 recall/cache, provenance, lifecycle and bilingual Web GUI; no embeddings, external service or bundled runtime dependencies.",
+        "zh": "用本地热记忆、BM25 检索与来源记录保存跨会话项目知识。"
+      },
+      "summary": {
+        "en": "★ 36 · ↓ 3,949/30d · Updated 8 days ago",
+        "zh": "★ 36 · ↓ 3,949/30天 · 8 天前更新"
+      }
+    },
+    "dsh-mnemon": {
+      "description": {
+        "en": "Composable memory with pluggable sources and strategies for DeepSeek Harness.",
+        "zh": "为 DeepSeek Harness 提供可组合记忆、可插拔来源与记忆策略。"
+      },
+      "summary": {
+        "en": "★ 579 · ↓ 45,724/30d · Updated today",
+        "zh": "★ 579 · ↓ 45,724/30天 · 今天更新"
+      }
+    },
+    "dsh-model-context-catalog": {
+      "description": {
+        "en": "One-click context window matching and selective bulk configuration for DeepSeek Harness models, with source references and manual management.",
+        "zh": "按参考来源匹配模型上下文窗口，并选择性批量配置。"
+      },
+      "summary": {
+        "en": "★ 34 · ↓ 1,832/30d · Updated 6 days ago",
+        "zh": "★ 34 · ↓ 1,832/30天 · 6 天前更新"
+      }
+    },
+    "dsh-model-fusion": {
+      "description": {
+        "en": "Fusion for DeepSeek Harness: one model entry backed by a frontier Lead that reads, briefs and reviews, and a much cheaper Sidekick that writes the code.",
+        "zh": "让主模型负责阅读、简报与复核，由副模型承担代码编写。"
+      },
+      "summary": {
+        "en": "★ 66 · ↓ 895/30d · Updated 4 days ago",
+        "zh": "★ 66 · ↓ 895/30天 · 4 天前更新"
+      }
+    },
+    "dsh-motion-ui": {
+      "description": {
+        "en": "Readable conversational UI, interactive HTML/SVG, editable motion and local MP4 production for DeepSeek Harness.",
+        "zh": "提供可读会话界面、交互 HTML/SVG、动画编辑与本机视频制作。"
+      },
+      "summary": {
+        "en": "★ 27 · ↓ 1,292/30d · Updated today",
+        "zh": "★ 27 · ↓ 1,292/30天 · 今天更新"
+      }
+    },
+    "dsh-music-player": {
+      "description": {
+        "en": "Play music alongside coding conversations.",
+        "zh": "在编程会话中使用音乐播放功能。"
+      },
+      "summary": {
+        "en": "★ 18 · ↓ 2,204/30d · Updated 27 days ago",
+        "zh": "★ 18 · ↓ 2,204/30天 · 27 天前更新"
+      }
+    },
+    "dsh-notify-me": {
+      "description": {
+        "en": "Show desktop or webhook notifications for task completion, questions and approvals.",
+        "zh": "为任务完成、提问和审批发送桌面或 Webhook 通知。"
+      },
+      "summary": {
+        "en": "★ 37 · ↓ 6,645/30d · Updated 2 days ago",
+        "zh": "★ 37 · ↓ 6,645/30天 · 2 天前更新"
+      }
+    },
+    "dsh-novel-forge": {
+      "description": {
+        "en": "Manage chapter drafting, setting constraints, repetition checks and whole-book reviews.",
+        "zh": "管理章节写作、设定约束、重复检查、批量起草与全书复核。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 1,604/30d · Updated 1 day ago",
+        "zh": "★ 20 · ↓ 1,604/30天 · 1 天前更新"
+      }
+    },
+    "dsh-novel-writer": {
+      "description": {
+        "en": "Manage chapter references, narrative continuity, revision checks and writing materials.",
+        "zh": "管理章节参考、叙事连贯性、改稿检查与创作素材。"
+      },
+      "summary": {
+        "en": "★ 23 · ↓ 4,668/30d · Updated 2 days ago",
+        "zh": "★ 23 · ↓ 4,668/30天 · 2 天前更新"
+      }
+    },
+    "dsh-obsidian": {
+      "description": {
+        "en": "Connect DeepSeek Harness (dsh) to a local Obsidian vault: search, read, write, move, and trash notes.",
+        "zh": "搜索、读取、编辑、移动和删除本机 Obsidian 笔记。"
+      },
+      "summary": {
+        "en": "★ 29 · ↓ 2,470/30d · Updated 18 days ago",
+        "zh": "★ 29 · ↓ 2,470/30天 · 18 天前更新"
+      }
+    },
+    "dsh-office-tools": {
+      "description": {
+        "en": "Create and read documents, spreadsheets, and presentations in the session workspace, and update documents and spreadsheets.",
+        "zh": "在会话工作区中创建和读取文档、表格与演示文稿，并更新文档和表格。"
+      },
+      "summary": {
+        "en": "★ 32 · ↓ 10,378/30d · Updated 5 days ago",
+        "zh": "★ 32 · ↓ 10,378/30天 · 5 天前更新"
+      }
+    },
+    "dsh-ontology": {
+      "description": {
+        "en": "A typed, inference-capable ontology (TBox + ABox) plugin for DeepSeek Harness — durable domain knowledge the agent can define, assert against, and query under schema constraints.",
+        "zh": "定义带类型与约束的领域知识，并进行断言、查询和推理。"
+      },
+      "summary": {
+        "en": "★ 19 · ↓ 437/30d · Updated 2 days ago",
+        "zh": "★ 19 · ↓ 437/30天 · 2 天前更新"
+      }
+    },
+    "dsh-opencode-go": {
+      "description": {
+        "en": "Manage OpenCode Go models and multiple accounts with subscription quota displays in DSH.",
+        "zh": "在 DSH 中管理 OpenCode Go 模型与多个账号，并显示订阅额度。"
+      },
+      "summary": {
+        "en": "★ 152 · ↓ 8,334/30d · Updated 2 days ago",
+        "zh": "★ 152 · ↓ 8,334/30天 · 2 天前更新"
+      }
+    },
+    "dsh-opencode-palette": {
+      "description": {
+        "en": "Apply a collection of persistent color themes to the web interface.",
+        "zh": "为网页界面应用多套可持久保存的主题配色。"
+      },
+      "summary": {
+        "en": "★ 66 · ↓ 7,730/30d · Updated today",
+        "zh": "★ 66 · ↓ 7,730/30天 · 今天更新"
+      }
+    },
+    "dsh-origin-plugin": {
+      "description": {
+        "en": "Control OriginLab data import, scientific plot templates and figure edits through MCP tools.",
+        "zh": "通过 MCP 工具操作 OriginLab 数据导入、科研图模板与图表编辑。"
+      },
+      "summary": {
+        "en": "★ 23 · ↓ 3,502/30d · Updated 30 days ago",
+        "zh": "★ 23 · ↓ 3,502/30天 · 30 天前更新"
+      }
+    },
+    "dsh-passwords": {
+      "description": {
+        "en": "dsh-passwords: a server-grade gateway that turns DeepSeek Harness into a multi-tenant platform — remote access + automatic HTTPS, per-subuser permissions & quotas, sandbox enforcement, first-run setup, SQLite auth with at-rest encryption, rate-limit and audit log (bilingual zh/en UI)",
+        "zh": "为远程访问配置登录、用户权限、配额、HTTPS 与审计日志。"
+      },
+      "summary": {
+        "en": "★ 74 · ↓ 4,655/30d · Updated 8 days ago",
+        "zh": "★ 74 · ↓ 4,655/30天 · 8 天前更新"
+      }
+    },
+    "dsh-pause": {
+      "description": {
+        "en": "Pause before the next model request so the user can add instructions and continue manually.",
+        "zh": "在下一次模型请求前暂停，允许用户补充文字并手动继续。"
+      },
+      "summary": {
+        "en": "★ 22 · ↓ 1,029/30d · Updated today",
+        "zh": "★ 22 · ↓ 1,029/30天 · 今天更新"
+      }
+    },
+    "dsh-pentester": {
+      "description": {
+        "en": "Minimal Root-Orchestrator PTES pentesting plugin for DeepSeek Harness",
+        "zh": "为 DSH 提供按 PTES 流程组织的测试编排预设。"
+      },
+      "summary": {
+        "en": "★ 54 · ↓ 3,691/30d · Updated 4 days ago",
+        "zh": "★ 54 · ↓ 3,691/30天 · 4 天前更新"
+      }
+    },
+    "dsh-permission-rules": {
+      "description": {
+        "en": "Define allow, deny and ask rules for tools, arguments, workspace paths and network targets.",
+        "zh": "按工具、参数、工作区路径与网络目标配置允许、拒绝和询问规则。"
+      },
+      "summary": {
+        "en": "★ 126 · ↓ 6,780/30d · Updated 8 days ago",
+        "zh": "★ 126 · ↓ 6,780/30天 · 8 天前更新"
+      }
+    },
+    "dsh-persona-dafeiyu": {
+      "description": {
+        "en": "Import, switch and manage bundled or custom conversation personas.",
+        "zh": "导入、切换和管理内置或自定义会话人设。"
+      },
+      "summary": {
+        "en": "★ 39 · ↓ 1,291/30d · Updated 5 days ago",
+        "zh": "★ 39 · ↓ 1,291/30天 · 5 天前更新"
+      }
+    },
+    "dsh-personal-center": {
+      "description": {
+        "en": "Inspect token usage, costs and session state, and configure personal preferences.",
+        "zh": "集中查看 Token 用量、费用、会话状态并调整个人偏好。"
+      },
+      "summary": {
+        "en": "★ 118 · ↓ 1,591/30d · Updated 20 days ago",
+        "zh": "★ 118 · ↓ 1,591/30天 · 20 天前更新"
+      }
+    },
+    "dsh-pet-live2d": {
+      "description": {
+        "en": "A Live2D pet docked in the DSH interface: she follows the pointer, reacts to clicks and changes expressions with each session phase, with configurable motions, expressions and lines.",
+        "zh": "在 DSH 界面里挂一只 Live2D 宠物：会跟着鼠标看、点一下有反应、按会话相位换表情，动作 / 表情 / 台词都能配。"
+      },
+      "summary": {
+        "en": "★ 42 · ↓ 6,710/30d · Updated 2 days ago",
+        "zh": "★ 42 · ↓ 6,710/30天 · 2 天前更新"
+      }
+    },
+    "dsh-pet-remielle": {
+      "description": {
+        "en": "Show session events through a sticker companion, status bubbles and a desktop window.",
+        "zh": "用贴纸角色、状态气泡与桌面浮窗反映会话事件。"
+      },
+      "summary": {
+        "en": "★ 54 · ↓ 3,094/30d · Updated 7 days ago",
+        "zh": "★ 54 · ↓ 3,094/30天 · 7 天前更新"
+      }
+    },
+    "dsh-plugin": {
+      "description": {
+        "en": "Browse, search and install community plugins inside DSH.",
+        "zh": "在 DSH 中浏览、搜索并安装社区插件。"
+      },
+      "summary": {
+        "en": "★ 252 · ↓ 21,974/30d · Updated today",
+        "zh": "★ 252 · ↓ 21,974/30天 · 今天更新"
+      }
+    },
+    "dsh-plugin-bridge": {
+      "description": {
+        "en": "Previewable cross-preset session migration for DeepSeek Harness with bounded, fixed-schema handoffs",
+        "zh": "预览并生成结构化交接资料，在不同预设之间迁移会话。"
+      },
+      "summary": {
+        "en": "★ 163 · ↓ 3,495/30d · Updated today",
+        "zh": "★ 163 · ↓ 3,495/30天 · 今天更新"
+      }
+    },
+    "dsh-plugin-garmin-connect": {
+      "description": {
+        "en": "A TypeScript-based Garmin Connect plugin and MCP server with secure browser-based MFA for DeepSeek Harness and other AI agents",
+        "zh": "通过插件与 MCP 服务连接 Garmin Connect 账户。"
+      },
+      "summary": {
+        "en": "★ 32 · ↓ 2,494/30d · Updated today",
+        "zh": "★ 32 · ↓ 2,494/30天 · 今天更新"
+      }
+    },
+    "dsh-plugin-guide": {
+      "description": {
+        "en": "DeepSeek Harness plugin-development knowledge base: official docs mirror, contract rules, migration guide, verified issue index, and the dsh-plugin-dev CLI.",
+        "zh": "DeepSeek Harness 插件开发知识库：官方文档副本、契约红线、迁移指南、源码核实的问题索引，以及 dsh-plugin-dev 命令行工具。"
+      },
+      "summary": {
+        "en": "★ 52 · ↓ 7,954/30d · Updated 4 days ago",
+        "zh": "★ 52 · ↓ 7,954/30天 · 4 天前更新"
+      }
+    },
+    "dsh-plugin-lookatstudy": {
+      "description": {
+        "en": "Turn any markdown, local folder, or GitHub learning repo into a guided course inside DeepSeek Harness: gated skill-tree progression, BKT mastery tracking, SM-2 spaced repetition.",
+        "zh": "将 Markdown、文件夹或学习仓库组织为带复习安排的课程。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 3,113/30d · Updated 11 days ago",
+        "zh": "★ 20 · ↓ 3,113/30天 · 11 天前更新"
+      }
+    },
+    "dsh-plugin-message-edit": {
+      "description": {
+        "en": "ChatGPT-style message editing for DeepSeek Harness: edit a past prompt to rewind and branch the conversation, switch versions with a counter under the bubble, and browse branches in a tree.",
+        "zh": "编辑历史提示词以回退和分支会话，并在树中浏览版本。"
+      },
+      "summary": {
+        "en": "★ 22 · ↓ 2,169/30d · Updated 12 days ago",
+        "zh": "★ 22 · ↓ 2,169/30天 · 12 天前更新"
+      }
+    },
+    "dsh-plugin-mobile-gateway": {
+      "description": {
+        "en": "Pair mobile devices and synchronize sessions and files over LAN or a Cloudflare tunnel.",
+        "zh": "配对移动设备，同步会话与文件，支持局域网和 Cloudflare 隧道。"
+      },
+      "summary": {
+        "en": "★ 85 · ↓ 3,672/30d · Updated today",
+        "zh": "★ 85 · ↓ 3,672/30天 · 今天更新"
+      }
+    },
+    "dsh-plugin-ramify": {
+      "description": {
+        "en": "Creative branching canvas plugin for DeepSeek Harness",
+        "zh": "在创意画布中分支和组织会话内容。"
+      },
+      "summary": {
+        "en": "★ 21 · ↓ 231/30d · Updated 17 days ago",
+        "zh": "★ 21 · ↓ 231/30天 · 17 天前更新"
+      }
+    },
+    "dsh-plugin-subagent-director": {
+      "description": {
+        "en": "Subagent Director: choose an LLM provider/model for each subagent (call args > role binding > plugin default > inherit parent) and plan main-agent/subagent responsibilities with role templates, plus a settings UI.",
+        "zh": "按调用参数、角色与默认策略为子 Agent 选择模型。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 3,497/30d · Updated today",
+        "zh": "★ 20 · ↓ 3,497/30天 · 今天更新"
+      }
+    },
+    "dsh-plugin-tether": {
+      "description": {
+        "en": "Mobile client for the DeepSeek Harness — use the dsh on your dev machine from your Android or iOS phone, remotely across networks, peer-to-peer over iroh with no server to set up (falls back to a relay that only sees ciphertext)",
+        "zh": "通过点对点或中继连接，从 Android 与 iOS 访问电脑上的 DSH。"
+      },
+      "summary": {
+        "en": "★ 61 · ↓ 2,651/30d · Updated 6 days ago",
+        "zh": "★ 61 · ↓ 2,651/30天 · 6 天前更新"
+      }
+    },
+    "dsh-plugin-wallpaper-engine": {
+      "description": {
+        "en": "Use local Wallpaper Engine scenes, web wallpapers and videos behind the DSH interface.",
+        "zh": "在 DSH 界面使用本机 Wallpaper Engine 场景、网页与视频壁纸。"
+      },
+      "summary": {
+        "en": "★ 1,519 · ↓ 51,433/30d · Updated 3 days ago",
+        "zh": "★ 1,519 · ↓ 51,433/30天 · 3 天前更新"
+      }
+    },
+    "dsh-plugin-yolo": {
+      "description": {
+        "en": "Personal assistant plugin for deepseek-harness that organizes commitments from conversations, tracks plans across sessions, and delivers low-interruption reminders.",
+        "zh": "从会话整理承诺与计划，跨会话追踪并提供提醒。"
+      },
+      "summary": {
+        "en": "★ 56 · ↓ 1,378/30d · Updated 37 days ago",
+        "zh": "★ 56 · ↓ 1,378/30天 · 37 天前更新"
+      }
+    },
+    "dsh-pocket": {
+      "description": {
+        "en": "Pair a phone with desktop DSH over LAN or a public connection to follow the same session.",
+        "zh": "通过局域网或公网将手机与电脑 DSH 配对，同步访问会话。"
+      },
+      "summary": {
+        "en": "★ 1,856 · ↓ 13,315/30d · Updated today",
+        "zh": "★ 1,856 · ↓ 13,315/30天 · 今天更新"
+      }
+    },
+    "dsh-popout-sidebar": {
+      "description": {
+        "en": "View artifacts in a sidebar or open the panel in a larger browser tab.",
+        "zh": "在侧栏查看产物，或将面板弹出为更大的浏览器标签页。"
+      },
+      "summary": {
+        "en": "★ 208 · ↓ 1,185/30d · Updated 58 days ago",
+        "zh": "★ 208 · ↓ 1,185/30天 · 58 天前更新"
+      }
+    },
+    "dsh-preset-enhance": {
+      "description": {
+        "en": "预设编辑、提示词注入与 DeepSeek 适配器配置",
+        "zh": "预设编辑、提示词注入与 DeepSeek 适配器配置"
+      },
+      "summary": {
+        "en": "★ 42 · ↓ 2,811/30d · Updated 17 days ago",
+        "zh": "★ 42 · ↓ 2,811/30天 · 17 天前更新"
+      }
+    },
+    "dsh-prompt": {
+      "description": {
+        "en": "Manage preset and custom prompt templates and insert them into the composer.",
+        "zh": "管理预设和自定义模板，一键插入当前输入框。"
+      },
+      "summary": {
+        "en": "★ 45 · ↓ 8,780/30d · Updated today",
+        "zh": "★ 45 · ↓ 8,780/30天 · 今天更新"
+      }
+    },
+    "dsh-qa": {
+      "description": {
+        "en": "dsh-qa QA Workbench: a local software testing workbench plugin for DeepSeek Harness. Project/iteration dual-mode, full-flow requirements / test cases / defects / milestones / reports, native QA preset, settings, release history, kanban and calendar.",
+        "zh": "管理需求、测试用例、缺陷、里程碑、报告与版本记录。"
+      },
+      "summary": {
+        "en": "★ 31 · ↓ 3,665/30d · Updated 18 days ago",
+        "zh": "★ 31 · ↓ 3,665/30天 · 18 天前更新"
+      }
+    },
+    "dsh-qa-skills": {
+      "description": {
+        "en": "DeepSeek Harness (dsh) plugin: 10 testing skills (requirement analysis, test strategy, case writing/review, E2E/API automation, exploratory, regression, bug analysis) + shared core knowledge base — a full QA pipeline as agent skills.",
+        "zh": "提供需求分析、测试策略、用例、自动化、探索与回归测试技能。"
+      },
+      "summary": {
+        "en": "★ 46 · ↓ 1,188/30d · Updated 51 days ago",
+        "zh": "★ 46 · ↓ 1,188/30天 · 51 天前更新"
+      }
+    },
+    "dsh-qoder-connect": {
+      "description": {
+        "en": "Connect domestic and international Qoder model services to DSH.",
+        "zh": "为 DSH 接入 Qoder 国内与国际模型服务。"
+      },
+      "summary": {
+        "en": "★ 32 · ↓ 2,818/30d · Updated today",
+        "zh": "★ 32 · ↓ 2,818/30天 · 今天更新"
+      }
+    },
+    "dsh-quick-toc": {
+      "description": {
+        "en": "Turn conversation Markdown headings into a searchable outline with previews and navigation.",
+        "zh": "把会话中的 Markdown 标题整理为可搜索大纲，支持预览与跳转。"
+      },
+      "summary": {
+        "en": "★ 1 · ↓ 5,548/30d · Updated 1 day ago",
+        "zh": "★ 1 · ↓ 5,548/30天 · 1 天前更新"
+      }
+    },
+    "dsh-read-url": {
+      "description": {
+        "en": "Read webpages and feeds with encoding detection, pagination and compact text output.",
+        "zh": "识别编码并读取网页与订阅源，处理分页，输出精简正文。"
+      },
+      "summary": {
+        "en": "★ 22 · ↓ 2,907/30d · Updated 14 days ago",
+        "zh": "★ 22 · ↓ 2,907/30天 · 14 天前更新"
+      }
+    },
+    "dsh-recall-plugin": {
+      "description": {
+        "en": "Restore the conversation and workspace before a sent message, then edit and resend it.",
+        "zh": "将会话和工作区恢复到消息发送前，再编辑并重发消息。"
+      },
+      "summary": {
+        "en": "★ 40 · ↓ 5,489/30d · Updated today",
+        "zh": "★ 40 · ↓ 5,489/30天 · 今天更新"
+      }
+    },
+    "dsh-recall-unread": {
+      "description": {
+        "en": "DeepSeek Harness plugin: recall sent-but-unread text messages before the model reads them.",
+        "zh": "在模型读取前撤回已发送但尚未处理的文字消息。"
+      },
+      "summary": {
+        "en": "★ 126 · ↓ 1,250/30d · Updated 15 days ago",
+        "zh": "★ 126 · ↓ 1,250/30天 · 15 天前更新"
+      }
+    },
+    "dsh-recommend": {
+      "description": {
+        "en": "Search and recommend plugins using a public scoring model and a settings-page ranking.",
+        "zh": "按公开评分模型检索和推荐插件，并在设置页展示排行。"
+      },
+      "summary": {
+        "en": "★ 22 · ↓ 955/30d · Updated 65 days ago",
+        "zh": "★ 22 · ↓ 955/30天 · 65 天前更新"
+      }
+    },
+    "dsh-remote": {
+      "description": {
+        "en": "Connect remote SSH workspaces with file operations, mirror sync, deployment and port forwarding.",
+        "zh": "连接 SSH 远程工作区，使用文件操作、镜像同步、部署与端口转发。"
+      },
+      "summary": {
+        "en": "★ 152 · ↓ 16,690/30d · Updated 2 days ago",
+        "zh": "★ 152 · ↓ 16,690/30天 · 2 天前更新"
+      }
+    },
+    "dsh-remote-mobile": {
+      "description": {
+        "en": "Provide remote access, QR sign-in and connection management over LAN or Tailscale.",
+        "zh": "通过局域网或 Tailscale 提供远程访问、扫码登录与连接管理。"
+      },
+      "summary": {
+        "en": "★ 28 · ↓ 2,316/30d · Updated today",
+        "zh": "★ 28 · ↓ 2,316/30天 · 今天更新"
+      }
+    },
+    "dsh-research-report": {
+      "description": {
+        "en": "Bind research claims to snapshots and export versioned reports with verification records.",
+        "zh": "将研究结论绑定到快照，导出带核验记录的版本化报告。"
+      },
+      "summary": {
+        "en": "★ 213 · ↓ 4,968/30d · Updated 8 days ago",
+        "zh": "★ 213 · ↓ 4,968/30天 · 8 天前更新"
+      }
+    },
+    "dsh-rewind-plugin": {
+      "description": {
+        "en": "Rewind to an earlier message, optionally restoring workspace files.",
+        "zh": "把对话回退到更早的消息，可选一并还原工作区文件。"
+      },
+      "summary": {
+        "en": "★ 142 · ↓ 25,972/30d · Updated 1 day ago",
+        "zh": "★ 142 · ↓ 25,972/30天 · 1 天前更新"
+      }
+    },
+    "dsh-router-laya": {
+      "description": {
+        "en": "Per-request tier routing on the Laya judge, plus an Auto tier chip in the composer",
+        "zh": "按请求判定模型档位，并在输入栏显示自动档位。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 1,373/30d · Updated 1 day ago",
+        "zh": "★ 20 · ↓ 1,373/30天 · 1 天前更新"
+      }
+    },
+    "dsh-secure-audit": {
+      "description": {
+        "en": "Inspect injection patterns, redaction rules and local configuration, and produce risk reports.",
+        "zh": "检查提示注入模式、脱敏规则与本机配置，并输出风险报告。"
+      },
+      "summary": {
+        "en": "★ 84 · ↓ 1,906/30d · Updated 6 days ago",
+        "zh": "★ 84 · ↓ 1,906/30天 · 6 天前更新"
+      }
+    },
+    "dsh-session-manager": {
+      "description": {
+        "en": "Move, archive and tag sessions in batches, and manage workspace visibility and preset migration.",
+        "zh": "批量移动、归档和标记会话，管理工作区显示与预设迁移。"
+      },
+      "summary": {
+        "en": "★ 53 · ↓ 12,115/30d · Updated today",
+        "zh": "★ 53 · ↓ 12,115/30天 · 今天更新"
+      }
+    },
+    "dsh-session-sync": {
+      "description": {
+        "en": "Cross-device sync for DeepSeek Harness sessions: a dedicated git mirror of the session store, append-only three-way merge with keep-both + fork conflict resolution, /sync command, sync_pull/sync_push/sync_status tools, and configurable auto push/pull",
+        "zh": "通过独立 Git 镜像同步会话，并处理合并与分支冲突。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 3,670/30d · Updated 8 days ago",
+        "zh": "★ 20 · ↓ 3,670/30天 · 8 天前更新"
+      }
+    },
+    "dsh-session-workbench": {
+      "description": {
+        "en": "Search session history, recall cited content and organize conversation views.",
+        "zh": "全文检索历史会话、引用召回内容，并管理会话视图。"
+      },
+      "summary": {
+        "en": "★ 50 · ↓ 1,434/30d · Updated 20 days ago",
+        "zh": "★ 50 · ↓ 1,434/30天 · 20 天前更新"
+      }
+    },
+    "dsh-sessions-manager": {
+      "description": {
+        "en": "Archive, restore, delete or move sessions between workspaces from one panel.",
+        "zh": "在统一面板归档、恢复、删除或跨工作区移动会话。"
+      },
+      "summary": {
+        "en": "★ 27 · ↓ 3,312/30d · Updated today",
+        "zh": "★ 27 · ↓ 3,312/30天 · 今天更新"
+      }
+    },
+    "dsh-share": {
+      "description": {
+        "en": "Share DSH Q&As or selected conversation groups as PNG or Markdown.",
+        "zh": "将 DSH 问答或选中的对话组分享为 PNG 图片或 Markdown"
+      },
+      "summary": {
+        "en": "★ 37 · ↓ 2,390/30d · Updated 8 days ago",
+        "zh": "★ 37 · ↓ 2,390/30天 · 8 天前更新"
+      }
+    },
+    "dsh-short-video-studio": {
+      "description": {
+        "en": "Create images and videos through ComfyUI-backed tools and a conversation-linked canvas.",
+        "zh": "通过 ComfyUI 工具与关联会话的画布制作图片和视频。"
+      },
+      "summary": {
+        "en": "★ 28 · ↓ 1,987/30d · Updated 8 days ago",
+        "zh": "★ 28 · ↓ 1,987/30天 · 8 天前更新"
+      }
+    },
+    "dsh-sidebar-qa": {
+      "description": {
+        "en": "DSH web plugin: select conversation text -> ask in a right-side panel -> a dedicated follow-up session (❓<topic>) in the same workspace, without interrupting the main conversation. Runs on DSH's own right sidebar, with no extra dependencies.",
+        "zh": "选择对话文字，在同一工作区的独立会话中继续追问。"
+      },
+      "summary": {
+        "en": "★ 52 · ↓ 2,431/30d · Updated 2 days ago",
+        "zh": "★ 52 · ↓ 2,431/30天 · 2 天前更新"
+      }
+    },
+    "dsh-skill-hub": {
+      "description": {
+        "en": "Browse and toggle skills, diagnose metadata problems, and import or track updates from repositories.",
+        "zh": "在设置页浏览和开关技能，检查格式问题，并从仓库导入及跟踪更新。"
+      },
+      "summary": {
+        "en": "★ 30 · ↓ 7,154/30d · Updated 1 day ago",
+        "zh": "★ 30 · ↓ 7,154/30天 · 1 天前更新"
+      }
+    },
+    "dsh-skill-mcp-panel": {
+      "description": {
+        "en": "dsh-skill-mcp-panel: manage skills and MCP servers from the DSH web sidebar plus the unified dsh-panel CLI.",
+        "zh": "通过网页侧栏与命令行统一管理技能和 MCP 服务器。"
+      },
+      "summary": {
+        "en": "★ 207 · ↓ 4,866/30d · Updated 17 days ago",
+        "zh": "★ 207 · ↓ 4,866/30天 · 17 天前更新"
+      }
+    },
+    "dsh-skill-picker": {
+      "description": {
+        "en": "DSH Web GUI skill picker: a button beside the composer opens a searchable list of installed skills; picking one inserts the official `/skill-name` gesture into the input box, so the skill loads with your message (WorkBuddy-style skill invocation for DeepSeek Harness).",
+        "zh": "搜索已安装技能，并将官方技能调用指令插入输入框。"
+      },
+      "summary": {
+        "en": "★ 35 · ↓ 4,980/30d · Updated 16 days ago",
+        "zh": "★ 35 · ↓ 4,980/30天 · 16 天前更新"
+      }
+    },
+    "dsh-skills-anywhere": {
+      "description": {
+        "en": "Discover skills from local directories and Git sources for on-demand loading through DSH or local MCP.",
+        "zh": "汇总本地与 Git 来源的技能，供 DSH 或本地 MCP 按需加载。"
+      },
+      "summary": {
+        "en": "★ 6 · ↓ 4,335/30d · Updated 8 days ago",
+        "zh": "★ 6 · ↓ 4,335/30天 · 8 天前更新"
+      }
+    },
+    "dsh-skin-market": {
+      "description": {
+        "en": "Native skin marketplace and lifecycle manager for DeepSeek Harness",
+        "zh": "浏览和管理 DSH 原生主题皮肤。"
+      },
+      "summary": {
+        "en": "★ 206 · ↓ 7,825/30d · Updated 1 day ago",
+        "zh": "★ 206 · ↓ 7,825/30天 · 1 天前更新"
+      }
+    },
+    "dsh-smooth-cursor": {
+      "description": {
+        "en": "Add a smoothly moving comet cursor to the chat composer with configurable trails, colors, and thickness.",
+        "zh": "为聊天输入框添加平滑移动的彗星光标，可调整拖尾、颜色与粗细。"
+      },
+      "summary": {
+        "en": "★ 3 · ↓ 1,149/30d · Updated 38 days ago",
+        "zh": "★ 3 · ↓ 1,149/30天 · 38 天前更新"
+      }
+    },
+    "dsh-smooth-stream": {
+      "description": {
+        "en": "Fluid streaming rendering and silky scrolling for DeepSeek Harness replies, including Markdown, code blocks, tables, and tool results.",
+        "zh": "调整 Markdown、代码、表格与工具结果的流式渲染和滚动。"
+      },
+      "summary": {
+        "en": "★ 83 · ↓ 4,289/30d · Updated 13 days ago",
+        "zh": "★ 83 · ↓ 4,289/30天 · 13 天前更新"
+      }
+    },
+    "dsh-ssh-ops": {
+      "description": {
+        "en": "Drive remote servers from the conversation: interactive terminal, SFTP file management, port forwarding and database management.",
+        "zh": "在对话中驱动远程服务器：交互式终端、SFTP 文件管理、端口转发与数据库管理。"
+      },
+      "summary": {
+        "en": "★ 39 · ↓ 4,500/30d · Updated 2 days ago",
+        "zh": "★ 39 · ↓ 4,500/30天 · 2 天前更新"
+      }
+    },
+    "dsh-status-rotator": {
+      "description": {
+        "en": "Turn the DSH Web status line into a 1317-phrase meme machine: phase-aware phrases, typewriter, rainbow gradient, danmaku and 14 theme packs, all editable from the settings page.",
+        "zh": "按运行阶段显示可编辑文案、主题与状态栏动画。"
+      },
+      "summary": {
+        "en": "★ 152 · ↓ 11,601/30d · Updated 1 day ago",
+        "zh": "★ 152 · ↓ 11,601/30天 · 1 天前更新"
+      }
+    },
+    "dsh-streamfold": {
+      "description": {
+        "en": "Keep current reasoning visible and fold older thinking and tool output into compact summaries.",
+        "zh": "展示当前思考，将较早的思考与工具输出折叠为简短摘要。"
+      },
+      "summary": {
+        "en": "★ 22 · ↓ 2,150/30d · Updated today",
+        "zh": "★ 22 · ↓ 2,150/30天 · 今天更新"
+      }
+    },
+    "dsh-superpowers": {
+      "description": {
+        "en": "Register Superpowers development skills and session guidance with the DSH skills and prompt services.",
+        "zh": "接入 Superpowers 开发技能，并向会话提示词添加使用引导。"
+      },
+      "summary": {
+        "en": "★ 10 · ↓ 708/30d · Updated 65 days ago",
+        "zh": "★ 10 · ↓ 708/30天 · 65 天前更新"
+      }
+    },
+    "dsh-tabbit": {
+      "description": {
+        "en": "Tabbit Browser bundle for DeepSeek Harness: a code-first tabbit_browser tool, browser-backed web_fetch, @tab composer mentions, a dedicated page-access permission, an environment preflight with background installer download, and a daily plugin update check.",
+        "zh": "操作 Tabbit 标签页，抓取网页，并在输入框引用浏览器内容。"
+      },
+      "summary": {
+        "en": "★ 110 · ↓ 1,882/30d · Updated 5 days ago",
+        "zh": "★ 110 · ↓ 1,882/30天 · 5 天前更新"
+      }
+    },
+    "dsh-taskboard": {
+      "description": {
+        "en": "Track project tasks and run them in sessions with optional per-task Git worktrees.",
+        "zh": "跟踪项目任务并在会话中执行，可为任务配置独立 Git 工作树。"
+      },
+      "summary": {
+        "en": "★ 65 · ↓ 6,544/30d · Updated 1 day ago",
+        "zh": "★ 65 · ↓ 6,544/30天 · 1 天前更新"
+      }
+    },
+    "dsh-tavern": {
+      "description": {
+        "en": "Manage character cards, worldbooks, presets, memory and plot options; some features require companion plugins.",
+        "zh": "管理角色卡、世界书、预设、记忆与剧情选项，部分功能需配套插件。"
+      },
+      "summary": {
+        "en": "★ 53 · ↓ 7,794/30d · Updated today",
+        "zh": "★ 53 · ↓ 7,794/30天 · 今天更新"
+      }
+    },
+    "dsh-theme-firefly": {
+      "description": {
+        "en": "Apply a Firefly character theme with wallpaper, colors and an opening animation.",
+        "zh": "应用流萤角色壁纸、主题配色与开场动画。"
+      },
+      "summary": {
+        "en": "★ 34 · ↓ 3,571/30d · Updated 51 days ago",
+        "zh": "★ 34 · ↓ 3,571/30天 · 51 天前更新"
+      }
+    },
+    "dsh-theme-mineradio": {
+      "description": {
+        "en": "Mineradio: a cinematic private-visual-radio glass theme for the Web surface — champagne glow, fluid or wallpaper backdrop, unified corners, and motion",
+        "zh": "为网页界面添加电台风格配色、玻璃表面、壁纸与动效。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 4,698/30d · Updated 5 days ago",
+        "zh": "★ 20 · ↓ 4,698/30天 · 5 天前更新"
+      }
+    },
+    "dsh-think-translate": {
+      "description": {
+        "en": "Display-layer translation for the DSH web app: thinking chain, task cards, and optional answer text, in 8 target languages (local Ollama / any OpenAI-compatible or Anthropic endpoint / Google / Bing, fail-open)",
+        "zh": "在显示层翻译思考、任务卡片及可选的回答文字。"
+      },
+      "summary": {
+        "en": "★ 40 · ↓ 2,797/30d · Updated today",
+        "zh": "★ 40 · ↓ 2,797/30天 · 今天更新"
+      }
+    },
+    "dsh-thoughtdag": {
+      "description": {
+        "en": "Turn the current session into an editable thought graph on an infinite canvas.",
+        "zh": "将当前会话整理为无限画布上的可编辑思维图。"
+      },
+      "summary": {
+        "en": "★ 652 · ↓ 6,861/30d · Updated 4 days ago",
+        "zh": "★ 652 · ↓ 6,861/30天 · 4 天前更新"
+      }
+    },
+    "dsh-tinyfish": {
+      "description": {
+        "en": "Connect native web search and fetch tools to TinyFish through direct or Monid access.",
+        "zh": "为网页搜索与抓取接入 TinyFish，支持直连或 Monid 通道。"
+      },
+      "summary": {
+        "en": "★ 1 · ↓ 5,185/30d · Updated today",
+        "zh": "★ 1 · ↓ 5,185/30天 · 今天更新"
+      }
+    },
+    "dsh-tinyfish-search": {
+      "description": {
+        "en": "TinyFish-backed web search provider for DeepSeek Harness (ctx.web). Seamlessly routes model web searches to the fast and privacy-friendly TinyFish Search API.",
+        "zh": "基于 TinyFish Search API 的 DeepSeek Harness 网络搜索提供方插件（接入 ctx.web 服务），为智能代理的内置网络搜索工具提供快速、安全、精准的实时联网检索能力。"
+      },
+      "summary": {
+        "en": "★ 26 · ↓ 3,291/30d · Updated today",
+        "zh": "★ 26 · ↓ 3,291/30天 · 今天更新"
+      }
+    },
+    "dsh-token-pet": {
+      "description": {
+        "en": "A bilingual floating pet for DeepSeek Harness with runtime status, context and lifetime token usage, trends, and optional completion sounds.",
+        "zh": "用浮动角色展示运行状态、上下文与累计 Token 用量。"
+      },
+      "summary": {
+        "en": "★ 56 · ↓ 3,103/30d · Updated 26 days ago",
+        "zh": "★ 56 · ↓ 3,103/30天 · 26 天前更新"
+      }
+    },
+    "dsh-toolbox-ui": {
+      "description": {
+        "en": "Responsive MCP management UI and skills manager for DeepSeek Harness Web — floating panel, JSON import, profile-backed Host Remote management, and a skill market with a hard license gate.",
+        "zh": "在浮动面板中管理 MCP、导入配置并浏览技能市场。"
+      },
+      "summary": {
+        "en": "★ 27 · ↓ 1,361/30d · Updated today",
+        "zh": "★ 27 · ↓ 1,361/30天 · 今天更新"
+      }
+    },
+    "dsh-ui-appearance": {
+      "description": {
+        "en": "Appearance customization plugin for DeepSeek Harness WebUI: theme palette, background image, transparency and blur over the --dsw-* token system",
+        "zh": "调整主题配色、背景图片、透明度与模糊。"
+      },
+      "summary": {
+        "en": "★ 23 · ↓ 6,098/30d · Updated 1 day ago",
+        "zh": "★ 23 · ↓ 6,098/30天 · 1 天前更新"
+      }
+    },
+    "dsh-ui-tweaks": {
+      "description": {
+        "en": "Adjust code typography, layout, branch indicators and conversation helpers from settings.",
+        "zh": "在设置面板调整代码字号、布局、分支显示与会话辅助功能。"
+      },
+      "summary": {
+        "en": "★ 17 · ↓ 4,179/30d · Updated 5 days ago",
+        "zh": "★ 17 · ↓ 4,179/30天 · 5 天前更新"
+      }
+    },
+    "dsh-undo-savepoint": {
+      "description": {
+        "en": "DSH undo/rollback system: snapshot config files on change, undo/redo the last action from the WebUI or by chat, and roll back broken plugin trees without reinstalling. Works even when DSH fails to boot (offline CLI + GUI).",
+        "zh": "为配置变更保存快照，撤销操作并恢复损坏的插件配置。"
+      },
+      "summary": {
+        "en": "★ 182 · ↓ 3,646/30d · Updated 14 days ago",
+        "zh": "★ 182 · ↓ 3,646/30天 · 14 天前更新"
+      }
+    },
+    "dsh-univer-office": {
+      "description": {
+        "en": "Create, edit and review spreadsheets, documents and slides in DSH, with Office import and export.",
+        "zh": "在 DSH 内创建、编辑和审阅表格、文档与演示稿，支持 Office 导入导出。"
+      },
+      "summary": {
+        "en": "★ 561 · ↓ 49,604/30d · Updated 10 days ago",
+        "zh": "★ 561 · ↓ 49,604/30天 · 10 天前更新"
+      }
+    },
+    "dsh-update-checker": {
+      "description": {
+        "en": "Auto-check DeepSeek Harness updates for both dsh web and the Desktop app, check third-party plugin updates, notify in the GUI, one-click update with backup/rollback and restart watchdog.",
+        "zh": "检查 DSH 和第三方插件更新，提供备份、回滚与重启流程。"
+      },
+      "summary": {
+        "en": "★ 19 · ↓ 8,224/30d · Updated 6 days ago",
+        "zh": "★ 19 · ↓ 8,224/30天 · 6 天前更新"
+      }
+    },
+    "dsh-usage-state": {
+      "description": {
+        "en": "Display the current model provider’s balance, subscription quotas, and reset times above the composer.",
+        "zh": "在输入框上方显示当前模型供应商的账户余额、套餐额度及重置时间。"
+      },
+      "summary": {
+        "en": "★ 0 · ↓ 2,554/30d · Updated today",
+        "zh": "★ 0 · ↓ 2,554/30天 · 今天更新"
+      }
+    },
+    "dsh-usage-statistics-panel": {
+      "description": {
+        "en": "Per-day token trend, activity heatmap, cache hit-rate curve, and per-model / per-provider breakdowns of session token usage.",
+        "zh": "按天展示 Token 用量趋势、活跃热力图、缓存命中率曲线，以及按模型 / 服务商的用量拆分。"
+      },
+      "summary": {
+        "en": "★ 25 · ↓ 3,047/30d · Updated 4 days ago",
+        "zh": "★ 25 · ↓ 3,047/30天 · 4 天前更新"
+      }
+    },
+    "dsh-vibe-math": {
+      "description": {
+        "en": "Use structured agent presets for mathematical exploration, solving and verification.",
+        "zh": "使用结构化 Agent 预设进行数学探索、求解与验证。"
+      },
+      "summary": {
+        "en": "★ 37 · ↓ 9,669/30d · Updated 12 days ago",
+        "zh": "★ 37 · ↓ 9,669/30天 · 12 天前更新"
+      }
+    },
+    "dsh-vision-router": {
+      "description": {
+        "en": "Route image questions to vision providers and expose OCR, grounding and pixel comparison tools.",
+        "zh": "将图片问题路由到视觉供应商，并提供 OCR、定位与像素比较工具。"
+      },
+      "summary": {
+        "en": "★ 1,153 · ↓ 33,003/30d · Updated 1 day ago",
+        "zh": "★ 1,153 · ↓ 33,003/30天 · 1 天前更新"
+      }
+    },
+    "dsh-voice-scribe": {
+      "description": {
+        "en": "Transcribe speech with local SenseVoice or optional services, with hotwords and text polishing.",
+        "zh": "使用本机 SenseVoice 或可选语音服务转录输入，支持热词与文字润色。"
+      },
+      "summary": {
+        "en": "★ 36 · ↓ 2,830/30d · Updated 6 days ago",
+        "zh": "★ 36 · ↓ 2,830/30天 · 6 天前更新"
+      }
+    },
+    "dsh-wallpaper_share": {
+      "description": {
+        "en": "Sync active Wallpaper Engine wallpapers(image/video/scence/app)to DeepSeek Harness Web UI as a customizable dynamic background.",
+        "zh": "将当前 Wallpaper Engine 壁纸同步为可调整的网页背景。"
+      },
+      "summary": {
+        "en": "★ 32 · ↓ 2,851/30d · Updated 5 days ago",
+        "zh": "★ 32 · ↓ 2,851/30天 · 5 天前更新"
+      }
+    },
+    "dsh-watcher": {
+      "description": {
+        "en": "Read-only DSH session insights and local model usage statistics",
+        "zh": "只读查看会话运行信息与本机模型用量统计。"
+      },
+      "summary": {
+        "en": "★ 118 · ↓ 3,321/30d · Updated 10 days ago",
+        "zh": "★ 118 · ↓ 3,321/30天 · 10 天前更新"
+      }
+    },
+    "dsh-web-fetch-enhanced": {
+      "description": {
+        "en": "Configurable User-Agent and non-public address allowlists for DeepSeek Harness web_fetch",
+        "zh": "配置网页抓取的 User-Agent 与非公网地址允许列表。"
+      },
+      "summary": {
+        "en": "★ 19 · ↓ 1,670/30d · Updated 8 days ago",
+        "zh": "★ 19 · ↓ 1,670/30天 · 8 天前更新"
+      }
+    },
+    "dsh-web-lan-access": {
+      "description": {
+        "en": "LAN / remote access support for the DeepSeek Harness Web UI: self-contained 0.0.0.0 binding, remote Host settings, automatic /api trust-fence widening, and an insecure-origin randomUUID polyfill.",
+        "zh": "为网页界面配置局域网绑定和远程宿主访问。"
+      },
+      "summary": {
+        "en": "★ 38 · ↓ 1,658/30d · Updated 38 days ago",
+        "zh": "★ 38 · ↓ 1,658/30天 · 38 天前更新"
+      }
+    },
+    "dsh-web-mobile": {
+      "description": {
+        "en": "Adapt the web interface for portrait screens and mobile devices.",
+        "zh": "为竖屏和移动设备调整网页界面布局。"
+      },
+      "summary": {
+        "en": "★ 140 · ↓ 8,109/30d · Updated 4 days ago",
+        "zh": "★ 140 · ↓ 8,109/30天 · 4 天前更新"
+      }
+    },
+    "dsh-wechat": {
+      "description": {
+        "en": "Bridge WeChat (iLink bot) to DeepSeek Harness (DSH)",
+        "zh": "通过微信 iLink Bot 连接 DSH 会话。"
+      },
+      "summary": {
+        "en": "★ 21 · ↓ 4,010/30d · Updated 4 days ago",
+        "zh": "★ 21 · ↓ 4,010/30天 · 4 天前更新"
+      }
+    },
+    "dsh-whale-galgame": {
+      "description": {
+        "en": "A multi-character Galgame interface and optional desktop companion for DeepSeek Harness Web.",
+        "zh": "为网页会话添加多角色互动界面与可选桌面伴侣。"
+      },
+      "summary": {
+        "en": "★ 35 · ↓ 2,123/30d · Updated 32 days ago",
+        "zh": "★ 35 · ↓ 2,123/30天 · 32 天前更新"
+      }
+    },
+    "dsh-whale-girl-pet": {
+      "description": {
+        "en": "Show session progress, token usage and costs through a whale-girl companion and task bubbles.",
+        "zh": "用角色状态与任务气泡展示会话进度、Token 用量和费用。"
+      },
+      "summary": {
+        "en": "★ 28 · ↓ 5,937/30d · Updated 4 days ago",
+        "zh": "★ 28 · ↓ 5,937/30天 · 4 天前更新"
+      }
+    },
+    "dsh-whale-widget": {
+      "description": {
+        "en": "Show account balance and per-turn usage in a customizable animated whale widget.",
+        "zh": "用可自定义的鲸鱼挂件显示账户余额与每轮用量。"
+      },
+      "summary": {
+        "en": "★ 5,179 · ↓ 189,128/30d · Updated 6 days ago",
+        "zh": "★ 5,179 · ↓ 189,128/30天 · 6 天前更新"
+      }
+    },
+    "dsh-workbuddy-connect": {
+      "description": {
+        "en": "Connect models available in the local WorkBuddy desktop application to DSH.",
+        "zh": "将本机 WorkBuddy 桌面应用中可用的模型接入 DSH。"
+      },
+      "summary": {
+        "en": "★ 1,274 · ↓ 34,114/30d · Updated today",
+        "zh": "★ 1,274 · ↓ 34,114/30天 · 今天更新"
+      }
+    },
+    "dsh-wsl-workspace": {
+      "description": {
+        "en": "Run a session's shell and file tools inside a selected WSL distribution.",
+        "zh": "在选定的 WSL 发行版中运行会话命令与文件工具。"
+      },
+      "summary": {
+        "en": "★ 87 · ↓ 3,741/30d · Updated 6 days ago",
+        "zh": "★ 87 · ↓ 3,741/30天 · 6 天前更新"
+      }
+    },
+    "dsh-xdpool": {
+      "description": {
+        "en": "Aggregate accounts and provider models, inspect usage, and configure routing and a local gateway.",
+        "zh": "聚合多个账户与供应商模型，查看用量并配置路由和本地网关。"
+      },
+      "summary": {
+        "en": "★ 146 · ↓ 756/30d · Updated today",
+        "zh": "★ 146 · ↓ 756/30天 · 今天更新"
+      }
+    },
+    "dsh-xiaomi-tts": {
+      "description": {
+        "en": "Read replies with Xiaomi MiMo TTS or the browser's local speech engine.",
+        "zh": "使用 Xiaomi MiMo TTS 或浏览器本地语音朗读回复。"
+      },
+      "summary": {
+        "en": "★ 24 · ↓ 3,117/30d · Updated 1 day ago",
+        "zh": "★ 24 · ↓ 3,117/30天 · 1 天前更新"
+      }
+    },
+    "dsh-zotero": {
+      "description": {
+        "en": "Search a local Zotero library, read notes and annotations, extract evidence, and generate citations.",
+        "zh": "检索本地 Zotero 文献库，读取笔记和标注，提取证据并生成引用。"
+      },
+      "summary": {
+        "en": "★ 37 · ↓ 7,270/30d · Updated 16 days ago",
+        "zh": "★ 37 · ↓ 7,270/30天 · 16 天前更新"
+      }
+    },
+    "dshmarket": {
+      "description": {
+        "en": "Browse community plugins and manage installations from a visual market inside DSH.",
+        "zh": "在 DSH 内浏览社区插件，并通过可视化市场管理安装。"
+      },
+      "summary": {
+        "en": "★ 7,080 · ↓ 573,315/30d · Updated today",
+        "zh": "★ 7,080 · ↓ 573,315/30天 · 今天更新"
+      }
+    },
+    "gongwen-skill": {
+      "description": {
+        "en": "Check and revise Chinese official documents with formatting rules and templates.",
+        "zh": "使用格式规则和模板检查、修订中文公文。"
+      },
+      "summary": {
+        "en": "★ 82 · ↓ 3,326/30d · Updated 16 days ago",
+        "zh": "★ 82 · ↓ 3,326/30天 · 16 天前更新"
+      }
+    },
+    "huaweicloud-devkit": {
+      "description": {
+        "en": "Agent toolkit that helps coding agents use Huawei Cloud Skills, KooCLI, APIs, SDKs, and future MCP capabilities safely and accurately.",
+        "zh": "在编程会话中使用华为云技能、KooCLI、API 与 SDK。"
+      },
+      "summary": {
+        "en": "★ 67 · ↓ 5,277/30d · Updated 5 days ago",
+        "zh": "★ 67 · ↓ 5,277/30天 · 5 天前更新"
+      }
+    },
+    "memory-eternal": {
+      "description": {
+        "en": "Store conversation knowledge cards in a local Markdown vault and recall them on demand.",
+        "zh": "将会话知识卡保存到本地 Markdown 库，并按需召回。"
+      },
+      "summary": {
+        "en": "★ 20 · ↓ 9,772/30d · Updated today",
+        "zh": "★ 20 · ↓ 9,772/30天 · 今天更新"
+      }
+    },
+    "meow-cachebilling": {
+      "description": {
+        "en": "Inspect token costs, cache-hit breakdowns and cumulative spending curves.",
+        "zh": "查看 Token 费用、缓存命中明细与累计花费曲线。"
+      },
+      "summary": {
+        "en": "★ 47 · ↓ 3,320/30d · Updated 11 days ago",
+        "zh": "★ 47 · ↓ 3,320/30天 · 11 天前更新"
+      }
+    },
+    "meow-memory": {
+      "description": {
+        "en": "Cross-session project memory for DeepSeek Harness: seven-layer SQLite memory, first-turn snapshot injection, per-message keyword hits, memory_remember/search/project tools, automatic reflection with reflection-fold UI, and idle-triggered dream consolidation (peak-hour suppressed).",
+        "zh": "通过 SQLite 分层记忆、检索工具与自动反思保存项目知识。"
+      },
+      "summary": {
+        "en": "★ 210 · ↓ 9,396/30d · Updated 9 days ago",
+        "zh": "★ 210 · ↓ 9,396/30天 · 9 天前更新"
+      }
+    },
+    "meow-smooth": {
+      "description": {
+        "en": "Collapse the idle composer and automatically close the sidebar on narrow screens.",
+        "zh": "收起闲置输入框，并在窄屏选中会话后自动关闭侧栏。"
+      },
+      "summary": {
+        "en": "★ 64 · ↓ 2,510/30d · Updated 25 days ago",
+        "zh": "★ 64 · ↓ 2,510/30天 · 25 天前更新"
+      }
+    },
+    "minecraft-dev": {
+      "description": {
+        "en": "Develop Minecraft server plugins and mods with version-aware skills and a Gradle runner.",
+        "zh": "使用区分版本的技能与 Gradle 工具开发 Minecraft 插件和模组。"
+      },
+      "summary": {
+        "en": "★ 26 · ↓ 2,185/30d · Updated 18 days ago",
+        "zh": "★ 26 · ↓ 2,185/30天 · 18 天前更新"
+      }
+    },
+    "misakanet": {
+      "description": {
+        "en": "Search evidence-rated failure lessons through the public MisakaNet MCP service.",
+        "zh": "通过 MisakaNet 公共 MCP 服务检索带证据评级的失败经验。"
+      },
+      "summary": {
+        "en": "★ 528 · ↓ 5,786/30d · Updated today",
+        "zh": "★ 528 · ↓ 5,786/30天 · 今天更新"
+      }
+    },
+    "open-sea-skin": {
+      "description": {
+        "en": "Realtime WebGPU ocean skin for DeepSeek Harness on Chrome and Edge",
+        "zh": "在 Chrome 或 Edge 中为 DSH 网页渲染实时海洋背景。"
+      },
+      "summary": {
+        "en": "★ 397 · ↓ 6,142/30d · Updated 7 days ago",
+        "zh": "★ 397 · ↓ 6,142/30天 · 7 天前更新"
+      }
+    },
+    "oss-prompt-optimizer": {
+      "description": {
+        "en": "DeepSeek Harness plugin bundle: optimize raw instructions into professional Role / Task / Context / Format prompts through the harness llm service",
+        "zh": "通过当前模型将原始指令整理为角色、任务、上下文与格式。"
+      },
+      "summary": {
+        "en": "★ 21 · ↓ 3,539/30d · Updated 8 days ago",
+        "zh": "★ 21 · ↓ 3,539/30天 · 8 天前更新"
+      }
+    },
+    "prts-terrarchive": {
+      "description": {
+        "en": "PRTS.chat corpus browser with local/cloud search, source reading and a Rhine Lab 3D workspace for deepseek-harness",
+        "zh": "检索和阅读 PRTS.chat 语料，并使用角色化三维资料工作区。"
+      },
+      "summary": {
+        "en": "★ 52 · ↓ 716/30d · Updated 14 days ago",
+        "zh": "★ 52 · ↓ 716/30天 · 14 天前更新"
+      }
+    },
+    "sage-mem": {
+      "description": {
+        "en": "Keep cross-session memories in local Markdown files and retrieve relevant content for context injection.",
+        "zh": "将跨会话记忆保存为本地 Markdown 文件，按问题检索并注入相关内容。"
+      },
+      "summary": {
+        "en": "★ 12 · ↓ 5,938/30d · Updated 1 day ago",
+        "zh": "★ 12 · ↓ 5,938/30天 · 1 天前更新"
+      }
+    },
+    "scientific-figure-library": {
+      "description": {
+        "en": "Local image-code knowledge library with native macOS and local Web clients, plus MCP and Skill for Pi, DeepSeek Harness (dsh), Claude, Codex, Cursor, and Wisp.",
+        "zh": "在本机检索图片与代码知识库，通过客户端、MCP 或技能调用。"
+      },
+      "summary": {
+        "en": "★ 123 · ↓ 398/30d · Updated 28 days ago",
+        "zh": "★ 123 · ↓ 398/30天 · 28 天前更新"
+      }
+    },
+    "search-boost": {
+      "description": {
+        "en": "Multi-engine web search for coding agents — one SearchBoost core (fused search, fetch, X) with MCP (Cursor, Codex, Claude Code, Grok Build, Antigravity), pi extension, and DeepSeek Harness bundle adapters",
+        "zh": "融合多引擎搜索、网页抓取与 X 检索，并提供 DSH 适配器。"
+      },
+      "summary": {
+        "en": "★ 55 · ↓ 3,245/30d · Updated 14 days ago",
+        "zh": "★ 55 · ↓ 3,245/30天 · 14 天前更新"
+      }
+    },
+    "superpowers-dsh": {
+      "description": {
+        "en": "Superpowers for the DeepSeek Harness: TDD, debugging, planning, and collaboration skills adapted from obra/superpowers",
+        "zh": "为 DSH 接入测试驱动开发、调试、规划与协作技能。"
+      },
+      "summary": {
+        "en": "★ 110 · ↓ 2,932/30d · Updated 3 days ago",
+        "zh": "★ 110 · ↓ 2,932/30天 · 3 天前更新"
+      }
+    },
+    "whale-girl": {
+      "description": {
+        "en": "Add an interactive companion character to the DSH web interface.",
+        "zh": "在 DSH 网页界面添加可互动桌面角色。"
+      },
+      "summary": {
+        "en": "★ 363 · ↓ 3,051/30d · Updated 59 days ago",
+        "zh": "★ 363 · ↓ 3,051/30天 · 59 天前更新"
+      }
+    }
+  }
+}

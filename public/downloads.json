@@ -1,0 +1,2887 @@
+{
+  "schema": 1,
+  "period": "last-month",
+  "generatedAt": "2026-10-18T09:35:25.227Z",
+  "packages": {
+    "@a9i5k4/dsh-auto-memory": {
+      "package": "@a9i5k4/dsh-auto-memory",
+      "downloads": 13722,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40a9i5k4/dsh-auto-memory",
+      "status": "ok"
+    },
+    "@anionex/dsh-computer-use": {
+      "package": "@anionex/dsh-computer-use",
+      "downloads": 3389,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40anionex/dsh-computer-use",
+      "status": "ok"
+    },
+    "@anionex/dsh-turn-rewind": {
+      "package": "@anionex/dsh-turn-rewind",
+      "downloads": 4920,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40anionex/dsh-turn-rewind",
+      "status": "ok"
+    },
+    "@anionex/dsh-vision-toolkit": {
+      "package": "@anionex/dsh-vision-toolkit",
+      "downloads": 12326,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40anionex/dsh-vision-toolkit",
+      "status": "ok"
+    },
+    "@anysearch/anysearch-dsh": {
+      "package": "@anysearch/anysearch-dsh",
+      "downloads": 9542,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40anysearch/anysearch-dsh",
+      "status": "ok"
+    },
+    "@bihangchi9/lark-agent-bridge": {
+      "package": "@bihangchi9/lark-agent-bridge",
+      "downloads": 947,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40bihangchi9/lark-agent-bridge",
+      "status": "ok"
+    },
+    "@caob23/dsh-browser-control": {
+      "package": "@caob23/dsh-browser-control",
+      "downloads": 2993,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40caob23/dsh-browser-control",
+      "status": "ok"
+    },
+    "@changfenhuang/dsh-annotation": {
+      "package": "@changfenhuang/dsh-annotation",
+      "downloads": 3543,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40changfenhuang/dsh-annotation",
+      "status": "ok"
+    },
+    "@changfenhuang/dsh-genui": {
+      "package": "@changfenhuang/dsh-genui",
+      "downloads": 35271,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40changfenhuang/dsh-genui",
+      "status": "ok"
+    },
+    "@cloudbase/dsh-plugin": {
+      "package": "@cloudbase/dsh-plugin",
+      "downloads": 2231,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40cloudbase/dsh-plugin",
+      "status": "ok"
+    },
+    "@cocofhu/anime-find": {
+      "package": "@cocofhu/anime-find",
+      "downloads": 759,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40cocofhu/anime-find",
+      "status": "ok"
+    },
+    "@contexera/dsh-agent-team": {
+      "package": "@contexera/dsh-agent-team",
+      "downloads": 592,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40contexera/dsh-agent-team",
+      "status": "ok"
+    },
+    "@daweifu/capability-menu": {
+      "package": "@daweifu/capability-menu",
+      "downloads": 2153,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40daweifu/capability-menu",
+      "status": "ok"
+    },
+    "@deepseek-harness-tui/dsh-tui": {
+      "package": "@deepseek-harness-tui/dsh-tui",
+      "downloads": 45109,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40deepseek-harness-tui/dsh-tui",
+      "status": "ok"
+    },
+    "@deepseekstudio/dsh-deepseek-pet": {
+      "package": "@deepseekstudio/dsh-deepseek-pet",
+      "downloads": 2024,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40deepseekstudio/dsh-deepseek-pet",
+      "status": "ok"
+    },
+    "@dely0/dsh-personal-workbench": {
+      "package": "@dely0/dsh-personal-workbench",
+      "downloads": 4200,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40dely0/dsh-personal-workbench",
+      "status": "ok"
+    },
+    "@dickpy/dsh-imagegen": {
+      "package": "@dickpy/dsh-imagegen",
+      "downloads": 11071,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40dickpy/dsh-imagegen",
+      "status": "ok"
+    },
+    "@dingtalk-real-ai/dsh-dingtalk": {
+      "package": "@dingtalk-real-ai/dsh-dingtalk",
+      "downloads": 1917,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40dingtalk-real-ai/dsh-dingtalk",
+      "status": "ok"
+    },
+    "@dingyi222666/dsh-session-notification": {
+      "package": "@dingyi222666/dsh-session-notification",
+      "downloads": 3002,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40dingyi222666/dsh-session-notification",
+      "status": "ok"
+    },
+    "@dsh-plugins/dsh-env-inspector": {
+      "package": "@dsh-plugins/dsh-env-inspector",
+      "downloads": 2264,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40dsh-plugins/dsh-env-inspector",
+      "status": "ok"
+    },
+    "@dsh-plugins/dsh-llm-hub": {
+      "package": "@dsh-plugins/dsh-llm-hub",
+      "downloads": 5158,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40dsh-plugins/dsh-llm-hub",
+      "status": "ok"
+    },
+    "@feiyang666/dsh-usage-plugin": {
+      "package": "@feiyang666/dsh-usage-plugin",
+      "downloads": 1376,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40feiyang666/dsh-usage-plugin",
+      "status": "ok"
+    },
+    "@furongjun1999/dsh-memory": {
+      "package": "@furongjun1999/dsh-memory",
+      "downloads": 27996,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40furongjun1999/dsh-memory",
+      "status": "ok"
+    },
+    "@fylar/dsh-fylar-office-editor": {
+      "package": "@fylar/dsh-fylar-office-editor",
+      "downloads": 243,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40fylar/dsh-fylar-office-editor",
+      "status": "ok"
+    },
+    "@geml/dsh-plugin": {
+      "package": "@geml/dsh-plugin",
+      "downloads": 1022,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40geml/dsh-plugin",
+      "status": "ok"
+    },
+    "@ggboy123/dsh-paper-reader": {
+      "package": "@ggboy123/dsh-paper-reader",
+      "downloads": 5422,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40ggboy123/dsh-paper-reader",
+      "status": "ok"
+    },
+    "@goodandready/dsh-russian-lang": {
+      "package": "@goodandready/dsh-russian-lang",
+      "downloads": 14208,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40goodandready/dsh-russian-lang",
+      "status": "ok"
+    },
+    "@huiliyi37/dsh-tianshu-tui": {
+      "package": "@huiliyi37/dsh-tianshu-tui",
+      "downloads": 1809,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40huiliyi37/dsh-tianshu-tui",
+      "status": "ok"
+    },
+    "@hytime/dsh-thinking-effort": {
+      "package": "@hytime/dsh-thinking-effort",
+      "downloads": 8200,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40hytime/dsh-thinking-effort",
+      "status": "ok"
+    },
+    "@hyzyn/dsh-plugin-kit": {
+      "package": "@hyzyn/dsh-plugin-kit",
+      "downloads": 5411,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40hyzyn/dsh-plugin-kit",
+      "status": "ok"
+    },
+    "@jiesou/dsh-commandcode-go-provider": {
+      "package": "@jiesou/dsh-commandcode-go-provider",
+      "downloads": 1160,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40jiesou/dsh-commandcode-go-provider",
+      "status": "ok"
+    },
+    "@jiesou/dsh-opencode-zen-free-provider": {
+      "package": "@jiesou/dsh-opencode-zen-free-provider",
+      "downloads": 2001,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40jiesou/dsh-opencode-zen-free-provider",
+      "status": "ok"
+    },
+    "@jiyr0119/dsh-workspace-explorer": {
+      "package": "@jiyr0119/dsh-workspace-explorer",
+      "downloads": 1487,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40jiyr0119/dsh-workspace-explorer",
+      "status": "ok"
+    },
+    "@kenz1117/dsh-engram": {
+      "package": "@kenz1117/dsh-engram",
+      "downloads": 6227,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40kenz1117/dsh-engram",
+      "status": "ok"
+    },
+    "@kenz1117/dsh-ui-usage-billing": {
+      "package": "@kenz1117/dsh-ui-usage-billing",
+      "downloads": 15636,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40kenz1117/dsh-ui-usage-billing",
+      "status": "ok"
+    },
+    "@linxin666/dsh-client-ui-git-graph": {
+      "package": "@linxin666/dsh-client-ui-git-graph",
+      "downloads": 125687,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40linxin666/dsh-client-ui-git-graph",
+      "status": "ok"
+    },
+    "@linxin666/dsh-client-ui-skill-explorer": {
+      "package": "@linxin666/dsh-client-ui-skill-explorer",
+      "downloads": 148604,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40linxin666/dsh-client-ui-skill-explorer",
+      "status": "ok"
+    },
+    "@linxin666/dsh-client-ui-skin-center": {
+      "package": "@linxin666/dsh-client-ui-skin-center",
+      "downloads": 117490,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40linxin666/dsh-client-ui-skin-center",
+      "status": "ok"
+    },
+    "@linxin666/dsh-client-ui-task-board": {
+      "package": "@linxin666/dsh-client-ui-task-board",
+      "downloads": 134758,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40linxin666/dsh-client-ui-task-board",
+      "status": "ok"
+    },
+    "@linxin666/dsh-remote-web-ui": {
+      "package": "@linxin666/dsh-remote-web-ui",
+      "downloads": 135781,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40linxin666/dsh-remote-web-ui",
+      "status": "ok"
+    },
+    "@linxin666/dsh-ssh": {
+      "package": "@linxin666/dsh-ssh",
+      "downloads": 112286,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40linxin666/dsh-ssh",
+      "status": "ok"
+    },
+    "@linxin666/dsh-web-all": {
+      "package": "@linxin666/dsh-web-all",
+      "downloads": 107548,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40linxin666/dsh-web-all",
+      "status": "ok"
+    },
+    "@liustack/modlens": {
+      "downloads": 96962,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "package": "@liustack/modlens",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40liustack/modlens",
+      "status": "ok",
+      "fetchedAt": "2026-10-18T09:35:25.227Z"
+    },
+    "@liustack/modsearch": {
+      "downloads": 41576,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "package": "@liustack/modsearch",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40liustack/modsearch",
+      "status": "ok",
+      "fetchedAt": "2026-10-18T09:35:25.227Z"
+    },
+    "@liustack/pptwise": {
+      "downloads": 4541,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "package": "@liustack/pptwise",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40liustack/pptwise",
+      "status": "ok",
+      "fetchedAt": "2026-10-18T09:35:25.227Z"
+    },
+    "@loongsuite/dsh-plugin": {
+      "downloads": 3302,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "package": "@loongsuite/dsh-plugin",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40loongsuite/dsh-plugin",
+      "status": "ok",
+      "fetchedAt": "2026-10-18T09:35:25.227Z"
+    },
+    "@mars-sea/dsh-commandcode-provider": {
+      "package": "@mars-sea/dsh-commandcode-provider",
+      "downloads": 16627,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40mars-sea/dsh-commandcode-provider",
+      "status": "ok"
+    },
+    "@memef1f1y/dsh-plugin-tts": {
+      "downloads": 2326,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "package": "@memef1f1y/dsh-plugin-tts",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40memef1f1y/dsh-plugin-tts",
+      "status": "ok",
+      "fetchedAt": "2026-10-18T09:35:25.227Z"
+    },
+    "@michengai/dsh-agency-agents": {
+      "downloads": 154001,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "package": "@michengai/dsh-agency-agents",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40michengai/dsh-agency-agents",
+      "status": "ok",
+      "fetchedAt": "2026-10-18T09:35:25.227Z"
+    },
+    "@michengai/dsh-archive-manager": {
+      "downloads": 182647,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "package": "@michengai/dsh-archive-manager",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40michengai/dsh-archive-manager",
+      "status": "ok",
+      "fetchedAt": "2026-10-18T09:35:25.227Z"
+    },
+    "@michengai/dsh-automation": {
+      "package": "@michengai/dsh-automation",
+      "downloads": 119538,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40michengai/dsh-automation",
+      "status": "ok"
+    },
+    "@michengai/dsh-btw": {
+      "package": "@michengai/dsh-btw",
+      "downloads": 91422,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40michengai/dsh-btw",
+      "status": "ok"
+    },
+    "@michengai/dsh-codex-ui": {
+      "package": "@michengai/dsh-codex-ui",
+      "downloads": 262840,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40michengai/dsh-codex-ui",
+      "status": "ok"
+    },
+    "@michengai/dsh-im-connect": {
+      "package": "@michengai/dsh-im-connect",
+      "downloads": 138061,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40michengai/dsh-im-connect",
+      "status": "ok"
+    },
+    "@michengai/dsh-pua": {
+      "package": "@michengai/dsh-pua",
+      "downloads": 65134,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40michengai/dsh-pua",
+      "status": "ok"
+    },
+    "@michengai/dsh-skills-manager": {
+      "package": "@michengai/dsh-skills-manager",
+      "downloads": 210070,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40michengai/dsh-skills-manager",
+      "status": "ok"
+    },
+    "@modusensus/dsh-mneme": {
+      "package": "@modusensus/dsh-mneme",
+      "downloads": 10638,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40modusensus/dsh-mneme",
+      "status": "ok"
+    },
+    "@mofeng2223/dsh-claude-provider": {
+      "package": "@mofeng2223/dsh-claude-provider",
+      "downloads": 2684,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40mofeng2223/dsh-claude-provider",
+      "status": "ok"
+    },
+    "@mokuyoaxis/agent-guard": {
+      "package": "@mokuyoaxis/agent-guard",
+      "downloads": 1198,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40mokuyoaxis/agent-guard",
+      "status": "ok"
+    },
+    "@mrweicodes/dsh-loop-guard": {
+      "package": "@mrweicodes/dsh-loop-guard",
+      "downloads": 1518,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40mrweicodes/dsh-loop-guard",
+      "status": "ok"
+    },
+    "@nagi-ovo/dsh-visualize": {
+      "package": "@nagi-ovo/dsh-visualize",
+      "downloads": 3001,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40nagi-ovo/dsh-visualize",
+      "status": "ok"
+    },
+    "@nanmicoder/dsh-agent-teams": {
+      "downloads": 46491,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "package": "@nanmicoder/dsh-agent-teams",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40nanmicoder/dsh-agent-teams",
+      "status": "ok",
+      "fetchedAt": "2026-10-18T09:35:25.227Z"
+    },
+    "@nonamelego/dsh-catppuccin": {
+      "package": "@nonamelego/dsh-catppuccin",
+      "downloads": 11538,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40nonamelego/dsh-catppuccin",
+      "status": "ok"
+    },
+    "@noob-stupid/dsh-plugin-console": {
+      "package": "@noob-stupid/dsh-plugin-console",
+      "downloads": 20022,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40noob-stupid/dsh-plugin-console",
+      "status": "ok"
+    },
+    "@opdsh/unity-plugin": {
+      "package": "@opdsh/unity-plugin",
+      "downloads": 2199,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40opdsh/unity-plugin",
+      "status": "ok"
+    },
+    "@opencode2dsh/dsh-plugin": {
+      "package": "@opencode2dsh/dsh-plugin",
+      "downloads": 10010,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40opencode2dsh/dsh-plugin",
+      "status": "ok"
+    },
+    "@openma/deepseek-harness-tui": {
+      "package": "@openma/deepseek-harness-tui",
+      "downloads": 1184,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40openma/deepseek-harness-tui",
+      "status": "ok"
+    },
+    "@openviking/dsh-memory-plugin": {
+      "package": "@openviking/dsh-memory-plugin",
+      "downloads": 38700,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40openviking/dsh-memory-plugin",
+      "status": "ok"
+    },
+    "@shengsheng/dsh-taskboard": {
+      "package": "@shengsheng/dsh-taskboard",
+      "downloads": 1331,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40shengsheng/dsh-taskboard",
+      "status": "ok"
+    },
+    "@smalltailqwq/dsh-client-ui-skin-maid-atelier": {
+      "package": "@smalltailqwq/dsh-client-ui-skin-maid-atelier",
+      "downloads": 41770,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40smalltailqwq/dsh-client-ui-skin-maid-atelier",
+      "status": "ok"
+    },
+    "@tencent-connect/dsh-qqbot": {
+      "package": "@tencent-connect/dsh-qqbot",
+      "downloads": 3898,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40tencent-connect/dsh-qqbot",
+      "status": "ok"
+    },
+    "@tomowang/dsh-tui": {
+      "package": "@tomowang/dsh-tui",
+      "downloads": 1608,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40tomowang/dsh-tui",
+      "status": "ok"
+    },
+    "@tt-a1i/archify-dsh": {
+      "package": "@tt-a1i/archify-dsh",
+      "downloads": 31340,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40tt-a1i/archify-dsh",
+      "status": "ok"
+    },
+    "@txc2768651338/dsh-effort-slider": {
+      "package": "@txc2768651338/dsh-effort-slider",
+      "downloads": 1246,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40txc2768651338/dsh-effort-slider",
+      "status": "ok"
+    },
+    "@weibaohui/skills-management": {
+      "package": "@weibaohui/skills-management",
+      "downloads": 10078,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40weibaohui/skills-management",
+      "status": "ok"
+    },
+    "@wenaixi/dsh-ponytail": {
+      "package": "@wenaixi/dsh-ponytail",
+      "downloads": 4745,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40wenaixi/dsh-ponytail",
+      "status": "ok"
+    },
+    "@wenaixi/dsh-superpower": {
+      "package": "@wenaixi/dsh-superpower",
+      "downloads": 4420,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40wenaixi/dsh-superpower",
+      "status": "ok"
+    },
+    "@wenbin_wb/dsh-bridge": {
+      "package": "@wenbin_wb/dsh-bridge",
+      "downloads": 12593,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40wenbin_wb/dsh-bridge",
+      "status": "ok"
+    },
+    "@xgone/dsh-remote": {
+      "package": "@xgone/dsh-remote",
+      "downloads": 1915,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40xgone/dsh-remote",
+      "status": "ok"
+    },
+    "@xiaoyuyu6420/dsh-backup": {
+      "package": "@xiaoyuyu6420/dsh-backup",
+      "downloads": 4232,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40xiaoyuyu6420/dsh-backup",
+      "status": "ok"
+    },
+    "@xmoon76/dsh-pi-tui": {
+      "package": "@xmoon76/dsh-pi-tui",
+      "downloads": 2417,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40xmoon76/dsh-pi-tui",
+      "status": "ok"
+    },
+    "@y1x1n/dsh-prompt-optimizer": {
+      "package": "@y1x1n/dsh-prompt-optimizer",
+      "downloads": 1282,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40y1x1n/dsh-prompt-optimizer",
+      "status": "ok"
+    },
+    "@ychris12138/dsh-usage-stats": {
+      "package": "@ychris12138/dsh-usage-stats",
+      "downloads": 7398,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40ychris12138/dsh-usage-stats",
+      "status": "ok"
+    },
+    "@yejiming/dsh-data-agent": {
+      "package": "@yejiming/dsh-data-agent",
+      "downloads": 3168,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40yejiming/dsh-data-agent",
+      "status": "ok"
+    },
+    "@yejiming/dsh-museai-tavern": {
+      "package": "@yejiming/dsh-museai-tavern",
+      "downloads": 236,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40yejiming/dsh-museai-tavern",
+      "status": "ok"
+    },
+    "@yolk_vat-y/dsh-project-memory": {
+      "package": "@yolk_vat-y/dsh-project-memory",
+      "downloads": 4397,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40yolk_vat-y/dsh-project-memory",
+      "status": "ok"
+    },
+    "@yunmiao/studymate": {
+      "package": "@yunmiao/studymate",
+      "downloads": 5566,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40yunmiao/studymate",
+      "status": "ok"
+    },
+    "@zaofan/dsh-qqbot": {
+      "package": "@zaofan/dsh-qqbot",
+      "downloads": 10289,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40zaofan/dsh-qqbot",
+      "status": "ok"
+    },
+    "@zhangfengshun/dsh-remote-ssh": {
+      "package": "@zhangfengshun/dsh-remote-ssh",
+      "downloads": 7206,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40zhangfengshun/dsh-remote-ssh",
+      "status": "ok"
+    },
+    "@zoria-lind/dsh-token-optimizer": {
+      "package": "@zoria-lind/dsh-token-optimizer",
+      "downloads": 1768,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40zoria-lind/dsh-token-optimizer",
+      "status": "ok"
+    },
+    "@zseven-w/dsh-android": {
+      "package": "@zseven-w/dsh-android",
+      "downloads": 2638,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40zseven-w/dsh-android",
+      "status": "ok"
+    },
+    "@zseven-w/dsh-crew": {
+      "package": "@zseven-w/dsh-crew",
+      "downloads": 2196,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40zseven-w/dsh-crew",
+      "status": "ok"
+    },
+    "@zseven-w/dsh-harbor": {
+      "package": "@zseven-w/dsh-harbor",
+      "downloads": 264,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40zseven-w/dsh-harbor",
+      "status": "ok"
+    },
+    "@zseven-w/dsh-ios": {
+      "package": "@zseven-w/dsh-ios",
+      "downloads": 1727,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40zseven-w/dsh-ios",
+      "status": "ok"
+    },
+    "@zseven-w/dsh-noema": {
+      "package": "@zseven-w/dsh-noema",
+      "downloads": 1546,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40zseven-w/dsh-noema",
+      "status": "ok"
+    },
+    "@zseven-w/dsh-openpencil": {
+      "package": "@zseven-w/dsh-openpencil",
+      "downloads": 2510,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/%40zseven-w/dsh-openpencil",
+      "status": "ok"
+    },
+    "better-dsh-session-deletetool": {
+      "package": "better-dsh-session-deletetool",
+      "downloads": 914,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/better-dsh-session-deletetool",
+      "status": "ok"
+    },
+    "clearai-dsh": {
+      "package": "clearai-dsh",
+      "downloads": 5379,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/clearai-dsh",
+      "status": "ok"
+    },
+    "deep-read-summarize": {
+      "package": "deep-read-summarize",
+      "downloads": 2689,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/deep-read-summarize",
+      "status": "ok"
+    },
+    "deepseek-harness-auth": {
+      "package": "deepseek-harness-auth",
+      "downloads": 928,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/deepseek-harness-auth",
+      "status": "ok"
+    },
+    "deepseek-harness-zh_pro": {
+      "package": "deepseek-harness-zh_pro",
+      "downloads": 5021,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/deepseek-harness-zh_pro",
+      "status": "ok"
+    },
+    "dsh-advisor": {
+      "package": "dsh-advisor",
+      "downloads": 3347,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-advisor",
+      "status": "ok"
+    },
+    "dsh-agent-studio": {
+      "package": "dsh-agent-studio",
+      "downloads": 2113,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-agent-studio",
+      "status": "ok"
+    },
+    "dsh-aginxbrowser": {
+      "package": "dsh-aginxbrowser",
+      "downloads": 844,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-aginxbrowser",
+      "status": "ok"
+    },
+    "dsh-agnes-studio": {
+      "package": "dsh-agnes-studio",
+      "downloads": 2247,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-agnes-studio",
+      "status": "ok"
+    },
+    "dsh-agy": {
+      "package": "dsh-agy",
+      "downloads": 4533,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-agy",
+      "status": "ok"
+    },
+    "dsh-any-background": {
+      "package": "dsh-any-background",
+      "downloads": 6450,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-any-background",
+      "status": "ok"
+    },
+    "dsh-auto-memory": {
+      "package": "dsh-auto-memory",
+      "downloads": 3957,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-auto-memory",
+      "status": "ok"
+    },
+    "dsh-auto-review": {
+      "package": "dsh-auto-review",
+      "downloads": 6502,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-auto-review",
+      "status": "ok"
+    },
+    "dsh-background-by-model": {
+      "package": "dsh-background-by-model",
+      "downloads": 8433,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-background-by-model",
+      "status": "ok"
+    },
+    "dsh-better-display": {
+      "package": "dsh-better-display",
+      "downloads": 3878,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-better-display",
+      "status": "ok"
+    },
+    "dsh-better-edit": {
+      "package": "dsh-better-edit",
+      "downloads": 2649,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-better-edit",
+      "status": "ok"
+    },
+    "dsh-better-input": {
+      "package": "dsh-better-input",
+      "downloads": 2242,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-better-input",
+      "status": "ok"
+    },
+    "dsh-better-reasoning-effort": {
+      "package": "dsh-better-reasoning-effort",
+      "downloads": 5141,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-better-reasoning-effort",
+      "status": "ok"
+    },
+    "dsh-better-sidebar": {
+      "package": "dsh-better-sidebar",
+      "downloads": 216581,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-better-sidebar",
+      "status": "ok"
+    },
+    "dsh-better-workspace": {
+      "package": "dsh-better-workspace",
+      "downloads": 6706,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-better-workspace",
+      "status": "ok"
+    },
+    "dsh-bili-scroll": {
+      "package": "dsh-bili-scroll",
+      "downloads": 1594,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-bili-scroll",
+      "status": "ok"
+    },
+    "dsh-blender": {
+      "package": "dsh-blender",
+      "downloads": 3163,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-blender",
+      "status": "ok"
+    },
+    "dsh-bloom-theme": {
+      "package": "dsh-bloom-theme",
+      "downloads": 4907,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-bloom-theme",
+      "status": "ok"
+    },
+    "dsh-bottom-info-bar": {
+      "package": "dsh-bottom-info-bar",
+      "downloads": 13030,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-bottom-info-bar",
+      "status": "ok"
+    },
+    "dsh-builtin-browser": {
+      "package": "dsh-builtin-browser",
+      "downloads": 19527,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-builtin-browser",
+      "status": "ok"
+    },
+    "dsh-cad": {
+      "package": "dsh-cad",
+      "downloads": 3926,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-cad",
+      "status": "ok"
+    },
+    "dsh-calendar": {
+      "package": "dsh-calendar",
+      "downloads": 7033,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-calendar",
+      "status": "ok"
+    },
+    "dsh-cert-mcp": {
+      "package": "dsh-cert-mcp",
+      "downloads": 2210,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-cert-mcp",
+      "status": "ok"
+    },
+    "dsh-chat-import": {
+      "package": "dsh-chat-import",
+      "downloads": 18043,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-chat-import",
+      "status": "ok"
+    },
+    "dsh-chat-manager": {
+      "package": "dsh-chat-manager",
+      "downloads": 10070,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-chat-manager",
+      "status": "ok"
+    },
+    "dsh-checkpoint-rewind": {
+      "package": "dsh-checkpoint-rewind",
+      "downloads": 5159,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-checkpoint-rewind",
+      "status": "ok"
+    },
+    "dsh-claude-move": {
+      "package": "dsh-claude-move",
+      "downloads": 3403,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-claude-move",
+      "status": "ok"
+    },
+    "dsh-claude-style": {
+      "package": "dsh-claude-style",
+      "downloads": 15011,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-claude-style",
+      "status": "ok"
+    },
+    "dsh-click": {
+      "package": "dsh-click",
+      "downloads": 4702,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-click",
+      "status": "ok"
+    },
+    "dsh-client-auto-continue": {
+      "package": "dsh-client-auto-continue",
+      "downloads": 10724,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-client-auto-continue",
+      "status": "ok"
+    },
+    "dsh-codex": {
+      "package": "dsh-codex",
+      "downloads": 2656,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-codex",
+      "status": "ok"
+    },
+    "dsh-codex-subscription": {
+      "package": "dsh-codex-subscription",
+      "downloads": 23020,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-codex-subscription",
+      "status": "ok"
+    },
+    "dsh-comfyui": {
+      "package": "dsh-comfyui",
+      "downloads": 4382,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-comfyui",
+      "status": "ok"
+    },
+    "dsh-computer-use": {
+      "package": "dsh-computer-use",
+      "downloads": 3897,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-computer-use",
+      "status": "ok"
+    },
+    "dsh-computer-use-win": {
+      "package": "dsh-computer-use-win",
+      "downloads": 6963,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-computer-use-win",
+      "status": "ok"
+    },
+    "dsh-config-manager": {
+      "package": "dsh-config-manager",
+      "downloads": 15411,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-config-manager",
+      "status": "ok"
+    },
+    "dsh-connect-trae": {
+      "package": "dsh-connect-trae",
+      "downloads": 10005,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-connect-trae",
+      "status": "ok"
+    },
+    "dsh-connect-workbuddy": {
+      "package": "dsh-connect-workbuddy",
+      "downloads": 18140,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-connect-workbuddy",
+      "status": "ok"
+    },
+    "dsh-context": {
+      "package": "dsh-context",
+      "downloads": 152172,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-context",
+      "status": "ok"
+    },
+    "dsh-continual-evolve": {
+      "package": "dsh-continual-evolve",
+      "downloads": 8504,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-continual-evolve",
+      "status": "ok"
+    },
+    "dsh-conversation-navigator": {
+      "package": "dsh-conversation-navigator",
+      "downloads": 2046,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-conversation-navigator",
+      "status": "ok"
+    },
+    "dsh-cost-meter": {
+      "package": "dsh-cost-meter",
+      "downloads": 105573,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-cost-meter",
+      "status": "ok"
+    },
+    "dsh-data-quality": {
+      "package": "dsh-data-quality",
+      "downloads": 3606,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-data-quality",
+      "status": "ok"
+    },
+    "dsh-deepcanary": {
+      "package": "dsh-deepcanary",
+      "downloads": 930,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-deepcanary",
+      "status": "ok"
+    },
+    "dsh-defend": {
+      "package": "dsh-defend",
+      "downloads": 4256,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-defend",
+      "status": "ok"
+    },
+    "dsh-deja": {
+      "package": "dsh-deja",
+      "downloads": 4777,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-deja",
+      "status": "ok"
+    },
+    "dsh-delete-chat": {
+      "package": "dsh-delete-chat",
+      "downloads": 1221,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-delete-chat",
+      "status": "ok"
+    },
+    "dsh-desktop-plugin": {
+      "package": "dsh-desktop-plugin",
+      "downloads": 1525,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-desktop-plugin",
+      "status": "ok"
+    },
+    "dsh-dhe-lore": {
+      "package": "dsh-dhe-lore",
+      "downloads": 2284,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-dhe-lore",
+      "status": "ok"
+    },
+    "dsh-doublecheck": {
+      "package": "dsh-doublecheck",
+      "downloads": 5602,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-doublecheck",
+      "status": "ok"
+    },
+    "dsh-drawai": {
+      "package": "dsh-drawai",
+      "downloads": 2778,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-drawai",
+      "status": "ok"
+    },
+    "dsh-dream-skin": {
+      "package": "dsh-dream-skin",
+      "downloads": 32786,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-dream-skin",
+      "status": "ok"
+    },
+    "dsh-ears": {
+      "package": "dsh-ears",
+      "downloads": 2870,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-ears",
+      "status": "ok"
+    },
+    "dsh-easyrewrite": {
+      "package": "dsh-easyrewrite",
+      "downloads": 3955,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-easyrewrite",
+      "status": "ok"
+    },
+    "dsh-echocat-skill-panel": {
+      "package": "dsh-echocat-skill-panel",
+      "downloads": 1737,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-echocat-skill-panel",
+      "status": "ok"
+    },
+    "dsh-ego-browser": {
+      "package": "dsh-ego-browser",
+      "downloads": 4134,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-ego-browser",
+      "status": "ok"
+    },
+    "dsh-email": {
+      "package": "dsh-email",
+      "downloads": 7100,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-email",
+      "status": "ok"
+    },
+    "dsh-embedded-workbench": {
+      "package": "dsh-embedded-workbench",
+      "downloads": 2945,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-embedded-workbench",
+      "status": "ok"
+    },
+    "dsh-emoji": {
+      "package": "dsh-emoji",
+      "downloads": 2618,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-emoji",
+      "status": "ok"
+    },
+    "dsh-file-review": {
+      "package": "dsh-file-review",
+      "downloads": 3541,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-file-review",
+      "status": "ok"
+    },
+    "dsh-file-upload": {
+      "package": "dsh-file-upload",
+      "downloads": 3397,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-file-upload",
+      "status": "ok"
+    },
+    "dsh-flowglass": {
+      "package": "dsh-flowglass",
+      "downloads": 3054,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-flowglass",
+      "status": "ok"
+    },
+    "dsh-fonttune": {
+      "package": "dsh-fonttune",
+      "downloads": 4081,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-fonttune",
+      "status": "ok"
+    },
+    "dsh-free-search": {
+      "package": "dsh-free-search",
+      "downloads": 47617,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-free-search",
+      "status": "ok"
+    },
+    "dsh-fund-research": {
+      "package": "dsh-fund-research",
+      "downloads": 3698,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-fund-research",
+      "status": "ok"
+    },
+    "dsh-game-material-master": {
+      "package": "dsh-game-material-master",
+      "downloads": 2698,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-game-material-master",
+      "status": "ok"
+    },
+    "dsh-genui": {
+      "package": "dsh-genui",
+      "downloads": 4630,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-genui",
+      "status": "ok"
+    },
+    "dsh-gitbash-shell": {
+      "package": "dsh-gitbash-shell",
+      "downloads": 12625,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-gitbash-shell",
+      "status": "ok"
+    },
+    "dsh-graph": {
+      "package": "dsh-graph",
+      "downloads": 3668,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-graph",
+      "status": "ok"
+    },
+    "dsh-harmony": {
+      "package": "dsh-harmony",
+      "downloads": 6121,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-harmony",
+      "status": "ok"
+    },
+    "dsh-hdc-bridge": {
+      "package": "dsh-hdc-bridge",
+      "downloads": 1665,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-hdc-bridge",
+      "status": "ok"
+    },
+    "dsh-im-companion": {
+      "package": "dsh-im-companion",
+      "downloads": 3950,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-im-companion",
+      "status": "ok"
+    },
+    "dsh-image-gen": {
+      "package": "dsh-image-gen",
+      "downloads": 24370,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-image-gen",
+      "status": "ok"
+    },
+    "dsh-image-viewer": {
+      "package": "dsh-image-viewer",
+      "downloads": 7996,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-image-viewer",
+      "status": "ok"
+    },
+    "dsh-industry-research": {
+      "package": "dsh-industry-research",
+      "downloads": 4205,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-industry-research",
+      "status": "ok"
+    },
+    "dsh-jev-interceptor": {
+      "package": "dsh-jev-interceptor",
+      "downloads": 2117,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-jev-interceptor",
+      "status": "ok"
+    },
+    "dsh-joi-channel-theme": {
+      "package": "dsh-joi-channel-theme",
+      "downloads": 2374,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-joi-channel-theme",
+      "status": "ok"
+    },
+    "dsh-kimi-subscription": {
+      "package": "dsh-kimi-subscription",
+      "downloads": 5255,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-kimi-subscription",
+      "status": "ok"
+    },
+    "dsh-kimino-theme": {
+      "package": "dsh-kimino-theme",
+      "downloads": 2460,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-kimino-theme",
+      "status": "ok"
+    },
+    "dsh-knit": {
+      "package": "dsh-knit",
+      "downloads": 4346,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-knit",
+      "status": "ok"
+    },
+    "dsh-knowledge": {
+      "package": "dsh-knowledge",
+      "downloads": 2979,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-knowledge",
+      "status": "ok"
+    },
+    "dsh-lark-link": {
+      "package": "dsh-lark-link",
+      "downloads": 2221,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-lark-link",
+      "status": "ok"
+    },
+    "dsh-library": {
+      "package": "dsh-library",
+      "downloads": 4386,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-library",
+      "status": "ok"
+    },
+    "dsh-live2d-pets": {
+      "package": "dsh-live2d-pets",
+      "downloads": 2005,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-live2d-pets",
+      "status": "ok"
+    },
+    "dsh-llm-codex": {
+      "package": "dsh-llm-codex",
+      "downloads": 264,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-llm-codex",
+      "status": "ok"
+    },
+    "dsh-llm-verifier": {
+      "package": "dsh-llm-verifier",
+      "downloads": 4398,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-llm-verifier",
+      "status": "ok"
+    },
+    "dsh-local-ai": {
+      "package": "dsh-local-ai",
+      "downloads": 4137,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-local-ai",
+      "status": "ok"
+    },
+    "dsh-lsp-actions": {
+      "package": "dsh-lsp-actions",
+      "downloads": 5646,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-lsp-actions",
+      "status": "ok"
+    },
+    "dsh-maze": {
+      "package": "dsh-maze",
+      "downloads": 1899,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-maze",
+      "status": "ok"
+    },
+    "dsh-mcp": {
+      "package": "dsh-mcp",
+      "downloads": 1290,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-mcp",
+      "status": "ok"
+    },
+    "dsh-mcp-connector": {
+      "package": "dsh-mcp-connector",
+      "downloads": 22827,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-mcp-connector",
+      "status": "ok"
+    },
+    "dsh-mcp-panel": {
+      "package": "dsh-mcp-panel",
+      "downloads": 9674,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-mcp-panel",
+      "status": "ok"
+    },
+    "dsh-mcp-studio": {
+      "package": "dsh-mcp-studio",
+      "downloads": 1675,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-mcp-studio",
+      "status": "ok"
+    },
+    "dsh-meme": {
+      "package": "dsh-meme",
+      "downloads": 10877,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-meme",
+      "status": "ok"
+    },
+    "dsh-memento": {
+      "package": "dsh-memento",
+      "downloads": 5742,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-memento",
+      "status": "ok"
+    },
+    "dsh-memgas": {
+      "package": "dsh-memgas",
+      "downloads": 335,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-memgas",
+      "status": "ok"
+    },
+    "dsh-memoir": {
+      "package": "dsh-memoir",
+      "downloads": 3949,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-memoir",
+      "status": "ok"
+    },
+    "dsh-mnemon": {
+      "package": "dsh-mnemon",
+      "downloads": 45724,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-mnemon",
+      "status": "ok"
+    },
+    "dsh-model-context-catalog": {
+      "package": "dsh-model-context-catalog",
+      "downloads": 1832,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-model-context-catalog",
+      "status": "ok"
+    },
+    "dsh-model-fusion": {
+      "package": "dsh-model-fusion",
+      "downloads": 895,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-model-fusion",
+      "status": "ok"
+    },
+    "dsh-motion-ui": {
+      "package": "dsh-motion-ui",
+      "downloads": 1292,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-motion-ui",
+      "status": "ok"
+    },
+    "dsh-music-player": {
+      "package": "dsh-music-player",
+      "downloads": 2204,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-music-player",
+      "status": "ok"
+    },
+    "dsh-notify-me": {
+      "package": "dsh-notify-me",
+      "downloads": 6645,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-notify-me",
+      "status": "ok"
+    },
+    "dsh-novel-forge": {
+      "package": "dsh-novel-forge",
+      "downloads": 1604,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-novel-forge",
+      "status": "ok"
+    },
+    "dsh-novel-writer": {
+      "package": "dsh-novel-writer",
+      "downloads": 4668,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-novel-writer",
+      "status": "ok"
+    },
+    "dsh-obsidian": {
+      "package": "dsh-obsidian",
+      "downloads": 2470,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-obsidian",
+      "status": "ok"
+    },
+    "dsh-office-tools": {
+      "package": "dsh-office-tools",
+      "downloads": 10378,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-office-tools",
+      "status": "ok"
+    },
+    "dsh-ontology": {
+      "package": "dsh-ontology",
+      "downloads": 437,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-ontology",
+      "status": "ok"
+    },
+    "dsh-opencode-go": {
+      "package": "dsh-opencode-go",
+      "downloads": 8334,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-opencode-go",
+      "status": "ok"
+    },
+    "dsh-opencode-palette": {
+      "package": "dsh-opencode-palette",
+      "downloads": 7730,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-opencode-palette",
+      "status": "ok"
+    },
+    "dsh-origin-plugin": {
+      "package": "dsh-origin-plugin",
+      "downloads": 3502,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-origin-plugin",
+      "status": "ok"
+    },
+    "dsh-passwords": {
+      "package": "dsh-passwords",
+      "downloads": 4655,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-passwords",
+      "status": "ok"
+    },
+    "dsh-pause": {
+      "package": "dsh-pause",
+      "downloads": 1029,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-pause",
+      "status": "ok"
+    },
+    "dsh-pentester": {
+      "package": "dsh-pentester",
+      "downloads": 3691,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-pentester",
+      "status": "ok"
+    },
+    "dsh-permission-rules": {
+      "package": "dsh-permission-rules",
+      "downloads": 6780,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-permission-rules",
+      "status": "ok"
+    },
+    "dsh-persona-dafeiyu": {
+      "package": "dsh-persona-dafeiyu",
+      "downloads": 1291,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-persona-dafeiyu",
+      "status": "ok"
+    },
+    "dsh-personal-center": {
+      "package": "dsh-personal-center",
+      "downloads": 1591,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-personal-center",
+      "status": "ok"
+    },
+    "dsh-pet-live2d": {
+      "package": "dsh-pet-live2d",
+      "downloads": 6710,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-pet-live2d",
+      "status": "ok"
+    },
+    "dsh-pet-remielle": {
+      "package": "dsh-pet-remielle",
+      "downloads": 3094,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-pet-remielle",
+      "status": "ok"
+    },
+    "dsh-plugin": {
+      "package": "dsh-plugin",
+      "downloads": 21974,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-plugin",
+      "status": "ok"
+    },
+    "dsh-plugin-bridge": {
+      "package": "dsh-plugin-bridge",
+      "downloads": 3495,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-plugin-bridge",
+      "status": "ok"
+    },
+    "dsh-plugin-garmin-connect": {
+      "package": "dsh-plugin-garmin-connect",
+      "downloads": 2494,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-plugin-garmin-connect",
+      "status": "ok"
+    },
+    "dsh-plugin-guide": {
+      "package": "dsh-plugin-guide",
+      "downloads": 7954,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-plugin-guide",
+      "status": "ok"
+    },
+    "dsh-plugin-lookatstudy": {
+      "package": "dsh-plugin-lookatstudy",
+      "downloads": 3113,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-plugin-lookatstudy",
+      "status": "ok"
+    },
+    "dsh-plugin-message-edit": {
+      "package": "dsh-plugin-message-edit",
+      "downloads": 2169,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-plugin-message-edit",
+      "status": "ok"
+    },
+    "dsh-plugin-mobile-gateway": {
+      "package": "dsh-plugin-mobile-gateway",
+      "downloads": 3672,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-plugin-mobile-gateway",
+      "status": "ok"
+    },
+    "dsh-plugin-ramify": {
+      "package": "dsh-plugin-ramify",
+      "downloads": 231,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-plugin-ramify",
+      "status": "ok"
+    },
+    "dsh-plugin-subagent-director": {
+      "package": "dsh-plugin-subagent-director",
+      "downloads": 3497,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-plugin-subagent-director",
+      "status": "ok"
+    },
+    "dsh-plugin-tether": {
+      "package": "dsh-plugin-tether",
+      "downloads": 2651,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-plugin-tether",
+      "status": "ok"
+    },
+    "dsh-plugin-wallpaper-engine": {
+      "package": "dsh-plugin-wallpaper-engine",
+      "downloads": 51433,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-plugin-wallpaper-engine",
+      "status": "ok"
+    },
+    "dsh-plugin-yolo": {
+      "package": "dsh-plugin-yolo",
+      "downloads": 1378,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-plugin-yolo",
+      "status": "ok"
+    },
+    "dsh-pocket": {
+      "package": "dsh-pocket",
+      "downloads": 13315,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-pocket",
+      "status": "ok"
+    },
+    "dsh-popout-sidebar": {
+      "package": "dsh-popout-sidebar",
+      "downloads": 1185,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-popout-sidebar",
+      "status": "ok"
+    },
+    "dsh-preset-enhance": {
+      "package": "dsh-preset-enhance",
+      "downloads": 2811,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-preset-enhance",
+      "status": "ok"
+    },
+    "dsh-prompt": {
+      "package": "dsh-prompt",
+      "downloads": 8780,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-prompt",
+      "status": "ok"
+    },
+    "dsh-qa": {
+      "package": "dsh-qa",
+      "downloads": 3665,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-qa",
+      "status": "ok"
+    },
+    "dsh-qa-skills": {
+      "package": "dsh-qa-skills",
+      "downloads": 1188,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-qa-skills",
+      "status": "ok"
+    },
+    "dsh-qoder-connect": {
+      "package": "dsh-qoder-connect",
+      "downloads": 2818,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-qoder-connect",
+      "status": "ok"
+    },
+    "dsh-quick-toc": {
+      "package": "dsh-quick-toc",
+      "downloads": 5548,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-quick-toc",
+      "status": "ok"
+    },
+    "dsh-read-url": {
+      "package": "dsh-read-url",
+      "downloads": 2907,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-read-url",
+      "status": "ok"
+    },
+    "dsh-recall-plugin": {
+      "package": "dsh-recall-plugin",
+      "downloads": 5489,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-recall-plugin",
+      "status": "ok"
+    },
+    "dsh-recall-unread": {
+      "package": "dsh-recall-unread",
+      "downloads": 1250,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-recall-unread",
+      "status": "ok"
+    },
+    "dsh-recommend": {
+      "package": "dsh-recommend",
+      "downloads": 955,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-recommend",
+      "status": "ok"
+    },
+    "dsh-remote": {
+      "package": "dsh-remote",
+      "downloads": 16690,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-remote",
+      "status": "ok"
+    },
+    "dsh-remote-mobile": {
+      "package": "dsh-remote-mobile",
+      "downloads": 2316,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-remote-mobile",
+      "status": "ok"
+    },
+    "dsh-research-report": {
+      "package": "dsh-research-report",
+      "downloads": 4968,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-research-report",
+      "status": "ok"
+    },
+    "dsh-rewind-plugin": {
+      "package": "dsh-rewind-plugin",
+      "downloads": 25972,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-rewind-plugin",
+      "status": "ok"
+    },
+    "dsh-router-laya": {
+      "package": "dsh-router-laya",
+      "downloads": 1373,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-router-laya",
+      "status": "ok"
+    },
+    "dsh-secure-audit": {
+      "package": "dsh-secure-audit",
+      "downloads": 1906,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-secure-audit",
+      "status": "ok"
+    },
+    "dsh-session-manager": {
+      "package": "dsh-session-manager",
+      "downloads": 12115,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-session-manager",
+      "status": "ok"
+    },
+    "dsh-session-sync": {
+      "package": "dsh-session-sync",
+      "downloads": 3670,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-session-sync",
+      "status": "ok"
+    },
+    "dsh-session-workbench": {
+      "package": "dsh-session-workbench",
+      "downloads": 1434,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-session-workbench",
+      "status": "ok"
+    },
+    "dsh-sessions-manager": {
+      "package": "dsh-sessions-manager",
+      "downloads": 3312,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-sessions-manager",
+      "status": "ok"
+    },
+    "dsh-share": {
+      "package": "dsh-share",
+      "downloads": 2390,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-share",
+      "status": "ok"
+    },
+    "dsh-short-video-studio": {
+      "package": "dsh-short-video-studio",
+      "downloads": 1987,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-short-video-studio",
+      "status": "ok"
+    },
+    "dsh-sidebar-qa": {
+      "package": "dsh-sidebar-qa",
+      "downloads": 2431,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-sidebar-qa",
+      "status": "ok"
+    },
+    "dsh-skill-hub": {
+      "package": "dsh-skill-hub",
+      "downloads": 7154,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-skill-hub",
+      "status": "ok"
+    },
+    "dsh-skill-mcp-panel": {
+      "package": "dsh-skill-mcp-panel",
+      "downloads": 4866,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-skill-mcp-panel",
+      "status": "ok"
+    },
+    "dsh-skill-picker": {
+      "package": "dsh-skill-picker",
+      "downloads": 4980,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-skill-picker",
+      "status": "ok"
+    },
+    "dsh-skills-anywhere": {
+      "package": "dsh-skills-anywhere",
+      "downloads": 4335,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-skills-anywhere",
+      "status": "ok"
+    },
+    "dsh-skin-market": {
+      "package": "dsh-skin-market",
+      "downloads": 7825,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-skin-market",
+      "status": "ok"
+    },
+    "dsh-smooth-cursor": {
+      "package": "dsh-smooth-cursor",
+      "downloads": 1149,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-smooth-cursor",
+      "status": "ok"
+    },
+    "dsh-smooth-stream": {
+      "package": "dsh-smooth-stream",
+      "downloads": 4289,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-smooth-stream",
+      "status": "ok"
+    },
+    "dsh-ssh-ops": {
+      "package": "dsh-ssh-ops",
+      "downloads": 4500,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-ssh-ops",
+      "status": "ok"
+    },
+    "dsh-status-rotator": {
+      "package": "dsh-status-rotator",
+      "downloads": 11601,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-status-rotator",
+      "status": "ok"
+    },
+    "dsh-streamfold": {
+      "package": "dsh-streamfold",
+      "downloads": 2150,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-streamfold",
+      "status": "ok"
+    },
+    "dsh-superpowers": {
+      "package": "dsh-superpowers",
+      "downloads": 708,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-superpowers",
+      "status": "ok"
+    },
+    "dsh-tabbit": {
+      "package": "dsh-tabbit",
+      "downloads": 1882,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-tabbit",
+      "status": "ok"
+    },
+    "dsh-taskboard": {
+      "package": "dsh-taskboard",
+      "downloads": 6544,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-taskboard",
+      "status": "ok"
+    },
+    "dsh-tavern": {
+      "package": "dsh-tavern",
+      "downloads": 7794,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-tavern",
+      "status": "ok"
+    },
+    "dsh-theme-firefly": {
+      "package": "dsh-theme-firefly",
+      "downloads": 3571,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-theme-firefly",
+      "status": "ok"
+    },
+    "dsh-theme-mineradio": {
+      "package": "dsh-theme-mineradio",
+      "downloads": 4698,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-theme-mineradio",
+      "status": "ok"
+    },
+    "dsh-think-translate": {
+      "package": "dsh-think-translate",
+      "downloads": 2797,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-think-translate",
+      "status": "ok"
+    },
+    "dsh-thoughtdag": {
+      "package": "dsh-thoughtdag",
+      "downloads": 6861,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-thoughtdag",
+      "status": "ok"
+    },
+    "dsh-tinyfish": {
+      "package": "dsh-tinyfish",
+      "downloads": 5185,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-tinyfish",
+      "status": "ok"
+    },
+    "dsh-tinyfish-search": {
+      "package": "dsh-tinyfish-search",
+      "downloads": 3291,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-tinyfish-search",
+      "status": "ok"
+    },
+    "dsh-token-pet": {
+      "package": "dsh-token-pet",
+      "downloads": 3103,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-token-pet",
+      "status": "ok"
+    },
+    "dsh-toolbox-ui": {
+      "package": "dsh-toolbox-ui",
+      "downloads": 1361,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-toolbox-ui",
+      "status": "ok"
+    },
+    "dsh-ui-appearance": {
+      "package": "dsh-ui-appearance",
+      "downloads": 6098,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-ui-appearance",
+      "status": "ok"
+    },
+    "dsh-ui-tweaks": {
+      "package": "dsh-ui-tweaks",
+      "downloads": 4179,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-ui-tweaks",
+      "status": "ok"
+    },
+    "dsh-undo-savepoint": {
+      "package": "dsh-undo-savepoint",
+      "downloads": 3646,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-undo-savepoint",
+      "status": "ok"
+    },
+    "dsh-univer-office": {
+      "package": "dsh-univer-office",
+      "downloads": 49604,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-univer-office",
+      "status": "ok"
+    },
+    "dsh-update-checker": {
+      "package": "dsh-update-checker",
+      "downloads": 8224,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-update-checker",
+      "status": "ok"
+    },
+    "dsh-usage-state": {
+      "package": "dsh-usage-state",
+      "downloads": 2554,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-usage-state",
+      "status": "ok"
+    },
+    "dsh-usage-statistics-panel": {
+      "package": "dsh-usage-statistics-panel",
+      "downloads": 3047,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-usage-statistics-panel",
+      "status": "ok"
+    },
+    "dsh-vibe-math": {
+      "package": "dsh-vibe-math",
+      "downloads": 9669,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-vibe-math",
+      "status": "ok"
+    },
+    "dsh-vision-router": {
+      "package": "dsh-vision-router",
+      "downloads": 33003,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-vision-router",
+      "status": "ok"
+    },
+    "dsh-voice-scribe": {
+      "package": "dsh-voice-scribe",
+      "downloads": 2830,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-voice-scribe",
+      "status": "ok"
+    },
+    "dsh-wallpaper_share": {
+      "package": "dsh-wallpaper_share",
+      "downloads": 2851,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-wallpaper_share",
+      "status": "ok"
+    },
+    "dsh-watcher": {
+      "package": "dsh-watcher",
+      "downloads": 3321,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-watcher",
+      "status": "ok"
+    },
+    "dsh-web-fetch-enhanced": {
+      "package": "dsh-web-fetch-enhanced",
+      "downloads": 1670,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-web-fetch-enhanced",
+      "status": "ok"
+    },
+    "dsh-web-lan-access": {
+      "package": "dsh-web-lan-access",
+      "downloads": 1658,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-web-lan-access",
+      "status": "ok"
+    },
+    "dsh-web-mobile": {
+      "package": "dsh-web-mobile",
+      "downloads": 8109,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-web-mobile",
+      "status": "ok"
+    },
+    "dsh-wechat": {
+      "package": "dsh-wechat",
+      "downloads": 4010,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-wechat",
+      "status": "ok"
+    },
+    "dsh-whale-galgame": {
+      "package": "dsh-whale-galgame",
+      "downloads": 2123,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-whale-galgame",
+      "status": "ok"
+    },
+    "dsh-whale-girl-pet": {
+      "package": "dsh-whale-girl-pet",
+      "downloads": 5937,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-whale-girl-pet",
+      "status": "ok"
+    },
+    "dsh-whale-widget": {
+      "package": "dsh-whale-widget",
+      "downloads": 189128,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-whale-widget",
+      "status": "ok"
+    },
+    "dsh-workbuddy-connect": {
+      "package": "dsh-workbuddy-connect",
+      "downloads": 34114,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-workbuddy-connect",
+      "status": "ok"
+    },
+    "dsh-wsl-workspace": {
+      "package": "dsh-wsl-workspace",
+      "downloads": 3741,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-wsl-workspace",
+      "status": "ok"
+    },
+    "dsh-xdpool": {
+      "package": "dsh-xdpool",
+      "downloads": 756,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-xdpool",
+      "status": "ok"
+    },
+    "dsh-xiaomi-tts": {
+      "package": "dsh-xiaomi-tts",
+      "downloads": 3117,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-xiaomi-tts",
+      "status": "ok"
+    },
+    "dsh-zotero": {
+      "package": "dsh-zotero",
+      "downloads": 7270,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dsh-zotero",
+      "status": "ok"
+    },
+    "dshmarket": {
+      "package": "dshmarket",
+      "downloads": 573315,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/dshmarket",
+      "status": "ok"
+    },
+    "gongwen-skill": {
+      "package": "gongwen-skill",
+      "downloads": 3326,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/gongwen-skill",
+      "status": "ok"
+    },
+    "huaweicloud-devkit": {
+      "package": "huaweicloud-devkit",
+      "downloads": 5277,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/huaweicloud-devkit",
+      "status": "ok"
+    },
+    "memory-eternal": {
+      "package": "memory-eternal",
+      "downloads": 9772,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/memory-eternal",
+      "status": "ok"
+    },
+    "meow-cachebilling": {
+      "package": "meow-cachebilling",
+      "downloads": 3320,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/meow-cachebilling",
+      "status": "ok"
+    },
+    "meow-memory": {
+      "package": "meow-memory",
+      "downloads": 9396,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/meow-memory",
+      "status": "ok"
+    },
+    "meow-smooth": {
+      "package": "meow-smooth",
+      "downloads": 2510,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/meow-smooth",
+      "status": "ok"
+    },
+    "minecraft-dev": {
+      "package": "minecraft-dev",
+      "downloads": 2185,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/minecraft-dev",
+      "status": "ok"
+    },
+    "misakanet": {
+      "package": "misakanet",
+      "downloads": 5786,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/misakanet",
+      "status": "ok"
+    },
+    "open-sea-skin": {
+      "package": "open-sea-skin",
+      "downloads": 6142,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/open-sea-skin",
+      "status": "ok"
+    },
+    "oss-prompt-optimizer": {
+      "package": "oss-prompt-optimizer",
+      "downloads": 3539,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/oss-prompt-optimizer",
+      "status": "ok"
+    },
+    "prts-terrarchive": {
+      "package": "prts-terrarchive",
+      "downloads": 716,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/prts-terrarchive",
+      "status": "ok"
+    },
+    "sage-mem": {
+      "package": "sage-mem",
+      "downloads": 5938,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/sage-mem",
+      "status": "ok"
+    },
+    "scientific-figure-library": {
+      "package": "scientific-figure-library",
+      "downloads": 398,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/scientific-figure-library",
+      "status": "ok"
+    },
+    "search-boost": {
+      "package": "search-boost",
+      "downloads": 3245,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/search-boost",
+      "status": "ok"
+    },
+    "superpowers-dsh": {
+      "package": "superpowers-dsh",
+      "downloads": 2932,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/superpowers-dsh",
+      "status": "ok"
+    },
+    "whale-girl": {
+      "package": "whale-girl",
+      "downloads": 3051,
+      "start": "2026-09-17",
+      "end": "2026-10-16",
+      "fetchedAt": "2026-10-18T09:31:39.530Z",
+      "source": "https://api.npmjs.org/downloads/point/last-month/whale-girl",
+      "status": "ok"
+    }
+  }
+}

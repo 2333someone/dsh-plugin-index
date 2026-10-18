@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "entries": [
+    {
+      "id": "tencent-cloudbase",
+      "kind": "company",
+      "title": { "en": "Tencent CloudBase · Official", "zh": "腾讯云开发 · 官方" },
+      "packages": ["@cloudbase/dsh-plugin"],
+      "repository": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit",
+      "reviewedAt": "2026-10-18",
+      "evidence": ["https://github.com/TencentCloudBase", "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit", "https://docs.cloudbase.net/"]
+    },
+    {
+      "id": "volcengine-openviking",
+      "kind": "company",
+      "title": { "en": "Volcengine · Official", "zh": "火山引擎 · 官方" },
+      "packages": ["@openviking/dsh-memory-plugin"],
+      "repository": "https://github.com/volcengine/OpenViking",
+      "reviewedAt": "2026-10-18",
+      "evidence": ["https://github.com/volcengine", "https://github.com/volcengine/OpenViking", "https://www.openviking.ai/"]
+    },
+    {
+      "id": "tencent-qq",
+      "kind": "company",
+      "title": { "en": "Tencent QQ · Official", "zh": "腾讯 QQ · 官方" },
+      "packages": ["@tencent-connect/dsh-qqbot"],
+      "repository": "https://github.com/tencent-connect/dsh-qqbot",
+      "reviewedAt": "2026-10-18",
+      "evidence": ["https://github.com/tencent-connect", "https://github.com/tencent-connect/dsh-qqbot", "https://bot.q.qq.com/"]
+    },
+    {
+      "id": "nanmicoder",
+      "kind": "developer",
+      "title": { "en": "NanmiCoder · MediaCrawler author", "zh": "NanmiCoder · MediaCrawler 作者" },
+      "packages": ["@nanmicoder/dsh-agent-teams"],
+      "repository": "https://github.com/NanmiCoder/dsh-agent-teams",
+      "reviewedAt": "2026-10-18",
+      "evidence": ["https://github.com/NanmiCoder", "https://github.com/NanmiCoder/MediaCrawler", "https://github.com/NanmiCoder/dsh-agent-teams"]
+    },
+    {
+      "id": "archify-author",
+      "kind": "developer",
+      "title": { "en": "tt-a1i · Archify author", "zh": "tt-a1i · Archify 作者" },
+      "packages": ["@tt-a1i/archify-dsh"],
+      "repository": "https://github.com/tt-a1i/archify",
+      "reviewedAt": "2026-10-18",
+      "evidence": ["https://github.com/tt-a1i", "https://github.com/tt-a1i/archify", "https://archify.si/"]
+    }
+  ]
+}
