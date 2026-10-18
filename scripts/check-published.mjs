@@ -10,6 +10,9 @@ export function checkMarketDisplay(index, github, downloads, display, publishers
   if (display.schema !== 1 || downloads.schema !== 1 || !Number.isFinite(Date.parse(display.generatedAt))) throw new Error('Missing market snapshots');
   const now = Date.parse(display.generatedAt);
   const counts = { stars: 0, downloads: 0, identities: 0 };
+  if (index.metadata?.sortKeys?.recommended) {
+    for (const [position, plugin] of index.plugins.entries()) if (plugin.metadata?.sortKeys?.recommended !== index.plugins.length - position) throw new Error('Default recommendation order mismatch: ' + plugin.name);
+  }
   for (const plugin of index.plugins) {
     const presentation = display.plugins?.[plugin.name];
     if (!presentation) throw new Error('Missing DSH row evidence: ' + plugin.name);

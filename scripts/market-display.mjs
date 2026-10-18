@@ -1,5 +1,6 @@
 import { parseMarketIndex } from '@deepseek-ai/dsh-plugin-market-index';
 import { githubRepository, applyGitHubStars } from './github.mjs';
+import { recommendIndex } from './recommendations.mjs';
 
 const DAY = 86_400_000;
 const measured = value => value && ['ok', 'stale'].includes(value.status);
@@ -75,7 +76,7 @@ export function applyMarketDisplay(index, { github = {}, downloads = {}, publish
     return { ...plugin, ...(Object.keys(composed).length ? { description: composed } : {}), metadata: { ...plugin.metadata, labels, sortKeys } };
   });
   if (withDownloads) metadata.sortKeys[sortId] = { title: { en: 'npm downloads (30 days)', zh: 'npm 近 30 天下载量' }, order: 'desc' };
-  const result = { ...starred, metadata, plugins };
+  const result = recommendIndex({ ...starred, metadata, plugins }, {github, now});
   parseMarketIndex(result, 'https://polang233.github.io/dsh-plugin-index/index.json');
   return { index: result, display };
 }
