@@ -11,7 +11,7 @@ const index = {
     name:manifest.name,title:{en:'Market listing metric tags',zh:'市场列表彩色指标'},
     description:{en:'Move stars, downloads and update age below descriptions as colored tags. Keep versions in details. Disable to restore the original list.',zh:'将 star、下载量和带 ◷ 的更新天数放在描述下方，以彩色标签显示。版本保留在详情，停用恢复原列表。'},
     icon:'assets/logo-256.png',author:'polang233',repository:{url:'https://github.com/polang233/dsh-plugin-index',directory:'packages/market-listing-ui'},
-    versions:[{version:manifest.version,publishTimestamp:release.publishTimestamp,source:{type:'git',url:'https://github.com/polang233/dsh-plugin-index',commit:release.commit,path:'packages/market-listing-ui'},engines:{dsh:manifest.peerDependencies['@deepseek-ai/dsh']}}]
+    versions:[{version:manifest.version,publishTimestamp:release.publishTimestamp,source:{type:'git',url:'https://github.com/polang233/dsh-plugin-index',commit:release.commit,path:'packages/market-listing-ui'},engines:{dsh:manifest.engines.dsh}}]
   }]
 };
 parseMarketIndex(index,'https://polang233.github.io/dsh-plugin-index/enhancements.json');
