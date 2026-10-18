@@ -18,6 +18,7 @@
     "build": "node scripts/build.mjs",
     "build:site": "node scripts/build-site.mjs",
     "validate": "node scripts/validate.mjs",
+    "check:published": "node scripts/check-published.mjs",
     "test": "node --test test/*.test.mjs",
     "preview": "node scripts/preview.mjs"
   },

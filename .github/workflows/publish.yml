@@ -18,7 +18,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -62,19 +62,22 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
+      contents: read
       pages: write
       id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
       - name: Publish validated artifact
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Check final JSON URL without redirects
+      - name: Check published catalog, icons and branding without redirects
         env:
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
-          curl --fail --silent --show-error --max-time 30 --output /tmp/index.json --write-out '%{http_code}' "${PAGE_URL%/}/index.json" > /tmp/status
-          test "$(cat /tmp/status)" = 200
-          node -e 'const d = JSON.parse(require("node:fs").readFileSync("/tmp/index.json", "utf8")); if (d.format !== 1 || !Array.isArray(d.plugins) || !d.plugins.length) process.exit(1); console.log(`Published ${d.plugins.length} plugins`);'
+          node scripts/check-published.mjs "${PAGE_URL%/}/index.json"

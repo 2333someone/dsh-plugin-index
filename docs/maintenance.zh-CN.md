@@ -39,7 +39,7 @@ pnpm exec playwright test
 
 ## 经核查的大包预算
 
-普通下载时限为每次 30 秒，完整 tar 解压流上限为 100 MiB。大型包只有固定版本并匹配 npm 完整性哈希，才能声明 `archiveReview`，最多使用每次 120 秒和 256 MiB。下载总共最多尝试三次。压缩下载仍限 64 MiB；包清单和单条 tar 扩展元数据均限 1 MiB；包括 PAX/GNU 扩展头在内最多 20,000 条目。解压字节预算包含头部、元数据、对齐及尾部内容。解析器只保留清单与文件名，不落盘解包。`status.json` 各包的 `archive` 字段同时记录声明载荷 `unpackedBytes` 和完整解压流 `decodedBytes`。
+普通下载时限为每次 30 秒，完整 tar 解压流上限为 100 MiB。大型包只有固定版本并匹配 npm 完整性哈希，才能声明 `archiveReview`，最多使用每次 120 秒和 256 MiB。下载总共最多尝试三次。压缩下载仍限 64 MiB；包清单和单条 tar 扩展元数据均限 1 MiB；包括 PAX/GNU 扩展头在内最多 20,000 条目。解压字节预算包含头部、元数据、对齐及尾部内容。解析器只保留清单、文件名与受限显示文件，不落盘解包。`status.json` 各包的 `archive` 字段同时记录声明载荷 `unpackedBytes` 和完整解压流 `decodedBytes`。
 
 [Univer Office 归档核查](univer-archive-review.md)记录实测大小和预算；版本或哈希变化需要重新核查。
 
@@ -65,7 +65,7 @@ GitHub Actions 使用只读 `GITHUB_TOKEN`。本地可设置 `GITHUB_TOKEN` 或 
 2. 设置仓库变量 `PUBLISH_INDEX=true`。
 3. 在 `main` 分支运行 **Check and publish index**。
 
-工作流先运行单元测试、构建目录、使用 Chromium 检查中英文网站并校验官方格式，再上传 Pages 产物。部署后会检查线上索引地址。PR 不触发部署。
+工作流先运行单元测试、构建目录、使用 Chromium 检查中英文网站并校验官方格式，再上传 Pages 产物。部署后核对完整收录集合、逐包检查记录、两种语言页面、所有引用图标的内容哈希与项目品牌图片，全部请求禁止重定向。PR 不触发部署。
 
 定时任务每六小时触发，GitHub 可能延迟任务或暂停不活跃仓库的计划；实际更新时间以线上 `status.json` 为准。定时任务直接部署产物，不自动提交代码；仓库内快照由维护者随改动提交。
 
@@ -73,6 +73,7 @@ GitHub Actions 使用只读 `GITHUB_TOKEN`。本地可设置 `GITHUB_TOKEN` 或 
 
 ```sh
 node scripts/validate.mjs https://polang233.github.io/dsh-plugin-index/index.json
+pnpm check:published
 ```
 
 DSH 默认缓存十分钟。未来绑定自有域名时，要同时更新网站地址、canonical 元数据、sitemap、复制按钮目标和文档，再校验最终 JSON 地址。

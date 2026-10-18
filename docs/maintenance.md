@@ -39,7 +39,7 @@ If a published package omits `repository`, maintainers may add `repositoryReview
 
 ## Reviewed archive budgets
 
-Ordinary downloads have a 30-second deadline and archives a 100 MiB decoded-byte limit. A large package can declare `archiveReview` only with a pinned version and matching npm integrity. It may use at most 120 seconds per attempt and 256 MiB. Downloads make at most three attempts in total. Compressed downloads remain capped at 64 MiB; package manifests and individual tar metadata records at 1 MiB; all tar headers, including PAX/GNU records, at 20,000. Decoded-byte limits include headers, metadata, padding and trailing data. The parser retains the manifest and file names, discards other content and never extracts to disk. `status.json` reports both declared payload bytes (`unpackedBytes`) and the complete tar stream (`decodedBytes`) under each package's `archive` record.
+Ordinary downloads have a 30-second deadline and archives a 100 MiB decoded-byte limit. A large package can declare `archiveReview` only with a pinned version and matching npm integrity. It may use at most 120 seconds per attempt and 256 MiB. Downloads make at most three attempts in total. Compressed downloads remain capped at 64 MiB; package manifests and individual tar metadata records at 1 MiB; all tar headers, including PAX/GNU records, at 20,000. Decoded-byte limits include headers, metadata, padding and trailing data. The parser retains the manifest, file names and bounded display files, discards other content and never extracts to disk. `status.json` reports both declared payload bytes (`unpackedBytes`) and the complete tar stream (`decodedBytes`) under each package's `archive` record.
 
 [Univer Office archive review](univer-archive-review.md) records the measured package and its budget. A changed version or integrity requires a new review.
 
@@ -65,7 +65,7 @@ If GitHub is unavailable, a verified snapshot up to seven days old is kept with 
 2. Set the repository variable `PUBLISH_INDEX=true`.
 3. Run **Check and publish index** on `main`.
 
-The workflow runs unit tests, builds the catalog, checks both website languages in Chromium and validates the official format before uploading the Pages artifact. It then checks the deployed index URL. Pull requests never deploy.
+The workflow runs unit tests, builds the catalog, checks both website languages in Chromium and validates the official format before uploading the Pages artifact. After deployment it checks the complete source allowlist, package evidence, both language pages, every referenced icon hash and the project branding assets. All requests reject redirects. Pull requests never deploy.
 
 Scheduled runs are set to every six hours; GitHub may delay or suspend schedules in inactive repositories. The timestamp in the live `status.json` is the source of truth. Scheduled artifacts are deployed directly and do not create repository commits; a checked-in snapshot changes only when a maintainer includes it in a commit.
 
@@ -73,6 +73,7 @@ The public endpoint must return 200 JSON without redirects:
 
 ```sh
 node scripts/validate.mjs https://polang233.github.io/dsh-plugin-index/index.json
+pnpm check:published
 ```
 
 DSH caches a successful index for ten minutes. If a custom domain is added later, update the site URL, canonical metadata, sitemap, copy target and documentation together, then verify the final JSON URL.
