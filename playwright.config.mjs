@@ -1,4 +1,5 @@
 import { defineConfig } from '@playwright/test';
+const previewUrl = 'http://127.0.0.1:' + (process.env.DSH_INDEX_PREVIEW_PORT ?? process.env.PORT ?? '4173') + '/dsh-plugin-index/';
 
 export default defineConfig({
   testDir: './test/browser',
@@ -7,7 +8,7 @@ export default defineConfig({
   retries: process.env.CI ? 1 : 0,
   reporter: 'list',
   use: {
-    baseURL: process.env.SITE_URL ?? 'http://127.0.0.1:4173/dsh-plugin-index/',
+    baseURL: process.env.SITE_URL ?? previewUrl,
     headless: true,
     launchOptions: process.env.BROWSER_EXECUTABLE ? { executablePath: process.env.BROWSER_EXECUTABLE } : {},
     trace: 'retain-on-failure'
@@ -18,7 +19,7 @@ export default defineConfig({
   ],
   webServer: process.env.SITE_URL ? undefined : {
     command: 'node scripts/preview.mjs',
-    url: 'http://127.0.0.1:4173/dsh-plugin-index/',
+    url: previewUrl,
     reuseExistingServer: !process.env.CI,
     timeout: 15_000
   }

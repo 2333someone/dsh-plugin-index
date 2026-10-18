@@ -43,6 +43,14 @@ Ordinary downloads have a 30-second deadline and archives a 100 MiB decoded-byte
 
 [Univer Office archive review](univer-archive-review.md) records the measured package and its budget. A changed version or integrity requires a new review.
 
+## Plugin icons and localization
+
+The build reads the SHA-512-verified package's `icon` field or exported `./icon`: SVG, PNG, JPEG or WebP, up to 256 KiB. Original artwork is stored under content-addressed paths in `public/icons/`. The official `icon` field is relative to the index URL, so DSH and the website use the same image. Missing, oversized and unsupported icons appear in `status.json` under `display.warnings`; the website falls back to an initial.
+
+Author metadata comes from `locale/en.json` and Chinese files in that directory. Editorial text in `sources.json` takes precedence. Archive inspection retains only these bounded display files in addition to the manifest and file names; it neither extracts nor executes plugins. SVG artwork must contain no external resources or active content.
+
+Set `DSH_INDEX_PREVIEW_PORT` for both the preview server and browser checks when the default local port is occupied.
+
 ## GitHub stars
 
 Each build reads the public GitHub API once per unique repository and writes `public/github.json`. It records the exact star count, fetch time and last push time. Counts also populate the official index's `github-stars` sort key, so DSH can sort by stars.

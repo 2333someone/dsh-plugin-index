@@ -94,7 +94,7 @@
           "ui"
         ],
         "sortKeys": {
-          "github-stars": 626
+          "github-stars": 628
         }
       },
       "versions": [
@@ -141,13 +141,13 @@
           "deepseek-harness"
         ],
         "sortKeys": {
-          "github-stars": 739
+          "github-stars": 741
         }
       },
       "versions": [
         {
-          "version": "5.10.7",
-          "publishTimestamp": 1792090019,
+          "version": "5.10.9",
+          "publishTimestamp": 1792311858,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org/"
@@ -181,7 +181,7 @@
           "cordis"
         ],
         "sortKeys": {
-          "github-stars": 212
+          "github-stars": 218
         }
       },
       "versions": [
@@ -301,7 +301,7 @@
           "plugin"
         ],
         "sortKeys": {
-          "github-stars": 50
+          "github-stars": 49
         }
       },
       "versions": [
@@ -522,6 +522,7 @@
         "en": "Codex Subscription",
         "zh": "Codex 订阅接入"
       },
+      "icon": "icons/3802663fb5a5ef01072b49974c633e3def4b9d251d072244a014695fd8316763.webp",
       "description": {
         "en": "Connect eligible ChatGPT and Codex subscriptions through OAuth and view account quotas in DSH.",
         "zh": "通过 OAuth 接入 ChatGPT 与 Codex 订阅模型，并查看账户额度。"
@@ -552,7 +553,7 @@
           "image-generation"
         ],
         "sortKeys": {
-          "github-stars": 194
+          "github-stars": 195
         }
       },
       "versions": [
@@ -602,13 +603,13 @@
           "language"
         ],
         "sortKeys": {
-          "github-stars": 447
+          "github-stars": 448
         }
       },
       "versions": [
         {
-          "version": "1.9.2",
-          "publishTimestamp": 1792299962,
+          "version": "1.9.3",
+          "publishTimestamp": 1792305620,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org/"
@@ -697,8 +698,8 @@
       },
       "versions": [
         {
-          "version": "0.17.0",
-          "publishTimestamp": 1792250441,
+          "version": "0.17.1",
+          "publishTimestamp": 1792309466,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org/"
@@ -756,6 +757,7 @@
         "en": "Image Viewer",
         "zh": "图片查看器"
       },
+      "icon": "icons/6d90d9b236a29a0f3e9a9e546f0f76b3b3129d1dbcf428240073b36bff0af2b7.svg",
       "description": {
         "en": "Zoom, browse, download, and annotate image regions in the DSH conversation viewer.",
         "zh": "为会话图片提供缩放、多图浏览、原图下载和区域标注。"
@@ -799,6 +801,7 @@
         "en": "Kimi Subscription",
         "zh": "Kimi 订阅接入"
       },
+      "icon": "icons/93117a0247232deeaed8d797f8939912bda3f800d1640de37b29f21c0bcba32f.webp",
       "description": {
         "en": "Connect Kimi Code subscription models using API keys or device sign-in, with web search and quota displays.",
         "zh": "接入 Kimi Code 订阅模型，支持设备登录、网页搜索和额度查询。"
@@ -1266,6 +1269,7 @@
         "en": "TinyFish Web",
         "zh": "TinyFish 网页工具"
       },
+      "icon": "icons/8b6bb5ef9582a8dec7bc73230c425e602be385795ccca5c566f05dc612b0d599.svg",
       "description": {
         "en": "Connect native web search and fetch tools to TinyFish through direct or Monid access.",
         "zh": "为网页搜索与抓取接入 TinyFish，支持直连或 Monid 通道。"
@@ -1333,7 +1337,7 @@
           "worktree"
         ],
         "sortKeys": {
-          "github-stars": 558
+          "github-stars": 560
         }
       },
       "versions": [
@@ -1399,6 +1403,7 @@
         "en": "Zotero",
         "zh": "Zotero 文献工具"
       },
+      "icon": "icons/f4e2dcbf168c126e3f907609736152316ac436cd067cee0b139f5a36d8700be6.png",
       "description": {
         "en": "Search a local Zotero library, read notes and annotations, extract evidence, and generate citations.",
         "zh": "检索本地 Zotero 文献库，读取笔记和标注，提取证据并生成引用。"

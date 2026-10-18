@@ -28,10 +28,11 @@ function archive(entries) {
   }
   return gzipSync(Buffer.concat([...chunks, Buffer.alloc(1024)]));
 }
-function fixture({ patch = true, integrity = true, version = '1.2.3' } = {}) {
-  const manifest = { name: '@example/dsh-plugin', version, dsh: { bundle: { patch: './cordis.patch.yml' } }, main: 'lib/index.js', peerDependencies: { '@deepseek-ai/dsh': '>=0.2.0 <0.3.0' } };
+function fixture({ patch = true, integrity = true, version = '1.2.3', manifestFields = {}, extraFiles = [] } = {}) {
+  const manifest = { name: '@example/dsh-plugin', version, dsh: { bundle: { patch: './cordis.patch.yml' } }, main: 'lib/index.js', peerDependencies: { '@deepseek-ai/dsh': '>=0.2.0 <0.3.0' }, ...manifestFields };
   const entries = [['package/package.json', JSON.stringify(manifest)], ['package/lib/index.js', 'throw new Error("This must never execute");']];
   if (patch) entries.push(['package/cordis.patch.yml', '- id: example']);
+  entries.push(...extraFiles.map(([path, value]) => ['package/' + path, value]));
   const bytes = archive(entries);
   const metadata = { 'dist-tags': { latest: manifest.version }, time: { [version]: '2026-01-01T00:00:00Z' }, versions: { [version]: { ...manifest, dist: { tarball: 'https://registry.npmjs.org/@example/plugin.tgz', integrity: integrity ? `sha512-${createHash('sha512').update(bytes).digest('base64')}` : 'sha512-invalid' } } } };
   return { manifest, fetchImpl: async (url, opts) => {
@@ -230,4 +231,44 @@ test('PAX size precedence cannot hide an oversized manifest body', async () => {
 });
 test('publication time comes from registry rather than generation time', async () => {
   await assert.rejects(collectPackage(config.packages[0], { ...fixture(), now: 0 }), /publication date/);
+});
+
+test('published icons and bilingual package locales survive official parsing', async () => {
+  const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 0h16v16H0z" fill="#2458c6"/></svg>';
+  const source = fixture({
+    manifestFields: {exports: {'./icon': {import: './assets/mark.svg'}, './locale/*': './locale/*'}},
+    extraFiles: [
+      ['assets/mark.svg', svg],
+      ['locale/en.json', JSON.stringify({meta: {title: 'Author title', description: 'Author description.'}})],
+      ['locale/zh.json', JSON.stringify({meta: {title: '作者名称', description: '作者介绍。'}})]
+    ]
+  });
+  const result = await collectPackage(config.packages[0], source);
+  assert.deepEqual(result.entry.title, {en: 'Author title', zh: '作者名称'});
+  assert.deepEqual(result.entry.description, {en: 'Author description.', zh: '作者介绍。'});
+  assert.match(result.entry.icon, /^icons\/[a-f0-9]{64}\.svg$/);
+  assert.equal(result.assets[0].bytes.toString(), svg);
+  assert.equal(result.evidence.display.icon.status, 'included');
+  const parsed = parseMarketIndex({...config, format: 1, plugins: [result.entry]}, 'https://example.org/catalog/index.json');
+  assert.equal(parsed.plugins[0].icon, 'https://example.org/catalog/' + result.entry.icon);
+  const edited = await collectPackage({...config.packages[0], title: {en: 'Reviewed title'}, description: {en: 'Reviewed description.'}}, source);
+  assert.equal(edited.entry.title.en, 'Reviewed title');
+  assert.equal(edited.entry.description.en, 'Reviewed description.');
+});
+
+test('missing, oversized and active icons do not replace a usable package entry', async () => {
+  for (const [path, content] of [
+    ['missing.svg', undefined],
+    ['icon.svg', '<svg xmlns="http://www.w3.org/2000/svg"><script>alert(1)</script></svg>'],
+    ['icon.svg', '<svg xmlns="http://www.w3.org/2000/svg"><use href="https://example.org/icon.svg#x"/></svg>'],
+    ['icon.png', 'x'.repeat(256 * 1024 + 1)],
+    ['../outside.svg', '<svg/>']
+  ]) {
+    const extraFiles = content !== undefined && !path.startsWith('..') ? [[path, content]] : [];
+    const result = await collectPackage(config.packages[0], fixture({manifestFields: {icon: './' + path}, extraFiles}));
+    assert.equal(result.entry.icon, undefined);
+    assert.equal(result.assets.length, 0);
+    assert.equal(result.evidence.display.icon.status, 'omitted');
+    assert.ok(result.evidence.display.warnings.length);
+  }
 });

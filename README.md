@@ -22,7 +22,7 @@ If Discover is missing, enable DSH's **Custom plugin markets** bundle first. DSH
 
 ## What's included
 
-The directory covers interface tools, skills, memory, providers, usage tracking, integrations and themes. Entries have English and Chinese descriptions, links to their source, and exact npm versions.
+The directory covers interface tools, skills, memory, providers, usage tracking, integrations and themes. Entries link to their source and exact npm versions, with author icons and localized names and descriptions when available.
 
 GitHub stars appear beside each entry and link to the repository's stargazers. DSH can also sort by stars. Counts refresh during builds; a failed request keeps a dated recent snapshot or shows the count as unavailable, never as a fabricated zero.
 

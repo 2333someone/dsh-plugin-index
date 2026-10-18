@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-18T06:37:57.385Z",
+  "generatedAt": "2026-10-18T08:27:34.052Z",
   "repositories": {
     "baroncyrus/dsh-kimi-subscription": {
       "url": "https://github.com/BaronCyrus/dsh-kimi-subscription",
       "status": "ok",
       "stars": 3,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-17T12:07:15Z",
       "archived": false
     },
@@ -14,7 +14,7 @@
       "url": "https://github.com/cheshireez/dsh-skill-hub",
       "status": "ok",
       "stars": 30,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-17T02:45:34Z",
       "archived": false
     },
@@ -22,15 +22,15 @@
       "url": "https://github.com/codeAnqiang-ma/dsh-superpowers",
       "status": "ok",
       "stars": 10,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-08-13T16:48:29Z",
       "archived": false
     },
     "dream-num/dsh-univer-office": {
       "url": "https://github.com/dream-num/dsh-univer-office",
       "status": "ok",
-      "stars": 558,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "stars": 560,
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-08T08:36:16Z",
       "archived": false
     },
@@ -38,7 +38,7 @@
       "url": "https://github.com/Duskriver/dsh-opencode-go",
       "status": "ok",
       "stars": 151,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-17T17:46:20Z",
       "archived": false
     },
@@ -46,23 +46,23 @@
       "url": "https://github.com/gezi-wen/sage-mem",
       "status": "ok",
       "stars": 12,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-17T02:55:29Z",
       "archived": false
     },
     "han-1413141/dsh-cost-meter": {
       "url": "https://github.com/Han-1413141/dsh-cost-meter",
       "status": "ok",
-      "stars": 447,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
-      "pushedAt": "2026-10-18T06:34:12Z",
+      "stars": 448,
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
+      "pushedAt": "2026-10-18T08:25:23Z",
       "archived": false
     },
     "kw78/dsh-office-tools": {
       "url": "https://github.com/kw78/dsh-office-tools",
       "status": "ok",
       "stars": 32,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-13T07:07:54Z",
       "archived": false
     },
@@ -70,7 +70,7 @@
       "url": "https://github.com/Lacquervii/smooth-cursor",
       "status": "ok",
       "stars": 3,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-09-09T05:43:14Z",
       "archived": false
     },
@@ -78,23 +78,23 @@
       "url": "https://github.com/LAU-MARS/dsh-cad",
       "status": "ok",
       "stars": 18,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-18T05:59:57Z",
       "archived": false
     },
     "liustack/modsearch": {
       "url": "https://github.com/liustack/modsearch",
       "status": "ok",
-      "stars": 739,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
-      "pushedAt": "2026-10-15T18:43:32Z",
+      "stars": 741,
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
+      "pushedAt": "2026-10-18T08:22:32Z",
       "archived": false
     },
     "lyaxz/dsh-fonttune": {
       "url": "https://github.com/LyaxZ/dsh-fonttune",
       "status": "ok",
       "stars": 7,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-17T10:09:56Z",
       "archived": false
     },
@@ -102,15 +102,15 @@
       "url": "https://github.com/LyaxZ/dsh-quick-toc",
       "status": "ok",
       "stars": 1,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-16T13:56:54Z",
       "archived": false
     },
     "michengai/dsh-skills-manager": {
       "url": "https://github.com/MichengAI/dsh-skills-manager",
       "status": "ok",
-      "stars": 212,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "stars": 218,
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-18T03:40:26Z",
       "archived": false
     },
@@ -118,7 +118,7 @@
       "url": "https://github.com/noteflowai/dsh-skills-anywhere",
       "status": "ok",
       "stars": 6,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-11T09:25:53Z",
       "archived": false
     },
@@ -126,15 +126,15 @@
       "url": "https://github.com/Nwflower/dsh-chat-import",
       "status": "ok",
       "stars": 238,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-17T12:56:35Z",
       "archived": false
     },
     "omdsh-dev/dsh-genui": {
       "url": "https://github.com/omdsh-dev/dsh-genui",
       "status": "ok",
-      "stars": 626,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "stars": 628,
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-17T15:57:56Z",
       "archived": false
     },
@@ -142,7 +142,7 @@
       "url": "https://github.com/omdsh-dev/dsh-mnemon",
       "status": "ok",
       "stars": 579,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-17T19:40:05Z",
       "archived": false
     },
@@ -150,15 +150,15 @@
       "url": "https://github.com/PerryLink/dsh-cert-mcp",
       "status": "ok",
       "stars": 0,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
-      "pushedAt": "2026-10-12T13:51:44Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
+      "pushedAt": "2026-10-18T08:22:05Z",
       "archived": false
     },
     "perrylink/dsh-memento": {
       "url": "https://github.com/PerryLink/dsh-memento",
       "status": "ok",
       "stars": 136,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-12T15:17:25Z",
       "archived": false
     },
@@ -166,15 +166,15 @@
       "url": "https://github.com/shengsheng90/DSH-taskboard",
       "status": "ok",
       "stars": 336,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-13T07:32:18Z",
       "archived": false
     },
     "songoao25/dsh-bottom-info-bar": {
       "url": "https://github.com/songoao25/dsh-bottom-info-bar",
       "status": "ok",
-      "stars": 50,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "stars": 49,
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-17T07:35:13Z",
       "archived": false
     },
@@ -182,7 +182,7 @@
       "url": "https://github.com/STARDUSTLC666/dsh-calendar",
       "status": "ok",
       "stars": 4,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-17T15:15:20Z",
       "archived": false
     },
@@ -190,15 +190,15 @@
       "url": "https://github.com/STARDUSTLC666/dsh-email",
       "status": "ok",
       "stars": 21,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
-      "pushedAt": "2026-10-17T15:15:15Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
+      "pushedAt": "2026-10-18T07:42:41Z",
       "archived": false
     },
     "takboo/dsh-usage-state": {
       "url": "https://github.com/takboo/dsh-usage-state",
       "status": "ok",
       "stars": 0,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-17T11:34:33Z",
       "archived": false
     },
@@ -206,7 +206,7 @@
       "url": "https://github.com/Tkingxiao/dsh-any-background",
       "status": "ok",
       "stars": 43,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-17T15:19:50Z",
       "archived": false
     },
@@ -214,7 +214,7 @@
       "url": "https://github.com/viztor/dsh-tinyfish",
       "status": "ok",
       "stars": 1,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-17T10:38:29Z",
       "archived": false
     },
@@ -222,15 +222,15 @@
       "url": "https://github.com/Vncntvx/dsh-zotero",
       "status": "ok",
       "stars": 37,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-17T10:46:50Z",
       "archived": false
     },
     "wsl043/dsh-codex-subscription": {
       "url": "https://github.com/WSL043/dsh-codex-subscription",
       "status": "ok",
-      "stars": 194,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "stars": 195,
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-18T05:58:09Z",
       "archived": false
     },
@@ -238,7 +238,7 @@
       "url": "https://github.com/WSL043/dsh-image-viewer",
       "status": "ok",
       "stars": 2,
-      "fetchedAt": "2026-10-18T06:37:57.385Z",
+      "fetchedAt": "2026-10-18T08:27:34.052Z",
       "pushedAt": "2026-10-17T11:20:03Z",
       "archived": false
     }

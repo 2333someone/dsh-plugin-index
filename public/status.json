@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T06:37:57.383Z",
+  "generatedAt": "2026-10-18T08:27:34.037Z",
   "validator": {
     "name": "@deepseek-ai/dsh-plugin-market-index",
     "version": "0.2.1-rc.2"
@@ -18,6 +18,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 215,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 2724709,
         "unpackedBytes": 9002551,
@@ -43,21 +50,29 @@
     },
     {
       "name": "@liustack/modsearch",
-      "version": "5.10.7",
+      "version": "5.10.9",
       "license": "MIT",
       "repository": "https://github.com/liustack/modsearch",
       "repositorySource": "package",
+      "sourceCommit": "b1bcd699abea8aaa4265208760ecad286479d107",
       "metadataUrl": "https://registry.npmjs.org/%40liustack%2Fmodsearch",
-      "tarball": "https://registry.npmjs.org/@liustack/modsearch/-/modsearch-5.10.7.tgz",
-      "integrity": "sha512-DrgRTxYX3SRetb93+rrXyksk84U4T81kBi95ulLo9D7ff7xry5GE5TqZsuNK/Y/mygn73qNQbREWF3favg9PLw==",
+      "tarball": "https://registry.npmjs.org/@liustack/modsearch/-/modsearch-5.10.9.tgz",
+      "integrity": "sha512-Ts8acAPhia7i0nOf1HmWsBZ4fFLOXCkFSA75edxtkIUnr7+m2LmJEZ2T7lttZzJdD9jGVvXcCoGKUGpzlL+vzw==",
       "patch": [
         "package/cordis.patch.yml"
       ],
       "filesChecked": 36,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
-        "compressedBytes": 166012,
-        "unpackedBytes": 503464,
-        "decodedBytes": 532480,
+        "compressedBytes": 166988,
+        "unpackedBytes": 505977,
+        "decodedBytes": 535040,
         "entries": 36,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -82,6 +97,7 @@
       "license": "Apache-2.0",
       "repository": "https://github.com/MichengAI/dsh-skills-manager",
       "repositorySource": "package",
+      "sourceCommit": "4344f03e46a39316e82ff8b0fbb255966a7b3529",
       "metadataUrl": "https://registry.npmjs.org/%40michengai%2Fdsh-skills-manager",
       "tarball": "https://registry.npmjs.org/@michengai/dsh-skills-manager/-/dsh-skills-manager-1.2.6.tgz",
       "integrity": "sha512-PvW3flyh7a3fL7uc1JB+xdzxLzk44Mh01U+FIcmNVhNcRRJGf0sZkYZuC09Z2GXV9eZaOVrzrekezKi0gkuP2A==",
@@ -89,6 +105,16 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 49,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [
+          "en",
+          "zh"
+        ],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 1023767,
         "unpackedBytes": 1464561,
@@ -132,6 +158,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 134,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 929636,
         "unpackedBytes": 2406077,
@@ -161,6 +194,7 @@
       "license": "MIT",
       "repository": "https://github.com/Tkingxiao/dsh-any-background",
       "repositorySource": "package",
+      "sourceCommit": "bf36b0938ea7eab2d76faa5ca727c870ace39deb",
       "metadataUrl": "https://registry.npmjs.org/dsh-any-background",
       "tarball": "https://registry.npmjs.org/dsh-any-background/-/dsh-any-background-0.3.8.tgz",
       "integrity": "sha512-Yg/dqWgTP0timSmUe3EviQp9JK1VFmIeTrbJ3P86B7OR+F/XFdcuMsBAVidcsLwyE/vLKEQvfuT1WWc2FYPlJg==",
@@ -168,6 +202,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 8,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 380316,
         "unpackedBytes": 1416269,
@@ -197,6 +238,7 @@
       "license": "MIT",
       "repository": "https://github.com/songoao25/dsh-bottom-info-bar",
       "repositorySource": "package",
+      "sourceCommit": "04a901a2b19264b7600862b027693a5ddb08fb3c",
       "metadataUrl": "https://registry.npmjs.org/dsh-bottom-info-bar",
       "tarball": "https://registry.npmjs.org/dsh-bottom-info-bar/-/dsh-bottom-info-bar-1.21.8.tgz",
       "integrity": "sha512-1zlHCS8OE8Ri5cFK0PwWiK58iCHRSWz2yIftMj69bjRzss7RqB768WlQ+jevNB6X6vhS3KLmNBbqZFeHM/pcGA==",
@@ -204,6 +246,16 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 28,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [
+          "en",
+          "zh"
+        ],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 445457,
         "unpackedBytes": 1585551,
@@ -233,6 +285,7 @@
       "license": "MIT",
       "repository": "https://github.com/LAU-MARS/dsh-cad",
       "repositorySource": "package",
+      "sourceCommit": "09798da470eef64359371efd1f4c0d8f3e991626",
       "metadataUrl": "https://registry.npmjs.org/dsh-cad",
       "tarball": "https://registry.npmjs.org/dsh-cad/-/dsh-cad-0.13.2.tgz",
       "integrity": "sha512-hg+yluuA6pw759wxtiKl8PgUVgFpEwrx6FCuSv/QKinj7lEy2Xt87rL7weNmNblSIlxqr5IMEMuxuQak4TEEKw==",
@@ -240,6 +293,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 130,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 990027,
         "unpackedBytes": 4543031,
@@ -269,6 +329,7 @@
       "license": "MIT",
       "repository": "https://github.com/STARDUSTLC666/dsh-calendar",
       "repositorySource": "package",
+      "sourceCommit": "78ccca4cb49c09b1a11771bc08c97ec0f6798510",
       "metadataUrl": "https://registry.npmjs.org/dsh-calendar",
       "tarball": "https://registry.npmjs.org/dsh-calendar/-/dsh-calendar-0.11.0.tgz",
       "integrity": "sha512-RV7G23ZdPbuwewg+7vJfXIlNDxOeiOrjS0Cg24MXmCC642Y+ZsDg5oZR5KdpATV2CbH8YdotvAKqq8s4BMxMeA==",
@@ -276,6 +337,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 47,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 144647,
         "unpackedBytes": 436006,
@@ -305,6 +373,7 @@
       "license": "Apache-2.0",
       "repository": "https://github.com/PerryLink/dsh-cert-mcp",
       "repositorySource": "package",
+      "sourceCommit": "70daa3ccb8d14c9be6b48ae7d9675e1ed9a641ad",
       "metadataUrl": "https://registry.npmjs.org/dsh-cert-mcp",
       "tarball": "https://registry.npmjs.org/dsh-cert-mcp/-/dsh-cert-mcp-0.2.6.tgz",
       "integrity": "sha512-Vg9x6RmhXJI4B9iSZLH5qPQoPD76EYmb/+HMcJX6HHQ6uf40JM6nxMxH/P7k+G4iymaTALDPQ7Jjc0HX7UI4xQ==",
@@ -312,6 +381,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 14,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 38405,
         "unpackedBytes": 134698,
@@ -341,6 +417,7 @@
       "license": "MIT",
       "repository": "https://github.com/Nwflower/dsh-chat-import",
       "repositorySource": "package",
+      "sourceCommit": "d207a59719c6c004c3b04d66f0837dc67d6d1d91",
       "metadataUrl": "https://registry.npmjs.org/dsh-chat-import",
       "tarball": "https://registry.npmjs.org/dsh-chat-import/-/dsh-chat-import-0.26.1.tgz",
       "integrity": "sha512-g82hA/pcwAkZn/7bJo/6yGgfJ7gWbC0ljiyNGccEDspq1SWxuzsufPP963jCB8S0GHh9X0XgeW26SVDfhz6Hdg==",
@@ -348,6 +425,18 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 186,
+      "display": {
+        "icon": {
+          "status": "omitted"
+        },
+        "localized": [],
+        "warnings": [
+          {
+            "path": "package/assets/import.svg",
+            "reason": "SVG contains unsupported active content"
+          }
+        ]
+      },
       "archive": {
         "compressedBytes": 1262556,
         "unpackedBytes": 2831530,
@@ -384,6 +473,22 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 14,
+      "display": {
+        "icon": {
+          "status": "included",
+          "source": "published-package",
+          "path": "icon-subscription.webp",
+          "url": "icons/3802663fb5a5ef01072b49974c633e3def4b9d251d072244a014695fd8316763.webp",
+          "mime": "image/webp",
+          "bytes": 29122,
+          "sha256": "3802663fb5a5ef01072b49974c633e3def4b9d251d072244a014695fd8316763"
+        },
+        "localized": [
+          "en",
+          "zh"
+        ],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 359636,
         "unpackedBytes": 1322009,
@@ -409,22 +514,32 @@
     },
     {
       "name": "dsh-cost-meter",
-      "version": "1.9.2",
+      "version": "1.9.3",
       "license": "MIT",
       "repository": "https://github.com/Han-1413141/dsh-cost-meter",
       "repositorySource": "package",
       "metadataUrl": "https://registry.npmjs.org/dsh-cost-meter",
-      "tarball": "https://registry.npmjs.org/dsh-cost-meter/-/dsh-cost-meter-1.9.2.tgz",
-      "integrity": "sha512-TsrhU5wIV5I96ScYye04KZ+pRf7oprW8v/5hYbFCXUpfJwW11LUqVPN3/mU4QouwRHssF0whb9U//rgk0D+nKg==",
+      "tarball": "https://registry.npmjs.org/dsh-cost-meter/-/dsh-cost-meter-1.9.3.tgz",
+      "integrity": "sha512-GMdkvxI3faBl9akKyPp2g6dOEXgUhq6yoNfn8xdkkA5L/HHnVuMm1bwBasQs/l+yK9kPfoyqd3xolqo9+JJOiQ==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 135,
+      "filesChecked": 136,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [
+          "en",
+          "zh"
+        ],
+        "warnings": []
+      },
       "archive": {
-        "compressedBytes": 1058644,
-        "unpackedBytes": 2832836,
-        "decodedBytes": 2939904,
-        "entries": 135,
+        "compressedBytes": 1059548,
+        "unpackedBytes": 2831941,
+        "decodedBytes": 2939392,
+        "entries": 136,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -449,6 +564,7 @@
       "license": "MIT",
       "repository": "https://gitee.com/darren_ho/dsh-plugins",
       "repositorySource": "package",
+      "sourceCommit": "b466aa339155606883562c2c79b073a3bdf96ba7",
       "metadataUrl": "https://registry.npmjs.org/dsh-dhe-lore",
       "tarball": "https://registry.npmjs.org/dsh-dhe-lore/-/dsh-dhe-lore-0.5.1.tgz",
       "integrity": "sha512-72/hgTxqjCWMKH7DB+nvgKagsdujKJMNDpQ+vXkzkbq6C0yKw+/Ntcun4YpKioE/y4teV6KlAzJp/IiGjPLD5Q==",
@@ -456,6 +572,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 23,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 194849,
         "unpackedBytes": 606461,
@@ -481,22 +604,29 @@
     },
     {
       "name": "dsh-email",
-      "version": "0.17.0",
+      "version": "0.17.1",
       "license": "MIT",
       "repository": "https://github.com/STARDUSTLC666/dsh-email",
       "repositorySource": "package",
       "metadataUrl": "https://registry.npmjs.org/dsh-email",
-      "tarball": "https://registry.npmjs.org/dsh-email/-/dsh-email-0.17.0.tgz",
-      "integrity": "sha512-EsMrgIbS56w205L3flD55MeoBrQOc08Ej8Ngiut96rXt22caA4JAmB8/vRRSKJEpWm67D0A2/XXLWiAsO0+REw==",
+      "tarball": "https://registry.npmjs.org/dsh-email/-/dsh-email-0.17.1.tgz",
+      "integrity": "sha512-M5tHnAFB7pOwzcVxGwzYkARHwo/S/yLSChw/50uROggaisuh5kPFfRi1KpHefQX49o4BHMQs2hAoiBKTIT2tKA==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 58,
+      "filesChecked": 59,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
-        "compressedBytes": 468897,
-        "unpackedBytes": 944406,
-        "decodedBytes": 990208,
-        "entries": 58,
+        "compressedBytes": 470740,
+        "unpackedBytes": 950334,
+        "decodedBytes": 997888,
+        "entries": 59,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -521,6 +651,7 @@
       "license": "MIT",
       "repository": "https://github.com/LyaxZ/dsh-fonttune",
       "repositorySource": "package",
+      "sourceCommit": "fc8186a67e39ed4c797be2d5ced4a0d14a002911",
       "metadataUrl": "https://registry.npmjs.org/dsh-fonttune",
       "tarball": "https://registry.npmjs.org/dsh-fonttune/-/dsh-fonttune-0.6.2.tgz",
       "integrity": "sha512-Rhy1Ha9GvGWuoSTPD+vd8zKgXke1/vLTUVZdBD7whcw3BdQ9VlSbZGGBurSpnYMozdAMrjIIbRuRFiPTbLMwsw==",
@@ -528,6 +659,16 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 14,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [
+          "en",
+          "zh"
+        ],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 412102,
         "unpackedBytes": 1089847,
@@ -564,6 +705,22 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 16,
+      "display": {
+        "icon": {
+          "status": "included",
+          "source": "published-package",
+          "path": "assets/icon.svg",
+          "url": "icons/6d90d9b236a29a0f3e9a9e546f0f76b3b3129d1dbcf428240073b36bff0af2b7.svg",
+          "mime": "image/svg+xml",
+          "bytes": 1061,
+          "sha256": "6d90d9b236a29a0f3e9a9e546f0f76b3b3129d1dbcf428240073b36bff0af2b7"
+        },
+        "localized": [
+          "en",
+          "zh"
+        ],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 43642,
         "unpackedBytes": 152585,
@@ -593,6 +750,7 @@
       "license": "MIT",
       "repository": "https://github.com/BaronCyrus/dsh-kimi-subscription",
       "repositorySource": "package",
+      "sourceCommit": "a46921f063b967ca1212a1e302ab7c6e99315f12",
       "metadataUrl": "https://registry.npmjs.org/dsh-kimi-subscription",
       "tarball": "https://registry.npmjs.org/dsh-kimi-subscription/-/dsh-kimi-subscription-1.3.10.tgz",
       "integrity": "sha512-j/9SIFqN5DO46NmOyGTN9t7MFr2J9Tevv7BckWlWToS4ll5MEg5VwESjdf+u2LiBXdXmihprZyMZoakDa1DOeQ==",
@@ -600,6 +758,22 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 18,
+      "display": {
+        "icon": {
+          "status": "included",
+          "source": "published-package",
+          "path": "icon-subscription.webp",
+          "url": "icons/93117a0247232deeaed8d797f8939912bda3f800d1640de37b29f21c0bcba32f.webp",
+          "mime": "image/webp",
+          "bytes": 208698,
+          "sha256": "93117a0247232deeaed8d797f8939912bda3f800d1640de37b29f21c0bcba32f"
+        },
+        "localized": [
+          "en",
+          "zh"
+        ],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 1904719,
         "unpackedBytes": 2079571,
@@ -629,6 +803,7 @@
       "license": "Apache-2.0",
       "repository": "https://github.com/PerryLink/dsh-memento",
       "repositorySource": "package",
+      "sourceCommit": "27696ae48125bd36bfb68d174ca72b96ca2ad7de",
       "metadataUrl": "https://registry.npmjs.org/dsh-memento",
       "tarball": "https://registry.npmjs.org/dsh-memento/-/dsh-memento-0.5.25.tgz",
       "integrity": "sha512-UBQ/ZhEScuRK/TKpIefXeFVkSGBiNV4q+mol8SO6f4P7ujwKpxUH+isIM72lndoprRw6uU5qi5zxKkJc22zJ3Q==",
@@ -636,6 +811,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 44,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 222944,
         "unpackedBytes": 700412,
@@ -672,6 +854,16 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 66,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [
+          "en",
+          "zh"
+        ],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 479510,
         "unpackedBytes": 2033722,
@@ -701,6 +893,7 @@
       "license": "MIT",
       "repository": "https://github.com/kw78/dsh-office-tools",
       "repositorySource": "package",
+      "sourceCommit": "6c9faa36409961226623480c0ba6ef8fd6313beb",
       "metadataUrl": "https://registry.npmjs.org/dsh-office-tools",
       "tarball": "https://registry.npmjs.org/dsh-office-tools/-/dsh-office-tools-1.0.6.tgz",
       "integrity": "sha512-o48Ddpy7AqTLXTIvsTXkN0VST7EaXaNL7VnBQfHqa9/Hu2cGa+gBWpoJDxDMPFXlkUKalKkvLv8d7xV4ZzN67A==",
@@ -708,6 +901,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 17,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 42511,
         "unpackedBytes": 160994,
@@ -744,6 +944,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 86,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 1238738,
         "unpackedBytes": 3795951,
@@ -773,6 +980,7 @@
       "license": "MIT",
       "repository": "https://github.com/LyaxZ/dsh-quick-toc",
       "repositorySource": "package",
+      "sourceCommit": "9a53049d0b4bbb28b9d6cac628c8b8c77c2e4d68",
       "metadataUrl": "https://registry.npmjs.org/dsh-quick-toc",
       "tarball": "https://registry.npmjs.org/dsh-quick-toc/-/dsh-quick-toc-0.9.5.tgz",
       "integrity": "sha512-P7UVYf/Asank5OaM3TXWteNrcJBDdZUPKsZ2GFulm+u0RQhDbO+KSSTRp9uWu+XqNjFT/fmFO0Lb52SGoN4pNg==",
@@ -780,6 +988,16 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 11,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [
+          "en",
+          "zh"
+        ],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 170589,
         "unpackedBytes": 569276,
@@ -809,6 +1027,7 @@
       "license": "MIT",
       "repository": "https://github.com/cheshireez/dsh-skill-hub",
       "repositorySource": "package",
+      "sourceCommit": "e9adeb887d35c54445c422761cc3c0bc4a3b8a90",
       "metadataUrl": "https://registry.npmjs.org/dsh-skill-hub",
       "tarball": "https://registry.npmjs.org/dsh-skill-hub/-/dsh-skill-hub-0.3.23.tgz",
       "integrity": "sha512-Bbt5nNNKQJK2VV19xuddhbnQxWzcu5MxHrtfST4xCEm3XZIgJtK1TecDnCFB6ovw2Oc1+fCDlitBU/f2iGDWsw==",
@@ -816,6 +1035,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 215,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 551867,
         "unpackedBytes": 2189556,
@@ -852,6 +1078,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 22,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 94242,
         "unpackedBytes": 304571,
@@ -881,6 +1114,7 @@
       "license": "MIT",
       "repository": "https://github.com/Lacquervii/smooth-cursor",
       "repositorySource": "package",
+      "sourceCommit": "e01726abe318bab2765ce5c3d82ecf8ed8176a08",
       "metadataUrl": "https://registry.npmjs.org/dsh-smooth-cursor",
       "tarball": "https://registry.npmjs.org/dsh-smooth-cursor/-/dsh-smooth-cursor-0.1.9.tgz",
       "integrity": "sha512-5EcHmRDKQ3bueMOWSmzKAGOvtDhzIKh/LBGdbvaw1Oiy0qfTeZCnOnKR/CmKWlBsw2FZq97GsrwkSeTN3z+jTw==",
@@ -888,6 +1122,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 22,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 54507,
         "unpackedBytes": 197864,
@@ -917,6 +1158,7 @@
       "license": "MIT",
       "repository": "https://github.com/codeAnqiang-ma/dsh-superpowers",
       "repositorySource": "package",
+      "sourceCommit": "f2785c52e18485ae3187216bc82ad79f4bfeaf1a",
       "metadataUrl": "https://registry.npmjs.org/dsh-superpowers",
       "tarball": "https://registry.npmjs.org/dsh-superpowers/-/dsh-superpowers-0.1.0.tgz",
       "integrity": "sha512-/BT4/Kb93rav1sgcw67Kz40BHyA6oL9t91JyL6Eubs3oSBYIN0BQpRXwmz1cMBY2HidTmee8XfPHEmRsd9xHjQ==",
@@ -924,6 +1166,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 60,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 1211049,
         "unpackedBytes": 1462582,
@@ -953,6 +1202,7 @@
       "license": "MIT",
       "repository": "https://github.com/viztor/dsh-tinyfish",
       "repositorySource": "package",
+      "sourceCommit": "25dc04e6c1809707cf2dad82a466fd131a908b8b",
       "metadataUrl": "https://registry.npmjs.org/dsh-tinyfish",
       "tarball": "https://registry.npmjs.org/dsh-tinyfish/-/dsh-tinyfish-0.13.0.tgz",
       "integrity": "sha512-jhgqxAYDuRmoBzjL+x5ZPOyEWaemP1ciCKrSdd92UbQbsEwK4kkMI6FrPqNqhmEjSq5qSMVdB68tpgXDz6Kkvg==",
@@ -960,6 +1210,22 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 12,
+      "display": {
+        "icon": {
+          "status": "included",
+          "source": "published-package",
+          "path": "icon.svg",
+          "url": "icons/8b6bb5ef9582a8dec7bc73230c425e602be385795ccca5c566f05dc612b0d599.svg",
+          "mime": "image/svg+xml",
+          "bytes": 839,
+          "sha256": "8b6bb5ef9582a8dec7bc73230c425e602be385795ccca5c566f05dc612b0d599"
+        },
+        "localized": [
+          "en",
+          "zh"
+        ],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 57966,
         "unpackedBytes": 173967,
@@ -989,6 +1255,7 @@
       "license": "Apache-2.0",
       "repository": "https://github.com/dream-num/dsh-univer-office",
       "repositorySource": "package",
+      "sourceCommit": "8f85ce4074fdbe51416b6c337468bb916a302c2a",
       "metadataUrl": "https://registry.npmjs.org/dsh-univer-office",
       "tarball": "https://registry.npmjs.org/dsh-univer-office/-/dsh-univer-office-0.3.7.tgz",
       "integrity": "sha512-2eEi35ZzTOZiFQEEuNiF68MKWGKlXhVJiaOwCO5gdgNj0ZA+VesdoRxmT8hhFspbMtPfRp/0CoSo7PwFwBbBWw==",
@@ -996,6 +1263,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 282,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 49184591,
         "unpackedBytes": 226850899,
@@ -1032,6 +1306,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 10,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 59625,
         "unpackedBytes": 191407,
@@ -1061,6 +1342,7 @@
       "license": "MIT",
       "repository": "https://github.com/Vncntvx/dsh-zotero",
       "repositorySource": "package",
+      "sourceCommit": "abb4054cc13b0a893df96294e57c667aab3fd059",
       "metadataUrl": "https://registry.npmjs.org/dsh-zotero",
       "tarball": "https://registry.npmjs.org/dsh-zotero/-/dsh-zotero-0.12.1.tgz",
       "integrity": "sha512-RmUK8LWXUNHUG2i1zbLmCUNKf4F1Wee2fv7fgIJm1p+ak8h3BJA6A0+5xdTnmAIGtg9jOlGVFJKmWrkG4PUSvg==",
@@ -1068,6 +1350,22 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 298,
+      "display": {
+        "icon": {
+          "status": "included",
+          "source": "published-package",
+          "path": "docs/images/icon.png",
+          "url": "icons/f4e2dcbf168c126e3f907609736152316ac436cd067cee0b139f5a36d8700be6.png",
+          "mime": "image/png",
+          "bytes": 60335,
+          "sha256": "f4e2dcbf168c126e3f907609736152316ac436cd067cee0b139f5a36d8700be6"
+        },
+        "localized": [
+          "en",
+          "zh"
+        ],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 687825,
         "unpackedBytes": 2799726,
@@ -1097,6 +1395,7 @@
       "license": "Apache-2.0",
       "repository": "https://github.com/gezi-wen/sage-mem",
       "repositorySource": "package",
+      "sourceCommit": "d5d2fa98452c15859636f3522ae1ce934ee88db3",
       "metadataUrl": "https://registry.npmjs.org/sage-mem",
       "tarball": "https://registry.npmjs.org/sage-mem/-/sage-mem-1.0.2.tgz",
       "integrity": "sha512-whz/0Aa7F/OLyRyU+xG+Pk5bOzeks3HPby4Ta1xLV78jeDO950Qy2u3drpG0zCer2Up3GNLRWsdkWsXKk3TzAA==",
@@ -1104,6 +1403,13 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 47,
+      "display": {
+        "icon": {
+          "status": "absent"
+        },
+        "localized": [],
+        "warnings": []
+      },
       "archive": {
         "compressedBytes": 324099,
         "unpackedBytes": 931046,

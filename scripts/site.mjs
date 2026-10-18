@@ -83,7 +83,7 @@ export function renderStars(plugin, snapshot, language) {
   const tooltip = `${repo.stars} GitHub stars · ${zh ? '获取于' : 'Fetched'} ${date}${repo.status === 'stale' ? (zh ? '（缓存，最新请求失败）' : ' (cached; latest request failed)') : ''}`;
   return `<span class="stars-group"><a class="github-stars" data-stars="${repo.stars}" href="${esc(repository.url)}/stargazers" title="${esc(tooltip)}" aria-label="${esc(tooltip)}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/></svg>${count}<span class="stars-label">GitHub</span></a>${repo.status === 'stale' ? `<small class="stars-cache">${zh ? '缓存于' : 'Cached'} ${esc(repo.fetchedAt.slice(0, 10))}</small>` : ''}</span>`;
 }
-function pluginRow(plugin, language, categories, text, snapshot) {
+function pluginRow(plugin, language, categories, text, snapshot, root) {
   const name = localize(plugin.name, language);
   const packageName = localize(plugin.name, 'en', name);
   const title = localize(plugin.title, language, name);
@@ -101,9 +101,11 @@ function pluginRow(plugin, language, categories, text, snapshot) {
   const search = [name, packageName, title, description, ...(plugin.metadata?.keywords ?? [])].join(' ');
   const date = version?.publishTimestamp != null ? dateLabel(version.publishTimestamp * 1000, language) : undefined;
   const namedTitle = title && title !== name;
+  const icon = typeof plugin.icon === 'string' && /^icons\/[a-f0-9]{64}\.(?:svg|png|jpg|webp)$/.test(plugin.icon) ? root + plugin.icon : undefined;
+  const avatar = icon ? `<img src="${esc(icon)}" alt="" width="44" height="44" loading="lazy" decoding="async">` : esc(Array.from(title || name)[0]);
   return `<li class="plugin" data-plugin data-category="${esc(categoryId)}" data-search="${esc(search)}">
     <article class="plugin-main" aria-label="${esc(title || name)}">
-      ${namedTitle ? `<h3 class="plugin-title">${esc(title)}</h3><p class="package-name">${esc(packageName)}</p>` : `<h3 class="package-name is-title">${esc(packageName)}</h3>`}
+      <div class="plugin-heading"><span class="plugin-avatar" aria-hidden="true">${avatar}</span><div>${namedTitle ? `<h3 class="plugin-title">${esc(title)}</h3><p class="package-name">${esc(packageName)}</p>` : `<h3 class="package-name is-title">${esc(packageName)}</h3>`}</div></div>
       <p class="plugin-description">${esc(description)}</p>
       <div class="plugin-links">${links.join('')}</div>
     </article>
@@ -194,7 +196,7 @@ function page(index, evidence, language, snapshot) {
         <div class="field"><label for="plugin-category">${esc(text.category)}</label><select id="plugin-category"><option value="">${esc(text.all)}</option>${categoriesHtml}${hasUncategorized ? `<option value="__uncategorized__" data-uncategorized>${esc(text.other)}</option>` : ''}</select></div>
       </form>
       <noscript><p class="no-js">${esc(text.noJs)}</p></noscript>
-      <ul class="plugin-list">${plugins.map(plugin => pluginRow(plugin, language, categories, text, snapshot)).join('\n')}</ul>
+      <ul class="plugin-list">${plugins.map(plugin => pluginRow(plugin, language, categories, text, snapshot, root)).join('\n')}</ul>
       <div class="empty" id="empty-results" ${plugins.length ? 'hidden' : ''}><h3>${esc(text.noResults)}</h3><p>${esc(text.noResultsHelp)}</p><button type="button" class="text-button" data-reset hidden>${esc(text.reset)}</button></div>
     </div></section>
     <section class="contribute shell" aria-labelledby="contribute-title">

@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import {githubRepository} from '../../scripts/github.mjs';
 
 const INDEX_URL = 'https://polang233.github.io/dsh-plugin-index/index.json';
 for (const language of ['en', 'zh']) {
@@ -27,13 +28,22 @@ for (const language of ['en', 'zh']) {
     await page.locator('#plugin-category').selectOption('');
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     const snapshot = await (await page.request.get('./github.json')).json();
+    const index = await (await page.request.get('./index.json')).json();
     const starLinks = page.locator('[data-stars]');
-    const expectedStars = Object.values(snapshot.repositories).filter(repo => ['ok', 'stale'].includes(repo.status));
+    const expectedStars = index.plugins.flatMap(plugin => {
+      const key = githubRepository(plugin.repository?.url)?.key;
+      const repo = key && snapshot.repositories[key];
+      return repo && ['ok', 'stale'].includes(repo.status) ? [repo] : [];
+    });
     await expect(starLinks).toHaveCount(expectedStars.length);
-    for (const repo of expectedStars) {
-      const link = page.locator(`[data-stars][href="${repo.url}/stargazers"]`);
-      await expect(link).toHaveAttribute('data-stars', String(repo.stars));
-      await expect(link).toHaveAttribute('title', /UTC/);
+    const actualStars = await starLinks.evaluateAll(links => links.map(link => ({href: link.href, stars: Number(link.dataset.stars), title: link.title})));
+    expect(actualStars.map(link => link.href + ':' + link.stars).sort()).toEqual(expectedStars.map(repo => repo.url + '/stargazers:' + repo.stars).sort());
+    expect(actualStars.every(link => link.title.includes('UTC'))).toBe(true);
+    const icons = page.locator('.plugin-avatar img');
+    await expect(icons).toHaveCount(index.plugins.filter(plugin => plugin.icon).length);
+    if (await icons.count()) {
+      await icons.first().scrollIntoViewIfNeeded();
+      await expect.poll(() => icons.first().evaluate(image => image.complete && image.naturalWidth > 0)).toBe(true);
     }
     await page.locator('#plugins').scrollIntoViewIfNeeded();
     await page.screenshot({ path: info.outputPath(`${language}-directory.png`) });

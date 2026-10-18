@@ -30,6 +30,10 @@ const evidence = {
 // All package downloads and validation finish before touching the last successful output.
 await mkdir(output, { recursive: true });
 await mkdir(cache, { recursive: true });
+await mkdir(new URL('icons/', output), { recursive: true });
+for (const asset of new Map(built.assets.map(asset => [asset.path, asset])).values()) {
+  await writeFile(new URL(asset.path, output), asset.bytes);
+}
 await writeFile(new URL('index.json', output), `${JSON.stringify(index, null, 2)}\n`);
 await writeFile(new URL('status.json', output), `${JSON.stringify(evidence, null, 2)}\n`);
 await writeFile(new URL('github.json', output), `${JSON.stringify(github, null, 2)}\n`);

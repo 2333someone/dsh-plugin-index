@@ -8,6 +8,7 @@ import { Parser } from 'tar';
 import semver from 'semver';
 import { parseMarketIndex } from '@deepseek-ai/dsh-plugin-market-index';
 import { archiveBudget, DEFAULT_ARCHIVE_BYTES, MAX_ARCHIVE_BYTES, DEFAULT_DOWNLOAD_TIMEOUT, MAX_DOWNLOAD_TIMEOUT } from './limits.mjs';
+import { displayFiles, packageDisplay, MAX_DISPLAY_FILE_BYTES } from './package-display.mjs';
 
 export const REGISTRY = 'https://registry.npmjs.org/';
 export const VALIDATOR_VERSION = '0.2.1-rc.2';
@@ -56,9 +57,11 @@ export function verifyIntegrity(bytes, integrity) {
   if (!hashes.includes(actual)) throw new Error('Published tarball has no matching SHA-512 integrity');
 }
 
-export async function inspectArchive(bytes, { maxUnpackedBytes = DEFAULT_ARCHIVE_BYTES } = {}) {
+export async function inspectArchive(bytes, { maxUnpackedBytes = DEFAULT_ARCHIVE_BYTES, readFiles = [] } = {}) {
   if (!Number.isSafeInteger(maxUnpackedBytes) || maxUnpackedBytes < 1 || maxUnpackedBytes > MAX_ARCHIVE_BYTES) throw new Error('Archive budget must be between 1 byte and 256 MiB');
   const files = new Set();
+  const requested = new Set(readFiles);
+  const contents = new Map();
   let manifest;
   const guard = new ArchiveGuard(maxUnpackedBytes);
   const parser = new Parser({ strict: true, maxMetaEntrySize: 1024 * 1024, onReadEntry(entry) {
@@ -79,6 +82,15 @@ export async function inspectArchive(bytes, { maxUnpackedBytes = DEFAULT_ARCHIVE
         chunks.push(chunk);
       });
       entry.on('end', () => { manifest = Buffer.concat(chunks).toString('utf8'); });
+    } else if (requested.has(entry.path) && entry.size <= MAX_DISPLAY_FILE_BYTES) {
+      const chunks = [];
+      let length = 0;
+      entry.on('data', chunk => {
+        length += chunk.length;
+        if (length > MAX_DISPLAY_FILE_BYTES) { parser.abort(new Error('Display file is too large')); return; }
+        chunks.push(chunk);
+      });
+      entry.on('end', () => { contents.set(entry.path, Buffer.concat(chunks)); });
     } else entry.resume();
     } catch (error) { parser.abort(error); }
   } });
@@ -86,7 +98,7 @@ export async function inspectArchive(bytes, { maxUnpackedBytes = DEFAULT_ARCHIVE
   if (bytes[0] === 0x1f && bytes[1] === 0x8b) await pipeline(source, createGunzip(), guard, parser);
   else await pipeline(source, guard, parser);
   if (!manifest) throw new Error('Published archive has no package/package.json');
-  return { manifest: JSON.parse(manifest), files, unpackedBytes: guard.payloadBytes, decodedBytes: guard.decodedBytes, entryCount: guard.entries };
+  return { manifest: JSON.parse(manifest), files, contents, unpackedBytes: guard.payloadBytes, decodedBytes: guard.decodedBytes, entryCount: guard.entries };
 }
 
 function packageFile(value) {
@@ -183,13 +195,19 @@ export async function collectPackage(input, { fetchImpl = fetch, now = Date.now(
   verifyIntegrity(bytes, published.dist?.integrity);
   const { manifest, files, unpackedBytes, decodedBytes, entryCount } = await inspectArchive(bytes, budget);
   const patch = checkBundle(manifest, files, input.name, version);
+  const resolved = displayFiles(manifest, files);
+  const readFiles = [resolved.icon, ...Object.values(resolved.locales)].filter(path => path && files.has(path));
+  const contents = readFiles.length ? (await inspectArchive(bytes, {...budget, readFiles})).contents : new Map();
+  const display = packageDisplay(manifest, resolved, contents);
   const repositoryInfo = resolveRepository(manifest, input, version, published.dist.integrity);
   const repository = repositoryInfo.repository;
   const author = typeof manifest.author === 'string' ? manifest.author.replace(/\s*<[^>]*>/g, '').replace(/\s*\([^)]*\)/g, '').trim() : manifest.author?.name;
-  const description = input.description ?? manifest.description;
+  const description = input.description ?? display.description ?? manifest.description;
+  const title = input.title ?? display.title;
   const entry = {
     name: manifest.name,
-    ...(input.title ? { title: input.title } : {}),
+    ...(title ? { title } : {}),
+    ...(display.icon ? { icon: display.icon } : {}),
     ...(description && (typeof description !== 'string' || description.trim()) ? { description } : {}),
     ...(typeof author === 'string' && author.trim() ? { author } : {}),
     ...(repository ? { repository } : {}),
@@ -203,7 +221,20 @@ export async function collectPackage(input, { fetchImpl = fetch, now = Date.now(
   const lifecycleScripts = Object.keys(manifest.scripts ?? {}).filter(key => ['preinstall', 'install', 'postinstall'].includes(key));
   return {
     entry,
-    evidence: { name: manifest.name, version, license: typeof manifest.license === 'string' ? manifest.license : null, repository: repository?.url ?? null, repositorySource: repositoryInfo.provenance, ...(repositoryInfo.review ? { repositoryReview: repositoryInfo.review } : {}), metadataUrl, tarball: published.dist.tarball, integrity: published.dist.integrity, patch, filesChecked: files.size, archive: { compressedBytes: bytes.length, unpackedBytes, decodedBytes, entries: entryCount, maxUnpackedBytes: budget.maxUnpackedBytes, downloadTimeoutMs: budget.timeoutMs, reviewedBudget: input.archiveReview !== undefined }, lifecycleScripts, checks: ['registry-identity', 'sha512-integrity', 'archive-manifest-identity', 'bundle-patch-present', ...(manifest.main ? ['main-file-present'] : [])], limitations: ['No runtime installation test', 'No code audit', 'Patch references and transitive dependencies are not validated'] }
+    assets: display.asset ? [display.asset] : [],
+    evidence: {
+      name: manifest.name, version,
+      license: typeof manifest.license === 'string' ? manifest.license : null,
+      repository: repository?.url ?? null, repositorySource: repositoryInfo.provenance,
+      ...(repositoryInfo.review ? {repositoryReview: repositoryInfo.review} : {}),
+      ...(typeof published.gitHead === 'string' && /^[0-9a-f]{40}$/.test(published.gitHead) ? {sourceCommit: published.gitHead} : {}),
+      metadataUrl, tarball: published.dist.tarball, integrity: published.dist.integrity,
+      patch, filesChecked: files.size, display: display.evidence,
+      archive: {compressedBytes: bytes.length, unpackedBytes, decodedBytes, entries: entryCount, maxUnpackedBytes: budget.maxUnpackedBytes, downloadTimeoutMs: budget.timeoutMs, reviewedBudget: input.archiveReview !== undefined},
+      lifecycleScripts,
+      checks: ['registry-identity', 'sha512-integrity', 'archive-manifest-identity', 'bundle-patch-present', ...(manifest.main ? ['main-file-present'] : [])],
+      limitations: ['No runtime installation test', 'No code audit', 'Patch references and transitive dependencies are not validated']
+    }
   };
 }
 
@@ -238,6 +269,7 @@ export async function buildIndex(config, options = {}) {
   parseMarketIndex(index, 'https://polang233.github.io/dsh-plugin-index/index.json');
   return {
     index,
+    assets: results.flatMap(result => result.assets),
     evidence: {
       generatedAt: new Date(options.now ?? Date.now()).toISOString(),
       validator: { name: '@deepseek-ai/dsh-plugin-market-index', version: VALIDATOR_VERSION },

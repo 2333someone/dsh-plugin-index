@@ -43,6 +43,14 @@ pnpm exec playwright test
 
 [Univer Office 归档核查](univer-archive-review.md)记录实测大小和预算；版本或哈希变化需要重新核查。
 
+## 插件图标与本地化
+
+构建读取已通过 SHA-512 校验的发布包，从清单的 `icon` 或导出的 `./icon` 查找 SVG、PNG、JPEG 或 WebP，最多 256 KiB。图片保存在 `public/icons/`，以内容哈希命名；官方 `icon` 字段使用相对路径，DSH 按索引地址解析。网页使用同一图片。没有图标时显示名称首字，缺失、过大或不支持的图标记入 `status.json` 的 `display.warnings`。
+
+作者提供的 `locale/en.json` 和同目录中文文件用于名称与介绍；`sources.json` 中的编辑文案优先。归档读取只额外保留这些受限文件，不解包、不执行插件。源图片保持原样，SVG 必须是无外部资源和主动内容的图片。
+
+本地预览端口被占用时，可为预览和浏览器测试同时设置 `DSH_INDEX_PREVIEW_PORT`。
+
 ## GitHub star
 
 每次构建对同一仓库只请求一次 GitHub 公开 API，并生成 `public/github.json`，记录准确的 star 数、获取时间和最近推送时间。计数同时写入官方索引的 `github-stars` 排序字段，DSH 内也可以据此排序。

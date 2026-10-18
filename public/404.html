@@ -71,6 +71,10 @@ h2 { margin: 0; font-size: 29px; letter-spacing: -.035em; line-height: 1.2; font
 .plugin-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
 .plugin { display: grid; grid-template-columns: minmax(0, 1fr) 176px; gap: 32px; padding: 26px 0; border-bottom: 1px solid var(--line); }
 .plugin-main { min-width: 0; }
+.plugin-heading { display: flex; align-items: center; gap: 14px; }
+.plugin-heading > div { min-width: 0; }
+.plugin-avatar { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0; overflow: hidden; border-radius: 9px; background: var(--mist); color: var(--blue); font-size: 20px; font-weight: 600; }
+.plugin-avatar img { display: block; width: 44px; height: 44px; object-fit: contain; }
 .plugin-title { margin: 0 0 3px; font-size: 19px; letter-spacing: -.025em; line-height: 1.45; font-weight: 650; overflow-wrap: anywhere; }
 .package-name { margin: 2px 0 8px; font-size: 12px; font-family: var(--mono); color: var(--slate); overflow-wrap: anywhere; }
 .package-name.is-title { margin: 0 0 9px; color: var(--ink); font-size: 16px; font-weight: 600; line-height: 1.5; }
