@@ -115,15 +115,13 @@ function pluginRow(plugin, language, categories, text, snapshot, root, downloads
       ${badges ? `<div class="publisher-badges">${badges}</div>` : ''}
       <p class="plugin-description">${esc(description)}</p>
       <div class="plugin-links">${links.join('')}</div>
-    </article>
     <div class="plugin-detail">
       ${renderStars(plugin, snapshot, language)}
-      ${npmMeasured ? `<a class="npm-downloads" data-downloads="${npm.downloads}" href="${esc(npm.source)}" title="${esc(npmTitle)}">↓ ${esc(new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en-US').format(npm.downloads))}<span> ${language === 'zh' ? '/30天' : '/30d'}${npm.status === 'stale' ? (language === 'zh' ? ' · 缓存' : ' · cached') : ''}</span></a>` : ''}
-      <span class="version">${version ? `${esc(text.version)} ${esc(version.version)}` : esc(text.noVersion)}</span>
-      ${categoryId ? `<span>${esc(categoryTitle)}</span>` : ''}
-      ${date ? `<time datetime="${esc(new Date(version.publishTimestamp * 1000).toISOString())}" title="${esc(dateLabel(version.publishTimestamp * 1000, language))}">${esc(date)}</time>` : ''}
-      ${version?.engines?.dsh ? `<details class="compatibility"><summary>${esc(text.compatibility)}</summary><p>${esc(version.engines.dsh)}</p></details>` : ''}
+      ${npmMeasured ? `<a class="npm-downloads" data-downloads="${npm.downloads}" href="${esc(npm.source)}" title="${esc(npmTitle)}">↓ ${esc(new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en-US').format(npm.downloads))}${npm.status === 'stale' ? (language === 'zh' ? ' · 缓存' : ' · cached') : ''}</a>` : ''}
+      ${date ? `<time datetime="${esc(new Date(version.publishTimestamp * 1000).toISOString())}" title="${esc(dateLabel(version.publishTimestamp * 1000, language))}">◷ ${esc(date)}</time>` : ''}
     </div>
+    <details class="plugin-facts"><summary>${language === 'zh' ? '详情' : 'Details'}</summary><p class="version">${version ? `${esc(text.version)} ${esc(version.version)}` : esc(text.noVersion)}</p>${categoryId ? `<p>${esc(categoryTitle)}</p>` : ''}${version?.engines?.dsh ? `<p>${esc(text.compatibility)} ${esc(version.engines.dsh)}</p>` : ''}</details>
+    </article>
   </li>`;
 }
 function page(index, evidence, language, snapshot, downloads, display) {

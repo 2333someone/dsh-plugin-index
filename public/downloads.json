@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "period": "last-month",
-  "generatedAt": "2026-10-18T09:35:25.227Z",
+  "generatedAt": "2026-10-18T10:09:54.621Z",
   "packages": {
     "@a9i5k4/dsh-auto-memory": {
       "package": "@a9i5k4/dsh-auto-memory",
@@ -382,40 +382,40 @@
       "status": "ok"
     },
     "@liustack/modlens": {
+      "package": "@liustack/modlens",
       "downloads": 96962,
       "start": "2026-09-17",
       "end": "2026-10-16",
-      "package": "@liustack/modlens",
+      "fetchedAt": "2026-10-18T09:35:25.227Z",
       "source": "https://api.npmjs.org/downloads/point/last-month/%40liustack/modlens",
-      "status": "ok",
-      "fetchedAt": "2026-10-18T09:35:25.227Z"
+      "status": "ok"
     },
     "@liustack/modsearch": {
+      "package": "@liustack/modsearch",
       "downloads": 41576,
       "start": "2026-09-17",
       "end": "2026-10-16",
-      "package": "@liustack/modsearch",
+      "fetchedAt": "2026-10-18T09:35:25.227Z",
       "source": "https://api.npmjs.org/downloads/point/last-month/%40liustack/modsearch",
-      "status": "ok",
-      "fetchedAt": "2026-10-18T09:35:25.227Z"
+      "status": "ok"
     },
     "@liustack/pptwise": {
+      "package": "@liustack/pptwise",
       "downloads": 4541,
       "start": "2026-09-17",
       "end": "2026-10-16",
-      "package": "@liustack/pptwise",
+      "fetchedAt": "2026-10-18T09:35:25.227Z",
       "source": "https://api.npmjs.org/downloads/point/last-month/%40liustack/pptwise",
-      "status": "ok",
-      "fetchedAt": "2026-10-18T09:35:25.227Z"
+      "status": "ok"
     },
     "@loongsuite/dsh-plugin": {
+      "package": "@loongsuite/dsh-plugin",
       "downloads": 3302,
       "start": "2026-09-17",
       "end": "2026-10-16",
-      "package": "@loongsuite/dsh-plugin",
+      "fetchedAt": "2026-10-18T09:35:25.227Z",
       "source": "https://api.npmjs.org/downloads/point/last-month/%40loongsuite/dsh-plugin",
-      "status": "ok",
-      "fetchedAt": "2026-10-18T09:35:25.227Z"
+      "status": "ok"
     },
     "@mars-sea/dsh-commandcode-provider": {
       "package": "@mars-sea/dsh-commandcode-provider",
@@ -427,31 +427,31 @@
       "status": "ok"
     },
     "@memef1f1y/dsh-plugin-tts": {
+      "package": "@memef1f1y/dsh-plugin-tts",
       "downloads": 2326,
       "start": "2026-09-17",
       "end": "2026-10-16",
-      "package": "@memef1f1y/dsh-plugin-tts",
+      "fetchedAt": "2026-10-18T09:35:25.227Z",
       "source": "https://api.npmjs.org/downloads/point/last-month/%40memef1f1y/dsh-plugin-tts",
-      "status": "ok",
-      "fetchedAt": "2026-10-18T09:35:25.227Z"
+      "status": "ok"
     },
     "@michengai/dsh-agency-agents": {
+      "package": "@michengai/dsh-agency-agents",
       "downloads": 154001,
       "start": "2026-09-17",
       "end": "2026-10-16",
-      "package": "@michengai/dsh-agency-agents",
+      "fetchedAt": "2026-10-18T09:35:25.227Z",
       "source": "https://api.npmjs.org/downloads/point/last-month/%40michengai/dsh-agency-agents",
-      "status": "ok",
-      "fetchedAt": "2026-10-18T09:35:25.227Z"
+      "status": "ok"
     },
     "@michengai/dsh-archive-manager": {
+      "package": "@michengai/dsh-archive-manager",
       "downloads": 182647,
       "start": "2026-09-17",
       "end": "2026-10-16",
-      "package": "@michengai/dsh-archive-manager",
+      "fetchedAt": "2026-10-18T09:35:25.227Z",
       "source": "https://api.npmjs.org/downloads/point/last-month/%40michengai/dsh-archive-manager",
-      "status": "ok",
-      "fetchedAt": "2026-10-18T09:35:25.227Z"
+      "status": "ok"
     },
     "@michengai/dsh-automation": {
       "package": "@michengai/dsh-automation",
@@ -553,13 +553,13 @@
       "status": "ok"
     },
     "@nanmicoder/dsh-agent-teams": {
+      "package": "@nanmicoder/dsh-agent-teams",
       "downloads": 46491,
       "start": "2026-09-17",
       "end": "2026-10-16",
-      "package": "@nanmicoder/dsh-agent-teams",
+      "fetchedAt": "2026-10-18T09:35:25.227Z",
       "source": "https://api.npmjs.org/downloads/point/last-month/%40nanmicoder/dsh-agent-teams",
-      "status": "ok",
-      "fetchedAt": "2026-10-18T09:35:25.227Z"
+      "status": "ok"
     },
     "@nonamelego/dsh-catppuccin": {
       "package": "@nonamelego/dsh-catppuccin",

@@ -20,8 +20,8 @@ test('DSH receives measured numbers in the supported description, not only sort 
   } });
   const result = applyMarketDisplay(index, { github, downloads, now: NOW });
   const parsed = parseMarketIndex(result.index, 'https://example.org/index.json');
-  assert.equal(parsed.plugins[0].description.zh, '★ 2,345 · ↓ 1,234/30天 · 3 天前更新 — 实际介绍。');
-  assert.equal(parsed.plugins[0].description.en, '★ 2,345 · ↓ 1,234/30d · Updated 3 days ago — Real description.');
+  assert.equal(parsed.plugins[0].description.zh, '★ 2,345 · ↓ 1,234 · ◷ 3 天前更新 — 实际介绍。');
+  assert.equal(parsed.plugins[0].description.en, '★ 2,345 · ↓ 1,234 · ◷ Updated 3 days ago — Real description.');
   assert.equal(parsed.plugins[0].versions[0].publishTimestamp, plugin.versions[0].publishTimestamp);
   assert.equal(parsed.plugins[0].metadata.sortKeys['npm-downloads-month'], 1234);
   assert.deepEqual(parsed.metadata.labels, {});

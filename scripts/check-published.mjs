@@ -26,7 +26,7 @@ export function checkMarketDisplay(index, github, downloads, display, publishers
       if (!summary || typeof description !== 'string' || description !== summary + (original ? ' — ' + original : '')) throw new Error('Missing visible DSH metrics: ' + plugin.name);
       const format = value => new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en-US').format(value);
       if (hasStars && !summary.includes('★ ' + format(repo.stars))) throw new Error('Star missing from DSH row: ' + plugin.name);
-      if (hasDownloads && !summary.includes('↓ ' + format(npm.downloads) + (language === 'zh' ? '/30天' : '/30d'))) throw new Error('Downloads missing from DSH row: ' + plugin.name);
+      if (hasDownloads && !summary.includes('↓ ' + format(npm.downloads))) throw new Error('Downloads missing from DSH row: ' + plugin.name);
       if (days >= 0) {
         const age = language === 'zh' ? (days === 0 ? '今天更新' : days + ' 天前更新') : (days === 0 ? 'Updated today' : `Updated ${days} ${days === 1 ? 'day' : 'days'} ago`);
         if (!summary.includes(age)) throw new Error('Release age missing from DSH row: ' + plugin.name);

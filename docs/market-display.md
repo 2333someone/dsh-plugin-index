@@ -2,7 +2,7 @@
 
 The index appears in DSH as **Open Plugin Market / 开放插件市场**. Its URL stays the same.
 
-DSH 列表的描述行以指标开头，例如：`★ 1,138 · ↓ 2,231/30天 · 18 天前更新 — 插件介绍`。网页将这些数据放在条目侧边，保留完整介绍。
+直接添加普通索引时，DSH 描述行显示文字指标，例如 `★ 1,138 · ↓ 2,231 · ◷ 18 天前更新 — 插件介绍`。网页将指标放在介绍下方，版本收进「详情」。下载统计区间在提示中说明。
 
 | 指标 / Metric | 来源与含义 / Source and meaning |
 | --- | --- |
@@ -25,9 +25,25 @@ Snapshots record source values and dates. A failed request can use a cache up to
 
 The official Discover component renders the description and declared labels, and resolves the index title for its source menu. Metrics use a description prefix; identities use labels. This keeps numeric readings out of the label filter menu.
 
-客户端版本与作者下方的日历日期由 DSH 固定格式化，索引无法替换；因此另外显示相对天数，并保留真实的发布时间。
+普通索引无法隐藏 DSH 自带的列表版本与日历日期，也无法为文字指定颜色。可选增强插件提供这些布局调整。
 
 DSH formats the calendar date beneath each row itself. The index adds relative days and preserves the actual publication timestamp.
+
+## 可选彩色标签 / Optional metric tags
+
+在 DSH「插件 → 发现 → 管理索引源」中，额外添加：
+
+```text
+https://polang233.github.io/dsh-plugin-index/enhancements.json
+```
+
+选择「开放插件市场 · 显示增强」，安装「市场列表彩色指标」，再切回原来的开放插件市场。启用后，指标在描述下方同一行显示：蓝色 star、绿色下载、灰紫色 `◷` 更新天数。列表版本和日历日期收起，作者保留；点击条目详情仍有版本与完整日期。停用插件恢复原始显示。
+
+Add the optional source above, install “Market listing metric tags”, then return to the main market. The plugin moves blue star, green download and muted purple update tags below descriptions. Versions and full dates remain in details. Disabling the plugin restores the original row.
+
+插件通过 DSH 客户端生命周期监听「发现」列表 DOM，仅处理明确的指标前缀，不请求额外网络。保留原生节点及安装按钮；筛选、分页、语言切换后自动重绘。它适配 0.2.1-rc.2 的列表结构，未来客户端结构变化时会保留原生显示。[源码](../packages/market-listing-ui/src/client.mjs)。
+
+验证包含官方组件产生的 DOM、浏览器中的重绘与停用恢复、旧版前缀兼容和官方 Git 安装参数解析，未进行用户桌面配置中的完整安装实测。
 
 ## 验证记录 / Validation
 

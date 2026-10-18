@@ -4,6 +4,8 @@
 
 # Open Plugin Market
 
+For colored metric tags beneath DSH descriptions, add the [optional enhancement index](https://polang233.github.io/dsh-plugin-index/enhancements.json) and install “Market listing metric tags”. Versions remain in entry details. The main index works independently; disabling the plugin restores the original list. [Details](docs/market-display.md).
+
 A community plugin index for DeepSeek Harness. Add one URL in DSH to browse and install plugins.
 
 [Browse plugins](https://polang233.github.io/dsh-plugin-index/) · [简体中文](README.zh-CN.md) · [Suggest a plugin](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)

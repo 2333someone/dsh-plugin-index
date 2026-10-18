@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-18T09:35:25.227Z",
+  "generatedAt": "2026-10-18T10:09:54.621Z",
   "plugins": {
     "@a9i5k4/dsh-auto-memory": {
       "description": {
@@ -8,8 +8,8 @@
         "zh": "召回并整理项目记忆，保存交接账本、计划笔记与上下文状态。"
       },
       "summary": {
-        "en": "★ 135 · ↓ 13,722/30d · Updated today",
-        "zh": "★ 135 · ↓ 13,722/30天 · 今天更新"
+        "en": "★ 135 · ↓ 13,722 · ◷ Updated today",
+        "zh": "★ 135 · ↓ 13,722 · ◷ 今天更新"
       }
     },
     "@anionex/dsh-computer-use": {
@@ -18,8 +18,8 @@
         "zh": "通过辅助功能、截图与应用控制工具操作 macOS 桌面。"
       },
       "summary": {
-        "en": "★ 60 · ↓ 3,389/30d · Updated today",
-        "zh": "★ 60 · ↓ 3,389/30天 · 今天更新"
+        "en": "★ 60 · ↓ 3,389 · ◷ Updated today",
+        "zh": "★ 60 · ↓ 3,389 · ◷ 今天更新"
       }
     },
     "@anionex/dsh-turn-rewind": {
@@ -28,8 +28,8 @@
         "zh": "基于持久变更账本回退会话轮次和工作区文件。"
       },
       "summary": {
-        "en": "★ 133 · ↓ 4,920/30d · Updated today",
-        "zh": "★ 133 · ↓ 4,920/30天 · 今天更新"
+        "en": "★ 133 · ↓ 4,920 · ◷ Updated today",
+        "zh": "★ 133 · ↓ 4,920 · ◷ 今天更新"
       }
     },
     "@anionex/dsh-vision-toolkit": {
@@ -38,8 +38,8 @@
         "zh": "在 DSH 中进行图片问答、OCR、定位、界面还原与像素比较。"
       },
       "summary": {
-        "en": "★ 896 · ↓ 12,326/30d · Updated today",
-        "zh": "★ 896 · ↓ 12,326/30天 · 今天更新"
+        "en": "★ 896 · ↓ 12,326 · ◷ Updated today",
+        "zh": "★ 896 · ↓ 12,326 · ◷ 今天更新"
       }
     },
     "@anysearch/anysearch-dsh": {
@@ -48,8 +48,8 @@
         "zh": "为 DSH 接入 AnySearch 网页搜索、正文抓取与高级检索工具。"
       },
       "summary": {
-        "en": "★ 523 · ↓ 9,542/30d · Updated 8 days ago",
-        "zh": "★ 523 · ↓ 9,542/30天 · 8 天前更新"
+        "en": "★ 524 · ↓ 9,542 · ◷ Updated 8 days ago",
+        "zh": "★ 524 · ↓ 9,542 · ◷ 8 天前更新"
       }
     },
     "@bihangchi9/lark-agent-bridge": {
@@ -58,8 +58,8 @@
         "zh": "通过飞书群组连接本机 DSH、编程命令行或 IDE 助手。"
       },
       "summary": {
-        "en": "★ 34 · ↓ 947/30d · Updated 30 days ago",
-        "zh": "★ 34 · ↓ 947/30天 · 30 天前更新"
+        "en": "★ 34 · ↓ 947 · ◷ Updated 30 days ago",
+        "zh": "★ 34 · ↓ 947 · ◷ 30 天前更新"
       }
     },
     "@caob23/dsh-browser-control": {
@@ -68,8 +68,8 @@
         "zh": "连接浏览器扩展，向 Agent 提供网页操作工具与开关。"
       },
       "summary": {
-        "en": "★ 36 · ↓ 2,993/30d · Updated 4 days ago",
-        "zh": "★ 36 · ↓ 2,993/30天 · 4 天前更新"
+        "en": "★ 36 · ↓ 2,993 · ◷ Updated 4 days ago",
+        "zh": "★ 36 · ↓ 2,993 · ◷ 4 天前更新"
       }
     },
     "@changfenhuang/dsh-annotation": {
@@ -78,8 +78,8 @@
         "zh": "选择助手回复中的文字并添加批注，让模型按编号逐条回应。"
       },
       "summary": {
-        "en": "★ 148 · ↓ 3,543/30d · Updated 17 days ago",
-        "zh": "★ 148 · ↓ 3,543/30天 · 17 天前更新"
+        "en": "★ 148 · ↓ 3,543 · ◷ Updated 17 days ago",
+        "zh": "★ 148 · ↓ 3,543 · ◷ 17 天前更新"
       }
     },
     "@changfenhuang/dsh-genui": {
@@ -88,8 +88,8 @@
         "zh": "在助手回复中呈现交互图表、表单、流程图等界面。"
       },
       "summary": {
-        "en": "★ 631 · ↓ 35,271/30d · Updated today",
-        "zh": "★ 631 · ↓ 35,271/30天 · 今天更新"
+        "en": "★ 631 · ↓ 35,271 · ◷ Updated today",
+        "zh": "★ 631 · ↓ 35,271 · ◷ 今天更新"
       }
     },
     "@cloudbase/dsh-plugin": {
@@ -98,8 +98,8 @@
         "zh": "在 DSH 中管理 CloudBase 数据库、存储、身份认证与应用部署。"
       },
       "summary": {
-        "en": "★ 1,138 · ↓ 2,231/30d · Updated 18 days ago",
-        "zh": "★ 1,138 · ↓ 2,231/30天 · 18 天前更新"
+        "en": "★ 1,138 · ↓ 2,231 · ◷ Updated 18 days ago",
+        "zh": "★ 1,138 · ↓ 2,231 · ◷ 18 天前更新"
       },
       "publisher": "tencent-cloudbase"
     },
@@ -109,8 +109,8 @@
         "zh": "在会话中搜索动画来源、查看详情并使用播放入口。"
       },
       "summary": {
-        "en": "★ 177 · ↓ 759/30d · Updated 59 days ago",
-        "zh": "★ 177 · ↓ 759/30天 · 59 天前更新"
+        "en": "★ 177 · ↓ 759 · ◷ Updated 59 days ago",
+        "zh": "★ 177 · ↓ 759 · ◷ 59 天前更新"
       }
     },
     "@contexera/dsh-agent-team": {
@@ -119,8 +119,8 @@
         "zh": "为长期任务保存 Agent 团队与协作状态。"
       },
       "summary": {
-        "en": "★ 69 · ↓ 592/30d · Updated today",
-        "zh": "★ 69 · ↓ 592/30天 · 今天更新"
+        "en": "★ 69 · ↓ 592 · ◷ Updated today",
+        "zh": "★ 69 · ↓ 592 · ◷ 今天更新"
       }
     },
     "@daweifu/capability-menu": {
@@ -129,8 +129,8 @@
         "zh": "统一管理能力目录，按需检索和调用工具，并设置投影策略。"
       },
       "summary": {
-        "en": "★ 89 · ↓ 2,153/30d · Updated 1 day ago",
-        "zh": "★ 89 · ↓ 2,153/30天 · 1 天前更新"
+        "en": "★ 89 · ↓ 2,153 · ◷ Updated 1 day ago",
+        "zh": "★ 89 · ↓ 2,153 · ◷ 1 天前更新"
       }
     },
     "@deepseek-harness-tui/dsh-tui": {
@@ -139,8 +139,8 @@
         "zh": "通过交互终端界面管理 Agent、会话和工具。"
       },
       "summary": {
-        "en": "★ 4,774 · ↓ 45,109/30d · Updated today",
-        "zh": "★ 4,774 · ↓ 45,109/30天 · 今天更新"
+        "en": "★ 4,775 · ↓ 45,109 · ◷ Updated today",
+        "zh": "★ 4,775 · ↓ 45,109 · ◷ 今天更新"
       }
     },
     "@deepseekstudio/dsh-deepseek-pet": {
@@ -149,8 +149,8 @@
         "zh": "把 DeepSeek 账户余额交给一只悬浮在 Windows 桌面上的蓝鲸女仆桌宠：宿主端查询余额并通过 127.0.0.1 回环接口推送，另附 pet_balance / pet_control 两个工具，可直接问余额或让桌宠说话。"
       },
       "summary": {
-        "en": "★ 18 · ↓ 2,024/30d · Updated 11 days ago",
-        "zh": "★ 18 · ↓ 2,024/30天 · 11 天前更新"
+        "en": "★ 18 · ↓ 2,024 · ◷ Updated 11 days ago",
+        "zh": "★ 18 · ↓ 2,024 · ◷ 11 天前更新"
       }
     },
     "@dely0/dsh-personal-workbench": {
@@ -159,8 +159,8 @@
         "zh": "组合日历、分层任务、AI 拆解、执行复盘与桌面提醒。"
       },
       "summary": {
-        "en": "★ 38 · ↓ 4,200/30d · Updated 12 days ago",
-        "zh": "★ 38 · ↓ 4,200/30天 · 12 天前更新"
+        "en": "★ 38 · ↓ 4,200 · ◷ Updated 12 days ago",
+        "zh": "★ 38 · ↓ 4,200 · ◷ 12 天前更新"
       }
     },
     "@dickpy/dsh-imagegen": {
@@ -169,8 +169,8 @@
         "zh": "在网页界面配置供应商通道，生成或编辑图片。"
       },
       "summary": {
-        "en": "★ 123 · ↓ 11,071/30d · Updated today",
-        "zh": "★ 123 · ↓ 11,071/30天 · 今天更新"
+        "en": "★ 123 · ↓ 11,071 · ◷ Updated today",
+        "zh": "★ 123 · ↓ 11,071 · ◷ 今天更新"
       }
     },
     "@dingtalk-real-ai/dsh-dingtalk": {
@@ -179,8 +179,8 @@
         "zh": "通过钉钉连接 DSH 会话与消息。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 1,917/30d · Updated 4 days ago",
-        "zh": "★ 20 · ↓ 1,917/30天 · 4 天前更新"
+        "en": "★ 20 · ↓ 1,917 · ◷ Updated 4 days ago",
+        "zh": "★ 20 · ↓ 1,917 · ◷ 4 天前更新"
       }
     },
     "@dingyi222666/dsh-session-notification": {
@@ -189,8 +189,8 @@
         "zh": "为会话完成、失败、提问和权限请求配置声音与浏览器通知。"
       },
       "summary": {
-        "en": "★ 28 · ↓ 3,002/30d · Updated 7 days ago",
-        "zh": "★ 28 · ↓ 3,002/30天 · 7 天前更新"
+        "en": "★ 28 · ↓ 3,002 · ◷ Updated 7 days ago",
+        "zh": "★ 28 · ↓ 3,002 · ◷ 7 天前更新"
       }
     },
     "@dsh-plugins/dsh-env-inspector": {
@@ -199,8 +199,8 @@
         "zh": "检查系统、命令行工具、模型配置、硬件与监听端口，并导出诊断。"
       },
       "summary": {
-        "en": "★ 52 · ↓ 2,264/30d · Updated 5 days ago",
-        "zh": "★ 52 · ↓ 2,264/30天 · 5 天前更新"
+        "en": "★ 52 · ↓ 2,264 · ◷ Updated 5 days ago",
+        "zh": "★ 52 · ↓ 2,264 · ◷ 5 天前更新"
       }
     },
     "@dsh-plugins/dsh-llm-hub": {
@@ -209,8 +209,8 @@
         "zh": "查看模型目录、供应商状态、余额配额与用量，并接入本机编程助手。"
       },
       "summary": {
-        "en": "★ 50 · ↓ 5,158/30d · Updated 5 days ago",
-        "zh": "★ 50 · ↓ 5,158/30天 · 5 天前更新"
+        "en": "★ 50 · ↓ 5,158 · ◷ Updated 5 days ago",
+        "zh": "★ 50 · ↓ 5,158 · ◷ 5 天前更新"
       }
     },
     "@feiyang666/dsh-usage-plugin": {
@@ -219,8 +219,8 @@
         "zh": "追踪 Token 与缓存用量、账户余额和费用，并导出记录。"
       },
       "summary": {
-        "en": "★ 37 · ↓ 1,376/30d · Updated 23 days ago",
-        "zh": "★ 37 · ↓ 1,376/30天 · 23 天前更新"
+        "en": "★ 37 · ↓ 1,376 · ◷ Updated 23 days ago",
+        "zh": "★ 37 · ↓ 1,376 · ◷ 23 天前更新"
       }
     },
     "@furongjun1999/dsh-memory": {
@@ -229,8 +229,8 @@
         "zh": "将会话知识保存到 Markdown 认知图，提供召回与反思工具。"
       },
       "summary": {
-        "en": "★ 408 · ↓ 27,996/30d · Updated 11 days ago",
-        "zh": "★ 408 · ↓ 27,996/30天 · 11 天前更新"
+        "en": "★ 408 · ↓ 27,996 · ◷ Updated 11 days ago",
+        "zh": "★ 408 · ↓ 27,996 · ◷ 11 天前更新"
       }
     },
     "@fylar/dsh-fylar-office-editor": {
@@ -239,8 +239,8 @@
         "zh": "在 DSH 网页中接入 Fylar Office SDK 文档编辑器。"
       },
       "summary": {
-        "en": "★ 204 · ↓ 243/30d · Updated 3 days ago",
-        "zh": "★ 204 · ↓ 243/30天 · 3 天前更新"
+        "en": "★ 204 · ↓ 243 · ◷ Updated 3 days ago",
+        "zh": "★ 204 · ↓ 243 · ◷ 3 天前更新"
       }
     },
     "@geml/dsh-plugin": {
@@ -249,8 +249,8 @@
         "zh": "按可寻址内容块读取和编辑文档，并提供文档与代码图技能。"
       },
       "summary": {
-        "en": "★ 29 · ↓ 1,022/30d · Updated 20 days ago",
-        "zh": "★ 29 · ↓ 1,022/30天 · 20 天前更新"
+        "en": "★ 29 · ↓ 1,022 · ◷ Updated 20 days ago",
+        "zh": "★ 29 · ↓ 1,022 · ◷ 20 天前更新"
       }
     },
     "@ggboy123/dsh-paper-reader": {
@@ -259,8 +259,8 @@
         "zh": "转录和检索 PDF，通过内置阅读器配合会话阅读论文。"
       },
       "summary": {
-        "en": "★ 22 · ↓ 5,422/30d · Updated 1 day ago",
-        "zh": "★ 22 · ↓ 5,422/30天 · 1 天前更新"
+        "en": "★ 22 · ↓ 5,422 · ◷ Updated 1 day ago",
+        "zh": "★ 22 · ↓ 5,422 · ◷ 1 天前更新"
       }
     },
     "@goodandready/dsh-russian-lang": {
@@ -269,8 +269,8 @@
         "zh": "为 DSH 核心与生态插件提供可切换的俄语界面。"
       },
       "summary": {
-        "en": "★ 36 · ↓ 14,208/30d · Updated 2 days ago",
-        "zh": "★ 36 · ↓ 14,208/30天 · 2 天前更新"
+        "en": "★ 36 · ↓ 14,208 · ◷ Updated 2 days ago",
+        "zh": "★ 36 · ↓ 14,208 · ◷ 2 天前更新"
       }
     },
     "@huiliyi37/dsh-tianshu-tui": {
@@ -279,8 +279,8 @@
         "zh": "在终端中浏览流式回复、工具卡片、会话、诊断与费用。"
       },
       "summary": {
-        "en": "★ 287 · ↓ 1,809/30d · Updated 17 days ago",
-        "zh": "★ 287 · ↓ 1,809/30天 · 17 天前更新"
+        "en": "★ 287 · ↓ 1,809 · ◷ Updated 17 days ago",
+        "zh": "★ 287 · ↓ 1,809 · ◷ 17 天前更新"
       }
     },
     "@hytime/dsh-thinking-effort": {
@@ -289,8 +289,8 @@
         "zh": "为第三方模型配置思考强度，并设置子 Agent 的默认档位。"
       },
       "summary": {
-        "en": "★ 53 · ↓ 8,200/30d · Updated 3 days ago",
-        "zh": "★ 53 · ↓ 8,200/30天 · 3 天前更新"
+        "en": "★ 53 · ↓ 8,200 · ◷ Updated 3 days ago",
+        "zh": "★ 53 · ↓ 8,200 · ◷ 3 天前更新"
       }
     },
     "@hyzyn/dsh-plugin-kit": {
@@ -299,8 +299,8 @@
         "zh": "安装可复用的插件模板、开发工具与入门组合包。"
       },
       "summary": {
-        "en": "★ 53 · ↓ 5,411/30d · Updated today",
-        "zh": "★ 53 · ↓ 5,411/30天 · 今天更新"
+        "en": "★ 54 · ↓ 5,411 · ◷ Updated today",
+        "zh": "★ 54 · ↓ 5,411 · ◷ 今天更新"
       }
     },
     "@jiesou/dsh-commandcode-go-provider": {
@@ -309,8 +309,8 @@
         "zh": "动态读取 Go 套餐模型目录，并通过 DSH 模型接口调用。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 1,160/30d · Updated 15 days ago",
-        "zh": "★ 20 · ↓ 1,160/30天 · 15 天前更新"
+        "en": "★ 20 · ↓ 1,160 · ◷ Updated 15 days ago",
+        "zh": "★ 20 · ↓ 1,160 · ◷ 15 天前更新"
       }
     },
     "@jiesou/dsh-opencode-zen-free-provider": {
@@ -319,8 +319,8 @@
         "zh": "为 DSH 接入 OpenCode Zen 免费模型通道。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 2,001/30d · Updated 1 day ago",
-        "zh": "★ 20 · ↓ 2,001/30天 · 1 天前更新"
+        "en": "★ 20 · ↓ 2,001 · ◷ Updated 1 day ago",
+        "zh": "★ 20 · ↓ 2,001 · ◷ 1 天前更新"
       }
     },
     "@jiyr0119/dsh-workspace-explorer": {
@@ -329,8 +329,8 @@
         "zh": "在侧栏浏览、搜索和预览文件，点击或拖拽插入引用。"
       },
       "summary": {
-        "en": "★ 40 · ↓ 1,487/30d · Updated 4 days ago",
-        "zh": "★ 40 · ↓ 1,487/30天 · 4 天前更新"
+        "en": "★ 40 · ↓ 1,487 · ◷ Updated 4 days ago",
+        "zh": "★ 40 · ↓ 1,487 · ◷ 4 天前更新"
       }
     },
     "@kenz1117/dsh-engram": {
@@ -339,8 +339,8 @@
         "zh": "用 SQLite 记忆图、混合检索和来源记录保存跨会话知识。"
       },
       "summary": {
-        "en": "★ 22 · ↓ 6,227/30d · Updated today",
-        "zh": "★ 22 · ↓ 6,227/30天 · 今天更新"
+        "en": "★ 22 · ↓ 6,227 · ◷ Updated today",
+        "zh": "★ 22 · ↓ 6,227 · ◷ 今天更新"
       }
     },
     "@kenz1117/dsh-ui-usage-billing": {
@@ -349,8 +349,8 @@
         "zh": "从会话日志汇总实际用量，显示多供应商价格与侧栏费用指标。"
       },
       "summary": {
-        "en": "★ 81 · ↓ 15,636/30d · Updated today",
-        "zh": "★ 81 · ↓ 15,636/30天 · 今天更新"
+        "en": "★ 81 · ↓ 15,636 · ◷ Updated today",
+        "zh": "★ 81 · ↓ 15,636 · ◷ 今天更新"
       }
     },
     "@linxin666/dsh-client-ui-git-graph": {
@@ -359,8 +359,8 @@
         "zh": "在网页界面查看分支历史，并操作工作区 Git 仓库。"
       },
       "summary": {
-        "en": "★ 8,932 · ↓ 125,687/30d · Updated today",
-        "zh": "★ 8,932 · ↓ 125,687/30天 · 今天更新"
+        "en": "★ 8,932 · ↓ 125,687 · ◷ Updated today",
+        "zh": "★ 8,932 · ↓ 125,687 · ◷ 今天更新"
       }
     },
     "@linxin666/dsh-client-ui-skill-explorer": {
@@ -369,8 +369,8 @@
         "zh": "按来源浏览、开关、创建和删除技能。"
       },
       "summary": {
-        "en": "★ 8,932 · ↓ 148,604/30d · Updated today",
-        "zh": "★ 8,932 · ↓ 148,604/30天 · 今天更新"
+        "en": "★ 8,932 · ↓ 148,604 · ◷ Updated today",
+        "zh": "★ 8,932 · ↓ 148,604 · ◷ 今天更新"
       }
     },
     "@linxin666/dsh-client-ui-skin-center": {
@@ -379,8 +379,8 @@
         "zh": "浏览本地主题素材，实时试用并应用网页皮肤。"
       },
       "summary": {
-        "en": "★ 21 · ↓ 117,490/30d · Updated today",
-        "zh": "★ 21 · ↓ 117,490/30天 · 今天更新"
+        "en": "★ 21 · ↓ 117,490 · ◷ Updated today",
+        "zh": "★ 21 · ↓ 117,490 · ◷ 今天更新"
       }
     },
     "@linxin666/dsh-client-ui-task-board": {
@@ -389,8 +389,8 @@
         "zh": "在网页界面管理 Agent 任务、定时执行和运行状态。"
       },
       "summary": {
-        "en": "★ 8,932 · ↓ 134,758/30d · Updated today",
-        "zh": "★ 8,932 · ↓ 134,758/30天 · 今天更新"
+        "en": "★ 8,932 · ↓ 134,758 · ◷ Updated today",
+        "zh": "★ 8,932 · ↓ 134,758 · ◷ 今天更新"
       }
     },
     "@linxin666/dsh-remote-web-ui": {
@@ -399,8 +399,8 @@
         "zh": "通过局域网或 Cloudflare 隧道扫码配对手机与电脑，访问同一网页界面。"
       },
       "summary": {
-        "en": "★ 8,932 · ↓ 135,781/30d · Updated today",
-        "zh": "★ 8,932 · ↓ 135,781/30天 · 今天更新"
+        "en": "★ 8,932 · ↓ 135,781 · ◷ Updated today",
+        "zh": "★ 8,932 · ↓ 135,781 · ◷ 今天更新"
       }
     },
     "@linxin666/dsh-ssh": {
@@ -409,8 +409,8 @@
         "zh": "连接 SSH 主机，使用远程命令、终端、SFTP 与端口转发。"
       },
       "summary": {
-        "en": "★ 8,932 · ↓ 112,286/30d · Updated today",
-        "zh": "★ 8,932 · ↓ 112,286/30天 · 今天更新"
+        "en": "★ 8,932 · ↓ 112,286 · ◷ Updated today",
+        "zh": "★ 8,932 · ↓ 112,286 · ◷ 今天更新"
       }
     },
     "@linxin666/dsh-web-all": {
@@ -419,8 +419,8 @@
         "zh": "组合安装任务、Git、远程访问和界面外观扩展。"
       },
       "summary": {
-        "en": "★ 8,932 · ↓ 107,548/30d · Updated today",
-        "zh": "★ 8,932 · ↓ 107,548/30天 · 今天更新"
+        "en": "★ 8,932 · ↓ 107,548 · ◷ Updated today",
+        "zh": "★ 8,932 · ↓ 107,548 · ◷ 今天更新"
       }
     },
     "@liustack/modlens": {
@@ -429,8 +429,8 @@
         "zh": "通过独立视觉供应商为纯文本模型提供图片理解。"
       },
       "summary": {
-        "en": "★ 4,302 · ↓ 96,962/30d · Updated 2 days ago",
-        "zh": "★ 4,302 · ↓ 96,962/30天 · 2 天前更新"
+        "en": "★ 4,304 · ↓ 96,962 · ◷ Updated 2 days ago",
+        "zh": "★ 4,304 · ↓ 96,962 · ◷ 2 天前更新"
       }
     },
     "@liustack/modsearch": {
@@ -439,8 +439,8 @@
         "zh": "搜索网页和 X 内容、抓取正文，并在请求失败时切换搜索引擎。"
       },
       "summary": {
-        "en": "★ 742 · ↓ 41,576/30d · Updated today",
-        "zh": "★ 742 · ↓ 41,576/30天 · 今天更新"
+        "en": "★ 742 · ↓ 41,576 · ◷ Updated today",
+        "zh": "★ 742 · ↓ 41,576 · ◷ 今天更新"
       }
     },
     "@liustack/pptwise": {
@@ -449,8 +449,8 @@
         "zh": "在本机生成和渲染可编辑的 PowerPoint 演示文稿。"
       },
       "summary": {
-        "en": "★ 23 · ↓ 4,541/30d · Updated 1 day ago",
-        "zh": "★ 23 · ↓ 4,541/30天 · 1 天前更新"
+        "en": "★ 23 · ↓ 4,541 · ◷ Updated 1 day ago",
+        "zh": "★ 23 · ↓ 4,541 · ◷ 1 天前更新"
       }
     },
     "@loongsuite/dsh-plugin": {
@@ -459,8 +459,8 @@
         "zh": "为 DSH 接入 OpenTelemetry 生成式 AI 可观测数据。"
       },
       "summary": {
-        "en": "★ 28 · ↓ 3,302/30d · Updated 6 days ago",
-        "zh": "★ 28 · ↓ 3,302/30天 · 6 天前更新"
+        "en": "★ 28 · ↓ 3,302 · ◷ Updated 6 days ago",
+        "zh": "★ 28 · ↓ 3,302 · ◷ 6 天前更新"
       }
     },
     "@mars-sea/dsh-commandcode-provider": {
@@ -469,8 +469,8 @@
         "zh": "在 DSH 中注册 Command Code 模型与供应商配置卡片。"
       },
       "summary": {
-        "en": "★ 405 · ↓ 16,627/30d · Updated today",
-        "zh": "★ 405 · ↓ 16,627/30天 · 今天更新"
+        "en": "★ 405 · ↓ 16,627 · ◷ Updated today",
+        "zh": "★ 405 · ↓ 16,627 · ◷ 今天更新"
       }
     },
     "@memef1f1y/dsh-plugin-tts": {
@@ -479,8 +479,8 @@
         "zh": "配置 Edge TTS 等语音引擎，手动或自动朗读消息。"
       },
       "summary": {
-        "en": "★ 25 · ↓ 2,326/30d · Updated 5 days ago",
-        "zh": "★ 25 · ↓ 2,326/30天 · 5 天前更新"
+        "en": "★ 25 · ↓ 2,326 · ◷ Updated 5 days ago",
+        "zh": "★ 25 · ↓ 2,326 · ◷ 5 天前更新"
       }
     },
     "@michengai/dsh-agency-agents": {
@@ -489,8 +489,8 @@
         "zh": "为 DeepSeek Harness 提供 321 名可召唤的专业智能体。"
       },
       "summary": {
-        "en": "★ 140 · ↓ 154,001/30d · Updated today",
-        "zh": "★ 140 · ↓ 154,001/30天 · 今天更新"
+        "en": "★ 140 · ↓ 154,001 · ◷ Updated today",
+        "zh": "★ 140 · ↓ 154,001 · ◷ 今天更新"
       }
     },
     "@michengai/dsh-archive-manager": {
@@ -499,8 +499,8 @@
         "zh": "归档、恢复、收藏和删除会话，并诊断损坏的会话日志。"
       },
       "summary": {
-        "en": "★ 167 · ↓ 182,647/30d · Updated today",
-        "zh": "★ 167 · ↓ 182,647/30天 · 今天更新"
+        "en": "★ 167 · ↓ 182,647 · ◷ Updated today",
+        "zh": "★ 167 · ↓ 182,647 · ◷ 今天更新"
       }
     },
     "@michengai/dsh-automation": {
@@ -509,8 +509,8 @@
         "zh": "在独立会话中按计划执行和管理编码任务。"
       },
       "summary": {
-        "en": "★ 29 · ↓ 119,538/30d · Updated today",
-        "zh": "★ 29 · ↓ 119,538/30天 · 今天更新"
+        "en": "★ 29 · ↓ 119,538 · ◷ Updated today",
+        "zh": "★ 29 · ↓ 119,538 · ◷ 今天更新"
       }
     },
     "@michengai/dsh-btw": {
@@ -519,8 +519,8 @@
         "zh": "基于当前上下文回答，独立气泡，不执行工具。"
       },
       "summary": {
-        "en": "★ 19 · ↓ 91,422/30d · Updated 1 day ago",
-        "zh": "★ 19 · ↓ 91,422/30天 · 1 天前更新"
+        "en": "★ 19 · ↓ 91,422 · ◷ Updated 1 day ago",
+        "zh": "★ 19 · ↓ 91,422 · ◷ 1 天前更新"
       }
     },
     "@michengai/dsh-codex-ui": {
@@ -529,8 +529,8 @@
         "zh": "Codex 风格侧栏、工作区会话树、全局搜索和轮次导航。"
       },
       "summary": {
-        "en": "★ 169 · ↓ 262,840/30d · Updated today",
-        "zh": "★ 169 · ↓ 262,840/30天 · 今天更新"
+        "en": "★ 169 · ↓ 262,840 · ◷ Updated today",
+        "zh": "★ 169 · ↓ 262,840 · ◷ 今天更新"
       }
     },
     "@michengai/dsh-im-connect": {
@@ -539,8 +539,8 @@
         "zh": "将主流即时通讯平台接入本机 DeepSeek Harness。"
       },
       "summary": {
-        "en": "★ 68 · ↓ 138,061/30d · Updated today",
-        "zh": "★ 68 · ↓ 138,061/30天 · 今天更新"
+        "en": "★ 68 · ↓ 138,061 · ◷ Updated today",
+        "zh": "★ 68 · ↓ 138,061 · ◷ 今天更新"
       }
     },
     "@michengai/dsh-pua": {
@@ -549,8 +549,8 @@
         "zh": "让 Agent 少一点敷衍，多一点尝试和验证"
       },
       "summary": {
-        "en": "★ 21 · ↓ 65,134/30d · Updated 1 day ago",
-        "zh": "★ 21 · ↓ 65,134/30天 · 1 天前更新"
+        "en": "★ 21 · ↓ 65,134 · ◷ Updated 1 day ago",
+        "zh": "★ 21 · ↓ 65,134 · ◷ 1 天前更新"
       }
     },
     "@michengai/dsh-skills-manager": {
@@ -559,8 +559,8 @@
         "zh": "管理本机与项目技能，支持仓库安装、更新预览及备份恢复。"
       },
       "summary": {
-        "en": "★ 219 · ↓ 210,070/30d · Updated today",
-        "zh": "★ 219 · ↓ 210,070/30天 · 今天更新"
+        "en": "★ 219 · ↓ 210,070 · ◷ Updated today",
+        "zh": "★ 219 · ↓ 210,070 · ◷ 今天更新"
       }
     },
     "@modusensus/dsh-mneme": {
@@ -569,8 +569,8 @@
         "zh": "跨会话记忆：自动把会话沉淀进本机 SQLite，需要时按需注入，空闲时巩固（做梦）。"
       },
       "summary": {
-        "en": "★ 157 · ↓ 10,638/30d · Updated 1 day ago",
-        "zh": "★ 157 · ↓ 10,638/30天 · 1 天前更新"
+        "en": "★ 157 · ↓ 10,638 · ◷ Updated 1 day ago",
+        "zh": "★ 157 · ↓ 10,638 · ◷ 1 天前更新"
       }
     },
     "@mofeng2223/dsh-claude-provider": {
@@ -579,8 +579,8 @@
         "zh": "为 DSH 0.2.1-rc.2 接入自定义 Claude 供应商。"
       },
       "summary": {
-        "en": "★ 33 · ↓ 2,684/30d · Updated 1 day ago",
-        "zh": "★ 33 · ↓ 2,684/30天 · 1 天前更新"
+        "en": "★ 33 · ↓ 2,684 · ◷ Updated 1 day ago",
+        "zh": "★ 33 · ↓ 2,684 · ◷ 1 天前更新"
       }
     },
     "@mokuyoaxis/agent-guard": {
@@ -589,8 +589,8 @@
         "zh": "提供可逆操作、输出脱敏、恢复证据与共享决策协议。"
       },
       "summary": {
-        "en": "★ 23 · ↓ 1,198/30d · Updated 10 days ago",
-        "zh": "★ 23 · ↓ 1,198/30天 · 10 天前更新"
+        "en": "★ 23 · ↓ 1,198 · ◷ Updated 10 days ago",
+        "zh": "★ 23 · ↓ 1,198 · ◷ 10 天前更新"
       }
     },
     "@mrweicodes/dsh-loop-guard": {
@@ -599,8 +599,8 @@
         "zh": "检测重复思考与输出模式，中断陷入循环的模型调用。"
       },
       "summary": {
-        "en": "★ 24 · ↓ 1,518/30d · Updated 8 days ago",
-        "zh": "★ 24 · ↓ 1,518/30天 · 8 天前更新"
+        "en": "★ 24 · ↓ 1,518 · ◷ Updated 8 days ago",
+        "zh": "★ 24 · ↓ 1,518 · ◷ 8 天前更新"
       }
     },
     "@nagi-ovo/dsh-visualize": {
@@ -609,8 +609,8 @@
         "zh": "在会话回复中将交互 HTML 片段渲染为沙箱卡片。"
       },
       "summary": {
-        "en": "★ 309 · ↓ 3,001/30d · Updated today",
-        "zh": "★ 309 · ↓ 3,001/30天 · 今天更新"
+        "en": "★ 309 · ↓ 3,001 · ◷ Updated today",
+        "zh": "★ 309 · ↓ 3,001 · ◷ 今天更新"
       }
     },
     "@nanmicoder/dsh-agent-teams": {
@@ -619,8 +619,8 @@
         "zh": "通过任务依赖、直接消息与网页监视器协调 Agent 团队。"
       },
       "summary": {
-        "en": "★ 2,231 · ↓ 46,491/30d · Updated today",
-        "zh": "★ 2,231 · ↓ 46,491/30天 · 今天更新"
+        "en": "★ 2,232 · ↓ 46,491 · ◷ Updated today",
+        "zh": "★ 2,232 · ↓ 46,491 · ◷ 今天更新"
       },
       "publisher": "nanmicoder"
     },
@@ -630,8 +630,8 @@
         "zh": "应用 Catppuccin 配色与可选的半透明网页皮肤。"
       },
       "summary": {
-        "en": "★ 63 · ↓ 11,538/30d · Updated 5 days ago",
-        "zh": "★ 63 · ↓ 11,538/30天 · 5 天前更新"
+        "en": "★ 63 · ↓ 11,538 · ◷ Updated 5 days ago",
+        "zh": "★ 63 · ↓ 11,538 · ◷ 5 天前更新"
       }
     },
     "@noob-stupid/dsh-plugin-console": {
@@ -640,8 +640,8 @@
         "zh": "管理插件来源与框架升级，使用回滚和兼容性检查。"
       },
       "summary": {
-        "en": "★ 103 · ↓ 20,022/30d · Updated today",
-        "zh": "★ 103 · ↓ 20,022/30天 · 今天更新"
+        "en": "★ 103 · ↓ 20,022 · ◷ Updated today",
+        "zh": "★ 103 · ↓ 20,022 · ◷ 今天更新"
       }
     },
     "@opdsh/unity-plugin": {
@@ -650,8 +650,8 @@
         "zh": "通过 Unity 命令行管理项目、执行编辑器流程和 C# 代码。"
       },
       "summary": {
-        "en": "★ 61 · ↓ 2,199/30d · Updated 20 days ago",
-        "zh": "★ 61 · ↓ 2,199/30天 · 20 天前更新"
+        "en": "★ 61 · ↓ 2,199 · ◷ Updated 20 days ago",
+        "zh": "★ 61 · ↓ 2,199 · ◷ 20 天前更新"
       }
     },
     "@opencode2dsh/dsh-plugin": {
@@ -660,8 +660,8 @@
         "zh": "通过原生适配器为 DSH 接入 OpenCode Zen 模型。"
       },
       "summary": {
-        "en": "★ 260 · ↓ 10,010/30d · Updated 4 days ago",
-        "zh": "★ 260 · ↓ 10,010/30天 · 4 天前更新"
+        "en": "★ 261 · ↓ 10,010 · ◷ Updated 4 days ago",
+        "zh": "★ 261 · ↓ 10,010 · ◷ 4 天前更新"
       }
     },
     "@openma/deepseek-harness-tui": {
@@ -670,8 +670,8 @@
         "zh": "在终端中使用 ACP Agent 与 Cordis 客户端树。"
       },
       "summary": {
-        "en": "★ 80 · ↓ 1,184/30d · Updated 56 days ago",
-        "zh": "★ 80 · ↓ 1,184/30天 · 56 天前更新"
+        "en": "★ 80 · ↓ 1,184 · ◷ Updated 56 days ago",
+        "zh": "★ 80 · ↓ 1,184 · ◷ 56 天前更新"
       }
     },
     "@openviking/dsh-memory-plugin": {
@@ -680,8 +680,8 @@
         "zh": "为 DSH 接入 OpenViking 记忆与上下文服务。"
       },
       "summary": {
-        "en": "★ 40,217 · ↓ 38,700/30d · Updated 2 days ago",
-        "zh": "★ 40,217 · ↓ 38,700/30天 · 2 天前更新"
+        "en": "★ 40,218 · ↓ 38,700 · ◷ Updated 2 days ago",
+        "zh": "★ 40,218 · ↓ 38,700 · ◷ 2 天前更新"
       },
       "publisher": "volcengine-openviking"
     },
@@ -691,8 +691,8 @@
         "zh": "用本地 SQLite 看板管理项目任务，支持 Agent 领取、执行跟踪和人工验收。"
       },
       "summary": {
-        "en": "★ 336 · ↓ 1,331/30d · Updated 5 days ago",
-        "zh": "★ 336 · ↓ 1,331/30天 · 5 天前更新"
+        "en": "★ 336 · ↓ 1,331 · ◷ Updated 5 days ago",
+        "zh": "★ 336 · ↓ 1,331 · ◷ 5 天前更新"
       }
     },
     "@smalltailqwq/dsh-client-ui-skin-maid-atelier": {
@@ -701,8 +701,8 @@
         "zh": "为网页界面添加深蓝鲸鱼女仆主题与角色侧栏。"
       },
       "summary": {
-        "en": "★ 2,666 · ↓ 41,770/30d · Updated 3 days ago",
-        "zh": "★ 2,666 · ↓ 41,770/30天 · 3 天前更新"
+        "en": "★ 2,668 · ↓ 41,770 · ◷ Updated 3 days ago",
+        "zh": "★ 2,668 · ↓ 41,770 · ◷ 3 天前更新"
       }
     },
     "@tencent-connect/dsh-qqbot": {
@@ -711,8 +711,8 @@
         "zh": "通过 QQ Bot 连接 DSH 消息与会话。"
       },
       "summary": {
-        "en": "★ 140 · ↓ 3,898/30d · Updated 6 days ago",
-        "zh": "★ 140 · ↓ 3,898/30天 · 6 天前更新"
+        "en": "★ 141 · ↓ 3,898 · ◷ Updated 6 days ago",
+        "zh": "★ 141 · ↓ 3,898 · ◷ 6 天前更新"
       },
       "publisher": "tencent-qq"
     },
@@ -722,8 +722,8 @@
         "zh": "为 DSH 配置提供独立的终端界面组合包。"
       },
       "summary": {
-        "en": "★ 23 · ↓ 1,608/30d · Updated today",
-        "zh": "★ 23 · ↓ 1,608/30天 · 今天更新"
+        "en": "★ 23 · ↓ 1,608 · ◷ Updated today",
+        "zh": "★ 23 · ↓ 1,608 · ◷ 今天更新"
       }
     },
     "@tt-a1i/archify-dsh": {
@@ -732,8 +732,8 @@
         "zh": "用内置技能把方案与代码库整理为可交互的架构图。"
       },
       "summary": {
-        "en": "★ 85,085 · ↓ 31,340/30d · Updated 13 days ago",
-        "zh": "★ 85,085 · ↓ 31,340/30天 · 13 天前更新"
+        "en": "★ 85,108 · ↓ 31,340 · ◷ Updated 13 days ago",
+        "zh": "★ 85,108 · ↓ 31,340 · ◷ 13 天前更新"
       },
       "publisher": "archify-author"
     },
@@ -743,8 +743,8 @@
         "zh": "通过网页界面的可配置滑块调整模型推理强度。"
       },
       "summary": {
-        "en": "★ 19 · ↓ 1,246/30d · Updated 16 days ago",
-        "zh": "★ 19 · ↓ 1,246/30天 · 16 天前更新"
+        "en": "★ 19 · ↓ 1,246 · ◷ Updated 16 days ago",
+        "zh": "★ 19 · ↓ 1,246 · ◷ 16 天前更新"
       }
     },
     "@weibaohui/skills-management": {
@@ -753,8 +753,8 @@
         "zh": "管理多种编程助手的本地技能，并导入 DSH 与浏览技能市场。"
       },
       "summary": {
-        "en": "★ 33 · ↓ 10,078/30d · Updated 11 days ago",
-        "zh": "★ 33 · ↓ 10,078/30天 · 11 天前更新"
+        "en": "★ 33 · ↓ 10,078 · ◷ Updated 11 days ago",
+        "zh": "★ 33 · ↓ 10,078 · ◷ 11 天前更新"
       }
     },
     "@wenaixi/dsh-ponytail": {
@@ -763,8 +763,8 @@
         "zh": "DietrichGebert/ponytail 懒人 senior 模式与七阶梯子完美移植，6 个技能描述双语自由切换，各个技能自由开关，零 tool 注册，全场景零缓存破坏。"
       },
       "summary": {
-        "en": "★ 24 · ↓ 4,745/30d · Updated today",
-        "zh": "★ 24 · ↓ 4,745/30天 · 今天更新"
+        "en": "★ 24 · ↓ 4,745 · ◷ Updated today",
+        "zh": "★ 24 · ↓ 4,745 · ◷ 今天更新"
       }
     },
     "@wenaixi/dsh-superpower": {
@@ -773,8 +773,8 @@
         "zh": "DeepSeek Harness 插件：15 个 obra/superpowers 工程纪律技能，技能描述中英双语自由切换，每一个技能本身自由开关"
       },
       "summary": {
-        "en": "★ 25 · ↓ 4,420/30d · Updated today",
-        "zh": "★ 25 · ↓ 4,420/30天 · 今天更新"
+        "en": "★ 25 · ↓ 4,420 · ◷ Updated today",
+        "zh": "★ 25 · ↓ 4,420 · ◷ 今天更新"
       }
     },
     "@wenbin_wb/dsh-bridge": {
@@ -783,8 +783,8 @@
         "zh": "手机扫码即可在移动端/公网继续用 DeepSeek Harness，人不在电脑前也能接着干。一键局域网二维码、Cloudflare 公网隧道、自建隧道与微信 / QQ / 飞书 / Telegram Bot（多工作区/会话持久化/媒体/卡片审批/流式输出），无需自己搭公网服务器。"
       },
       "summary": {
-        "en": "★ 202 · ↓ 12,593/30d · Updated 1 day ago",
-        "zh": "★ 202 · ↓ 12,593/30天 · 1 天前更新"
+        "en": "★ 202 · ↓ 12,593 · ◷ Updated 1 day ago",
+        "zh": "★ 202 · ↓ 12,593 · ◷ 1 天前更新"
       }
     },
     "@xgone/dsh-remote": {
@@ -793,8 +793,8 @@
         "zh": "为网页界面提供登录、多因素认证、角色权限与远程目录选择。"
       },
       "summary": {
-        "en": "★ 60 · ↓ 1,915/30d · Updated 19 days ago",
-        "zh": "★ 60 · ↓ 1,915/30天 · 19 天前更新"
+        "en": "★ 60 · ↓ 1,915 · ◷ Updated 19 days ago",
+        "zh": "★ 60 · ↓ 1,915 · ◷ 19 天前更新"
       }
     },
     "@xiaoyuyu6420/dsh-backup": {
@@ -803,8 +803,8 @@
         "zh": "通过定时快照备份、恢复和迁移 DSH 数据，并诊断会话日志。"
       },
       "summary": {
-        "en": "★ 28 · ↓ 4,232/30d · Updated 8 days ago",
-        "zh": "★ 28 · ↓ 4,232/30天 · 8 天前更新"
+        "en": "★ 28 · ↓ 4,232 · ◷ Updated 8 days ago",
+        "zh": "★ 28 · ↓ 4,232 · ◷ 8 天前更新"
       }
     },
     "@xmoon76/dsh-pi-tui": {
@@ -813,8 +813,8 @@
         "zh": "为 DSH 配置安装 Pi 风格的终端界面。"
       },
       "summary": {
-        "en": "★ 19 · ↓ 2,417/30d · Updated 9 days ago",
-        "zh": "★ 19 · ↓ 2,417/30天 · 9 天前更新"
+        "en": "★ 19 · ↓ 2,417 · ◷ Updated 9 days ago",
+        "zh": "★ 19 · ↓ 2,417 · ◷ 9 天前更新"
       }
     },
     "@y1x1n/dsh-prompt-optimizer": {
@@ -823,8 +823,8 @@
         "zh": "使用当前会话模型，在输入栏旁分析并改写提示词。"
       },
       "summary": {
-        "en": "★ 24 · ↓ 1,282/30d · Updated 5 days ago",
-        "zh": "★ 24 · ↓ 1,282/30天 · 5 天前更新"
+        "en": "★ 24 · ↓ 1,282 · ◷ Updated 5 days ago",
+        "zh": "★ 24 · ↓ 1,282 · ◷ 5 天前更新"
       }
     },
     "@ychris12138/dsh-usage-stats": {
@@ -833,8 +833,8 @@
         "zh": "查看 Token 用量、供应商账户、会话费用、预算与导出记录。"
       },
       "summary": {
-        "en": "★ 177 · ↓ 7,398/30d · Updated 16 days ago",
-        "zh": "★ 177 · ↓ 7,398/30天 · 16 天前更新"
+        "en": "★ 177 · ↓ 7,398 · ◷ Updated 16 days ago",
+        "zh": "★ 177 · ↓ 7,398 · ◷ 16 天前更新"
       }
     },
     "@yejiming/dsh-data-agent": {
@@ -843,8 +843,8 @@
         "zh": "管理数据库连接与元数据目录，通过 SQL 和目录工具进行查询。"
       },
       "summary": {
-        "en": "★ 209 · ↓ 3,168/30d · Updated 18 days ago",
-        "zh": "★ 209 · ↓ 3,168/30天 · 18 天前更新"
+        "en": "★ 209 · ↓ 3,168 · ◷ Updated 18 days ago",
+        "zh": "★ 209 · ↓ 3,168 · ◷ 18 天前更新"
       }
     },
     "@yejiming/dsh-museai-tavern": {
@@ -853,8 +853,8 @@
         "zh": "在 DSH 模型配置上运行带聊天、冒险与角色页面的 MuseAI 界面。"
       },
       "summary": {
-        "en": "★ 26 · ↓ 236/30d · Updated 18 days ago",
-        "zh": "★ 26 · ↓ 236/30天 · 18 天前更新"
+        "en": "★ 26 · ↓ 236 · ◷ Updated 18 days ago",
+        "zh": "★ 26 · ↓ 236 · ◷ 18 天前更新"
       }
     },
     "@yolk_vat-y/dsh-project-memory": {
@@ -863,8 +863,8 @@
         "zh": "索引工作区文档和代码符号，带来源召回项目经验。"
       },
       "summary": {
-        "en": "★ 21 · ↓ 4,397/30d · Updated today",
-        "zh": "★ 21 · ↓ 4,397/30天 · 今天更新"
+        "en": "★ 21 · ↓ 4,397 · ◷ Updated today",
+        "zh": "★ 21 · ↓ 4,397 · ◷ 今天更新"
       }
     },
     "@yunmiao/studymate": {
@@ -873,8 +873,8 @@
         "zh": "在 DSH 中使用结构化学习技能与课程引擎。"
       },
       "summary": {
-        "en": "★ 1,042 · ↓ 5,566/30d · Updated 2 days ago",
-        "zh": "★ 1,042 · ↓ 5,566/30天 · 2 天前更新"
+        "en": "★ 1,043 · ↓ 5,566 · ◷ Updated 2 days ago",
+        "zh": "★ 1,043 · ↓ 5,566 · ◷ 2 天前更新"
       }
     },
     "@zaofan/dsh-qqbot": {
@@ -883,8 +883,8 @@
         "zh": "通过 QQ Bot 为 DSH 提供即时消息通道。"
       },
       "summary": {
-        "en": "★ 38 · ↓ 10,289/30d · Updated 1 day ago",
-        "zh": "★ 38 · ↓ 10,289/30天 · 1 天前更新"
+        "en": "★ 38 · ↓ 10,289 · ◷ Updated 1 day ago",
+        "zh": "★ 38 · ↓ 10,289 · ◷ 1 天前更新"
       }
     },
     "@zhangfengshun/dsh-remote-ssh": {
@@ -893,8 +893,8 @@
         "zh": "连接服务器或超算，在远程工作区使用文件浏览器与终端。"
       },
       "summary": {
-        "en": "★ 32 · ↓ 7,206/30d · Updated today",
-        "zh": "★ 32 · ↓ 7,206/30天 · 今天更新"
+        "en": "★ 32 · ↓ 7,206 · ◷ Updated today",
+        "zh": "★ 32 · ↓ 7,206 · ◷ 今天更新"
       }
     },
     "@zoria-lind/dsh-token-optimizer": {
@@ -903,8 +903,8 @@
         "zh": "组合使用输出限制、结果缓存、文件差异、工具裁剪与 MCP 延迟加载。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 1,768/30d · Updated 13 days ago",
-        "zh": "★ 20 · ↓ 1,768/30天 · 13 天前更新"
+        "en": "★ 20 · ↓ 1,768 · ◷ Updated 13 days ago",
+        "zh": "★ 20 · ↓ 1,768 · ◷ 13 天前更新"
       }
     },
     "@zseven-w/dsh-android": {
@@ -913,8 +913,8 @@
         "zh": "通过 adb 在会话中构建、运行并操作模拟器或 USB 设备。"
       },
       "summary": {
-        "en": "★ 186 · ↓ 2,638/30d · Updated 9 days ago",
-        "zh": "★ 186 · ↓ 2,638/30天 · 9 天前更新"
+        "en": "★ 186 · ↓ 2,638 · ◷ Updated 10 days ago",
+        "zh": "★ 186 · ↓ 2,638 · ◷ 10 天前更新"
       }
     },
     "@zseven-w/dsh-crew": {
@@ -923,8 +923,8 @@
         "zh": "从 Claude Code 或 Codex 调用 DSH 子 Agent，并查看实时进度。"
       },
       "summary": {
-        "en": "★ 167 · ↓ 2,196/30d · Updated 9 days ago",
-        "zh": "★ 167 · ↓ 2,196/30天 · 9 天前更新"
+        "en": "★ 167 · ↓ 2,196 · ◷ Updated 9 days ago",
+        "zh": "★ 167 · ↓ 2,196 · ◷ 9 天前更新"
       }
     },
     "@zseven-w/dsh-harbor": {
@@ -933,8 +933,8 @@
         "zh": "只读查看已安装插件的能力、冲突、变更与升级前检查。"
       },
       "summary": {
-        "en": "★ 24 · ↓ 264/30d · Updated 12 days ago",
-        "zh": "★ 24 · ↓ 264/30天 · 12 天前更新"
+        "en": "★ 24 · ↓ 264 · ◷ Updated 12 days ago",
+        "zh": "★ 24 · ↓ 264 · ◷ 12 天前更新"
       }
     },
     "@zseven-w/dsh-ios": {
@@ -943,8 +943,8 @@
         "zh": "在会话中构建、运行并操作 iOS 模拟器画面。"
       },
       "summary": {
-        "en": "★ 327 · ↓ 1,727/30d · Updated 34 days ago",
-        "zh": "★ 327 · ↓ 1,727/30天 · 34 天前更新"
+        "en": "★ 327 · ↓ 1,727 · ◷ Updated 34 days ago",
+        "zh": "★ 327 · ↓ 1,727 · ◷ 34 天前更新"
       }
     },
     "@zseven-w/dsh-noema": {
@@ -953,8 +953,8 @@
         "zh": "提供可检查的持久记忆、召回工具与设置界面。"
       },
       "summary": {
-        "en": "★ 129 · ↓ 1,546/30d · Updated 12 days ago",
-        "zh": "★ 129 · ↓ 1,546/30天 · 12 天前更新"
+        "en": "★ 129 · ↓ 1,546 · ◷ Updated 12 days ago",
+        "zh": "★ 129 · ↓ 1,546 · ◷ 12 天前更新"
       }
     },
     "@zseven-w/dsh-openpencil": {
@@ -963,8 +963,8 @@
         "zh": "在会话中预览、检查与编辑 OpenPencil 设计文档。"
       },
       "summary": {
-        "en": "★ 186 · ↓ 2,510/30d · Updated 11 days ago",
-        "zh": "★ 186 · ↓ 2,510/30天 · 11 天前更新"
+        "en": "★ 186 · ↓ 2,510 · ◷ Updated 11 days ago",
+        "zh": "★ 186 · ↓ 2,510 · ◷ 11 天前更新"
       }
     },
     "better-dsh-session-deletetool": {
@@ -973,8 +973,8 @@
         "zh": "查看关联子 Agent 会话，并在侧栏选择删除会话组。"
       },
       "summary": {
-        "en": "★ 29 · ↓ 914/30d · Updated 1 day ago",
-        "zh": "★ 29 · ↓ 914/30天 · 1 天前更新"
+        "en": "★ 29 · ↓ 914 · ◷ Updated 1 day ago",
+        "zh": "★ 29 · ↓ 914 · ◷ 1 天前更新"
       }
     },
     "clearai-dsh": {
@@ -983,8 +983,8 @@
         "zh": "将有证据支持的研究整理为可浏览的领域本体。"
       },
       "summary": {
-        "en": "★ 1,048 · ↓ 5,379/30d · Updated 4 days ago",
-        "zh": "★ 1,048 · ↓ 5,379/30天 · 4 天前更新"
+        "en": "★ 1,049 · ↓ 5,379 · ◷ Updated 4 days ago",
+        "zh": "★ 1,049 · ↓ 5,379 · ◷ 4 天前更新"
       }
     },
     "deep-read-summarize": {
@@ -993,8 +993,8 @@
         "zh": "将书籍、论文、视频和网页整理为结构化 Markdown 笔记。"
       },
       "summary": {
-        "en": "★ 32 · ↓ 2,689/30d · Updated today",
-        "zh": "★ 32 · ↓ 2,689/30天 · 今天更新"
+        "en": "★ 32 · ↓ 2,689 · ◷ Updated today",
+        "zh": "★ 32 · ↓ 2,689 · ◷ 今天更新"
       }
     },
     "deepseek-harness-auth": {
@@ -1003,8 +1003,8 @@
         "zh": "为 DSH 网页配置提供密码认证代理。"
       },
       "summary": {
-        "en": "★ 26 · ↓ 928/30d · Updated 15 days ago",
-        "zh": "★ 26 · ↓ 928/30天 · 15 天前更新"
+        "en": "★ 26 · ↓ 928 · ◷ Updated 15 days ago",
+        "zh": "★ 26 · ↓ 928 · ◷ 15 天前更新"
       }
     },
     "deepseek-harness-zh_pro": {
@@ -1013,8 +1013,8 @@
         "zh": "通过可配置扩展调整界面布局与会话提示词行为。"
       },
       "summary": {
-        "en": "★ 36 · ↓ 5,021/30d · Updated 14 days ago",
-        "zh": "★ 36 · ↓ 5,021/30天 · 14 天前更新"
+        "en": "★ 36 · ↓ 5,021 · ◷ Updated 14 days ago",
+        "zh": "★ 36 · ↓ 5,021 · ◷ 14 天前更新"
       }
     },
     "dsh-advisor": {
@@ -1023,8 +1023,8 @@
         "zh": "配置顾问审阅模型：它观察主会话记录，并注入按严重程度排序的建议。"
       },
       "summary": {
-        "en": "★ 27 · ↓ 3,347/30d · Updated today",
-        "zh": "★ 27 · ↓ 3,347/30天 · 今天更新"
+        "en": "★ 27 · ↓ 3,347 · ◷ Updated today",
+        "zh": "★ 27 · ↓ 3,347 · ◷ 今天更新"
       }
     },
     "dsh-agent-studio": {
@@ -1033,8 +1033,8 @@
         "zh": "可视化组合提示词、工具、技能、子 Agent 与备用模型。"
       },
       "summary": {
-        "en": "★ 38 · ↓ 2,113/30d · Updated 1 day ago",
-        "zh": "★ 38 · ↓ 2,113/30天 · 1 天前更新"
+        "en": "★ 39 · ↓ 2,113 · ◷ Updated 1 day ago",
+        "zh": "★ 39 · ↓ 2,113 · ◷ 1 天前更新"
       }
     },
     "dsh-aginxbrowser": {
@@ -1043,8 +1043,8 @@
         "zh": "抓取渲染后的网页、检索多个来源，并自动操作浏览器会话。"
       },
       "summary": {
-        "en": "★ 40 · ↓ 844/30d · Updated 32 days ago",
-        "zh": "★ 40 · ↓ 844/30天 · 32 天前更新"
+        "en": "★ 40 · ↓ 844 · ◷ Updated 32 days ago",
+        "zh": "★ 40 · ↓ 844 · ◷ 32 天前更新"
       }
     },
     "dsh-agnes-studio": {
@@ -1053,8 +1053,8 @@
         "zh": "在浮动工作区中使用图片、视频、短剧和故事创作工具。"
       },
       "summary": {
-        "en": "★ 19 · ↓ 2,247/30d · Updated 13 days ago",
-        "zh": "★ 19 · ↓ 2,247/30天 · 13 天前更新"
+        "en": "★ 19 · ↓ 2,247 · ◷ Updated 13 days ago",
+        "zh": "★ 19 · ↓ 2,247 · ◷ 13 天前更新"
       }
     },
     "dsh-agy": {
@@ -1063,8 +1063,8 @@
         "zh": "通过 OAuth 连接 Google Antigravity，并管理多账户模型访问。"
       },
       "summary": {
-        "en": "★ 58 · ↓ 4,533/30d · Updated 8 days ago",
-        "zh": "★ 58 · ↓ 4,533/30天 · 8 天前更新"
+        "en": "★ 58 · ↓ 4,533 · ◷ Updated 8 days ago",
+        "zh": "★ 58 · ↓ 4,533 · ◷ 8 天前更新"
       }
     },
     "dsh-any-background": {
@@ -1073,8 +1073,8 @@
         "zh": "自定义主题色与图片或视频壁纸，分别调整各区域的透明度和模糊度。"
       },
       "summary": {
-        "en": "★ 43 · ↓ 6,450/30d · Updated today",
-        "zh": "★ 43 · ↓ 6,450/30天 · 今天更新"
+        "en": "★ 43 · ↓ 6,450 · ◷ Updated today",
+        "zh": "★ 43 · ↓ 6,450 · ◷ 今天更新"
       }
     },
     "dsh-auto-memory": {
@@ -1083,8 +1083,8 @@
         "zh": "自动注入 MEMORY.md 索引，管理分类的跨会话记忆文件。"
       },
       "summary": {
-        "en": "★ 106 · ↓ 3,957/30d · Updated 4 days ago",
-        "zh": "★ 106 · ↓ 3,957/30天 · 4 天前更新"
+        "en": "★ 106 · ↓ 3,957 · ◷ Updated 4 days ago",
+        "zh": "★ 106 · ↓ 3,957 · ◷ 4 天前更新"
       }
     },
     "dsh-auto-review": {
@@ -1093,8 +1093,8 @@
         "zh": "使用独立只读模型复核权限请求，并记录审批过程。"
       },
       "summary": {
-        "en": "★ 234 · ↓ 6,502/30d · Updated today",
-        "zh": "★ 234 · ↓ 6,502/30天 · 今天更新"
+        "en": "★ 234 · ↓ 6,502 · ◷ Updated today",
+        "zh": "★ 234 · ↓ 6,502 · ◷ 今天更新"
       }
     },
     "dsh-background-by-model": {
@@ -1103,8 +1103,8 @@
         "zh": "按模型规则配置壁纸和外观，并轮播匹配的图片。"
       },
       "summary": {
-        "en": "★ 19 · ↓ 8,433/30d · Updated 7 days ago",
-        "zh": "★ 19 · ↓ 8,433/30天 · 7 天前更新"
+        "en": "★ 19 · ↓ 8,433 · ◷ Updated 7 days ago",
+        "zh": "★ 19 · ↓ 8,433 · ◷ 7 天前更新"
       }
     },
     "dsh-better-display": {
@@ -1113,8 +1113,8 @@
         "zh": "调整过程细节、实时思考与最终回答的显示方式。"
       },
       "summary": {
-        "en": "★ 83 · ↓ 3,878/30d · Updated 5 days ago",
-        "zh": "★ 83 · ↓ 3,878/30天 · 5 天前更新"
+        "en": "★ 83 · ↓ 3,878 · ◷ Updated 5 days ago",
+        "zh": "★ 83 · ↓ 3,878 · ◷ 5 天前更新"
       }
     },
     "dsh-better-edit": {
@@ -1123,8 +1123,8 @@
         "zh": "通过行哈希执行读取、编辑和撤销，拒绝过期或歧义锚点。"
       },
       "summary": {
-        "en": "★ 37 · ↓ 2,649/30d · Updated 20 days ago",
-        "zh": "★ 37 · ↓ 2,649/30天 · 20 天前更新"
+        "en": "★ 37 · ↓ 2,649 · ◷ Updated 20 days ago",
+        "zh": "★ 37 · ↓ 2,649 · ◷ 20 天前更新"
       }
     },
     "dsh-better-input": {
@@ -1133,8 +1133,8 @@
         "zh": "提供文件转 Markdown、本地文件引用、提示词优化与语音输入。"
       },
       "summary": {
-        "en": "★ 26 · ↓ 2,242/30d · Updated 8 days ago",
-        "zh": "★ 26 · ↓ 2,242/30天 · 8 天前更新"
+        "en": "★ 26 · ↓ 2,242 · ◷ Updated 8 days ago",
+        "zh": "★ 26 · ↓ 2,242 · ◷ 8 天前更新"
       }
     },
     "dsh-better-reasoning-effort": {
@@ -1143,8 +1143,8 @@
         "zh": "在官方「模型」页为第三方模型配置思考档位与图片输入。"
       },
       "summary": {
-        "en": "★ 58 · ↓ 5,141/30d · Updated 4 days ago",
-        "zh": "★ 58 · ↓ 5,141/30天 · 4 天前更新"
+        "en": "★ 58 · ↓ 5,141 · ◷ Updated 4 days ago",
+        "zh": "★ 58 · ↓ 5,141 · ◷ 4 天前更新"
       }
     },
     "dsh-better-sidebar": {
@@ -1153,8 +1153,8 @@
         "zh": "在每个会话的侧栏中查看文件、编辑器、变更、任务与旁聊。"
       },
       "summary": {
-        "en": "★ 4,266 · ↓ 216,581/30d · Updated 1 day ago",
-        "zh": "★ 4,266 · ↓ 216,581/30天 · 1 天前更新"
+        "en": "★ 4,266 · ↓ 216,581 · ◷ Updated 1 day ago",
+        "zh": "★ 4,266 · ↓ 216,581 · ◷ 1 天前更新"
       }
     },
     "dsh-better-workspace": {
@@ -1163,8 +1163,8 @@
         "zh": "按磁盘目录组织工作区导航，并可启用名称分组。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 6,706/30d · Updated today",
-        "zh": "★ 20 · ↓ 6,706/30天 · 今天更新"
+        "en": "★ 20 · ↓ 6,706 · ◷ Updated today",
+        "zh": "★ 20 · ↓ 6,706 · ◷ 今天更新"
       }
     },
     "dsh-bili-scroll": {
@@ -1173,8 +1173,8 @@
         "zh": "读取视频字幕并筛选内容，生成日报与消息提醒。"
       },
       "summary": {
-        "en": "★ 112 · ↓ 1,594/30d · Updated today",
-        "zh": "★ 112 · ↓ 1,594/30天 · 今天更新"
+        "en": "★ 112 · ↓ 1,594 · ◷ Updated today",
+        "zh": "★ 112 · ↓ 1,594 · ◷ 今天更新"
       }
     },
     "dsh-blender": {
@@ -1183,8 +1183,8 @@
         "zh": "在 DSH 中调用 Blender 制作、重建、验证与导出流程。"
       },
       "summary": {
-        "en": "★ 46 · ↓ 3,163/30d · Updated 6 days ago",
-        "zh": "★ 46 · ↓ 3,163/30天 · 6 天前更新"
+        "en": "★ 46 · ↓ 3,163 · ◷ Updated 6 days ago",
+        "zh": "★ 46 · ↓ 3,163 · ◷ 6 天前更新"
       }
     },
     "dsh-bloom-theme": {
@@ -1193,8 +1193,8 @@
         "zh": "应用可自适应深浅模式的配色与磨砂玻璃界面。"
       },
       "summary": {
-        "en": "★ 102 · ↓ 4,907/30d · Updated 5 days ago",
-        "zh": "★ 102 · ↓ 4,907/30天 · 5 天前更新"
+        "en": "★ 102 · ↓ 4,907 · ◷ Updated 5 days ago",
+        "zh": "★ 102 · ↓ 4,907 · ◷ 5 天前更新"
       }
     },
     "dsh-bottom-info-bar": {
@@ -1203,8 +1203,8 @@
         "zh": "在输入框下方显示模型、余额或订阅额度，以及会话与历史费用。"
       },
       "summary": {
-        "en": "★ 49 · ↓ 13,030/30d · Updated 1 day ago",
-        "zh": "★ 49 · ↓ 13,030/30天 · 1 天前更新"
+        "en": "★ 49 · ↓ 13,030 · ◷ Updated 1 day ago",
+        "zh": "★ 49 · ↓ 13,030 · ◷ 1 天前更新"
       }
     },
     "dsh-builtin-browser": {
@@ -1213,8 +1213,8 @@
         "zh": "使用可由 Agent 自动操作、也可由用户接管的可见浏览器。"
       },
       "summary": {
-        "en": "★ 121 · ↓ 19,527/30d · Updated today",
-        "zh": "★ 121 · ↓ 19,527/30天 · 今天更新"
+        "en": "★ 121 · ↓ 19,527 · ◷ Updated today",
+        "zh": "★ 121 · ↓ 19,527 · ◷ 今天更新"
       }
     },
     "dsh-cad": {
@@ -1223,8 +1223,8 @@
         "zh": "在会话中查看二维与三维 CAD 文件，并调用参数化建模与导出工具。"
       },
       "summary": {
-        "en": "★ 18 · ↓ 3,926/30d · Updated 9 days ago",
-        "zh": "★ 18 · ↓ 3,926/30天 · 9 天前更新"
+        "en": "★ 18 · ↓ 3,926 · ◷ Updated 9 days ago",
+        "zh": "★ 18 · ↓ 3,926 · ◷ 9 天前更新"
       }
     },
     "dsh-calendar": {
@@ -1233,8 +1233,8 @@
         "zh": "连接 CalDAV 日历，在会话中查看、创建和调整日程，并导入日历文件。"
       },
       "summary": {
-        "en": "★ 4 · ↓ 7,033/30d · Updated today",
-        "zh": "★ 4 · ↓ 7,033/30天 · 今天更新"
+        "en": "★ 4 · ↓ 7,033 · ◷ Updated today",
+        "zh": "★ 4 · ↓ 7,033 · ◷ 今天更新"
       }
     },
     "dsh-cert-mcp": {
@@ -1243,8 +1243,8 @@
         "zh": "通过只读工具查询社区插件评估记录、证据快照与评分规范。"
       },
       "summary": {
-        "en": "★ 0 · ↓ 2,210/30d · Updated today",
-        "zh": "★ 0 · ↓ 2,210/30天 · 今天更新"
+        "en": "★ 0 · ↓ 2,210 · ◷ Updated today",
+        "zh": "★ 0 · ↓ 2,210 · ◷ 今天更新"
       }
     },
     "dsh-chat-import": {
@@ -1253,8 +1253,8 @@
         "zh": "将 AI 编程助手聊天记录导入为可继续对话的 DeepSeek Harness 会话。"
       },
       "summary": {
-        "en": "★ 238 · ↓ 18,043/30d · Updated today",
-        "zh": "★ 238 · ↓ 18,043/30天 · 今天更新"
+        "en": "★ 238 · ↓ 18,043 · ◷ Updated today",
+        "zh": "★ 238 · ↓ 18,043 · ◷ 今天更新"
       }
     },
     "dsh-chat-manager": {
@@ -1263,8 +1263,8 @@
         "zh": "搜索归档内容、恢复会话，确认后永久删除。"
       },
       "summary": {
-        "en": "★ 24 · ↓ 10,070/30d · Updated today",
-        "zh": "★ 24 · ↓ 10,070/30天 · 今天更新"
+        "en": "★ 24 · ↓ 10,070 · ◷ Updated today",
+        "zh": "★ 24 · ↓ 10,070 · ◷ 今天更新"
       }
     },
     "dsh-checkpoint-rewind": {
@@ -1273,8 +1273,8 @@
         "zh": "保存会话、工作区和配置快照，查看差异并一键回退。"
       },
       "summary": {
-        "en": "★ 25 · ↓ 5,159/30d · Updated 8 days ago",
-        "zh": "★ 25 · ↓ 5,159/30天 · 8 天前更新"
+        "en": "★ 25 · ↓ 5,159 · ◷ Updated 8 days ago",
+        "zh": "★ 25 · ↓ 5,159 · ◷ 8 天前更新"
       }
     },
     "dsh-claude-move": {
@@ -1283,8 +1283,8 @@
         "zh": "预览并复制多种编程助手的会话、记忆、技能与指令到 DSH。"
       },
       "summary": {
-        "en": "★ 29 · ↓ 3,403/30d · Updated 8 days ago",
-        "zh": "★ 29 · ↓ 3,403/30天 · 8 天前更新"
+        "en": "★ 29 · ↓ 3,403 · ◷ Updated 8 days ago",
+        "zh": "★ 29 · ↓ 3,403 · ◷ 8 天前更新"
       }
     },
     "dsh-claude-style": {
@@ -1293,8 +1293,8 @@
         "zh": "为 DeepSeek Harness 网页界面复刻 Claude Code Desktop 的主题插件——象牙白与暖黑双画布、陶烬橙强调色、Claude 风格模型选择器、权限分段与账户抽屉。"
       },
       "summary": {
-        "en": "★ 198 · ↓ 15,011/30d · Updated today",
-        "zh": "★ 198 · ↓ 15,011/30天 · 今天更新"
+        "en": "★ 199 · ↓ 15,011 · ◷ Updated today",
+        "zh": "★ 199 · ↓ 15,011 · ◷ 今天更新"
       }
     },
     "dsh-click": {
@@ -1303,8 +1303,8 @@
         "zh": "查看桌面画面与应用，使用需要审批的鼠标和键盘操作工具。"
       },
       "summary": {
-        "en": "★ 19 · ↓ 4,702/30d · Updated today",
-        "zh": "★ 19 · ↓ 4,702/30天 · 今天更新"
+        "en": "★ 19 · ↓ 4,702 · ◷ Updated today",
+        "zh": "★ 19 · ↓ 4,702 · ◷ 今天更新"
       }
     },
     "dsh-client-auto-continue": {
@@ -1313,8 +1313,8 @@
         "zh": "在网络错误等非人工中断后自动发送继续提示。"
       },
       "summary": {
-        "en": "★ 154 · ↓ 10,724/30d · Updated 10 days ago",
-        "zh": "★ 154 · ↓ 10,724/30天 · 10 天前更新"
+        "en": "★ 154 · ↓ 10,724 · ◷ Updated 10 days ago",
+        "zh": "★ 154 · ↓ 10,724 · ◷ 10 天前更新"
       }
     },
     "dsh-codex": {
@@ -1323,8 +1323,8 @@
         "zh": "通过 ChatGPT OAuth 接入 Codex，并提供搜索、看图与可配置生图工具。"
       },
       "summary": {
-        "en": "★ 82 · ↓ 2,656/30d · Updated 19 days ago",
-        "zh": "★ 82 · ↓ 2,656/30天 · 19 天前更新"
+        "en": "★ 82 · ↓ 2,656 · ◷ Updated 19 days ago",
+        "zh": "★ 82 · ↓ 2,656 · ◷ 19 天前更新"
       }
     },
     "dsh-codex-subscription": {
@@ -1333,8 +1333,8 @@
         "zh": "通过 OAuth 接入 ChatGPT 与 Codex 订阅模型，并查看账户额度。"
       },
       "summary": {
-        "en": "★ 195 · ↓ 23,020/30d · Updated today",
-        "zh": "★ 195 · ↓ 23,020/30天 · 今天更新"
+        "en": "★ 196 · ↓ 23,020 · ◷ Updated today",
+        "zh": "★ 196 · ↓ 23,020 · ◷ 今天更新"
       }
     },
     "dsh-comfyui": {
@@ -1343,8 +1343,8 @@
         "zh": "运行本机或远程 ComfyUI 工作流，管理素材面板与工作流技能。"
       },
       "summary": {
-        "en": "★ 117 · ↓ 4,382/30d · Updated today",
-        "zh": "★ 117 · ↓ 4,382/30天 · 今天更新"
+        "en": "★ 117 · ↓ 4,382 · ◷ Updated today",
+        "zh": "★ 117 · ↓ 4,382 · ◷ 今天更新"
       }
     },
     "dsh-computer-use": {
@@ -1353,8 +1353,8 @@
         "zh": "结合截图与视觉模型，提供虚拟鼠标和桌面操作工具。"
       },
       "summary": {
-        "en": "★ 54 · ↓ 3,897/30d · Updated 38 days ago",
-        "zh": "★ 54 · ↓ 3,897/30天 · 38 天前更新"
+        "en": "★ 54 · ↓ 3,897 · ◷ Updated 38 days ago",
+        "zh": "★ 54 · ↓ 3,897 · ◷ 38 天前更新"
       }
     },
     "dsh-computer-use-win": {
@@ -1363,8 +1363,8 @@
         "zh": "通过 UI Automation、截图、OCR 与 PowerShell 操作 Windows 应用。"
       },
       "summary": {
-        "en": "★ 46 · ↓ 6,963/30d · Updated 3 days ago",
-        "zh": "★ 46 · ↓ 6,963/30天 · 3 天前更新"
+        "en": "★ 46 · ↓ 6,963 · ◷ Updated 3 days ago",
+        "zh": "★ 46 · ↓ 6,963 · ◷ 3 天前更新"
       }
     },
     "dsh-config-manager": {
@@ -1373,8 +1373,8 @@
         "zh": "DSH 配置的备份、恢复、导出、导入、迁移与同步：设置、插件、MCP 服务器、技能、Agent 预设与工作区，一键搬到新机器。"
       },
       "summary": {
-        "en": "★ 205 · ↓ 15,411/30d · Updated today",
-        "zh": "★ 205 · ↓ 15,411/30天 · 今天更新"
+        "en": "★ 205 · ↓ 15,411 · ◷ Updated today",
+        "zh": "★ 205 · ↓ 15,411 · ◷ 今天更新"
       }
     },
     "dsh-connect-trae": {
@@ -1383,8 +1383,8 @@
         "zh": "接入本机已登录的 Trae 模型，分别管理国内与国际供应商。"
       },
       "summary": {
-        "en": "★ 129 · ↓ 10,005/30d · Updated today",
-        "zh": "★ 129 · ↓ 10,005/30天 · 今天更新"
+        "en": "★ 129 · ↓ 10,005 · ◷ Updated today",
+        "zh": "★ 129 · ↓ 10,005 · ◷ 今天更新"
       }
     },
     "dsh-connect-workbuddy": {
@@ -1393,8 +1393,8 @@
         "zh": "接入本机已登录的 WorkBuddy 模型，并查看账户积分。"
       },
       "summary": {
-        "en": "★ 181 · ↓ 18,140/30d · Updated today",
-        "zh": "★ 181 · ↓ 18,140/30天 · 今天更新"
+        "en": "★ 181 · ↓ 18,140 · ◷ Updated today",
+        "zh": "★ 181 · ↓ 18,140 · ◷ 今天更新"
       }
     },
     "dsh-context": {
@@ -1403,8 +1403,8 @@
         "zh": "通过面板和命令查看上下文组成、变化与压缩情况。"
       },
       "summary": {
-        "en": "★ 2,271 · ↓ 152,172/30d · Updated today",
-        "zh": "★ 2,271 · ↓ 152,172/30天 · 今天更新"
+        "en": "★ 2,271 · ↓ 152,172 · ◷ Updated today",
+        "zh": "★ 2,271 · ↓ 152,172 · ◷ 今天更新"
       }
     },
     "dsh-continual-evolve": {
@@ -1413,8 +1413,8 @@
         "zh": "中央 SQLite 记忆与技能库，按工作区分区：开局注入索引、显式写入与提案制提取全部过代码门禁，技能物化为 SKILL.md。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 8,504/30d · Updated today",
-        "zh": "★ 20 · ↓ 8,504/30天 · 今天更新"
+        "en": "★ 20 · ↓ 8,504 · ◷ Updated today",
+        "zh": "★ 20 · ↓ 8,504 · ◷ 今天更新"
       }
     },
     "dsh-conversation-navigator": {
@@ -1423,8 +1423,8 @@
         "zh": "按轮次查看可折叠大纲，点击跳转并跟踪当前滚动位置。"
       },
       "summary": {
-        "en": "★ 23 · ↓ 2,046/30d · Updated 18 days ago",
-        "zh": "★ 23 · ↓ 2,046/30天 · 18 天前更新"
+        "en": "★ 23 · ↓ 2,046 · ◷ Updated 18 days ago",
+        "zh": "★ 23 · ↓ 2,046 · ◷ 18 天前更新"
       }
     },
     "dsh-cost-meter": {
@@ -1433,8 +1433,8 @@
         "zh": "统计会话与每日模型费用，显示账户余额、预算和订阅套餐用量。"
       },
       "summary": {
-        "en": "★ 449 · ↓ 105,573/30d · Updated today",
-        "zh": "★ 449 · ↓ 105,573/30天 · 今天更新"
+        "en": "★ 450 · ↓ 105,573 · ◷ Updated today",
+        "zh": "★ 450 · ↓ 105,573 · ◷ 今天更新"
       }
     },
     "dsh-data-quality": {
@@ -1443,8 +1443,8 @@
         "zh": "通过确定性工具分析、清理和验证结构化数据。"
       },
       "summary": {
-        "en": "★ 54 · ↓ 3,606/30d · Updated today",
-        "zh": "★ 54 · ↓ 3,606/30天 · 今天更新"
+        "en": "★ 54 · ↓ 3,606 · ◷ Updated today",
+        "zh": "★ 54 · ↓ 3,606 · ◷ 今天更新"
       }
     },
     "dsh-deepcanary": {
@@ -1453,8 +1453,8 @@
         "zh": "通过本机提醒、通知与任务收件箱查看需要关注的会话。"
       },
       "summary": {
-        "en": "★ 90 · ↓ 930/30d · Updated 16 days ago",
-        "zh": "★ 90 · ↓ 930/30天 · 16 天前更新"
+        "en": "★ 90 · ↓ 930 · ◷ Updated 16 days ago",
+        "zh": "★ 90 · ↓ 930 · ◷ 16 天前更新"
       }
     },
     "dsh-defend": {
@@ -1463,8 +1463,8 @@
         "zh": "对消息、工具参数与结果应用检测规则，记录允许、询问或阻止的决策。"
       },
       "summary": {
-        "en": "★ 22 · ↓ 4,256/30d · Updated today",
-        "zh": "★ 22 · ↓ 4,256/30天 · 今天更新"
+        "en": "★ 22 · ↓ 4,256 · ◷ Updated today",
+        "zh": "★ 22 · ↓ 4,256 · ◷ 今天更新"
       }
     },
     "dsh-deja": {
@@ -1473,8 +1473,8 @@
         "zh": "检索和召回其他编程助手的本地会话历史，无需模型建立索引。"
       },
       "summary": {
-        "en": "★ 1,239 · ↓ 4,777/30d · Updated today",
-        "zh": "★ 1,239 · ↓ 4,777/30天 · 今天更新"
+        "en": "★ 1,239 · ↓ 4,777 · ◷ Updated today",
+        "zh": "★ 1,239 · ↓ 4,777 · ◷ 今天更新"
       }
     },
     "dsh-delete-chat": {
@@ -1483,8 +1483,8 @@
         "zh": "在设置页列出、归档、恢复和永久删除会话。"
       },
       "summary": {
-        "en": "★ 18 · ↓ 1,221/30d · Updated 35 days ago",
-        "zh": "★ 18 · ↓ 1,221/30天 · 35 天前更新"
+        "en": "★ 18 · ↓ 1,221 · ◷ Updated 35 days ago",
+        "zh": "★ 18 · ↓ 1,221 · ◷ 35 天前更新"
       }
     },
     "dsh-desktop-plugin": {
@@ -1493,8 +1493,8 @@
         "zh": "下载、更新并启动桌面外壳，创建快捷方式与启动工具。"
       },
       "summary": {
-        "en": "★ 24 · ↓ 1,525/30d · Updated 37 days ago",
-        "zh": "★ 24 · ↓ 1,525/30天 · 37 天前更新"
+        "en": "★ 24 · ↓ 1,525 · ◷ Updated 37 days ago",
+        "zh": "★ 24 · ↓ 1,525 · ◷ 37 天前更新"
       }
     },
     "dsh-dhe-lore": {
@@ -1503,8 +1503,8 @@
         "zh": "将项目知识保存为可编辑的 Markdown 文件，供同一项目的多个会话共享。"
       },
       "summary": {
-        "en": "↓ 2,284/30d · Updated 18 days ago",
-        "zh": "↓ 2,284/30天 · 18 天前更新"
+        "en": "↓ 2,284 · ◷ Updated 18 days ago",
+        "zh": "↓ 2,284 · ◷ 18 天前更新"
       }
     },
     "dsh-doublecheck": {
@@ -1513,8 +1513,8 @@
         "zh": "通过需求澄清、实现检查与交付证据决定交付或返工。"
       },
       "summary": {
-        "en": "★ 55 · ↓ 5,602/30d · Updated today",
-        "zh": "★ 55 · ↓ 5,602/30天 · 今天更新"
+        "en": "★ 55 · ↓ 5,602 · ◷ Updated today",
+        "zh": "★ 55 · ↓ 5,602 · ◷ 今天更新"
       }
     },
     "dsh-drawai": {
@@ -1523,8 +1523,8 @@
         "zh": "在侧栏编辑画布，并通过语义绘图工具读写 .drawio 文件。"
       },
       "summary": {
-        "en": "★ 23 · ↓ 2,778/30d · Updated today",
-        "zh": "★ 23 · ↓ 2,778/30天 · 今天更新"
+        "en": "★ 23 · ↓ 2,778 · ◷ Updated today",
+        "zh": "★ 23 · ↓ 2,778 · ◷ 今天更新"
       }
     },
     "dsh-dream-skin": {
@@ -1533,8 +1533,8 @@
         "zh": "切换可分享的主题，调整壁纸、强调色与半透明界面。"
       },
       "summary": {
-        "en": "★ 254 · ↓ 32,786/30d · Updated 2 days ago",
-        "zh": "★ 254 · ↓ 32,786/30天 · 2 天前更新"
+        "en": "★ 254 · ↓ 32,786 · ◷ Updated 2 days ago",
+        "zh": "★ 254 · ↓ 32,786 · ◷ 2 天前更新"
       }
     },
     "dsh-ears": {
@@ -1543,8 +1543,8 @@
         "zh": "用语音在输入框写作，发送前可用 dsh 模型润色；支持本地 Whisper 与多家云端识别"
       },
       "summary": {
-        "en": "★ 23 · ↓ 2,870/30d · Updated today",
-        "zh": "★ 23 · ↓ 2,870/30天 · 今天更新"
+        "en": "★ 23 · ↓ 2,870 · ◷ Updated today",
+        "zh": "★ 23 · ↓ 2,870 · ◷ 今天更新"
       }
     },
     "dsh-easyrewrite": {
@@ -1553,8 +1553,8 @@
         "zh": "撤回并重新编辑网页会话中的消息。"
       },
       "summary": {
-        "en": "★ 125 · ↓ 3,955/30d · Updated 23 days ago",
-        "zh": "★ 125 · ↓ 3,955/30天 · 23 天前更新"
+        "en": "★ 125 · ↓ 3,955 · ◷ Updated 23 days ago",
+        "zh": "★ 125 · ↓ 3,955 · ◷ 23 天前更新"
       }
     },
     "dsh-echocat-skill-panel": {
@@ -1563,8 +1563,8 @@
         "zh": "查看每轮技能调用，并管理已安装技能及其上游更新。"
       },
       "summary": {
-        "en": "★ 21 · ↓ 1,737/30d · Updated 23 days ago",
-        "zh": "★ 21 · ↓ 1,737/30天 · 23 天前更新"
+        "en": "★ 21 · ↓ 1,737 · ◷ Updated 23 days ago",
+        "zh": "★ 21 · ↓ 1,737 · ◷ 23 天前更新"
       }
     },
     "dsh-ego-browser": {
@@ -1573,8 +1573,8 @@
         "zh": "调用浏览器自动化工具，并查看或操作实时浏览器画面。"
       },
       "summary": {
-        "en": "★ 252 · ↓ 4,134/30d · Updated 19 days ago",
-        "zh": "★ 252 · ↓ 4,134/30天 · 19 天前更新"
+        "en": "★ 252 · ↓ 4,134 · ◷ Updated 19 days ago",
+        "zh": "★ 252 · ↓ 4,134 · ◷ 19 天前更新"
       }
     },
     "dsh-email": {
@@ -1583,8 +1583,8 @@
         "zh": "连接多个邮箱，在会话中收发和搜索邮件，并管理附件、本地草稿与发信审批。"
       },
       "summary": {
-        "en": "★ 21 · ↓ 7,100/30d · Updated today",
-        "zh": "★ 21 · ↓ 7,100/30天 · 今天更新"
+        "en": "★ 21 · ↓ 7,100 · ◷ Updated today",
+        "zh": "★ 21 · ↓ 7,100 · ◷ 今天更新"
       }
     },
     "dsh-embedded-workbench": {
@@ -1593,8 +1593,8 @@
         "zh": "使用涵盖实时系统、中断、存储、调试和架构的 C/C++ 固件开发技能。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 2,945/30d · Updated today",
-        "zh": "★ 20 · ↓ 2,945/30天 · 今天更新"
+        "en": "★ 20 · ↓ 2,945 · ◷ Updated today",
+        "zh": "★ 20 · ↓ 2,945 · ◷ 今天更新"
       }
     },
     "dsh-emoji": {
@@ -1603,8 +1603,8 @@
         "zh": "为 DSH Agent 回复添加贴合语义的微型行内表情"
       },
       "summary": {
-        "en": "★ 48 · ↓ 2,618/30d · Updated 18 days ago",
-        "zh": "★ 48 · ↓ 2,618/30天 · 18 天前更新"
+        "en": "★ 48 · ↓ 2,618 · ◷ Updated 18 days ago",
+        "zh": "★ 48 · ↓ 2,618 · ◷ 18 天前更新"
       }
     },
     "dsh-file-review": {
@@ -1613,8 +1613,8 @@
         "zh": "在原生侧栏标签页中审阅工作区文件变更。"
       },
       "summary": {
-        "en": "★ 43 · ↓ 3,541/30d · Updated today",
-        "zh": "★ 43 · ↓ 3,541/30天 · 今天更新"
+        "en": "★ 43 · ↓ 3,541 · ◷ Updated 1 day ago",
+        "zh": "★ 43 · ↓ 3,541 · ◷ 1 天前更新"
       }
     },
     "dsh-file-upload": {
@@ -1623,8 +1623,8 @@
         "zh": "上传和引用文件，将文档转为 Markdown，并提供图片与文档读取工具。"
       },
       "summary": {
-        "en": "★ 26 · ↓ 3,397/30d · Updated 11 days ago",
-        "zh": "★ 26 · ↓ 3,397/30天 · 11 天前更新"
+        "en": "★ 26 · ↓ 3,397 · ◷ Updated 11 days ago",
+        "zh": "★ 26 · ↓ 3,397 · ◷ 11 天前更新"
       }
     },
     "dsh-flowglass": {
@@ -1633,8 +1633,8 @@
         "zh": "可视化会话执行过程、工具调用与并发 Agent 分支。"
       },
       "summary": {
-        "en": "★ 24 · ↓ 3,054/30d · Updated 18 days ago",
-        "zh": "★ 24 · ↓ 3,054/30天 · 18 天前更新"
+        "en": "★ 24 · ↓ 3,054 · ◷ Updated 18 days ago",
+        "zh": "★ 24 · ↓ 3,054 · ◷ 18 天前更新"
       }
     },
     "dsh-fonttune": {
@@ -1643,8 +1643,8 @@
         "zh": "分别调整对话、界面和代码的字体样式，并保存、导入和导出排版预设。"
       },
       "summary": {
-        "en": "★ 7 · ↓ 4,081/30d · Updated today",
-        "zh": "★ 7 · ↓ 4,081/30天 · 今天更新"
+        "en": "★ 7 · ↓ 4,081 · ◷ Updated today",
+        "zh": "★ 7 · ↓ 4,081 · ◷ 今天更新"
       }
     },
     "dsh-free-search": {
@@ -1653,8 +1653,8 @@
         "zh": "使用多个引擎搜索和抓取网页，自定义路由、筛选与失败切换。"
       },
       "summary": {
-        "en": "★ 474 · ↓ 47,617/30d · Updated today",
-        "zh": "★ 474 · ↓ 47,617/30天 · 今天更新"
+        "en": "★ 475 · ↓ 47,617 · ◷ Updated today",
+        "zh": "★ 475 · ↓ 47,617 · ◷ 今天更新"
       }
     },
     "dsh-fund-research": {
@@ -1663,8 +1663,8 @@
         "zh": "整理公开基金数据，查看持仓、基金经理履历与业绩指标。"
       },
       "summary": {
-        "en": "★ 67 · ↓ 3,698/30d · Updated 8 days ago",
-        "zh": "★ 67 · ↓ 3,698/30天 · 8 天前更新"
+        "en": "★ 67 · ↓ 3,698 · ◷ Updated 8 days ago",
+        "zh": "★ 67 · ↓ 3,698 · ◷ 8 天前更新"
       }
     },
     "dsh-game-material-master": {
@@ -1673,8 +1673,8 @@
         "zh": "通过专用工具生成游戏精灵、动画帧、地图、图片与音乐。"
       },
       "summary": {
-        "en": "★ 55 · ↓ 2,698/30d · Updated today",
-        "zh": "★ 55 · ↓ 2,698/30天 · 今天更新"
+        "en": "★ 55 · ↓ 2,698 · ◷ Updated today",
+        "zh": "★ 55 · ↓ 2,698 · ◷ 今天更新"
       }
     },
     "dsh-genui": {
@@ -1683,8 +1683,8 @@
         "zh": "在回复中渲染图表、表单、计算器与小应用，并将操作反馈给模型。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 4,630/30d · Updated 9 days ago",
-        "zh": "★ 20 · ↓ 4,630/30天 · 9 天前更新"
+        "en": "★ 20 · ↓ 4,630 · ◷ Updated 9 days ago",
+        "zh": "★ 20 · ↓ 4,630 · ◷ 9 天前更新"
       }
     },
     "dsh-gitbash-shell": {
@@ -1693,8 +1693,8 @@
         "zh": "在 Windows 上使用独立 Git Bash 命令执行器与终端集成。"
       },
       "summary": {
-        "en": "★ 38 · ↓ 12,625/30d · Updated today",
-        "zh": "★ 38 · ↓ 12,625/30天 · 今天更新"
+        "en": "★ 38 · ↓ 12,625 · ◷ Updated today",
+        "zh": "★ 38 · ↓ 12,625 · ◷ 今天更新"
       }
     },
     "dsh-graph": {
@@ -1703,8 +1703,8 @@
         "zh": "通过关系图与看板管理 Agent 目标。"
       },
       "summary": {
-        "en": "★ 19 · ↓ 3,668/30d · Updated 2 days ago",
-        "zh": "★ 19 · ↓ 3,668/30天 · 2 天前更新"
+        "en": "★ 19 · ↓ 3,668 · ◷ Updated 3 days ago",
+        "zh": "★ 19 · ↓ 3,668 · ◷ 3 天前更新"
       }
     },
     "dsh-harmony": {
@@ -1713,8 +1713,8 @@
         "zh": "在运行时修补、替换或装饰 DSH 插件。"
       },
       "summary": {
-        "en": "★ 19 · ↓ 6,121/30d · Updated 2 days ago",
-        "zh": "★ 19 · ↓ 6,121/30天 · 2 天前更新"
+        "en": "★ 19 · ↓ 6,121 · ◷ Updated 2 days ago",
+        "zh": "★ 19 · ↓ 6,121 · ◷ 2 天前更新"
       }
     },
     "dsh-hdc-bridge": {
@@ -1723,8 +1723,8 @@
         "zh": "接入 hdc 设备调试、版本化 API 文档和 DevEco 编译辅助。"
       },
       "summary": {
-        "en": "★ 19 · ↓ 1,665/30d · Updated 6 days ago",
-        "zh": "★ 19 · ↓ 1,665/30天 · 6 天前更新"
+        "en": "★ 19 · ↓ 1,665 · ◷ Updated 6 days ago",
+        "zh": "★ 19 · ↓ 1,665 · ◷ 6 天前更新"
       }
     },
     "dsh-im-companion": {
@@ -1733,8 +1733,8 @@
         "zh": "查看各工作区助手的在线状态，并调整工作区归属。"
       },
       "summary": {
-        "en": "★ 29 · ↓ 3,950/30d · Updated today",
-        "zh": "★ 29 · ↓ 3,950/30天 · 今天更新"
+        "en": "★ 29 · ↓ 3,950 · ◷ Updated today",
+        "zh": "★ 29 · ↓ 3,950 · ◷ 今天更新"
       }
     },
     "dsh-image-gen": {
@@ -1743,8 +1743,8 @@
         "zh": "在会话中接入多家图片生成供应商与本地 ComfyUI。"
       },
       "summary": {
-        "en": "★ 625 · ↓ 24,370/30d · Updated 2 days ago",
-        "zh": "★ 625 · ↓ 24,370/30天 · 2 天前更新"
+        "en": "★ 625 · ↓ 24,370 · ◷ Updated 3 days ago",
+        "zh": "★ 625 · ↓ 24,370 · ◷ 3 天前更新"
       }
     },
     "dsh-image-viewer": {
@@ -1753,8 +1753,8 @@
         "zh": "为会话图片提供缩放、多图浏览、原图下载和区域标注。"
       },
       "summary": {
-        "en": "★ 2 · ↓ 7,996/30d · Updated today",
-        "zh": "★ 2 · ↓ 7,996/30天 · 今天更新"
+        "en": "★ 2 · ↓ 7,996 · ◷ Updated today",
+        "zh": "★ 2 · ↓ 7,996 · ◷ 今天更新"
       }
     },
     "dsh-industry-research": {
@@ -1763,8 +1763,8 @@
         "zh": "整理公开行业与公司证据，绘制产业链并编写研究报告。"
       },
       "summary": {
-        "en": "★ 214 · ↓ 4,205/30d · Updated 8 days ago",
-        "zh": "★ 214 · ↓ 4,205/30天 · 8 天前更新"
+        "en": "★ 214 · ↓ 4,205 · ◷ Updated 8 days ago",
+        "zh": "★ 214 · ↓ 4,205 · ◷ 8 天前更新"
       }
     },
     "dsh-jev-interceptor": {
@@ -1773,8 +1773,8 @@
         "zh": "使用 Jev 分类工具调用风险，并基于证据处理自动审批。"
       },
       "summary": {
-        "en": "★ 30 · ↓ 2,117/30d · Updated 1 day ago",
-        "zh": "★ 30 · ↓ 2,117/30天 · 1 天前更新"
+        "en": "★ 30 · ↓ 2,117 · ◷ Updated 1 day ago",
+        "zh": "★ 30 · ↓ 2,117 · ◷ 1 天前更新"
       }
     },
     "dsh-joi-channel-theme": {
@@ -1783,8 +1783,8 @@
         "zh": "为网页界面应用 Joi Flowers 或 Joi Library 同人主题。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 2,374/30d · Updated 6 days ago",
-        "zh": "★ 20 · ↓ 2,374/30天 · 6 天前更新"
+        "en": "★ 20 · ↓ 2,374 · ◷ Updated 6 days ago",
+        "zh": "★ 20 · ↓ 2,374 · ◷ 6 天前更新"
       }
     },
     "dsh-kimi-subscription": {
@@ -1793,8 +1793,8 @@
         "zh": "接入 Kimi Code 订阅模型，支持设备登录、网页搜索和额度查询。"
       },
       "summary": {
-        "en": "★ 3 · ↓ 5,255/30d · Updated today",
-        "zh": "★ 3 · ↓ 5,255/30天 · 今天更新"
+        "en": "★ 3 · ↓ 5,255 · ◷ Updated today",
+        "zh": "★ 3 · ↓ 5,255 · ◷ 今天更新"
       }
     },
     "dsh-kimino-theme": {
@@ -1803,8 +1803,8 @@
         "zh": "为网页界面添加《你的名字》主题与壁纸素材。"
       },
       "summary": {
-        "en": "★ 42 · ↓ 2,460/30d · Updated 12 days ago",
-        "zh": "★ 42 · ↓ 2,460/30天 · 12 天前更新"
+        "en": "★ 42 · ↓ 2,460 · ◷ Updated 12 days ago",
+        "zh": "★ 42 · ↓ 2,460 · ◷ 12 天前更新"
       }
     },
     "dsh-knit": {
@@ -1813,8 +1813,8 @@
         "zh": "检索并排序文档、代码与媒体，在侧栏组织上下文资料。"
       },
       "summary": {
-        "en": "★ 54 · ↓ 4,346/30d · Updated 4 days ago",
-        "zh": "★ 54 · ↓ 4,346/30天 · 4 天前更新"
+        "en": "★ 54 · ↓ 4,346 · ◷ Updated 4 days ago",
+        "zh": "★ 54 · ↓ 4,346 · ◷ 4 天前更新"
       }
     },
     "dsh-knowledge": {
@@ -1823,8 +1823,8 @@
         "zh": "管理文档、分块与向量检索，并通过工具和面板查询知识库。"
       },
       "summary": {
-        "en": "★ 77 · ↓ 2,979/30d · Updated 7 days ago",
-        "zh": "★ 77 · ↓ 2,979/30天 · 7 天前更新"
+        "en": "★ 77 · ↓ 2,979 · ◷ Updated 7 days ago",
+        "zh": "★ 77 · ↓ 2,979 · ◷ 7 天前更新"
       }
     },
     "dsh-lark-link": {
@@ -1833,8 +1833,8 @@
         "zh": "通过扫码登录、卡片命令与媒体消息连接飞书和 DSH。"
       },
       "summary": {
-        "en": "★ 41 · ↓ 2,221/30d · Updated today",
-        "zh": "★ 41 · ↓ 2,221/30天 · 今天更新"
+        "en": "★ 41 · ↓ 2,221 · ◷ Updated today",
+        "zh": "★ 41 · ↓ 2,221 · ◷ 今天更新"
       }
     },
     "dsh-library": {
@@ -1843,8 +1843,8 @@
         "zh": "为本地文档建立索引，进行混合检索、上下文召回与引用检查。"
       },
       "summary": {
-        "en": "★ 21 · ↓ 4,386/30d · Updated 8 days ago",
-        "zh": "★ 21 · ↓ 4,386/30天 · 8 天前更新"
+        "en": "★ 21 · ↓ 4,386 · ◷ Updated 8 days ago",
+        "zh": "★ 21 · ↓ 4,386 · ◷ 8 天前更新"
       }
     },
     "dsh-live2d-pets": {
@@ -1853,8 +1853,8 @@
         "zh": "添加随会话状态变化的 Live2D 角色，支持人设与自有模型。"
       },
       "summary": {
-        "en": "★ 31 · ↓ 2,005/30d · Updated 24 days ago",
-        "zh": "★ 31 · ↓ 2,005/30天 · 24 天前更新"
+        "en": "★ 31 · ↓ 2,005 · ◷ Updated 24 days ago",
+        "zh": "★ 31 · ↓ 2,005 · ◷ 24 天前更新"
       }
     },
     "dsh-llm-codex": {
@@ -1863,8 +1863,8 @@
         "zh": "复用本机 Codex CLI 登录凭据，为 DSH 接入 ChatGPT 订阅模型。"
       },
       "summary": {
-        "en": "★ 21 · ↓ 264/30d · Updated 62 days ago",
-        "zh": "★ 21 · ↓ 264/30天 · 62 天前更新"
+        "en": "★ 21 · ↓ 264 · ◷ Updated 62 days ago",
+        "zh": "★ 21 · ↓ 264 · ◷ 62 天前更新"
       }
     },
     "dsh-llm-verifier": {
@@ -1873,8 +1873,8 @@
         "zh": "通过网页设置配置 DSH 原生模型验证器。"
       },
       "summary": {
-        "en": "★ 19 · ↓ 4,398/30d · Updated 1 day ago",
-        "zh": "★ 19 · ↓ 4,398/30天 · 1 天前更新"
+        "en": "★ 19 · ↓ 4,398 · ◷ Updated 1 day ago",
+        "zh": "★ 19 · ↓ 4,398 · ◷ 1 天前更新"
       }
     },
     "dsh-local-ai": {
@@ -1883,8 +1883,8 @@
         "zh": "发现和管理本地模型，按任务路由调用，并可回退到云端模型。"
       },
       "summary": {
-        "en": "★ 21 · ↓ 4,137/30d · Updated 8 days ago",
-        "zh": "★ 21 · ↓ 4,137/30天 · 8 天前更新"
+        "en": "★ 21 · ↓ 4,137 · ◷ Updated 8 days ago",
+        "zh": "★ 21 · ↓ 4,137 · ◷ 8 天前更新"
       }
     },
     "dsh-lsp-actions": {
@@ -1893,8 +1893,8 @@
         "zh": "通过语言服务器执行诊断、格式化、补全、符号查询和重命名。"
       },
       "summary": {
-        "en": "★ 29 · ↓ 5,646/30d · Updated 8 days ago",
-        "zh": "★ 29 · ↓ 5,646/30天 · 8 天前更新"
+        "en": "★ 29 · ↓ 5,646 · ◷ Updated 8 days ago",
+        "zh": "★ 29 · ↓ 5,646 · ◷ 8 天前更新"
       }
     },
     "dsh-maze": {
@@ -1903,8 +1903,8 @@
         "zh": "在时间线上查看任务路径、绕行与回退，并比较多个会话。"
       },
       "summary": {
-        "en": "★ 87 · ↓ 1,899/30d · Updated 10 days ago",
-        "zh": "★ 87 · ↓ 1,899/30天 · 10 天前更新"
+        "en": "★ 87 · ↓ 1,899 · ◷ Updated 10 days ago",
+        "zh": "★ 87 · ↓ 1,899 · ◷ 10 天前更新"
       }
     },
     "dsh-mcp": {
@@ -1913,8 +1913,8 @@
         "zh": "可视化管理 MCP 服务器，并按需检索和加载工具。"
       },
       "summary": {
-        "en": "★ 23 · ↓ 1,290/30d · Updated 5 days ago",
-        "zh": "★ 23 · ↓ 1,290/30天 · 5 天前更新"
+        "en": "★ 23 · ↓ 1,290 · ◷ Updated 5 days ago",
+        "zh": "★ 23 · ↓ 1,290 · ◷ 5 天前更新"
       }
     },
     "dsh-mcp-connector": {
@@ -1923,8 +1923,8 @@
         "zh": "连接 MCP 服务器，检索活跃连接中的工具并诊断发现问题。"
       },
       "summary": {
-        "en": "★ 56 · ↓ 22,827/30d · Updated 1 day ago",
-        "zh": "★ 56 · ↓ 22,827/30天 · 1 天前更新"
+        "en": "★ 56 · ↓ 22,827 · ◷ Updated 1 day ago",
+        "zh": "★ 56 · ↓ 22,827 · ◷ 1 天前更新"
       }
     },
     "dsh-mcp-panel": {
@@ -1933,8 +1933,8 @@
         "zh": "通过界面或命令管理 MCP 服务器、检查状态并试运行工具管道。"
       },
       "summary": {
-        "en": "★ 76 · ↓ 9,674/30d · Updated 8 days ago",
-        "zh": "★ 76 · ↓ 9,674/30天 · 8 天前更新"
+        "en": "★ 76 · ↓ 9,674 · ◷ Updated 8 days ago",
+        "zh": "★ 76 · ↓ 9,674 · ◷ 8 天前更新"
       }
     },
     "dsh-mcp-studio": {
@@ -1943,8 +1943,8 @@
         "zh": "在 DSH 侧边栏面板里管理 MCP 服务器与技能；装了 dshmarket 时内嵌插件市场。"
       },
       "summary": {
-        "en": "★ 26 · ↓ 1,675/30d · Updated 14 days ago",
-        "zh": "★ 26 · ↓ 1,675/30天 · 14 天前更新"
+        "en": "★ 26 · ↓ 1,675 · ◷ Updated 15 days ago",
+        "zh": "★ 26 · ↓ 1,675 · ◷ 15 天前更新"
       }
     },
     "dsh-meme": {
@@ -1953,8 +1953,8 @@
         "zh": "输入框一键斗图：多图库开关、情绪与关键词搜图、AI 学图；图库能从市场一键安装，也能导入/导出 ZIP 分享。"
       },
       "summary": {
-        "en": "★ 222 · ↓ 10,877/30d · Updated 5 days ago",
-        "zh": "★ 222 · ↓ 10,877/30天 · 5 天前更新"
+        "en": "★ 222 · ↓ 10,877 · ◷ Updated 5 days ago",
+        "zh": "★ 222 · ↓ 10,877 · ◷ 5 天前更新"
       }
     },
     "dsh-memento": {
@@ -1963,8 +1963,8 @@
         "zh": "以本地 SQLite 保存分层跨会话记忆，提供检索、写入审批和上下文注入。"
       },
       "summary": {
-        "en": "★ 136 · ↓ 5,742/30d · Updated 5 days ago",
-        "zh": "★ 136 · ↓ 5,742/30天 · 5 天前更新"
+        "en": "★ 136 · ↓ 5,742 · ◷ Updated 5 days ago",
+        "zh": "★ 136 · ↓ 5,742 · ◷ 5 天前更新"
       }
     },
     "dsh-memgas": {
@@ -1973,8 +1973,8 @@
         "zh": "通过多通道检索维护和召回长期记忆。"
       },
       "summary": {
-        "en": "★ 25 · ↓ 335/30d · Updated 42 days ago",
-        "zh": "★ 25 · ↓ 335/30天 · 42 天前更新"
+        "en": "★ 25 · ↓ 335 · ◷ Updated 42 days ago",
+        "zh": "★ 25 · ↓ 335 · ◷ 42 天前更新"
       }
     },
     "dsh-memoir": {
@@ -1983,8 +1983,8 @@
         "zh": "用本地热记忆、BM25 检索与来源记录保存跨会话项目知识。"
       },
       "summary": {
-        "en": "★ 36 · ↓ 3,949/30d · Updated 8 days ago",
-        "zh": "★ 36 · ↓ 3,949/30天 · 8 天前更新"
+        "en": "★ 36 · ↓ 3,949 · ◷ Updated 8 days ago",
+        "zh": "★ 36 · ↓ 3,949 · ◷ 8 天前更新"
       }
     },
     "dsh-mnemon": {
@@ -1993,8 +1993,8 @@
         "zh": "为 DeepSeek Harness 提供可组合记忆、可插拔来源与记忆策略。"
       },
       "summary": {
-        "en": "★ 579 · ↓ 45,724/30d · Updated today",
-        "zh": "★ 579 · ↓ 45,724/30天 · 今天更新"
+        "en": "★ 579 · ↓ 45,724 · ◷ Updated today",
+        "zh": "★ 579 · ↓ 45,724 · ◷ 今天更新"
       }
     },
     "dsh-model-context-catalog": {
@@ -2003,8 +2003,8 @@
         "zh": "按参考来源匹配模型上下文窗口，并选择性批量配置。"
       },
       "summary": {
-        "en": "★ 34 · ↓ 1,832/30d · Updated 6 days ago",
-        "zh": "★ 34 · ↓ 1,832/30天 · 6 天前更新"
+        "en": "★ 34 · ↓ 1,832 · ◷ Updated 6 days ago",
+        "zh": "★ 34 · ↓ 1,832 · ◷ 6 天前更新"
       }
     },
     "dsh-model-fusion": {
@@ -2013,8 +2013,8 @@
         "zh": "让主模型负责阅读、简报与复核，由副模型承担代码编写。"
       },
       "summary": {
-        "en": "★ 66 · ↓ 895/30d · Updated 4 days ago",
-        "zh": "★ 66 · ↓ 895/30天 · 4 天前更新"
+        "en": "★ 66 · ↓ 895 · ◷ Updated 4 days ago",
+        "zh": "★ 66 · ↓ 895 · ◷ 4 天前更新"
       }
     },
     "dsh-motion-ui": {
@@ -2023,8 +2023,8 @@
         "zh": "提供可读会话界面、交互 HTML/SVG、动画编辑与本机视频制作。"
       },
       "summary": {
-        "en": "★ 27 · ↓ 1,292/30d · Updated today",
-        "zh": "★ 27 · ↓ 1,292/30天 · 今天更新"
+        "en": "★ 27 · ↓ 1,292 · ◷ Updated today",
+        "zh": "★ 27 · ↓ 1,292 · ◷ 今天更新"
       }
     },
     "dsh-music-player": {
@@ -2033,8 +2033,8 @@
         "zh": "在编程会话中使用音乐播放功能。"
       },
       "summary": {
-        "en": "★ 18 · ↓ 2,204/30d · Updated 27 days ago",
-        "zh": "★ 18 · ↓ 2,204/30天 · 27 天前更新"
+        "en": "★ 18 · ↓ 2,204 · ◷ Updated 27 days ago",
+        "zh": "★ 18 · ↓ 2,204 · ◷ 27 天前更新"
       }
     },
     "dsh-notify-me": {
@@ -2043,8 +2043,8 @@
         "zh": "为任务完成、提问和审批发送桌面或 Webhook 通知。"
       },
       "summary": {
-        "en": "★ 37 · ↓ 6,645/30d · Updated 2 days ago",
-        "zh": "★ 37 · ↓ 6,645/30天 · 2 天前更新"
+        "en": "★ 37 · ↓ 6,645 · ◷ Updated 2 days ago",
+        "zh": "★ 37 · ↓ 6,645 · ◷ 2 天前更新"
       }
     },
     "dsh-novel-forge": {
@@ -2053,8 +2053,8 @@
         "zh": "管理章节写作、设定约束、重复检查、批量起草与全书复核。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 1,604/30d · Updated 1 day ago",
-        "zh": "★ 20 · ↓ 1,604/30天 · 1 天前更新"
+        "en": "★ 20 · ↓ 1,604 · ◷ Updated 2 days ago",
+        "zh": "★ 20 · ↓ 1,604 · ◷ 2 天前更新"
       }
     },
     "dsh-novel-writer": {
@@ -2063,8 +2063,8 @@
         "zh": "管理章节参考、叙事连贯性、改稿检查与创作素材。"
       },
       "summary": {
-        "en": "★ 23 · ↓ 4,668/30d · Updated 2 days ago",
-        "zh": "★ 23 · ↓ 4,668/30天 · 2 天前更新"
+        "en": "★ 23 · ↓ 4,668 · ◷ Updated 2 days ago",
+        "zh": "★ 23 · ↓ 4,668 · ◷ 2 天前更新"
       }
     },
     "dsh-obsidian": {
@@ -2073,8 +2073,8 @@
         "zh": "搜索、读取、编辑、移动和删除本机 Obsidian 笔记。"
       },
       "summary": {
-        "en": "★ 29 · ↓ 2,470/30d · Updated 18 days ago",
-        "zh": "★ 29 · ↓ 2,470/30天 · 18 天前更新"
+        "en": "★ 29 · ↓ 2,470 · ◷ Updated 18 days ago",
+        "zh": "★ 29 · ↓ 2,470 · ◷ 18 天前更新"
       }
     },
     "dsh-office-tools": {
@@ -2083,8 +2083,8 @@
         "zh": "在会话工作区中创建和读取文档、表格与演示文稿，并更新文档和表格。"
       },
       "summary": {
-        "en": "★ 32 · ↓ 10,378/30d · Updated 5 days ago",
-        "zh": "★ 32 · ↓ 10,378/30天 · 5 天前更新"
+        "en": "★ 32 · ↓ 10,378 · ◷ Updated 5 days ago",
+        "zh": "★ 32 · ↓ 10,378 · ◷ 5 天前更新"
       }
     },
     "dsh-ontology": {
@@ -2093,8 +2093,8 @@
         "zh": "定义带类型与约束的领域知识，并进行断言、查询和推理。"
       },
       "summary": {
-        "en": "★ 19 · ↓ 437/30d · Updated 2 days ago",
-        "zh": "★ 19 · ↓ 437/30天 · 2 天前更新"
+        "en": "★ 19 · ↓ 437 · ◷ Updated 3 days ago",
+        "zh": "★ 19 · ↓ 437 · ◷ 3 天前更新"
       }
     },
     "dsh-opencode-go": {
@@ -2103,8 +2103,8 @@
         "zh": "在 DSH 中管理 OpenCode Go 模型与多个账号，并显示订阅额度。"
       },
       "summary": {
-        "en": "★ 152 · ↓ 8,334/30d · Updated 2 days ago",
-        "zh": "★ 152 · ↓ 8,334/30天 · 2 天前更新"
+        "en": "★ 152 · ↓ 8,334 · ◷ Updated 2 days ago",
+        "zh": "★ 152 · ↓ 8,334 · ◷ 2 天前更新"
       }
     },
     "dsh-opencode-palette": {
@@ -2113,8 +2113,8 @@
         "zh": "为网页界面应用多套可持久保存的主题配色。"
       },
       "summary": {
-        "en": "★ 66 · ↓ 7,730/30d · Updated today",
-        "zh": "★ 66 · ↓ 7,730/30天 · 今天更新"
+        "en": "★ 66 · ↓ 7,730 · ◷ Updated today",
+        "zh": "★ 66 · ↓ 7,730 · ◷ 今天更新"
       }
     },
     "dsh-origin-plugin": {
@@ -2123,8 +2123,8 @@
         "zh": "通过 MCP 工具操作 OriginLab 数据导入、科研图模板与图表编辑。"
       },
       "summary": {
-        "en": "★ 23 · ↓ 3,502/30d · Updated 30 days ago",
-        "zh": "★ 23 · ↓ 3,502/30天 · 30 天前更新"
+        "en": "★ 23 · ↓ 3,502 · ◷ Updated 30 days ago",
+        "zh": "★ 23 · ↓ 3,502 · ◷ 30 天前更新"
       }
     },
     "dsh-passwords": {
@@ -2133,8 +2133,8 @@
         "zh": "为远程访问配置登录、用户权限、配额、HTTPS 与审计日志。"
       },
       "summary": {
-        "en": "★ 74 · ↓ 4,655/30d · Updated 8 days ago",
-        "zh": "★ 74 · ↓ 4,655/30天 · 8 天前更新"
+        "en": "★ 74 · ↓ 4,655 · ◷ Updated 8 days ago",
+        "zh": "★ 74 · ↓ 4,655 · ◷ 8 天前更新"
       }
     },
     "dsh-pause": {
@@ -2143,8 +2143,8 @@
         "zh": "在下一次模型请求前暂停，允许用户补充文字并手动继续。"
       },
       "summary": {
-        "en": "★ 22 · ↓ 1,029/30d · Updated today",
-        "zh": "★ 22 · ↓ 1,029/30天 · 今天更新"
+        "en": "★ 22 · ↓ 1,029 · ◷ Updated today",
+        "zh": "★ 22 · ↓ 1,029 · ◷ 今天更新"
       }
     },
     "dsh-pentester": {
@@ -2153,8 +2153,8 @@
         "zh": "为 DSH 提供按 PTES 流程组织的测试编排预设。"
       },
       "summary": {
-        "en": "★ 54 · ↓ 3,691/30d · Updated 4 days ago",
-        "zh": "★ 54 · ↓ 3,691/30天 · 4 天前更新"
+        "en": "★ 54 · ↓ 3,691 · ◷ Updated 4 days ago",
+        "zh": "★ 54 · ↓ 3,691 · ◷ 4 天前更新"
       }
     },
     "dsh-permission-rules": {
@@ -2163,8 +2163,8 @@
         "zh": "按工具、参数、工作区路径与网络目标配置允许、拒绝和询问规则。"
       },
       "summary": {
-        "en": "★ 126 · ↓ 6,780/30d · Updated 8 days ago",
-        "zh": "★ 126 · ↓ 6,780/30天 · 8 天前更新"
+        "en": "★ 126 · ↓ 6,780 · ◷ Updated 8 days ago",
+        "zh": "★ 126 · ↓ 6,780 · ◷ 8 天前更新"
       }
     },
     "dsh-persona-dafeiyu": {
@@ -2173,8 +2173,8 @@
         "zh": "导入、切换和管理内置或自定义会话人设。"
       },
       "summary": {
-        "en": "★ 39 · ↓ 1,291/30d · Updated 5 days ago",
-        "zh": "★ 39 · ↓ 1,291/30天 · 5 天前更新"
+        "en": "★ 39 · ↓ 1,291 · ◷ Updated 5 days ago",
+        "zh": "★ 39 · ↓ 1,291 · ◷ 5 天前更新"
       }
     },
     "dsh-personal-center": {
@@ -2183,8 +2183,8 @@
         "zh": "集中查看 Token 用量、费用、会话状态并调整个人偏好。"
       },
       "summary": {
-        "en": "★ 118 · ↓ 1,591/30d · Updated 20 days ago",
-        "zh": "★ 118 · ↓ 1,591/30天 · 20 天前更新"
+        "en": "★ 118 · ↓ 1,591 · ◷ Updated 20 days ago",
+        "zh": "★ 118 · ↓ 1,591 · ◷ 20 天前更新"
       }
     },
     "dsh-pet-live2d": {
@@ -2193,8 +2193,8 @@
         "zh": "在 DSH 界面里挂一只 Live2D 宠物：会跟着鼠标看、点一下有反应、按会话相位换表情，动作 / 表情 / 台词都能配。"
       },
       "summary": {
-        "en": "★ 42 · ↓ 6,710/30d · Updated 2 days ago",
-        "zh": "★ 42 · ↓ 6,710/30天 · 2 天前更新"
+        "en": "★ 42 · ↓ 6,710 · ◷ Updated 2 days ago",
+        "zh": "★ 42 · ↓ 6,710 · ◷ 2 天前更新"
       }
     },
     "dsh-pet-remielle": {
@@ -2203,8 +2203,8 @@
         "zh": "用贴纸角色、状态气泡与桌面浮窗反映会话事件。"
       },
       "summary": {
-        "en": "★ 54 · ↓ 3,094/30d · Updated 7 days ago",
-        "zh": "★ 54 · ↓ 3,094/30天 · 7 天前更新"
+        "en": "★ 54 · ↓ 3,094 · ◷ Updated 7 days ago",
+        "zh": "★ 54 · ↓ 3,094 · ◷ 7 天前更新"
       }
     },
     "dsh-plugin": {
@@ -2213,8 +2213,8 @@
         "zh": "在 DSH 中浏览、搜索并安装社区插件。"
       },
       "summary": {
-        "en": "★ 252 · ↓ 21,974/30d · Updated today",
-        "zh": "★ 252 · ↓ 21,974/30天 · 今天更新"
+        "en": "★ 252 · ↓ 21,974 · ◷ Updated today",
+        "zh": "★ 252 · ↓ 21,974 · ◷ 今天更新"
       }
     },
     "dsh-plugin-bridge": {
@@ -2223,8 +2223,8 @@
         "zh": "预览并生成结构化交接资料，在不同预设之间迁移会话。"
       },
       "summary": {
-        "en": "★ 163 · ↓ 3,495/30d · Updated today",
-        "zh": "★ 163 · ↓ 3,495/30天 · 今天更新"
+        "en": "★ 163 · ↓ 3,495 · ◷ Updated today",
+        "zh": "★ 163 · ↓ 3,495 · ◷ 今天更新"
       }
     },
     "dsh-plugin-garmin-connect": {
@@ -2233,8 +2233,8 @@
         "zh": "通过插件与 MCP 服务连接 Garmin Connect 账户。"
       },
       "summary": {
-        "en": "★ 32 · ↓ 2,494/30d · Updated today",
-        "zh": "★ 32 · ↓ 2,494/30天 · 今天更新"
+        "en": "★ 32 · ↓ 2,494 · ◷ Updated today",
+        "zh": "★ 32 · ↓ 2,494 · ◷ 今天更新"
       }
     },
     "dsh-plugin-guide": {
@@ -2243,8 +2243,8 @@
         "zh": "DeepSeek Harness 插件开发知识库：官方文档副本、契约红线、迁移指南、源码核实的问题索引，以及 dsh-plugin-dev 命令行工具。"
       },
       "summary": {
-        "en": "★ 52 · ↓ 7,954/30d · Updated 4 days ago",
-        "zh": "★ 52 · ↓ 7,954/30天 · 4 天前更新"
+        "en": "★ 52 · ↓ 7,954 · ◷ Updated 4 days ago",
+        "zh": "★ 52 · ↓ 7,954 · ◷ 4 天前更新"
       }
     },
     "dsh-plugin-lookatstudy": {
@@ -2253,8 +2253,8 @@
         "zh": "将 Markdown、文件夹或学习仓库组织为带复习安排的课程。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 3,113/30d · Updated 11 days ago",
-        "zh": "★ 20 · ↓ 3,113/30天 · 11 天前更新"
+        "en": "★ 20 · ↓ 3,113 · ◷ Updated 11 days ago",
+        "zh": "★ 20 · ↓ 3,113 · ◷ 11 天前更新"
       }
     },
     "dsh-plugin-message-edit": {
@@ -2263,8 +2263,8 @@
         "zh": "编辑历史提示词以回退和分支会话，并在树中浏览版本。"
       },
       "summary": {
-        "en": "★ 22 · ↓ 2,169/30d · Updated 12 days ago",
-        "zh": "★ 22 · ↓ 2,169/30天 · 12 天前更新"
+        "en": "★ 22 · ↓ 2,169 · ◷ Updated 12 days ago",
+        "zh": "★ 22 · ↓ 2,169 · ◷ 12 天前更新"
       }
     },
     "dsh-plugin-mobile-gateway": {
@@ -2273,8 +2273,8 @@
         "zh": "配对移动设备，同步会话与文件，支持局域网和 Cloudflare 隧道。"
       },
       "summary": {
-        "en": "★ 85 · ↓ 3,672/30d · Updated today",
-        "zh": "★ 85 · ↓ 3,672/30天 · 今天更新"
+        "en": "★ 85 · ↓ 3,672 · ◷ Updated today",
+        "zh": "★ 85 · ↓ 3,672 · ◷ 今天更新"
       }
     },
     "dsh-plugin-ramify": {
@@ -2283,8 +2283,8 @@
         "zh": "在创意画布中分支和组织会话内容。"
       },
       "summary": {
-        "en": "★ 21 · ↓ 231/30d · Updated 17 days ago",
-        "zh": "★ 21 · ↓ 231/30天 · 17 天前更新"
+        "en": "★ 21 · ↓ 231 · ◷ Updated 17 days ago",
+        "zh": "★ 21 · ↓ 231 · ◷ 17 天前更新"
       }
     },
     "dsh-plugin-subagent-director": {
@@ -2293,8 +2293,8 @@
         "zh": "按调用参数、角色与默认策略为子 Agent 选择模型。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 3,497/30d · Updated today",
-        "zh": "★ 20 · ↓ 3,497/30天 · 今天更新"
+        "en": "★ 20 · ↓ 3,497 · ◷ Updated today",
+        "zh": "★ 20 · ↓ 3,497 · ◷ 今天更新"
       }
     },
     "dsh-plugin-tether": {
@@ -2303,8 +2303,8 @@
         "zh": "通过点对点或中继连接，从 Android 与 iOS 访问电脑上的 DSH。"
       },
       "summary": {
-        "en": "★ 61 · ↓ 2,651/30d · Updated 6 days ago",
-        "zh": "★ 61 · ↓ 2,651/30天 · 6 天前更新"
+        "en": "★ 61 · ↓ 2,651 · ◷ Updated 6 days ago",
+        "zh": "★ 61 · ↓ 2,651 · ◷ 6 天前更新"
       }
     },
     "dsh-plugin-wallpaper-engine": {
@@ -2313,8 +2313,8 @@
         "zh": "在 DSH 界面使用本机 Wallpaper Engine 场景、网页与视频壁纸。"
       },
       "summary": {
-        "en": "★ 1,519 · ↓ 51,433/30d · Updated 3 days ago",
-        "zh": "★ 1,519 · ↓ 51,433/30天 · 3 天前更新"
+        "en": "★ 1,522 · ↓ 51,433 · ◷ Updated 3 days ago",
+        "zh": "★ 1,522 · ↓ 51,433 · ◷ 3 天前更新"
       }
     },
     "dsh-plugin-yolo": {
@@ -2323,8 +2323,8 @@
         "zh": "从会话整理承诺与计划，跨会话追踪并提供提醒。"
       },
       "summary": {
-        "en": "★ 56 · ↓ 1,378/30d · Updated 37 days ago",
-        "zh": "★ 56 · ↓ 1,378/30天 · 37 天前更新"
+        "en": "★ 56 · ↓ 1,378 · ◷ Updated 37 days ago",
+        "zh": "★ 56 · ↓ 1,378 · ◷ 37 天前更新"
       }
     },
     "dsh-pocket": {
@@ -2333,8 +2333,8 @@
         "zh": "通过局域网或公网将手机与电脑 DSH 配对，同步访问会话。"
       },
       "summary": {
-        "en": "★ 1,856 · ↓ 13,315/30d · Updated today",
-        "zh": "★ 1,856 · ↓ 13,315/30天 · 今天更新"
+        "en": "★ 1,857 · ↓ 13,315 · ◷ Updated 1 day ago",
+        "zh": "★ 1,857 · ↓ 13,315 · ◷ 1 天前更新"
       }
     },
     "dsh-popout-sidebar": {
@@ -2343,8 +2343,8 @@
         "zh": "在侧栏查看产物，或将面板弹出为更大的浏览器标签页。"
       },
       "summary": {
-        "en": "★ 208 · ↓ 1,185/30d · Updated 58 days ago",
-        "zh": "★ 208 · ↓ 1,185/30天 · 58 天前更新"
+        "en": "★ 208 · ↓ 1,185 · ◷ Updated 58 days ago",
+        "zh": "★ 208 · ↓ 1,185 · ◷ 58 天前更新"
       }
     },
     "dsh-preset-enhance": {
@@ -2353,8 +2353,8 @@
         "zh": "预设编辑、提示词注入与 DeepSeek 适配器配置"
       },
       "summary": {
-        "en": "★ 42 · ↓ 2,811/30d · Updated 17 days ago",
-        "zh": "★ 42 · ↓ 2,811/30天 · 17 天前更新"
+        "en": "★ 42 · ↓ 2,811 · ◷ Updated 17 days ago",
+        "zh": "★ 42 · ↓ 2,811 · ◷ 17 天前更新"
       }
     },
     "dsh-prompt": {
@@ -2363,8 +2363,8 @@
         "zh": "管理预设和自定义模板，一键插入当前输入框。"
       },
       "summary": {
-        "en": "★ 45 · ↓ 8,780/30d · Updated today",
-        "zh": "★ 45 · ↓ 8,780/30天 · 今天更新"
+        "en": "★ 45 · ↓ 8,780 · ◷ Updated today",
+        "zh": "★ 45 · ↓ 8,780 · ◷ 今天更新"
       }
     },
     "dsh-qa": {
@@ -2373,8 +2373,8 @@
         "zh": "管理需求、测试用例、缺陷、里程碑、报告与版本记录。"
       },
       "summary": {
-        "en": "★ 31 · ↓ 3,665/30d · Updated 18 days ago",
-        "zh": "★ 31 · ↓ 3,665/30天 · 18 天前更新"
+        "en": "★ 31 · ↓ 3,665 · ◷ Updated 18 days ago",
+        "zh": "★ 31 · ↓ 3,665 · ◷ 18 天前更新"
       }
     },
     "dsh-qa-skills": {
@@ -2383,8 +2383,8 @@
         "zh": "提供需求分析、测试策略、用例、自动化、探索与回归测试技能。"
       },
       "summary": {
-        "en": "★ 46 · ↓ 1,188/30d · Updated 51 days ago",
-        "zh": "★ 46 · ↓ 1,188/30天 · 51 天前更新"
+        "en": "★ 46 · ↓ 1,188 · ◷ Updated 51 days ago",
+        "zh": "★ 46 · ↓ 1,188 · ◷ 51 天前更新"
       }
     },
     "dsh-qoder-connect": {
@@ -2393,8 +2393,8 @@
         "zh": "为 DSH 接入 Qoder 国内与国际模型服务。"
       },
       "summary": {
-        "en": "★ 32 · ↓ 2,818/30d · Updated today",
-        "zh": "★ 32 · ↓ 2,818/30天 · 今天更新"
+        "en": "★ 32 · ↓ 2,818 · ◷ Updated today",
+        "zh": "★ 32 · ↓ 2,818 · ◷ 今天更新"
       }
     },
     "dsh-quick-toc": {
@@ -2403,8 +2403,8 @@
         "zh": "把会话中的 Markdown 标题整理为可搜索大纲，支持预览与跳转。"
       },
       "summary": {
-        "en": "★ 1 · ↓ 5,548/30d · Updated 1 day ago",
-        "zh": "★ 1 · ↓ 5,548/30天 · 1 天前更新"
+        "en": "★ 1 · ↓ 5,548 · ◷ Updated 1 day ago",
+        "zh": "★ 1 · ↓ 5,548 · ◷ 1 天前更新"
       }
     },
     "dsh-read-url": {
@@ -2413,8 +2413,8 @@
         "zh": "识别编码并读取网页与订阅源，处理分页，输出精简正文。"
       },
       "summary": {
-        "en": "★ 22 · ↓ 2,907/30d · Updated 14 days ago",
-        "zh": "★ 22 · ↓ 2,907/30天 · 14 天前更新"
+        "en": "★ 22 · ↓ 2,907 · ◷ Updated 14 days ago",
+        "zh": "★ 22 · ↓ 2,907 · ◷ 14 天前更新"
       }
     },
     "dsh-recall-plugin": {
@@ -2423,8 +2423,8 @@
         "zh": "将会话和工作区恢复到消息发送前，再编辑并重发消息。"
       },
       "summary": {
-        "en": "★ 40 · ↓ 5,489/30d · Updated today",
-        "zh": "★ 40 · ↓ 5,489/30天 · 今天更新"
+        "en": "★ 40 · ↓ 5,489 · ◷ Updated today",
+        "zh": "★ 40 · ↓ 5,489 · ◷ 今天更新"
       }
     },
     "dsh-recall-unread": {
@@ -2433,8 +2433,8 @@
         "zh": "在模型读取前撤回已发送但尚未处理的文字消息。"
       },
       "summary": {
-        "en": "★ 126 · ↓ 1,250/30d · Updated 15 days ago",
-        "zh": "★ 126 · ↓ 1,250/30天 · 15 天前更新"
+        "en": "★ 126 · ↓ 1,250 · ◷ Updated 15 days ago",
+        "zh": "★ 126 · ↓ 1,250 · ◷ 15 天前更新"
       }
     },
     "dsh-recommend": {
@@ -2443,8 +2443,8 @@
         "zh": "按公开评分模型检索和推荐插件，并在设置页展示排行。"
       },
       "summary": {
-        "en": "★ 22 · ↓ 955/30d · Updated 65 days ago",
-        "zh": "★ 22 · ↓ 955/30天 · 65 天前更新"
+        "en": "★ 22 · ↓ 955 · ◷ Updated 65 days ago",
+        "zh": "★ 22 · ↓ 955 · ◷ 65 天前更新"
       }
     },
     "dsh-remote": {
@@ -2453,8 +2453,8 @@
         "zh": "连接 SSH 远程工作区，使用文件操作、镜像同步、部署与端口转发。"
       },
       "summary": {
-        "en": "★ 152 · ↓ 16,690/30d · Updated 2 days ago",
-        "zh": "★ 152 · ↓ 16,690/30天 · 2 天前更新"
+        "en": "★ 153 · ↓ 16,690 · ◷ Updated 2 days ago",
+        "zh": "★ 153 · ↓ 16,690 · ◷ 2 天前更新"
       }
     },
     "dsh-remote-mobile": {
@@ -2463,8 +2463,8 @@
         "zh": "通过局域网或 Tailscale 提供远程访问、扫码登录与连接管理。"
       },
       "summary": {
-        "en": "★ 28 · ↓ 2,316/30d · Updated today",
-        "zh": "★ 28 · ↓ 2,316/30天 · 今天更新"
+        "en": "★ 28 · ↓ 2,316 · ◷ Updated today",
+        "zh": "★ 28 · ↓ 2,316 · ◷ 今天更新"
       }
     },
     "dsh-research-report": {
@@ -2473,8 +2473,8 @@
         "zh": "将研究结论绑定到快照，导出带核验记录的版本化报告。"
       },
       "summary": {
-        "en": "★ 213 · ↓ 4,968/30d · Updated 8 days ago",
-        "zh": "★ 213 · ↓ 4,968/30天 · 8 天前更新"
+        "en": "★ 213 · ↓ 4,968 · ◷ Updated 8 days ago",
+        "zh": "★ 213 · ↓ 4,968 · ◷ 8 天前更新"
       }
     },
     "dsh-rewind-plugin": {
@@ -2483,8 +2483,8 @@
         "zh": "把对话回退到更早的消息，可选一并还原工作区文件。"
       },
       "summary": {
-        "en": "★ 142 · ↓ 25,972/30d · Updated 1 day ago",
-        "zh": "★ 142 · ↓ 25,972/30天 · 1 天前更新"
+        "en": "★ 142 · ↓ 25,972 · ◷ Updated 1 day ago",
+        "zh": "★ 142 · ↓ 25,972 · ◷ 1 天前更新"
       }
     },
     "dsh-router-laya": {
@@ -2493,8 +2493,8 @@
         "zh": "按请求判定模型档位，并在输入栏显示自动档位。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 1,373/30d · Updated 1 day ago",
-        "zh": "★ 20 · ↓ 1,373/30天 · 1 天前更新"
+        "en": "★ 20 · ↓ 1,373 · ◷ Updated 1 day ago",
+        "zh": "★ 20 · ↓ 1,373 · ◷ 1 天前更新"
       }
     },
     "dsh-secure-audit": {
@@ -2503,8 +2503,8 @@
         "zh": "检查提示注入模式、脱敏规则与本机配置，并输出风险报告。"
       },
       "summary": {
-        "en": "★ 84 · ↓ 1,906/30d · Updated 6 days ago",
-        "zh": "★ 84 · ↓ 1,906/30天 · 6 天前更新"
+        "en": "★ 84 · ↓ 1,906 · ◷ Updated 6 days ago",
+        "zh": "★ 84 · ↓ 1,906 · ◷ 6 天前更新"
       }
     },
     "dsh-session-manager": {
@@ -2513,8 +2513,8 @@
         "zh": "批量移动、归档和标记会话，管理工作区显示与预设迁移。"
       },
       "summary": {
-        "en": "★ 53 · ↓ 12,115/30d · Updated today",
-        "zh": "★ 53 · ↓ 12,115/30天 · 今天更新"
+        "en": "★ 54 · ↓ 12,115 · ◷ Updated today",
+        "zh": "★ 54 · ↓ 12,115 · ◷ 今天更新"
       }
     },
     "dsh-session-sync": {
@@ -2523,8 +2523,8 @@
         "zh": "通过独立 Git 镜像同步会话，并处理合并与分支冲突。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 3,670/30d · Updated 8 days ago",
-        "zh": "★ 20 · ↓ 3,670/30天 · 8 天前更新"
+        "en": "★ 21 · ↓ 3,670 · ◷ Updated 8 days ago",
+        "zh": "★ 21 · ↓ 3,670 · ◷ 8 天前更新"
       }
     },
     "dsh-session-workbench": {
@@ -2533,8 +2533,8 @@
         "zh": "全文检索历史会话、引用召回内容，并管理会话视图。"
       },
       "summary": {
-        "en": "★ 50 · ↓ 1,434/30d · Updated 20 days ago",
-        "zh": "★ 50 · ↓ 1,434/30天 · 20 天前更新"
+        "en": "★ 50 · ↓ 1,434 · ◷ Updated 20 days ago",
+        "zh": "★ 50 · ↓ 1,434 · ◷ 20 天前更新"
       }
     },
     "dsh-sessions-manager": {
@@ -2543,8 +2543,8 @@
         "zh": "在统一面板归档、恢复、删除或跨工作区移动会话。"
       },
       "summary": {
-        "en": "★ 27 · ↓ 3,312/30d · Updated today",
-        "zh": "★ 27 · ↓ 3,312/30天 · 今天更新"
+        "en": "★ 27 · ↓ 3,312 · ◷ Updated today",
+        "zh": "★ 27 · ↓ 3,312 · ◷ 今天更新"
       }
     },
     "dsh-share": {
@@ -2553,8 +2553,8 @@
         "zh": "将 DSH 问答或选中的对话组分享为 PNG 图片或 Markdown"
       },
       "summary": {
-        "en": "★ 37 · ↓ 2,390/30d · Updated 8 days ago",
-        "zh": "★ 37 · ↓ 2,390/30天 · 8 天前更新"
+        "en": "★ 37 · ↓ 2,390 · ◷ Updated 8 days ago",
+        "zh": "★ 37 · ↓ 2,390 · ◷ 8 天前更新"
       }
     },
     "dsh-short-video-studio": {
@@ -2563,8 +2563,8 @@
         "zh": "通过 ComfyUI 工具与关联会话的画布制作图片和视频。"
       },
       "summary": {
-        "en": "★ 28 · ↓ 1,987/30d · Updated 8 days ago",
-        "zh": "★ 28 · ↓ 1,987/30天 · 8 天前更新"
+        "en": "★ 28 · ↓ 1,987 · ◷ Updated 8 days ago",
+        "zh": "★ 28 · ↓ 1,987 · ◷ 8 天前更新"
       }
     },
     "dsh-sidebar-qa": {
@@ -2573,8 +2573,8 @@
         "zh": "选择对话文字，在同一工作区的独立会话中继续追问。"
       },
       "summary": {
-        "en": "★ 52 · ↓ 2,431/30d · Updated 2 days ago",
-        "zh": "★ 52 · ↓ 2,431/30天 · 2 天前更新"
+        "en": "★ 53 · ↓ 2,431 · ◷ Updated 2 days ago",
+        "zh": "★ 53 · ↓ 2,431 · ◷ 2 天前更新"
       }
     },
     "dsh-skill-hub": {
@@ -2583,8 +2583,8 @@
         "zh": "在设置页浏览和开关技能，检查格式问题，并从仓库导入及跟踪更新。"
       },
       "summary": {
-        "en": "★ 30 · ↓ 7,154/30d · Updated 1 day ago",
-        "zh": "★ 30 · ↓ 7,154/30天 · 1 天前更新"
+        "en": "★ 30 · ↓ 7,154 · ◷ Updated 1 day ago",
+        "zh": "★ 30 · ↓ 7,154 · ◷ 1 天前更新"
       }
     },
     "dsh-skill-mcp-panel": {
@@ -2593,8 +2593,8 @@
         "zh": "通过网页侧栏与命令行统一管理技能和 MCP 服务器。"
       },
       "summary": {
-        "en": "★ 207 · ↓ 4,866/30d · Updated 17 days ago",
-        "zh": "★ 207 · ↓ 4,866/30天 · 17 天前更新"
+        "en": "★ 208 · ↓ 4,866 · ◷ Updated 17 days ago",
+        "zh": "★ 208 · ↓ 4,866 · ◷ 17 天前更新"
       }
     },
     "dsh-skill-picker": {
@@ -2603,8 +2603,8 @@
         "zh": "搜索已安装技能，并将官方技能调用指令插入输入框。"
       },
       "summary": {
-        "en": "★ 35 · ↓ 4,980/30d · Updated 16 days ago",
-        "zh": "★ 35 · ↓ 4,980/30天 · 16 天前更新"
+        "en": "★ 35 · ↓ 4,980 · ◷ Updated 16 days ago",
+        "zh": "★ 35 · ↓ 4,980 · ◷ 16 天前更新"
       }
     },
     "dsh-skills-anywhere": {
@@ -2613,8 +2613,8 @@
         "zh": "汇总本地与 Git 来源的技能，供 DSH 或本地 MCP 按需加载。"
       },
       "summary": {
-        "en": "★ 6 · ↓ 4,335/30d · Updated 8 days ago",
-        "zh": "★ 6 · ↓ 4,335/30天 · 8 天前更新"
+        "en": "★ 6 · ↓ 4,335 · ◷ Updated 8 days ago",
+        "zh": "★ 6 · ↓ 4,335 · ◷ 8 天前更新"
       }
     },
     "dsh-skin-market": {
@@ -2623,8 +2623,8 @@
         "zh": "浏览和管理 DSH 原生主题皮肤。"
       },
       "summary": {
-        "en": "★ 206 · ↓ 7,825/30d · Updated 1 day ago",
-        "zh": "★ 206 · ↓ 7,825/30天 · 1 天前更新"
+        "en": "★ 207 · ↓ 7,825 · ◷ Updated 1 day ago",
+        "zh": "★ 207 · ↓ 7,825 · ◷ 1 天前更新"
       }
     },
     "dsh-smooth-cursor": {
@@ -2633,8 +2633,8 @@
         "zh": "为聊天输入框添加平滑移动的彗星光标，可调整拖尾、颜色与粗细。"
       },
       "summary": {
-        "en": "★ 3 · ↓ 1,149/30d · Updated 38 days ago",
-        "zh": "★ 3 · ↓ 1,149/30天 · 38 天前更新"
+        "en": "★ 3 · ↓ 1,149 · ◷ Updated 39 days ago",
+        "zh": "★ 3 · ↓ 1,149 · ◷ 39 天前更新"
       }
     },
     "dsh-smooth-stream": {
@@ -2643,8 +2643,8 @@
         "zh": "调整 Markdown、代码、表格与工具结果的流式渲染和滚动。"
       },
       "summary": {
-        "en": "★ 83 · ↓ 4,289/30d · Updated 13 days ago",
-        "zh": "★ 83 · ↓ 4,289/30天 · 13 天前更新"
+        "en": "★ 83 · ↓ 4,289 · ◷ Updated 13 days ago",
+        "zh": "★ 83 · ↓ 4,289 · ◷ 13 天前更新"
       }
     },
     "dsh-ssh-ops": {
@@ -2653,8 +2653,8 @@
         "zh": "在对话中驱动远程服务器：交互式终端、SFTP 文件管理、端口转发与数据库管理。"
       },
       "summary": {
-        "en": "★ 39 · ↓ 4,500/30d · Updated 2 days ago",
-        "zh": "★ 39 · ↓ 4,500/30天 · 2 天前更新"
+        "en": "★ 39 · ↓ 4,500 · ◷ Updated 2 days ago",
+        "zh": "★ 39 · ↓ 4,500 · ◷ 2 天前更新"
       }
     },
     "dsh-status-rotator": {
@@ -2663,8 +2663,8 @@
         "zh": "按运行阶段显示可编辑文案、主题与状态栏动画。"
       },
       "summary": {
-        "en": "★ 152 · ↓ 11,601/30d · Updated 1 day ago",
-        "zh": "★ 152 · ↓ 11,601/30天 · 1 天前更新"
+        "en": "★ 152 · ↓ 11,601 · ◷ Updated 1 day ago",
+        "zh": "★ 152 · ↓ 11,601 · ◷ 1 天前更新"
       }
     },
     "dsh-streamfold": {
@@ -2673,8 +2673,8 @@
         "zh": "展示当前思考，将较早的思考与工具输出折叠为简短摘要。"
       },
       "summary": {
-        "en": "★ 22 · ↓ 2,150/30d · Updated today",
-        "zh": "★ 22 · ↓ 2,150/30天 · 今天更新"
+        "en": "★ 23 · ↓ 2,150 · ◷ Updated today",
+        "zh": "★ 23 · ↓ 2,150 · ◷ 今天更新"
       }
     },
     "dsh-superpowers": {
@@ -2683,8 +2683,8 @@
         "zh": "接入 Superpowers 开发技能，并向会话提示词添加使用引导。"
       },
       "summary": {
-        "en": "★ 10 · ↓ 708/30d · Updated 65 days ago",
-        "zh": "★ 10 · ↓ 708/30天 · 65 天前更新"
+        "en": "★ 10 · ↓ 708 · ◷ Updated 65 days ago",
+        "zh": "★ 10 · ↓ 708 · ◷ 65 天前更新"
       }
     },
     "dsh-tabbit": {
@@ -2693,8 +2693,8 @@
         "zh": "操作 Tabbit 标签页，抓取网页，并在输入框引用浏览器内容。"
       },
       "summary": {
-        "en": "★ 110 · ↓ 1,882/30d · Updated 5 days ago",
-        "zh": "★ 110 · ↓ 1,882/30天 · 5 天前更新"
+        "en": "★ 110 · ↓ 1,882 · ◷ Updated 5 days ago",
+        "zh": "★ 110 · ↓ 1,882 · ◷ 5 天前更新"
       }
     },
     "dsh-taskboard": {
@@ -2703,8 +2703,8 @@
         "zh": "跟踪项目任务并在会话中执行，可为任务配置独立 Git 工作树。"
       },
       "summary": {
-        "en": "★ 65 · ↓ 6,544/30d · Updated 1 day ago",
-        "zh": "★ 65 · ↓ 6,544/30天 · 1 天前更新"
+        "en": "★ 65 · ↓ 6,544 · ◷ Updated 1 day ago",
+        "zh": "★ 65 · ↓ 6,544 · ◷ 1 天前更新"
       }
     },
     "dsh-tavern": {
@@ -2713,8 +2713,8 @@
         "zh": "管理角色卡、世界书、预设、记忆与剧情选项，部分功能需配套插件。"
       },
       "summary": {
-        "en": "★ 53 · ↓ 7,794/30d · Updated today",
-        "zh": "★ 53 · ↓ 7,794/30天 · 今天更新"
+        "en": "★ 53 · ↓ 7,794 · ◷ Updated today",
+        "zh": "★ 53 · ↓ 7,794 · ◷ 今天更新"
       }
     },
     "dsh-theme-firefly": {
@@ -2723,8 +2723,8 @@
         "zh": "应用流萤角色壁纸、主题配色与开场动画。"
       },
       "summary": {
-        "en": "★ 34 · ↓ 3,571/30d · Updated 51 days ago",
-        "zh": "★ 34 · ↓ 3,571/30天 · 51 天前更新"
+        "en": "★ 34 · ↓ 3,571 · ◷ Updated 51 days ago",
+        "zh": "★ 34 · ↓ 3,571 · ◷ 51 天前更新"
       }
     },
     "dsh-theme-mineradio": {
@@ -2733,8 +2733,8 @@
         "zh": "为网页界面添加电台风格配色、玻璃表面、壁纸与动效。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 4,698/30d · Updated 5 days ago",
-        "zh": "★ 20 · ↓ 4,698/30天 · 5 天前更新"
+        "en": "★ 20 · ↓ 4,698 · ◷ Updated 5 days ago",
+        "zh": "★ 20 · ↓ 4,698 · ◷ 5 天前更新"
       }
     },
     "dsh-think-translate": {
@@ -2743,8 +2743,8 @@
         "zh": "在显示层翻译思考、任务卡片及可选的回答文字。"
       },
       "summary": {
-        "en": "★ 40 · ↓ 2,797/30d · Updated today",
-        "zh": "★ 40 · ↓ 2,797/30天 · 今天更新"
+        "en": "★ 40 · ↓ 2,797 · ◷ Updated today",
+        "zh": "★ 40 · ↓ 2,797 · ◷ 今天更新"
       }
     },
     "dsh-thoughtdag": {
@@ -2753,8 +2753,8 @@
         "zh": "将当前会话整理为无限画布上的可编辑思维图。"
       },
       "summary": {
-        "en": "★ 652 · ↓ 6,861/30d · Updated 4 days ago",
-        "zh": "★ 652 · ↓ 6,861/30天 · 4 天前更新"
+        "en": "★ 652 · ↓ 6,861 · ◷ Updated 4 days ago",
+        "zh": "★ 652 · ↓ 6,861 · ◷ 4 天前更新"
       }
     },
     "dsh-tinyfish": {
@@ -2763,8 +2763,8 @@
         "zh": "为网页搜索与抓取接入 TinyFish，支持直连或 Monid 通道。"
       },
       "summary": {
-        "en": "★ 1 · ↓ 5,185/30d · Updated today",
-        "zh": "★ 1 · ↓ 5,185/30天 · 今天更新"
+        "en": "★ 1 · ↓ 5,185 · ◷ Updated today",
+        "zh": "★ 1 · ↓ 5,185 · ◷ 今天更新"
       }
     },
     "dsh-tinyfish-search": {
@@ -2773,8 +2773,8 @@
         "zh": "基于 TinyFish Search API 的 DeepSeek Harness 网络搜索提供方插件（接入 ctx.web 服务），为智能代理的内置网络搜索工具提供快速、安全、精准的实时联网检索能力。"
       },
       "summary": {
-        "en": "★ 26 · ↓ 3,291/30d · Updated today",
-        "zh": "★ 26 · ↓ 3,291/30天 · 今天更新"
+        "en": "★ 26 · ↓ 3,291 · ◷ Updated today",
+        "zh": "★ 26 · ↓ 3,291 · ◷ 今天更新"
       }
     },
     "dsh-token-pet": {
@@ -2783,8 +2783,8 @@
         "zh": "用浮动角色展示运行状态、上下文与累计 Token 用量。"
       },
       "summary": {
-        "en": "★ 56 · ↓ 3,103/30d · Updated 26 days ago",
-        "zh": "★ 56 · ↓ 3,103/30天 · 26 天前更新"
+        "en": "★ 56 · ↓ 3,103 · ◷ Updated 26 days ago",
+        "zh": "★ 56 · ↓ 3,103 · ◷ 26 天前更新"
       }
     },
     "dsh-toolbox-ui": {
@@ -2793,8 +2793,8 @@
         "zh": "在浮动面板中管理 MCP、导入配置并浏览技能市场。"
       },
       "summary": {
-        "en": "★ 27 · ↓ 1,361/30d · Updated today",
-        "zh": "★ 27 · ↓ 1,361/30天 · 今天更新"
+        "en": "★ 27 · ↓ 1,361 · ◷ Updated today",
+        "zh": "★ 27 · ↓ 1,361 · ◷ 今天更新"
       }
     },
     "dsh-ui-appearance": {
@@ -2803,8 +2803,8 @@
         "zh": "调整主题配色、背景图片、透明度与模糊。"
       },
       "summary": {
-        "en": "★ 23 · ↓ 6,098/30d · Updated 1 day ago",
-        "zh": "★ 23 · ↓ 6,098/30天 · 1 天前更新"
+        "en": "★ 23 · ↓ 6,098 · ◷ Updated 1 day ago",
+        "zh": "★ 23 · ↓ 6,098 · ◷ 1 天前更新"
       }
     },
     "dsh-ui-tweaks": {
@@ -2813,8 +2813,8 @@
         "zh": "在设置面板调整代码字号、布局、分支显示与会话辅助功能。"
       },
       "summary": {
-        "en": "★ 17 · ↓ 4,179/30d · Updated 5 days ago",
-        "zh": "★ 17 · ↓ 4,179/30天 · 5 天前更新"
+        "en": "★ 17 · ↓ 4,179 · ◷ Updated 5 days ago",
+        "zh": "★ 17 · ↓ 4,179 · ◷ 5 天前更新"
       }
     },
     "dsh-undo-savepoint": {
@@ -2823,8 +2823,8 @@
         "zh": "为配置变更保存快照，撤销操作并恢复损坏的插件配置。"
       },
       "summary": {
-        "en": "★ 182 · ↓ 3,646/30d · Updated 14 days ago",
-        "zh": "★ 182 · ↓ 3,646/30天 · 14 天前更新"
+        "en": "★ 182 · ↓ 3,646 · ◷ Updated 14 days ago",
+        "zh": "★ 182 · ↓ 3,646 · ◷ 14 天前更新"
       }
     },
     "dsh-univer-office": {
@@ -2833,8 +2833,8 @@
         "zh": "在 DSH 内创建、编辑和审阅表格、文档与演示稿，支持 Office 导入导出。"
       },
       "summary": {
-        "en": "★ 561 · ↓ 49,604/30d · Updated 10 days ago",
-        "zh": "★ 561 · ↓ 49,604/30天 · 10 天前更新"
+        "en": "★ 561 · ↓ 49,604 · ◷ Updated 10 days ago",
+        "zh": "★ 561 · ↓ 49,604 · ◷ 10 天前更新"
       }
     },
     "dsh-update-checker": {
@@ -2843,8 +2843,8 @@
         "zh": "检查 DSH 和第三方插件更新，提供备份、回滚与重启流程。"
       },
       "summary": {
-        "en": "★ 19 · ↓ 8,224/30d · Updated 6 days ago",
-        "zh": "★ 19 · ↓ 8,224/30天 · 6 天前更新"
+        "en": "★ 19 · ↓ 8,224 · ◷ Updated 6 days ago",
+        "zh": "★ 19 · ↓ 8,224 · ◷ 6 天前更新"
       }
     },
     "dsh-usage-state": {
@@ -2853,8 +2853,8 @@
         "zh": "在输入框上方显示当前模型供应商的账户余额、套餐额度及重置时间。"
       },
       "summary": {
-        "en": "★ 0 · ↓ 2,554/30d · Updated today",
-        "zh": "★ 0 · ↓ 2,554/30天 · 今天更新"
+        "en": "★ 0 · ↓ 2,554 · ◷ Updated today",
+        "zh": "★ 0 · ↓ 2,554 · ◷ 今天更新"
       }
     },
     "dsh-usage-statistics-panel": {
@@ -2863,8 +2863,8 @@
         "zh": "按天展示 Token 用量趋势、活跃热力图、缓存命中率曲线，以及按模型 / 服务商的用量拆分。"
       },
       "summary": {
-        "en": "★ 25 · ↓ 3,047/30d · Updated 4 days ago",
-        "zh": "★ 25 · ↓ 3,047/30天 · 4 天前更新"
+        "en": "★ 25 · ↓ 3,047 · ◷ Updated 4 days ago",
+        "zh": "★ 25 · ↓ 3,047 · ◷ 4 天前更新"
       }
     },
     "dsh-vibe-math": {
@@ -2873,8 +2873,8 @@
         "zh": "使用结构化 Agent 预设进行数学探索、求解与验证。"
       },
       "summary": {
-        "en": "★ 37 · ↓ 9,669/30d · Updated 12 days ago",
-        "zh": "★ 37 · ↓ 9,669/30天 · 12 天前更新"
+        "en": "★ 37 · ↓ 9,669 · ◷ Updated 12 days ago",
+        "zh": "★ 37 · ↓ 9,669 · ◷ 12 天前更新"
       }
     },
     "dsh-vision-router": {
@@ -2883,8 +2883,8 @@
         "zh": "将图片问题路由到视觉供应商，并提供 OCR、定位与像素比较工具。"
       },
       "summary": {
-        "en": "★ 1,153 · ↓ 33,003/30d · Updated 1 day ago",
-        "zh": "★ 1,153 · ↓ 33,003/30天 · 1 天前更新"
+        "en": "★ 1,153 · ↓ 33,003 · ◷ Updated 1 day ago",
+        "zh": "★ 1,153 · ↓ 33,003 · ◷ 1 天前更新"
       }
     },
     "dsh-voice-scribe": {
@@ -2893,8 +2893,8 @@
         "zh": "使用本机 SenseVoice 或可选语音服务转录输入，支持热词与文字润色。"
       },
       "summary": {
-        "en": "★ 36 · ↓ 2,830/30d · Updated 6 days ago",
-        "zh": "★ 36 · ↓ 2,830/30天 · 6 天前更新"
+        "en": "★ 36 · ↓ 2,830 · ◷ Updated 6 days ago",
+        "zh": "★ 36 · ↓ 2,830 · ◷ 6 天前更新"
       }
     },
     "dsh-wallpaper_share": {
@@ -2903,8 +2903,8 @@
         "zh": "将当前 Wallpaper Engine 壁纸同步为可调整的网页背景。"
       },
       "summary": {
-        "en": "★ 32 · ↓ 2,851/30d · Updated 5 days ago",
-        "zh": "★ 32 · ↓ 2,851/30天 · 5 天前更新"
+        "en": "★ 32 · ↓ 2,851 · ◷ Updated 5 days ago",
+        "zh": "★ 32 · ↓ 2,851 · ◷ 5 天前更新"
       }
     },
     "dsh-watcher": {
@@ -2913,8 +2913,8 @@
         "zh": "只读查看会话运行信息与本机模型用量统计。"
       },
       "summary": {
-        "en": "★ 118 · ↓ 3,321/30d · Updated 10 days ago",
-        "zh": "★ 118 · ↓ 3,321/30天 · 10 天前更新"
+        "en": "★ 118 · ↓ 3,321 · ◷ Updated 10 days ago",
+        "zh": "★ 118 · ↓ 3,321 · ◷ 10 天前更新"
       }
     },
     "dsh-web-fetch-enhanced": {
@@ -2923,8 +2923,8 @@
         "zh": "配置网页抓取的 User-Agent 与非公网地址允许列表。"
       },
       "summary": {
-        "en": "★ 19 · ↓ 1,670/30d · Updated 8 days ago",
-        "zh": "★ 19 · ↓ 1,670/30天 · 8 天前更新"
+        "en": "★ 19 · ↓ 1,670 · ◷ Updated 8 days ago",
+        "zh": "★ 19 · ↓ 1,670 · ◷ 8 天前更新"
       }
     },
     "dsh-web-lan-access": {
@@ -2933,8 +2933,8 @@
         "zh": "为网页界面配置局域网绑定和远程宿主访问。"
       },
       "summary": {
-        "en": "★ 38 · ↓ 1,658/30d · Updated 38 days ago",
-        "zh": "★ 38 · ↓ 1,658/30天 · 38 天前更新"
+        "en": "★ 38 · ↓ 1,658 · ◷ Updated 38 days ago",
+        "zh": "★ 38 · ↓ 1,658 · ◷ 38 天前更新"
       }
     },
     "dsh-web-mobile": {
@@ -2943,8 +2943,8 @@
         "zh": "为竖屏和移动设备调整网页界面布局。"
       },
       "summary": {
-        "en": "★ 140 · ↓ 8,109/30d · Updated 4 days ago",
-        "zh": "★ 140 · ↓ 8,109/30天 · 4 天前更新"
+        "en": "★ 140 · ↓ 8,109 · ◷ Updated 4 days ago",
+        "zh": "★ 140 · ↓ 8,109 · ◷ 4 天前更新"
       }
     },
     "dsh-wechat": {
@@ -2953,8 +2953,8 @@
         "zh": "通过微信 iLink Bot 连接 DSH 会话。"
       },
       "summary": {
-        "en": "★ 21 · ↓ 4,010/30d · Updated 4 days ago",
-        "zh": "★ 21 · ↓ 4,010/30天 · 4 天前更新"
+        "en": "★ 21 · ↓ 4,010 · ◷ Updated 4 days ago",
+        "zh": "★ 21 · ↓ 4,010 · ◷ 4 天前更新"
       }
     },
     "dsh-whale-galgame": {
@@ -2963,8 +2963,8 @@
         "zh": "为网页会话添加多角色互动界面与可选桌面伴侣。"
       },
       "summary": {
-        "en": "★ 35 · ↓ 2,123/30d · Updated 32 days ago",
-        "zh": "★ 35 · ↓ 2,123/30天 · 32 天前更新"
+        "en": "★ 35 · ↓ 2,123 · ◷ Updated 32 days ago",
+        "zh": "★ 35 · ↓ 2,123 · ◷ 32 天前更新"
       }
     },
     "dsh-whale-girl-pet": {
@@ -2973,8 +2973,8 @@
         "zh": "用角色状态与任务气泡展示会话进度、Token 用量和费用。"
       },
       "summary": {
-        "en": "★ 28 · ↓ 5,937/30d · Updated 4 days ago",
-        "zh": "★ 28 · ↓ 5,937/30天 · 4 天前更新"
+        "en": "★ 28 · ↓ 5,937 · ◷ Updated 4 days ago",
+        "zh": "★ 28 · ↓ 5,937 · ◷ 4 天前更新"
       }
     },
     "dsh-whale-widget": {
@@ -2983,8 +2983,8 @@
         "zh": "用可自定义的鲸鱼挂件显示账户余额与每轮用量。"
       },
       "summary": {
-        "en": "★ 5,179 · ↓ 189,128/30d · Updated 6 days ago",
-        "zh": "★ 5,179 · ↓ 189,128/30天 · 6 天前更新"
+        "en": "★ 5,184 · ↓ 189,128 · ◷ Updated 6 days ago",
+        "zh": "★ 5,184 · ↓ 189,128 · ◷ 6 天前更新"
       }
     },
     "dsh-workbuddy-connect": {
@@ -2993,8 +2993,8 @@
         "zh": "将本机 WorkBuddy 桌面应用中可用的模型接入 DSH。"
       },
       "summary": {
-        "en": "★ 1,274 · ↓ 34,114/30d · Updated today",
-        "zh": "★ 1,274 · ↓ 34,114/30天 · 今天更新"
+        "en": "★ 1,276 · ↓ 34,114 · ◷ Updated today",
+        "zh": "★ 1,276 · ↓ 34,114 · ◷ 今天更新"
       }
     },
     "dsh-wsl-workspace": {
@@ -3003,8 +3003,8 @@
         "zh": "在选定的 WSL 发行版中运行会话命令与文件工具。"
       },
       "summary": {
-        "en": "★ 87 · ↓ 3,741/30d · Updated 6 days ago",
-        "zh": "★ 87 · ↓ 3,741/30天 · 6 天前更新"
+        "en": "★ 87 · ↓ 3,741 · ◷ Updated 6 days ago",
+        "zh": "★ 87 · ↓ 3,741 · ◷ 6 天前更新"
       }
     },
     "dsh-xdpool": {
@@ -3013,8 +3013,8 @@
         "zh": "聚合多个账户与供应商模型，查看用量并配置路由和本地网关。"
       },
       "summary": {
-        "en": "★ 146 · ↓ 756/30d · Updated today",
-        "zh": "★ 146 · ↓ 756/30天 · 今天更新"
+        "en": "★ 147 · ↓ 756 · ◷ Updated today",
+        "zh": "★ 147 · ↓ 756 · ◷ 今天更新"
       }
     },
     "dsh-xiaomi-tts": {
@@ -3023,8 +3023,8 @@
         "zh": "使用 Xiaomi MiMo TTS 或浏览器本地语音朗读回复。"
       },
       "summary": {
-        "en": "★ 24 · ↓ 3,117/30d · Updated 1 day ago",
-        "zh": "★ 24 · ↓ 3,117/30天 · 1 天前更新"
+        "en": "★ 24 · ↓ 3,117 · ◷ Updated 1 day ago",
+        "zh": "★ 24 · ↓ 3,117 · ◷ 1 天前更新"
       }
     },
     "dsh-zotero": {
@@ -3033,8 +3033,8 @@
         "zh": "检索本地 Zotero 文献库，读取笔记和标注，提取证据并生成引用。"
       },
       "summary": {
-        "en": "★ 37 · ↓ 7,270/30d · Updated 16 days ago",
-        "zh": "★ 37 · ↓ 7,270/30天 · 16 天前更新"
+        "en": "★ 37 · ↓ 7,270 · ◷ Updated 16 days ago",
+        "zh": "★ 37 · ↓ 7,270 · ◷ 16 天前更新"
       }
     },
     "dshmarket": {
@@ -3043,8 +3043,8 @@
         "zh": "在 DSH 内浏览社区插件，并通过可视化市场管理安装。"
       },
       "summary": {
-        "en": "★ 7,080 · ↓ 573,315/30d · Updated today",
-        "zh": "★ 7,080 · ↓ 573,315/30天 · 今天更新"
+        "en": "★ 7,090 · ↓ 573,315 · ◷ Updated today",
+        "zh": "★ 7,090 · ↓ 573,315 · ◷ 今天更新"
       }
     },
     "gongwen-skill": {
@@ -3053,8 +3053,8 @@
         "zh": "使用格式规则和模板检查、修订中文公文。"
       },
       "summary": {
-        "en": "★ 82 · ↓ 3,326/30d · Updated 16 days ago",
-        "zh": "★ 82 · ↓ 3,326/30天 · 16 天前更新"
+        "en": "★ 82 · ↓ 3,326 · ◷ Updated 16 days ago",
+        "zh": "★ 82 · ↓ 3,326 · ◷ 16 天前更新"
       }
     },
     "huaweicloud-devkit": {
@@ -3063,8 +3063,8 @@
         "zh": "在编程会话中使用华为云技能、KooCLI、API 与 SDK。"
       },
       "summary": {
-        "en": "★ 67 · ↓ 5,277/30d · Updated 5 days ago",
-        "zh": "★ 67 · ↓ 5,277/30天 · 5 天前更新"
+        "en": "★ 67 · ↓ 5,277 · ◷ Updated 5 days ago",
+        "zh": "★ 67 · ↓ 5,277 · ◷ 5 天前更新"
       }
     },
     "memory-eternal": {
@@ -3073,8 +3073,8 @@
         "zh": "将会话知识卡保存到本地 Markdown 库，并按需召回。"
       },
       "summary": {
-        "en": "★ 20 · ↓ 9,772/30d · Updated today",
-        "zh": "★ 20 · ↓ 9,772/30天 · 今天更新"
+        "en": "★ 20 · ↓ 9,772 · ◷ Updated today",
+        "zh": "★ 20 · ↓ 9,772 · ◷ 今天更新"
       }
     },
     "meow-cachebilling": {
@@ -3083,8 +3083,8 @@
         "zh": "查看 Token 费用、缓存命中明细与累计花费曲线。"
       },
       "summary": {
-        "en": "★ 47 · ↓ 3,320/30d · Updated 11 days ago",
-        "zh": "★ 47 · ↓ 3,320/30天 · 11 天前更新"
+        "en": "★ 47 · ↓ 3,320 · ◷ Updated 11 days ago",
+        "zh": "★ 47 · ↓ 3,320 · ◷ 11 天前更新"
       }
     },
     "meow-memory": {
@@ -3093,8 +3093,8 @@
         "zh": "通过 SQLite 分层记忆、检索工具与自动反思保存项目知识。"
       },
       "summary": {
-        "en": "★ 210 · ↓ 9,396/30d · Updated 9 days ago",
-        "zh": "★ 210 · ↓ 9,396/30天 · 9 天前更新"
+        "en": "★ 210 · ↓ 9,396 · ◷ Updated 10 days ago",
+        "zh": "★ 210 · ↓ 9,396 · ◷ 10 天前更新"
       }
     },
     "meow-smooth": {
@@ -3103,8 +3103,8 @@
         "zh": "收起闲置输入框，并在窄屏选中会话后自动关闭侧栏。"
       },
       "summary": {
-        "en": "★ 64 · ↓ 2,510/30d · Updated 25 days ago",
-        "zh": "★ 64 · ↓ 2,510/30天 · 25 天前更新"
+        "en": "★ 64 · ↓ 2,510 · ◷ Updated 25 days ago",
+        "zh": "★ 64 · ↓ 2,510 · ◷ 25 天前更新"
       }
     },
     "minecraft-dev": {
@@ -3113,8 +3113,8 @@
         "zh": "使用区分版本的技能与 Gradle 工具开发 Minecraft 插件和模组。"
       },
       "summary": {
-        "en": "★ 26 · ↓ 2,185/30d · Updated 18 days ago",
-        "zh": "★ 26 · ↓ 2,185/30天 · 18 天前更新"
+        "en": "★ 26 · ↓ 2,185 · ◷ Updated 18 days ago",
+        "zh": "★ 26 · ↓ 2,185 · ◷ 18 天前更新"
       }
     },
     "misakanet": {
@@ -3123,8 +3123,8 @@
         "zh": "通过 MisakaNet 公共 MCP 服务检索带证据评级的失败经验。"
       },
       "summary": {
-        "en": "★ 528 · ↓ 5,786/30d · Updated today",
-        "zh": "★ 528 · ↓ 5,786/30天 · 今天更新"
+        "en": "★ 528 · ↓ 5,786 · ◷ Updated today",
+        "zh": "★ 528 · ↓ 5,786 · ◷ 今天更新"
       }
     },
     "open-sea-skin": {
@@ -3133,8 +3133,8 @@
         "zh": "在 Chrome 或 Edge 中为 DSH 网页渲染实时海洋背景。"
       },
       "summary": {
-        "en": "★ 397 · ↓ 6,142/30d · Updated 7 days ago",
-        "zh": "★ 397 · ↓ 6,142/30天 · 7 天前更新"
+        "en": "★ 397 · ↓ 6,142 · ◷ Updated 7 days ago",
+        "zh": "★ 397 · ↓ 6,142 · ◷ 7 天前更新"
       }
     },
     "oss-prompt-optimizer": {
@@ -3143,8 +3143,8 @@
         "zh": "通过当前模型将原始指令整理为角色、任务、上下文与格式。"
       },
       "summary": {
-        "en": "★ 21 · ↓ 3,539/30d · Updated 8 days ago",
-        "zh": "★ 21 · ↓ 3,539/30天 · 8 天前更新"
+        "en": "★ 21 · ↓ 3,539 · ◷ Updated 8 days ago",
+        "zh": "★ 21 · ↓ 3,539 · ◷ 8 天前更新"
       }
     },
     "prts-terrarchive": {
@@ -3153,8 +3153,8 @@
         "zh": "检索和阅读 PRTS.chat 语料，并使用角色化三维资料工作区。"
       },
       "summary": {
-        "en": "★ 52 · ↓ 716/30d · Updated 14 days ago",
-        "zh": "★ 52 · ↓ 716/30天 · 14 天前更新"
+        "en": "★ 52 · ↓ 716 · ◷ Updated 14 days ago",
+        "zh": "★ 52 · ↓ 716 · ◷ 14 天前更新"
       }
     },
     "sage-mem": {
@@ -3163,8 +3163,8 @@
         "zh": "将跨会话记忆保存为本地 Markdown 文件，按问题检索并注入相关内容。"
       },
       "summary": {
-        "en": "★ 12 · ↓ 5,938/30d · Updated 1 day ago",
-        "zh": "★ 12 · ↓ 5,938/30天 · 1 天前更新"
+        "en": "★ 12 · ↓ 5,938 · ◷ Updated 1 day ago",
+        "zh": "★ 12 · ↓ 5,938 · ◷ 1 天前更新"
       }
     },
     "scientific-figure-library": {
@@ -3173,8 +3173,8 @@
         "zh": "在本机检索图片与代码知识库，通过客户端、MCP 或技能调用。"
       },
       "summary": {
-        "en": "★ 123 · ↓ 398/30d · Updated 28 days ago",
-        "zh": "★ 123 · ↓ 398/30天 · 28 天前更新"
+        "en": "★ 123 · ↓ 398 · ◷ Updated 28 days ago",
+        "zh": "★ 123 · ↓ 398 · ◷ 28 天前更新"
       }
     },
     "search-boost": {
@@ -3183,8 +3183,8 @@
         "zh": "融合多引擎搜索、网页抓取与 X 检索，并提供 DSH 适配器。"
       },
       "summary": {
-        "en": "★ 55 · ↓ 3,245/30d · Updated 14 days ago",
-        "zh": "★ 55 · ↓ 3,245/30天 · 14 天前更新"
+        "en": "★ 55 · ↓ 3,245 · ◷ Updated 14 days ago",
+        "zh": "★ 55 · ↓ 3,245 · ◷ 14 天前更新"
       }
     },
     "superpowers-dsh": {
@@ -3193,8 +3193,8 @@
         "zh": "为 DSH 接入测试驱动开发、调试、规划与协作技能。"
       },
       "summary": {
-        "en": "★ 110 · ↓ 2,932/30d · Updated 3 days ago",
-        "zh": "★ 110 · ↓ 2,932/30天 · 3 天前更新"
+        "en": "★ 110 · ↓ 2,932 · ◷ Updated 3 days ago",
+        "zh": "★ 110 · ↓ 2,932 · ◷ 3 天前更新"
       }
     },
     "whale-girl": {
@@ -3203,8 +3203,8 @@
         "zh": "在 DSH 网页界面添加可互动桌面角色。"
       },
       "summary": {
-        "en": "★ 363 · ↓ 3,051/30d · Updated 59 days ago",
-        "zh": "★ 363 · ↓ 3,051/30天 · 59 天前更新"
+        "en": "★ 363 · ↓ 3,051 · ◷ Updated 59 days ago",
+        "zh": "★ 363 · ↓ 3,051 · ◷ 59 天前更新"
       }
     }
   }

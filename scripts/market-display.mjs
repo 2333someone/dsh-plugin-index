@@ -20,9 +20,9 @@ export function marketSummary(plugin, github, downloads, now, language) {
   const format = value => new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en-US').format(value);
   const cached = record => record.status === 'stale' ? (language === 'zh' ? `（缓存 ${record.fetchedAt.slice(0, 10)}）` : ` (cached ${record.fetchedAt.slice(0, 10)})`) : '';
   if (measured(repo) && count(repo.stars)) parts.push(`★ ${format(repo.stars)}${cached(repo)}`);
-  if (measured(npm) && count(npm.downloads)) parts.push(`↓ ${format(npm.downloads)}${language === 'zh' ? '/30天' : '/30d'}${cached(npm)}`);
+  if (measured(npm) && count(npm.downloads)) parts.push(`↓ ${format(npm.downloads)}${cached(npm)}`);
   const age = releaseAge(plugin.versions[0]?.publishTimestamp, now, language);
-  if (age) parts.push(age);
+  if (age) parts.push('◷ ' + age);
   return parts.join(' · ');
 }
 

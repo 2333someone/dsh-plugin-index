@@ -22,6 +22,8 @@ https://polang233.github.io/dsh-plugin-index/index.json
 
 ## 收录内容
 
+想把 DSH 列表指标变成彩色标签，并收起列表版本与日期，可另外添加[显示增强索引](https://polang233.github.io/dsh-plugin-index/enhancements.json)，安装「市场列表彩色指标」，再切回普通索引。插件可随时停用，普通索引接入不需要它。[使用说明](docs/market-display.md)。
+
 涵盖界面工具、技能、记忆、模型供应商、用量统计、外部服务、主题、工作流、开发与研究。条目提供介绍、源码链接和明确的 npm 版本，并读取作者随包发布的图标与多语言名称。
 
 DSH 的实际列表和网页目录显示 **★ GitHub star、↓ npm 近 30 天下载量、版本更新天数**，并支持按 star 或下载量排序。已核实的公司官号与开发者带有身份标签。[指标与身份来源](docs/market-display.md)。数据随构建更新，缺失值不显示为 0；下载量是 npm 包下载次数。

@@ -48,6 +48,11 @@ for (const language of ['en', 'zh']) {
     expect(actualDownloads.every(item => /\d{4}-\d{2}-\d{2}/.test(item.title))).toBe(true);
     await expect(page.locator('[data-publisher]')).toHaveCount(index.plugins.filter(plugin => plugin.metadata.labels.some(id => id.startsWith('publisher-'))).length);
     await expect(page.locator('.brand')).toContainText(language === 'en' ? 'Open Plugin Market' : '开放插件市场');
+    await expect(rows.first().locator('.version')).toBeHidden();
+    await rows.first().locator('.plugin-facts summary').click();
+    await expect(rows.first().locator('.version')).toBeVisible();
+    await rows.first().locator('.plugin-facts summary').click();
+    expect(await downloadLinks.first().textContent()).not.toContain('/30');
     expect(await page.locator('.plugin-detail time').allTextContents()).toEqual(expect.arrayContaining([expect.stringMatching(language === 'en' ? /Updated/ : /更新/)]));
     const icons = page.locator('.plugin-avatar img');
     await expect(icons).toHaveCount(index.plugins.filter(plugin => plugin.icon).length);
