@@ -1,4 +1,5 @@
 import { mkdir, readFile, writeFile, copyFile } from 'node:fs/promises';
+import { githubRepository } from './github.mjs';
 
 const ORIGIN = 'https://polang233.github.io/dsh-plugin-index/';
 const INDEX_URL = `${ORIGIN}index.json`;
@@ -70,7 +71,19 @@ function newestVersion(versions = []) {
   // Officially parsed indexes are sorted by SemVer. Preserve that declared order.
   return versions[0];
 }
-function pluginRow(plugin, language, categories, text) {
+export function renderStars(plugin, snapshot, language) {
+  const repository = githubRepository(plugin.repository?.url);
+  if (!repository) return '';
+  const repo = snapshot?.repositories?.[repository.key];
+  const zh = language === 'zh';
+  const measured = repo && ['ok', 'stale'].includes(repo.status) && Number.isSafeInteger(repo.stars) && repo.stars >= 0 && Number.isFinite(Date.parse(repo.fetchedAt));
+  if (!measured) return `<span class="stars-unavailable" data-stars-unavailable>${zh ? 'GitHub star 暂不可用' : 'GitHub stars unavailable'}</span>`;
+  const count = new Intl.NumberFormat(zh ? 'zh-CN' : 'en').format(repo.stars);
+  const date = new Date(repo.fetchedAt).toISOString().replace('T', ' ').replace(/\.\d{3}Z$/, ' UTC');
+  const tooltip = `${repo.stars} GitHub stars · ${zh ? '获取于' : 'Fetched'} ${date}${repo.status === 'stale' ? (zh ? '（缓存，最新请求失败）' : ' (cached; latest request failed)') : ''}`;
+  return `<span class="stars-group"><a class="github-stars" data-stars="${repo.stars}" href="${esc(repository.url)}/stargazers" title="${esc(tooltip)}" aria-label="${esc(tooltip)}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/></svg>${count}<span class="stars-label">GitHub</span></a>${repo.status === 'stale' ? `<small class="stars-cache">${zh ? '缓存于' : 'Cached'} ${esc(repo.fetchedAt.slice(0, 10))}</small>` : ''}</span>`;
+}
+function pluginRow(plugin, language, categories, text, snapshot) {
   const name = localize(plugin.name, language);
   const packageName = localize(plugin.name, 'en', name);
   const title = localize(plugin.title, language, name);
@@ -95,6 +108,7 @@ function pluginRow(plugin, language, categories, text) {
       <div class="plugin-links">${links.join('')}</div>
     </article>
     <div class="plugin-detail">
+      ${renderStars(plugin, snapshot, language)}
       <span class="version">${version ? `${esc(text.version)} ${esc(version.version)}` : esc(text.noVersion)}</span>
       ${categoryId ? `<span>${esc(categoryTitle)}</span>` : ''}
       ${date ? `<time datetime="${esc(new Date(version.publishTimestamp * 1000).toISOString())}">${esc(date)}</time>` : ''}
@@ -102,7 +116,7 @@ function pluginRow(plugin, language, categories, text) {
     </div>
   </li>`;
 }
-function page(index, evidence, language) {
+function page(index, evidence, language, snapshot) {
   const text = COPY[language];
   const docsUrl = language === 'zh' ? `${REPOSITORY}/blob/main/README.zh-CN.md` : DOCS;
   const root = language === 'zh' ? '../' : './';
@@ -173,12 +187,13 @@ function page(index, evidence, language) {
     </section>
     <section class="directory-surface" id="plugins" aria-labelledby="directory-title"><div class="directory shell">
       <div class="directory-heading"><h2 id="directory-title">${esc(text.directory)}</h2><p class="result-count" id="result-count" role="status" aria-live="polite">${esc(text.initialCount(plugins.length))}</p></div>
+      <p class="stars-note">${language === 'zh' ? 'Star 来自 GitHub 仓库，随索引更新。关注度不等于质量。' : 'Stars come from GitHub repositories and refresh with the index. Popularity is not a quality rating.'} <a href="${root}github.json">${language === 'zh' ? '查看快照' : 'View snapshot'}</a></p>
       <form class="filters" data-filters hidden role="search" aria-label="${esc(text.search)}">
         <div class="field"><label for="plugin-search">${esc(text.search)}</label><input type="search" id="plugin-search" placeholder="${esc(text.searchPlaceholder)}" autocomplete="off"></div>
         <div class="field"><label for="plugin-category">${esc(text.category)}</label><select id="plugin-category"><option value="">${esc(text.all)}</option>${categoriesHtml}${hasUncategorized ? `<option value="__uncategorized__" data-uncategorized>${esc(text.other)}</option>` : ''}</select></div>
       </form>
       <noscript><p class="no-js">${esc(text.noJs)}</p></noscript>
-      <ul class="plugin-list">${plugins.map(plugin => pluginRow(plugin, language, categories, text)).join('\n')}</ul>
+      <ul class="plugin-list">${plugins.map(plugin => pluginRow(plugin, language, categories, text, snapshot)).join('\n')}</ul>
       <div class="empty" id="empty-results" ${plugins.length ? 'hidden' : ''}><h3>${esc(text.noResults)}</h3><p>${esc(text.noResultsHelp)}</p><button type="button" class="text-button" data-reset hidden>${esc(text.reset)}</button></div>
     </div></section>
     <section class="contribute shell" aria-labelledby="contribute-title">
@@ -205,15 +220,15 @@ function notFound(css) {
 }
 
 /** Write the bilingual static site alongside the canonical format-1 index. */
-export async function writeSite(index, evidence) {
+export async function writeSite(index, evidence, snapshot = {}) {
   if (index?.format !== 1 || !Array.isArray(index.plugins)) throw new Error('writeSite expects a format-1 plugin index');
   await mkdir(new URL('assets/', output), { recursive: true });
   await mkdir(new URL('zh/', output), { recursive: true });
   for (const asset of ['site.css', 'site.js', 'favicon.svg', 'social.svg', 'social.png']) {
     await copyFile(new URL(asset, source), new URL(`assets/${asset}`, output));
   }
-  await writeFile(new URL('index.html', output), page(index, evidence, 'en').replace(/[\t ]+$/gm, ''), 'utf8');
-  await writeFile(new URL('zh/index.html', output), page(index, evidence, 'zh').replace(/[\t ]+$/gm, ''), 'utf8');
+  await writeFile(new URL('index.html', output), page(index, evidence, 'en', snapshot).replace(/[\t ]+$/gm, ''), 'utf8');
+  await writeFile(new URL('zh/index.html', output), page(index, evidence, 'zh', snapshot).replace(/[\t ]+$/gm, ''), 'utf8');
   await writeFile(new URL('sitemap.xml', output), sitemap(), 'utf8');
   await writeFile(new URL('404.html', output), notFound(await readFile(new URL('site.css', source), 'utf8')), 'utf8');
 }

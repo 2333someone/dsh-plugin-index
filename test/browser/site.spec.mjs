@@ -26,6 +26,17 @@ for (const language of ['en', 'zh']) {
     await expect(page.locator('[data-plugin]:visible')).toHaveCount(expectedCount);
     await page.locator('#plugin-category').selectOption('');
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    const snapshot = await (await page.request.get('./github.json')).json();
+    const starLinks = page.locator('[data-stars]');
+    const expectedStars = Object.values(snapshot.repositories).filter(repo => ['ok', 'stale'].includes(repo.status));
+    await expect(starLinks).toHaveCount(expectedStars.length);
+    for (const repo of expectedStars) {
+      const link = page.locator(`[data-stars][href="${repo.url}/stargazers"]`);
+      await expect(link).toHaveAttribute('data-stars', String(repo.stars));
+      await expect(link).toHaveAttribute('title', /UTC/);
+    }
+    await page.locator('#plugins').scrollIntoViewIfNeeded();
+    await page.screenshot({ path: info.outputPath(`${language}-directory.png`) });
     await page.evaluate(() => scrollTo(0, 0));
     await page.screenshot({ path: info.outputPath(`${language}-page.png`) });
     await page.locator('.languages a').click();

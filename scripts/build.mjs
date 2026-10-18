@@ -34,6 +34,6 @@ await writeFile(new URL('index.json', output), `${JSON.stringify(index, null, 2)
 await writeFile(new URL('status.json', output), `${JSON.stringify(evidence, null, 2)}\n`);
 await writeFile(new URL('github.json', output), `${JSON.stringify(github, null, 2)}\n`);
 await writeFile(new URL('github.json', cache), `${JSON.stringify(github, null, 2)}\n`);
-await writeSite(index, evidence);
+await writeSite(index, evidence, github);
 console.log(`Generated format-1 index: ${index.plugins.length} plugins; official validator ${evidence.validator.version}.`);
 console.log(`GitHub metadata: ${evidence.github.fetched} fetched, ${evidence.github.cached} cached, ${evidence.github.unavailable} unavailable.`);
