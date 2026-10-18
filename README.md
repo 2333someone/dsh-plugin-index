@@ -1,65 +1,44 @@
-<p align="center">
-  <img src="site/logo.png" alt="Open Plugin Market logo" width="160" height="160">
-</p>
-
-# Open Plugin Market
-
-The default index shows rounded download counts and release ages as native outline tags beside plugin names. Exact stars precede descriptions, separated by `│`. No display enhancement is needed. [Details](docs/market-display.md).
-
-A community plugin index for DeepSeek Harness. Add one URL in DSH to browse and install plugins.
-
-[Browse plugins](https://polang233.github.io/dsh-plugin-index/) · [简体中文](README.zh-CN.md) · [Suggest a plugin](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
-
-## Add to DSH
+启用 DeepSeek Harness 的「自定义插件市场」后，在 发现 左上角添加索引源 中粘贴下方地址即可使用😋
 
 ```text
 https://polang233.github.io/dsh-plugin-index/index.json
 ```
 
-1. Open **Plugins → Discover → Add index source** in DSH.
-2. Paste the URL above and save.
-3. Choose a plugin and review its version and source before installing.
+# Open Plugin Market
 
-If Discover is missing, enable DSH's **Custom plugin markets** bundle first. DSH checks version compatibility and may disable installation for a plugin that does not support your version.
+<img src="site/logo-256.png" alt="Open Plugin Market" width="96" align="right">
 
-## What's included
+[![Plugins](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpolang233.github.io%2Fdsh-plugin-index%2Findex.json&query=%24.plugins.length&label=plugins&color=2563eb)](https://polang233.github.io/dsh-plugin-index/index.json)
+[![Stars](https://img.shields.io/github/stars/polang233/dsh-plugin-index?style=flat&color=eab308)](https://github.com/polang233/dsh-plugin-index/stargazers)
+[![Refresh](https://img.shields.io/badge/refresh-every_6h-0f766e)](.github/workflows/publish.yml)
+[![Checks](https://github.com/polang233/dsh-plugin-index/actions/workflows/publish.yml/badge.svg)](https://github.com/polang233/dsh-plugin-index/actions/workflows/publish.yml)
 
-Default recommendations balance recent maintenance, categories and developer exposure, with periodic rotation to help more developers get discovered. You can also sort by stars or downloads.
+DeepSeek Harness（DSH）的社区插件索引，在应用内搜索、筛选并安装插件。
 
-The default index also offers “Random resources”, a complete random shuffle renewed with each index update.
+[English](README.en.md) · [浏览目录](https://polang233.github.io/dsh-plugin-index/zh/) · [提交插件](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
 
-The directory covers interface tools, skills, memory, providers, usage tracking, integrations, themes, workflows, development and research. Entries link to their source and exact npm versions, with author icons and localized names and descriptions when available.
+![在 DSH 中浏览和安装插件](docs/images/market-in-dsh.png)
 
-The DSH list and website show **★ GitHub stars, ↓ npm downloads over 30 days, and days since the listed release**. DSH can sort by stars or downloads. [Metric sources](docs/market-display.md). Missing counts never appear as zero; downloads count npm package requests.
+## 浏览与安装
 
-Every build checks published package integrity, package identity, bundle patch files and declared main files, then validates the index with DSH's official format validator. These are package checks, not an installation test or a code audit. [Check details and update time](https://polang233.github.io/dsh-plugin-index/status.json).
+- **智能推荐**兼顾近期维护、分类和开发者曝光，定期轮换；也可按 star、下载量或随机资源排序。
+- 列表显示 **★ GitHub star、↓ 下载量档位、◷ 更新天数**，读取插件作者随包发布的 Logo。
+- 点开条目查看版本与来源，点击安装后由 DSH 确认兼容性并执行安装。
 
-Updates run every six hours. A failed build leaves the published index in place. DSH may cache the index for ten minutes; use Refresh to fetch it again.
+索引每六小时更新，DSH 缓存约十分钟，可手动刷新。[指标说明](docs/market-display.md) · [包检查记录](https://polang233.github.io/dsh-plugin-index/status.json)
 
-[Recent plugin checks](docs/plugin-review-2026-10-18.md) · [Catalog expansion and evidence](docs/catalog-expansion-2026-10-18.md) · [Directory discoveries](docs/directory-discovery-2026-10-18.md)
+每次构建核对发布包完整性、包名、版本、组合包声明和入口，再通过官方索引格式校验。包检查不等同于完整运行测试，具体实测见[测试记录](docs/plugin-review-2026-10-18.md)。
 
-## Contribute
+## 提交插件
 
-[Suggest a plugin](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml), report a broken entry, or submit a change to [sources.json](sources.json). See [Contributing](CONTRIBUTING.md) for the listing rules.
+[提交收录申请](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)，或修改 [sources.json](sources.json) 提交 PR。提供公开源码、可安装的发布版本和简短介绍，详见[收录要求](CONTRIBUTING.zh-CN.md)。
 
-## Development
+欢迎为插件添加独立 Logo 并随 npm 包发布。满足收录要求时，我们会优先审核和收录带 Logo 的插件；已收录插件也欢迎更新图标。
 
-Node.js 24+ and pnpm 11.28.5:
+## 开发
 
-```sh
-pnpm install --frozen-lockfile --ignore-scripts
-pnpm test
-pnpm build
-pnpm validate
-pnpm preview
-```
+Node.js 24+、pnpm 11.28.5。运行 `pnpm install --frozen-lockfile --ignore-scripts` 安装依赖，`pnpm test` 检查，`pnpm build` 构建，`pnpm validate` 校验。
 
-`pnpm build` fetches the listed packages and generates the index and both website languages in `public/`. Use `pnpm build:site` for website changes, or `pnpm build:metadata` to refresh metrics and names while retaining the validated package versions.
+[维护说明](docs/maintenance.zh-CN.md) · [贡献指南](CONTRIBUTING.zh-CN.md) · [MIT](LICENSE)
 
-[Maintenance and deployment](docs/maintenance.md) · [中文维护说明](docs/maintenance.zh-CN.md)
-
-## License
-
-[MIT](LICENSE). Listed plugins keep their own licenses.
-
-Independent community project. Not affiliated with DeepSeek.
+独立社区项目，与 DeepSeek 官方无隶属关系。插件版权及许可证归各自作者所有。

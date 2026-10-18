@@ -1,44 +1,24 @@
-name: Plugin submission / 插件收录
-description: Suggest, correct or remove a listing / 推荐、更正或移除条目
+name: 插件收录 / Plugin submission
+description: 推荐插件、更正信息或申请移除 / Suggest, correct or remove a listing
 title: "[Plugin] "
 body:
-  - type: dropdown
-    id: request
-    attributes:
-      label: Request / 请求
-      options:
-        - Add a plugin / 收录插件
-        - Correct an entry / 更正信息
-        - Remove an entry / 移除条目
-    validations:
-      required: true
   - type: input
-    id: package
+    id: plugin
     attributes:
-      label: npm package / npm 包名
-      placeholder: "@owner/dsh-plugin"
-    validations:
-      required: true
-  - type: input
-    id: repository
-    attributes:
-      label: Source repository / 源码仓库
-      placeholder: https://github.com/owner/plugin
+      label: 插件地址 / Plugin link
+      description: 填写 npm 包名或源码仓库地址即可。 / npm package name or source repository URL.
+      placeholder: "@owner/dsh-plugin 或 https://github.com/owner/plugin"
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
-      label: Description / 简介
-      description: One sentence in English and Chinese, or explain the correction. / 各写一句中英文介绍，或说明需要更正的内容。
+      label: 简短说明 / Summary
+      description: 用一句话介绍用途，或说明需要更正、移除的内容。中文或英文均可。 / Briefly describe the plugin or requested change in Chinese or English.
     validations:
       required: true
-  - type: input
-    id: license
-    attributes:
-      label: License / 许可证
   - type: textarea
-    id: tested
+    id: extra
     attributes:
-      label: DSH version tested / 已测试的 DSH 版本
-      description: Optional. State what you actually tested. / 可选，请描述实际测试情况。
+      label: 补充信息 / Additional details
+      description: 可选，附上 Logo、截图或实际测试情况。 / Optional logo, screenshots or testing notes.

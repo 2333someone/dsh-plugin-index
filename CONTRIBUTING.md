@@ -4,14 +4,14 @@
 
 ## Suggest a plugin
 
-Open a [plugin submission](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml) with its npm package, source repository and one sentence about what it does. Maintainers can also request a correction or removal through the same form.
+Open a [plugin submission](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml) with its npm package name or source repository URL and one sentence in Chinese or English about what it does. Maintainers can also request a correction or removal through the same form.
 
 For now, listings must have:
 
 - A public npm release with an exact version and publication date.
 - A `dsh.bundle.patch` declaration and the referenced files in the published package.
 - A public source repository and an identifiable license.
-- A concrete purpose, with a short English and Chinese description.
+- A concrete purpose. Maintainers complete the short English and Chinese descriptions when adding a listing.
 
 Do not include credentials, private repositories, tracking links or unsupported security claims. Package verification is not a claim that a plugin has passed a code audit or an installation test.
 

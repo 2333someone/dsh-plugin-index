@@ -4,14 +4,14 @@
 
 ## 推荐插件
 
-提交[插件收录申请](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)，提供 npm 包名、源码仓库和一句功能介绍。作者也可以通过同一表单申请更正或移除。
+提交[插件收录申请](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)，提供 npm 包名或源码仓库地址，以及一句功能介绍，中文或英文均可。作者也可以通过同一表单申请更正或移除。
 
 目前收录的插件需要：
 
 - 有公开 npm 版本和发布时间。
 - 声明 `dsh.bundle.patch`，引用的补丁文件已包含在发布包中。
 - 有公开源码仓库和明确的许可证。
-- 用途清楚，提供简短的中英文介绍。
+- 用途清楚。收录时由维护者补齐简短的中英文介绍。
 
 请勿提交密钥、私有仓库、跟踪链接或无依据的安全承诺。发布包检查不代表代码审计或安装测试。
 
