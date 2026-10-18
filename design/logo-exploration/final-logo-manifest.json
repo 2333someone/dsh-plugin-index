@@ -1,15 +1,15 @@
 {
-  "project": "DSH Plugin Index",
+  "project": "Open Plugin Market",
   "date": "2026-10-18",
   "generator": "built-in image_gen",
-  "reference": "dsh-pixel-logo-concepts-v2.png",
-  "referenceConcept": "03 PLUGIN CART",
-  "prompt": "final-plugin-cart-prompt.txt",
+  "reference": "dsh-logo-concepts-grid.png",
+  "referenceConcept": "03 CATALOG CLUB",
+  "prompt": "final-catalog-club-prompt.txt",
   "master": "../../site/logo.png",
   "width": 1254,
   "height": 1254,
   "transparent": true,
-  "sha256": "24ff259052498d0f864028e9876b0d912b9b5e3f8f98d0103df368cbd208e482",
+  "sha256": "5486d4b36e61e00c9901e478f2658fb5c64ba9baea81ae6242ee65c5bc929aa8",
   "exports": [
     {
       "path": "../../site/logo-256.png",

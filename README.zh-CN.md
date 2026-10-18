@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="site/logo.png" alt="DSH Plugin Index 项目 Logo" width="160" height="160">
+  <img src="site/logo.png" alt="开放插件市场 项目 Logo" width="160" height="160">
 </p>
 
-# DSH Plugin Index
+# 开放插件市场
 
 DeepSeek Harness 的社区插件索引。添加一个地址，即可在 DSH 内浏览和安装插件。
 

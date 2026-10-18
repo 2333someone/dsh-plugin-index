@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="site/logo.png" alt="DSH Plugin Index logo" width="160" height="160">
+  <img src="site/logo.png" alt="Open Plugin Market logo" width="160" height="160">
 </p>
 
-# DSH Plugin Index
+# Open Plugin Market
 
 A community plugin index for DeepSeek Harness. Add one URL in DSH to browse and install plugins.
 

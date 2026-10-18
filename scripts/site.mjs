@@ -11,7 +11,7 @@ const output = new URL('../public/', import.meta.url);
 
 const COPY = {
   en: {
-    lang: 'en', locale: 'en_US', title: 'DSH Plugin Index — Add one URL to DSH',
+    brand: 'Open Plugin Market', lang: 'en', locale: 'en_US', title: 'Open Plugin Market — Add one URL to DSH',
     description: 'A community plugin index for DeepSeek Harness. Copy one URL into DSH, browse the directory, and choose the plugins you need.',
     skip: 'Skip to content', plugins: 'Plugins', docs: 'Docs', language: 'Language',
     headline: 'Add one URL<br>to DSH.', intro: 'Browse community plugins in DeepSeek Harness. Add this index to the built-in plugin market.',
@@ -33,7 +33,7 @@ const COPY = {
     raw: 'JSON index', status: 'Build details',
   },
   zh: {
-    lang: 'zh-CN', locale: 'zh_CN', title: 'DSH Plugin Index — 把插件索引加进 DSH',
+    brand: '开放插件市场', lang: 'zh-CN', locale: 'zh_CN', title: '开放插件市场 — 把插件索引加进 DSH',
     description: '为 DeepSeek Harness 提供的社区插件索引。复制一个地址，添加到 DSH，在内置市场中查找和选择插件。',
     skip: '跳到正文', plugins: '插件目录', docs: '文档', language: '语言',
     headline: '把插件索引<br>加进 DSH。', intro: '在 DeepSeek Harness 里浏览社区插件。复制这个地址，添加到内置插件市场。',
@@ -131,7 +131,7 @@ function page(index, evidence, language, snapshot) {
   const categoriesHtml = usedCategories.map(id => `<option value="${esc(id)}">${esc(localize(categories[id]?.title, language, id))}</option>`).join('');
   const updated = evidence?.generatedAt ? dateLabel(evidence.generatedAt, language) : undefined;
   const messages = JSON.stringify({ copy: text.copy, copied: text.copied, copySuccess: text.copySuccess, copyFailure: text.copyFailure, results: text.results }).replace(/</g, '\\u003c');
-  const structured = JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebSite', name: 'DSH Plugin Index', url: ORIGIN, inLanguage: ['en', 'zh-CN'], description: text.description }).replace(/</g, '\\u003c');
+  const structured = JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebSite', name: text.brand, url: ORIGIN, inLanguage: ['en', 'zh-CN'], description: text.description }).replace(/</g, '\\u003c');
   return `<!doctype html>
 <html lang="${text.lang}">
 <head>
@@ -150,7 +150,7 @@ function page(index, evidence, language, snapshot) {
   <link rel="apple-touch-icon" href="${root}assets/apple-touch-icon.png" sizes="180x180">
   <link rel="stylesheet" href="${root}assets/site.css">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="DSH Plugin Index">
+  <meta property="og:site_name" content="${esc(text.brand)}">
   <meta property="og:locale" content="${text.locale}">
   <meta property="og:locale:alternate" content="${language === 'zh' ? 'en_US' : 'zh_CN'}">
   <meta property="og:title" content="${esc(text.title)}">
@@ -160,7 +160,7 @@ function page(index, evidence, language, snapshot) {
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="DSH Plugin Index. Add one URL to DSH.">
+  <meta property="og:image:alt" content="Open Plugin Market. Add one URL to DSH.">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">${structured}</script>
   <script src="${root}assets/site.js" defer></script>
@@ -168,7 +168,7 @@ function page(index, evidence, language, snapshot) {
 <body>
   <a class="skip" href="#main">${esc(text.skip)}</a>
   <header class="site-header shell">
-    <a class="brand" href="${root}index.html"><img src="${root}assets/logo-256.png" alt="" width="64" height="64"><span>DSH Plugin Index</span></a>
+    <a class="brand" href="${root}index.html"><img src="${root}assets/logo-256.png" alt="" width="64" height="64"><span>${esc(text.brand)}</span></a>
     <nav class="header-links" aria-label="${language === 'zh' ? '主导航' : 'Main navigation'}">
       <a href="#plugins">${esc(text.plugins)}</a><a class="header-docs" href="${docsUrl}">${esc(text.docs)}</a><a href="${REPOSITORY}">GitHub</a>
       <div class="languages" aria-label="${esc(text.language)}">${language === 'en' ? '<span lang="en" aria-current="page">EN</span><a href="./zh/index.html" lang="zh-CN" hreflang="zh-CN">中文</a>' : '<a href="../index.html" lang="en" hreflang="en">EN</a><span lang="zh-CN" aria-current="page">中文</span>'}</div>
@@ -220,7 +220,7 @@ function sitemap() {
 }
 
 function notFound(css) {
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Page not found — DSH Plugin Index</title><link rel="icon" href="${ORIGIN}assets/favicon.png" type="image/png" sizes="64x64"><style>${css}</style></head><body><header class="site-header shell"><a class="brand" href="${ORIGIN}"><img src="${ORIGIN}assets/logo-256.png" alt="" width="64" height="64"><span>DSH Plugin Index</span></a></header><main class="shell hero"><h1>Page not found.</h1><p lang="zh-CN">页面不存在。</p><p>Open the plugin directory to continue.</p><p lang="zh-CN">返回插件目录，继续查找插件。</p><div class="contribute-links"><a class="submit-link" href="${ORIGIN}">English directory</a><a class="submit-link" href="${ORIGIN}zh/" lang="zh-CN">中文目录</a></div></main></body></html>\n`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Page not found — Open Plugin Market</title><link rel="icon" href="${ORIGIN}assets/favicon.png" type="image/png" sizes="64x64"><style>${css}</style></head><body><header class="site-header shell"><a class="brand" href="${ORIGIN}"><img src="${ORIGIN}assets/logo-256.png" alt="" width="64" height="64"><span>Open Plugin Market</span></a></header><main class="shell hero"><h1>Page not found.</h1><p lang="zh-CN">页面不存在。</p><p>Open the plugin directory to continue.</p><p lang="zh-CN">返回插件目录，继续查找插件。</p><div class="contribute-links"><a class="submit-link" href="${ORIGIN}">English directory</a><a class="submit-link" href="${ORIGIN}zh/" lang="zh-CN">中文目录</a></div></main></body></html>\n`;
 }
 
 /** Write the bilingual static site alongside the canonical format-1 index. */
