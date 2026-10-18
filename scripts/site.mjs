@@ -143,7 +143,8 @@ function page(index, evidence, language, snapshot) {
   <link rel="alternate" hreflang="en" href="${ORIGIN}">
   <link rel="alternate" hreflang="zh-CN" href="${ORIGIN}zh/">
   <link rel="alternate" hreflang="x-default" href="${ORIGIN}">
-  <link rel="icon" href="${root}assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="${root}assets/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="${root}assets/apple-touch-icon.png" sizes="180x180">
   <link rel="stylesheet" href="${root}assets/site.css">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="DSH Plugin Index">
@@ -164,7 +165,7 @@ function page(index, evidence, language, snapshot) {
 <body>
   <a class="skip" href="#main">${esc(text.skip)}</a>
   <header class="site-header shell">
-    <a class="brand" href="${root}index.html"><img src="${root}assets/favicon.svg" alt="" width="34" height="34"><span>DSH Plugin Index</span></a>
+    <a class="brand" href="${root}index.html"><img src="${root}assets/logo-256.png" alt="" width="64" height="64"><span>DSH Plugin Index</span></a>
     <nav class="header-links" aria-label="${language === 'zh' ? '主导航' : 'Main navigation'}">
       <a href="#plugins">${esc(text.plugins)}</a><a class="header-docs" href="${docsUrl}">${esc(text.docs)}</a><a href="${REPOSITORY}">GitHub</a>
       <div class="languages" aria-label="${esc(text.language)}">${language === 'en' ? '<span lang="en" aria-current="page">EN</span><a href="./zh/index.html" lang="zh-CN" hreflang="zh-CN">中文</a>' : '<a href="../index.html" lang="en" hreflang="en">EN</a><span lang="zh-CN" aria-current="page">中文</span>'}</div>
@@ -216,7 +217,7 @@ function sitemap() {
 }
 
 function notFound(css) {
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Page not found — DSH Plugin Index</title><style>${css}</style></head><body><header class="site-header shell"><a class="brand" href="${ORIGIN}">DSH Plugin Index</a></header><main class="shell hero"><h1>Page not found.</h1><p lang="zh-CN">页面不存在。</p><p>Open the plugin directory to continue.</p><p lang="zh-CN">返回插件目录，继续查找插件。</p><div class="contribute-links"><a class="submit-link" href="${ORIGIN}">English directory</a><a class="submit-link" href="${ORIGIN}zh/" lang="zh-CN">中文目录</a></div></main></body></html>\n`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Page not found — DSH Plugin Index</title><link rel="icon" href="${ORIGIN}assets/favicon.png" type="image/png" sizes="64x64"><style>${css}</style></head><body><header class="site-header shell"><a class="brand" href="${ORIGIN}"><img src="${ORIGIN}assets/logo-256.png" alt="" width="64" height="64"><span>DSH Plugin Index</span></a></header><main class="shell hero"><h1>Page not found.</h1><p lang="zh-CN">页面不存在。</p><p>Open the plugin directory to continue.</p><p lang="zh-CN">返回插件目录，继续查找插件。</p><div class="contribute-links"><a class="submit-link" href="${ORIGIN}">English directory</a><a class="submit-link" href="${ORIGIN}zh/" lang="zh-CN">中文目录</a></div></main></body></html>\n`;
 }
 
 /** Write the bilingual static site alongside the canonical format-1 index. */
@@ -224,7 +225,7 @@ export async function writeSite(index, evidence, snapshot = {}) {
   if (index?.format !== 1 || !Array.isArray(index.plugins)) throw new Error('writeSite expects a format-1 plugin index');
   await mkdir(new URL('assets/', output), { recursive: true });
   await mkdir(new URL('zh/', output), { recursive: true });
-  for (const asset of ['site.css', 'site.js', 'favicon.svg', 'social.svg', 'social.png']) {
+  for (const asset of ['site.css', 'site.js', 'logo.png', 'logo-256.png', 'favicon.png', 'apple-touch-icon.png', 'social.svg', 'social.png']) {
     await copyFile(new URL(asset, source), new URL(`assets/${asset}`, output));
   }
   await writeFile(new URL('index.html', output), page(index, evidence, 'en', snapshot).replace(/[\t ]+$/gm, ''), 'utf8');

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="site/logo.png" alt="DSH Plugin Index logo" width="160" height="160">
+</p>
+
 # DSH Plugin Index
 
 A community plugin index for DeepSeek Harness. Add one URL in DSH to browse and install plugins.

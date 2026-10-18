@@ -1,0 +1,35 @@
+{
+  "project": "DSH Plugin Index",
+  "date": "2026-10-18",
+  "branch": "codex/logo-exploration",
+  "generator": "built-in image_gen",
+  "image": "dsh-pixel-logo-concepts-v2.png",
+  "prompt": "pixel-v2-prompt.txt",
+  "reference": "dsh-logo-concepts-grid.png",
+  "referenceConcept": "04 PIXEL PORT",
+  "width": 1536,
+  "height": 1024,
+  "sha256": "4b3c0974e8e66c116ee1c035195f0505ef03cc94a36f426c2de1f5ae209f7aa7",
+  "concepts": [
+    {
+      "id": "01",
+      "label": "PLUG LIST"
+    },
+    {
+      "id": "02",
+      "label": "INDEX LINK"
+    },
+    {
+      "id": "03",
+      "label": "PLUGIN CART"
+    },
+    {
+      "id": "04",
+      "label": "MODULE STACK"
+    },
+    {
+      "id": "05",
+      "label": "OPEN DIRECTORY"
+    }
+  ]
+}

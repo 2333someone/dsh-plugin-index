@@ -28,7 +28,7 @@ button { cursor: pointer; }
 .skip:focus { transform: none; }
 .site-header { min-height: 108px; display: flex; justify-content: space-between; align-items: center; gap: 28px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; font-size: 19px; font-weight: 700; letter-spacing: -.45px; white-space: nowrap; }
-.brand img { width: 34px; height: 34px; }
+.brand img { width: 64px; height: 64px; flex-shrink: 0; object-fit: contain; image-rendering: pixelated; }
 .header-links { display: flex; gap: 25px; align-items: center; }
 .header-links > a { color: var(--slate); text-decoration: none; font-size: 14px; }
 .header-links > a:hover { color: var(--blue); text-decoration: underline; }
@@ -125,7 +125,7 @@ h2 { margin: 0; font-size: 29px; letter-spacing: -.035em; line-height: 1.2; font
   .shell { width: calc(100% - 36px); }
   .site-header { min-height: 82px; gap: 12px; }
   .brand { font-size: 16px; gap: 8px; letter-spacing: -.4px; }
-  .brand img { width: 28px; height: 28px; }
+  .brand img { width: 44px; height: 44px; }
   .header-links { gap: 0; }
   .header-links > a { display: none; }
   .languages { margin-left: 0; gap: 0; }
