@@ -42,9 +42,9 @@ A local SQLite task board with agent assignments, execution tracking and human r
 
 ## Listing outcome / 收录结果
 
-ModSearch and Taskboard are included. Taskboard 0.1.9 is pinned with a [repository provenance review](taskboard-review.md): the npm archive matches the GitHub release asset digest, despite the package's missing repository field. Univer Office remains deferred pending bounded large-archive support; its unpacked archive is 226,850,899 bytes.
+ModSearch, Taskboard and Univer Office are included. Taskboard 0.1.9 is pinned with a [repository provenance review](taskboard-review.md): the npm archive matches the GitHub release asset digest. Univer Office 0.3.7 is pinned with a [reviewed archive budget](univer-archive-review.md) for its 226,850,899 unpacked bytes.
 
-ModSearch 与 Taskboard 已收录。Taskboard 0.1.9 的 npm 归档与 GitHub 发行资产哈希一致，已通过[源码对应核查](taskboard-review.md)，以固定版本收录。Univer Office 解压后为 226,850,899 字节，等待受限的大包读取支持。
+ModSearch、Taskboard 和 Univer Office 已收录。Taskboard 0.1.9 的 npm 归档与 GitHub 发行资产哈希一致，已通过[源码对应核查](taskboard-review.md)；Univer Office 0.3.7 按[已核查的大包预算](univer-archive-review.md)固定版本收录。两项升级都需要重新核查。
 
 ## Deferred / 暂缓
 

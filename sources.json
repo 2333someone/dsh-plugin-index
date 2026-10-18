@@ -393,6 +393,25 @@
       "category": "tools"
     },
     {
+      "name": "dsh-univer-office",
+      "version": "0.3.7",
+      "title": {
+        "en": "Univer Office",
+        "zh": "Univer Office 编辑器"
+      },
+      "description": {
+        "en": "Create, edit and review spreadsheets, documents and slides in DSH, with Office import and export.",
+        "zh": "在 DSH 内创建、编辑和审阅表格、文档与演示稿，支持 Office 导入导出。"
+      },
+      "category": "tools",
+      "archiveReview": {
+        "version": "0.3.7",
+        "integrity": "sha512-2eEi35ZzTOZiFQEEuNiF68MKWGKlXhVJiaOwCO5gdgNj0ZA+VesdoRxmT8hhFspbMtPfRp/0CoSo7PwFwBbBWw==",
+        "maxUnpackedBytes": 268435456,
+        "timeoutMs": 120000
+      }
+    },
+    {
       "name": "dsh-usage-state",
       "title": {
         "en": "Usage State",

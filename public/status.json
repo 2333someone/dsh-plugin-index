@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T06:10:25.353Z",
+  "generatedAt": "2026-10-18T06:37:57.383Z",
   "validator": {
     "name": "@deepseek-ai/dsh-plugin-market-index",
     "version": "0.2.1-rc.2"
@@ -18,6 +18,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 215,
+      "archive": {
+        "compressedBytes": 2724709,
+        "unpackedBytes": 9002551,
+        "decodedBytes": 9170944,
+        "entries": 215,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -45,6 +54,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 36,
+      "archive": {
+        "compressedBytes": 166012,
+        "unpackedBytes": 503464,
+        "decodedBytes": 532480,
+        "entries": 36,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -71,6 +89,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 49,
+      "archive": {
+        "compressedBytes": 1023767,
+        "unpackedBytes": 1464561,
+        "decodedBytes": 1503744,
+        "entries": 49,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -105,6 +132,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 134,
+      "archive": {
+        "compressedBytes": 929636,
+        "unpackedBytes": 2406077,
+        "decodedBytes": 2511360,
+        "entries": 134,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -132,6 +168,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 8,
+      "archive": {
+        "compressedBytes": 380316,
+        "unpackedBytes": 1416269,
+        "decodedBytes": 1423872,
+        "entries": 8,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -159,6 +204,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 28,
+      "archive": {
+        "compressedBytes": 445457,
+        "unpackedBytes": 1585551,
+        "decodedBytes": 1610240,
+        "entries": 28,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -186,6 +240,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 130,
+      "archive": {
+        "compressedBytes": 990027,
+        "unpackedBytes": 4543031,
+        "decodedBytes": 4641792,
+        "entries": 130,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -213,6 +276,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 47,
+      "archive": {
+        "compressedBytes": 144647,
+        "unpackedBytes": 436006,
+        "decodedBytes": 473600,
+        "entries": 47,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -240,6 +312,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 14,
+      "archive": {
+        "compressedBytes": 38405,
+        "unpackedBytes": 134698,
+        "decodedBytes": 146432,
+        "entries": 14,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -267,6 +348,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 186,
+      "archive": {
+        "compressedBytes": 1262556,
+        "unpackedBytes": 2831530,
+        "decodedBytes": 2978304,
+        "entries": 186,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -294,6 +384,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 14,
+      "archive": {
+        "compressedBytes": 359636,
+        "unpackedBytes": 1322009,
+        "decodedBytes": 1334272,
+        "entries": 14,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -321,6 +420,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 135,
+      "archive": {
+        "compressedBytes": 1058644,
+        "unpackedBytes": 2832836,
+        "decodedBytes": 2939904,
+        "entries": 135,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -348,6 +456,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 23,
+      "archive": {
+        "compressedBytes": 194849,
+        "unpackedBytes": 606461,
+        "decodedBytes": 625664,
+        "entries": 23,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -375,6 +492,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 58,
+      "archive": {
+        "compressedBytes": 468897,
+        "unpackedBytes": 944406,
+        "decodedBytes": 990208,
+        "entries": 58,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -402,6 +528,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 14,
+      "archive": {
+        "compressedBytes": 412102,
+        "unpackedBytes": 1089847,
+        "decodedBytes": 1101824,
+        "entries": 14,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -429,6 +564,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 16,
+      "archive": {
+        "compressedBytes": 43642,
+        "unpackedBytes": 152585,
+        "decodedBytes": 166912,
+        "entries": 16,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -456,6 +600,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 18,
+      "archive": {
+        "compressedBytes": 1904719,
+        "unpackedBytes": 2079571,
+        "decodedBytes": 2095104,
+        "entries": 18,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -483,6 +636,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 44,
+      "archive": {
+        "compressedBytes": 222944,
+        "unpackedBytes": 700412,
+        "decodedBytes": 735744,
+        "entries": 44,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -510,6 +672,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 66,
+      "archive": {
+        "compressedBytes": 479510,
+        "unpackedBytes": 2033722,
+        "decodedBytes": 2085376,
+        "entries": 66,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -537,6 +708,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 17,
+      "archive": {
+        "compressedBytes": 42511,
+        "unpackedBytes": 160994,
+        "decodedBytes": 176128,
+        "entries": 17,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -564,6 +744,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 86,
+      "archive": {
+        "compressedBytes": 1238738,
+        "unpackedBytes": 3795951,
+        "decodedBytes": 3865088,
+        "entries": 86,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -591,6 +780,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 11,
+      "archive": {
+        "compressedBytes": 170589,
+        "unpackedBytes": 569276,
+        "decodedBytes": 580096,
+        "entries": 11,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -618,6 +816,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 215,
+      "archive": {
+        "compressedBytes": 551867,
+        "unpackedBytes": 2189556,
+        "decodedBytes": 2352640,
+        "entries": 215,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -645,6 +852,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 22,
+      "archive": {
+        "compressedBytes": 94242,
+        "unpackedBytes": 304571,
+        "decodedBytes": 323072,
+        "entries": 22,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -672,6 +888,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 22,
+      "archive": {
+        "compressedBytes": 54507,
+        "unpackedBytes": 197864,
+        "decodedBytes": 217088,
+        "entries": 22,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -699,6 +924,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 60,
+      "archive": {
+        "compressedBytes": 1211049,
+        "unpackedBytes": 1462582,
+        "decodedBytes": 1510912,
+        "entries": 60,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -726,6 +960,51 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 12,
+      "archive": {
+        "compressedBytes": 57966,
+        "unpackedBytes": 173967,
+        "decodedBytes": 184832,
+        "entries": 12,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
+      "lifecycleScripts": [],
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-univer-office",
+      "version": "0.3.7",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/dream-num/dsh-univer-office",
+      "repositorySource": "package",
+      "metadataUrl": "https://registry.npmjs.org/dsh-univer-office",
+      "tarball": "https://registry.npmjs.org/dsh-univer-office/-/dsh-univer-office-0.3.7.tgz",
+      "integrity": "sha512-2eEi35ZzTOZiFQEEuNiF68MKWGKlXhVJiaOwCO5gdgNj0ZA+VesdoRxmT8hhFspbMtPfRp/0CoSo7PwFwBbBWw==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 282,
+      "archive": {
+        "compressedBytes": 49184591,
+        "unpackedBytes": 226850899,
+        "decodedBytes": 227076608,
+        "entries": 282,
+        "maxUnpackedBytes": 268435456,
+        "downloadTimeoutMs": 120000,
+        "reviewedBudget": true
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -753,6 +1032,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 10,
+      "archive": {
+        "compressedBytes": 59625,
+        "unpackedBytes": 191407,
+        "decodedBytes": 200704,
+        "entries": 10,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -780,6 +1068,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 298,
+      "archive": {
+        "compressedBytes": 687825,
+        "unpackedBytes": 2799726,
+        "decodedBytes": 3031552,
+        "entries": 298,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -807,6 +1104,15 @@
         "package/cordis.patch.yml"
       ],
       "filesChecked": 47,
+      "archive": {
+        "compressedBytes": 324099,
+        "unpackedBytes": 931046,
+        "decodedBytes": 967680,
+        "entries": 47,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -824,7 +1130,7 @@
   ],
   "github": {
     "snapshot": "github.json",
-    "fetched": 29,
+    "fetched": 30,
     "cached": 0,
     "unavailable": 0
   }

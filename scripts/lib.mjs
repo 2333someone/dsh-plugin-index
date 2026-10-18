@@ -2,15 +2,19 @@ import { createHash } from 'node:crypto';
 import { setTimeout as delay } from 'node:timers/promises';
 import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
+import { createGunzip } from 'node:zlib';
+import { ArchiveGuard } from './archive-guard.mjs';
 import { Parser } from 'tar';
 import semver from 'semver';
 import { parseMarketIndex } from '@deepseek-ai/dsh-plugin-market-index';
+import { archiveBudget, DEFAULT_ARCHIVE_BYTES, MAX_ARCHIVE_BYTES, DEFAULT_DOWNLOAD_TIMEOUT, MAX_DOWNLOAD_TIMEOUT } from './limits.mjs';
 
 export const REGISTRY = 'https://registry.npmjs.org/';
 export const VALIDATOR_VERSION = '0.2.1-rc.2';
 const PACKAGE = /^(?:@[a-z0-9][a-z0-9._~-]*\/)?[a-z0-9][a-z0-9._~-]*$/;
 
-export async function download(url, { fetchImpl = fetch, maxBytes = 64 * 1024 * 1024, retryDelayMs = 500 } = {}) {
+export async function download(url, { fetchImpl = fetch, maxBytes = 64 * 1024 * 1024, retryDelayMs = 500, timeoutMs = DEFAULT_DOWNLOAD_TIMEOUT } = {}) {
+  if (!Number.isSafeInteger(timeoutMs) || timeoutMs < 1 || timeoutMs > MAX_DOWNLOAD_TIMEOUT) throw new Error('Download timeout must be between 1 and 120000 ms');
   const parsed = new URL(url);
   if (parsed.origin !== new URL(REGISTRY).origin || parsed.username || parsed.password) {
     throw new Error(`Only the public npm registry is supported: ${url}`);
@@ -18,7 +22,7 @@ export async function download(url, { fetchImpl = fetch, maxBytes = 64 * 1024 * 
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
       const response = await fetchImpl(url, {
-        redirect: 'error', signal: AbortSignal.timeout(30_000),
+        redirect: 'error', signal: AbortSignal.timeout(timeoutMs),
         headers: { 'user-agent': 'dsh-plugin-index/0.1 (+https://github.com/polang233/dsh-plugin-index)' }
       });
       if (!response.ok || !response.body) {
@@ -52,14 +56,13 @@ export function verifyIntegrity(bytes, integrity) {
   if (!hashes.includes(actual)) throw new Error('Published tarball has no matching SHA-512 integrity');
 }
 
-export async function inspectArchive(bytes) {
+export async function inspectArchive(bytes, { maxUnpackedBytes = DEFAULT_ARCHIVE_BYTES } = {}) {
+  if (!Number.isSafeInteger(maxUnpackedBytes) || maxUnpackedBytes < 1 || maxUnpackedBytes > MAX_ARCHIVE_BYTES) throw new Error('Archive budget must be between 1 byte and 256 MiB');
   const files = new Set();
   let manifest;
-  let expanded = 0;
-  const parser = new Parser({ strict: true, onReadEntry(entry) {
+  const guard = new ArchiveGuard(maxUnpackedBytes);
+  const parser = new Parser({ strict: true, maxMetaEntrySize: 1024 * 1024, onReadEntry(entry) {
     try {
-    expanded += entry.size;
-    if (expanded > 100 * 1024 * 1024 || files.size > 20_000) throw new Error('Archive exceeds inspection limits');
     if (entry.type !== 'File' && entry.type !== 'OldFile') { entry.resume(); return; }
     if (!entry.path.startsWith('package/') || entry.path.includes('\\') || entry.path.split('/').includes('..')) {
       throw new Error(`Unexpected archive path: ${entry.path}`);
@@ -69,14 +72,21 @@ export async function inspectArchive(bytes) {
     if (entry.path === 'package/package.json') {
       if (entry.size > 1024 * 1024) throw new Error('Package manifest is too large');
       const chunks = [];
-      entry.on('data', chunk => chunks.push(chunk));
+      let manifestBytes = 0;
+      entry.on('data', chunk => {
+        manifestBytes += chunk.length;
+        if (manifestBytes > 1024 * 1024) { parser.abort(new Error('Package manifest is too large')); return; }
+        chunks.push(chunk);
+      });
       entry.on('end', () => { manifest = Buffer.concat(chunks).toString('utf8'); });
     } else entry.resume();
     } catch (error) { parser.abort(error); }
   } });
-  await pipeline(Readable.from([bytes]), parser);
+  const source = Readable.from([bytes]);
+  if (bytes[0] === 0x1f && bytes[1] === 0x8b) await pipeline(source, createGunzip(), guard, parser);
+  else await pipeline(source, guard, parser);
   if (!manifest) throw new Error('Published archive has no package/package.json');
-  return { manifest: JSON.parse(manifest), files };
+  return { manifest: JSON.parse(manifest), files, unpackedBytes: guard.payloadBytes, decodedBytes: guard.decodedBytes, entryCount: guard.entries };
 }
 
 function packageFile(value) {
@@ -168,9 +178,10 @@ export async function collectPackage(input, { fetchImpl = fetch, now = Date.now(
   if (!published || published.deprecated) throw new Error('Requested version is missing or deprecated');
   const time = Date.parse(metadata.time?.[version]);
   if (!Number.isFinite(time) || time < 0 || time > now) throw new Error('Missing or invalid publication date');
-  const bytes = await download(published.dist?.tarball, { fetchImpl });
+  const budget = archiveBudget(input, version, published.dist?.integrity);
+  const bytes = await download(published.dist?.tarball, { fetchImpl, timeoutMs: budget.timeoutMs });
   verifyIntegrity(bytes, published.dist?.integrity);
-  const { manifest, files } = await inspectArchive(bytes);
+  const { manifest, files, unpackedBytes, decodedBytes, entryCount } = await inspectArchive(bytes, budget);
   const patch = checkBundle(manifest, files, input.name, version);
   const repositoryInfo = resolveRepository(manifest, input, version, published.dist.integrity);
   const repository = repositoryInfo.repository;
@@ -192,7 +203,7 @@ export async function collectPackage(input, { fetchImpl = fetch, now = Date.now(
   const lifecycleScripts = Object.keys(manifest.scripts ?? {}).filter(key => ['preinstall', 'install', 'postinstall'].includes(key));
   return {
     entry,
-    evidence: { name: manifest.name, version, license: typeof manifest.license === 'string' ? manifest.license : null, repository: repository?.url ?? null, repositorySource: repositoryInfo.provenance, ...(repositoryInfo.review ? { repositoryReview: repositoryInfo.review } : {}), metadataUrl, tarball: published.dist.tarball, integrity: published.dist.integrity, patch, filesChecked: files.size, lifecycleScripts, checks: ['registry-identity', 'sha512-integrity', 'archive-manifest-identity', 'bundle-patch-present', ...(manifest.main ? ['main-file-present'] : [])], limitations: ['No runtime installation test', 'No code audit', 'Patch references and transitive dependencies are not validated'] }
+    evidence: { name: manifest.name, version, license: typeof manifest.license === 'string' ? manifest.license : null, repository: repository?.url ?? null, repositorySource: repositoryInfo.provenance, ...(repositoryInfo.review ? { repositoryReview: repositoryInfo.review } : {}), metadataUrl, tarball: published.dist.tarball, integrity: published.dist.integrity, patch, filesChecked: files.size, archive: { compressedBytes: bytes.length, unpackedBytes, decodedBytes, entries: entryCount, maxUnpackedBytes: budget.maxUnpackedBytes, downloadTimeoutMs: budget.timeoutMs, reviewedBudget: input.archiveReview !== undefined }, lifecycleScripts, checks: ['registry-identity', 'sha512-integrity', 'archive-manifest-identity', 'bundle-patch-present', ...(manifest.main ? ['main-file-present'] : [])], limitations: ['No runtime installation test', 'No code audit', 'Patch references and transitive dependencies are not validated'] }
   };
 }
 

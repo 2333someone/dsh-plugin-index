@@ -181,7 +181,7 @@
           "cordis"
         ],
         "sortKeys": {
-          "github-stars": 211
+          "github-stars": 212
         }
       },
       "versions": [
@@ -602,7 +602,7 @@
           "language"
         ],
         "sortKeys": {
-          "github-stars": 445
+          "github-stars": 447
         }
       },
       "versions": [
@@ -1024,7 +1024,7 @@
           "cordis"
         ],
         "sortKeys": {
-          "github-stars": 150
+          "github-stars": 151
         }
       },
       "versions": [
@@ -1302,6 +1302,50 @@
           },
           "engines": {
             "dsh": "^0.2.0-rc.1 || >=0.2.1-0 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-univer-office",
+      "title": {
+        "en": "Univer Office",
+        "zh": "Univer Office 编辑器"
+      },
+      "description": {
+        "en": "Create, edit and review spreadsheets, documents and slides in DSH, with Office import and export.",
+        "zh": "在 DSH 内创建、编辑和审阅表格、文档与演示稿，支持 Office 导入导出。"
+      },
+      "author": "DreamNum Co., Ltd.",
+      "repository": {
+        "url": "https://github.com/dream-num/dsh-univer-office"
+      },
+      "homepage": "https://github.com/dream-num/dsh-univer-office",
+      "metadata": {
+        "category": "tools",
+        "keywords": [
+          "dsh",
+          "dsh-plugin",
+          "deepseek-harness",
+          "univer",
+          "spreadsheet",
+          "preview",
+          "worktree"
+        ],
+        "sortKeys": {
+          "github-stars": 558
+        }
+      },
+      "versions": [
+        {
+          "version": "0.3.7",
+          "publishTimestamp": 1791449118,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": "^0.1.5-rc.3 || ^0.1.7-rc.1 || ^0.2.0-rc.1"
           }
         }
       ]

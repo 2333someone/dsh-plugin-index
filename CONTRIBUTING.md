@@ -30,6 +30,8 @@ Add an entry to `sources.json`, using an existing category:
 
 The index follows npm `latest` unless `version` is set. A pinned version stays pinned until someone changes it. Runtime compatibility comes from the published package, not the submission text.
 
+Missing repository metadata or oversized archives require a version-bound review before listing. See the [review rules](docs/maintenance.md#reviewed-repository-metadata); these entries remain pinned until reviewed again.
+
 Run `pnpm test`, `pnpm build` and `pnpm validate`. If you change the site, also run the browser tests described in the [maintenance guide](docs/maintenance.md). Keep generated files in `public/` with the change so it can be reviewed without a network build.
 
 Submit source-list changes separately from unrelated website changes. Maintainers review package ownership, purpose, release metadata and descriptions before merging.

@@ -37,6 +37,12 @@ If a published package omits `repository`, maintainers may add `repositoryReview
 
 [Taskboard provenance](taskboard-review.md) documents the first such entry, including the matching npm/release-asset digest.
 
+## Reviewed archive budgets
+
+Ordinary downloads have a 30-second deadline and archives a 100 MiB decoded-byte limit. A large package can declare `archiveReview` only with a pinned version and matching npm integrity. It may use at most 120 seconds per attempt and 256 MiB. Downloads make at most three attempts in total. Compressed downloads remain capped at 64 MiB; package manifests and individual tar metadata records at 1 MiB; all tar headers, including PAX/GNU records, at 20,000. Decoded-byte limits include headers, metadata, padding and trailing data. The parser retains the manifest and file names, discards other content and never extracts to disk. `status.json` reports both declared payload bytes (`unpackedBytes`) and the complete tar stream (`decodedBytes`) under each package's `archive` record.
+
+[Univer Office archive review](univer-archive-review.md) records the measured package and its budget. A changed version or integrity requires a new review.
+
 ## GitHub stars
 
 Each build reads the public GitHub API once per unique repository and writes `public/github.json`. It records the exact star count, fetch time and last push time. Counts also populate the official index's `github-stars` sort key, so DSH can sort by stars.

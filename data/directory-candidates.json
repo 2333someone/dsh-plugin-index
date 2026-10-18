@@ -311,11 +311,15 @@
         },
         "wildcardExports": [],
         "fileCount": 282,
-        "unpackedBytes": 226850899
+        "unpackedBytes": 226850899,
+        "decodedBytes": 227076608,
+        "inspectionBudgetBytes": 268435456,
+        "downloadTimeoutMs": 120000,
+        "localVerification": "npm SHA-512 verified; bounded archive scan passed using a previously downloaded original archive after live npm download timed out"
       },
       "npmMetadataUrl": "https://registry.npmjs.org/dsh-univer-office/latest",
-      "listingStatus": "deferred",
-      "deferralReason": "Unpacked archive is 226850899 bytes, above the generator limit of 100 MiB."
+      "listingStatus": "included-pinned-with-archive-review",
+      "archiveReview": "docs/univer-archive-review.md"
     },
     {
       "repo": "shengsheng90/DSH-taskboard",

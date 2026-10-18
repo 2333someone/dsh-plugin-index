@@ -37,6 +37,12 @@ pnpm exec playwright test
 
 首个条目的[Taskboard 来源记录](taskboard-review.md)包含 npm 与 GitHub 发行资产的相同哈希。
 
+## 经核查的大包预算
+
+普通下载时限为每次 30 秒，完整 tar 解压流上限为 100 MiB。大型包只有固定版本并匹配 npm 完整性哈希，才能声明 `archiveReview`，最多使用每次 120 秒和 256 MiB。下载总共最多尝试三次。压缩下载仍限 64 MiB；包清单和单条 tar 扩展元数据均限 1 MiB；包括 PAX/GNU 扩展头在内最多 20,000 条目。解压字节预算包含头部、元数据、对齐及尾部内容。解析器只保留清单与文件名，不落盘解包。`status.json` 各包的 `archive` 字段同时记录声明载荷 `unpackedBytes` 和完整解压流 `decodedBytes`。
+
+[Univer Office 归档核查](univer-archive-review.md)记录实测大小和预算；版本或哈希变化需要重新核查。
+
 ## GitHub star
 
 每次构建对同一仓库只请求一次 GitHub 公开 API，并生成 `public/github.json`，记录准确的 star 数、获取时间和最近推送时间。计数同时写入官方索引的 `github-stars` 排序字段，DSH 内也可以据此排序。

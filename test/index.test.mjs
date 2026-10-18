@@ -1,13 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { gzipSync } from 'node:zlib';
+import { gzipSync, gunzipSync } from 'node:zlib';
+import { Pax } from 'tar';
 import { createHash } from 'node:crypto';
 import { buildIndex, checkBundle, collectPackage, download, dshEngines, inspectArchive, repositoryFrom, resolveRepository, verifyIntegrity } from '../scripts/lib.mjs';
 import { marketInstallTarget, parseMarketIndex } from '@deepseek-ai/dsh-plugin-market-index';
+import { archiveBudget, DEFAULT_ARCHIVE_BYTES, MAX_ARCHIVE_BYTES } from '../scripts/limits.mjs';
 
 function archive(entries) {
   const chunks = [];
-  for (const [name, value] of entries) {
+  for (const [name, value, type = '0'] of entries) {
     const data = Buffer.from(value);
     const header = Buffer.alloc(512);
     header.write(name, 0, 100);
@@ -17,7 +19,7 @@ function archive(entries) {
     header.write(`${data.length.toString(8).padStart(11, '0')}\0`, 124, 12);
     header.write('00000000000\0', 136, 12);
     header.fill(32, 148, 156);
-    header.write('0', 156);
+    header.write(type, 156);
     header.write('ustar\0', 257, 6);
     header.write('00', 263, 2);
     const checksum = header.reduce((sum, value) => sum + value, 0);
@@ -140,6 +142,91 @@ test('source reviews are disclosed by collectPackage after archive verification'
   assert.equal(result.entry.repository.url, input.repositoryReview.url);
   assert.equal(result.evidence.repositorySource, 'review');
   assert.equal(result.evidence.repositoryReview.commit, 'a'.repeat(40));
+});
+test('large archive budgets require a pinned version and matching integrity', () => {
+  const review = { version: '1.2.3', integrity: 'sha512-fixture', maxUnpackedBytes: MAX_ARCHIVE_BYTES, timeoutMs: 120000 };
+  const input = { version: '1.2.3', archiveReview: review };
+  assert.equal(archiveBudget({}, '1.2.3', 'sha512-fixture').maxUnpackedBytes, DEFAULT_ARCHIVE_BYTES);
+  assert.equal(archiveBudget(input, '1.2.3', 'sha512-fixture').maxUnpackedBytes, MAX_ARCHIVE_BYTES);
+  assert.throws(() => archiveBudget({ archiveReview: review }, '1.2.3', 'sha512-fixture'), /pinned/);
+  assert.throws(() => archiveBudget(input, '1.2.4', 'sha512-fixture'), /pinned/);
+  assert.throws(() => archiveBudget(input, '1.2.3', 'sha512-changed'), /integrity/);
+  assert.throws(() => archiveBudget({ ...input, archiveReview: { ...review, maxUnpackedBytes: MAX_ARCHIVE_BYTES + 1 } }, '1.2.3', 'sha512-fixture'), /256 MiB/);
+  assert.throws(() => archiveBudget({ ...input, archiveReview: { ...review, timeoutMs: 120001 } }, '1.2.3', 'sha512-fixture'), /120000/);
+});
+test('archive scanning enforces the reviewed byte budget and retains only metadata', async () => {
+  const bytes = archive([['package/package.json', '{}'], ['package/content.bin', 'x'.repeat(2000)]]);
+  await assert.rejects(inspectArchive(bytes, { maxUnpackedBytes: 1000 }), /limits/);
+  const result = await inspectArchive(bytes, { maxUnpackedBytes: 8192 });
+  assert.equal(result.unpackedBytes, 2002);
+  assert.equal(result.decodedBytes, gunzipSync(bytes).length);
+  assert.equal(result.entryCount, 2);
+  assert.equal(result.files.size, 2);
+  assert.deepEqual(result.manifest, {});
+  await assert.rejects(inspectArchive(bytes, { maxUnpackedBytes: Infinity }), /256 MiB/);
+});
+test('manifest size cap still applies when a larger archive budget is approved', async () => {
+  const bytes = archive([['package/package.json', 'x'.repeat(1024 * 1024 + 1)]]);
+  await assert.rejects(inspectArchive(bytes, { maxUnpackedBytes: MAX_ARCHIVE_BYTES }), /manifest is too large/);
+});
+test('download deadlines cannot be made unlimited', async () => {
+  for (const timeoutMs of [0, -1, Infinity, 120001]) {
+    await assert.rejects(download('https://registry.npmjs.org/test', { timeoutMs, fetchImpl: () => assert.fail('must not fetch') }), /timeout/);
+  }
+});
+test('collectPackage applies and reports a reviewed archive budget', async () => {
+  const source = fixture();
+  const metadata = await (await source.fetchImpl('https://registry.npmjs.org/example', { redirect: 'error' })).json();
+  const input = { ...config.packages[0], version: '1.2.3', archiveReview: { version: '1.2.3', integrity: metadata.versions['1.2.3'].dist.integrity, maxUnpackedBytes: 1024 * 1024, timeoutMs: 60000 } };
+  const result = await collectPackage(input, source);
+  assert.equal(result.evidence.archive.reviewedBudget, true);
+  assert.equal(result.evidence.archive.downloadTimeoutMs, 60000);
+  assert.equal(result.evidence.archive.maxUnpackedBytes, 1024 * 1024);
+  assert.ok(result.evidence.archive.unpackedBytes > 0);
+  await assert.rejects(collectPackage({ ...input, archiveReview: { ...input.archiveReview, maxUnpackedBytes: 1 } }, source), /limits/);
+  const bad = { ...input, archiveReview: { ...input.archiveReview, integrity: 'sha512-changed' } };
+  await assert.rejects(collectPackage(bad, { fetchImpl: async (url, options) => {
+    assert.ok(!url.endsWith('.tgz'), 'reject the review before downloading the archive');
+    return source.fetchImpl(url, options);
+  } }), /integrity/);
+});
+test('PAX metadata and tar padding count toward the full decoded byte budget', async () => {
+  const pax = new Pax({ comment: 'x'.repeat(4096) }).encode();
+  const payload = gunzipSync(archive([['package/package.json', '{}']]));
+  const raw = Buffer.concat([pax, payload]);
+  for (const bytes of [raw, gzipSync(raw)]) {
+    await assert.rejects(inspectArchive(bytes, { maxUnpackedBytes: 2048 }), /limits/);
+    const result = await inspectArchive(bytes, { maxUnpackedBytes: raw.length });
+    assert.equal(result.decodedBytes, raw.length);
+    assert.equal(result.entryCount, 2);
+    assert.ok(result.unpackedBytes > 4096);
+  }
+});
+test('zero-length metadata cannot bypass the 20000-entry cap', async () => {
+  const entries = Array.from({ length: 20_001 }, (_, i) => [`PaxHeader/${i}`, '', 'x']);
+  entries.push(['package/package.json', '{}']);
+  await assert.rejects(inspectArchive(archive(entries)), /limits: entries/);
+});
+test('oversized PAX metadata is rejected rather than silently ignored', async () => {
+  const bytes = archive([['PaxHeader/large', 'x'.repeat(1024 * 1024 + 1), 'x'], ['package/package.json', '{}']]);
+  await assert.rejects(inspectArchive(bytes), /metadata is too large/);
+});
+test('legitimate PAX and GNU long-path records retain parsing behavior', async () => {
+  const pax = new Pax({ path: 'package/package.json', size: 2 }).encode();
+  const raw = Buffer.concat([pax, gunzipSync(archive([['placeholder', '{}']]))]);
+  const first = await inspectArchive(gzipSync(raw));
+  assert.deepEqual(first.manifest, {});
+  assert.equal(first.entryCount, 2);
+  const gnu = await inspectArchive(archive([['long-name', 'package/package.json\0', 'L'], ['placeholder', '{}']]));
+  assert.deepEqual(gnu.manifest, {});
+  assert.equal(gnu.entryCount, 2);
+});
+test('PAX size precedence cannot hide an oversized manifest body', async () => {
+  const size = 1024 * 1024 + 1;
+  const global = new Pax({ size: 1 }, true).encode();
+  const local = new Pax({ path: 'package/package.json', size }).encode();
+  const body = gunzipSync(archive([['package/package.json', '{}'.padEnd(size, ' ')]]));
+  await assert.rejects(inspectArchive(gzipSync(Buffer.concat([global, local, body]))), /manifest is too large/);
 });
 test('publication time comes from registry rather than generation time', async () => {
   await assert.rejects(collectPackage(config.packages[0], { ...fixture(), now: 0 }), /publication date/);
