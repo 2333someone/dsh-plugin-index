@@ -31,6 +31,14 @@ pnpm exec playwright test
 
 构建失败时查看 Actions 日志，修正来源或连接问题后重新运行。撤回或停止维护的插件通过修改收录列表移除，不会在生成过程中被悄悄跳过。
 
+## GitHub star
+
+每次构建对同一仓库只请求一次 GitHub 公开 API，并生成 `public/github.json`，记录准确的 star 数、获取时间和最近推送时间。计数同时写入官方索引的 `github-stars` 排序字段，DSH 内也可以据此排序。
+
+GitHub Actions 使用只读 `GITHUB_TOKEN`。本地可设置 `GITHUB_TOKEN` 或 `GH_TOKEN`，未设置时使用 GitHub 的匿名限额。凭据只用于 `api.github.com` 请求，不写入快照，浏览器也不直接请求 GitHub API。
+
+请求失败时，最多保留七天内成功获取的计数，保留原始时间并标为 `stale`；超过七天或从未获取的计数标为 `unavailable`，不显示为 0。非 GitHub 仓库不提供 GitHub star。Actions 会跨构建保存 `.cache/github.json`，仓库中的公开快照作为备用。Star 反映仓库关注度，不代表测试覆盖率或插件质量。
+
 ## GitHub Pages
 
 1. 在 **Settings → Pages** 中选择 **GitHub Actions**。

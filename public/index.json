@@ -58,6 +58,15 @@
           "zh": "外观"
         }
       }
+    },
+    "sortKeys": {
+      "github-stars": {
+        "title": {
+          "en": "GitHub stars",
+          "zh": "GitHub 星标数"
+        },
+        "order": "desc"
+      }
     }
   },
   "plugins": [
@@ -84,12 +93,15 @@
           "skill",
           "skills",
           "cordis"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 211
+        }
       },
       "versions": [
         {
-          "version": "1.2.5",
-          "publishTimestamp": 1792251360,
+          "version": "1.2.6",
+          "publishTimestamp": 1792294492,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org/"
@@ -125,7 +137,10 @@
           "theme",
           "wallpaper",
           "web-ui"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 43
+        }
       },
       "versions": [
         {
@@ -164,7 +179,8 @@
           "deepseek-harness",
           "session-title",
           "auto-title"
-        ]
+        ],
+        "sortKeys": {}
       },
       "versions": [
         {
@@ -203,7 +219,10 @@
           "balance",
           "usage",
           "plugin"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 50
+        }
       },
       "versions": [
         {
@@ -248,7 +267,10 @@
           "iges",
           "dxf",
           "svg"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 18
+        }
       },
       "versions": [
         {
@@ -289,7 +311,10 @@
           "calendar",
           "caldav",
           "ical"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 4
+        }
       },
       "versions": [
         {
@@ -327,7 +352,10 @@
           "dsh",
           "certification",
           "supply-chain-security"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 0
+        }
       },
       "versions": [
         {
@@ -377,7 +405,10 @@
           "oauth",
           "web-search",
           "image-generation"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 194
+        }
       },
       "versions": [
         {
@@ -424,12 +455,15 @@
           "zh",
           "en",
           "language"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 445
+        }
       },
       "versions": [
         {
-          "version": "1.8.36",
-          "publishTimestamp": 1792250157,
+          "version": "1.9.2",
+          "publishTimestamp": 1792299962,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org/"
@@ -470,7 +504,8 @@
           "project-memory",
           "shared-memory",
           "context"
-        ]
+        ],
+        "sortKeys": {}
       },
       "versions": [
         {
@@ -510,7 +545,10 @@
           "email",
           "imap",
           "smtp"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 20
+        }
       },
       "versions": [
         {
@@ -548,7 +586,10 @@
           "font-size",
           "font-weight",
           "typography"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 7
+        }
       },
       "versions": [
         {
@@ -588,7 +629,10 @@
           "lightbox",
           "zoom",
           "annotation"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 2
+        }
       },
       "versions": [
         {
@@ -630,7 +674,10 @@
           "quota",
           "usage",
           "llm"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 3
+        }
       },
       "versions": [
         {
@@ -673,7 +720,10 @@
           "sqlite",
           "cordis",
           "llm"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 136
+        }
       },
       "versions": [
         {
@@ -718,7 +768,10 @@
           "xlsx",
           "pptx",
           "tools"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 32
+        }
       },
       "versions": [
         {
@@ -758,7 +811,10 @@
           "opencode-go",
           "llm",
           "cordis"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 150
+        }
       },
       "versions": [
         {
@@ -798,7 +854,10 @@
           "markdown",
           "navigation",
           "search"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 1
+        }
       },
       "versions": [
         {
@@ -839,7 +898,10 @@
           "skill-manager",
           "agent-skills",
           "skill-hub"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 30
+        }
       },
       "versions": [
         {
@@ -888,7 +950,10 @@
           "mcp-server",
           "model-context-protocol",
           "dsh-client"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 6
+        }
       },
       "versions": [
         {
@@ -926,7 +991,10 @@
           "cursor",
           "caret",
           "composer"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 3
+        }
       },
       "versions": [
         {
@@ -964,7 +1032,10 @@
           "skills",
           "tdd",
           "agent"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 10
+        }
       },
       "versions": [
         {
@@ -1005,7 +1076,10 @@
           "tinyfish",
           "web-fetch",
           "web-search"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 1
+        }
       },
       "versions": [
         {
@@ -1045,7 +1119,10 @@
           "balance",
           "quota",
           "coding-plan"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 0
+        }
       },
       "versions": [
         {
@@ -1084,7 +1161,10 @@
           "plugin",
           "research",
           "literature"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 37
+        }
       },
       "versions": [
         {
@@ -1135,7 +1215,10 @@
           "ai-agent",
           "agent",
           "claude-code"
-        ]
+        ],
+        "sortKeys": {
+          "github-stars": 12
+        }
       },
       "versions": [
         {

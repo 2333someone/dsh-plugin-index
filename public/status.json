@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T18:04:26.027Z",
+  "generatedAt": "2026-10-18T05:26:39.260Z",
   "validator": {
     "name": "@deepseek-ai/dsh-plugin-market-index",
     "version": "0.2.1-rc.2"
@@ -7,12 +7,12 @@
   "packages": [
     {
       "name": "@michengai/dsh-skills-manager",
-      "version": "1.2.5",
+      "version": "1.2.6",
       "license": "Apache-2.0",
       "repository": "https://github.com/MichengAI/dsh-skills-manager",
       "metadataUrl": "https://registry.npmjs.org/%40michengai%2Fdsh-skills-manager",
-      "tarball": "https://registry.npmjs.org/@michengai/dsh-skills-manager/-/dsh-skills-manager-1.2.5.tgz",
-      "integrity": "sha512-1e7UNneNU3sr8/+s7g1seeh1Mvz3Up7597NJewDdVoPrsqcSTtBui+mRAokZPQvhMOXrPMKt9qMIqqvUIUQM9w==",
+      "tarball": "https://registry.npmjs.org/@michengai/dsh-skills-manager/-/dsh-skills-manager-1.2.6.tgz",
+      "integrity": "sha512-PvW3flyh7a3fL7uc1JB+xdzxLzk44Mh01U+FIcmNVhNcRRJGf0sZkYZuC09Z2GXV9eZaOVrzrekezKi0gkuP2A==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -215,16 +215,16 @@
     },
     {
       "name": "dsh-cost-meter",
-      "version": "1.8.36",
+      "version": "1.9.2",
       "license": "MIT",
       "repository": "https://github.com/Han-1413141/dsh-cost-meter",
       "metadataUrl": "https://registry.npmjs.org/dsh-cost-meter",
-      "tarball": "https://registry.npmjs.org/dsh-cost-meter/-/dsh-cost-meter-1.8.36.tgz",
-      "integrity": "sha512-5i3zJ4wJMpkCxHpayISKyYUloE+/f2PVDKc4s8B7Lpaf99ji4A4af9SZvKe6CXiqDb4aM5kb691U903beDRoSQ==",
+      "tarball": "https://registry.npmjs.org/dsh-cost-meter/-/dsh-cost-meter-1.9.2.tgz",
+      "integrity": "sha512-TsrhU5wIV5I96ScYye04KZ+pRf7oprW8v/5hYbFCXUpfJwW11LUqVPN3/mU4QouwRHssF0whb9U//rgk0D+nKg==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 124,
+      "filesChecked": 135,
       "lifecycleScripts": [],
       "checks": [
         "registry-identity",
@@ -681,5 +681,11 @@
         "Patch references and transitive dependencies are not validated"
       ]
     }
-  ]
+  ],
+  "github": {
+    "snapshot": "github.json",
+    "fetched": 24,
+    "cached": 0,
+    "unavailable": 1
+  }
 }

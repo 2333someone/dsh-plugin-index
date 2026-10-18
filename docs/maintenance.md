@@ -31,6 +31,14 @@ The build lists one version per package. DSH reads compatibility from `engines.d
 
 On a failure, inspect the Actions log, fix the source or connection, and rerun. Remove a withdrawn or unmaintained listing through a source-list change. No failed source is silently omitted from a successful deployment.
 
+## GitHub stars
+
+Each build reads the public GitHub API once per unique repository and writes `public/github.json`. It records the exact star count, fetch time and last push time. Counts also populate the official index's `github-stars` sort key, so DSH can sort by stars.
+
+GitHub Actions supplies a read-only `GITHUB_TOKEN`. Local builds can use `GITHUB_TOKEN` or `GH_TOKEN`; without either, GitHub's anonymous rate limit applies. Tokens are used only for requests to `api.github.com` and are never written to snapshots. The browser does not request the GitHub API.
+
+If GitHub is unavailable, a verified snapshot up to seven days old is kept with its original timestamp and marked `stale`. Older or missing counts become `unavailable`, not zero. Non-GitHub repositories have no GitHub star count. Actions preserves `.cache/github.json` between builds; the checked-in public snapshot is a fallback. Stars describe repository popularity, not test coverage or plugin quality.
+
 ## GitHub Pages
 
 1. In **Settings → Pages**, select **GitHub Actions**.

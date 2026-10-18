@@ -30,7 +30,14 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile --ignore-scripts
       - run: pnpm test
+      - uses: actions/cache@v4
+        with:
+          path: .cache/github.json
+          key: github-metadata-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: github-metadata-
       - run: pnpm build
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - run: pnpm validate
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm exec playwright test
