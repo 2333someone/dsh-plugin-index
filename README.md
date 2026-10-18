@@ -4,7 +4,7 @@
 
 # Open Plugin Market
 
-For colored metric tags beneath DSH descriptions, add the [optional enhancement index](https://polang233.github.io/dsh-plugin-index/enhancements.json) and install “Market listing metric tags”. Versions remain in entry details. The main index works independently; disabling the plugin restores the original list. [Details](docs/market-display.md).
+The default index shows rounded download counts and release ages as native outline tags beside plugin names. Exact stars precede descriptions, separated by `│`. No display enhancement is needed. [Details](docs/market-display.md).
 
 A community plugin index for DeepSeek Harness. Add one URL in DSH to browse and install plugins.
 
@@ -30,7 +30,7 @@ The default index also offers “Random resources”, a complete random shuffle 
 
 The directory covers interface tools, skills, memory, providers, usage tracking, integrations, themes, workflows, development and research. Entries link to their source and exact npm versions, with author icons and localized names and descriptions when available.
 
-The DSH list and website show **★ GitHub stars, ↓ npm downloads over 30 days, and days since the listed release**. DSH can sort by stars or downloads. Reviewed company accounts and developers carry identity labels. [Metric and identity sources](docs/market-display.md). Missing counts never appear as zero; downloads count npm package requests.
+The DSH list and website show **★ GitHub stars, ↓ npm downloads over 30 days, and days since the listed release**. DSH can sort by stars or downloads. [Metric sources](docs/market-display.md). Missing counts never appear as zero; downloads count npm package requests.
 
 Every build checks published package integrity, package identity, bundle patch files and declared main files, then validates the index with DSH's official format validator. These are package checks, not an installation test or a code audit. [Check details and update time](https://polang233.github.io/dsh-plugin-index/status.json).
 
@@ -54,7 +54,7 @@ pnpm validate
 pnpm preview
 ```
 
-`pnpm build` fetches the listed packages and generates the index and both website languages in `public/`. Use `pnpm build:site` for website changes, or `pnpm build:metadata` to refresh metrics, names and identity labels while retaining the validated package versions.
+`pnpm build` fetches the listed packages and generates the index and both website languages in `public/`. Use `pnpm build:site` for website changes, or `pnpm build:metadata` to refresh metrics and names while retaining the validated package versions.
 
 [Maintenance and deployment](docs/maintenance.md) · [中文维护说明](docs/maintenance.zh-CN.md)
 

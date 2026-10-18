@@ -26,11 +26,11 @@ https://polang233.github.io/dsh-plugin-index/index.json
 
 默认索引也提供「随机资源」排序，全量随机洗牌，每次索引更新生成新顺序。
 
-想把 DSH 列表指标变成彩色标签，并收起列表版本与日期，可另外添加[显示增强索引](https://polang233.github.io/dsh-plugin-index/enhancements.json)，安装「市场列表彩色指标」，再切回普通索引。插件可随时停用，普通索引接入不需要它。[使用说明](docs/market-display.md)。
+默认索引在名称旁显示向上取整的下载量标签和更新天数，精确 star 数放在介绍前，用 `│` 隔开，无需显示增强插件。下载量相近的条目共用标签，减少筛选菜单选项。版本、作者和完整日期沿用 DSH 自带的下方信息行。[展示说明](docs/market-display.md)。
 
 涵盖界面工具、技能、记忆、模型供应商、用量统计、外部服务、主题、工作流、开发与研究。条目提供介绍、源码链接和明确的 npm 版本，并读取作者随包发布的图标与多语言名称。
 
-DSH 的实际列表和网页目录显示 **★ GitHub star、↓ npm 近 30 天下载量、版本更新天数**，并支持按 star 或下载量排序。已核实的公司官号与开发者带有身份标签。[指标与身份来源](docs/market-display.md)。数据随构建更新，缺失值不显示为 0；下载量是 npm 包下载次数。
+DSH 的实际列表和网页目录显示 **★ GitHub star、↓ npm 近 30 天下载量、版本更新天数**，并支持按 star 或下载量排序。[指标来源](docs/market-display.md)。数据随构建更新，缺失值不显示为 0；下载量是 npm 包下载次数。
 
 每次构建都会检查发布包的完整性、包名与版本、组合包补丁及声明的入口文件，再使用 DSH 官方校验器验证索引格式。这些检查不等同于安装测试或代码审计。[查看检查记录和更新时间](https://polang233.github.io/dsh-plugin-index/status.json)。
 
@@ -54,7 +54,7 @@ pnpm validate
 pnpm preview
 ```
 
-`pnpm build` 获取插件并在 `public/` 生成索引与中英文页面。只修改网站时运行 `pnpm build:site`；只更新指标、名称或身份标签时运行 `pnpm build:metadata`，复用已校验的插件版本。
+`pnpm build` 获取插件并在 `public/` 生成索引与中英文页面。只修改网站时运行 `pnpm build:site`；只更新指标或名称时运行 `pnpm build:metadata`，复用已校验的插件版本。
 
 [维护与部署](docs/maintenance.zh-CN.md) · [Maintenance](docs/maintenance.md)
 

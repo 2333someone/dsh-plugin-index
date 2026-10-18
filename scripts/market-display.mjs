@@ -1,6 +1,8 @@
 import { parseMarketIndex } from '@deepseek-ai/dsh-plugin-market-index';
 import { githubRepository, applyGitHubStars } from './github.mjs';
 import { recommendIndex } from './recommendations.mjs';
+import { createHash } from 'node:crypto';
+import { approximateDownloads } from './metric-format.mjs';
 
 const DAY = 86_400_000;
 const measured = value => value && ['ok', 'stale'].includes(value.status);
@@ -13,18 +15,18 @@ export function releaseAge(timestamp, now, language) {
   return language === 'zh' ? (days === 0 ? '今天更新' : `${days} 天前更新`) : (days === 0 ? 'Updated today' : `Updated ${days} ${days === 1 ? 'day' : 'days'} ago`);
 }
 
-/** Compose supported description text; DSH renders it in each real Discover row. */
-export function marketSummary(plugin, github, downloads, now, language) {
+/** Compose measured text for native DSH tags and website metrics. */
+function marketMetrics(plugin, github, downloads, now, language) {
   const repo = github.repositories?.[githubRepository(plugin.repository?.url)?.key];
   const npm = downloads.packages?.[plugin.name];
-  const parts = [];
+  const parts = {};
   const format = value => new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en-US').format(value);
   const cached = record => record.status === 'stale' ? (language === 'zh' ? `（缓存 ${record.fetchedAt.slice(0, 10)}）` : ` (cached ${record.fetchedAt.slice(0, 10)})`) : '';
-  if (measured(repo) && count(repo.stars)) parts.push(`★ ${format(repo.stars)}${cached(repo)}`);
-  if (measured(npm) && count(npm.downloads)) parts.push(`↓ ${format(npm.downloads)}${cached(npm)}`);
+  if (measured(repo) && count(repo.stars)) parts.star = `★ ${format(repo.stars)}${cached(repo)}`;
+  if (measured(npm) && count(npm.downloads)) parts.download = `↓ ${format(npm.downloads)}${cached(npm)}`;
   const age = releaseAge(plugin.versions[0]?.publishTimestamp, now, language);
-  if (age) parts.push('◷ ' + age);
-  return parts.join(' · ');
+  if (age) parts.age = '◷ ' + age;
+  return parts;
 }
 
 function publisherFor(plugin, publishers) {
@@ -51,23 +53,36 @@ export function applyMarketDisplay(index, { github = {}, downloads = {}, publish
   validatePublishers(publishers);
   const starred = applyGitHubStars(index, github);
   const metadata = { ...starred.metadata, labels: { ...starred.metadata?.labels }, sortKeys: { ...starred.metadata?.sortKeys } };
-  for (const id of Object.keys(metadata.labels)) if (id.startsWith('publisher-')) delete metadata.labels[id];
+  for (const id of Object.keys(metadata.labels)) if (id.startsWith('publisher-') || id.startsWith('metric-')) delete metadata.labels[id];
   delete metadata.sortKeys[sortId];
   const display = { schema: 1, generatedAt: new Date(now).toISOString(), plugins: {} };
   let withDownloads = 0;
   const plugins = starred.plugins.map(plugin => {
-    const labels = (plugin.metadata?.labels ?? []).filter(id => !id.startsWith('publisher-'));
+    const labels = (plugin.metadata?.labels ?? []).filter(id => !id.startsWith('publisher-') && !id.startsWith('metric-'));
     const publisher = publisherFor(plugin, publishers);
     if (publisher) {
       const id = 'publisher-' + publisher.id;
       metadata.labels[id] = { title: publisher.title };
       labels.push(id);
     }
-    const summary = Object.fromEntries(['en', 'zh'].map(language => [language, marketSummary(plugin, github, downloads, now, language)]));
+    const metrics = Object.fromEntries(['en', 'zh'].map(language => [language, marketMetrics(plugin, github, downloads, now, language)]));
+    const summary = Object.fromEntries(Object.entries(metrics).map(([language, value]) => [language, Object.values(value).join(' · ')]));
     const description = typeof plugin.description === 'string' ? { en: plugin.description, zh: plugin.description } : { ...plugin.description };
-    const composed = Object.fromEntries(Object.entries(description).map(([language, value]) => [language, (summary[language.startsWith('zh') ? 'zh' : 'en'] ? summary[language.startsWith('zh') ? 'zh' : 'en'] + ' — ' : '') + value]));
-    // Plugins without authored text still receive the measured row summary.
-    for (const language of ['en', 'zh']) if (!composed[language] && summary[language]) composed[language] = summary[language];
+    const composed = Object.fromEntries(Object.entries(description).map(([language, value]) => {
+      const star = metrics[language.startsWith('zh') ? 'zh' : 'en'].star;
+      return [language, star ? star + ' │ ' + value : value];
+    }));
+    // Star-only descriptions still work when the author supplied no description.
+    for (const language of ['en', 'zh']) if (!composed[language] && metrics[language].star) composed[language] = metrics[language].star;
+    for (const kind of ['download', 'age']) {
+      if (!metrics.en[kind]) continue;
+      const title = Object.fromEntries(['en', 'zh'].map(language => [language, kind === 'download'
+        ? metrics[language].download.replace(/[\d,]+/, approximateDownloads(downloads.packages[plugin.name].downloads))
+        : metrics[language].age]));
+      const id = 'metric-' + createHash('sha256').update(JSON.stringify(title)).digest('hex').slice(0, 16);
+      metadata.labels[id] = { title };
+      labels.push(id);
+    }
     const sortKeys = { ...plugin.metadata?.sortKeys };
     delete sortKeys[sortId];
     const npm = downloads.packages?.[plugin.name];

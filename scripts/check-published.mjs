@@ -2,6 +2,7 @@ import {createHash} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {pathToFileURL} from 'node:url';
+import {approximateDownloads} from './metric-format.mjs';
 
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 
@@ -30,9 +31,17 @@ export function checkMarketDisplay(index, github, downloads, display, publishers
     for (const language of ['en', 'zh']) {
       const summary = presentation.summary?.[language], description = plugin.description?.[language];
       const original = presentation.description?.[language];
-      if (!summary || typeof description !== 'string' || description !== summary + (original ? ' — ' + original : '')) throw new Error('Missing visible DSH metrics: ' + plugin.name);
+      const metricLabels = (plugin.metadata?.labels ?? []).filter(id => id.startsWith('metric-'));
+      const visible = metricLabels.map(id => index.metadata?.labels?.[id]?.title?.[language]);
+      const parts = typeof summary === 'string' && summary ? summary.split(' · ') : [];
+      const star = parts.find(part => part.startsWith('★ '));
+      const expectedDescription = star ? star + (original ? ' │ ' + original : '') : original;
+      const expectedLabels = parts.filter(part => !part.startsWith('★ ')).map(part => part.startsWith('↓ ')
+        ? part.replace(/[\d,]+/, approximateDownloads(npm.downloads)) : part);
+      if (typeof summary !== 'string' || description !== expectedDescription || JSON.stringify(visible) !== JSON.stringify(expectedLabels)) throw new Error('Missing visible DSH metrics: ' + plugin.name);
       const format = value => new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en-US').format(value);
       if (hasStars && !summary.includes('★ ' + format(repo.stars))) throw new Error('Star missing from DSH row: ' + plugin.name);
+      if (!hasStars && star) throw new Error('Unexpected star in DSH row: ' + plugin.name);
       if (hasDownloads && !summary.includes('↓ ' + format(npm.downloads))) throw new Error('Downloads missing from DSH row: ' + plugin.name);
       if (days >= 0) {
         const age = language === 'zh' ? (days === 0 ? '今天更新' : days + ' 天前更新') : (days === 0 ? 'Updated today' : `Updated ${days} ${days === 1 ? 'day' : 'days'} ago`);
