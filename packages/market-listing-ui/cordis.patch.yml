@@ -1,0 +1,3 @@
+- insert:
+    - id: open-plugin-market-listing-ui
+      name: "@polang233/dsh-market-listing-ui"
