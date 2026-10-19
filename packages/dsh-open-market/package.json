@@ -12,10 +12,23 @@
     "./cordis.patch.yml": "./cordis.patch.yml",
     "./package.json": "./package.json"
   },
-  "files": ["index.js", "cordis.patch.yml", "icon.png", "locale/*.json", "README.md"],
-  "keywords": ["deepseek-harness", "dsh", "dsh-plugin", "plugin-market", "plugin-index"],
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "icon.png",
+    "locale/*.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "plugin-market",
+    "plugin-index"
+  ],
   "author": "polang233",
-  "license": "MIT",
+  "license": "GPL-3.0-only",
   "homepage": "https://dshopen.org/",
   "repository": {
     "type": "git",
@@ -23,8 +36,18 @@
     "directory": "packages/dsh-open-market"
   },
   "bugs": "https://github.com/polang233/dsh-plugin-index/issues",
-  "engines": { "dsh": ">=0.2.1-rc.2 <0.3.0" },
-  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
-  "publishConfig": { "access": "public" },
-  "scripts": { "test": "node --test" }
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
 }

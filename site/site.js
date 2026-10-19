@@ -1,12 +1,27 @@
 // Remember an explicit language choice so the English page stops sending Chinese browsers to /zh/.
 for (const link of document.querySelectorAll('[data-lang]')) {
-  link.addEventListener('click', () => { try { localStorage.setItem('opm-lang', link.dataset.lang); } catch { /* Private mode. */ } });
+  link.addEventListener('click', event => {
+    try { localStorage.setItem('opm-lang', link.dataset.lang); } catch { /* Private mode. */ }
+    if (event.metaKey || event.ctrlKey || event.shiftKey || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // Let the pill slide and the page fade before navigating.
+    event.preventDefault();
+    link.closest('.languages')?.setAttribute('data-current', link.dataset.lang);
+    document.body.classList.add('is-leaving');
+    setTimeout(() => { location.href = link.href; }, 260);
+  });
 }
 
 const copyButton = document.querySelector('[data-copy]');
 const indexInput = document.querySelector('#index-url');
 const copyStatus = document.querySelector('#copy-status');
 const text = JSON.parse(document.querySelector('#site-messages').textContent);
+let flashTimer;
+const flash = error => {
+  copyStatus.classList.toggle('is-error', error);
+  copyStatus.classList.add('is-shown');
+  clearTimeout(flashTimer);
+  flashTimer = setTimeout(() => { copyStatus.classList.remove('is-shown'); copyButton.querySelector('span').textContent = text.copy; }, error ? 5000 : 2600);
+};
 
 if (copyButton && indexInput) {
   copyButton.hidden = false;
@@ -15,13 +30,13 @@ if (copyButton && indexInput) {
       if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
       await navigator.clipboard.writeText(indexInput.value);
       copyButton.querySelector('span').textContent = text.copied;
-      copyStatus.textContent = text.copySuccess;
+      copyStatus.textContent = text.copySuccess; flash(false);
     } catch {
       copyButton.querySelector('span').textContent = text.copy;
       indexInput.focus();
       indexInput.select();
       indexInput.setSelectionRange(0, indexInput.value.length);
-      copyStatus.textContent = text.copyFailure;
+      copyStatus.textContent = text.copyFailure; flash(true);
     }
   };
   copyButton.addEventListener('click', copy);
@@ -40,14 +55,31 @@ const moreWrap = document.querySelector('[data-more-wrap]');
 const moreButton = document.querySelector('[data-more]');
 const progress = document.querySelector('[data-progress]');
 const bar = document.querySelector('[data-bar]');
-const sentinel = document.querySelector('[data-sentinel]');
+const list = document.querySelector('.plugin-list');
+const sortChips = [...document.querySelectorAll('[data-sort]')];
 const normalize = value => value.normalize('NFKC').toLocaleLowerCase().trim();
 const fill = (template, values) => template.replace(/\{(\w+)\}/g, (_, key) => values[key]);
 
 let category = '';
 let limit = PAGE_SIZE;
 let matches = rows;
-let auto = false;
+let ordered = rows;
+
+// Masonry: each card spans as many 4px rows as its height needs, so short cards no longer leave gaps.
+const masonry = () => {
+  if (!list) return;
+  const unit = parseFloat(getComputedStyle(list).gridAutoRows) || 4;
+  const gap = rows.length ? parseFloat(getComputedStyle(rows[0]).paddingBottom) || 0 : 0;
+  // Read every height first, then write, so the browser lays out once instead of once per card.
+  const shown = rows.filter(row => !row.hidden);
+  const spans = shown.map(row => Math.ceil((row.firstElementChild.getBoundingClientRect().height + gap) / unit));
+  shown.forEach((row, at) => { const value = `span ${spans[at]}`; if (row.style.gridRowEnd !== value) row.style.gridRowEnd = value; });
+};
+if ('ResizeObserver' in window && list) {
+  let queued = false;
+  const watch = new ResizeObserver(() => { if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; masonry(); }); } });
+  rows.forEach(row => watch.observe(row.firstElementChild));
+}
 
 // Show the first `limit` matches; the rest stay hidden until the reader asks for more.
 function render() {
@@ -59,8 +91,9 @@ function render() {
   if (!moreWrap.hidden) {
     progress.textContent = fill(text.shown, { shown, count: matches.length });
     bar.style.width = `${Math.round(shown / matches.length * 100)}%`;
-    moreButton.textContent = fill(text.more, { n: Math.min(PAGE_SIZE, matches.length - shown) });
+    moreButton.textContent = text.more;
   }
+  masonry();
 }
 
 function filter() {
@@ -74,7 +107,7 @@ function filter() {
     if (textOk && categoryOk) hit.add(row);
     else row.hidden = true;
   }
-  matches = rows.filter(row => hit.has(row));
+  matches = ordered.filter(row => hit.has(row));
   limit = PAGE_SIZE;
   render();
 }
@@ -101,18 +134,73 @@ if (controls && search && chips.length && moreWrap) {
     select('');
     search.focus();
   });
-  // The button comes first; after the first click, scrolling reveals further batches on its own.
-  moreButton.addEventListener('click', () => { auto = true; showMore(); });
-  // Reveal the next batch shortly before the end of the list.
-  if ('IntersectionObserver' in window) {
-    const watcher = new IntersectionObserver(entries => {
-      if (auto && entries.some(entry => entry.isIntersecting)) {
-        showMore();
-        watcher.unobserve(sentinel);
-        requestAnimationFrame(() => watcher.observe(sentinel));
-      }
-    }, { rootMargin: '0px 0px 240px 0px' });
-    watcher.observe(sentinel);
-  }
+  // Each click reveals one more batch; the list never grows on its own.
+  moreButton.addEventListener('click', showMore);
+  // Same orders as the DSH sort menu. Random reshuffles on every click, which a static index cannot do inside DSH.
+  const value = (row, key) => { const number = Number(row.dataset[key]); return Number.isFinite(number) && row.dataset[key] !== undefined ? number : -Infinity; };
+  const sortBy = id => {
+    sortChips.forEach(chip => chip.setAttribute('aria-pressed', String(chip.dataset.sort === id)));
+    const key = { recommended: 'sortRecommended', stars: 'sortStars', starsWeek: 'sortStarsWeek', published: 'sortPublished' }[id];
+    if (id === 'random') {
+      ordered = [...rows];
+      for (let i = ordered.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [ordered[i], ordered[j]] = [ordered[j], ordered[i]]; }
+    } else {
+      ordered = [...rows].sort((a, b) => (key ? value(b, key) - value(a, key) : 0) || value(a, 'sortOrder') - value(b, 'sortOrder'));
+    }
+    list.append(...ordered);
+    filter();
+  };
+  sortChips.forEach(chip => chip.addEventListener('click', () => sortBy(chip.dataset.sort)));
   select('');
 }
+
+// Step screenshots open full size in a dialog; Escape, the close button or a click outside closes it.
+const viewer = document.querySelector('[data-viewer]');
+if (viewer && viewer.showModal) {
+  const full = viewer.querySelector('img');
+  const open = img => { full.src = img.currentSrc || img.src; full.alt = img.alt; viewer.showModal(); };
+  document.querySelectorAll('[data-zoom]').forEach(button => button.addEventListener('click', event => { event.stopPropagation(); open(button.querySelector('img')); }));
+  // A click anywhere on a step card opens its screenshot too.
+  document.querySelectorAll('[data-zoom-card]').forEach(card => card.addEventListener('click', () => open(card.querySelector('img'))));
+  viewer.addEventListener('click', event => { if (event.target === viewer || event.target.closest('[data-viewer-close]')) viewer.close(); });
+}
+
+// Floating header: tucks away while scrolling down, returns on any upward scroll or near the top.
+const header = document.querySelector('[data-header]');
+if (header) {
+  let last = window.scrollY, ticking = false;
+  const update = () => {
+    const y = window.scrollY;
+    header.classList.toggle('is-scrolled', y > 8);
+    if (y > last + 4 && y > 140) header.classList.add('is-hidden');
+    else if (y < last - 4 || y <= 140) header.classList.remove('is-hidden');
+    last = y; ticking = false;
+  };
+  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  header.addEventListener('focusin', () => header.classList.remove('is-hidden'));
+}
+
+// Sections ease in as they enter the viewport.
+const revealed = document.querySelectorAll('[data-reveal]');
+if ('IntersectionObserver' in window) {
+  const seen = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('is-visible'); seen.unobserve(entry.target); }
+  }), { rootMargin: '0px 0px -8% 0px' });
+  revealed.forEach(node => seen.observe(node));
+} else revealed.forEach(node => node.classList.add('is-visible'));
+
+// Details popovers: one open at a time, closed when the pointer leaves or focus moves away.
+const facts = [...document.querySelectorAll('[data-facts]')];
+facts.forEach(item => {
+  item.addEventListener('toggle', () => { if (item.open) facts.forEach(other => { if (other !== item) other.open = false; }); });
+  // Pointer devices open on hover; touch keeps the tap toggle from <details>.
+  let hoverOpened = false;
+  item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches && !item.open) { item.open = true; hoverOpened = true; } });
+  item.addEventListener('mouseleave', () => { item.open = false; hoverOpened = false; });
+  // A click right after the hover opened it keeps it open; the next click closes it as usual.
+  item.querySelector('summary').addEventListener('click', event => { if (hoverOpened) { event.preventDefault(); hoverOpened = false; } });
+  item.addEventListener('focusout', event => { if (!item.contains(event.relatedTarget)) item.open = false; });
+});
+
+// Coming back from the page cache should never leave the page faded out.
+window.addEventListener('pageshow', () => document.body.classList.remove('is-leaving'));

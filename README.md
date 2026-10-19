@@ -2,38 +2,40 @@
 
 <img src="site/logo-256.png" alt="Open Plugin Market" width="96" align="right">
 
-[![Plugins](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdshopen.org%2Findex.json&query=%24.plugins.length&label=plugins&color=2563eb)](https://dshopen.org/zh/)
-[![Index reads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdshopen.org%2Fstats.json&query=%24.total&label=index%20reads&color=16a34a)](https://dshopen.org/stats.json)
-[![Readers 30d](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdshopen.org%2Fstats.json&query=%24.last30Days.readers&label=readers%20%2830d%29&color=0d9488)](https://dshopen.org/stats.json)
-[![Checks](https://github.com/polang233/dsh-plugin-index/actions/workflows/publish.yml/badge.svg)](https://github.com/polang233/dsh-plugin-index/actions/workflows/publish.yml)
-
-DeepSeek Harness（DSH）的社区插件市场。数据为主、推荐为主，界面保持简洁。
-
-**不按 star 论英雄。** 默认推荐以**最近增长快、更新勤、刚上架**为主，同时参考验证、下载量和 star，同一作者不会霸榜。小开发者的新作品也能出现在首屏，被更多人看到。
-
-[浏览目录](https://dshopen.org/zh/) · [English](README.en.md) · [提交插件](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
-
-[![开放插件市场首页](docs/images/home-zh.png)](https://dshopen.org/zh/)
-
-![在 DSH 中浏览和安装插件](docs/images/market-in-dsh.png)
-
-## 使用
-
-先在 DSH **插件 → 实验性插件** 中打开 **自定义插件市场**，然后任选一种方式：
-
-**方式一：安装插件（推荐）**。运行下面的命令，从 GitHub 安装 `dsh-open-market`。插件会自动把索引加入「发现」的索引源，只添加一次，之后你删掉了也不会再加回来。
-
-```bash
-dsh plugin --profile desktop add "git+https://github.com/polang233/dsh-plugin-index.git#main&path:/packages/dsh-open-market"
-```
-
-**方式二：手动添加**。在 **发现 → 添加索引源** 中粘贴：
+在 DeepSeek Harness 中打开 **插件 → 实验性插件 → 自定义插件市场**，再到 **发现 → 添加索引源** 粘贴这个地址就能用：
 
 ```text
 https://dshopen.org/index.json
 ```
 
+[![插件](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdshopen.org%2Findex.json&query=%24.plugins.length&label=%E6%8F%92%E4%BB%B6&color=2563eb)](https://dshopen.org/zh/)
+[![索引读取](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdshopen.org%2Fstats.json&query=%24.total&label=%E7%B4%A2%E5%BC%95%E8%AF%BB%E5%8F%96&color=16a34a)](https://dshopen.org/stats.json)
+[![今日读取](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdshopen.org%2Fstats.json&query=%24.today.reads&label=%E4%BB%8A%E6%97%A5%E8%AF%BB%E5%8F%96&color=0d9488)](https://dshopen.org/stats.json)
+[![Star](https://img.shields.io/github/stars/polang233/dsh-plugin-index?label=Star&color=eab308)](https://github.com/polang233/dsh-plugin-index/stargazers)
+
+DeepSeek Harness（DSH）的社区插件市场，数据为主、推荐为主，界面保持简洁。
+
+**不唯 star 🌟 论。** 默认推荐每天更新，以最近增长快、更新勤、优质的插件为主，同时参考验证、下载量和 star，同一作者不会霸榜。小开发者的新作品也能出现在首屏，被更多人看到。
+
+[浏览目录](https://dshopen.org/zh/) · [English](README.en.md) · [提交插件](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
+
+![在 DSH「发现」里浏览开放插件市场](docs/images/dsh-discover-zh.jpg)
+
+[![开放插件市场网站](docs/images/home-zh.png)](https://dshopen.org/zh/)
+
+## 使用
+
+先在 DSH **插件 → 实验性插件** 中打开 **自定义插件市场**，然后任选一种方式：
+
+**方式一：手动添加**。在 **发现 → 添加索引源** 中粘贴 `https://dshopen.org/index.json`。
+
 <img src="docs/images/add-index.png" alt="在「发现 → 索引源」中添加 dshopen.org 的索引地址" width="560">
+
+**方式二：安装插件**。运行下面的命令安装 `dsh-open-market`，它会自动把索引加入「发现」的索引源。只添加一次，之后你删掉了也不会再加回来。
+
+```bash
+dsh plugin --profile desktop add "git+https://github.com/polang233/dsh-plugin-index.git#main&path:/packages/dsh-open-market"
+```
 
 旧地址 `https://polang233.github.io/dsh-plugin-index/index.json` 继续可用，内容相同。
 
@@ -49,6 +51,10 @@ https://dshopen.org/index.json
 
 **默认排序**偏重下载量、star、有 Logo 和经过验证的插件；**✨ 智能推荐**以近期增长和活跃为主。另有近 7 天新增 star、GitHub 星标数和随机资源。索引每 6 小时更新一次。算法细节和数据来源见 [指标说明](docs/market-display.md)。
 
+## 别吝啬你的 star ⭐
+
+star 是开发者最直接的鼓励，也是这里的推荐参考之一。用到哪个插件觉得好用，就去它的仓库点个 star 吧，没准下一个 star 就是别人点给你的。
+
 ## 提交插件
 
 [填写收录申请](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)，或在 [`data/sources.json`](data/sources.json) 中添加条目后提交 PR。插件需要公开源码、可安装的 npm 版本和明确的许可证，详见 [贡献指南](.github/CONTRIBUTING.md)。在 npm 包中附带自己的 Logo 会优先审核。
@@ -57,7 +63,7 @@ https://dshopen.org/index.json
 
 ## 使用统计
 
-上面的 **index reads** 是 DSH 读取索引的总次数：每次在「发现」里打开或刷新这个市场都会读取一次（DSH 会缓存约 10 分钟）。**readers (30d)** 是近 30 天每天不同读取者的合计，按「IP + 浏览器标识」的加盐哈希按天去重，不保存 IP。明细见 [stats.json](https://dshopen.org/stats.json)。只统计 dshopen.org，旧的 github.io 地址无法统计。
+**索引读取**是 DSH 读取索引的总次数，每次在「发现」里打开或刷新这个市场都会读取一次（DSH 会缓存约 10 分钟）；**今日读取**是今天的次数。读取者按「IP + 浏览器标识」的加盐哈希按天去重，不保存 IP，明细见 [stats.json](https://dshopen.org/stats.json)。只统计 dshopen.org，旧的 github.io 地址无法统计。
 
 ## 目录结构
 
@@ -84,6 +90,6 @@ pnpm install --frozen-lockfile --ignore-scripts
 pnpm test && pnpm build && pnpm validate
 ```
 
-[维护说明](docs/maintenance.zh-CN.md) · [MIT](LICENSE)
+[维护说明](docs/maintenance.zh-CN.md) · [GPL-3.0 许可证](LICENSE)
 
 独立社区项目，与 DeepSeek 官方无隶属关系。各插件的版权和许可证归原作者所有。
