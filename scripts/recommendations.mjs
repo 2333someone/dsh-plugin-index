@@ -5,8 +5,12 @@ const DAY = 86_400_000;
 const KEY = 'recommended';
 const age = (timestamp, now) => Number.isFinite(timestamp) && timestamp <= now ? (now - timestamp) / DAY : Infinity;
 
-/** Balance recent maintenance with category and developer exposure; popularity has a bounded influence. */
-export function recommendIndex(index, {github = {}, now = Date.now(), randomIntImpl = randomInt} = {}) {
+/**
+ * Blend momentum (maintenance, download and star growth, releases, newness) with trust and reach (verification by
+ * other markets, downloads, stars). Momentum carries most of the weight, and repeated developers or categories are
+ * pushed down, so small projects that are moving get seen next to established ones.
+ */
+export function recommendIndex(index, {github = {}, signals = {}, now = Date.now(), randomIntImpl = randomInt} = {}) {
   const week = Math.floor(now / (7 * DAY));
   const candidates = index.plugins.map(plugin => {
     const repo = githubRepository(plugin.repository?.url);
@@ -17,14 +21,27 @@ export function recommendIndex(index, {github = {}, now = Date.now(), randomIntI
     const maintained = Number.isFinite(pushed) && pushed <= now ? pushed : published;
     const stars = observed && Number.isSafeInteger(record.stars) && record.stars >= 0 ? record.stars : 0;
     const rotation = createHash('sha256').update(week + ':' + plugin.name).digest().readUInt32BE(0) / 0xffffffff;
+    const signal = signals[plugin.name] ?? {};
+    const growth = Number.isFinite(signal.growth) ? Math.min(1, Math.max(0, Math.log2(signal.growth) / 2)) : 0;
+    const cadence = Math.min(1, (signal.releases30 ?? 0) / 4);
+    const fresh = Number.isFinite(signal.ageDays) ? Math.exp(-signal.ageDays / 30) : 0;
+    const starGrowth = signal.starsWeek > 0 ? Math.min(1, Math.log1p(signal.starsWeek) / Math.log1p(50)) : 0;
+    const reach = Math.log1p(Math.min(signal.downloads ?? 0, 100_000)) / Math.log1p(100_000);
+    const verified = signal.verifiedBy?.length ? 1 : 0;
     return {
       plugin,
       developer: repo?.key.split('/')[0] ?? plugin.author?.trim().toLowerCase() ?? plugin.name,
       category: plugin.metadata?.category ?? 'other',
-      score: 0.65 * Math.exp(-age(maintained, now) / 45)
-        + 0.15 * Math.exp(-age(published, now) / 30)
-        + 0.2 * Math.log1p(Math.min(stars, 1000)) / Math.log1p(1000)
-        + 0.08 * rotation - (observed && record.archived ? 2 : 0)
+      score: 0.25 * Math.exp(-age(maintained, now) / 30)
+        + 0.07 * Math.exp(-age(published, now) / 30)
+        + 0.12 * growth
+        + 0.1 * starGrowth
+        + 0.08 * cadence
+        + 0.07 * fresh
+        + 0.08 * verified
+        + 0.1 * reach
+        + 0.08 * Math.log1p(Math.min(stars, 5000)) / Math.log1p(5000)
+        + 0.05 * rotation - (observed && record.archived ? 2 : 0)
     };
   });
   const developers = new Map(), categories = new Map(), ordered = [];

@@ -1,6 +1,8 @@
 import { parseMarketIndex } from '@deepseek-ai/dsh-plugin-market-index';
 
-const MAX_CACHE_AGE = 7 * 24 * 60 * 60 * 1000;
+const DAY = 24 * 60 * 60 * 1000;
+const MAX_CACHE_AGE = 7 * DAY;
+const HISTORY_DAYS = 35;
 const SORT_KEY = 'github-stars';
 
 export function githubRepository(value) {
@@ -89,7 +91,42 @@ export async function collectGitHub(index, {
       } else repositories[repo.key] = result;
     }
   }));
+  for (const repo of entries) {
+    const history = starHistory(previous.repositories?.[repo.key]?.history, repositories[repo.key], now);
+    if (history.length) repositories[repo.key].history = history;
+  }
   return { schema: 1, generatedAt: timestamp, repositories: Object.fromEntries(entries.map(repo => [repo.key, repositories[repo.key]])) };
+}
+
+/** One [date, stars] point per day for the last five weeks; star growth needs this, GitHub has no cheap history API. */
+export function starHistory(previous, record, now) {
+  const cutoff = new Date(now - HISTORY_DAYS * DAY).toISOString().slice(0, 10);
+  const points = new Map((Array.isArray(previous) ? previous : [])
+    .filter(point => Array.isArray(point) && /^\d{4}-\d{2}-\d{2}$/.test(point[0]) && validStars(point[1]) && point[0] >= cutoff)
+    .map(point => [point[0], point[1]]));
+  if (record?.status === 'ok' && validStars(record.stars)) points.set(new Date(now).toISOString().slice(0, 10), record.stars);
+  return [...points].sort((a, b) => a[0] < b[0] ? -1 : 1);
+}
+
+/** Stars gained over about a week, from the history point closest to seven days ago (at least six). */
+export function starsGained(record, now) {
+  if (!record || !validStars(record.stars) || !Array.isArray(record.history)) return undefined;
+  const target = now - 7 * DAY;
+  let best;
+  for (const [date, stars] of record.history) {
+    const time = Date.parse(date + 'T00:00:00Z');
+    if (now - time < 6 * DAY) continue;
+    if (!best || Math.abs(time - target) < Math.abs(best.time - target)) best = { time, stars };
+  }
+  return best ? record.stars - best.stars : undefined;
+}
+
+/** The last deployed snapshot, used when the CI cache is empty so histories survive. */
+export async function publishedSnapshot(name, { fetchImpl = fetch, base = 'https://polang233.github.io/dsh-plugin-index/' } = {}) {
+  try {
+    const response = await fetchImpl(new URL(name, base), { redirect: 'error', signal: AbortSignal.timeout(20_000) });
+    return response.ok ? await response.json() : undefined;
+  } catch { return undefined; }
 }
 
 /** Add only measured counts to the official index's supported numeric sort keys. */

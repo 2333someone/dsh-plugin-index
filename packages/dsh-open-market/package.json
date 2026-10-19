@@ -1,0 +1,30 @@
+{
+  "name": "dsh-open-market",
+  "version": "0.1.0",
+  "description": "Open Plugin Market for DeepSeek Harness: adds a community plugin index that favors fast-growing, actively maintained plugins.",
+  "type": "module",
+  "main": "index.js",
+  "icon": "./icon.png",
+  "exports": {
+    ".": "./index.js",
+    "./icon": "./icon.png",
+    "./locale/*.json": "./locale/*.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": ["index.js", "cordis.patch.yml", "icon.png", "locale/*.json", "README.md"],
+  "keywords": ["deepseek-harness", "dsh", "dsh-plugin", "plugin-market", "plugin-index"],
+  "author": "polang233",
+  "license": "MIT",
+  "homepage": "https://polang233.github.io/dsh-plugin-index/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polang233/dsh-plugin-index.git",
+    "directory": "packages/dsh-open-market"
+  },
+  "bugs": "https://github.com/polang233/dsh-plugin-index/issues",
+  "engines": { "dsh": ">=0.2.1-rc.2 <0.3.0" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "publishConfig": { "access": "public" },
+  "scripts": { "test": "node --test" }
+}

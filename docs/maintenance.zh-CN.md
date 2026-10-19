@@ -10,12 +10,12 @@ pnpm test
 pnpm build
 pnpm validate
 pnpm exec playwright install chromium
-pnpm exec playwright test
+pnpm test:browser
 ```
 
 本机已有 Chrome 或 Chromium 时，可设置 `BROWSER_EXECUTABLE` 为浏览器路径，省去下载。浏览器测试会自动启动和关闭本地预览服务。
 
-- `sources.json`：收录列表、中英文介绍和分类。
+- `data/sources.json`：收录列表、中英文介绍和分类。
 - `scripts/lib.mjs`：发布源和归档检查、兼容范围、索引生成。
 - `scripts/site.mjs` 与 `site/`：中英文页面。
 - `public/index.json`：DSH 格式 1 索引。
@@ -37,19 +37,19 @@ pnpm exec playwright test
 
 发布包缺少 `repository` 时，维护者只有在确认该 npm 归档与上游发行对应后，才能添加 `repositoryReview`。条目必须固定 `version`，核查记录绑定相同版本、npm SHA-512、规范 GitHub 地址和不可变源码提交。版本或哈希变化、发布包声明的仓库冲突都会让构建失败。`status.json` 用 `repositorySource: "review"` 与 `"package"` 区分来源，并链接核查的源码清单。这类插件升级需要重新核查，不自动跟随 `latest`。
 
-首个条目的[Taskboard 来源记录](taskboard-review.md)包含 npm 与 GitHub 发行资产的相同哈希。
+首个条目的[Taskboard 来源记录](reviews/taskboard-review.md)包含 npm 与 GitHub 发行资产的相同哈希。
 
 ## 经核查的大包预算
 
 普通下载时限为每次 30 秒，完整 tar 解压流上限为 100 MiB。大型包只有固定版本并匹配 npm 完整性哈希，才能声明 `archiveReview`，最多使用每次 120 秒和 256 MiB。下载总共最多尝试三次。压缩下载仍限 64 MiB；包清单和单条 tar 扩展元数据均限 1 MiB；包括 PAX/GNU 扩展头在内最多 20,000 条目。解压字节预算包含头部、元数据、对齐及尾部内容。解析器只保留清单、文件名与受限显示文件，不落盘解包。`status.json` 各包的 `archive` 字段同时记录声明载荷 `unpackedBytes` 和完整解压流 `decodedBytes`。
 
-[Univer Office 归档核查](univer-archive-review.md)记录实测大小和预算；版本或哈希变化需要重新核查。
+[Univer Office 归档核查](reviews/univer-archive-review.md)记录实测大小和预算；版本或哈希变化需要重新核查。
 
 ## 插件图标与本地化
 
 构建读取已通过 SHA-512 校验的发布包，从清单的 `icon` 或导出的 `./icon` 查找 SVG、PNG、JPEG 或 WebP，最多 256 KiB。图片保存在 `public/icons/`，以内容哈希命名；官方 `icon` 字段使用相对路径，DSH 按索引地址解析。网页使用同一图片。没有图标时显示名称首字，缺失、过大或不支持的图标记入 `status.json` 的 `display.warnings`。
 
-作者提供的 `locale/en.json` 和同目录中文文件用于名称与介绍；`sources.json` 中的编辑文案优先。归档读取只额外保留这些受限文件，不解包、不执行插件。源图片保持原样，SVG 必须是无外部资源和主动内容的图片。
+作者提供的 `locale/en.json` 和同目录中文文件用于名称与介绍；`data/sources.json` 中的编辑文案优先。归档读取只额外保留这些受限文件，不解包、不执行插件。源图片保持原样，SVG 必须是无外部资源和主动内容的图片。
 
 本地预览端口被占用时，可为预览和浏览器测试同时设置 `DSH_INDEX_PREVIEW_PORT`。
 

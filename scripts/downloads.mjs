@@ -6,7 +6,18 @@ const date = value => {
   const timestamp = Date.parse(value + 'T00:00:00Z');
   return Number.isFinite(timestamp) && new Date(timestamp).toISOString().slice(0, 10) === value ? timestamp : NaN;
 };
-const endpoint = names => 'https://api.npmjs.org/downloads/point/last-month/' + names.map(name => name.split('/').map(encodeURIComponent).join('/')).join(',');
+const endpoint = names => 'https://api.npmjs.org/downloads/range/last-month/' + names.map(name => name.split('/').map(encodeURIComponent).join('/')).join(',');
+
+/** Collapse npm's daily range into the 30-day total plus the last 7 days, which feeds growth signals. */
+function summarize(value) {
+  if (!value || !Array.isArray(value.downloads)) return value;
+  const days = value.downloads.filter(day => validCount(day?.downloads)).sort((a, b) => a.day < b.day ? -1 : a.day > b.day ? 1 : 0);
+  if (days.length !== value.downloads.length) return { ...value, downloads: -1 };
+  const total = days.reduce((sum, day) => sum + day.downloads, 0);
+  const week = days.slice(-7).reduce((sum, day) => sum + day.downloads, 0);
+  return { package: value.package, downloads: total, week, start: value.start, end: value.end };
+}
+const keep = record => ({ package: record.package, downloads: record.downloads, ...(validCount(record.week) ? { week: record.week } : {}), start: record.start, end: record.end });
 
 function validRecord(value, name, now) {
   if (!value || value.package !== name || !validCount(value.downloads)) return false;
@@ -36,7 +47,10 @@ async function readCounts(names, fetchImpl, now) {
   }
   const body = JSON.parse(Buffer.concat(chunks));
   const records = names.length === 1 ? { [names[0]]: body } : body;
-  return Object.fromEntries(names.map(name => [name, validRecord(records?.[name], name, now) ? records[name] : undefined]));
+  return Object.fromEntries(names.map(name => {
+    const record = summarize(records?.[name]);
+    return [name, validRecord(record, name, now) ? record : undefined];
+  }));
 }
 
 /** npm counts are package downloads over the last 30 available days, not DSH installs. */
@@ -48,7 +62,7 @@ export async function collectDownloads(index, { fetchImpl = fetch, previous = {}
   const pending = names.filter(name => {
     const cached = previous.packages?.[name], fetched = Date.parse(cached?.fetchedAt);
     if (cached?.status !== 'ok' || !validRecord(cached, name, now) || !Number.isFinite(fetched) || fetched > now || now - fetched > 4 * 60 * 60 * 1000) return true;
-    packages[name] = { package: name, downloads: cached.downloads, start: cached.start, end: cached.end, fetchedAt: cached.fetchedAt, source: endpoint([name]), status: 'ok' };
+    packages[name] = { ...keep(cached), fetchedAt: cached.fetchedAt, source: endpoint([name]), status: 'ok' };
     return false;
   });
   const plain = pending.filter(name => !name.startsWith('@'));
@@ -66,14 +80,14 @@ export async function collectDownloads(index, { fetchImpl = fetch, previous = {}
         const record = records[name];
         const source = endpoint([name]);
         if (record) {
-          packages[name] = { ...record, source, status: 'ok', fetchedAt: timestamp };
+          packages[name] = { ...keep(record), source, status: 'ok', fetchedAt: timestamp };
           continue;
         }
         const cached = previous.packages?.[name];
         const fetched = Date.parse(cached?.fetchedAt);
         const usable = ['ok', 'stale'].includes(cached?.status) && validRecord(cached, name, now) && Number.isFinite(fetched) && fetched <= now && now - fetched <= MAX_CACHE_AGE;
         packages[name] = usable
-          ? { package: name, downloads: cached.downloads, start: cached.start, end: cached.end, fetchedAt: cached.fetchedAt, source, status: 'stale', attemptedAt: timestamp, error: error ?? 'Invalid npm download record' }
+          ? { ...keep(cached), fetchedAt: cached.fetchedAt, source, status: 'stale', attemptedAt: timestamp, error: error ?? 'Invalid npm download record' }
           : { package: name, source, status: 'unavailable', attemptedAt: timestamp, error: error ?? 'Invalid npm download record' };
       }
     }

@@ -1,7 +1,5 @@
 # 贡献指南
 
-[English](CONTRIBUTING.md)
-
 ## 推荐插件
 
 提交[插件收录申请](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)，提供 npm 包名或源码仓库地址，以及一句功能介绍，中文或英文均可。作者也可以通过同一表单申请更正或移除。
@@ -17,7 +15,7 @@
 
 ## 提交 PR
 
-在 `sources.json` 中添加条目，使用已有分类：
+在 `data/sources.json` 中添加条目，使用已有分类：
 
 ```json
 {
@@ -30,8 +28,8 @@
 
 默认跟踪 npm 的 `latest` 标签；填写 `version` 可以固定版本，之后需手动修改。运行兼容范围来自实际发布包，不使用提交说明中的声明。
 
-源码字段缺失或归档超出默认预算时，需要先按[维护规则](docs/maintenance.zh-CN.md#经核查的源码补充)核查准确版本。此类条目保持固定版本，升级需重新核查。
+源码字段缺失或归档超出默认预算时，需要先按[维护规则](../docs/maintenance.zh-CN.md#经核查的源码补充)核查准确版本。此类条目保持固定版本，升级需重新核查。
 
-运行 `pnpm test`、`pnpm build` 和 `pnpm validate`。修改网站时，还需运行[维护说明](docs/maintenance.zh-CN.md)中的浏览器测试。请一并提交 `public/` 中的生成文件，便于离线审阅。
+运行 `pnpm test`、`pnpm build` 和 `pnpm validate`。修改网站时，还需运行[维护说明](../docs/maintenance.zh-CN.md)中的浏览器测试。请一并提交 `public/` 中的生成文件，便于离线审阅。
 
 收录调整与无关的网站修改请分开提交。维护者合并前会核对包的归属、用途、发布记录和介绍。

@@ -5,7 +5,7 @@ import { releaseAge } from './market-display.mjs';
 const ORIGIN = 'https://polang233.github.io/dsh-plugin-index/';
 const INDEX_URL = `${ORIGIN}index.json`;
 const REPOSITORY = 'https://github.com/polang233/dsh-plugin-index';
-const DOCS = `${REPOSITORY}#readme`;
+const DOCS = `${REPOSITORY}/blob/main/README.en.md`;
 const SUBMIT = `${REPOSITORY}/issues/new?template=plugin.yml`;
 const source = new URL('../site/', import.meta.url);
 const output = new URL('../public/', import.meta.url);
@@ -59,6 +59,7 @@ const COPY = {
   }
 };
 
+const SIGNALS = ['verified', 'trending', 'active', 'new'];
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const localize = (value, language, fallback = '') => typeof value === 'string' ? value : value && typeof value === 'object' ? String(value[language] ?? (language === 'zh' ? value['zh-cn'] : undefined) ?? value.en ?? Object.values(value).find(item => typeof item === 'string') ?? fallback) : fallback;
 function safeUrl(value) {
@@ -83,8 +84,8 @@ export function renderStars(plugin, snapshot, language) {
   if (!measured) return `<span class="stars-unavailable" data-stars-unavailable>${zh ? 'GitHub star 暂不可用' : 'GitHub stars unavailable'}</span>`;
   const count = new Intl.NumberFormat(zh ? 'zh-CN' : 'en').format(repo.stars);
   const date = new Date(repo.fetchedAt).toISOString().replace('T', ' ').replace(/\.\d{3}Z$/, ' UTC');
-  const tooltip = `${repo.stars} GitHub stars · ${zh ? '获取于' : 'Fetched'} ${date}${repo.status === 'stale' ? (zh ? '（缓存，最新请求失败）' : ' (cached; latest request failed)') : ''}`;
-  return `<span class="stars-group"><a class="github-stars" data-stars="${repo.stars}" href="${esc(repository.url)}/stargazers" title="${esc(tooltip)}" aria-label="${esc(tooltip)}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/></svg>${count}<span class="stars-label">GitHub</span></a>${repo.status === 'stale' ? `<small class="stars-cache">${zh ? '缓存于' : 'Cached'} ${esc(repo.fetchedAt.slice(0, 10))}</small>` : ''}</span>`;
+  const tooltip = `${repo.stars} GitHub stars · ${zh ? '获取于' : 'Fetched'} ${date}`;
+  return `<span class="stars-group"><a class="github-stars" data-stars="${repo.stars}" href="${esc(repository.url)}/stargazers" title="${esc(tooltip)}" aria-label="${esc(tooltip)}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/></svg>${count}<span class="stars-label">GitHub</span></a></span>`;
 }
 function pluginRow(plugin, language, categories, text, snapshot, root, downloads, display, labels) {
   const name = localize(plugin.name, language);
@@ -107,8 +108,10 @@ function pluginRow(plugin, language, categories, text, snapshot, root, downloads
   const date = version?.publishTimestamp != null ? releaseAge(version.publishTimestamp, Date.parse(display.generatedAt), language) : undefined;
   const npm = downloads.packages?.[plugin.name];
   const npmMeasured = npm && ['ok', 'stale'].includes(npm.status) && Number.isSafeInteger(npm.downloads) && npm.downloads >= 0;
-  const npmTitle = npmMeasured ? `npm · ${npm.start} – ${npm.end} · ${language === 'zh' ? '获取于' : 'Fetched'} ${npm.fetchedAt}${npm.status === 'stale' ? (language === 'zh' ? '（缓存）' : ' (cached)') : ''}` : '';
-  const badges = (plugin.metadata?.labels ?? []).filter(id => id.startsWith('publisher-') && labels[id]).map(id => `<span class="publisher-badge" data-publisher="${esc(id)}">${esc(localize(labels[id].title, language))}</span>`).join('');
+  const npmTitle = npmMeasured ? `npm · ${npm.start} – ${npm.end} · ${language === 'zh' ? '获取于' : 'Fetched'} ${npm.fetchedAt}`: '';
+  const own = plugin.metadata?.labels ?? [];
+  const badges = own.filter(id => id.startsWith('publisher-') && labels[id]).map(id => `<span class="publisher-badge" data-publisher="${esc(id)}">${esc(localize(labels[id].title, language))}</span>`).join('')
+    + SIGNALS.filter(id => own.includes(id) && labels[id]).map(id => `<span class="signal-badge" data-signal="${id}">${esc(localize(labels[id].title, language))}</span>`).join('');
   const namedTitle = title && title !== name;
   const icon = typeof plugin.icon === 'string' && /^icons\/[a-f0-9]{64}\.(?:svg|png|jpg|webp)$/.test(plugin.icon) ? root + plugin.icon : undefined;
   const initialName = title && title !== name ? title : name.replace(/^@[^/]+\//, '').replace(/^dsh[-_]/, '');
@@ -120,7 +123,7 @@ function pluginRow(plugin, language, categories, text, snapshot, root, downloads
       <p class="plugin-description">${esc(description)}</p>
     <div class="plugin-detail">
       ${renderStars(plugin, snapshot, language)}
-      ${npmMeasured ? `<a class="npm-downloads" data-downloads="${npm.downloads}" href="${esc(npm.source)}" title="${esc(npmTitle)}">↓ ${esc(new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en-US').format(npm.downloads))}${npm.status === 'stale' ? (language === 'zh' ? ' · 缓存' : ' · cached') : ''}</a>` : ''}
+      ${npmMeasured ? `<a class="npm-downloads" data-downloads="${npm.downloads}" href="${esc(npm.source)}" title="${esc(npmTitle)}">↓ ${esc(new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en-US').format(npm.downloads))}</a>` : ''}
       ${date ? `<time datetime="${esc(new Date(version.publishTimestamp * 1000).toISOString())}" title="${esc(dateLabel(version.publishTimestamp * 1000, language))}">◷ ${esc(date)}</time>` : ''}
     </div>
     <div class="plugin-foot"><div class="plugin-links">${links.join('')}</div>
@@ -130,7 +133,7 @@ function pluginRow(plugin, language, categories, text, snapshot, root, downloads
 }
 function page(index, evidence, language, snapshot, downloads, display) {
   const text = COPY[language];
-  const docsUrl = language === 'zh' ? `${REPOSITORY}/blob/main/README.zh-CN.md` : DOCS;
+  const docsUrl = language === 'zh' ? `${REPOSITORY}/blob/main/README.md` : DOCS;
   const root = language === 'zh' ? '../' : './';
   const canonical = language === 'zh' ? `${ORIGIN}zh/` : ORIGIN;
   const plugins = Array.isArray(index.plugins) ? index.plugins : [];

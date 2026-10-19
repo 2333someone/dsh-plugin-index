@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "pnpm@11.28.5",
   "type": "module",
-  "description": "A community plugin index for DeepSeek Harness.",
+  "description": "Open Plugin Market: a community plugin index for DeepSeek Harness.",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -18,10 +18,10 @@
     "build": "node scripts/build.mjs",
     "build:site": "node scripts/build-site.mjs",
     "build:metadata": "node scripts/refresh-metadata.mjs",
-    "build:enhancement": "node scripts/build-enhancement.mjs",
     "validate": "node scripts/validate.mjs",
     "check:published": "node scripts/check-published.mjs",
-    "test": "node --test test/*.test.mjs",
+    "test": "node --test test/*.test.mjs packages/*/*.test.js",
+    "test:browser": "playwright test --config test/playwright.config.mjs",
     "preview": "node scripts/preview.mjs"
   },
   "dependencies": {

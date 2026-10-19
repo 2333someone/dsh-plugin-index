@@ -27976,10 +27976,10 @@
     }
   ],
   "market": {
-    "generatedAt": "2026-10-18T19:48:19.203Z",
+    "generatedAt": "2026-10-19T06:45:21.860Z",
     "downloads": "downloads.json",
     "display": "display.json",
-    "publisherEvidence": "https://github.com/polang233/dsh-plugin-index/blob/main/publishers.json"
+    "publisherEvidence": "https://github.com/polang233/dsh-plugin-index/blob/main/data/publishers.json"
   },
   "github": {
     "snapshot": "github.json",

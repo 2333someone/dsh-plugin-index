@@ -10,12 +10,12 @@ pnpm test
 pnpm build
 pnpm validate
 pnpm exec playwright install chromium
-pnpm exec playwright test
+pnpm test:browser
 ```
 
 For local browser tests, set `BROWSER_EXECUTABLE` to an existing Chrome or Chromium executable to skip the browser download. Browser tests start and stop their own localhost preview server.
 
-- `sources.json`: package list, translations and categories.
+- `data/sources.json`: package list, translations and categories.
 - `scripts/lib.mjs`: registry and archive checks, compatibility ranges, index generation.
 - `scripts/site.mjs` and `site/`: English and Chinese pages.
 - `public/index.json`: DSH format-1 index.
@@ -35,19 +35,19 @@ On a failure, inspect the Actions log, fix the source or connection, and rerun. 
 
 If a published package omits `repository`, maintainers may add `repositoryReview` only after matching that exact npm archive to an upstream release. The source entry must pin `version`; the review records the same version, npm SHA-512 integrity, canonical GitHub URL and immutable source commit. A version/hash mismatch or a conflicting published repository stops the build. `status.json` distinguishes `repositorySource: "review"` from `"package"` and links the reviewed source manifest. Updates to reviewed packages require a new review; they do not follow `latest` automatically.
 
-[Taskboard provenance](taskboard-review.md) documents the first such entry, including the matching npm/release-asset digest.
+[Taskboard provenance](reviews/taskboard-review.md) documents the first such entry, including the matching npm/release-asset digest.
 
 ## Reviewed archive budgets
 
 Ordinary downloads have a 30-second deadline and archives a 100 MiB decoded-byte limit. A large package can declare `archiveReview` only with a pinned version and matching npm integrity. It may use at most 120 seconds per attempt and 256 MiB. Downloads make at most three attempts in total. Compressed downloads remain capped at 64 MiB; package manifests and individual tar metadata records at 1 MiB; all tar headers, including PAX/GNU records, at 20,000. Decoded-byte limits include headers, metadata, padding and trailing data. The parser retains the manifest, file names and bounded display files, discards other content and never extracts to disk. `status.json` reports both declared payload bytes (`unpackedBytes`) and the complete tar stream (`decodedBytes`) under each package's `archive` record.
 
-[Univer Office archive review](univer-archive-review.md) records the measured package and its budget. A changed version or integrity requires a new review.
+[Univer Office archive review](reviews/univer-archive-review.md) records the measured package and its budget. A changed version or integrity requires a new review.
 
 ## Plugin icons and localization
 
 The build reads the SHA-512-verified package's `icon` field or exported `./icon`: SVG, PNG, JPEG or WebP, up to 256 KiB. Original artwork is stored under content-addressed paths in `public/icons/`. The official `icon` field is relative to the index URL, so DSH and the website use the same image. Missing, oversized and unsupported icons appear in `status.json` under `display.warnings`; the website falls back to an initial.
 
-Author metadata comes from `locale/en.json` and Chinese files in that directory. Editorial text in `sources.json` takes precedence. Archive inspection retains only these bounded display files in addition to the manifest and file names; it neither extracts nor executes plugins. SVG artwork must contain no external resources or active content.
+Author metadata comes from `locale/en.json` and Chinese files in that directory. Editorial text in `data/sources.json` takes precedence. Archive inspection retains only these bounded display files in addition to the manifest and file names; it neither extracts nor executes plugins. SVG artwork must contain no external resources or active content.
 
 Set `DSH_INDEX_PREVIEW_PORT` for both the preview server and browser checks when the default local port is occupied.
 

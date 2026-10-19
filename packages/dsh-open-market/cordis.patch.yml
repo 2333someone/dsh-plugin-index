@@ -1,0 +1,5 @@
+# Adds the Open Plugin Market index to Plugins → Discover once the
+# Custom plugin markets bundle is on. Removing the source later is respected.
+- insert:
+    - id: dsh-open-market
+      name: dsh-open-market

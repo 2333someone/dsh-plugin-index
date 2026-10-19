@@ -17,9 +17,9 @@ test('measured zero and unavailable counts have different visible states', () =>
   assert.match(renderStars(plugin, {}, 'zh'), /暂不可用/);
   assert.doesNotMatch(renderStars(plugin, {}, 'en'), /data-stars=/);
 });
-test('cached count carries its original date in both languages', () => {
-  assert.match(renderStars(plugin, snapshot(345, 'stale'), 'en'), /Cached 2026-10-18/);
-  assert.match(renderStars(plugin, snapshot(345, 'stale'), 'zh'), /缓存于 2026-10-18/);
+test('a fallback count shows the number without cache wording', () => {
+  assert.match(renderStars(plugin, snapshot(345, 'stale'), 'en'), /data-stars="345"/);
+  assert.doesNotMatch(renderStars(plugin, snapshot(345, 'stale'), 'zh'), /缓存/);
 });
 test('non-GitHub repositories do not display a fabricated count', () => {
   assert.equal(renderStars({ repository: { url: 'https://gitee.com/owner/plugin' } }, {}, 'zh'), '');

@@ -2,14 +2,13 @@ import {createHash} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {pathToFileURL} from 'node:url';
-import {approximateDownloads} from './metric-format.mjs';
+import {LABELS} from './market-display.mjs';
 
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 
 /** Verify the text DSH actually renders against independent source snapshots. */
 export function checkMarketDisplay(index, github, downloads, display, publishers) {
   if (display.schema !== 1 || downloads.schema !== 1 || !Number.isFinite(Date.parse(display.generatedAt))) throw new Error('Missing market snapshots');
-  const now = Date.parse(display.generatedAt);
   const counts = { stars: 0, downloads: 0, identities: 0 };
   if (index.metadata?.sortKeys?.recommended) {
     for (const [position, plugin] of index.plugins.entries()) if (plugin.metadata?.sortKeys?.recommended !== index.plugins.length - position) throw new Error('Default recommendation order mismatch: ' + plugin.name);
@@ -27,26 +26,14 @@ export function checkMarketDisplay(index, github, downloads, display, publishers
     const hasDownloads = npm && ['ok', 'stale'].includes(npm.status) && Number.isSafeInteger(npm.downloads) && npm.downloads >= 0;
     if (plugin.metadata?.sortKeys?.['github-stars'] !== (hasStars ? repo.stars : undefined)) throw new Error('Published star mismatch: ' + plugin.name);
     if (plugin.metadata?.sortKeys?.['npm-downloads-month'] !== (hasDownloads ? npm.downloads : undefined)) throw new Error('Published downloads mismatch: ' + plugin.name);
-    const days = Math.floor((now - plugin.versions[0].publishTimestamp * 1000) / 86_400_000);
+    const expectedLabels = presentation.labels ?? [];
+    const ownLabels = (plugin.metadata?.labels ?? []).filter(id => id in LABELS);
+    if (JSON.stringify(ownLabels) !== JSON.stringify(expectedLabels) || ownLabels.some(id => JSON.stringify(index.metadata?.labels?.[id]?.title) !== JSON.stringify(LABELS[id]))) throw new Error('Missing visible DSH labels: ' + plugin.name);
     for (const language of ['en', 'zh']) {
-      const summary = presentation.summary?.[language], description = plugin.description?.[language];
       const original = presentation.description?.[language];
-      const metricLabels = (plugin.metadata?.labels ?? []).filter(id => id.startsWith('metric-'));
-      const visible = metricLabels.map(id => index.metadata?.labels?.[id]?.title?.[language]);
-      const parts = typeof summary === 'string' && summary ? summary.split(' · ') : [];
-      const star = parts.find(part => part.startsWith('★ '));
-      const expectedDescription = star ? star + (original ? ' │ ' + original : '') : original;
-      const expectedLabels = parts.filter(part => !part.startsWith('★ ')).map(part => part.startsWith('↓ ')
-        ? part.replace(/[\d,]+/, approximateDownloads(npm.downloads)) : part);
-      if (typeof summary !== 'string' || description !== expectedDescription || JSON.stringify(visible) !== JSON.stringify(expectedLabels)) throw new Error('Missing visible DSH metrics: ' + plugin.name);
-      const format = value => new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en-US').format(value);
-      if (hasStars && !summary.includes('★ ' + format(repo.stars))) throw new Error('Star missing from DSH row: ' + plugin.name);
-      if (!hasStars && star) throw new Error('Unexpected star in DSH row: ' + plugin.name);
-      if (hasDownloads && !summary.includes('↓ ' + format(npm.downloads))) throw new Error('Downloads missing from DSH row: ' + plugin.name);
-      if (days >= 0) {
-        const age = language === 'zh' ? (days === 0 ? '今天更新' : days + ' 天前更新') : (days === 0 ? 'Updated today' : `Updated ${days} ${days === 1 ? 'day' : 'days'} ago`);
-        if (!summary.includes(age)) throw new Error('Release age missing from DSH row: ' + plugin.name);
-      }
+      const star = hasStars ? '★ ' + new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en-US').format(repo.stars) : undefined;
+      const expected = star ? star + (original ? ' │ ' + original : '') : original;
+      if (plugin.description?.[language] !== expected) throw new Error('Missing visible DSH metrics: ' + plugin.name);
     }
     const publisher = publishers?.entries.find(entry => entry.packages.includes(plugin.name) && entry.repository.toLowerCase() === plugin.repository?.url?.toLowerCase());
     const identities = (plugin.metadata?.labels ?? []).filter(id => id.startsWith('publisher-'));
@@ -119,9 +106,9 @@ export async function checkPublished(indexUrl, {expectedNames, expectedTitle, ve
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   const indexUrl = process.argv[2] ?? 'https://polang233.github.io/dsh-plugin-index/index.json';
-  const config = JSON.parse(await readFile(new URL('../sources.json', import.meta.url), 'utf8'));
+  const config = JSON.parse(await readFile(new URL('../data/sources.json', import.meta.url), 'utf8'));
   const brandAssets = await Promise.all(['logo.png', 'logo-256.png', 'favicon.png', 'apple-touch-icon.png', 'social.png'].map(async name => ({name, bytes: await readFile(new URL('../site/' + name, import.meta.url))})));
-  const publishers = JSON.parse(await readFile(new URL('../publishers.json', import.meta.url), 'utf8'));
+  const publishers = JSON.parse(await readFile(new URL('../data/publishers.json', import.meta.url), 'utf8'));
   const result = await checkPublished(indexUrl, {expectedNames: config.packages.map(input => input.name), expectedTitle: config.title, verifyMarket: true, publishers, brandAssets});
   console.log(JSON.stringify(result));
 }

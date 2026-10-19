@@ -2,7 +2,7 @@
 
 复核日期 / Reviewed: 2026-10-18。结论：可将 `@shengsheng/dsh-taskboard@0.1.9` 的 curated repository override 指向 [shengsheng90/DSH-taskboard](https://github.com/shengsheng90/DSH-taskboard)。证据绑定版本、完整性摘要和发行提交；不依据名称相似性。
 
-The repository override is supported for this exact package version by matching release artifact digests, package contents, and the release commit. Machine-readable findings: [provenance record](../data/taskboard-provenance.json).
+The repository override is supported for this exact package version by matching release artifact digests, package contents, and the release commit. Machine-readable findings: [provenance record](taskboard-provenance.json).
 
 - **发行包 / Artifact:** [npm 0.1.9 metadata](https://registry.npmjs.org/@shengsheng%2Fdsh-taskboard/0.1.9) 的 SHA-512 与下载的 [npm tarball](https://registry.npmjs.org/@shengsheng/dsh-taskboard/-/dsh-taskboard-0.1.9.tgz) 一致；本地计算 SHA-256 为 `03382a863dc02eacc377651ba372749dab3843660d295ec94c37932ff844b62d`，与 [GitHub release asset API](https://api.github.com/repos/shengsheng90/DSH-taskboard/releases/assets/636205093) 的 digest 完全一致。This directly ties the npm archive to the [v0.1.9 release attachment](https://github.com/shengsheng90/DSH-taskboard/releases/tag/v0.1.9).
 - **精确源码 / Exact source:** [annotated tag object](https://api.github.com/repos/shengsheng90/DSH-taskboard/git/tags/56b098a99d15e69add4168695f4b83dc2fee8640) 将 `v0.1.9` 指向 `f55b1dd9657783d55b2fc2758c1b297942678e3e`；该提交的 [package manifest](https://github.com/shengsheng90/DSH-taskboard/blob/f55b1dd9657783d55b2fc2758c1b297942678e3e/package.json) 声明正确 name/version。134 个 npm 文件中 131 个逐字节相同；另外两个仅换行不同，manifest 仅省略 packageManager、移动 scripts 键并移除末尾换行。

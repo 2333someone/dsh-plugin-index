@@ -38,3 +38,15 @@ test('random resources use a complete independent shuffle without changing defau
   assert.notDeepEqual(ranks(first),ranks(second));
   assert.equal(first.metadata.sortKeys['random-resources'].title.zh,'随机资源');
 });
+test('growing, frequently released projects outrank a quiet high-star one',()=>{
+  const quiet=plugin('quiet','big'),rising=plugin('rising','small');
+  const github={repositories:{'big/quiet':{status:'ok',stars:50000,pushedAt:new Date(now-200*86400000).toISOString()},'small/rising':{status:'ok',stars:3,pushedAt:new Date(now-86400000).toISOString()}}};
+  quiet.versions[0].publishTimestamp=(now-200*86400000)/1000;
+  const signals={rising:{growth:4,releases30:5,ageDays:20}};
+  assert.equal(recommendIndex({plugins:[quiet,rising]},{github,signals,now}).plugins[0].name,'rising');
+});
+test('verification, reach and star growth lift an otherwise equal plugin',()=>{
+  const a=plugin('plain','one'),b=plugin('trusted','two');
+  const signals={trusted:{verifiedBy:['awesome-dsh'],downloads:20000,starsWeek:30}};
+  assert.equal(recommendIndex({plugins:[a,b]},{signals,now}).plugins[0].name,'trusted');
+});

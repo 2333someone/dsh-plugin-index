@@ -1,44 +1,28 @@
-Enable DSH’s **Custom plugin markets**, then paste the address below into **Plugins → Discover → Add index source**. Use the copy button at the top right of the code block.
-
-```text
-https://polang233.github.io/dsh-plugin-index/index.json
-```
-
 # Open Plugin Market
 
-<img src="site/logo-256.png" alt="Open Plugin Market" width="96" align="right">
+A community plugin market for DeepSeek Harness (DSH). It focuses on data and recommendations and keeps the interface simple.
 
-[![Plugins](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpolang233.github.io%2Fdsh-plugin-index%2Findex.json&query=%24.plugins.length&label=plugins&color=2563eb)](https://polang233.github.io/dsh-plugin-index/index.json)
-[![Stars](https://img.shields.io/github/stars/polang233/dsh-plugin-index?style=flat&color=eab308)](https://github.com/polang233/dsh-plugin-index/stargazers)
-[![Refresh](https://img.shields.io/badge/refresh-every_6h-0f766e)](.github/workflows/publish.yml)
-[![Checks](https://github.com/polang233/dsh-plugin-index/actions/workflows/publish.yml/badge.svg)](https://github.com/polang233/dsh-plugin-index/actions/workflows/publish.yml)
+**Not a star contest.** The default order leads with plugins that are **growing fast, updated often or newly published**, also weighs verification, downloads and stars, and keeps any single developer from dominating it. New work from small developers can reach the first screen.
 
-A community plugin index for DeepSeek Harness (DSH). Search, filter and install plugins inside the app.
+[Browse plugins](https://polang233.github.io/dsh-plugin-index/) · [简体中文](README.md) · [Suggest a plugin](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
 
-[简体中文](README.md) · [Browse plugins](https://polang233.github.io/dsh-plugin-index/) · [Suggest a plugin](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
+## Use it
 
-![Browse and install plugins in DSH](docs/images/market-in-dsh.png)
+Turn on **Custom plugin markets** under **Plugins → Experimental plugins**, then either:
 
-## Browse and install
+- **Install the plugin (recommended).** Install `dsh-open-market` from GitHub with `dsh plugin --profile desktop add "git+https://github.com/polang233/dsh-plugin-index.git#main&path:/packages/dsh-open-market"`. It adds the index to your Discover sources once. If you remove the source later, the plugin respects that.
+- **Add the source by hand.** Paste `https://polang233.github.io/dsh-plugin-index/index.json` into **Discover → Add index source**.
 
-- **Smart recommendations** balance recent maintenance, categories and developer exposure, with periodic rotation. You can also sort by stars, downloads or random resources.
-- Entries show **★ GitHub stars, ↓ download buckets and ◷ release age**, with logos from the published plugin packages.
-- Open an entry for its versions and source. DSH checks compatibility and asks for confirmation before installing.
+## Labels and sorting
 
-The index refreshes every six hours. DSH caches it for about ten minutes; use Refresh for a fresh copy. [Metric sources](docs/market-display.md) · [Package checks](https://polang233.github.io/dsh-plugin-index/status.json)
-
-Each build checks package integrity, identity, versions, bundle declarations and entry files, then validates the official index format. Package checks do not establish full runtime compatibility. See the [test records](docs/plugin-review-2026-10-18.md) for individual runtime evidence.
+✓ Verified elsewhere · 🔥 Rising · ⚡ Frequent updates · ✦ New · ◷ four update-age buckets · ↓ seven download tiers. Sort by Smart recommendations, download growth (7 days), new stars (7 days), downloads, stars or random. Smart recommendations lead with growth and activity and also weigh verification by other markets, downloads and stars. The index refreshes every six hours. See [metrics](docs/market-display.md) for the formula and data sources.
 
 ## Submit a plugin
 
-[Suggest a plugin](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml), or edit [sources.json](sources.json) and open a PR. Include public source code, an installable release and a short description. See the [listing requirements](CONTRIBUTING.md).
-
-Include your own logo in the published npm package. Among plugins that meet the listing requirements, we prioritize reviewing and listing those with logos. Existing entries are welcome to update their icons too.
+[Open a request](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml), or add an entry to [`data/sources.json`](data/sources.json) and open a PR. Plugins need public source code, an installable npm release and a declared license. Plugins that ship their own logo are reviewed first.
 
 ## Development
 
-Node.js 24+ and pnpm 11.28.5. Install with `pnpm install --frozen-lockfile --ignore-scripts`, check with `pnpm test`, build with `pnpm build`, and validate with `pnpm validate`.
+Node.js 24+ and pnpm 11: `pnpm install --frozen-lockfile --ignore-scripts`, then `pnpm test`, `pnpm build` and `pnpm validate`. See [maintenance](docs/maintenance.md).
 
-[Maintenance](docs/maintenance.md) · [Contributing](CONTRIBUTING.md) · [MIT](LICENSE)
-
-Independent community project, not affiliated with DeepSeek. Plugins retain their authors’ copyrights and licenses.
+Independent community project, not affiliated with DeepSeek. Plugins retain their authors' copyrights and licenses.

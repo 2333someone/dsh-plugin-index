@@ -1,13 +1,36 @@
 import { parseMarketIndex } from '@deepseek-ai/dsh-plugin-market-index';
-import { githubRepository, applyGitHubStars } from './github.mjs';
+import { githubRepository, applyGitHubStars, starsGained } from './github.mjs';
+import { endorsementsFor } from './endorsements.mjs';
 import { recommendIndex } from './recommendations.mjs';
-import { createHash } from 'node:crypto';
-import { approximateDownloads } from './metric-format.mjs';
 
 const DAY = 86_400_000;
 const measured = value => value && ['ok', 'stale'].includes(value.status);
 const count = value => Number.isSafeInteger(value) && value >= 0;
 const sortId = 'npm-downloads-month';
+const TRENDING = 'trending';
+const STARS_WEEK = 'stars-week';
+
+/** A small fixed label set keeps the DSH filter menu short; ids stay stable across builds. */
+export const LABELS = {
+  verified: { en: '✓ Verified elsewhere', zh: '✓ 第三方验证' },
+  trending: { en: '🔥 Rising', zh: '🔥 增长快' },
+  active: { en: '⚡ Frequent updates', zh: '⚡ 更新勤' },
+  new: { en: '✦ New', zh: '✦ 新上架' },
+  'updated-recent': { en: '◷ Just updated', zh: '◷ 最近更新' },
+  'updated-week': { en: '◷ Updated this week', zh: '◷ 本周更新' },
+  'updated-month': { en: '◷ Updated this month', zh: '◷ 本月更新' },
+  'updated-quarter': { en: '◷ Updated in 3 months', zh: '◷ 三个月内更新' },
+  'downloads-100k': { en: '↓ 100k+', zh: '↓ 10万+' },
+  'downloads-50k': { en: '↓ 50k+', zh: '↓ 5万+' },
+  'downloads-10k': { en: '↓ 10k+', zh: '↓ 1万+' },
+  'downloads-5k': { en: '↓ 5k+', zh: '↓ 5000+' },
+  'downloads-1k': { en: '↓ 1k+', zh: '↓ 1000+' },
+  'downloads-500': { en: '↓ 500+', zh: '↓ 500+' },
+  'downloads-100': { en: '↓ 100+', zh: '↓ 100+' }
+};
+const TIERS = [[100_000, '100k'], [50_000, '50k'], [10_000, '10k'], [5000, '5k'], [1000, '1k'], [500, '500'], [100, '100']];
+const OWN = new Set(Object.keys(LABELS));
+const owned = id => OWN.has(id) || id.startsWith('publisher-') || id.startsWith('metric-');
 
 export function releaseAge(timestamp, now, language) {
   if (!Number.isFinite(timestamp) || timestamp < 0 || timestamp * 1000 > now) return undefined;
@@ -15,18 +38,52 @@ export function releaseAge(timestamp, now, language) {
   return language === 'zh' ? (days === 0 ? '今天更新' : `${days} 天前更新`) : (days === 0 ? 'Updated today' : `Updated ${days} ${days === 1 ? 'day' : 'days'} ago`);
 }
 
-/** Compose measured text for native DSH tags and website metrics. */
-function marketMetrics(plugin, github, downloads, now, language) {
+/**
+ * Growth compares the last 7 days with the weekly average of the 23 days before them.
+ * A floor of 30 weekly downloads keeps one-off spikes on tiny packages out of "Rising".
+ */
+export function marketSignals(plugin, { npm, releases, repo, endorsements = [], now }) {
+  const signals = {};
+  if (endorsements.length) signals.verifiedBy = endorsements;
+  if (measured(repo) && count(repo.stars)) {
+    signals.stars = repo.stars;
+    const gained = starsGained(repo, now);
+    if (Number.isSafeInteger(gained)) signals.starsWeek = gained;
+  }
+  if (measured(npm) && count(npm.downloads)) {
+    signals.downloads = npm.downloads;
+    if (count(npm.week) && npm.week <= npm.downloads) {
+      const before = (npm.downloads - npm.week) / 23 * 7;
+      signals.week = npm.week;
+      if (npm.week >= 30) signals.growth = Math.round(npm.week / Math.max(before, 7) * 100) / 100;
+    }
+  }
+  const first = Date.parse(releases?.firstPublished);
+  if (Number.isFinite(first) && first <= now) signals.ageDays = Math.floor((now - first) / DAY);
+  if (count(releases?.last30Days)) signals.releases30 = releases.last30Days;
+  if (count(releases?.last90Days)) signals.releases90 = releases.last90Days;
+  const published = plugin.versions[0]?.publishTimestamp * 1000;
+  if (Number.isFinite(published) && published <= now) signals.updatedDays = Math.floor((now - published) / DAY);
+  return signals;
+}
+
+export function labelsFor(signals) {
+  const labels = [];
+  if (signals.verifiedBy?.length) labels.push('verified');
+  // Rising: downloads clearly up on the prior weekly average, or a meaningful jump in stars.
+  if (signals.growth >= 1.5 || (signals.starsWeek >= 5 && signals.starsWeek >= 0.1 * Math.max(signals.stars - signals.starsWeek, 10))) labels.push('trending');
+  if (signals.releases30 >= 3 || signals.releases90 >= 6) labels.push('active');
+  if (signals.ageDays <= 30) labels.push('new');
+  const age = [[3, 'recent'], [7, 'week'], [30, 'month'], [90, 'quarter']].find(([days]) => signals.updatedDays <= days);
+  if (age) labels.push('updated-' + age[1]);
+  const tier = TIERS.find(([floor]) => signals.downloads >= floor);
+  if (tier) labels.push('downloads-' + tier[1]);
+  return labels;
+}
+
+function starText(plugin, github, language) {
   const repo = github.repositories?.[githubRepository(plugin.repository?.url)?.key];
-  const npm = downloads.packages?.[plugin.name];
-  const parts = {};
-  const format = value => new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en-US').format(value);
-  const cached = record => record.status === 'stale' ? (language === 'zh' ? `（缓存 ${record.fetchedAt.slice(0, 10)}）` : ` (cached ${record.fetchedAt.slice(0, 10)})`) : '';
-  if (measured(repo) && count(repo.stars)) parts.star = `★ ${format(repo.stars)}${cached(repo)}`;
-  if (measured(npm) && count(npm.downloads)) parts.download = `↓ ${format(npm.downloads)}${cached(npm)}`;
-  const age = releaseAge(plugin.versions[0]?.publishTimestamp, now, language);
-  if (age) parts.age = '◷ ' + age;
-  return parts;
+  return measured(repo) && count(repo.stars) ? '★ ' + new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en-US').format(repo.stars) : undefined;
 }
 
 function publisherFor(plugin, publishers) {
@@ -49,49 +106,54 @@ export function validatePublishers(publishers) {
   }
 }
 
-export function applyMarketDisplay(index, { github = {}, downloads = {}, publishers = { schema: 1, entries: [] }, now = Date.now() } = {}) {
+export function applyMarketDisplay(index, { github = {}, downloads = {}, releases = {}, endorsements = {}, publishers = { schema: 1, entries: [] }, now = Date.now() } = {}) {
   validatePublishers(publishers);
   const starred = applyGitHubStars(index, github);
   const metadata = { ...starred.metadata, labels: { ...starred.metadata?.labels }, sortKeys: { ...starred.metadata?.sortKeys } };
-  for (const id of Object.keys(metadata.labels)) if (id.startsWith('publisher-') || id.startsWith('metric-')) delete metadata.labels[id];
+  for (const id of Object.keys(metadata.labels)) if (owned(id)) delete metadata.labels[id];
   delete metadata.sortKeys[sortId];
+  delete metadata.sortKeys[TRENDING];
+  delete metadata.sortKeys[STARS_WEEK];
   const display = { schema: 1, generatedAt: new Date(now).toISOString(), plugins: {} };
-  let withDownloads = 0;
+  const used = new Set();
+  let withDownloads = 0, withGrowth = 0, withStarGrowth = 0;
   const plugins = starred.plugins.map(plugin => {
-    const labels = (plugin.metadata?.labels ?? []).filter(id => !id.startsWith('publisher-') && !id.startsWith('metric-'));
+    const labels = (plugin.metadata?.labels ?? []).filter(id => !owned(id));
     const publisher = publisherFor(plugin, publishers);
     if (publisher) {
       const id = 'publisher-' + publisher.id;
       metadata.labels[id] = { title: publisher.title };
       labels.push(id);
     }
-    const metrics = Object.fromEntries(['en', 'zh'].map(language => [language, marketMetrics(plugin, github, downloads, now, language)]));
-    const summary = Object.fromEntries(Object.entries(metrics).map(([language, value]) => [language, Object.values(value).join(' · ')]));
+    const npm = downloads.packages?.[plugin.name];
+    const repo = github.repositories?.[githubRepository(plugin.repository?.url)?.key];
+    const signals = marketSignals(plugin, { npm, repo, releases: releases[plugin.name], endorsements: endorsementsFor(plugin, endorsements), now });
+    const own = labelsFor(signals);
+    for (const id of own) used.add(id);
+    labels.push(...own);
     const description = typeof plugin.description === 'string' ? { en: plugin.description, zh: plugin.description } : { ...plugin.description };
     const composed = Object.fromEntries(Object.entries(description).map(([language, value]) => {
-      const star = metrics[language.startsWith('zh') ? 'zh' : 'en'].star;
+      const star = starText(plugin, github, language.startsWith('zh') ? 'zh' : 'en');
       return [language, star ? star + ' │ ' + value : value];
     }));
     // Star-only descriptions still work when the author supplied no description.
-    for (const language of ['en', 'zh']) if (!composed[language] && metrics[language].star) composed[language] = metrics[language].star;
-    for (const kind of ['download', 'age']) {
-      if (!metrics.en[kind]) continue;
-      const title = Object.fromEntries(['en', 'zh'].map(language => [language, kind === 'download'
-        ? metrics[language].download.replace(/[\d,]+/, approximateDownloads(downloads.packages[plugin.name].downloads))
-        : metrics[language].age]));
-      const id = 'metric-' + createHash('sha256').update(JSON.stringify(title)).digest('hex').slice(0, 16);
-      metadata.labels[id] = { title };
-      labels.push(id);
-    }
+    for (const language of ['en', 'zh']) if (!composed[language] && starText(plugin, github, language)) composed[language] = starText(plugin, github, language);
     const sortKeys = { ...plugin.metadata?.sortKeys };
     delete sortKeys[sortId];
-    const npm = downloads.packages?.[plugin.name];
-    if (measured(npm) && count(npm.downloads)) { sortKeys[sortId] = npm.downloads; withDownloads++; }
-    display.plugins[plugin.name] = { description, summary, ...(publisher ? { publisher: publisher.id } : {}) };
+    delete sortKeys[TRENDING];
+    delete sortKeys[STARS_WEEK];
+    if (Number.isSafeInteger(signals.starsWeek)) { sortKeys[STARS_WEEK] = signals.starsWeek; withStarGrowth++; }
+    if (count(signals.downloads)) { sortKeys[sortId] = signals.downloads; withDownloads++; }
+    if (Number.isFinite(signals.growth)) { sortKeys[TRENDING] = Math.round(signals.growth * 100); withGrowth++; }
+    display.plugins[plugin.name] = { description, labels: own, signals, ...(publisher ? { publisher: publisher.id } : {}) };
     return { ...plugin, ...(Object.keys(composed).length ? { description: composed } : {}), metadata: { ...plugin.metadata, labels, sortKeys } };
   });
+  for (const id of Object.keys(LABELS)) if (used.has(id)) metadata.labels[id] = { title: LABELS[id] };
+  if (withGrowth) metadata.sortKeys[TRENDING] = { title: { en: 'Download growth (7 days)', zh: '近 7 天下载增长' }, order: 'desc' };
+  if (withStarGrowth) metadata.sortKeys[STARS_WEEK] = { title: { en: 'New stars (7 days)', zh: '近 7 天新增 star' }, order: 'desc' };
   if (withDownloads) metadata.sortKeys[sortId] = { title: { en: 'npm downloads (30 days)', zh: 'npm 近 30 天下载量' }, order: 'desc' };
-  const result = recommendIndex({ ...starred, metadata, plugins }, {github, now});
+  const signals = Object.fromEntries(Object.entries(display.plugins).map(([name, value]) => [name, value.signals]));
+  const result = recommendIndex({ ...starred, metadata, plugins }, { github, signals, now });
   parseMarketIndex(result, 'https://polang233.github.io/dsh-plugin-index/index.json');
   return { index: result, display };
 }

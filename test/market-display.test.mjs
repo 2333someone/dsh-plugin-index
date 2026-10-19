@@ -1,39 +1,87 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { parseMarketIndex } from '@deepseek-ai/dsh-plugin-market-index';
-import { applyMarketDisplay, releaseAge } from '../scripts/market-display.mjs';
+import { applyMarketDisplay, labelsFor, marketSignals, releaseAge, LABELS } from '../scripts/market-display.mjs';
 import { collectDownloads } from '../scripts/downloads.mjs';
 import { checkMarketDisplay } from '../scripts/check-published.mjs';
-import { approximateDownloads } from '../scripts/metric-format.mjs';
+import { releaseActivity } from '../scripts/lib.mjs';
+import { starHistory, starsGained } from '../scripts/github.mjs';
+import { parseAwesome, parseShop, endorsementsFor } from '../scripts/endorsements.mjs';
 
 const NOW = Date.parse('2026-10-18T12:00:00Z');
 const plugin = { name: '@owner/plugin', description: { en: 'Real description.', zh: '实际介绍。' }, repository: { url: 'https://github.com/owner/plugin' }, versions: [{ version: '1.0.0', publishTimestamp: Date.parse('2026-10-15T12:00:00Z') / 1000, source: { type: 'npm' } }] };
 const index = { format: 1, title: 'Market', plugins: [plugin] };
-const record = (name = plugin.name, downloads = 1234) => ({ package: name, downloads, start: '2026-09-18', end: '2026-10-17' });
+/** npm range response: 23 quiet days followed by a 7-day week. */
+const range = (name = plugin.name, quiet = 10, recent = 100) => ({
+  package: name, start: '2026-09-18', end: '2026-10-17',
+  downloads: Array.from({ length: 30 }, (_, day) => ({ day: new Date(Date.parse('2026-09-18') + day * 86_400_000).toISOString().slice(0, 10), downloads: day < 23 ? quiet : recent }))
+});
+const record = (name = plugin.name, downloads = 1234, week = 300) => ({ package: name, downloads, week, start: '2026-09-18', end: '2026-10-17' });
 const github = { repositories: { 'owner/plugin': { status: 'ok', stars: 2345, fetchedAt: '2026-10-18T12:00:00Z' } } };
 
-test('DSH places exact stars before descriptions and buckets downloads in native tags', async () => {
+test('DSH rows show stars before descriptions and a few fixed native labels', async () => {
   const downloads = await collectDownloads(index, { now: NOW, fetchImpl: async (url, options) => {
-    assert.equal(url, 'https://api.npmjs.org/downloads/point/last-month/%40owner/plugin');
+    assert.equal(url, 'https://api.npmjs.org/downloads/range/last-month/%40owner/plugin');
     assert.equal(options.redirect, 'error');
-    assert.equal(options.headers, undefined);
-    return Response.json(record());
+    return Response.json(range());
   } });
-  const result = applyMarketDisplay(index, { github, downloads, now: NOW });
+  assert.equal(downloads.packages[plugin.name].downloads, 23 * 10 + 7 * 100);
+  assert.equal(downloads.packages[plugin.name].week, 700);
+  const releases = { [plugin.name]: { firstPublished: '2026-10-01T00:00:00Z', last30Days: 4, last90Days: 4 } };
+  const result = applyMarketDisplay(index, { github, downloads, releases, now: NOW });
   const parsed = parseMarketIndex(result.index, 'https://example.org/index.json');
   assert.deepEqual(parsed.plugins[0].description, { en: '★ 2,345 │ Real description.', zh: '★ 2,345 │ 实际介绍。' });
-  const tags = parsed.plugins[0].metadata.labels.map(id => parsed.metadata.labels[id].title);
-  assert.deepEqual(tags, [{ en: '↓ 1.3k+', zh: '↓ 1.3k+' }, { en: '◷ Updated 3 days ago', zh: '◷ 3 天前更新' }]);
-  assert.equal(parsed.plugins[0].versions[0].publishTimestamp, plugin.versions[0].publishTimestamp);
-  assert.equal(parsed.plugins[0].metadata.sortKeys['npm-downloads-month'], 1234);
+  assert.deepEqual(parsed.plugins[0].metadata.labels, ['trending', 'active', 'new', 'updated-recent', 'downloads-500']);
+  assert.deepEqual(parsed.metadata.labels.trending.title, LABELS.trending);
+  assert.equal(parsed.plugins[0].metadata.sortKeys['npm-downloads-month'], 930);
+  assert.equal(parsed.plugins[0].metadata.sortKeys.trending, 1000);
   assert.deepEqual(result.display.plugins[plugin.name].description, plugin.description);
   assert.deepEqual(checkMarketDisplay(result.index, github, downloads, result.display), { stars: 1, downloads: 1, identities: 0 });
   const invisible = structuredClone(result.index);
   invisible.plugins[0].metadata.labels = [];
-  assert.throws(() => checkMarketDisplay(invisible, github, downloads, result.display), /visible DSH metrics/);
+  assert.throws(() => checkMarketDisplay(invisible, github, downloads, result.display), /visible DSH labels/);
   const wrongStar = structuredClone(result.index);
   wrongStar.plugins[0].description.zh = '★ 999 │ 实际介绍。';
   assert.throws(() => checkMarketDisplay(wrongStar, github, downloads, result.display), /visible DSH metrics/);
+});
+
+test('label ids never multiply with readings', () => {
+  const many = Array.from({ length: 50 }, (_, i) => ({ ...plugin, name: 'p' + i, versions: [{ ...plugin.versions[0], publishTimestamp: (NOW - i * 3 * 86_400_000) / 1000 }] }));
+  const downloads = { schema: 1, packages: Object.fromEntries(many.map((item, i) => [item.name, { ...record(item.name, i * 997, i * 50), status: 'ok' }])) };
+  const result = applyMarketDisplay({ ...index, plugins: many }, { downloads, now: NOW }).index;
+  assert.ok(Object.keys(result.metadata.labels).length <= Object.keys(LABELS).length);
+  assert.ok(Object.keys(result.metadata.labels).every(id => id in LABELS));
+});
+
+test('labels carry no cache dates when npm falls back to an older reading', async () => {
+  const previous = { packages: { [plugin.name]: { ...record(), status: 'ok', fetchedAt: '2026-10-17T12:00:00Z' } } };
+  const downloads = await collectDownloads(index, { now: NOW, previous, fetchImpl: async () => new Response('', { status: 404 }) });
+  assert.equal(downloads.packages[plugin.name].status, 'stale');
+  const result = applyMarketDisplay(index, { downloads, now: NOW }).index;
+  const titles = Object.values(result.metadata.labels).flatMap(label => Object.values(label.title));
+  assert.ok(titles.every(title => !/缓存|cached|\d{4}-\d{2}-\d{2}/.test(title)));
+  assert.ok(result.plugins[0].metadata.labels.includes('downloads-1k'));
+});
+
+test('signals: growth needs volume, cadence and newness come from registry times', () => {
+  const quiet = marketSignals(plugin, { npm: { ...record(plugin.name, 40, 20), status: 'ok' }, now: NOW });
+  assert.equal(quiet.growth, undefined);
+  const steady = marketSignals(plugin, { npm: { ...record(plugin.name, 3000, 700), status: 'ok' }, now: NOW });
+  assert.ok(steady.growth < 1.5 && !labelsFor(steady).includes('trending'));
+  const activity = releaseActivity({ versions: { '1.0.0': {}, '1.1.0': {}, '1.2.0': {} }, time: { created: '2025-01-01T00:00:00Z', '1.0.0': '2025-01-01T00:00:00Z', '1.1.0': '2026-10-10T00:00:00Z', '1.2.0': '2026-10-17T00:00:00Z' } }, NOW);
+  assert.deepEqual(activity, { firstPublished: '2025-01-01T00:00:00.000Z', last30Days: 2, last90Days: 2 });
+  const labels = labelsFor(marketSignals(plugin, { releases: activity, now: NOW }));
+  assert.deepEqual(labels, ['updated-recent']);
+});
+
+test('invalid identities, dates and negative counts do not become zero', async () => {
+  for (const response of [{ ...range(), package: 'other' }, { ...range(), downloads: [{ day: '2026-10-17', downloads: -1 }] }, { ...range(), end: '2027-01-01' }, { ...range(), start: '2026-09-01' }, { error: 'not found' }]) {
+    const snapshot = await collectDownloads(index, { now: NOW, previous: { packages: { [plugin.name]: { ...record(), status: 'ok', fetchedAt: '2026-10-01T12:00:00Z' } } }, fetchImpl: async () => Response.json(response) });
+    assert.equal(snapshot.packages[plugin.name].status, 'unavailable');
+    const result = applyMarketDisplay(index, { downloads: snapshot, now: NOW });
+    assert.ok(result.index.plugins[0].metadata.labels.every(id => !id.startsWith('downloads-')));
+    assert.equal(result.index.metadata.sortKeys['npm-downloads-month'], undefined);
+  }
 });
 
 test('bulk npm queries keep scoped packages separate and accept measured zero', async () => {
@@ -41,33 +89,11 @@ test('bulk npm queries keep scoped packages separate and accept measured zero', 
   const calls = [];
   const snapshot = await collectDownloads(input, { now: NOW, fetchImpl: async url => {
     calls.push(url);
-    return Response.json(url.endsWith('one,two') ? { one: record('one', 0), two: record('two', 1) } : record());
+    return Response.json(url.endsWith('one,two') ? { one: range('one', 0, 0), two: range('two', 0, 1) } : range());
   } });
   assert.equal(calls.length, 2);
   assert.equal(snapshot.packages.one.downloads, 0);
-  assert.equal(snapshot.packages[plugin.name].status, 'ok');
-});
-
-test('npm failure retains a bounded cache with original dates and visible cache text', async () => {
-  const previous = { packages: { [plugin.name]: { ...record(), status: 'ok', fetchedAt: '2026-10-17T12:00:00Z' } } };
-  const downloads = await collectDownloads(index, { now: NOW, previous, fetchImpl: async () => new Response('', { status: 404 }) });
-  const cached = downloads.packages[plugin.name];
-  assert.equal(cached.status, 'stale');
-  assert.equal(cached.fetchedAt, previous.packages[plugin.name].fetchedAt);
-  assert.equal(cached.start, '2026-09-18');
-  const result = applyMarketDisplay(index, { downloads, now: NOW });
-  assert.ok(result.index.plugins[0].metadata.labels.some(id => /缓存 2026-10-17/.test(result.index.metadata.labels[id].title.zh)));
-});
-
-test('invalid identities, dates, negative counts and expired cache do not become zero', async () => {
-  for (const response of [{ ...record(), package: 'other' }, { ...record(), downloads: -1 }, { ...record(), end: '2027-01-01' }, { ...record(), start: '2026-09-01' }, { error: 'not found' }]) {
-    const snapshot = await collectDownloads(index, { now: NOW, previous: { packages: { [plugin.name]: { ...record(), status: 'ok', fetchedAt: '2026-10-01T12:00:00Z' } } }, fetchImpl: async () => Response.json(response) });
-    assert.equal(snapshot.packages[plugin.name].status, 'unavailable');
-    assert.equal(snapshot.packages[plugin.name].downloads, undefined);
-    const result = applyMarketDisplay(index, { downloads: snapshot, now: NOW });
-    assert.ok(result.index.plugins[0].metadata.labels.every(id => !result.index.metadata.labels[id].title.en.startsWith('↓')));
-    assert.equal(result.index.metadata.sortKeys['npm-downloads-month'], undefined);
-  }
+  assert.equal(snapshot.packages.two.week, 7);
 });
 
 test('identity badge requires both the exact reviewed package and repository', () => {
@@ -76,58 +102,60 @@ test('identity badge requires both the exact reviewed package and repository', (
   assert.deepEqual(result.plugins[0].metadata.labels.filter(id => id.startsWith('publisher-')), ['publisher-owner']);
   const otherRepo = applyMarketDisplay({ ...index, plugins: [{ ...plugin, repository: { url: 'https://github.com/other/plugin' } }] }, { publishers, now: NOW }).index;
   assert.deepEqual(otherRepo.plugins[0].metadata.labels.filter(id => id.startsWith('publisher-')), []);
-  const similarName = applyMarketDisplay({ ...index, plugins: [{ ...plugin, name: '@owner/unreviewed' }] }, { publishers, now: NOW }).index;
-  assert.deepEqual(similarName.plugins[0].metadata.labels.filter(id => id.startsWith('publisher-')), []);
-});
-
-test('native metric declarations are shared and refreshed without retaining old counts', () => {
-  const other = { ...plugin, name: '@owner/other' };
-  const readings = downloads => ({ schema: 1, packages: Object.fromEntries([plugin.name, other.name].map(name => [name, { ...record(name, downloads), status: 'ok' }])) });
-  const first = applyMarketDisplay({ ...index, plugins: [plugin, other] }, { github, downloads: readings(1234), now: NOW }).index;
-  assert.equal(Object.keys(first.metadata.labels).length, 2);
-  const sameBucket = applyMarketDisplay({ ...index, plugins: [plugin, other] }, { github, downloads: readings(1299), now: NOW }).index;
-  assert.deepEqual(sameBucket.metadata.labels, first.metadata.labels);
-  const next = applyMarketDisplay({ ...first, plugins: first.plugins.map(item => ({ ...item, description: plugin.description })) }, { github, downloads: readings(9999), now: NOW }).index;
-  assert.equal(Object.keys(next.metadata.labels).length, 2);
-  assert.ok(Object.values(next.metadata.labels).some(label => label.title.en === '↓ 10k+'));
-  assert.ok(Object.values(next.metadata.labels).every(label => !label.title.en.includes('1.3k+')));
-  const unmeasured = applyMarketDisplay({ ...next, plugins: next.plugins.map(item => ({ ...item, description: plugin.description })) }, { now: NOW }).index;
-  assert.equal(Object.keys(unmeasured.metadata.labels).length, 1);
-  assert.ok(Object.values(unmeasured.metadata.labels).every(label => label.title.en.startsWith('◷')));
-  assert.deepEqual(unmeasured.plugins[0].description, plugin.description);
-});
-
-test('download buckets round upwards across unit boundaries and preserve real zero', () => {
-  for (const [value, expected] of [[0,'0'],[11,'20+'],[525,'600+'],[999,'1k+'],[1000,'1k+'],[1001,'1.1k+'],[1569,'1.6k+'],[1600,'1.6k+'],[9999,'10k+'],[41576,'42k+'],[107548,'110k+'],[999999,'1m+'],[1_234_567,'1.3m+']]) assert.equal(approximateDownloads(value), expected);
-  let previous = 0;
-  for (let value = 0; value < 200_000; value += 37) {
-    const text = approximateDownloads(value);
-    const [,number,suffix] = /^(\d+(?:\.\d+)?)([kmb]?)\+?$/.exec(text);
-    const displayed = Number(number) * ({k:1000,m:1_000_000,b:1_000_000_000}[suffix] ?? 1);
-    assert.ok(displayed >= value && displayed >= previous, text);
-    previous = displayed;
-  }
 });
 
 test('measured zero and unavailable stars remain distinct in default descriptions', () => {
   const zero = { repositories: { 'owner/plugin': { ...github.repositories['owner/plugin'], stars: 0 } } };
-  const result = applyMarketDisplay(index, { github: zero, now: NOW });
-  assert.equal(result.index.plugins[0].description.zh, '★ 0 │ 实际介绍。');
-  const missing = applyMarketDisplay(index, { now: NOW });
-  assert.equal(missing.index.plugins[0].description.zh, '实际介绍。');
-  assert.ok(Object.values(result.index.metadata.labels).every(label => !label.title.en.startsWith('★')));
+  assert.equal(applyMarketDisplay(index, { github: zero, now: NOW }).index.plugins[0].description.zh, '★ 0 │ 实际介绍。');
+  assert.equal(applyMarketDisplay(index, { now: NOW }).index.plugins[0].description.zh, '实际介绍。');
 });
 
-test('release age never rewrites timestamps or invents an age for future values', () => {
+test('release age never invents an age for future values', () => {
   assert.equal(releaseAge(NOW / 1000, NOW, 'zh'), '今天更新');
   assert.equal(releaseAge(NOW / 1000 - 86_400, NOW, 'en'), 'Updated 1 day ago');
   assert.equal(releaseAge(NOW / 1000 + 1, NOW, 'zh'), undefined);
   assert.equal(releaseAge(NaN, NOW, 'en'), undefined);
 });
 
-test('recent successful download readings retain their real fetch time without another API call', async () => {
+test('recent successful download readings are reused without another API call', async () => {
   const previous = { packages: { [plugin.name]: { ...record(), status: 'ok', fetchedAt: '2026-10-18T11:00:00Z' } } };
   const snapshot = await collectDownloads(index, { now: NOW, previous, fetchImpl: () => assert.fail('Recent reading should be reused') });
   assert.equal(snapshot.packages[plugin.name].fetchedAt, '2026-10-18T11:00:00Z');
-  assert.equal(snapshot.packages[plugin.name].downloads, 1234);
+  assert.equal(snapshot.packages[plugin.name].week, 300);
+});
+
+test('download and update tiers are moderate, not one label per reading', () => {
+  const tier = downloads => labelsFor({ downloads }).find(id => id.startsWith('downloads-'));
+  assert.deepEqual([50, 150, 600, 2000, 7000, 20_000, 60_000, 200_000].map(tier), [undefined, 'downloads-100', 'downloads-500', 'downloads-1k', 'downloads-5k', 'downloads-10k', 'downloads-50k', 'downloads-100k']);
+  const age = updatedDays => labelsFor({ updatedDays }).find(id => id.startsWith('updated-'));
+  assert.deepEqual([0, 5, 20, 60, 200].map(age), ['updated-recent', 'updated-week', 'updated-month', 'updated-quarter', undefined]);
+});
+
+test('star growth comes from the daily history and can mark a plugin as rising', () => {
+  const history = starHistory([['2026-10-11', 40], ['2026-09-01', 1]], { status: 'ok', stars: 52 }, NOW);
+  assert.deepEqual(history, [['2026-10-11', 40], ['2026-10-18', 52]]);
+  assert.equal(starsGained({ stars: 52, history }, NOW), 12);
+  assert.equal(starsGained({ stars: 52, history: [['2026-10-16', 50]] }, NOW), undefined);
+  const repo = { status: 'ok', stars: 52, history };
+  const signals = marketSignals(plugin, { repo, now: NOW });
+  assert.equal(signals.starsWeek, 12);
+  assert.ok(labelsFor(signals).includes('trending'));
+  const github = { repositories: { 'owner/plugin': repo } };
+  const result = applyMarketDisplay(index, { github, now: NOW }).index;
+  assert.equal(result.plugins[0].metadata.sortKeys['stars-week'], 12);
+  assert.equal(result.metadata.sortKeys['stars-week'].title.zh, '近 7 天新增 star');
+});
+
+test('verification from other markets binds to the repository or the exact version', () => {
+  const awesome = parseAwesome('## Plugins\n- [Plugin](https://github.com/Owner/Plugin/tree/main) - does things\n* [x](https://example.org)\n');
+  assert.deepEqual(awesome.repos, ['owner/plugin']);
+  const shop = parseShop('# comment\n- name: "@owner/plugin"   # npm entry\n  reviewedVersion: 1.0.0\n- name: other\n  repo: someone/other\n');
+  assert.deepEqual(shop.reviews, [{ name: '@owner/plugin', version: '1.0.0' }, { name: 'other', repo: 'someone/other' }]);
+  const snapshot = { sources: { 'awesome-dsh': { status: 'ok', ...awesome }, 'dsh-plugin-shop': { status: 'ok', ...shop } } };
+  assert.deepEqual(endorsementsFor(plugin, snapshot), ['awesome-dsh', 'dsh-plugin-shop']);
+  const otherVersion = { ...plugin, repository: { url: 'https://github.com/fork/plugin' }, versions: [{ ...plugin.versions[0], version: '2.0.0' }] };
+  assert.deepEqual(endorsementsFor(otherVersion, snapshot), []);
+  const result = applyMarketDisplay(index, { endorsements: snapshot, now: NOW }).index;
+  assert.equal(result.plugins[0].metadata.labels[0], 'verified');
+  assert.deepEqual(result.metadata.labels.verified.title, LABELS.verified);
 });

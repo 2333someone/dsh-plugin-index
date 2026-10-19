@@ -1,44 +1,77 @@
-启用 DeepSeek Harness 的「自定义插件市场」后，在 发现 左上角添加索引源 中粘贴下方地址即可使用😋
+# Open Plugin Market · 开放插件市场
+
+<img src="site/logo-256.png" alt="Open Plugin Market" width="96" align="right">
+
+[![Plugins](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpolang233.github.io%2Fdsh-plugin-index%2Findex.json&query=%24.plugins.length&label=plugins&color=2563eb)](https://polang233.github.io/dsh-plugin-index/zh/)
+[![Checks](https://github.com/polang233/dsh-plugin-index/actions/workflows/publish.yml/badge.svg)](https://github.com/polang233/dsh-plugin-index/actions/workflows/publish.yml)
+
+DeepSeek Harness（DSH）的社区插件市场。数据为主、推荐为主，界面保持简洁。
+
+**不按 star 论英雄。** 默认推荐以**最近增长快、更新勤、刚上架**为主，同时参考其他市场的验证、下载量和 star，同一作者不会霸榜。小开发者的新作品也能出现在首屏，被更多人看到。
+
+[浏览目录](https://polang233.github.io/dsh-plugin-index/zh/) · [English](README.en.md) · [提交插件](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
+
+![在 DSH 中浏览和安装插件](docs/images/market-in-dsh.png)
+
+## 使用
+
+先在 DSH **插件 → 实验性插件** 中打开 **自定义插件市场**，然后任选一种方式：
+
+**方式一：安装插件（推荐）**。运行下面的命令，从 GitHub 安装 `dsh-open-market`。插件会自动把索引加入「发现」的索引源，只添加一次，之后你删掉了也不会再加回来。
+
+```bash
+dsh plugin --profile desktop add "git+https://github.com/polang233/dsh-plugin-index.git#main&path:/packages/dsh-open-market"
+```
+
+**方式二：手动添加**。在 **发现 → 添加索引源** 中粘贴：
 
 ```text
 https://polang233.github.io/dsh-plugin-index/index.json
 ```
 
-# Open Plugin Market
+## 推荐与标签
 
-<img src="site/logo-256.png" alt="Open Plugin Market" width="96" align="right">
+| 标签 | 含义 |
+| --- | --- |
+| ✓ 第三方验证 | 被其他插件市场的人工或源码级审核收录 |
+| 🔥 增长快 | 近 7 天下载量或 star 明显增长 |
+| ⚡ 更新勤 | 近 30 天发版 ≥ 3 次 |
+| ✦ 新上架 | 首次发布不满 30 天 |
+| ◷ 最近 / 本周 / 本月 / 三个月内更新 | 收录版本的发布时间 |
+| ↓ 100+ … 10万+ | npm 近 30 天下载量，共 7 档 |
 
-[![Plugins](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpolang233.github.io%2Fdsh-plugin-index%2Findex.json&query=%24.plugins.length&label=plugins&color=2563eb)](https://polang233.github.io/dsh-plugin-index/index.json)
-[![Stars](https://img.shields.io/github/stars/polang233/dsh-plugin-index?style=flat&color=eab308)](https://github.com/polang233/dsh-plugin-index/stargazers)
-[![Refresh](https://img.shields.io/badge/refresh-every_6h-0f766e)](.github/workflows/publish.yml)
-[![Checks](https://github.com/polang233/dsh-plugin-index/actions/workflows/publish.yml/badge.svg)](https://github.com/polang233/dsh-plugin-index/actions/workflows/publish.yml)
-
-DeepSeek Harness（DSH）的社区插件索引，在应用内搜索、筛选并安装插件。
-
-[English](README.en.md) · [浏览目录](https://polang233.github.io/dsh-plugin-index/zh/) · [提交插件](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
-
-![在 DSH 中浏览和安装插件](docs/images/market-in-dsh.png)
-
-## 浏览与安装
-
-- **智能推荐**兼顾近期维护、分类和开发者曝光，定期轮换；也可按 star、下载量或随机资源排序。
-- 列表显示 **★ GitHub star、↓ 下载量档位、◷ 更新天数**，读取插件作者随包发布的 Logo。
-- 点开条目查看版本与来源，点击安装后由 DSH 确认兼容性并执行安装。
-
-索引每六小时更新，DSH 缓存约十分钟，可手动刷新。[指标说明](docs/market-display.md) · [包检查记录](https://polang233.github.io/dsh-plugin-index/status.json)
-
-每次构建核对发布包完整性、包名、版本、组合包声明和入口，再通过官方索引格式校验。包检查不等同于完整运行测试，具体实测见[测试记录](docs/plugin-review-2026-10-18.md)。
+排序可选 **智能推荐**、近 7 天下载增长、近 7 天新增 star、下载量、star 和随机。智能推荐以增长和活跃为主，也参考第三方验证、下载量和 star。索引每 6 小时更新一次。算法细节和数据来源见 [指标说明](docs/market-display.md)。
 
 ## 提交插件
 
-[提交收录申请](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)，或修改 [sources.json](sources.json) 提交 PR。提供公开源码、可安装的发布版本和简短介绍，详见[收录要求](CONTRIBUTING.zh-CN.md)。
+[填写收录申请](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)，或在 [`data/sources.json`](data/sources.json) 中添加条目后提交 PR。插件需要公开源码、可安装的 npm 版本和明确的许可证，详见 [贡献指南](.github/CONTRIBUTING.md)。在 npm 包中附带自己的 Logo 会优先审核。
 
-欢迎为插件添加独立 Logo 并随 npm 包发布。满足收录要求时，我们会优先审核和收录带 Logo 的插件；已收录插件也欢迎更新图标。
+每次构建都会核对发布包的完整性、包名、版本和组合包声明，再用官方校验器检查索引格式。包检查不代表代码审计或安装测试。[检查记录](https://polang233.github.io/dsh-plugin-index/status.json)
+
+## 目录结构
+
+```text
+data/       收录列表 sources.json 与发布者身份 publishers.json
+scripts/    索引、指标、推荐和网站的生成脚本
+packages/   dsh-open-market 插件
+site/       网站样式与品牌素材
+public/     构建产物，发布到 GitHub Pages
+docs/       维护说明、指标说明、核查记录
+test/       单元测试与浏览器测试
+```
 
 ## 开发
 
-Node.js 24+、pnpm 11.28.5。运行 `pnpm install --frozen-lockfile --ignore-scripts` 安装依赖，`pnpm test` 检查，`pnpm build` 构建，`pnpm validate` 校验。
+需要 Node.js 24+ 和 pnpm 11。
 
-[维护说明](docs/maintenance.zh-CN.md) · [贡献指南](CONTRIBUTING.zh-CN.md) · [MIT](LICENSE)
+```bash
+pnpm install --frozen-lockfile --ignore-scripts
+```
 
-独立社区项目，与 DeepSeek 官方无隶属关系。插件版权及许可证归各自作者所有。
+```bash
+pnpm test && pnpm build && pnpm validate
+```
+
+[维护说明](docs/maintenance.zh-CN.md) · [MIT](LICENSE)
+
+独立社区项目，与 DeepSeek 官方无隶属关系。各插件的版权和许可证归原作者所有。

@@ -180,6 +180,19 @@ export function resolveRepository(manifest, input, version, integrity) {
   };
 }
 
+/** Release cadence from the registry's publish times; feeds the "new" and "active" signals. */
+export function releaseActivity(metadata, now) {
+  const times = Object.entries(metadata.time ?? {})
+    .filter(([version]) => metadata.versions?.[version])
+    .map(([, value]) => Date.parse(value))
+    .filter(time => Number.isFinite(time) && time <= now);
+  if (!times.length) return undefined;
+  const within = days => times.filter(time => now - time <= days * 86_400_000).length;
+  return { firstPublished: new Date(Math.min(...times)).toISOString(), last30Days: within(30), last90Days: within(90) };
+}
+
+export const releasesOf = evidence => Object.fromEntries((evidence?.packages ?? []).filter(record => record.releases).map(record => [record.name, record.releases]));
+
 export async function collectPackage(input, { fetchImpl = fetch, now = Date.now() } = {}) {
   if (!PACKAGE.test(input.name) || input.name.length > 214) throw new Error('Invalid npm package name');
   const metadataUrl = `${REGISTRY}${encodeURIComponent(input.name)}`;
@@ -232,6 +245,7 @@ export async function collectPackage(input, { fetchImpl = fetch, now = Date.now(
       patch, filesChecked: files.size, display: display.evidence,
       archive: {compressedBytes: bytes.length, unpackedBytes, decodedBytes, entries: entryCount, maxUnpackedBytes: budget.maxUnpackedBytes, downloadTimeoutMs: budget.timeoutMs, reviewedBudget: input.archiveReview !== undefined},
       lifecycleScripts,
+      releases: releaseActivity(metadata, now),
       checks: ['registry-identity', 'sha512-integrity', 'archive-manifest-identity', 'bundle-patch-present', ...(manifest.main ? ['main-file-present'] : [])],
       limitations: ['No runtime installation test', 'No code audit', 'Patch references and transitive dependencies are not validated']
     }
