@@ -19,8 +19,15 @@ for (const language of ['en', 'zh']) {
     await expect(page.locator('[data-plugin]:visible')).toHaveCount(PAGE);
     await expect(page.locator('[data-more]')).toBeVisible();
     await page.locator('[data-more]').click();
-    // The click also turns on infinite scroll, so a short viewport may reveal a further batch at once.
-    await expect.poll(() => page.locator('[data-plugin]:visible').count()).toBeGreaterThanOrEqual(PAGE * 2);
+    // Each click reveals exactly one more batch; scrolling never loads more on its own.
+    await expect(page.locator('[data-plugin]:visible')).toHaveCount(PAGE * 2);
+    await page.mouse.wheel(0, 20000);
+    await page.waitForTimeout(300);
+    await expect(page.locator('[data-plugin]:visible')).toHaveCount(PAGE * 2);
+    await page.locator('[data-sort="stars"]').click();
+    const stars = await page.locator('[data-plugin]:visible').evaluateAll(items => items.slice(0, 5).map(item => Number(item.dataset.sortStars ?? -1)));
+    expect(stars).toEqual([...stars].sort((a, b) => b - a));
+    await page.locator('[data-sort="default"]').click();
     const firstPackage = await rows.first().locator('.package-name').textContent();
     await page.locator('#plugin-search').fill(firstPackage.trim());
     await expect(page.locator('[data-plugin]:visible')).toHaveCount(1);
@@ -64,8 +71,10 @@ for (const language of ['en', 'zh']) {
     await rows.first().locator('.plugin-facts summary').click();
     expect(await downloadLinks.first().textContent()).not.toContain('/30');
     expect(await page.locator('.plugin-detail time').allTextContents()).toEqual(expect.arrayContaining([expect.stringMatching(language === 'en' ? /Updated/ : /更新/)]));
-    const icons = page.locator('.plugin-avatar img');
+    const icons = page.locator('.plugin-avatar img:not(.avatar-placeholder)');
     await expect(icons).toHaveCount(index.plugins.filter(plugin => plugin.icon).length);
+    // Every plugin without its own logo shows the whale-girl placeholder instead of an initial.
+    await expect(page.locator('.plugin-avatar img.avatar-placeholder')).toHaveCount(index.plugins.filter(plugin => !plugin.icon).length);
     if (await icons.count()) {
       await icons.first().scrollIntoViewIfNeeded();
       await expect.poll(() => icons.first().evaluate(image => image.complete && image.naturalWidth > 0)).toBe(true);

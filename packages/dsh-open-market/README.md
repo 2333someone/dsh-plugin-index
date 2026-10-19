@@ -38,4 +38,4 @@ To use a mirror, override the row in your profile's `cordis.patch.yml`:
     indexUrl: https://example.com/index.json
 ```
 
-MIT
+GPL-3.0
