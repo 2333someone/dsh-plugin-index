@@ -88,4 +88,4 @@ The validator is pinned to `@deepseek-ai/dsh-plugin-market-index@0.2.1-rc.2`. Wh
 
 ## dshopen.org (Cloudflare)
 
-The Worker in `cloudflare/` serves `public/` as static assets and counts reads of `index.json` in the `dshopen-stats` D1 database; see `https://dshopen.org/stats.json`. GitHub Pages stays up for the earlier address. CI deploys after each build when the `CLOUDFLARE_API_TOKEN` secret is set; otherwise run `pnpm build` and `npx wrangler deploy --config cloudflare/wrangler.jsonc`. Post-deploy checks send the `dshopen-check` user agent and are not counted.
+The Worker in `cloudflare/` serves `public/` as static assets and counts reads of `index.json` in the `dshopen-stats` D1 database; see `https://dshopen.org/stats.json`. GitHub Pages stays up for the earlier address. CI uploads and promotes a new version after each build when the `CLOUDFLARE_API_TOKEN` secret is set, leaving the domain binding alone; otherwise run `pnpm build` and `npx wrangler deploy --config cloudflare/wrangler.jsonc`. Post-deploy checks send the `dshopen-check` user agent and are not counted.

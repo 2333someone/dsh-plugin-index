@@ -106,7 +106,12 @@ jobs:
           path: public/
       - name: Deploy to dshopen.org
         if: env.CLOUDFLARE_API_TOKEN != ''
-        run: npx -y wrangler@4.151.1 deploy --config cloudflare/wrangler.jsonc
+        # Upload and promote a version instead of `wrangler deploy`, so CI never touches the dshopen.org
+        # domain binding and the token needs no zone permissions.
+        run: |
+          tag="run-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          npx -y wrangler@4.151.1 versions upload --config cloudflare/wrangler.jsonc --tag "$tag"
+          npx -y wrangler@4.151.1 versions deploy --config cloudflare/wrangler.jsonc --version-tag "$tag@100" --yes
       - name: Check dshopen.org without redirects
         if: env.CLOUDFLARE_API_TOKEN != ''
         run: for attempt in 1 2 3; do node scripts/check-published.mjs https://dshopen.org/index.json && exit 0; sleep 60; done; exit 1

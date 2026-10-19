@@ -90,7 +90,7 @@ DSH 默认缓存十分钟。未来绑定自有域名时，要同时更新网站�
 
 `cloudflare/` 下的 Worker 直接提供 `public/` 里的静态文件，并统计 `index.json` 的读取次数（D1 数据库 `dshopen-stats`），统计结果从 `https://dshopen.org/stats.json` 查看。GitHub Pages 继续保留，旧地址的用户不受影响。
 
-CI 在仓库设置了 `CLOUDFLARE_API_TOKEN` 时，会在每次构建后自动部署。手动部署：
+CI 在仓库设置了 `CLOUDFLARE_API_TOKEN` 时，会在每次构建后用 `wrangler versions upload` 和 `versions deploy` 自动发布新版本，不改动域名绑定，所以 Token 只需要 Workers 脚本和 D1 的权限。域名绑定只在手动 `wrangler deploy` 时更新。手动部署：
 
 ```sh
 pnpm build
