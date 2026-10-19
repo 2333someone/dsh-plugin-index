@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {recommendIndex} from '../scripts/recommendations.mjs';
+import {recommendIndex, orderByDefault} from '../scripts/recommendations.mjs';
 
 const now = Date.parse('2026-10-18T12:00:00Z');
 const plugin = (name, developer, category = 'tools') => ({name, repository:{url:`https://github.com/${developer}/${name}`}, metadata:{category}, versions:[{version:'1.0.0',publishTimestamp:(now-86400000)/1000,source:{type:'npm'}}]});
@@ -49,4 +49,16 @@ test('verification, reach and star growth lift an otherwise equal plugin',()=>{
   const a=plugin('plain','one'),b=plugin('trusted','two');
   const signals={trusted:{verifiedBy:['awesome-dsh'],downloads:20000,starsWeek:30}};
   assert.equal(recommendIndex({plugins:[a,b]},{signals,now}).plugins[0].name,'trusted');
+});
+test('default order favors downloads, stars and a logo, and keeps every entry',()=>{
+  const bare=plugin('bare','one'),popular=plugin('popular','two'),logo={...plugin('logo','three'),icon:'icons/a.svg'};
+  const github={repositories:{'two/popular':{status:'ok',stars:3000,pushedAt:new Date(now).toISOString()}}};
+  const signals={popular:{downloads:50000},logo:{downloads:200}};
+  const result=orderByDefault({plugins:[bare,logo,popular]},{github,signals,now});
+  assert.deepEqual(result.plugins.map(p=>p.name),['popular','logo','bare']);
+});
+test('smart picks title sorts ahead of the other declared keys',()=>{
+  const titles=recommendIndex({plugins:[plugin('a','a')]},{now}).metadata.sortKeys;
+  assert.equal(titles.recommended.title.zh,'✨ 智能推荐');
+  for (const lang of ['zh','en']) assert.equal(['GitHub 星标数','随机资源','近 7 天新增 star',titles.recommended.title[lang]].sort(new Intl.Collator(lang).compare)[0],titles.recommended.title[lang]);
 });

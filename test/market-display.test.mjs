@@ -31,10 +31,10 @@ test('DSH rows show stars before descriptions and a few fixed native labels', as
   const result = applyMarketDisplay(index, { github, downloads, releases, now: NOW });
   const parsed = parseMarketIndex(result.index, 'https://example.org/index.json');
   assert.deepEqual(parsed.plugins[0].description, { en: '★ 2,345 │ Real description.', zh: '★ 2,345 │ 实际介绍。' });
-  assert.deepEqual(parsed.plugins[0].metadata.labels, ['trending', 'active', 'new', 'updated-recent', 'downloads-500']);
+  assert.deepEqual(parsed.plugins[0].metadata.labels, ['trending', 'active', 'updated-recent', 'downloads-500']);
   assert.deepEqual(parsed.metadata.labels.trending.title, LABELS.trending);
-  assert.equal(parsed.plugins[0].metadata.sortKeys['npm-downloads-month'], 930);
-  assert.equal(parsed.plugins[0].metadata.sortKeys.trending, 1000);
+  assert.equal(result.display.plugins[plugin.name].signals.downloads, 930);
+  assert.deepEqual(Object.keys(parsed.metadata.sortKeys).sort(), ['github-stars', 'random-resources', 'recommended']);
   assert.deepEqual(result.display.plugins[plugin.name].description, plugin.description);
   assert.deepEqual(checkMarketDisplay(result.index, github, downloads, result.display), { stars: 1, downloads: 1, identities: 0 });
   const invisible = structuredClone(result.index);
@@ -158,4 +158,14 @@ test('verification from other markets binds to the repository or the exact versi
   const result = applyMarketDisplay(index, { endorsements: snapshot, now: NOW }).index;
   assert.equal(result.plugins[0].metadata.labels[0], 'verified');
   assert.deepEqual(result.metadata.labels.verified.title, LABELS.verified);
+});
+
+test('only verifying sources earn the label; a large list only lifts the order', () => {
+  const snapshot = { sources: { 'awesome-dsh-plugin': { status: 'ok', repos: ['owner/plugin'] } } };
+  assert.deepEqual(endorsementsFor(plugin, snapshot, { strict: true }), []);
+  assert.deepEqual(endorsementsFor(plugin, snapshot, { strict: false }), ['awesome-dsh-plugin']);
+  const result = applyMarketDisplay(index, { endorsements: snapshot, now: NOW });
+  assert.ok(!result.index.plugins[0].metadata.labels.includes('verified'));
+  assert.deepEqual(result.display.plugins[plugin.name].signals.listedBy, ['awesome-dsh-plugin']);
+  assert.equal(LABELS.verified.zh, '✅ 经过验证');
 });

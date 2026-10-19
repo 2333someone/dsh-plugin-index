@@ -1,9 +1,8 @@
 /** A small fixed label set keeps the DSH filter menu short; ids stay stable across builds. */
 export const LABELS = {
-  verified: { en: '✓ Verified elsewhere', zh: '✓ 第三方验证' },
+  verified: { en: '✅ Verified', zh: '✅ 经过验证' },
   trending: { en: '🔥 Rising', zh: '🔥 增长快' },
   active: { en: '⚡ Frequent updates', zh: '⚡ 更新勤' },
-  new: { en: '✦ New', zh: '✦ 新上架' },
   'updated-recent': { en: '◷ Just updated', zh: '◷ 最近更新' },
   'updated-week': { en: '◷ Updated this week', zh: '◷ 本周更新' },
   'updated-month': { en: '◷ Updated this month', zh: '◷ 本月更新' },

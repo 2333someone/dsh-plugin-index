@@ -19,7 +19,7 @@ const plugins = current.plugins.map(plugin => {
   const source = byName.get(plugin.name);
   const checked = evidence.packages.find(record => record.name === plugin.name);
   if (!source || (source.version && source.version !== plugin.versions[0].version) || checked?.version !== plugin.versions[0].version || !checked.checks?.includes('sha512-integrity')) throw new Error('Unvalidated package version; run pnpm build: ' + plugin.name);
-  return { ...plugin, description: source.description ?? oldDisplay?.plugins?.[plugin.name]?.description ?? plugin.description };
+  return { ...plugin, ...(source.title ? { title: source.title } : {}), description: source.description ?? oldDisplay?.plugins?.[plugin.name]?.description ?? plugin.description };
 });
 const base = { ...current, title: config.title, description: config.description, plugins };
 parseMarketIndex(base, 'https://polang233.github.io/dsh-plugin-index/index.json');

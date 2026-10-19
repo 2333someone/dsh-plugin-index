@@ -15,7 +15,7 @@ Turn on **Custom plugin markets** under **Plugins → Experimental plugins**, th
 
 ## Labels and sorting
 
-✓ Verified elsewhere · 🔥 Rising · ⚡ Frequent updates · ✦ New · ◷ four update-age buckets · ↓ seven download tiers. Sort by Smart recommendations, download growth (7 days), new stars (7 days), downloads, stars or random. Smart recommendations lead with growth and activity and also weigh verification by other markets, downloads and stars. The index refreshes every six hours. See [metrics](docs/market-display.md) for the formula and data sources.
+✅ Verified · 🔥 Rising · ⚡ Frequent updates · ◷ four update-age buckets · ↓ seven download tiers. The *Default* order favors downloads, stars, plugins with a logo and verified plugins. *✨ Smart picks* lead with recent growth and activity. You can also sort by new stars (7 days), GitHub stars or random. The index refreshes every six hours. See [metrics](docs/market-display.md) for the formula and data sources.
 
 ## Submit a plugin
 

@@ -59,7 +59,7 @@ const COPY = {
   }
 };
 
-const SIGNALS = ['verified', 'trending', 'active', 'new'];
+const SIGNALS = ['verified', 'trending', 'active'];
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const localize = (value, language, fallback = '') => typeof value === 'string' ? value : value && typeof value === 'object' ? String(value[language] ?? (language === 'zh' ? value['zh-cn'] : undefined) ?? value.en ?? Object.values(value).find(item => typeof item === 'string') ?? fallback) : fallback;
 function safeUrl(value) {

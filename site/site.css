@@ -151,7 +151,6 @@ h2 { margin: 0; font-size: clamp(28px, 3.2vw, 38px); letter-spacing: -.03em; lin
 .signal-badge[data-signal="verified"] { background: var(--sky); }
 .signal-badge[data-signal="trending"] { background: var(--peach); }
 .signal-badge[data-signal="active"] { background: var(--lilac); }
-.signal-badge[data-signal="new"] { background: var(--mint); }
 .plugin-description { flex: 1; margin: 12px 0 14px; color: var(--slate); font-size: 15px; font-weight: 600; line-height: 1.6; overflow-wrap: anywhere; }
 .plugin-detail { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0 0 12px; }
 .github-stars, .npm-downloads, .plugin-detail time { display: inline-flex; align-items: center; gap: 5px; min-height: 0; padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; line-height: 20px; font-variant-numeric: tabular-nums; text-decoration: none; }

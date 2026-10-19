@@ -27976,15 +27976,15 @@
     }
   ],
   "market": {
-    "generatedAt": "2026-10-19T06:45:21.860Z",
+    "generatedAt": "2026-10-19T08:38:21.307Z",
     "downloads": "downloads.json",
     "display": "display.json",
     "publisherEvidence": "https://github.com/polang233/dsh-plugin-index/blob/main/data/publishers.json"
   },
   "github": {
     "snapshot": "github.json",
-    "fetched": 544,
-    "cached": 0,
+    "fetched": 543,
+    "cached": 1,
     "unavailable": 7
   }
 }

@@ -4,7 +4,7 @@ import { endorsementsFor } from './endorsements.mjs';
 import { LABELS, TIERS } from './labels.mjs';
 
 export { LABELS };
-import { recommendIndex } from './recommendations.mjs';
+import { recommendIndex, orderByDefault } from './recommendations.mjs';
 
 const DAY = 86_400_000;
 const measured = value => value && ['ok', 'stale'].includes(value.status);
@@ -26,9 +26,11 @@ export function releaseAge(timestamp, now, language) {
  * Growth compares the last 7 days with the weekly average of the 23 days before them.
  * A floor of 30 weekly downloads keeps one-off spikes on tiny packages out of "Rising".
  */
-export function marketSignals(plugin, { npm, releases, repo, endorsements = [], now }) {
+export function marketSignals(plugin, { npm, releases, repo, endorsements = [], listings = [], now }) {
   const signals = {};
   if (endorsements.length) signals.verifiedBy = endorsements;
+  if (listings.length) signals.listedBy = listings;
+  if (plugin.icon) signals.logo = true;
   if (measured(repo) && count(repo.stars)) {
     signals.stars = repo.stars;
     const gained = starsGained(repo, now);
@@ -58,7 +60,6 @@ export function labelsFor(signals) {
   if (signals.growth >= 1.5 || (signals.starsWeek >= 5 && signals.starsWeek >= 0.1 * Math.max(signals.stars - signals.starsWeek, 10))) labels.push('trending');
   // Thresholds sit near the top fifth of the current catalog; young DSH plugins release often.
   if (signals.releases30 >= 15) labels.push('active');
-  if (signals.ageDays <= 14) labels.push('new');
   const age = [[3, 'recent'], [7, 'week'], [30, 'month'], [90, 'quarter']].find(([days]) => signals.updatedDays <= days);
   if (age) labels.push('updated-' + age[1]);
   const tier = TIERS.find(([floor]) => signals.downloads >= floor);
@@ -101,7 +102,7 @@ export function applyMarketDisplay(index, { github = {}, downloads = {}, release
   delete metadata.sortKeys[STARS_WEEK];
   const display = { schema: 1, generatedAt: new Date(now).toISOString(), plugins: {} };
   const used = new Set();
-  let withDownloads = 0, withGrowth = 0, withStarGrowth = 0;
+  let withStarGrowth = 0;
   const plugins = starred.plugins.map(plugin => {
     const labels = (plugin.metadata?.labels ?? []).filter(id => !owned(id));
     const publisher = publisherFor(plugin, publishers);
@@ -112,7 +113,7 @@ export function applyMarketDisplay(index, { github = {}, downloads = {}, release
     }
     const npm = downloads.packages?.[plugin.name];
     const repo = github.repositories?.[githubRepository(plugin.repository?.url)?.key];
-    const signals = marketSignals(plugin, { npm, repo, releases: releases[plugin.name], endorsements: endorsementsFor(plugin, endorsements), now });
+    const signals = marketSignals(plugin, { npm, repo, releases: releases[plugin.name], endorsements: endorsementsFor(plugin, endorsements, { strict: true }), listings: endorsementsFor(plugin, endorsements, { strict: false }), now });
     const own = labelsFor(signals);
     for (const id of own) used.add(id);
     labels.push(...own);
@@ -128,17 +129,13 @@ export function applyMarketDisplay(index, { github = {}, downloads = {}, release
     delete sortKeys[TRENDING];
     delete sortKeys[STARS_WEEK];
     if (Number.isSafeInteger(signals.starsWeek)) { sortKeys[STARS_WEEK] = signals.starsWeek; withStarGrowth++; }
-    if (count(signals.downloads)) { sortKeys[sortId] = signals.downloads; withDownloads++; }
-    if (Number.isFinite(signals.growth)) { sortKeys[TRENDING] = Math.round(signals.growth * 100); withGrowth++; }
     display.plugins[plugin.name] = { description, labels: own, signals, ...(publisher ? { publisher: publisher.id } : {}) };
     return { ...plugin, ...(Object.keys(composed).length ? { description: composed } : {}), metadata: { ...plugin.metadata, labels, sortKeys } };
   });
   for (const id of Object.keys(LABELS)) if (used.has(id)) metadata.labels[id] = { title: LABELS[id] };
-  if (withGrowth) metadata.sortKeys[TRENDING] = { title: { en: 'Download growth (7 days)', zh: '近 7 天下载增长' }, order: 'desc' };
   if (withStarGrowth) metadata.sortKeys[STARS_WEEK] = { title: { en: 'New stars (7 days)', zh: '近 7 天新增 star' }, order: 'desc' };
-  if (withDownloads) metadata.sortKeys[sortId] = { title: { en: 'npm downloads (30 days)', zh: 'npm 近 30 天下载量' }, order: 'desc' };
   const signals = Object.fromEntries(Object.entries(display.plugins).map(([name, value]) => [name, value.signals]));
-  const result = recommendIndex({ ...starred, metadata, plugins }, { github, signals, now });
+  const result = orderByDefault(recommendIndex({ ...starred, metadata, plugins }, { github, signals, now }), { github, signals, now });
   parseMarketIndex(result, 'https://polang233.github.io/dsh-plugin-index/index.json');
   return { index: result, display };
 }

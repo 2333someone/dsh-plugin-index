@@ -11,7 +11,8 @@ export function checkMarketDisplay(index, github, downloads, display, publishers
   if (display.schema !== 1 || downloads.schema !== 1 || !Number.isFinite(Date.parse(display.generatedAt))) throw new Error('Missing market snapshots');
   const counts = { stars: 0, downloads: 0, identities: 0 };
   if (index.metadata?.sortKeys?.recommended) {
-    for (const [position, plugin] of index.plugins.entries()) if (plugin.metadata?.sortKeys?.recommended !== index.plugins.length - position) throw new Error('Default recommendation order mismatch: ' + plugin.name);
+    const ranks = index.plugins.map(plugin => plugin.metadata?.sortKeys?.recommended).sort((a, b) => a - b);
+    if (ranks.some((rank, position) => rank !== position + 1)) throw new Error('Recommendations must contain one rank per plugin');
   }
   if (index.metadata?.sortKeys?.['random-resources']) {
     const ranks = index.plugins.map(plugin => plugin.metadata?.sortKeys?.['random-resources']).sort((a,b)=>a-b);
@@ -25,7 +26,6 @@ export function checkMarketDisplay(index, github, downloads, display, publishers
     const hasStars = repo && ['ok', 'stale'].includes(repo.status) && Number.isSafeInteger(repo.stars) && repo.stars >= 0;
     const hasDownloads = npm && ['ok', 'stale'].includes(npm.status) && Number.isSafeInteger(npm.downloads) && npm.downloads >= 0;
     if (plugin.metadata?.sortKeys?.['github-stars'] !== (hasStars ? repo.stars : undefined)) throw new Error('Published star mismatch: ' + plugin.name);
-    if (plugin.metadata?.sortKeys?.['npm-downloads-month'] !== (hasDownloads ? npm.downloads : undefined)) throw new Error('Published downloads mismatch: ' + plugin.name);
     const expectedLabels = presentation.labels ?? [];
     const ownLabels = (plugin.metadata?.labels ?? []).filter(id => id in LABELS);
     if (JSON.stringify(ownLabels) !== JSON.stringify(expectedLabels) || ownLabels.some(id => JSON.stringify(index.metadata?.labels?.[id]?.title) !== JSON.stringify(LABELS[id]))) throw new Error('Missing visible DSH labels: ' + plugin.name);

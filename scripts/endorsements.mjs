@@ -9,15 +9,25 @@ const MAX_CACHE_AGE = 14 * 86_400_000;
 export const SOURCES = {
   'awesome-dsh': {
     title: 'awesome-deepseek-harness-plugins',
+    strict: true,
     url: 'https://raw.githubusercontent.com/walkinglabs/awesome-deepseek-harness-plugins/main/README.md',
     home: 'https://github.com/walkinglabs/awesome-deepseek-harness-plugins',
     parse: parseAwesome
   },
   'dsh-plugin-shop': {
     title: 'dsh-plugin-shop',
+    strict: true,
     url: 'https://raw.githubusercontent.com/LivXue/dsh-plugin-shop/main/registry/verified.yml',
     home: 'https://github.com/LivXue/dsh-plugin-shop',
     parse: parseShop
+  },
+  // A large reviewed list: listing helps the order, but on its own it does not earn the "Verified" label.
+  'awesome-dsh-plugin': {
+    title: 'awesome-dsh-plugin',
+    strict: false,
+    url: 'https://raw.githubusercontent.com/awesome-dsh-plugin/awesome-dsh-plugin/main/README.md',
+    home: 'https://github.com/awesome-dsh-plugin/awesome-dsh-plugin',
+    parse: parseAwesome
   }
 };
 
@@ -74,11 +84,12 @@ export async function collectEndorsements({ fetchImpl = fetch, previous = {}, no
   return { schema: 1, generatedAt: timestamp, sources };
 }
 
-/** Source ids that vouch for this plugin's repository or exact version. */
-export function endorsementsFor(plugin, snapshot) {
+/** Source ids that vouch for this plugin's repository or exact version; `strict` keeps only verifying sources. */
+export function endorsementsFor(plugin, snapshot, { strict } = {}) {
   const repo = githubRepository(plugin.repository?.url)?.key;
   const version = plugin.versions?.[0]?.version;
-  return Object.entries(snapshot?.sources ?? {}).filter(([, source]) => ['ok', 'stale'].includes(source.status) && (
+  return Object.entries(snapshot?.sources ?? {}).filter(([id, source]) => ['ok', 'stale'].includes(source.status)
+    && (strict === undefined || (SOURCES[id]?.strict ?? false) === strict) && (
     (repo && source.repos?.includes(repo))
     || source.reviews?.some(review => review.name === plugin.name && (review.repo ? review.repo === repo : review.version === version))
   )).map(([id]) => id);
