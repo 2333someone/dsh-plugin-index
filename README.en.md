@@ -6,6 +6,8 @@ A community plugin market for DeepSeek Harness (DSH). It focuses on data and rec
 
 [Browse plugins](https://dshopen.org/) · [简体中文](README.md) · [Suggest a plugin](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
 
+[![Open Plugin Market home page](docs/images/home-en.png)](https://dshopen.org/)
+
 ## Use it
 
 Turn on **Custom plugin markets** under **Plugins → Experimental plugins**, then either:

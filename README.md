@@ -13,6 +13,8 @@ DeepSeek Harness（DSH）的社区插件市场。数据为主、推荐为主，�
 
 [浏览目录](https://dshopen.org/zh/) · [English](README.en.md) · [提交插件](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
 
+[![开放插件市场首页](docs/images/home-zh.png)](https://dshopen.org/zh/)
+
 ![在 DSH 中浏览和安装插件](docs/images/market-in-dsh.png)
 
 ## 使用
