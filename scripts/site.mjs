@@ -17,8 +17,7 @@ const COPY = {
     description: 'A community plugin index for DeepSeek Harness. Copy one URL into DSH, browse the directory, and choose the plugins you need.',
     skip: 'Skip to content', plugins: 'Plugins', docs: 'Docs', language: 'Language',
     headline: 'Everything can be a plugin.<br><em>Find them here.</em>',
-    intro: 'DeepSeek Harness has no official plugin list. Since October 15 its plugin market accepts third-party indexes, so we gathered community plugins into one.',
-    scrollHint: 'Browse plugins',
+    intro: 'DeepSeek Harness has no official list of community plugins. Since October 15 its plugin market can add community indexes, which makes community plugins easy to browse and use, so we built this one.',
     address: 'Index URL', copy: 'Copy URL', copyTitle: 'Click to copy',
     copied: 'Copied', copySuccess: 'URL copied. Open DSH and add it as an index source.', copyFailure: 'The address is selected. Press Ctrl+C or ⌘C, or use the selection menu to copy it.',
     setup: 'How to connect', steps: [
@@ -42,8 +41,7 @@ const COPY = {
     description: '为 DeepSeek Harness 提供的社区插件索引。复制一个地址，添加到 DSH，在内置市场中查找和选择插件。',
     skip: '跳到正文', plugins: '插件目录', docs: '文档', language: '语言',
     headline: '万物皆可插件，<br><em>插件来这里找。</em>',
-    intro: 'DeepSeek Harness 官方没有插件列表。10 月 15 日起，官方插件市场支持添加第三方索引，我们就把社区插件整理成了一个。',
-    scrollHint: '往下看插件目录',
+    intro: 'DeepSeek Harness 官方没有提供社区插件列表。10 月 15 日起，插件市场可以添加社区索引，查看和使用社区插件都很方便，所以我们做了这份索引。',
     address: '索引地址', copy: '复制地址', copyTitle: '点击复制',
     copied: '已复制', copySuccess: '地址已复制。打开 DSH，把它添加为索引源。', copyFailure: '地址已选中。按 Ctrl+C 或 ⌘C，或使用选中文字的菜单复制。',
     setup: '接入方法', steps: [
@@ -208,12 +206,11 @@ function page(index, evidence, language, snapshot, downloads, display) {
         <button class="copy-button" type="button" data-copy hidden><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 8h12v13H8zM16 8V3H3v13h5"/></svg><span>${esc(text.copy)}</span></button>
       </div>
       <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
-      <h2 class="visually-hidden" id="setup-title">${esc(text.setup)}</h2>
-      <ol class="steps" aria-labelledby="setup-title">${text.steps.map(([title, detail]) => `<li><div><h3>${esc(title)}</h3><p>${esc(detail)}</p></div></li>`).join('')}</ol>
       </div>
       <div class="hero-art" aria-hidden="true"><div class="art-blob"></div><img src="${root}assets/logo.png" alt="" width="560" height="560" decoding="async">${stickers}</div>
+      <h2 class="visually-hidden" id="setup-title">${esc(text.setup)}</h2>
+      <ol class="steps" aria-labelledby="setup-title">${text.steps.map(([title, detail]) => `<li><div><h3>${esc(title)}</h3><p>${esc(detail)}</p></div></li>`).join('')}</ol>
     </section>
-    <a class="scroll-hint" href="#plugins" data-scroll-hint>${esc(text.scrollHint)}<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
     <section class="directory-surface" id="plugins" aria-labelledby="directory-title"><div class="directory shell">
       <div class="directory-heading"><h2 id="directory-title">${esc(text.directory)}</h2><p class="result-count" id="result-count" role="status" aria-live="polite">${esc(text.initialCount(plugins.length))}</p></div>
       <ul class="stats"><li><strong>${plugins.length}</strong> ${esc(text.statPlugins)}</li><li><strong>${usedCategories.length}</strong> ${esc(text.statCategories)}</li>${updated ? `<li>${esc(text.updated)} <strong>${esc(updated)}</strong></li>` : ''}</ul>
