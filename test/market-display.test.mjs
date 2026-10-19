@@ -124,6 +124,19 @@ test('recent successful download readings are reused without another API call', 
   assert.equal(snapshot.packages[plugin.name].week, 300);
 });
 
+test('a recent monthly total is refreshed before using it as weekly growth evidence', async () => {
+  const monthlyOnly = { ...record(), status: 'ok', fetchedAt: '2026-10-18T11:00:00Z' };
+  delete monthlyOnly.week;
+  const previous = { packages: { [plugin.name]: monthlyOnly } };
+  const snapshot = await collectDownloads(index, { now: NOW, previous, fetchImpl: async () => Response.json(range()) });
+  const measured = snapshot.packages[plugin.name];
+  assert.equal(measured.downloads, 930);
+  assert.equal(measured.week, 700);
+  assert.equal(measured.fetchedAt, new Date(NOW).toISOString());
+  const signals = marketSignals(plugin, { npm: measured, now: NOW });
+  assert.ok(signals.growth > 1.5);
+});
+
 test('download and update tiers are moderate, not one label per reading', () => {
   const tier = downloads => labelsFor({ downloads }).find(id => id.startsWith('downloads-'));
   assert.deepEqual([50, 150, 600, 2000, 7000, 20_000, 60_000, 200_000].map(tier), [undefined, 'downloads-100', 'downloads-500', 'downloads-1k', 'downloads-5k', 'downloads-10k', 'downloads-50k', 'downloads-100k']);

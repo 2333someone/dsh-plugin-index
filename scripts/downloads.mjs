@@ -54,20 +54,21 @@ async function readCounts(names, fetchImpl, now) {
 }
 
 /** npm counts are package downloads over the last 30 available days, not DSH installs. */
-export async function collectDownloads(index, { fetchImpl = fetch, previous = {}, now = Date.now(), concurrency = 4 } = {}) {
+export async function collectDownloads(index, { fetchImpl = fetch, previous = {}, now = Date.now(), concurrency = 2 } = {}) {
   if (!Number.isInteger(concurrency) || concurrency < 1 || concurrency > 8) throw new Error('Download concurrency must be between 1 and 8');
   const names = [...new Set(index.plugins.filter(plugin => plugin.versions.some(version => version.source.type === 'npm')).map(plugin => plugin.name))].sort();
   const packages = {};
   // npm aggregates daily. Reuse a successful recent reading without inventing a new fetch date.
   const pending = names.filter(name => {
     const cached = previous.packages?.[name], fetched = Date.parse(cached?.fetchedAt);
-    if (cached?.status !== 'ok' || !validRecord(cached, name, now) || !Number.isFinite(fetched) || fetched > now || now - fetched > 4 * 60 * 60 * 1000) return true;
+    if (cached?.status !== 'ok' || !validRecord(cached, name, now) || !validCount(cached.week) || cached.week > cached.downloads
+      || !Number.isFinite(fetched) || fetched > now || now - fetched > 4 * 60 * 60 * 1000) return true;
     packages[name] = { ...keep(cached), fetchedAt: cached.fetchedAt, source: endpoint([name]), status: 'ok' };
     return false;
   });
   const plain = pending.filter(name => !name.startsWith('@'));
   const batches = pending.filter(name => name.startsWith('@')).map(name => [name]);
-  for (let offset = 0; offset < plain.length; offset += 64) batches.push(plain.slice(offset, offset + 64));
+  for (let offset = 0; offset < plain.length; offset += 20) batches.push(plain.slice(offset, offset + 20));
   const timestamp = new Date(now).toISOString();
   let next = 0;
   await Promise.all(Array.from({ length: Math.min(concurrency, batches.length) }, async () => {

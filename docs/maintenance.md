@@ -25,7 +25,7 @@ Use `pnpm build:site` for website-only changes and `pnpm preview` to open the re
 
 ## Updates
 
-The generator follows npm `latest`, unless an entry pins `version`. It reads up to four sources concurrently and retries temporary network errors. Downloads are limited to the public npm registry; third-party package code is never executed. All sources and the official format validator must pass before the build can publish.
+The generator follows npm `latest`, unless an entry pins `version`. It reads up to four sources concurrently and retries temporary network errors. Package downloads are limited to the public npm registry; reviewed repository artwork uses the separate icon boundary described below. Third-party package code is never executed. All sources and the official format validator must pass before the build can publish.
 
 The build lists one version per package. DSH reads compatibility from `engines.dsh`, or from the intersection of DSH peer dependencies when that field is absent. Missing constraints mean the author supplied no range; they do not prove compatibility.
 
@@ -46,6 +46,10 @@ Ordinary downloads have a 30-second deadline and archives a 100 MiB decoded-byte
 ## Plugin icons and localization
 
 The build reads the SHA-512-verified package's `icon` field or exported `./icon`: SVG, PNG, JPEG or WebP, up to 256 KiB. Original artwork is stored under content-addressed paths in `public/icons/`. The official `icon` field is relative to the index URL, so DSH and the website use the same image. Missing, oversized and unsupported icons appear in `status.json` under `display.warnings`; the website falls back to an initial.
+
+Maintainers may explicitly select artwork from the published manifest's GitHub repository with `iconReview: {version, integrity, commit, path, sha256, normalization?}`. The entry must pin `version`; the review must match that exact npm version and SHA-512 integrity. `commit` is a full 40-character lowercase SHA, `path` names artwork relative to the repository root, and `sha256` identifies its original bytes. The build constructs an immutable `raw.githubusercontent.com` URL from that published repository and commit. It accepts no custom URL, redirects, path traversal, active SVG content or external image resources, and applies the same 256 KiB limit and image checks as package artwork. A mismatched review fails the build. An explicit review takes precedence over an available package icon; `display.publishedIcon` preserves the package icon evidence, while `display.icon` records `source: "reviewed-repository"`, the immutable source URL, original hash and review. This exception does not change the npm download allowlist.
+
+Only `normalization: "remove-xml-comments"` permits removing XML comments from reviewed SVG bytes. Without it, the original bytes are preserved. The original hash is checked before normalization; the published asset path and final `sha256` use the resulting bytes. Version or integrity changes require a fresh review. Builds never read artwork from local review pages or research folders.
 
 Author metadata comes from `locale/en.json` and Chinese files in that directory. Editorial text in `data/sources.json` takes precedence. Archive inspection retains only these bounded display files in addition to the manifest and file names; it neither extracts nor executes plugins. SVG artwork must contain no external resources or active content.
 

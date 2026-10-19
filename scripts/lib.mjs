@@ -9,6 +9,7 @@ import semver from 'semver';
 import { parseMarketIndex } from '@deepseek-ai/dsh-plugin-market-index';
 import { archiveBudget, DEFAULT_ARCHIVE_BYTES, MAX_ARCHIVE_BYTES, DEFAULT_DOWNLOAD_TIMEOUT, MAX_DOWNLOAD_TIMEOUT } from './limits.mjs';
 import { displayFiles, packageDisplay, MAX_DISPLAY_FILE_BYTES } from './package-display.mjs';
+import { reviewedIcon } from './reviewed-icon.mjs';
 
 export const REGISTRY = 'https://registry.npmjs.org/';
 export const VALIDATOR_VERSION = '0.2.1-rc.2';
@@ -214,6 +215,13 @@ export async function collectPackage(input, { fetchImpl = fetch, now = Date.now(
   const display = packageDisplay(manifest, resolved, contents);
   const repositoryInfo = resolveRepository(manifest, input, version, published.dist.integrity);
   const repository = repositoryInfo.repository;
+  const reviewed = await reviewedIcon(input, { version, integrity: published.dist.integrity, repository: repositoryFrom(manifest), fetchImpl });
+  if (reviewed) {
+    display.evidence.publishedIcon = display.evidence.icon;
+    display.evidence.icon = { ...reviewed.evidence, selection: 'explicit-review-preferred' };
+    display.icon = reviewed.icon;
+    display.asset = reviewed.asset;
+  }
   const author = typeof manifest.author === 'string' ? manifest.author.replace(/\s*<[^>]*>/g, '').replace(/\s*\([^)]*\)/g, '').trim() : manifest.author?.name;
   const description = input.description ?? display.description ?? manifest.description;
   const title = input.title ?? display.title;
