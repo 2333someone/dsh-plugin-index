@@ -13,17 +13,17 @@ const output = new URL('../public/', import.meta.url);
 const COPY = {
   en: {
     brand: 'Open Plugin Market', lang: 'en', locale: 'en_US', title: 'Open Plugin Market — Add one URL to DSH',
-    eyebrow: 'Community plugin index', statPlugins: 'plugins', statCategories: 'categories', more: 'Show {n} more', shown: 'Showing {shown} of {count}',
+    statPlugins: 'plugins', statCategories: 'categories', more: 'Show {n} more', shown: 'Showing {shown} of {count}',
     description: 'A community plugin index for DeepSeek Harness. Copy one URL into DSH, browse the directory, and choose the plugins you need.',
     skip: 'Skip to content', plugins: 'Plugins', docs: 'Docs', language: 'Language',
-    headline: 'Add one URL<br>to DSH.', intro: 'Browse community plugins in DeepSeek Harness. Add this index to the built-in plugin market.',
-    address: 'Index URL', copy: 'Copy URL', copyHint: 'Add this address in Plugins → Discover → Add index source.',
+    intro: 'DeepSeek Harness is built on the idea that everything can be a plugin, but it offers no official plugin list or recommendations, so finding good plugins was up to you. On October 15 the official plugin market began accepting third-party indexes, so we built this one.',
+    address: 'Index URL', copy: 'Copy URL', copyTitle: 'Click to copy',
     copied: 'Copied', copySuccess: 'URL copied. Open DSH and add it as an index source.', copyFailure: 'The address is selected. Press Ctrl+C or ⌘C, or use the selection menu to copy it.',
-    setup: 'Connect the index', steps: [
-      ['Open Plugins', 'In DeepSeek Harness, open Plugins and choose Discover.'],
-      ['Add an index source', 'Choose Add index source, or open Manage index sources.'],
-      ['Paste the URL', 'Add the address above, then browse and choose a plugin.']
-    ], setupNote: 'No Discover tab? Enable the Custom plugin markets bundle first.',
+    setup: 'How to connect', steps: [
+      ['Turn on the market', 'In Plugins → Experimental plugins, enable Custom plugin markets.'],
+      ['Add an index source', 'Open Discover and choose Add index source.'],
+      ['Paste the URL', 'Add the address above, then browse and install plugins.']
+    ],
     directory: 'Plugin directory', search: 'Search plugins', searchPlaceholder: 'Name, package or description', category: 'Category', all: 'All categories', other: 'Other',
     results: '{count} of {total} plugins', initialCount: count => `${count} ${count === 1 ? 'plugin' : 'plugins'}`,
     noResults: 'No matching plugins', noResultsHelp: 'Try another search or choose all categories.', reset: 'Clear filters',
@@ -36,17 +36,17 @@ const COPY = {
   },
   zh: {
     brand: '开放插件市场', lang: 'zh-CN', locale: 'zh_CN', title: '开放插件市场 — 把插件索引加进 DSH',
-    eyebrow: '社区插件索引', statPlugins: '个插件', statCategories: '个分类', more: '再看 {n} 个', shown: '已显示 {shown} / {count}',
+    statPlugins: '个插件', statCategories: '个分类', more: '再看 {n} 个', shown: '已显示 {shown} / {count}',
     description: '为 DeepSeek Harness 提供的社区插件索引。复制一个地址，添加到 DSH，在内置市场中查找和选择插件。',
     skip: '跳到正文', plugins: '插件目录', docs: '文档', language: '语言',
-    headline: '把插件索引<br>加进 DSH。', intro: '在 DeepSeek Harness 里浏览社区插件。复制这个地址，添加到内置插件市场。',
-    address: '索引地址', copy: '复制地址', copyHint: '添加到「插件 → 发现 → 添加索引源」。',
+    intro: 'DeepSeek Harness 的理念是万物皆可插件，但官方没有提供插件推荐和列表，好用的插件只能自己到处找。10 月 15 日官方更新了插件市场，可以填入第三方索引，所以我们做了这个开放插件市场。',
+    address: '索引地址', copy: '复制地址', copyTitle: '点击复制',
     copied: '已复制', copySuccess: '地址已复制。打开 DSH，把它添加为索引源。', copyFailure: '地址已选中。按 Ctrl+C 或 ⌘C，或使用选中文字的菜单复制。',
-    setup: '三步接入', steps: [
-      ['打开插件页', '在 DeepSeek Harness 中打开「插件」，切换到「发现」。'],
-      ['添加索引源', '点击「添加索引源」，或打开「管理索引源」。'],
-      ['粘贴地址', '填入上方地址，添加后即可浏览并选择插件。']
-    ], setupNote: '没有「发现」标签页？先启用「自定义插件市场」组合包。',
+    setup: '接入方法', steps: [
+      ['打开插件市场', '在「插件 → 实验性插件」中打开「自定义插件市场」。'],
+      ['添加索引源', '切换到「发现」，点击「添加索引源」。'],
+      ['粘贴地址', '填入上面的地址，就能浏览和安装插件。']
+    ],
     directory: '插件目录', search: '搜索插件', searchPlaceholder: '名称、包名或描述', category: '分类', all: '全部分类', other: '其他',
     results: '显示 {count} / {total} 个插件', initialCount: count => `${count} 个插件`,
     noResults: '没有匹配的插件', noResultsHelp: '换个关键词，或选择全部分类。', reset: '清除筛选',
@@ -181,6 +181,7 @@ function page(index, evidence, language, snapshot, downloads, display) {
   <meta property="og:image:alt" content="Open Plugin Market. Add one URL to DSH.">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">${structured}</script>
+  ${language === 'en' ? `<script>try{var l=localStorage.getItem('opm-lang');if(l==='zh'||(!l&&/^zh/i.test(navigator.language||'')))location.replace('zh/'+location.search+location.hash)}catch(e){}</script>` : ''}
   <script src="${root}assets/site.js" defer></script>
 </head>
 <body>
@@ -189,28 +190,25 @@ function page(index, evidence, language, snapshot, downloads, display) {
     <a class="brand" href="${root}index.html"><img src="${root}assets/logo-256.png" alt="" width="64" height="64"><span>${esc(text.brand)}</span></a>
     <nav class="header-links" aria-label="${language === 'zh' ? '主导航' : 'Main navigation'}">
       <a href="#plugins">${esc(text.plugins)}</a><a class="header-docs" href="${docsUrl}">${esc(text.docs)}</a><a href="${REPOSITORY}">GitHub</a>
-      <div class="languages" aria-label="${esc(text.language)}">${language === 'en' ? '<span lang="en" aria-current="page">EN</span><a href="./zh/index.html" lang="zh-CN" hreflang="zh-CN">中文</a>' : '<a href="../index.html" lang="en" hreflang="en">EN</a><span lang="zh-CN" aria-current="page">中文</span>'}</div>
+      <div class="languages" aria-label="${esc(text.language)}">${language === 'en' ? '<span lang="en" aria-current="page">EN</span><a href="./zh/index.html" lang="zh-CN" hreflang="zh-CN" data-lang="zh">中文</a>' : '<a href="../index.html" lang="en" hreflang="en" data-lang="en">EN</a><span lang="zh-CN" aria-current="page">中文</span>'}</div>
     </nav>
   </header>
   <main id="main">
     <section class="hero shell" aria-labelledby="page-title">
       <div class="hero-copy">
-      <p class="eyebrow">${esc(text.eyebrow)}</p>
-      <h1 id="page-title">${text.headline}</h1><p class="hero-lead">${esc(text.intro)}</p>
-      <label class="address-label" for="index-url">${esc(text.address)}</label>
+      <h1 id="page-title" class="visually-hidden">${esc(text.brand)}</h1>
+      <p class="hero-lead">${esc(text.intro)}</p>
+      <label class="address-label visually-hidden" for="index-url">${esc(text.address)}</label>
       <div class="address-bar">
-        <textarea id="index-url" rows="2" readonly spellcheck="false" aria-describedby="copy-status">${INDEX_URL}</textarea>
+        <textarea id="index-url" rows="2" readonly spellcheck="false" title="${esc(text.copyTitle)}" aria-describedby="copy-status">${INDEX_URL}</textarea>
         <button class="copy-button" type="button" data-copy hidden><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 8h12v13H8zM16 8V3H3v13h5"/></svg><span>${esc(text.copy)}</span></button>
       </div>
-      <p class="copy-status" id="copy-status" role="status" aria-live="polite">${esc(text.copyHint)}</p>
+      <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+      <h2 class="visually-hidden" id="setup-title">${esc(text.setup)}</h2>
+      <ol class="steps" aria-labelledby="setup-title">${text.steps.map(([title, detail]) => `<li><div><h3>${esc(title)}</h3><p>${esc(detail)}</p></div></li>`).join('')}</ol>
       <ul class="stats"><li><strong>${plugins.length}</strong> ${esc(text.statPlugins)}</li><li><strong>${usedCategories.length}</strong> ${esc(text.statCategories)}</li>${updated ? `<li>${esc(text.updated)} <strong>${esc(updated)}</strong></li>` : ''}</ul>
       </div>
       <div class="hero-art" aria-hidden="true"><div class="art-blob"></div><img src="${root}assets/logo.png" alt="" width="560" height="560" decoding="async">${stickers}</div>
-    </section>
-    <section class="setup shell" aria-labelledby="setup-title">
-      <h2 id="setup-title">${esc(text.setup)}</h2>
-      <ol class="steps">${text.steps.map(([title, detail]) => `<li><div><h3>${esc(title)}</h3><p>${esc(detail)}</p></div></li>`).join('')}</ol>
-      <p class="setup-note">${esc(text.setupNote)}</p>
     </section>
     <section class="directory-surface" id="plugins" aria-labelledby="directory-title"><div class="directory shell">
       <div class="directory-heading"><h2 id="directory-title">${esc(text.directory)}</h2><p class="result-count" id="result-count" role="status" aria-live="polite">${esc(text.initialCount(plugins.length))}</p></div>

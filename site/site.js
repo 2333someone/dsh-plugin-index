@@ -1,3 +1,8 @@
+// Remember an explicit language choice so the English page stops sending Chinese browsers to /zh/.
+for (const link of document.querySelectorAll('[data-lang]')) {
+  link.addEventListener('click', () => { try { localStorage.setItem('opm-lang', link.dataset.lang); } catch { /* Private mode. */ } });
+}
+
 const copyButton = document.querySelector('[data-copy]');
 const indexInput = document.querySelector('#index-url');
 const copyStatus = document.querySelector('#copy-status');
@@ -5,7 +10,7 @@ const text = JSON.parse(document.querySelector('#site-messages').textContent);
 
 if (copyButton && indexInput) {
   copyButton.hidden = false;
-  copyButton.addEventListener('click', async () => {
+  const copy = async () => {
     try {
       if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
       await navigator.clipboard.writeText(indexInput.value);
@@ -18,8 +23,9 @@ if (copyButton && indexInput) {
       indexInput.setSelectionRange(0, indexInput.value.length);
       copyStatus.textContent = text.copyFailure;
     }
-  });
-  indexInput.addEventListener('click', () => indexInput.select());
+  };
+  copyButton.addEventListener('click', copy);
+  indexInput.addEventListener('click', () => { indexInput.select(); copy(); });
 }
 
 const PAGE_SIZE = 24;

@@ -29,6 +29,7 @@
   <meta property="og:image:alt" content="Open Plugin Market. Add one URL to DSH.">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Open Plugin Market","url":"https://dshopen.org/","inLanguage":["en","zh-CN"],"description":"A community plugin index for DeepSeek Harness. Copy one URL into DSH, browse the directory, and choose the plugins you need."}</script>
+  <script>try{var l=localStorage.getItem('opm-lang');if(l==='zh'||(!l&&/^zh/i.test(navigator.language||'')))location.replace('zh/'+location.search+location.hash)}catch(e){}</script>
   <script src="./assets/site.js" defer></script>
 </head>
 <body>
@@ -37,28 +38,25 @@
     <a class="brand" href="./index.html"><img src="./assets/logo-256.png" alt="" width="64" height="64"><span>Open Plugin Market</span></a>
     <nav class="header-links" aria-label="Main navigation">
       <a href="#plugins">Plugins</a><a class="header-docs" href="https://github.com/polang233/dsh-plugin-index/blob/main/README.en.md">Docs</a><a href="https://github.com/polang233/dsh-plugin-index">GitHub</a>
-      <div class="languages" aria-label="Language"><span lang="en" aria-current="page">EN</span><a href="./zh/index.html" lang="zh-CN" hreflang="zh-CN">中文</a></div>
+      <div class="languages" aria-label="Language"><span lang="en" aria-current="page">EN</span><a href="./zh/index.html" lang="zh-CN" hreflang="zh-CN" data-lang="zh">中文</a></div>
     </nav>
   </header>
   <main id="main">
     <section class="hero shell" aria-labelledby="page-title">
       <div class="hero-copy">
-      <p class="eyebrow">Community plugin index</p>
-      <h1 id="page-title">Add one URL<br>to DSH.</h1><p class="hero-lead">Browse community plugins in DeepSeek Harness. Add this index to the built-in plugin market.</p>
-      <label class="address-label" for="index-url">Index URL</label>
+      <h1 id="page-title" class="visually-hidden">Open Plugin Market</h1>
+      <p class="hero-lead">DeepSeek Harness is built on the idea that everything can be a plugin, but it offers no official plugin list or recommendations, so finding good plugins was up to you. On October 15 the official plugin market began accepting third-party indexes, so we built this one.</p>
+      <label class="address-label visually-hidden" for="index-url">Index URL</label>
       <div class="address-bar">
-        <textarea id="index-url" rows="2" readonly spellcheck="false" aria-describedby="copy-status">https://dshopen.org/index.json</textarea>
+        <textarea id="index-url" rows="2" readonly spellcheck="false" title="Click to copy" aria-describedby="copy-status">https://dshopen.org/index.json</textarea>
         <button class="copy-button" type="button" data-copy hidden><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 8h12v13H8zM16 8V3H3v13h5"/></svg><span>Copy URL</span></button>
       </div>
-      <p class="copy-status" id="copy-status" role="status" aria-live="polite">Add this address in Plugins → Discover → Add index source.</p>
+      <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+      <h2 class="visually-hidden" id="setup-title">How to connect</h2>
+      <ol class="steps" aria-labelledby="setup-title"><li><div><h3>Turn on the market</h3><p>In Plugins → Experimental plugins, enable Custom plugin markets.</p></div></li><li><div><h3>Add an index source</h3><p>Open Discover and choose Add index source.</p></div></li><li><div><h3>Paste the URL</h3><p>Add the address above, then browse and install plugins.</p></div></li></ol>
       <ul class="stats"><li><strong>579</strong> plugins</li><li><strong>11</strong> categories</li><li>Index updated <strong>18 Oct 2026</strong></li></ul>
       </div>
       <div class="hero-art" aria-hidden="true"><div class="art-blob"></div><img src="./assets/logo.png" alt="" width="560" height="560" decoding="async"><span class="sticker sticker-1">Tools</span><span class="sticker sticker-2">Skills</span><span class="sticker sticker-3">Memory</span></div>
-    </section>
-    <section class="setup shell" aria-labelledby="setup-title">
-      <h2 id="setup-title">Connect the index</h2>
-      <ol class="steps"><li><div><h3>Open Plugins</h3><p>In DeepSeek Harness, open Plugins and choose Discover.</p></div></li><li><div><h3>Add an index source</h3><p>Choose Add index source, or open Manage index sources.</p></div></li><li><div><h3>Paste the URL</h3><p>Add the address above, then browse and choose a plugin.</p></div></li></ol>
-      <p class="setup-note">No Discover tab? Enable the Custom plugin markets bundle first.</p>
     </section>
     <section class="directory-surface" id="plugins" aria-labelledby="directory-title"><div class="directory shell">
       <div class="directory-heading"><h2 id="directory-title">Plugin directory</h2><p class="result-count" id="result-count" role="status" aria-live="polite">579 plugins</p></div>
