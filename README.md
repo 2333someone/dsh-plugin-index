@@ -31,6 +31,8 @@ dsh plugin --profile desktop add "git+https://github.com/polang233/dsh-plugin-in
 https://dshopen.org/index.json
 ```
 
+<img src="docs/images/add-index.png" alt="在「发现 → 索引源」中添加 dshopen.org 的索引地址" width="560">
+
 旧地址 `https://polang233.github.io/dsh-plugin-index/index.json` 继续可用，内容相同。
 
 ## 推荐与标签

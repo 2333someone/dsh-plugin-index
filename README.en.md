@@ -13,6 +13,8 @@ Turn on **Custom plugin markets** under **Plugins → Experimental plugins**, th
 - **Install the plugin (recommended).** Install `dsh-open-market` from GitHub with `dsh plugin --profile desktop add "git+https://github.com/polang233/dsh-plugin-index.git#main&path:/packages/dsh-open-market"`. It adds the index to your Discover sources once. If you remove the source later, the plugin respects that.
 - **Add the source by hand.** Paste `https://dshopen.org/index.json` into **Discover → Add index source**. The earlier `https://polang233.github.io/dsh-plugin-index/index.json` keeps working.
 
+<img src="docs/images/add-index.png" alt="Adding the dshopen.org index URL under Discover → Index sources" width="560">
+
 ## Labels and sorting
 
 ✅ Verified · 🔥 Rising · ⚡ Frequent updates · ◷ four update-age buckets · ↓ seven download tiers. The *Default* order favors downloads, stars, plugins with a logo and verified plugins. *✨ Smart picks* lead with recent growth and activity. You can also sort by new stars (7 days), GitHub stars or random. The index refreshes every six hours. See [metrics](docs/market-display.md) for the formula and data sources.
