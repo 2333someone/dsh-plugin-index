@@ -20,7 +20,7 @@ const COPY = {
     intro: 'DeepSeek Harness is built around plugins, yet it ships no list or recommendations for community ones. The October 15 update added an official plugin market: paste one index JSON and you can browse and install community plugins without downloading anything by hand. So we built this index.',
     address: 'Index URL', copy: 'Copy URL', copyTitle: 'Click to copy',
     copied: 'Copied', copySuccess: 'URL copied. Open DSH and add it as an index source.', copyFailure: 'The address is selected. Press Ctrl+C or ⌘C, or use the selection menu to copy it.',
-    showcase: { title: 'How it looks in DSH', text: 'Stars aren\'t everything here. The default picks refresh every day and put fast-growing, actively shipped, genuinely good plugins first, with verification, downloads and stars as supporting signals.', points: ['No single author can flood the list, so a newcomer can make the first screen', 'Rising, Frequent updates and Verified labels at a glance', 'Default order, ✨ Smart picks and Random: every visit turns up something new'], hint: 'Hover the screenshot to switch to the light theme', image: 'dsh-discover-en.webp', alt: 'The Discover tab of DeepSeek Harness listing Open Plugin Market plugins with labels and install buttons' },
+    showcase: { title: 'How it looks in DSH', text: 'Stars aren\'t everything here. The default picks refresh every day and put fast-growing, actively shipped, genuinely good plugins first, with verification, downloads and stars as supporting signals.', points: ['No single author can flood the list, so a newcomer can make the first screen', 'Rising, Frequent updates and Verified labels at a glance', 'Default order, ✨ Smart picks and Random: every visit turns up something new'], image: 'dsh-discover-en.webp', alt: 'The Discover tab of DeepSeek Harness listing Open Plugin Market plugins with labels and install buttons' },
     zoom: 'Enlarge screenshot', close: 'Close', stepAlts: ['The Custom plugin markets switch under Plugins → Experimental plugins', 'The Add index source button in Discover', 'The index source dialog with the dshopen.org URL and the Add button'],
     setup: 'Quick start', steps: [
       ['Turn on the market', 'Plugins → Experimental → Custom plugin markets'],
@@ -46,7 +46,7 @@ const COPY = {
     intro: 'DeepSeek Harness 以插件为核心，但官方没有提供社区插件的推荐和列表。10 月 15 日的更新加入了官方插件市场，填入一个索引 JSON 就能浏览和安装社区插件，不用再单独下载处理，方便了很多，于是我们做了这份索引。',
     address: '索引地址', copy: '复制地址', copyTitle: '点击复制',
     copied: '已复制', copySuccess: '地址已复制。打开 DSH，把它添加为索引源。', copyFailure: '地址已选中。按 Ctrl+C 或 ⌘C，或使用选中文字的菜单复制。',
-    showcase: { title: '在 DSH 里的样子', text: '不唯 star 🌟 论。默认推荐每天更新，以最近增长快、更新勤、优质的插件为主，同时参考验证、下载量和 star。', points: ['同一作者不会霸榜，小开发者的新作品也能上首屏', '增长快、更新勤、经过验证等标签一眼可见', '默认排序、✨ 智能推荐和随机，每次都有新发现'], hint: '鼠标移到截图上，切换成浅色主题看看', image: 'dsh-discover-zh.webp', alt: 'DeepSeek Harness 的「发现」页面，列出开放插件市场的插件、标签和安装按钮' },
+    showcase: { title: '在 DSH 里的样子', text: '不唯 star 🌟 论。默认推荐每天更新，以最近增长快、更新勤、优质的插件为主，同时参考验证、下载量和 star。', points: ['同一作者不会霸榜，小开发者的新作品也能上首屏', '增长快、更新勤、经过验证等标签一眼可见', '默认排序、✨ 智能推荐和随机，每次都有新发现'], image: 'dsh-discover-zh.webp', alt: 'DeepSeek Harness 的「发现」页面，列出开放插件市场的插件、标签和安装按钮' },
     zoom: '放大截图', close: '关闭', stepAlts: ['「插件 → 实验性插件」中的「自定义插件市场」开关', '「发现」里的「添加索引源」按钮', '填好 dshopen.org 地址的索引源窗口和「添加」按钮'],
     setup: '最简单使用教程', steps: [
       ['开启市场', '插件 → 实验性插件 → 自定义插件市场'],

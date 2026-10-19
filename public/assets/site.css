@@ -409,8 +409,6 @@ h2 { margin: 0; font-size: clamp(28px, 3.2vw, 38px); letter-spacing: -.03em; lin
 .app-frame:hover .app-light { opacity: 1; }
 .app-frame .app-bar { transition: background .45s, border-color .45s; }
 .app-frame:hover .app-bar { background: #ececef; border-bottom-color: #dcdce0; }
-.showcase-hint { margin: 14px 0 0; color: var(--slate); font-size: 13px; font-weight: 700; opacity: .8; }
-.showcase-hint::before { content: "👉 "; }
 @media (hover: none) { .app-frame .app-light { display: none; } }
 
 /* Language switch: a sliding pill marks the current language and leans toward the other on hover. */
