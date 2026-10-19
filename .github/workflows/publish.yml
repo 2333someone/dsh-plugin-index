@@ -82,8 +82,9 @@ jobs:
       - name: Check published catalog, icons and branding without redirects
         env:
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        # Pages and its CDN can serve a mix of old and new files for a minute after deploying.
         run: |
-          node scripts/check-published.mjs "${PAGE_URL%/}/index.json"
+          for attempt in 1 2 3; do node scripts/check-published.mjs "${PAGE_URL%/}/index.json" && exit 0; sleep 60; done; exit 1
 
   cloudflare:
     needs: build
@@ -108,4 +109,4 @@ jobs:
         run: npx -y wrangler@4.151.1 deploy --config cloudflare/wrangler.jsonc
       - name: Check dshopen.org without redirects
         if: env.CLOUDFLARE_API_TOKEN != ''
-        run: node scripts/check-published.mjs https://dshopen.org/index.json
+        run: for attempt in 1 2 3; do node scripts/check-published.mjs https://dshopen.org/index.json && exit 0; sleep 60; done; exit 1
