@@ -4,7 +4,7 @@ import {githubRepository} from '../../scripts/github.mjs';
 const INDEX_URL = 'https://dshopen.org/index.json';
 for (const language of ['en', 'zh']) {
   const route = language === 'en' ? './' : './zh/';
-  test(`${language}: directory filters, language navigation and layout`, async ({ page }, info) => {
+  test(`${language}: directory filters, language navigation and layout`, async ({ page }) => {
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
     page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()}: ${response.url()}`); });
@@ -44,6 +44,16 @@ for (const language of ['en', 'zh']) {
     await page.locator('[data-chip=""]').click();
     await expect(page.locator('[data-plugin]:visible')).toHaveCount(PAGE);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    await page.locator('.languages a').click();
+    await expect(page.locator('html')).toHaveAttribute('lang', language === 'en' ? 'zh-CN' : 'en');
+    expect(errors).toEqual([]);
+  });
+  test(`${language}: catalog metadata, icons and screenshots`, async ({ page }, info) => {
+    const errors = [];
+    page.on('pageerror', error => errors.push(error.message));
+    page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()}: ${response.url()}`); });
+    await page.goto(route);
+    const rows = page.locator('[data-plugin]');
     const snapshot = await (await page.request.get('./github.json')).json();
     const index = await (await page.request.get('./index.json')).json();
     const starLinks = page.locator('[data-stars]');
@@ -99,8 +109,6 @@ for (const language of ['en', 'zh']) {
     await page.screenshot({ path: info.outputPath(`${language}-directory.png`) });
     await page.evaluate(() => scrollTo(0, 0));
     await page.screenshot({ path: info.outputPath(`${language}-page.png`) });
-    await page.locator('.languages a').click();
-    await expect(page.locator('html')).toHaveAttribute('lang', language === 'en' ? 'zh-CN' : 'en');
     expect(errors).toEqual([]);
   });
   test(`${language}: copy and clipboard failure recovery`, async ({ page, context }) => {
