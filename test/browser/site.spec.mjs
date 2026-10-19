@@ -19,7 +19,8 @@ for (const language of ['en', 'zh']) {
     await expect(page.locator('[data-plugin]:visible')).toHaveCount(PAGE);
     await expect(page.locator('[data-more]')).toBeVisible();
     await page.locator('[data-more]').click();
-    await expect(page.locator('[data-plugin]:visible')).toHaveCount(PAGE * 2);
+    // The click also turns on infinite scroll, so a short viewport may reveal a further batch at once.
+    await expect.poll(() => page.locator('[data-plugin]:visible').count()).toBeGreaterThanOrEqual(PAGE * 2);
     const firstPackage = await rows.first().locator('.package-name').textContent();
     await page.locator('#plugin-search').fill(firstPackage.trim());
     await expect(page.locator('[data-plugin]:visible')).toHaveCount(1);

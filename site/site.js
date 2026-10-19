@@ -116,3 +116,12 @@ if (controls && search && chips.length && moreWrap) {
   }
   select('');
 }
+const scrollHint = document.querySelector('[data-scroll-hint]');
+if (scrollHint) {
+  // Only nudge while the directory is still below the fold and the visitor has not scrolled yet.
+  const directory = document.querySelector('#plugins');
+  const update = () => scrollHint.classList.toggle('is-hidden', window.scrollY > 80 || (directory && directory.getBoundingClientRect().top < window.innerHeight - 140));
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+}

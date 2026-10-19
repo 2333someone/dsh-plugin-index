@@ -16,13 +16,15 @@ const COPY = {
     statPlugins: 'plugins', statCategories: 'categories', more: 'Show {n} more', shown: 'Showing {shown} of {count}',
     description: 'A community plugin index for DeepSeek Harness. Copy one URL into DSH, browse the directory, and choose the plugins you need.',
     skip: 'Skip to content', plugins: 'Plugins', docs: 'Docs', language: 'Language',
-    intro: 'DeepSeek Harness is built on the idea that everything can be a plugin, but it offers no official plugin list or recommendations, so finding good plugins was up to you. On October 15 the official plugin market began accepting third-party indexes, so we built this one.',
+    headline: 'Everything can be a plugin.<br><em>Find them here.</em>',
+    intro: 'DeepSeek Harness has no official plugin list. Since October 15 its plugin market accepts third-party indexes, so we gathered community plugins into one.',
+    scrollHint: 'Browse plugins',
     address: 'Index URL', copy: 'Copy URL', copyTitle: 'Click to copy',
     copied: 'Copied', copySuccess: 'URL copied. Open DSH and add it as an index source.', copyFailure: 'The address is selected. Press Ctrl+C or ⌘C, or use the selection menu to copy it.',
     setup: 'How to connect', steps: [
-      ['Turn on the market', 'In Plugins → Experimental plugins, enable Custom plugin markets.'],
-      ['Add an index source', 'Open Discover and choose Add index source.'],
-      ['Paste the URL', 'Add the address above, then browse and install plugins.']
+      ['Turn on the market', 'Plugins → Experimental → Custom plugin markets'],
+      ['Add a source', 'Discover → Add index source'],
+      ['Paste the URL', 'Paste the address above. Done.']
     ],
     directory: 'Plugin directory', search: 'Search plugins', searchPlaceholder: 'Name, package or description', category: 'Category', all: 'All categories', other: 'Other',
     results: '{count} of {total} plugins', initialCount: count => `${count} ${count === 1 ? 'plugin' : 'plugins'}`,
@@ -39,13 +41,15 @@ const COPY = {
     statPlugins: '个插件', statCategories: '个分类', more: '再看 {n} 个', shown: '已显示 {shown} / {count}',
     description: '为 DeepSeek Harness 提供的社区插件索引。复制一个地址，添加到 DSH，在内置市场中查找和选择插件。',
     skip: '跳到正文', plugins: '插件目录', docs: '文档', language: '语言',
-    intro: 'DeepSeek Harness 的理念是万物皆可插件，但官方没有提供插件推荐和列表，好用的插件只能自己到处找。10 月 15 日官方更新了插件市场，可以填入第三方索引，所以我们做了这个开放插件市场。',
+    headline: '万物皆可插件，<br><em>插件来这里找。</em>',
+    intro: 'DeepSeek Harness 官方没有插件列表。10 月 15 日起，官方插件市场支持添加第三方索引，我们就把社区插件整理成了一个。',
+    scrollHint: '往下看插件目录',
     address: '索引地址', copy: '复制地址', copyTitle: '点击复制',
     copied: '已复制', copySuccess: '地址已复制。打开 DSH，把它添加为索引源。', copyFailure: '地址已选中。按 Ctrl+C 或 ⌘C，或使用选中文字的菜单复制。',
     setup: '接入方法', steps: [
-      ['打开插件市场', '在「插件 → 实验性插件」中打开「自定义插件市场」。'],
-      ['添加索引源', '切换到「发现」，点击「添加索引源」。'],
-      ['粘贴地址', '填入上面的地址，就能浏览和安装插件。']
+      ['开启市场', '插件 → 实验性插件 → 自定义插件市场'],
+      ['添加索引源', '发现 → 添加索引源'],
+      ['粘贴地址', '粘贴上面的地址，完成']
     ],
     directory: '插件目录', search: '搜索插件', searchPlaceholder: '名称、包名或描述', category: '分类', all: '全部分类', other: '其他',
     results: '显示 {count} / {total} 个插件', initialCount: count => `${count} 个插件`,
@@ -196,7 +200,7 @@ function page(index, evidence, language, snapshot, downloads, display) {
   <main id="main">
     <section class="hero shell" aria-labelledby="page-title">
       <div class="hero-copy">
-      <h1 id="page-title" class="visually-hidden">${esc(text.brand)}</h1>
+      <h1 id="page-title">${text.headline}</h1>
       <p class="hero-lead">${esc(text.intro)}</p>
       <label class="address-label visually-hidden" for="index-url">${esc(text.address)}</label>
       <div class="address-bar">
@@ -206,12 +210,13 @@ function page(index, evidence, language, snapshot, downloads, display) {
       <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
       <h2 class="visually-hidden" id="setup-title">${esc(text.setup)}</h2>
       <ol class="steps" aria-labelledby="setup-title">${text.steps.map(([title, detail]) => `<li><div><h3>${esc(title)}</h3><p>${esc(detail)}</p></div></li>`).join('')}</ol>
-      <ul class="stats"><li><strong>${plugins.length}</strong> ${esc(text.statPlugins)}</li><li><strong>${usedCategories.length}</strong> ${esc(text.statCategories)}</li>${updated ? `<li>${esc(text.updated)} <strong>${esc(updated)}</strong></li>` : ''}</ul>
       </div>
       <div class="hero-art" aria-hidden="true"><div class="art-blob"></div><img src="${root}assets/logo.png" alt="" width="560" height="560" decoding="async">${stickers}</div>
     </section>
+    <a class="scroll-hint" href="#plugins" data-scroll-hint>${esc(text.scrollHint)}<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
     <section class="directory-surface" id="plugins" aria-labelledby="directory-title"><div class="directory shell">
       <div class="directory-heading"><h2 id="directory-title">${esc(text.directory)}</h2><p class="result-count" id="result-count" role="status" aria-live="polite">${esc(text.initialCount(plugins.length))}</p></div>
+      <ul class="stats"><li><strong>${plugins.length}</strong> ${esc(text.statPlugins)}</li><li><strong>${usedCategories.length}</strong> ${esc(text.statCategories)}</li>${updated ? `<li>${esc(text.updated)} <strong>${esc(updated)}</strong></li>` : ''}</ul>
       <p class="stars-note">${language === 'zh' ? '★ GitHub 仓库 star · ↓ npm 近 30 天下载 · 所收录版本发布至今的天数，随索引更新。' : '★ GitHub repository stars · ↓ npm downloads over 30 days · Days since the listed release, refreshed with the index.'} <a href="${root}downloads.json">${language === 'zh' ? '下载快照' : 'Download snapshot'}</a> · <a href="${root}github.json">${language === 'zh' ? 'Star 快照' : 'Star snapshot'}</a></p>
       <form class="filters" data-filters hidden role="search" aria-label="${esc(text.search)}">
         <div class="field"><label for="plugin-search">${esc(text.search)}</label><input type="search" id="plugin-search" placeholder="${esc(text.searchPlaceholder)}" autocomplete="off"></div>

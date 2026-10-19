@@ -44,8 +44,8 @@
   <main id="main">
     <section class="hero shell" aria-labelledby="page-title">
       <div class="hero-copy">
-      <h1 id="page-title" class="visually-hidden">开放插件市场</h1>
-      <p class="hero-lead">DeepSeek Harness 的理念是万物皆可插件，但官方没有提供插件推荐和列表，好用的插件只能自己到处找。10 月 15 日官方更新了插件市场，可以填入第三方索引，所以我们做了这个开放插件市场。</p>
+      <h1 id="page-title">万物皆可插件，<br><em>插件来这里找。</em></h1>
+      <p class="hero-lead">DeepSeek Harness 官方没有插件列表。10 月 15 日起，官方插件市场支持添加第三方索引，我们就把社区插件整理成了一个。</p>
       <label class="address-label visually-hidden" for="index-url">索引地址</label>
       <div class="address-bar">
         <textarea id="index-url" rows="2" readonly spellcheck="false" title="点击复制" aria-describedby="copy-status">https://dshopen.org/index.json</textarea>
@@ -53,13 +53,14 @@
       </div>
       <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
       <h2 class="visually-hidden" id="setup-title">接入方法</h2>
-      <ol class="steps" aria-labelledby="setup-title"><li><div><h3>打开插件市场</h3><p>在「插件 → 实验性插件」中打开「自定义插件市场」。</p></div></li><li><div><h3>添加索引源</h3><p>切换到「发现」，点击「添加索引源」。</p></div></li><li><div><h3>粘贴地址</h3><p>填入上面的地址，就能浏览和安装插件。</p></div></li></ol>
-      <ul class="stats"><li><strong>579</strong> 个插件</li><li><strong>11</strong> 个分类</li><li>索引更新于 <strong>2026年10月18日</strong></li></ul>
+      <ol class="steps" aria-labelledby="setup-title"><li><div><h3>开启市场</h3><p>插件 → 实验性插件 → 自定义插件市场</p></div></li><li><div><h3>添加索引源</h3><p>发现 → 添加索引源</p></div></li><li><div><h3>粘贴地址</h3><p>粘贴上面的地址，完成</p></div></li></ol>
       </div>
       <div class="hero-art" aria-hidden="true"><div class="art-blob"></div><img src="../assets/logo.png" alt="" width="560" height="560" decoding="async"><span class="sticker sticker-1">工具</span><span class="sticker sticker-2">技能</span><span class="sticker sticker-3">记忆</span></div>
     </section>
+    <a class="scroll-hint" href="#plugins" data-scroll-hint>往下看插件目录<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
     <section class="directory-surface" id="plugins" aria-labelledby="directory-title"><div class="directory shell">
       <div class="directory-heading"><h2 id="directory-title">插件目录</h2><p class="result-count" id="result-count" role="status" aria-live="polite">579 个插件</p></div>
+      <ul class="stats"><li><strong>579</strong> 个插件</li><li><strong>11</strong> 个分类</li><li>索引更新于 <strong>2026年10月18日</strong></li></ul>
       <p class="stars-note">★ GitHub 仓库 star · ↓ npm 近 30 天下载 · 所收录版本发布至今的天数，随索引更新。 <a href="../downloads.json">下载快照</a> · <a href="../github.json">Star 快照</a></p>
       <form class="filters" data-filters hidden role="search" aria-label="搜索插件">
         <div class="field"><label for="plugin-search">搜索插件</label><input type="search" id="plugin-search" placeholder="名称、包名或描述" autocomplete="off"></div>
