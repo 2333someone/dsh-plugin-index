@@ -23,8 +23,8 @@ export function recommendIndex(index, {github = {}, signals = {}, now = Date.now
     const rotation = createHash('sha256').update(week + ':' + plugin.name).digest().readUInt32BE(0) / 0xffffffff;
     const signal = signals[plugin.name] ?? {};
     const growth = Number.isFinite(signal.growth) ? Math.min(1, Math.max(0, Math.log2(signal.growth) / 2)) : 0;
-    const cadence = Math.min(1, (signal.releases30 ?? 0) / 4);
-    const fresh = Number.isFinite(signal.ageDays) ? Math.exp(-signal.ageDays / 30) : 0;
+    const cadence = Math.min(1, (signal.releases30 ?? 0) / 20);
+    const fresh = Number.isFinite(signal.ageDays) ? Math.exp(-signal.ageDays / 14) : 0;
     const starGrowth = signal.starsWeek > 0 ? Math.min(1, Math.log1p(signal.starsWeek) / Math.log1p(50)) : 0;
     const reach = Math.log1p(Math.min(signal.downloads ?? 0, 100_000)) / Math.log1p(100_000);
     const verified = signal.verifiedBy?.length ? 1 : 0;

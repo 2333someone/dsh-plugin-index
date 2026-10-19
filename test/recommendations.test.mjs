@@ -42,7 +42,7 @@ test('growing, frequently released projects outrank a quiet high-star one',()=>{
   const quiet=plugin('quiet','big'),rising=plugin('rising','small');
   const github={repositories:{'big/quiet':{status:'ok',stars:50000,pushedAt:new Date(now-200*86400000).toISOString()},'small/rising':{status:'ok',stars:3,pushedAt:new Date(now-86400000).toISOString()}}};
   quiet.versions[0].publishTimestamp=(now-200*86400000)/1000;
-  const signals={rising:{growth:4,releases30:5,ageDays:20}};
+  const signals={rising:{growth:4,releases30:20,ageDays:10}};
   assert.equal(recommendIndex({plugins:[quiet,rising]},{github,signals,now}).plugins[0].name,'rising');
 });
 test('verification, reach and star growth lift an otherwise equal plugin',()=>{

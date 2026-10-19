@@ -1,6 +1,9 @@
 import { parseMarketIndex } from '@deepseek-ai/dsh-plugin-market-index';
 import { githubRepository, applyGitHubStars, starsGained } from './github.mjs';
 import { endorsementsFor } from './endorsements.mjs';
+import { LABELS, TIERS } from './labels.mjs';
+
+export { LABELS };
 import { recommendIndex } from './recommendations.mjs';
 
 const DAY = 86_400_000;
@@ -10,25 +13,6 @@ const sortId = 'npm-downloads-month';
 const TRENDING = 'trending';
 const STARS_WEEK = 'stars-week';
 
-/** A small fixed label set keeps the DSH filter menu short; ids stay stable across builds. */
-export const LABELS = {
-  verified: { en: '✓ Verified elsewhere', zh: '✓ 第三方验证' },
-  trending: { en: '🔥 Rising', zh: '🔥 增长快' },
-  active: { en: '⚡ Frequent updates', zh: '⚡ 更新勤' },
-  new: { en: '✦ New', zh: '✦ 新上架' },
-  'updated-recent': { en: '◷ Just updated', zh: '◷ 最近更新' },
-  'updated-week': { en: '◷ Updated this week', zh: '◷ 本周更新' },
-  'updated-month': { en: '◷ Updated this month', zh: '◷ 本月更新' },
-  'updated-quarter': { en: '◷ Updated in 3 months', zh: '◷ 三个月内更新' },
-  'downloads-100k': { en: '↓ 100k+', zh: '↓ 10万+' },
-  'downloads-50k': { en: '↓ 50k+', zh: '↓ 5万+' },
-  'downloads-10k': { en: '↓ 10k+', zh: '↓ 1万+' },
-  'downloads-5k': { en: '↓ 5k+', zh: '↓ 5000+' },
-  'downloads-1k': { en: '↓ 1k+', zh: '↓ 1000+' },
-  'downloads-500': { en: '↓ 500+', zh: '↓ 500+' },
-  'downloads-100': { en: '↓ 100+', zh: '↓ 100+' }
-};
-const TIERS = [[100_000, '100k'], [50_000, '50k'], [10_000, '10k'], [5000, '5k'], [1000, '1k'], [500, '500'], [100, '100']];
 const OWN = new Set(Object.keys(LABELS));
 const owned = id => OWN.has(id) || id.startsWith('publisher-') || id.startsWith('metric-');
 
@@ -72,8 +56,9 @@ export function labelsFor(signals) {
   if (signals.verifiedBy?.length) labels.push('verified');
   // Rising: downloads clearly up on the prior weekly average, or a meaningful jump in stars.
   if (signals.growth >= 1.5 || (signals.starsWeek >= 5 && signals.starsWeek >= 0.1 * Math.max(signals.stars - signals.starsWeek, 10))) labels.push('trending');
-  if (signals.releases30 >= 3 || signals.releases90 >= 6) labels.push('active');
-  if (signals.ageDays <= 30) labels.push('new');
+  // Thresholds sit near the top fifth of the current catalog; young DSH plugins release often.
+  if (signals.releases30 >= 15) labels.push('active');
+  if (signals.ageDays <= 14) labels.push('new');
   const age = [[3, 'recent'], [7, 'week'], [30, 'month'], [90, 'quarter']].find(([days]) => signals.updatedDays <= days);
   if (age) labels.push('updated-' + age[1]);
   const tier = TIERS.find(([floor]) => signals.downloads >= floor);

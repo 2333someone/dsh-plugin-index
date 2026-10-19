@@ -2,7 +2,7 @@ import {createHash} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {pathToFileURL} from 'node:url';
-import {LABELS} from './market-display.mjs';
+import {LABELS} from './labels.mjs';
 
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 

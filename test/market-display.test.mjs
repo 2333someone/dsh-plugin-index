@@ -27,7 +27,7 @@ test('DSH rows show stars before descriptions and a few fixed native labels', as
   } });
   assert.equal(downloads.packages[plugin.name].downloads, 23 * 10 + 7 * 100);
   assert.equal(downloads.packages[plugin.name].week, 700);
-  const releases = { [plugin.name]: { firstPublished: '2026-10-01T00:00:00Z', last30Days: 4, last90Days: 4 } };
+  const releases = { [plugin.name]: { firstPublished: '2026-10-10T00:00:00Z', last30Days: 16, last90Days: 16 } };
   const result = applyMarketDisplay(index, { github, downloads, releases, now: NOW });
   const parsed = parseMarketIndex(result.index, 'https://example.org/index.json');
   assert.deepEqual(parsed.plugins[0].description, { en: '★ 2,345 │ Real description.', zh: '★ 2,345 │ 实际介绍。' });
