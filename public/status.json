@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T14:50:43.569Z",
+  "generatedAt": "2026-10-19T19:41:16.141Z",
   "validator": {
     "name": "@deepseek-ai/dsh-plugin-market-index",
     "version": "0.2.1-rc.2"
@@ -1353,7 +1353,7 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-09-12T19:47:35.933Z",
-        "last30Days": 6,
+        "last30Days": 4,
         "last90Days": 24
       },
       "checks": [
@@ -3663,18 +3663,18 @@
     },
     {
       "name": "@firetruck666/dsh-task-board",
-      "version": "1.2.7",
+      "version": "1.3.12",
       "license": "MIT",
       "repository": "https://github.com/FiretrUCK666/dsh-task-board",
       "repositorySource": "package",
-      "sourceCommit": "4ec36aaa5d2b32ba9cf2afe6679d0a73080edf81",
+      "sourceCommit": "5b0a0a844a3408d21b8c5082c1f9cbd4820a7183",
       "metadataUrl": "https://registry.npmjs.org/%40firetruck666%2Fdsh-task-board",
-      "tarball": "https://registry.npmjs.org/@firetruck666/dsh-task-board/-/dsh-task-board-1.2.7.tgz",
-      "integrity": "sha512-X08RmBbyJTENUXtktMsu8S4edLnEVwrfIEeLX10/gGj2rAgb727Bf2TjcHyjC6yypDa9z5NlATqiMdegQ3DSEw==",
+      "tarball": "https://registry.npmjs.org/@firetruck666/dsh-task-board/-/dsh-task-board-1.3.12.tgz",
+      "integrity": "sha512-zyW6NkqR3wVc55pw1J07pUeL+kVWOuQxw5hqJcxASZPeK7oudcakXXHqAd2+1ocSnFTugoSPCGLEbgluXWLgWg==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 418,
+      "filesChecked": 448,
       "display": {
         "icon": {
           "status": "included",
@@ -3692,10 +3692,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 3263449,
-        "unpackedBytes": 11113721,
-        "decodedBytes": 11439104,
-        "entries": 418,
+        "compressedBytes": 3418964,
+        "unpackedBytes": 11615126,
+        "decodedBytes": 11963392,
+        "entries": 448,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -3703,8 +3703,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-09-10T14:17:04.772Z",
-        "last30Days": 16,
-        "last90Days": 43
+        "last30Days": 18,
+        "last90Days": 45
       },
       "checks": [
         "registry-identity",
@@ -3832,18 +3832,18 @@
     },
     {
       "name": "@furongjun1999/dsh-memory",
-      "version": "0.9.6",
+      "version": "0.9.7",
       "license": "MIT",
       "repository": "https://github.com/FuRongJun-1999/dsh-memory",
       "repositorySource": "package",
-      "sourceCommit": "e770e8d7288bd8796becbe3782e4c3feff4f003c",
+      "sourceCommit": "66bcd5c07dbcaabf56805d945ed0752e928109c6",
       "metadataUrl": "https://registry.npmjs.org/%40furongjun1999%2Fdsh-memory",
-      "tarball": "https://registry.npmjs.org/@furongjun1999/dsh-memory/-/dsh-memory-0.9.6.tgz",
-      "integrity": "sha512-SdNSuOG2WOk8XOI1ALFyrbDD/bLpMtq6jN+QSV1n7a6C9G53OZP2y6v8QkdIv/SaPw+ISnUJueKcoUI1lWE2TA==",
+      "tarball": "https://registry.npmjs.org/@furongjun1999/dsh-memory/-/dsh-memory-0.9.7.tgz",
+      "integrity": "sha512-ni6WBVKPFKJl2uCwDSkHwsIkALNbi3++9qXL/WtSEiUPcUeh+4wr+uklDkmrJ12RYprUa3HYjF8lapZ575moEA==",
       "patch": [
         "package/dsh/cordis.patch.yml"
       ],
-      "filesChecked": 1744,
+      "filesChecked": 1747,
       "display": {
         "icon": {
           "status": "absent"
@@ -3852,10 +3852,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 8074307,
-        "unpackedBytes": 26685808,
-        "decodedBytes": 28141056,
-        "entries": 1873,
+        "compressedBytes": 8092326,
+        "unpackedBytes": 26814681,
+        "decodedBytes": 28269056,
+        "entries": 1876,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -3863,8 +3863,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-14T11:04:37.645Z",
-        "last30Days": 16,
-        "last90Days": 37
+        "last30Days": 17,
+        "last90Days": 38
       },
       "checks": [
         "registry-identity",
@@ -4116,7 +4116,7 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-23T11:17:07.806Z",
-        "last30Days": 49,
+        "last30Days": 48,
         "last90Days": 108
       },
       "checks": [
@@ -4491,7 +4491,7 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-17T04:41:44.778Z",
-        "last30Days": 29,
+        "last30Days": 28,
         "last90Days": 59
       },
       "checks": [
@@ -5276,18 +5276,18 @@
     },
     {
       "name": "@kenz1117/dsh-ui-usage-billing",
-      "version": "1.6.2",
+      "version": "1.6.3",
       "license": "MIT",
       "repository": "https://github.com/kenz1117/dsh-ui-usage-billing",
       "repositorySource": "package",
-      "sourceCommit": "b7cb1ffc47279c8acca6ee162cf8b6a7ef678d77",
+      "sourceCommit": "caf845e7b73120f24011cda8fe70f4cf6cd69ba6",
       "metadataUrl": "https://registry.npmjs.org/%40kenz1117%2Fdsh-ui-usage-billing",
-      "tarball": "https://registry.npmjs.org/@kenz1117/dsh-ui-usage-billing/-/dsh-ui-usage-billing-1.6.2.tgz",
-      "integrity": "sha512-luWn1ze/gj/aPPXo9TApwIkZ4f26ezJLgkW+PCoj4DdE2LZ2GOEwFuLVa3dlVW+NxXPbiqO40M3qvGJo6CaPPQ==",
+      "tarball": "https://registry.npmjs.org/@kenz1117/dsh-ui-usage-billing/-/dsh-ui-usage-billing-1.6.3.tgz",
+      "integrity": "sha512-89BkhEVphHr0TmdwU64cOZDlZvYY5N4V/O94c/ldpB7ohKDo1+1N9sX6JfB6hJEYFjocioh/Y4bpxRKTNs11Uw==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 80,
+      "filesChecked": 81,
       "display": {
         "icon": {
           "status": "absent"
@@ -5296,10 +5296,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 285779,
-        "unpackedBytes": 939299,
-        "decodedBytes": 1001472,
-        "entries": 80,
+        "compressedBytes": 291577,
+        "unpackedBytes": 953656,
+        "decodedBytes": 1016320,
+        "entries": 81,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -5307,8 +5307,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-16T06:50:03.891Z",
-        "last30Days": 40,
-        "last90Days": 155
+        "last30Days": 41,
+        "last90Days": 156
       },
       "checks": [
         "registry-identity",
@@ -5839,14 +5839,14 @@
     },
     {
       "name": "@linbin-mk/dsh-notify",
-      "version": "0.6.0",
+      "version": "0.6.1",
       "license": "MIT",
       "repository": "https://github.com/linbin-mk/dsh-notify",
       "repositorySource": "package",
-      "sourceCommit": "21eaf1a20fd768a83b388d880ffb78a0cec08844",
+      "sourceCommit": "4f7322af6601b2fc4de3533d9533fdabd1a836a5",
       "metadataUrl": "https://registry.npmjs.org/%40linbin-mk%2Fdsh-notify",
-      "tarball": "https://registry.npmjs.org/@linbin-mk/dsh-notify/-/dsh-notify-0.6.0.tgz",
-      "integrity": "sha512-rFvm5Ub8r1iGwgGPBpoMRTdZZDoFdBsKAf+HNLDDDBl4fcP1y2dA+EoHZ0OhAp5pP38RNv8GXENx6cUItTQGAQ==",
+      "tarball": "https://registry.npmjs.org/@linbin-mk/dsh-notify/-/dsh-notify-0.6.1.tgz",
+      "integrity": "sha512-4xFkpGktt0Wk75j78q24EdGENIF1MA9qt4NVOWQA0z0VbO9YF/PMq2GVaZsz260iH31ACN0FnBW1QDq5jWSLeg==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -5856,10 +5856,10 @@
           "status": "included",
           "source": "published-package",
           "path": "icon.png",
-          "url": "icons/5d676cac8a316ddf5e9915822ff3a459d6751c85c09ed9a9d5ebf1de89d9fccd.png",
+          "url": "icons/a49fb02df6a3efd111092fec2373c4d4ac73da3b68469906f99b94565c35eb48.png",
           "mime": "image/png",
-          "bytes": 71518,
-          "sha256": "5d676cac8a316ddf5e9915822ff3a459d6751c85c09ed9a9d5ebf1de89d9fccd"
+          "bytes": 12404,
+          "sha256": "a49fb02df6a3efd111092fec2373c4d4ac73da3b68469906f99b94565c35eb48"
         },
         "localized": [
           "en",
@@ -5868,9 +5868,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 170784,
-        "unpackedBytes": 413287,
-        "decodedBytes": 424448,
+        "compressedBytes": 112176,
+        "unpackedBytes": 357205,
+        "decodedBytes": 368640,
         "entries": 13,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -5879,8 +5879,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-09-22T03:25:48.195Z",
-        "last30Days": 8,
-        "last90Days": 8
+        "last30Days": 9,
+        "last90Days": 9
       },
       "checks": [
         "registry-identity",
@@ -5897,14 +5897,14 @@
     },
     {
       "name": "@linbin-mk/dsh-session-sync",
-      "version": "0.9.0",
+      "version": "0.9.1",
       "license": "MIT",
       "repository": "https://github.com/linbin-mk/dsh-session-sync",
       "repositorySource": "package",
-      "sourceCommit": "b48c8d6ac9d524f665109e19e33eb0d76ba109d3",
+      "sourceCommit": "78cd8b6480aae2a9e6d889a0058c6290883575e7",
       "metadataUrl": "https://registry.npmjs.org/%40linbin-mk%2Fdsh-session-sync",
-      "tarball": "https://registry.npmjs.org/@linbin-mk/dsh-session-sync/-/dsh-session-sync-0.9.0.tgz",
-      "integrity": "sha512-pW5HVfAO55DzbEJpi8E2l3hcvgxPVD1tBtKM1ODAJ66DM//oKW3p+mY0jmlFBS7w3ksKqNBzJD85IreZha4Y8w==",
+      "tarball": "https://registry.npmjs.org/@linbin-mk/dsh-session-sync/-/dsh-session-sync-0.9.1.tgz",
+      "integrity": "sha512-IjNKrssEQvj2R/e8TucmEwDHByC526m+Z6BYi/Wwp4GxXgVEpQm63vZp4NKVWQWNk1IiFfxTJAfYlIVOxIzSrg==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -5913,11 +5913,11 @@
         "icon": {
           "status": "included",
           "source": "published-package",
-          "path": "icon.svg",
-          "url": "icons/b3de2e77df4f17210f294d89d208204a7444e55c435529f2812a8449b2acb153.svg",
-          "mime": "image/svg+xml",
-          "bytes": 838,
-          "sha256": "b3de2e77df4f17210f294d89d208204a7444e55c435529f2812a8449b2acb153"
+          "path": "icon.png",
+          "url": "icons/721cf3e0af993acb52aacdb56d111ee28eb5c3436eabdcf02225bd2ac93fd955.png",
+          "mime": "image/png",
+          "bytes": 83594,
+          "sha256": "721cf3e0af993acb52aacdb56d111ee28eb5c3436eabdcf02225bd2ac93fd955"
         },
         "localized": [
           "en",
@@ -5926,9 +5926,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 187660,
-        "unpackedBytes": 722074,
-        "decodedBytes": 755712,
+        "compressedBytes": 273264,
+        "unpackedBytes": 807205,
+        "decodedBytes": 840704,
         "entries": 43,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -5937,8 +5937,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-09-22T12:48:41.958Z",
-        "last30Days": 17,
-        "last90Days": 17
+        "last30Days": 18,
+        "last90Days": 18
       },
       "checks": [
         "registry-identity",
@@ -7160,14 +7160,14 @@
     },
     {
       "name": "@lynn123411/dsh-web-auth-url",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "license": "MIT",
       "repository": "https://github.com/tttnny/my-dsh",
       "repositorySource": "package",
-      "sourceCommit": "ccc18a7d1cc778a086072df562ac10f874252778",
+      "sourceCommit": "37d597c7b2029fcde04efe61575db23954c3e1bc",
       "metadataUrl": "https://registry.npmjs.org/%40lynn123411%2Fdsh-web-auth-url",
-      "tarball": "https://registry.npmjs.org/@lynn123411/dsh-web-auth-url/-/dsh-web-auth-url-0.4.0.tgz",
-      "integrity": "sha512-J45E9Rvbm8PE8r61CJIGP4v0SPGmNtbHXJF4Vfzyslq6+RqHzqgkdIUK7PsIcMMkDi7lR9o2Vgc+4cgAVDSprg==",
+      "tarball": "https://registry.npmjs.org/@lynn123411/dsh-web-auth-url/-/dsh-web-auth-url-0.5.0.tgz",
+      "integrity": "sha512-UC5FWYxsEpppgY8XBizeuMTM9YwIqezuhbjJ+57ZQ1o4p3o1INVIPnFEAszSXr9w1vYG0YH3buvImSBt27nDrA==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -7189,9 +7189,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 17410,
-        "unpackedBytes": 46848,
-        "decodedBytes": 54784,
+        "compressedBytes": 10595,
+        "unpackedBytes": 27925,
+        "decodedBytes": 35840,
         "entries": 9,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -7200,8 +7200,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-09-11T12:33:15.851Z",
-        "last30Days": 12,
-        "last90Days": 13
+        "last30Days": 13,
+        "last90Days": 14
       },
       "checks": [
         "registry-identity",
@@ -7968,18 +7968,18 @@
     },
     {
       "name": "@modusensus/dsh-mneme",
-      "version": "0.9.2",
+      "version": "0.9.3",
       "license": "MIT",
       "repository": "https://github.com/slow-stack/mneme",
       "repositorySource": "package",
-      "sourceCommit": "1595bdc73af5b6671aadb6a7bf103fe5d07cf032",
+      "sourceCommit": "81b47a1f9533ef8383e7a376299f2df7d3441324",
       "metadataUrl": "https://registry.npmjs.org/%40modusensus%2Fdsh-mneme",
-      "tarball": "https://registry.npmjs.org/@modusensus/dsh-mneme/-/dsh-mneme-0.9.2.tgz",
-      "integrity": "sha512-aMFFAeaBvA0Vzh/tb1zLRC8dLVq/2DFputzNmzuvegxlFGDCMewZuTfVqT3kb+loCGyIiXpWWi8l8AB0Tq+APg==",
+      "tarball": "https://registry.npmjs.org/@modusensus/dsh-mneme/-/dsh-mneme-0.9.3.tgz",
+      "integrity": "sha512-x2JkmSZ3Ndkdl/JY1Vr8J2rTkOg9dHaUR8BuSSZnSkfIvKhsh2olZDv3W7Gx9gT3/6VxN6m5xB2rhcaB4RfTgw==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 355,
+      "filesChecked": 360,
       "display": {
         "icon": {
           "status": "included",
@@ -7997,10 +7997,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 1901259,
-        "unpackedBytes": 6589742,
-        "decodedBytes": 6861824,
-        "entries": 355,
+        "compressedBytes": 1937171,
+        "unpackedBytes": 6702038,
+        "decodedBytes": 6981120,
+        "entries": 360,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -8008,8 +8008,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-13T22:20:21.105Z",
-        "last30Days": 15,
-        "last90Days": 104
+        "last30Days": 16,
+        "last90Days": 105
       },
       "checks": [
         "registry-identity",
@@ -8640,7 +8640,7 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-13T13:23:14.016Z",
-        "last30Days": 5,
+        "last30Days": 4,
         "last90Days": 54
       },
       "checks": [
@@ -9587,14 +9587,14 @@
     },
     {
       "name": "@restregular/dsh-memory",
-      "version": "0.7.2",
+      "version": "0.8.0",
       "license": "MIT",
       "repository": "https://github.com/RestRegular/dsh-memory",
       "repositorySource": "package",
-      "sourceCommit": "db3c97fd845d2f4a77927ae5678129990fde4af6",
+      "sourceCommit": "e90047fdb61f3d453b91a9cbdee0c5f6b2e0c650",
       "metadataUrl": "https://registry.npmjs.org/%40restregular%2Fdsh-memory",
-      "tarball": "https://registry.npmjs.org/@restregular/dsh-memory/-/dsh-memory-0.7.2.tgz",
-      "integrity": "sha512-cjNGKBLOVY5Vq2Xt5i/9FvZJWC8PLN/1c7T6PVaFRhnRP5phuqhbBxAGBiQrZ9/BxndF7OT7+DsfXeHZ4EbMGw==",
+      "tarball": "https://registry.npmjs.org/@restregular/dsh-memory/-/dsh-memory-0.8.0.tgz",
+      "integrity": "sha512-rsZpVUFz54UKWNkX67d4P2Hbbe8//F1h8uCh7w+pbyWfI4ZzmxYGlbcThiGTnm0X3LWFueCqa4MBpxKtlmZB4A==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -9613,9 +9613,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 142972,
-        "unpackedBytes": 446242,
-        "decodedBytes": 471040,
+        "compressedBytes": 145281,
+        "unpackedBytes": 453421,
+        "decodedBytes": 478720,
         "entries": 31,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -9624,8 +9624,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-10-10T10:54:40.375Z",
-        "last30Days": 27,
-        "last90Days": 27
+        "last30Days": 29,
+        "last90Days": 29
       },
       "checks": [
         "registry-identity",
@@ -9694,14 +9694,14 @@
     },
     {
       "name": "@restregular/dsh-skill-center",
-      "version": "0.3.6",
+      "version": "0.3.11",
       "license": "MIT",
       "repository": "https://github.com/RestRegular/dsh-skill-center",
       "repositorySource": "package",
-      "sourceCommit": "7535b94afb1c8a894b0b5566c0b2b5d8c4eb6cb2",
+      "sourceCommit": "a5c39eebffb9ab5d4bf2874729578db99355aa22",
       "metadataUrl": "https://registry.npmjs.org/%40restregular%2Fdsh-skill-center",
-      "tarball": "https://registry.npmjs.org/@restregular/dsh-skill-center/-/dsh-skill-center-0.3.6.tgz",
-      "integrity": "sha512-MrEjaVdwfNvrqC6nHUOouVgWbB5kikm9FrtP6QOeKphureN9oXDv2TR/a5RQVnrJNGt74RvP8fHZhvT7yZynMA==",
+      "tarball": "https://registry.npmjs.org/@restregular/dsh-skill-center/-/dsh-skill-center-0.3.11.tgz",
+      "integrity": "sha512-1G4X3D0gVYBeAcpzy80Xw3GDtPYFrjvLZ+NCKDmT8zqynIKzQN/+M3/27sq1xle//+fB/oULpQHf8Ja0ql13pg==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -9720,9 +9720,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 63731,
-        "unpackedBytes": 199368,
-        "decodedBytes": 210432,
+        "compressedBytes": 71963,
+        "unpackedBytes": 226741,
+        "decodedBytes": 238080,
         "entries": 13,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -9731,8 +9731,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-10-16T10:43:10.934Z",
-        "last30Days": 13,
-        "last90Days": 13
+        "last30Days": 18,
+        "last90Days": 18
       },
       "checks": [
         "registry-identity",
@@ -11028,13 +11028,13 @@
     },
     {
       "name": "@viztor/dsh-opencode-patch",
-      "version": "1.1.1",
+      "version": "1.2.2",
       "license": "MIT",
       "repository": "https://github.com/viztor/dsh-opencode-patch",
       "repositorySource": "package",
       "metadataUrl": "https://registry.npmjs.org/%40viztor%2Fdsh-opencode-patch",
-      "tarball": "https://registry.npmjs.org/@viztor/dsh-opencode-patch/-/dsh-opencode-patch-1.1.1.tgz",
-      "integrity": "sha512-xi+Ogvzy6T7y3Lqg9SHK6I3R9VDCpJbrbOJPx/MzELfqirFL7fumecjPfJ07rmac81RXimDGEVfoDp2Nm1zCDA==",
+      "tarball": "https://registry.npmjs.org/@viztor/dsh-opencode-patch/-/dsh-opencode-patch-1.2.2.tgz",
+      "integrity": "sha512-juE14xTB+agq+x/73XALnVIPMriseC/fqHuJunC+flXLlQpd4WWOhDE8zNT5VSb17hMCtmvOTISL2Nr9LISsyA==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -11056,9 +11056,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 138987,
-        "unpackedBytes": 444074,
-        "decodedBytes": 455168,
+        "compressedBytes": 208041,
+        "unpackedBytes": 675056,
+        "decodedBytes": 685568,
         "entries": 13,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -11067,8 +11067,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-10-01T13:39:37.262Z",
-        "last30Days": 14,
-        "last90Days": 14
+        "last30Days": 17,
+        "last90Days": 17
       },
       "checks": [
         "registry-identity",
@@ -11422,18 +11422,18 @@
     },
     {
       "name": "@wenbin_wb/dsh-bridge",
-      "version": "2.14.2",
+      "version": "2.15.0",
       "license": "MIT",
       "repository": "https://github.com/wenbin-wb/dsh-bridge",
       "repositorySource": "package",
-      "sourceCommit": "93260408fedd1749a9a13656535917ce71be2eb4",
+      "sourceCommit": "f7a6ae0490d9baa96824819627314208c78cefe4",
       "metadataUrl": "https://registry.npmjs.org/%40wenbin_wb%2Fdsh-bridge",
-      "tarball": "https://registry.npmjs.org/@wenbin_wb/dsh-bridge/-/dsh-bridge-2.14.2.tgz",
-      "integrity": "sha512-lYIaEPpoXwHmipRIMlEquRXuKBJo7O1FJct64zKD8pcfR3BqE/KeN7I3v/zDJptuc3tc+mo9kU28JnwzgGQwrg==",
+      "tarball": "https://registry.npmjs.org/@wenbin_wb/dsh-bridge/-/dsh-bridge-2.15.0.tgz",
+      "integrity": "sha512-xj5ZA+szo/phb/8gccMse0ACmdNAEY8Sy/9tmH/KvFqlnaPdqJVdHDWK4PvxmNPVm4oHSIkPOMQj698lc2e0Qg==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 69,
+      "filesChecked": 73,
       "display": {
         "icon": {
           "status": "absent"
@@ -11445,10 +11445,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 1113828,
-        "unpackedBytes": 8150324,
-        "decodedBytes": 8205312,
-        "entries": 69,
+        "compressedBytes": 1202038,
+        "unpackedBytes": 8417857,
+        "decodedBytes": 8477184,
+        "entries": 73,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -11456,8 +11456,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-18T10:32:04.263Z",
-        "last30Days": 16,
-        "last90Days": 85
+        "last30Days": 17,
+        "last90Days": 86
       },
       "checks": [
         "registry-identity",
@@ -11860,13 +11860,13 @@
     },
     {
       "name": "@xmanrui/dsh-im",
-      "version": "5.1.0",
+      "version": "5.2.0",
       "license": "MIT",
       "repository": "https://github.com/xmanrui/dsh-im",
       "repositorySource": "package",
       "metadataUrl": "https://registry.npmjs.org/%40xmanrui%2Fdsh-im",
-      "tarball": "https://registry.npmjs.org/@xmanrui/dsh-im/-/dsh-im-5.1.0.tgz",
-      "integrity": "sha512-aXDEwBDEtJPpohX24gydrCt/1WYbicH7ikpRib0KzsBWauRF/zSoEtXhnJCU3aYpOiLAjQRIYXtY2vwB//h3Aw==",
+      "tarball": "https://registry.npmjs.org/@xmanrui/dsh-im/-/dsh-im-5.2.0.tgz",
+      "integrity": "sha512-VBeomX1VskjX8w3mKk0szKv3KCBXL/iQxcd8HpXgq07UOUKNj2E2viePSifW+oqu2xCDZ3vbks/g7zH6FpE7NA==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -11888,9 +11888,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 9673654,
-        "unpackedBytes": 21723915,
-        "decodedBytes": 22069760,
+        "compressedBytes": 9675860,
+        "unpackedBytes": 21731670,
+        "decodedBytes": 22077440,
         "entries": 443,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -11900,7 +11900,7 @@
       "releases": {
         "firstPublished": "2026-08-16T07:09:05.726Z",
         "last30Days": 32,
-        "last90Days": 121
+        "last90Days": 122
       },
       "checks": [
         "registry-identity",
@@ -11917,13 +11917,13 @@
     },
     {
       "name": "@xmoon76/dsh-pi-tui",
-      "version": "0.5.1",
+      "version": "0.5.3",
       "license": "MIT",
       "repository": "https://github.com/XMoon/dsh-pi-tui",
       "repositorySource": "package",
       "metadataUrl": "https://registry.npmjs.org/%40xmoon76%2Fdsh-pi-tui",
-      "tarball": "https://registry.npmjs.org/@xmoon76/dsh-pi-tui/-/dsh-pi-tui-0.5.1.tgz",
-      "integrity": "sha512-DujR8KAzoXQnoiiDDoN1Q5SxxQ+9wrwjlmuQwulwRoWxD33B0HqbHfmiNjg0iA5HrpE4cx5qzRNHKy4LhMG+6Q==",
+      "tarball": "https://registry.npmjs.org/@xmoon76/dsh-pi-tui/-/dsh-pi-tui-0.5.3.tgz",
+      "integrity": "sha512-wifBMNQajhZM9hTuVoaLpDOKTNm7dno2S37bi+kzNEbQf5mfWywpp8WMoOW/vHokBQ6Nb7b2cqWEFp6OuV4z8A==",
       "patch": [
         "package/cordis.patch.yml",
         "package/generated/dsh-presets/standard.patch.yml",
@@ -11931,7 +11931,7 @@
         "package/generated/dsh-presets/minimal.patch.yml",
         "package/generated/dsh-presets/cordis.patch.yml"
       ],
-      "filesChecked": 29,
+      "filesChecked": 37,
       "display": {
         "icon": {
           "status": "absent"
@@ -11940,10 +11940,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 1162033,
-        "unpackedBytes": 4322396,
-        "decodedBytes": 4345344,
-        "entries": 29,
+        "compressedBytes": 1433229,
+        "unpackedBytes": 5272995,
+        "decodedBytes": 5301760,
+        "entries": 37,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -11951,8 +11951,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-14T16:29:45.332Z",
-        "last30Days": 5,
-        "last90Days": 32
+        "last30Days": 6,
+        "last90Days": 33
       },
       "checks": [
         "registry-identity",
@@ -12218,18 +12218,18 @@
     },
     {
       "name": "@yolk_vat-y/dsh-project-memory",
-      "version": "0.6.2",
+      "version": "0.6.3",
       "license": "MIT",
       "repository": "https://github.com/00080000/dsh-project-memory",
       "repositorySource": "package",
-      "sourceCommit": "fe7ac6cab91784a34996aede007d3586f0ff2def",
+      "sourceCommit": "21fc69e3e98f3864677e091477b7d543a0e54939",
       "metadataUrl": "https://registry.npmjs.org/%40yolk_vat-y%2Fdsh-project-memory",
-      "tarball": "https://registry.npmjs.org/@yolk_vat-y/dsh-project-memory/-/dsh-project-memory-0.6.2.tgz",
-      "integrity": "sha512-FgOJ9Ljp+/5VvcgFWelAV/rox+6Rr482O6FT4IlPO4zKQ2GxlcjEO77E+potm4slt/M2yfDzV5zOaTVSYkRAWQ==",
+      "tarball": "https://registry.npmjs.org/@yolk_vat-y/dsh-project-memory/-/dsh-project-memory-0.6.3.tgz",
+      "integrity": "sha512-JaaTzkCJgv/GOxKfOCI1NwUU/tJ05EJbBT/z6jJ11ii0yjG62mQg+9DxiIQAutj37dOeeb6DpZURg7Y1E4BHpg==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 84,
+      "filesChecked": 85,
       "display": {
         "icon": {
           "status": "absent"
@@ -12238,10 +12238,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 450318,
-        "unpackedBytes": 1284981,
-        "decodedBytes": 1352704,
-        "entries": 84,
+        "compressedBytes": 460489,
+        "unpackedBytes": 1309137,
+        "decodedBytes": 1377280,
+        "entries": 85,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -12249,8 +12249,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-24T03:59:39.283Z",
-        "last30Days": 12,
-        "last90Days": 34
+        "last30Days": 13,
+        "last90Days": 35
       },
       "checks": [
         "registry-identity",
@@ -13510,8 +13510,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-05T13:40:30.987Z",
-        "last30Days": 4024,
-        "last90Days": 4940
+        "last30Days": 4036,
+        "last90Days": 4984
       },
       "checks": [
         "registry-identity",
@@ -15424,7 +15424,7 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-09-18T00:36:03.748Z",
-        "last30Days": 8,
+        "last30Days": 7,
         "last90Days": 9
       },
       "checks": [
@@ -15655,14 +15655,14 @@
     },
     {
       "name": "dsh-better-workspace",
-      "version": "0.32.0",
+      "version": "0.32.2",
       "license": "MIT",
       "repository": "https://github.com/KannaKuron/dsh-better-workspace",
       "repositorySource": "package",
-      "sourceCommit": "2925a569b3469a7e7406939611dfc2d886463703",
+      "sourceCommit": "a3291f3e250772ac55ec00dca3a6d628c9a872c8",
       "metadataUrl": "https://registry.npmjs.org/dsh-better-workspace",
-      "tarball": "https://registry.npmjs.org/dsh-better-workspace/-/dsh-better-workspace-0.32.0.tgz",
-      "integrity": "sha512-FxHLa/3cNAqa4ze3SWlu6IMuRc3EAoYA7YuvqvV63EDxqZe9TYfGfFrsPOjSTLX/mg/kPnSsLEv1AWPoWeUqiw==",
+      "tarball": "https://registry.npmjs.org/dsh-better-workspace/-/dsh-better-workspace-0.32.2.tgz",
+      "integrity": "sha512-If+hGNggn4s190o9Iv/3Mv04P6naifu+ir5YlN2OrHge4K8BkcqWXdSDnqZj+e+l+zz6iLRjLtTl83Eryo5LAA==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -15684,9 +15684,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 182068,
-        "unpackedBytes": 663332,
-        "decodedBytes": 672768,
+        "compressedBytes": 183251,
+        "unpackedBytes": 667101,
+        "decodedBytes": 676352,
         "entries": 11,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -15695,8 +15695,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-30T11:51:24.175Z",
-        "last30Days": 17,
-        "last90Days": 52
+        "last30Days": 19,
+        "last90Days": 54
       },
       "checks": [
         "registry-identity",
@@ -15893,7 +15893,7 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-20T10:15:16.157Z",
-        "last30Days": 45,
+        "last30Days": 44,
         "last90Days": 76
       },
       "checks": [
@@ -16037,14 +16037,14 @@
     },
     {
       "name": "dsh-builtin-browser",
-      "version": "0.4.13",
+      "version": "0.4.14",
       "license": "MIT",
       "repository": "https://github.com/wqty123/dsh-browser",
       "repositorySource": "package",
-      "sourceCommit": "3082d3cb14d7331639b0c41de60de25ce184a45a",
+      "sourceCommit": "656027df41a0a92ae80f61c56252feca6f689027",
       "metadataUrl": "https://registry.npmjs.org/dsh-builtin-browser",
-      "tarball": "https://registry.npmjs.org/dsh-builtin-browser/-/dsh-builtin-browser-0.4.13.tgz",
-      "integrity": "sha512-G2FdCfcmjNsDaOBO2azw0zCFrfSBpaTKqVoAUPO0fTuVYTA7hKeUtsli0z2uCuGKvfrwSGPvUN/Ws7m0GkndnA==",
+      "tarball": "https://registry.npmjs.org/dsh-builtin-browser/-/dsh-builtin-browser-0.4.14.tgz",
+      "integrity": "sha512-MKaO0aM8gzDES/aAQdgpbGdlalhHABn6+d6LNtGUhUOsYi9+6uUyPOYxVH1kjQXSvTH2i/hf0sTKwXG5JRZxMA==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -16057,9 +16057,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 540024,
-        "unpackedBytes": 1837057,
-        "decodedBytes": 1895936,
+        "compressedBytes": 547786,
+        "unpackedBytes": 1860645,
+        "decodedBytes": 1920000,
         "entries": 75,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -16068,8 +16068,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-14T19:01:45.041Z",
-        "last30Days": 16,
-        "last90Days": 39
+        "last30Days": 17,
+        "last90Days": 40
       },
       "checks": [
         "registry-identity",
@@ -16193,14 +16193,13 @@
     },
     {
       "name": "dsh-calendar",
-      "version": "0.11.0",
+      "version": "0.11.2",
       "license": "MIT",
       "repository": "https://github.com/STARDUSTLC666/dsh-calendar",
       "repositorySource": "package",
-      "sourceCommit": "78ccca4cb49c09b1a11771bc08c97ec0f6798510",
       "metadataUrl": "https://registry.npmjs.org/dsh-calendar",
-      "tarball": "https://registry.npmjs.org/dsh-calendar/-/dsh-calendar-0.11.0.tgz",
-      "integrity": "sha512-RV7G23ZdPbuwewg+7vJfXIlNDxOeiOrjS0Cg24MXmCC642Y+ZsDg5oZR5KdpATV2CbH8YdotvAKqq8s4BMxMeA==",
+      "tarball": "https://registry.npmjs.org/dsh-calendar/-/dsh-calendar-0.11.2.tgz",
+      "integrity": "sha512-rf6NoEdN/JM/YPdoMPLJnjIVRp5y3brjbo/zEYBuSAl44WBXnPJZ7PSwlU0HtwGqphHOo6l5IRW2qoXaCKrZbQ==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -16213,9 +16212,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 144647,
-        "unpackedBytes": 436006,
-        "decodedBytes": 473600,
+        "compressedBytes": 147516,
+        "unpackedBytes": 444482,
+        "decodedBytes": 483328,
         "entries": 47,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -16224,8 +16223,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-13T22:51:45.405Z",
-        "last30Days": 15,
-        "last90Days": 32
+        "last30Days": 17,
+        "last90Days": 34
       },
       "checks": [
         "registry-identity",
@@ -16454,14 +16453,14 @@
     },
     {
       "name": "dsh-channel-wechat",
-      "version": "0.2.4",
+      "version": "0.2.5",
       "license": "MIT",
       "repository": "https://github.com/wangx-wx/dsh-channel-wechat",
       "repositorySource": "package",
-      "sourceCommit": "9b0fbc64d71bc1d885c2ca3bd4ace23570be6fdc",
+      "sourceCommit": "4f5e0824dd29b23a81a3bc6c2532a61932618824",
       "metadataUrl": "https://registry.npmjs.org/dsh-channel-wechat",
-      "tarball": "https://registry.npmjs.org/dsh-channel-wechat/-/dsh-channel-wechat-0.2.4.tgz",
-      "integrity": "sha512-BLKDWPN3k7HIqJJyEOJ/Qmq4NB8O5FzV0VpdKRx/n7kOfh1moWftP7TC+yCTZ7pXbOhDbN5RHTQ9U+Snj+N2YA==",
+      "tarball": "https://registry.npmjs.org/dsh-channel-wechat/-/dsh-channel-wechat-0.2.5.tgz",
+      "integrity": "sha512-sSXXGKqrozL8Gfuvq4P7A8GoSpQyd4pX6mg9uTstLfVUu8Nv6moKjt/Agl0zub8at0oa8pChtJvBAnyUyXM7Pg==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -16483,9 +16482,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 99442,
-        "unpackedBytes": 319681,
-        "decodedBytes": 330240,
+        "compressedBytes": 102452,
+        "unpackedBytes": 330654,
+        "decodedBytes": 341504,
         "entries": 12,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -16494,8 +16493,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-10-15T14:16:48.186Z",
-        "last30Days": 9,
-        "last90Days": 9
+        "last30Days": 10,
+        "last90Days": 10
       },
       "checks": [
         "registry-identity",
@@ -16785,18 +16784,18 @@
     },
     {
       "name": "dsh-claude-code-desktop-theme",
-      "version": "2.1.5",
+      "version": "2.2.0",
       "license": "MIT",
       "repository": "https://github.com/165890/dsh-claude-code-desktop-theme",
       "repositorySource": "package",
-      "sourceCommit": "1511808987a76e2649e61c5a973e5b491daa06f9",
+      "sourceCommit": "a2f8b22248d9ca32c4854af5412a32222e433c84",
       "metadataUrl": "https://registry.npmjs.org/dsh-claude-code-desktop-theme",
-      "tarball": "https://registry.npmjs.org/dsh-claude-code-desktop-theme/-/dsh-claude-code-desktop-theme-2.1.5.tgz",
-      "integrity": "sha512-28j2GZ6J+Y+MZNEZ658xvvfJxjwQoVqQEQEdFixSyD/3oC8u2tWKghcspxDrsr+wmUBebUwRESKXu8sxfSbWXw==",
+      "tarball": "https://registry.npmjs.org/dsh-claude-code-desktop-theme/-/dsh-claude-code-desktop-theme-2.2.0.tgz",
+      "integrity": "sha512-qML0mHvpCYp7ppsiNp0OyZx9jI3iJPjZpb0LEf8TH+zPk4veNLyMuH2E6ZOuwrh4IxgCBe4gAylmbs366Nb/Xw==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 16,
+      "filesChecked": 23,
       "display": {
         "icon": {
           "status": "included",
@@ -16814,10 +16813,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 1156202,
-        "unpackedBytes": 1304870,
-        "decodedBytes": 1318400,
-        "entries": 16,
+        "compressedBytes": 4780007,
+        "unpackedBytes": 5973805,
+        "decodedBytes": 5992960,
+        "entries": 23,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -16825,8 +16824,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-10-18T09:32:55.464Z",
-        "last30Days": 7,
-        "last90Days": 7
+        "last30Days": 10,
+        "last90Days": 10
       },
       "checks": [
         "registry-identity",
@@ -17102,6 +17101,63 @@
       ]
     },
     {
+      "name": "dsh-client-ui-history-nav",
+      "version": "1.5.0",
+      "license": "MIT",
+      "repository": "https://github.com/Self-Identity/dsh-client-ui-history-nav",
+      "repositorySource": "package",
+      "sourceCommit": "afd61c851fd938c2aeab2e28a88f30f90348719c",
+      "metadataUrl": "https://registry.npmjs.org/dsh-client-ui-history-nav",
+      "tarball": "https://registry.npmjs.org/dsh-client-ui-history-nav/-/dsh-client-ui-history-nav-1.5.0.tgz",
+      "integrity": "sha512-eMBl/kUvEpmlF7AohjUVaD1B45a3uDjE8WcFo+nw5Fku/iyxOlYVxQRPw4oDKPRyF9wXD+iLEfzajx88YLbcRQ==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 11,
+      "display": {
+        "icon": {
+          "status": "included",
+          "source": "published-package",
+          "path": "icon.svg",
+          "url": "icons/d69dca47a20c2a7b701ccc720fc011fa35fd95befc0303e2b6de7e65393914b1.svg",
+          "mime": "image/svg+xml",
+          "bytes": 387,
+          "sha256": "d69dca47a20c2a7b701ccc720fc011fa35fd95befc0303e2b6de7e65393914b1"
+        },
+        "localized": [
+          "en",
+          "zh"
+        ],
+        "warnings": []
+      },
+      "archive": {
+        "compressedBytes": 20781,
+        "unpackedBytes": 71381,
+        "decodedBytes": 80384,
+        "entries": 11,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
+      "lifecycleScripts": [],
+      "releases": {
+        "firstPublished": "2026-10-19T17:11:04.366Z",
+        "last30Days": 2,
+        "last90Days": 2
+      },
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
       "name": "dsh-client-ui-notes",
       "version": "0.1.10",
       "license": "MIT",
@@ -17203,6 +17259,64 @@
         "firstPublished": "2026-10-11T15:41:50.036Z",
         "last30Days": 14,
         "last90Days": 14
+      },
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
+      "name": "dsh-client-ui-thick-scrollbar",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/Self-Identity/dsh-client-ui-thick-scrollbar",
+      "repositorySource": "package",
+      "sourceCommit": "e91b2c512976f497d8b63d3263875aefd68621f5",
+      "metadataUrl": "https://registry.npmjs.org/dsh-client-ui-thick-scrollbar",
+      "tarball": "https://registry.npmjs.org/dsh-client-ui-thick-scrollbar/-/dsh-client-ui-thick-scrollbar-1.0.0.tgz",
+      "integrity": "sha512-agKEZLcqejpOISILhlDSGIeh1wTi3oI7jR3nsgIHV78uxT4TgwOmI+RnR+7mkcrtjXVvtBBDuNyqWP3hGmnulA==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 11,
+      "display": {
+        "icon": {
+          "status": "included",
+          "source": "published-package",
+          "path": "icon.svg",
+          "url": "icons/708c7546b1357dbc8ff0ba588405161d7e5e3c7169dba84441a79f772dc207df.svg",
+          "mime": "image/svg+xml",
+          "bytes": 284,
+          "sha256": "708c7546b1357dbc8ff0ba588405161d7e5e3c7169dba84441a79f772dc207df"
+        },
+        "localized": [
+          "en",
+          "zh"
+        ],
+        "warnings": []
+      },
+      "archive": {
+        "compressedBytes": 13487,
+        "unpackedBytes": 41561,
+        "decodedBytes": 51200,
+        "entries": 11,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
+      "lifecycleScripts": [],
+      "releases": {
+        "firstPublished": "2026-10-19T17:11:10.247Z",
+        "last30Days": 2,
+        "last90Days": 2
       },
       "checks": [
         "registry-identity",
@@ -17322,13 +17436,13 @@
     },
     {
       "name": "dsh-codex-subscription",
-      "version": "3.1.1",
+      "version": "3.1.2",
       "license": "MIT",
       "repository": "https://github.com/WSL043/dsh-codex-subscription",
       "repositorySource": "package",
       "metadataUrl": "https://registry.npmjs.org/dsh-codex-subscription",
-      "tarball": "https://registry.npmjs.org/dsh-codex-subscription/-/dsh-codex-subscription-3.1.1.tgz",
-      "integrity": "sha512-f1FdJ5Ea89B5UFATyapQuOSD2Ho5c2RglmpU6wJ1Yk3syQkQ2mb0pW4ERxOtPAP3EhJWV5I+evaX6Jl6SLD/tQ==",
+      "tarball": "https://registry.npmjs.org/dsh-codex-subscription/-/dsh-codex-subscription-3.1.2.tgz",
+      "integrity": "sha512-YRokBnwPT5cO0meB6fQQ7EVA7w9AeG4NLNv7VQ+Rs/9Is194lhu6dDUZt7l3/LnPUP17XSY5BNc8iJOXLMcMeQ==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -17350,9 +17464,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 393329,
-        "unpackedBytes": 1451361,
-        "decodedBytes": 1463296,
+        "compressedBytes": 390471,
+        "unpackedBytes": 1446291,
+        "decodedBytes": 1458176,
         "entries": 14,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -17361,8 +17475,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-16T22:51:12.524Z",
-        "last30Days": 58,
-        "last90Days": 121
+        "last30Days": 59,
+        "last90Days": 122
       },
       "checks": [
         "registry-identity",
@@ -17483,18 +17597,18 @@
     },
     {
       "name": "dsh-composer-glass",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "license": "MIT",
       "repository": "https://github.com/Lbunc/dsh-composer-glass",
       "repositorySource": "package",
-      "sourceCommit": "139cdac2033915bf9534e9fedd506d35339d7e5f",
+      "sourceCommit": "6b42e405e4668b592fd2ad106c06d2f9fd7a7927",
       "metadataUrl": "https://registry.npmjs.org/dsh-composer-glass",
-      "tarball": "https://registry.npmjs.org/dsh-composer-glass/-/dsh-composer-glass-1.0.1.tgz",
-      "integrity": "sha512-Zs5nvYVrm9JmlOj3W57nEXKLk3HFwi37fE1drxdhTiMugjdl4rPmXd2AkncjQ3praaqHnVBYXsfI4BYxHhP7uw==",
+      "tarball": "https://registry.npmjs.org/dsh-composer-glass/-/dsh-composer-glass-1.1.0.tgz",
+      "integrity": "sha512-8UdTqJh+Sswb4DKaw1MuCgpM/nCfkxvBQ/iEhhC2DDm6LuC0AwREtvaBxfLsdoaKbdqdvzgvCa0i0+8TD9nKqg==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 13,
+      "filesChecked": 14,
       "display": {
         "icon": {
           "status": "included",
@@ -17512,10 +17626,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 6470172,
-        "unpackedBytes": 6549079,
-        "decodedBytes": 6560256,
-        "entries": 13,
+        "compressedBytes": 9374792,
+        "unpackedBytes": 9499635,
+        "decodedBytes": 9511424,
+        "entries": 14,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -17523,8 +17637,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-09-12T17:04:46.213Z",
-        "last30Days": 5,
-        "last90Days": 7
+        "last30Days": 6,
+        "last90Days": 8
       },
       "checks": [
         "registry-identity",
@@ -17928,18 +18042,18 @@
     },
     {
       "name": "dsh-connect-atomcode",
-      "version": "0.6.0",
+      "version": "0.6.1",
       "license": "MIT",
       "repository": "https://github.com/eghrhegpe/dsh-connect-atomcode",
       "repositorySource": "package",
-      "sourceCommit": "f6bcdb86ae48f5b61cd07611eb09283ffd1de97b",
+      "sourceCommit": "78c8e17fe1cd98b70dd0318982df09fef76d3131",
       "metadataUrl": "https://registry.npmjs.org/dsh-connect-atomcode",
-      "tarball": "https://registry.npmjs.org/dsh-connect-atomcode/-/dsh-connect-atomcode-0.6.0.tgz",
-      "integrity": "sha512-l87RhyIQnGZl0rJfC+dWridy+tfGaMO1OI+Ysi2mZ6jg/U0zsXFzuxyBWUCkB/57JymfhXPgj+JVpc7236nxgw==",
+      "tarball": "https://registry.npmjs.org/dsh-connect-atomcode/-/dsh-connect-atomcode-0.6.1.tgz",
+      "integrity": "sha512-ajmLYQ2Q9iNqUY6cajIHNOOs+8+YYg9zyWnpbGJ6z/+7x+Eh0f0o8+EwYFtWInF23DZY0vM1UGUsI/j0Bxr0rw==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 27,
+      "filesChecked": 28,
       "display": {
         "icon": {
           "status": "included",
@@ -17957,10 +18071,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 137742,
-        "unpackedBytes": 389480,
-        "decodedBytes": 410112,
-        "entries": 27,
+        "compressedBytes": 138136,
+        "unpackedBytes": 390545,
+        "decodedBytes": 411648,
+        "entries": 28,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -17968,8 +18082,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-10-16T11:16:27.542Z",
-        "last30Days": 6,
-        "last90Days": 6
+        "last30Days": 7,
+        "last90Days": 7
       },
       "checks": [
         "registry-identity",
@@ -17986,18 +18100,18 @@
     },
     {
       "name": "dsh-connect-modelscope-token-plan",
-      "version": "0.6.3",
+      "version": "0.6.4",
       "license": "MIT",
       "repository": "https://github.com/eghrhegpe/dsh-connect-modelscope-token-plan",
       "repositorySource": "package",
-      "sourceCommit": "ee62d27f23e2d3f9b46f010adf799db64ff84778",
+      "sourceCommit": "af6aff96f9b4123218eb22f6f73a22335a2c6b01",
       "metadataUrl": "https://registry.npmjs.org/dsh-connect-modelscope-token-plan",
-      "tarball": "https://registry.npmjs.org/dsh-connect-modelscope-token-plan/-/dsh-connect-modelscope-token-plan-0.6.3.tgz",
-      "integrity": "sha512-lp27ZrbvSfhfz8ZRPZ5Btkd1QFHsWMPZ7GWMvMHiS9nPUaPejg6hUaG5a8A7giuUcSEtxhhO6RUqgT4zLdUjiw==",
+      "tarball": "https://registry.npmjs.org/dsh-connect-modelscope-token-plan/-/dsh-connect-modelscope-token-plan-0.6.4.tgz",
+      "integrity": "sha512-Xkser/vkYPraZLuadtVS6nHzzO47yBdWI22F5kqHmZaEcWghsnxmlHmcuvBW+su2r4QvTo+/H9Ion1wsLuwwbw==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 16,
+      "filesChecked": 17,
       "display": {
         "icon": {
           "status": "included",
@@ -18015,10 +18129,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 385287,
-        "unpackedBytes": 771741,
-        "decodedBytes": 783872,
-        "entries": 16,
+        "compressedBytes": 417552,
+        "unpackedBytes": 806320,
+        "decodedBytes": 820224,
+        "entries": 17,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -18026,8 +18140,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-10-05T03:22:51.325Z",
-        "last30Days": 8,
-        "last90Days": 8
+        "last30Days": 9,
+        "last90Days": 9
       },
       "checks": [
         "registry-identity",
@@ -18157,14 +18271,14 @@
     },
     {
       "name": "dsh-connect-trae",
-      "version": "4.0.0",
+      "version": "4.0.1",
       "license": "MIT",
       "repository": "https://github.com/dingminhua/dsh-connect-trae",
       "repositorySource": "package",
-      "sourceCommit": "e8fa9b66b47ed6e85b630a5b9e7ed3e7bb0c75ce",
+      "sourceCommit": "eca601c8cb0aba6258d2031415cdf2fd174662f0",
       "metadataUrl": "https://registry.npmjs.org/dsh-connect-trae",
-      "tarball": "https://registry.npmjs.org/dsh-connect-trae/-/dsh-connect-trae-4.0.0.tgz",
-      "integrity": "sha512-0eSktAS3Xfxe+XbBaJ9gqj1jLFecSa5t5zQb5yopaaLXA/mWNGAc0NfUIcoFwPAWu/ijZxowvy/ac4GipFNldw==",
+      "tarball": "https://registry.npmjs.org/dsh-connect-trae/-/dsh-connect-trae-4.0.1.tgz",
+      "integrity": "sha512-o95EdvB5Tt6Fon7BOAh9UNP8CON4EVs8dkRtmAuwqkXL5T0WxFZ/yehIZR6+P9X7N3xiYTt2SXj8PDvq7N08PA==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -18183,9 +18297,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 634303,
-        "unpackedBytes": 1503567,
-        "decodedBytes": 1516544,
+        "compressedBytes": 637626,
+        "unpackedBytes": 1512878,
+        "decodedBytes": 1525248,
         "entries": 15,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -18194,8 +18308,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-29T18:08:50.108Z",
-        "last30Days": 32,
-        "last90Days": 47
+        "last30Days": 33,
+        "last90Days": 48
       },
       "checks": [
         "registry-identity",
@@ -18454,18 +18568,18 @@
     },
     {
       "name": "dsh-continual-evolve",
-      "version": "0.19.0",
+      "version": "0.19.1",
       "license": "MIT",
       "repository": "https://github.com/ZK-Andy/dsh-continual-evolve",
       "repositorySource": "package",
-      "sourceCommit": "2ee2abd16f606ae8f6e474907c23f8816ae35370",
+      "sourceCommit": "88c346f9d4a9765ea90ebcace488323d5df047ad",
       "metadataUrl": "https://registry.npmjs.org/dsh-continual-evolve",
-      "tarball": "https://registry.npmjs.org/dsh-continual-evolve/-/dsh-continual-evolve-0.19.0.tgz",
-      "integrity": "sha512-BokcV/OxBZRM3G7Fpl7pVB0lE5d8jPZNP9kFazuw7m8oIVciAIh9mVAYB6d8oR5RarMhrvO/DN3awYhI7SYVLQ==",
+      "tarball": "https://registry.npmjs.org/dsh-continual-evolve/-/dsh-continual-evolve-0.19.1.tgz",
+      "integrity": "sha512-B16qHzIgc83//BzW0gdOP7GgRWOK692fbQn20k1RZsm54VXxvjK4+/+mtPDcQorbZfE6oChzLsVPCMJcElqr7w==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 152,
+      "filesChecked": 204,
       "display": {
         "icon": {
           "status": "absent"
@@ -18477,10 +18591,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 230200,
-        "unpackedBytes": 793580,
-        "decodedBytes": 910848,
-        "entries": 152,
+        "compressedBytes": 274230,
+        "unpackedBytes": 944715,
+        "decodedBytes": 1102848,
+        "entries": 204,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -18488,8 +18602,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-15T14:54:57.064Z",
-        "last30Days": 51,
-        "last90Days": 58
+        "last30Days": 52,
+        "last90Days": 59
       },
       "checks": [
         "registry-identity",
@@ -18719,14 +18833,14 @@
     },
     {
       "name": "dsh-cpa-switch",
-      "version": "0.16.1",
+      "version": "0.17.0",
       "license": "MIT",
       "repository": "https://github.com/cslkkl/dsh-cpa-switch",
       "repositorySource": "package",
-      "sourceCommit": "66ebaf35e17ebd73fe06d750038ffdc53be058ac",
+      "sourceCommit": "f5707ff1b00d19626b167ce3a0f622d32b2dfdbd",
       "metadataUrl": "https://registry.npmjs.org/dsh-cpa-switch",
-      "tarball": "https://registry.npmjs.org/dsh-cpa-switch/-/dsh-cpa-switch-0.16.1.tgz",
-      "integrity": "sha512-MX40B/fuObyJxnR+4A5CY+vszU+b90zBj61s37dnL1UURfYEWXavHfa49jUBHOtjUagaO9+koV3lJqUG7QOTSg==",
+      "tarball": "https://registry.npmjs.org/dsh-cpa-switch/-/dsh-cpa-switch-0.17.0.tgz",
+      "integrity": "sha512-crNdPFiGXATy6g58+F4tKpG4aqkrdCFdsoFff3BkccpU+RMHWiLrmv3UczKymedQHZ766Xd8pyOmjo/lN2g5LA==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -18748,9 +18862,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 211715,
-        "unpackedBytes": 610882,
-        "decodedBytes": 621568,
+        "compressedBytes": 214701,
+        "unpackedBytes": 619478,
+        "decodedBytes": 629760,
         "entries": 12,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -18759,8 +18873,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-10-03T17:39:48.647Z",
-        "last30Days": 22,
-        "last90Days": 22
+        "last30Days": 23,
+        "last90Days": 23
       },
       "checks": [
         "registry-identity",
@@ -20217,7 +20331,7 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-18T14:47:10.032Z",
-        "last30Days": 2,
+        "last30Days": 1,
         "last90Days": 37
       },
       "checks": [
@@ -20332,13 +20446,13 @@
     },
     {
       "name": "dsh-email",
-      "version": "0.17.1",
+      "version": "0.17.2",
       "license": "MIT",
       "repository": "https://github.com/STARDUSTLC666/dsh-email",
       "repositorySource": "package",
       "metadataUrl": "https://registry.npmjs.org/dsh-email",
-      "tarball": "https://registry.npmjs.org/dsh-email/-/dsh-email-0.17.1.tgz",
-      "integrity": "sha512-M5tHnAFB7pOwzcVxGwzYkARHwo/S/yLSChw/50uROggaisuh5kPFfRi1KpHefQX49o4BHMQs2hAoiBKTIT2tKA==",
+      "tarball": "https://registry.npmjs.org/dsh-email/-/dsh-email-0.17.2.tgz",
+      "integrity": "sha512-RSEUdXLta9DrP0RISluv2dSRgbVySvgD84dVvrHfmoYpCOqfJ9upM7Xnj4MekHvfl8mCxsueuA/8CAMRBWaBxA==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -20351,9 +20465,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 470740,
-        "unpackedBytes": 950334,
-        "decodedBytes": 997888,
+        "compressedBytes": 471290,
+        "unpackedBytes": 951342,
+        "decodedBytes": 998400,
         "entries": 59,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -20362,8 +20476,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-13T20:25:23.986Z",
-        "last30Days": 18,
-        "last90Days": 48
+        "last30Days": 19,
+        "last90Days": 49
       },
       "checks": [
         "registry-identity",
@@ -21431,14 +21545,14 @@
     },
     {
       "name": "dsh-free-search",
-      "version": "0.9.6",
+      "version": "0.9.7",
       "license": "MIT",
       "repository": "https://github.com/DDDMUC/dsh-free-search",
       "repositorySource": "package",
-      "sourceCommit": "258925aec4cf0efd4a19c978693207a981ab1fba",
+      "sourceCommit": "b09e67110e90e2a710793d0ad073ab4ff10e291e",
       "metadataUrl": "https://registry.npmjs.org/dsh-free-search",
-      "tarball": "https://registry.npmjs.org/dsh-free-search/-/dsh-free-search-0.9.6.tgz",
-      "integrity": "sha512-WmZfwncprtFfSWG9wOgeNhwTzEp03IKSbbsvBXQ38hqWGSTwOWdE2nzuuDTmQ8Yvq59YwzErCs9eSRM10zGYuQ==",
+      "tarball": "https://registry.npmjs.org/dsh-free-search/-/dsh-free-search-0.9.7.tgz",
+      "integrity": "sha512-VQDndiUxWWkcXhsOHT96T9Bge20kFX70PHgMzfM2hAm5Ll/vUBLWxkHf92LSFzB0rSgVLU4YaH/mfuJDT5Nk8Q==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -21451,9 +21565,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 193554,
-        "unpackedBytes": 658368,
-        "decodedBytes": 672256,
+        "compressedBytes": 199212,
+        "unpackedBytes": 673602,
+        "decodedBytes": 687616,
         "entries": 17,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -21462,8 +21576,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-15T20:30:58.522Z",
-        "last30Days": 38,
-        "last90Days": 73
+        "last30Days": 39,
+        "last90Days": 74
       },
       "checks": [
         "registry-identity",
@@ -22760,13 +22874,13 @@
     },
     {
       "name": "dsh-hackatime",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "license": "MIT",
       "repository": "https://github.com/namandhakad712/dsh-hackatime",
       "repositorySource": "package",
       "metadataUrl": "https://registry.npmjs.org/dsh-hackatime",
-      "tarball": "https://registry.npmjs.org/dsh-hackatime/-/dsh-hackatime-0.4.0.tgz",
-      "integrity": "sha512-TbgNrrNAoPYUZsIvAbM7IIt3CWddQbKqcLEOZ2KK5uLBtliiSHgKeHsyvCgIq+eKI7jJsr7c0kbfl+FSzieE2w==",
+      "tarball": "https://registry.npmjs.org/dsh-hackatime/-/dsh-hackatime-0.5.0.tgz",
+      "integrity": "sha512-yrBcaFtUQwSU21wN0zXlFYFwW9IYqm1bYOI4QWWSCQCOwXMf2CXHg8dObp6PtPtI59m7nT5I/PZhgdaRVCU37A==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -22785,9 +22899,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 240090,
-        "unpackedBytes": 342964,
-        "decodedBytes": 357888,
+        "compressedBytes": 243974,
+        "unpackedBytes": 354901,
+        "decodedBytes": 370176,
         "entries": 18,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -22796,8 +22910,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-10-09T14:37:04.543Z",
-        "last30Days": 16,
-        "last90Days": 16
+        "last30Days": 17,
+        "last90Days": 17
       },
       "checks": [
         "registry-identity",
@@ -23542,14 +23656,14 @@
     },
     {
       "name": "dsh-im-companion",
-      "version": "0.2.16",
+      "version": "0.2.18",
       "license": "MIT",
       "repository": "https://github.com/FeatherHunter/dsh-im-companion",
       "repositorySource": "package",
-      "sourceCommit": "b3950d87dfbdaae29d35e08b3b8b3340ebfd6622",
+      "sourceCommit": "9f5b8cbcee6a151284ef21ea1607bfbc5345e612",
       "metadataUrl": "https://registry.npmjs.org/dsh-im-companion",
-      "tarball": "https://registry.npmjs.org/dsh-im-companion/-/dsh-im-companion-0.2.16.tgz",
-      "integrity": "sha512-N1O1+PqRUjBO89Re0MfC+w55+zPqgdGEzvwJDqA5J8uU1gBOMTOxfOvPXrkYZKJ+E714XIqiT8Ipi07W7T+OYQ==",
+      "tarball": "https://registry.npmjs.org/dsh-im-companion/-/dsh-im-companion-0.2.18.tgz",
+      "integrity": "sha512-2McK4HkTbkONu/d8AuPBZNnacvAPT7WRy7DJ/e0+55GtQGnrWxnHISlox8nlrI568qMyQqvm6F/EQUIwSXG5cA==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -23562,9 +23676,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 913238,
-        "unpackedBytes": 3348025,
-        "decodedBytes": 3412992,
+        "compressedBytes": 929669,
+        "unpackedBytes": 3414106,
+        "decodedBytes": 3479552,
         "entries": 82,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -23573,8 +23687,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-09-04T15:15:37.282Z",
-        "last30Days": 17,
-        "last90Days": 34
+        "last30Days": 19,
+        "last90Days": 36
       },
       "checks": [
         "registry-identity",
@@ -23591,18 +23705,18 @@
     },
     {
       "name": "dsh-image-gen",
-      "version": "0.9.1",
+      "version": "0.9.2",
       "license": "Apache-2.0",
       "repository": "https://github.com/shanliuling/dsh-image-gen",
       "repositorySource": "package",
-      "sourceCommit": "b128d0d38416360f6835c07331bc5b78ddcd242a",
+      "sourceCommit": "aca17e7f87d9a5dc88898c3b998b99ca74d3e2d4",
       "metadataUrl": "https://registry.npmjs.org/dsh-image-gen",
-      "tarball": "https://registry.npmjs.org/dsh-image-gen/-/dsh-image-gen-0.9.1.tgz",
-      "integrity": "sha512-uW9CMPH/cd1mddv9b84AXD2SrHqqJ6Wgd2gC9EcLs6xdd1dzzkyYMECMwRtVwkfE56jVphzYeGmyiPVMbY9fYw==",
+      "tarball": "https://registry.npmjs.org/dsh-image-gen/-/dsh-image-gen-0.9.2.tgz",
+      "integrity": "sha512-PhRVv3aiRkxgBvSiaQpS4j4em14fgzayYztaut61En2Fxg+TsQrKHMYP1Azg9s4DyRf+cgk0S3Vcy6XREwqVjA==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 97,
+      "filesChecked": 99,
       "display": {
         "icon": {
           "status": "absent"
@@ -23611,10 +23725,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 19845129,
-        "unpackedBytes": 25972764,
-        "decodedBytes": 26048000,
-        "entries": 97,
+        "compressedBytes": 19849028,
+        "unpackedBytes": 25989994,
+        "decodedBytes": 26066944,
+        "entries": 99,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -23622,8 +23736,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-17T13:59:39.126Z",
-        "last30Days": 10,
-        "last90Days": 36
+        "last30Days": 11,
+        "last90Days": 37
       },
       "checks": [
         "registry-identity",
@@ -27277,8 +27391,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-09-21T06:25:42.283Z",
-        "last30Days": 33,
-        "last90Days": 33
+        "last30Days": 34,
+        "last90Days": 34
       },
       "checks": [
         "registry-identity",
@@ -27332,7 +27446,7 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-19T14:12:03.590Z",
-        "last30Days": 35,
+        "last30Days": 33,
         "last90Days": 59
       },
       "checks": [
@@ -27980,14 +28094,14 @@
     },
     {
       "name": "dsh-oh-my-claude",
-      "version": "1.5.3",
+      "version": "1.5.4",
       "license": "MIT",
       "repository": "https://github.com/lcestou/dsh-oh-my-claude",
       "repositorySource": "package",
-      "sourceCommit": "6962e0d206f5d54582014e2ba5c662d39db91ca7",
+      "sourceCommit": "cc7f3014016e5bc3cd7ce85050de04cf61069901",
       "metadataUrl": "https://registry.npmjs.org/dsh-oh-my-claude",
-      "tarball": "https://registry.npmjs.org/dsh-oh-my-claude/-/dsh-oh-my-claude-1.5.3.tgz",
-      "integrity": "sha512-UrifQmxVTT2XUrCKKMjjJAp+8OO5M+KSR4a3JJ4WYfAwnel+WtVad6CUQA7sXVRHppkp1sa/J4HyrJQRttT5eA==",
+      "tarball": "https://registry.npmjs.org/dsh-oh-my-claude/-/dsh-oh-my-claude-1.5.4.tgz",
+      "integrity": "sha512-ysTCPIXKQp2xB/J4oeVdirPTb0KC6utY8F8QVpMRxEfLN1OR7oi4mg7uzB/iIJJqxdbIx/Jyg0V02M49KErgsA==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -28009,9 +28123,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 1386858,
-        "unpackedBytes": 5150367,
-        "decodedBytes": 5324288,
+        "compressedBytes": 1395097,
+        "unpackedBytes": 5178155,
+        "decodedBytes": 5350400,
         "entries": 219,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -28020,8 +28134,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-09-11T21:21:34.963Z",
-        "last30Days": 8,
-        "last90Days": 14
+        "last30Days": 10,
+        "last90Days": 16
       },
       "checks": [
         "registry-identity",
@@ -28250,14 +28364,14 @@
     },
     {
       "name": "dsh-opencode-palette",
-      "version": "2.1.4",
+      "version": "2.1.6",
       "license": "MIT",
       "repository": "https://github.com/FeatherHunter/dsh-opencode-palette",
       "repositorySource": "package",
-      "sourceCommit": "f9d75ffa96eafa055dc76eae85f1002994f2a1e0",
+      "sourceCommit": "9fe995d8c90bf60a969808bc10a63a8ac3966706",
       "metadataUrl": "https://registry.npmjs.org/dsh-opencode-palette",
-      "tarball": "https://registry.npmjs.org/dsh-opencode-palette/-/dsh-opencode-palette-2.1.4.tgz",
-      "integrity": "sha512-8sUxpaq1h/xM0xWeaobVikquI55uss/b77bMWLSSlZBjG+C5D45EXjWXdZbuaFgcwL3OJApBQmamQObzf4yLGQ==",
+      "tarball": "https://registry.npmjs.org/dsh-opencode-palette/-/dsh-opencode-palette-2.1.6.tgz",
+      "integrity": "sha512-5+3FGUqXtU8rfGzCURwj/ymv8c3YTgCF6ulvm28hcHUlCx91IcWXf1L6EWoFZgvE2hoVtlKI+s5ZdOrzwwKsvQ==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -28270,9 +28384,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 622428,
-        "unpackedBytes": 1586361,
-        "decodedBytes": 1593344,
+        "compressedBytes": 637164,
+        "unpackedBytes": 1643268,
+        "decodedBytes": 1650176,
         "entries": 7,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -28281,8 +28395,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-15T16:11:46.344Z",
-        "last30Days": 31,
-        "last90Days": 45
+        "last30Days": 33,
+        "last90Days": 47
       },
       "checks": [
         "registry-identity",
@@ -28299,14 +28413,14 @@
     },
     {
       "name": "dsh-opencode-patch",
-      "version": "1.1.1",
+      "version": "1.2.2",
       "license": "MIT",
       "repository": "https://github.com/viztor/dsh-opencode-patch",
       "repositorySource": "package",
-      "sourceCommit": "ed6ecc86be5e224138e7c93d55c13131ade08209",
+      "sourceCommit": "4d51e444e1c5530295165ff7c5d64962082e5371",
       "metadataUrl": "https://registry.npmjs.org/dsh-opencode-patch",
-      "tarball": "https://registry.npmjs.org/dsh-opencode-patch/-/dsh-opencode-patch-1.1.1.tgz",
-      "integrity": "sha512-xz+WTi3e6QTqLPuSbxQSdrwc+S9k2bFRK8b3beDEEq+UgGfIePZsUMWW3J7jJ5ErTMOh9mMjd4sQ0j1ZdgHn7g==",
+      "tarball": "https://registry.npmjs.org/dsh-opencode-patch/-/dsh-opencode-patch-1.2.2.tgz",
+      "integrity": "sha512-PnKrqzr5BXgDR//ARDZSdGLhYKpQIZEYYN9cPoKmh6OZCbNkUJNw4z7jxIQpUwKGoxcnsUOUrgIQms6rNm0JOw==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -28328,9 +28442,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 138981,
-        "unpackedBytes": 444058,
-        "decodedBytes": 455168,
+        "compressedBytes": 208035,
+        "unpackedBytes": 675040,
+        "decodedBytes": 685568,
         "entries": 13,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -28339,8 +28453,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-10-01T13:39:29.760Z",
-        "last30Days": 18,
-        "last90Days": 18
+        "last30Days": 21,
+        "last90Days": 21
       },
       "checks": [
         "registry-identity",
@@ -29879,18 +29993,18 @@
     },
     {
       "name": "dsh-plugin-debugging",
-      "version": "0.7.0",
+      "version": "0.7.1",
       "license": "MIT",
       "repository": "https://github.com/dsh-plugin-lab/dsh-plugin-debugging",
       "repositorySource": "package",
-      "sourceCommit": "2f4546492a26a640a4a3dbef615961e92fb5f2e0",
+      "sourceCommit": "39c0c3e968eea28e50653c6be66e7b10ed31b1b8",
       "metadataUrl": "https://registry.npmjs.org/dsh-plugin-debugging",
-      "tarball": "https://registry.npmjs.org/dsh-plugin-debugging/-/dsh-plugin-debugging-0.7.0.tgz",
-      "integrity": "sha512-V5MXd7UFoe8mpkF2XtjmyKYK7ku3JEY0GsiUMj0+xRQwXQE/ElyCt41/j7xgxxl7HBP7RrRvZv56+Rp6sL99tQ==",
+      "tarball": "https://registry.npmjs.org/dsh-plugin-debugging/-/dsh-plugin-debugging-0.7.1.tgz",
+      "integrity": "sha512-7QfI8ip0Z2yPczRjaciZ5/v3xCbLduPCY0n6XWaIV4s0NRcgX31umO601GnxEGQqEqdxpOcazv0ZYX4iYbeD1A==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 92,
+      "filesChecked": 90,
       "display": {
         "icon": {
           "status": "included",
@@ -29908,10 +30022,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 4500709,
-        "unpackedBytes": 5304492,
-        "decodedBytes": 5376512,
-        "entries": 92,
+        "compressedBytes": 401544,
+        "unpackedBytes": 1146992,
+        "decodedBytes": 1217536,
+        "entries": 90,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -29919,8 +30033,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-10-12T18:16:27.340Z",
-        "last30Days": 14,
-        "last90Days": 14
+        "last30Days": 15,
+        "last90Days": 15
       },
       "checks": [
         "registry-identity",
@@ -30305,18 +30419,18 @@
     },
     {
       "name": "dsh-plugin-pwsh7",
-      "version": "0.2.2",
+      "version": "0.3.0",
       "license": "MIT",
       "repository": "https://github.com/drliuhuan/dsh-plugin-pwsh7",
       "repositorySource": "package",
-      "sourceCommit": "d300c125599d25cb9e36967b50b7eadad605cf9c",
+      "sourceCommit": "86de1032ab5e8fb8f6aa54e171954c27460834fc",
       "metadataUrl": "https://registry.npmjs.org/dsh-plugin-pwsh7",
-      "tarball": "https://registry.npmjs.org/dsh-plugin-pwsh7/-/dsh-plugin-pwsh7-0.2.2.tgz",
-      "integrity": "sha512-ox8To/j4ByUlOsf1e63OWA6mDJLMi7dw3q6Yk+g+NLfrIrpYF0eCry7YfbGONLwJibUlOLshz3eLUyFtP9AIaw==",
+      "tarball": "https://registry.npmjs.org/dsh-plugin-pwsh7/-/dsh-plugin-pwsh7-0.3.0.tgz",
+      "integrity": "sha512-RJnqD9TEiQURBQqwEsJ6mSlfvQGIaCaDbCLqEZE0u5UemuqAktm6OVPb3UL6/5mXSzZRKK0kT44ToOmh/CEPGQ==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 21,
+      "filesChecked": 24,
       "display": {
         "icon": {
           "status": "included",
@@ -30334,10 +30448,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 53728,
-        "unpackedBytes": 180633,
-        "decodedBytes": 197632,
-        "entries": 21,
+        "compressedBytes": 82557,
+        "unpackedBytes": 308501,
+        "decodedBytes": 328192,
+        "entries": 24,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -30345,8 +30459,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-10-17T12:05:19.994Z",
-        "last30Days": 6,
-        "last90Days": 6
+        "last30Days": 7,
+        "last90Days": 7
       },
       "checks": [
         "registry-identity",
@@ -30754,14 +30868,14 @@
     },
     {
       "name": "dsh-plugin-subagent-director",
-      "version": "0.6.0-beta.1",
+      "version": "0.6.0-beta.2",
       "license": "MIT",
       "repository": "https://github.com/SeverusZh/dsh-plugin-subagent-director",
       "repositorySource": "package",
-      "sourceCommit": "ba4d46a8c40eca3c4b3ea892d720139e29388123",
+      "sourceCommit": "a6225e499817e3935c2063a1119126dc6d44f971",
       "metadataUrl": "https://registry.npmjs.org/dsh-plugin-subagent-director",
-      "tarball": "https://registry.npmjs.org/dsh-plugin-subagent-director/-/dsh-plugin-subagent-director-0.6.0-beta.1.tgz",
-      "integrity": "sha512-ckpzC8mZo6y6YJTQjov6QWfOFq3RgFntt7UfLxkx3+rYVNruyUpLnsAhvHFHF3JiA97dddxIWfxrlkBNwCsZJA==",
+      "tarball": "https://registry.npmjs.org/dsh-plugin-subagent-director/-/dsh-plugin-subagent-director-0.6.0-beta.2.tgz",
+      "integrity": "sha512-gWS7N9Q23vGNzctjjLGNh7Qav3BldC0/iWrlJ5keuXsGLtRfVr83i/mlRY7s0cI37XSnpcHsvAGUbWwt1N7Tmw==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -30774,9 +30888,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 153594,
-        "unpackedBytes": 590406,
-        "decodedBytes": 675840,
+        "compressedBytes": 158248,
+        "unpackedBytes": 605497,
+        "decodedBytes": 692224,
         "entries": 110,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -30785,8 +30899,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-14T14:54:10.702Z",
-        "last30Days": 9,
-        "last90Days": 23
+        "last30Days": 10,
+        "last90Days": 24
       },
       "checks": [
         "registry-identity",
@@ -30834,7 +30948,7 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-20T08:38:16.708Z",
-        "last30Days": 6,
+        "last30Days": 5,
         "last90Days": 23
       },
       "checks": [
@@ -30892,7 +31006,7 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-09-12T07:38:55.392Z",
-        "last30Days": 20,
+        "last30Days": 19,
         "last90Days": 34
       },
       "checks": [
@@ -31691,6 +31805,64 @@
       ]
     },
     {
+      "name": "dsh-preset-requirement-confirm",
+      "version": "1.3.0",
+      "license": "MIT",
+      "repository": "https://github.com/Self-Identity/dsh-preset-requirement-confirm",
+      "repositorySource": "package",
+      "sourceCommit": "084cf94ba79e9725942dfba888cb152198ff08f2",
+      "metadataUrl": "https://registry.npmjs.org/dsh-preset-requirement-confirm",
+      "tarball": "https://registry.npmjs.org/dsh-preset-requirement-confirm/-/dsh-preset-requirement-confirm-1.3.0.tgz",
+      "integrity": "sha512-/EUpOoDvXPygUR9kmctnqVjSpPZfEkBs8EmPh2h3bcQ+hqhYhYRVp0n7Yez1q14yigvBXYkRcW5LYq49zEDZmg==",
+      "patch": [
+        "package/cordis.patch.yml"
+      ],
+      "filesChecked": 12,
+      "display": {
+        "icon": {
+          "status": "included",
+          "source": "published-package",
+          "path": "icon.svg",
+          "url": "icons/b798e1f0637947cd541d68991a16c580799c6c82a7d2dc8080dfe536920b4baa.svg",
+          "mime": "image/svg+xml",
+          "bytes": 501,
+          "sha256": "b798e1f0637947cd541d68991a16c580799c6c82a7d2dc8080dfe536920b4baa"
+        },
+        "localized": [
+          "en",
+          "zh"
+        ],
+        "warnings": []
+      },
+      "archive": {
+        "compressedBytes": 14163,
+        "unpackedBytes": 40346,
+        "decodedBytes": 50688,
+        "entries": 12,
+        "maxUnpackedBytes": 104857600,
+        "downloadTimeoutMs": 30000,
+        "reviewedBudget": false
+      },
+      "lifecycleScripts": [],
+      "releases": {
+        "firstPublished": "2026-10-19T17:10:58.727Z",
+        "last30Days": 2,
+        "last90Days": 2
+      },
+      "checks": [
+        "registry-identity",
+        "sha512-integrity",
+        "archive-manifest-identity",
+        "bundle-patch-present",
+        "main-file-present"
+      ],
+      "limitations": [
+        "No runtime installation test",
+        "No code audit",
+        "Patch references and transitive dependencies are not validated"
+      ]
+    },
+    {
       "name": "dsh-preset-workshop",
       "version": "0.1.0",
       "license": "MIT",
@@ -31804,14 +31976,14 @@
     },
     {
       "name": "dsh-prompt",
-      "version": "0.4.35",
+      "version": "0.4.37",
       "license": "MIT",
       "repository": "https://github.com/FeatherHunter/dsh-prompt",
       "repositorySource": "package",
-      "sourceCommit": "e7385812e9dbed766628347ae312e41de6de58a7",
+      "sourceCommit": "62a4cb35b32ebe6f36cff92fc1e38bafced90323",
       "metadataUrl": "https://registry.npmjs.org/dsh-prompt",
-      "tarball": "https://registry.npmjs.org/dsh-prompt/-/dsh-prompt-0.4.35.tgz",
-      "integrity": "sha512-5JJEaYquDFrUV18mGTvpaShpPqdcMsFqqVAZ08QPwqntc/NUigOrqFhjL6FTgp0zb/mB18jRjBF+x3hc4YvFsA==",
+      "tarball": "https://registry.npmjs.org/dsh-prompt/-/dsh-prompt-0.4.37.tgz",
+      "integrity": "sha512-AuFIDa4qYp7l4B0P8cbUTN6djbA/6bcVwLVd8T2CxFZGfE9t7SD91RIaUaw6dSaL2+XIPNgGIOvRYfMk/CwTGA==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -31824,9 +31996,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 809605,
-        "unpackedBytes": 3093273,
-        "decodedBytes": 3104768,
+        "compressedBytes": 820993,
+        "unpackedBytes": 3108724,
+        "decodedBytes": 3120640,
         "entries": 13,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -31835,8 +32007,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-17T01:17:16.201Z",
-        "last30Days": 57,
-        "last90Days": 70
+        "last30Days": 59,
+        "last90Days": 72
       },
       "checks": [
         "registry-identity",
@@ -32235,14 +32407,14 @@
     },
     {
       "name": "dsh-qoder-connect",
-      "version": "0.2.6",
+      "version": "0.2.7",
       "license": "MIT",
       "repository": "https://github.com/masknull/dsh-qoder-connect",
       "repositorySource": "package",
-      "sourceCommit": "e60da7dc7b95373845a2c40911522e78e8fe5994",
+      "sourceCommit": "b788585d74933ecb33070c717511582f8203f935",
       "metadataUrl": "https://registry.npmjs.org/dsh-qoder-connect",
-      "tarball": "https://registry.npmjs.org/dsh-qoder-connect/-/dsh-qoder-connect-0.2.6.tgz",
-      "integrity": "sha512-KIYLF01I8MNkWlG2IfBbo/tBfIew9Yv6LgMOj5fK6JxxupFwHzb4izf3duv8zHLHVADAertPYwjT6hZ8m93S5w==",
+      "tarball": "https://registry.npmjs.org/dsh-qoder-connect/-/dsh-qoder-connect-0.2.7.tgz",
+      "integrity": "sha512-f8Jz+HgbQYfg3tBwQsNX8oy2mJ6ytkw9ZdU4Bkihi55gE7M7FqzyDlHcEWk+PS5yNy5VPAgTeXCasIo3a6UORg==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -32264,9 +32436,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 1001389,
-        "unpackedBytes": 1477896,
-        "decodedBytes": 1496576,
+        "compressedBytes": 1016857,
+        "unpackedBytes": 1514886,
+        "decodedBytes": 1533440,
         "entries": 22,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -32275,8 +32447,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-09-19T07:08:02.378Z",
-        "last30Days": 15,
-        "last90Days": 16
+        "last30Days": 16,
+        "last90Days": 17
       },
       "checks": [
         "registry-identity",
@@ -33718,14 +33890,14 @@
     },
     {
       "name": "dsh-service-portal",
-      "version": "1.0.1",
+      "version": "1.0.3",
       "license": "MIT",
       "repository": "https://github.com/dingminhua/dsh-service-portal",
       "repositorySource": "package",
-      "sourceCommit": "0528604a69d5d055cc19b0e235a78f465c11da48",
+      "sourceCommit": "b77f7bc8c32110007c0ba67abd7966b154f0b76e",
       "metadataUrl": "https://registry.npmjs.org/dsh-service-portal",
-      "tarball": "https://registry.npmjs.org/dsh-service-portal/-/dsh-service-portal-1.0.1.tgz",
-      "integrity": "sha512-kwE/3ndr+3Dg7+iOU+i1FBpu5lJASZILPj5OhLcjuLTd8LS/0KliQ4wJkxo27eGFTyumlBMAR59vn911fLWkBg==",
+      "tarball": "https://registry.npmjs.org/dsh-service-portal/-/dsh-service-portal-1.0.3.tgz",
+      "integrity": "sha512-1yxViJi+xTVJkc4Wf0kVRqe6geSfuo1gI4M2ybVeVgsxsVFFk2pD75UOLynfzBl/cMSG+0/iPX7JoioFlpVSfw==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -33744,9 +33916,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 354305,
-        "unpackedBytes": 983649,
-        "decodedBytes": 1021440,
+        "compressedBytes": 358235,
+        "unpackedBytes": 994489,
+        "decodedBytes": 1032192,
         "entries": 48,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -33755,8 +33927,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-10-17T05:20:14.477Z",
-        "last30Days": 4,
-        "last90Days": 4
+        "last30Days": 6,
+        "last90Days": 6
       },
       "checks": [
         "registry-identity",
@@ -36410,7 +36582,7 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-16T09:14:34.874Z",
-        "last30Days": 15,
+        "last30Days": 13,
         "last90Days": 52
       },
       "checks": [
@@ -36745,17 +36917,17 @@
     },
     {
       "name": "dsh-thoughtdag",
-      "version": "0.5.19",
+      "version": "0.5.20",
       "license": "MIT",
       "repository": "https://github.com/chenxiachan/thoughtdag",
       "repositorySource": "package",
       "metadataUrl": "https://registry.npmjs.org/dsh-thoughtdag",
-      "tarball": "https://registry.npmjs.org/dsh-thoughtdag/-/dsh-thoughtdag-0.5.19.tgz",
-      "integrity": "sha512-XKbPSYKwEGNs3iKC3u+3BUzRCddTLWIt1c5N8NuoV1/EVQS0AnkBM7lnBtYXmoY1Q7TdEJOQjnXY+Wni10PJ6A==",
+      "tarball": "https://registry.npmjs.org/dsh-thoughtdag/-/dsh-thoughtdag-0.5.20.tgz",
+      "integrity": "sha512-hiaKYnjBQWiqUA+XcyiycvjTXn14ifWwyNASB6n6UE5YYih4I86iexWD7jD8CUmtaBO0Kk29xFjnEfBw8cnY4A==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 137,
+      "filesChecked": 196,
       "display": {
         "icon": {
           "status": "absent"
@@ -36764,10 +36936,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 9424099,
-        "unpackedBytes": 13677761,
-        "decodedBytes": 13786112,
-        "entries": 137,
+        "compressedBytes": 10284055,
+        "unpackedBytes": 16761552,
+        "decodedBytes": 16914944,
+        "entries": 196,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -36775,8 +36947,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-09-05T05:33:45.024Z",
-        "last30Days": 24,
-        "last90Days": 35
+        "last30Days": 25,
+        "last90Days": 36
       },
       "checks": [
         "registry-identity",
@@ -38161,14 +38333,14 @@
     },
     {
       "name": "dsh-usage-statistics-panel",
-      "version": "0.3.3",
+      "version": "0.3.4",
       "license": "MIT",
       "repository": "https://github.com/HaoyueQin/dsh-usage-statistics-panel",
       "repositorySource": "package",
-      "sourceCommit": "cb6d3894cdb948c9053b1b110b597aae57297c21",
+      "sourceCommit": "932935dd75c513860a94599fd2409e66a5d93e8e",
       "metadataUrl": "https://registry.npmjs.org/dsh-usage-statistics-panel",
-      "tarball": "https://registry.npmjs.org/dsh-usage-statistics-panel/-/dsh-usage-statistics-panel-0.3.3.tgz",
-      "integrity": "sha512-yITwJKZcf/VyZxHvdW0qYkHzCXqW0l3/1iuNaRgNR1n4u41SdR5uBCXweefWp7Vr8oDA9ZDMua5vCbWPFAfZJA==",
+      "tarball": "https://registry.npmjs.org/dsh-usage-statistics-panel/-/dsh-usage-statistics-panel-0.3.4.tgz",
+      "integrity": "sha512-3sqw5INwBhoqgvO+cNUIZ1AN4FxmxGk//7KCWgjbDkKv3vJAeYInNa3AkA24ESkKCwptyutzdSkToczxqfFEAw==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -38178,10 +38350,10 @@
           "status": "included",
           "source": "published-package",
           "path": "icon.svg",
-          "url": "icons/a1209d521f97c4c91cf7cf160b7435a4bc800685583105e851d25cd37b2dd93b.svg",
+          "url": "icons/d9ac9be0da998938ee68668785c0a8e9529376b5f6feeed712269f0c7de0cde8.svg",
           "mime": "image/svg+xml",
-          "bytes": 2255,
-          "sha256": "a1209d521f97c4c91cf7cf160b7435a4bc800685583105e851d25cd37b2dd93b"
+          "bytes": 2571,
+          "sha256": "d9ac9be0da998938ee68668785c0a8e9529376b5f6feeed712269f0c7de0cde8"
         },
         "localized": [
           "en",
@@ -38190,9 +38362,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 665111,
-        "unpackedBytes": 2294759,
-        "decodedBytes": 2348544,
+        "compressedBytes": 685911,
+        "unpackedBytes": 2350559,
+        "decodedBytes": 2404864,
         "entries": 69,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -38201,8 +38373,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-20T05:39:01.207Z",
-        "last30Days": 4,
-        "last90Days": 21
+        "last30Days": 5,
+        "last90Days": 22
       },
       "checks": [
         "registry-identity",
@@ -38903,7 +39075,7 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-22T05:18:04.108Z",
-        "last30Days": 6,
+        "last30Days": 5,
         "last90Days": 19
       },
       "checks": [
@@ -39575,18 +39747,18 @@
     },
     {
       "name": "dsh-webcode-bridge",
-      "version": "0.19.76",
+      "version": "0.21.2",
       "license": "MIT",
       "repository": "https://github.com/RSLN-creator/dsh-web-bridge",
       "repositorySource": "package",
-      "sourceCommit": "54798b6b67aa755d2c474dd5345fbb99f0e81675",
+      "sourceCommit": "32a16ea52348db36f2a0246d0d7e7c8ae3f742cc",
       "metadataUrl": "https://registry.npmjs.org/dsh-webcode-bridge",
-      "tarball": "https://registry.npmjs.org/dsh-webcode-bridge/-/dsh-webcode-bridge-0.19.76.tgz",
-      "integrity": "sha512-6OMsobcHKO8RBa85kk7VhHYa2U12EZMyYZuWP65Fh8NKErF5akBRk1f4phWa/tcxgrJk4Nq52NQn0M1RSy0N3A==",
+      "tarball": "https://registry.npmjs.org/dsh-webcode-bridge/-/dsh-webcode-bridge-0.21.2.tgz",
+      "integrity": "sha512-kX1u4cxqibWseLPb/Aew/HU5+f10PFuZmC30OIe64lHyvqHBItcdsuP4sXKs41ZK+dNvNlioXqRfyWhgtlm8Sg==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 62,
+      "filesChecked": 64,
       "display": {
         "icon": {
           "status": "included",
@@ -39604,10 +39776,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 972548,
-        "unpackedBytes": 2656744,
-        "decodedBytes": 2705920,
-        "entries": 62,
+        "compressedBytes": 1057659,
+        "unpackedBytes": 2885851,
+        "decodedBytes": 2938368,
+        "entries": 64,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -39615,8 +39787,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-09-26T12:57:16.915Z",
-        "last30Days": 8,
-        "last90Days": 8
+        "last30Days": 10,
+        "last90Days": 10
       },
       "checks": [
         "registry-identity",
@@ -40059,7 +40231,7 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-20T10:38:52.162Z",
-        "last30Days": 14,
+        "last30Days": 12,
         "last90Days": 31
       },
       "checks": [
@@ -40249,14 +40421,13 @@
     },
     {
       "name": "dsh-workbuddy-connect",
-      "version": "0.7.8",
+      "version": "0.7.9",
       "license": "MIT",
       "repository": "https://github.com/corrinehu/dsh-workbuddy-connect",
       "repositorySource": "package",
-      "sourceCommit": "93aaecb2248084e2d306323c49f155ba2743a26d",
       "metadataUrl": "https://registry.npmjs.org/dsh-workbuddy-connect",
-      "tarball": "https://registry.npmjs.org/dsh-workbuddy-connect/-/dsh-workbuddy-connect-0.7.8.tgz",
-      "integrity": "sha512-oAiefWNqlOCmAClYfTK+OqKcEigOj+VGN3RnyWCdgYsUJ0fKbX0PB/SPzK7J0Vn7jPD5ZwZQQUTtvjisDrWagg==",
+      "tarball": "https://registry.npmjs.org/dsh-workbuddy-connect/-/dsh-workbuddy-connect-0.7.9.tgz",
+      "integrity": "sha512-rhSPWPuN5tZp59A3Iev20/PylCgMt9KY+H+cFhOF+e527ANkhGbqcDmZfVe6XtEsq5rs2husaG5MRBr1Bbnuhg==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -40269,9 +40440,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 168300,
-        "unpackedBytes": 557168,
-        "decodedBytes": 567808,
+        "compressedBytes": 171941,
+        "unpackedBytes": 570367,
+        "decodedBytes": 581120,
         "entries": 12,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -40280,8 +40451,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-22T11:19:21.193Z",
-        "last30Days": 16,
-        "last90Days": 31
+        "last30Days": 17,
+        "last90Days": 32
       },
       "checks": [
         "registry-identity",
@@ -40923,18 +41094,18 @@
     },
     {
       "name": "dshmarket",
-      "version": "1.66.42",
+      "version": "1.66.44",
       "license": "MIT",
       "repository": "https://github.com/dsh-market/dsh-market",
       "repositorySource": "package",
-      "sourceCommit": "3679d7eae82fbeecc4fee9e1f356e21293a283bc",
+      "sourceCommit": "29dcbd78290be89d83771e3734b128be110645c5",
       "metadataUrl": "https://registry.npmjs.org/dshmarket",
-      "tarball": "https://registry.npmjs.org/dshmarket/-/dshmarket-1.66.42.tgz",
-      "integrity": "sha512-QV4qGMZhloaWPAj9KyJ9nZ3t4RPO0MbaPxU59zORg5v2EEOqlJzVcAQEWKDqlhXPdqM761GynudQqzREfNJcqg==",
+      "tarball": "https://registry.npmjs.org/dshmarket/-/dshmarket-1.66.44.tgz",
+      "integrity": "sha512-NtkqdxnGrSiOORBPAlkHn0gckVu+iGzulI+ryRuAOgfd9giTpACUQQtgMAFBfQGXKX5VIV9xVGHW8tdNpoFizQ==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 183,
+      "filesChecked": 186,
       "display": {
         "icon": {
           "status": "included",
@@ -40952,10 +41123,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 1338328,
-        "unpackedBytes": 4854086,
-        "decodedBytes": 4997120,
-        "entries": 183,
+        "compressedBytes": 1346029,
+        "unpackedBytes": 4877158,
+        "decodedBytes": 5021696,
+        "entries": 186,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -40963,8 +41134,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-14T10:12:42.084Z",
-        "last30Days": 63,
-        "last90Days": 181
+        "last30Days": 65,
+        "last90Days": 183
       },
       "checks": [
         "registry-identity",
@@ -41131,8 +41302,8 @@
       ],
       "releases": {
         "firstPublished": "2026-08-09T01:27:42.141Z",
-        "last30Days": 18,
-        "last90Days": 130
+        "last30Days": 19,
+        "last90Days": 131
       },
       "checks": [
         "registry-identity",
@@ -41242,7 +41413,7 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-17T06:22:13.024Z",
-        "last30Days": 201,
+        "last30Days": 200,
         "last90Days": 243
       },
       "checks": [
@@ -41456,18 +41627,18 @@
     },
     {
       "name": "minecraft-dev",
-      "version": "0.9.1",
+      "version": "0.10.1",
       "license": "MIT",
       "repository": "https://github.com/sikadi233-hub/minecraft-dev",
       "repositorySource": "package",
-      "sourceCommit": "3a61559d1829fe6283265f18f6136debd6aa850c",
+      "sourceCommit": "97a34dc50402038a771360b112c8f20f8e7d0e20",
       "metadataUrl": "https://registry.npmjs.org/minecraft-dev",
-      "tarball": "https://registry.npmjs.org/minecraft-dev/-/minecraft-dev-0.9.1.tgz",
-      "integrity": "sha512-0gRUMufuT5g7RS7HfhaFyqoSMzOeoQoypVSqZlt+azhzjdxesTUFXgsC/7cO59KevJWNGZc8cf/9uXr7Dm/AKg==",
+      "tarball": "https://registry.npmjs.org/minecraft-dev/-/minecraft-dev-0.10.1.tgz",
+      "integrity": "sha512-QVXESLVLZmzz/mrIUVM/CtI1PE/cc+9VxO/Ne6G6SygBN8EI+0+Rq/19d6rx2yXY6db9pQUfdRc1GFuXOKb4pQ==",
       "patch": [
         "package/cordis.patch.yml"
       ],
-      "filesChecked": 156,
+      "filesChecked": 157,
       "display": {
         "icon": {
           "status": "absent"
@@ -41476,10 +41647,10 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 253046,
-        "unpackedBytes": 695640,
-        "decodedBytes": 813056,
-        "entries": 156,
+        "compressedBytes": 256342,
+        "unpackedBytes": 701707,
+        "decodedBytes": 820224,
+        "entries": 157,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
         "reviewedBudget": false
@@ -41487,8 +41658,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-08-16T14:40:15.777Z",
-        "last30Days": 3,
-        "last90Days": 13
+        "last30Days": 5,
+        "last90Days": 15
       },
       "checks": [
         "registry-identity",
@@ -42015,14 +42186,14 @@
     },
     {
       "name": "weir-harness",
-      "version": "1.2.2",
+      "version": "1.2.3",
       "license": "MIT",
       "repository": "https://github.com/WeirLabs/weir",
       "repositorySource": "package",
-      "sourceCommit": "892d9143217d295ae53e285478bf327d11abe281",
+      "sourceCommit": "46283a7d358056ef1b9808ead44aa9a83311c070",
       "metadataUrl": "https://registry.npmjs.org/weir-harness",
-      "tarball": "https://registry.npmjs.org/weir-harness/-/weir-harness-1.2.2.tgz",
-      "integrity": "sha512-DpRiqVII+wOJfsxsWza16xYzXIUS6bSXj8wXveYEp7RwMC8Y3ZjfOJZP83mACZolO+Hv5ag2eVIxPD9KfMo+DQ==",
+      "tarball": "https://registry.npmjs.org/weir-harness/-/weir-harness-1.2.3.tgz",
+      "integrity": "sha512-PHk08yrQGF3+9quAxhCvxUC0gIp/yGgROqNsK2jET3ubNZOO5KTUK9RZzVevBVl46ajjaEz2gx++/DtRL+0NFg==",
       "patch": [
         "package/cordis.patch.yml"
       ],
@@ -42041,9 +42212,9 @@
         "warnings": []
       },
       "archive": {
-        "compressedBytes": 795802,
-        "unpackedBytes": 2767947,
-        "decodedBytes": 2952192,
+        "compressedBytes": 800152,
+        "unpackedBytes": 2780306,
+        "decodedBytes": 2963968,
         "entries": 238,
         "maxUnpackedBytes": 104857600,
         "downloadTimeoutMs": 30000,
@@ -42052,8 +42223,8 @@
       "lifecycleScripts": [],
       "releases": {
         "firstPublished": "2026-10-07T21:05:43.637Z",
-        "last30Days": 12,
-        "last90Days": 12
+        "last30Days": 13,
+        "last90Days": 13
       },
       "checks": [
         "registry-identity",
@@ -42233,15 +42404,15 @@
     }
   ],
   "market": {
-    "generatedAt": "2026-10-19T15:06:48.843Z",
+    "generatedAt": "2026-10-19T19:41:34.670Z",
     "downloads": "downloads.json",
     "display": "display.json",
     "publisherEvidence": "https://github.com/polang233/dsh-plugin-index/blob/main/data/publishers.json"
   },
   "github": {
     "snapshot": "github.json",
-    "fetched": 728,
-    "cached": 0,
-    "unavailable": 6
+    "fetched": 0,
+    "cached": 728,
+    "unavailable": 9
   }
 }
