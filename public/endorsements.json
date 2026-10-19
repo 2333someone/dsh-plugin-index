@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-19T08:38:55.858Z",
+  "generatedAt": "2026-10-19T14:59:11.256Z",
   "sources": {
     "awesome-dsh": {
       "status": "ok",
-      "fetchedAt": "2026-10-19T08:38:55.858Z",
+      "fetchedAt": "2026-10-19T14:59:11.256Z",
       "url": "https://raw.githubusercontent.com/walkinglabs/awesome-deepseek-harness-plugins/main/README.md",
       "repos": [
         "030611/dsh-telemetry-redactor",
@@ -254,13 +254,13 @@
     },
     "dsh-plugin-shop": {
       "status": "ok",
-      "fetchedAt": "2026-10-19T08:38:55.858Z",
+      "fetchedAt": "2026-10-19T14:59:11.256Z",
       "url": "https://raw.githubusercontent.com/LivXue/dsh-plugin-shop/main/registry/verified.yml",
       "reviews": []
     },
     "awesome-dsh-plugin": {
       "status": "ok",
-      "fetchedAt": "2026-10-19T08:38:55.858Z",
+      "fetchedAt": "2026-10-19T14:59:11.256Z",
       "url": "https://raw.githubusercontent.com/awesome-dsh-plugin/awesome-dsh-plugin/main/README.md",
       "repos": [
         "00080000/dsh-project-memory",

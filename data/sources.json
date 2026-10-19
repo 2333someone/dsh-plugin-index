@@ -6816,6 +6816,2579 @@
         "zh": "DeepSeek Harness（dsh）的飞书/Lark 桥接：一个飞书话题对应一个 dsh 会话，支持卡片内审批和提问，通过长连接工作，无需公网端点。"
       },
       "category": "integrations"
+    },
+    {
+      "name": "@agentscope-ai/reme-dsh-plugin",
+      "title": {
+        "en": "ReMe Memory",
+        "zh": "ReMe 长期记忆"
+      },
+      "description": {
+        "en": "Save completed conversations as Markdown memories and provide retrieval and long-term memory consolidation.",
+        "zh": "将完成的对话保存为 Markdown 记忆，提供检索和长期记忆整理。"
+      },
+      "category": "memory",
+      "version": "0.1.2",
+      "iconReview": {
+        "version": "0.1.2",
+        "integrity": "sha512-dZQSyknARE76fjYnNqK63Kai8MS6QSZ+bUNNG8fwl1syWb3BptyngweQkphxfYtE6sonzXK5MVwxbLgf0c7+qg==",
+        "commit": "d6b02a20bacf613703375b0dcb0eb5b25bf6d668",
+        "path": "docs/figure/reme-icon.svg",
+        "sha256": "70586ef52d6362833114b2340f92804818d7faf9e5845b7d74dd74f96a90ec1a"
+      }
+    },
+    {
+      "name": "@agi321/dsh-temp-chat",
+      "title": {
+        "en": "Temporary Chat",
+        "zh": "临时子 Agent 对话"
+      },
+      "description": {
+        "en": "Run single-turn or continuing questions in an independent subagent and display the results in the current conversation.",
+        "zh": "在独立子 Agent 中进行单轮或连续问答，并把结果展示在当前对话中。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "@aiwayds/dsh-agent-dispatch",
+      "title": {
+        "en": "Agent Dispatch Advice",
+        "zh": "Agent 派发建议"
+      },
+      "description": {
+        "en": "Consult TypeSafe Jev before a turn to suggest whether a registered agent should handle the task.",
+        "zh": "在回合开始前咨询 TypeSafe Jev，建议是否把任务交给已注册的 Agent。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "@aiwayds/dsh-cron",
+      "title": {
+        "en": "Agent Cron",
+        "zh": "Agent 定时调度"
+      },
+      "description": {
+        "en": "Deliver bounded tasks to online agents using calendar or interval schedules.",
+        "zh": "按日历或间隔规则，把有执行边界的任务投递给在线 Agent。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "@aiwayds/dsh-llm-net-retry",
+      "title": {
+        "en": "LLM Network Retry",
+        "zh": "模型网络错误重试"
+      },
+      "description": {
+        "en": "Apply bounded retries to transient gateway failures such as EOF, TLS alerts and stream read errors.",
+        "zh": "对 EOF、TLS 告警和流读取失败等网关瞬态错误进行有界重试。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "@aiwayds/dsh-llm-proxy",
+      "title": {
+        "en": "LLM Proxy",
+        "zh": "模型流量代理"
+      },
+      "description": {
+        "en": "Use environment proxies and an undici dispatcher to route model traffic through configured proxies.",
+        "zh": "结合环境代理和 undici 路由，为模型请求配置代理与分流。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "@alexpeng/dsh-custom-plugin",
+      "title": {
+        "en": "Custom UI Toolkit",
+        "zh": "网页便利工具"
+      },
+      "description": {
+        "en": "Add timeline navigation, folders, prompts, export, Mermaid, quoted replies, appearance controls and usage displays.",
+        "zh": "提供时间线、文件夹、提示词、导出、Mermaid、引用回复、外观设置和用量显示。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "@angelyeye/dsh-cost-tracker",
+      "title": {
+        "en": "Cost Tracker",
+        "zh": "Token 费用追踪"
+      },
+      "description": {
+        "en": "Record model token usage and estimated costs, then query historical statistics from Settings.",
+        "zh": "记录模型 Token 用量和费用估算，在设置页查询历史统计。"
+      },
+      "category": "usage",
+      "version": "1.9.6",
+      "iconReview": {
+        "version": "1.9.6",
+        "integrity": "sha512-sC2o+dUvSJHgXrEvtb9iw+Bo65HCGSkmh0j2tpMZQrmkU23WmgGhePrOcUPe4awyz0GfWCHXJFFdNjI+zGrnew==",
+        "commit": "a0ddc943eadb41c292cb0fe1e8d2a6f939d24081",
+        "path": "docs/icon-mark.svg",
+        "sha256": "84afa6adcab40801013a47ff53bbf36bead4a4466d0398b589bbf0ad0475c5f2"
+      }
+    },
+    {
+      "name": "@beyondandsharp/dsh-plugin-scaling",
+      "title": {
+        "en": "Pane Scaling",
+        "zh": "面板独立缩放"
+      },
+      "description": {
+        "en": "Zoom individual web panels with Ctrl+wheel or keyboard shortcuts and reset each panel independently.",
+        "zh": "通过 Ctrl 加滚轮或快捷键独立缩放网页面板，并分别恢复默认大小。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "@blksword/dsh-flowus",
+      "title": {
+        "en": "FlowUs Connector",
+        "zh": "FlowUs 工作区接入"
+      },
+      "description": {
+        "en": "Authorize FlowUs through browser OAuth and expose its official MCP tools as native agent tools.",
+        "zh": "通过浏览器 OAuth 授权 FlowUs，把官方 MCP 工具接为 Agent 原生工具。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "@cloudplugin/dsh-skill-creator",
+      "title": {
+        "en": "Skill Creator",
+        "zh": "技能创建面板"
+      },
+      "description": {
+        "en": "Create skills through configured creator backends, score the results and request revisions below the quality threshold.",
+        "zh": "通过配置的创建后端生成技能，对结果评分，未达质量阈值时要求继续修改。"
+      },
+      "category": "skills"
+    },
+    {
+      "name": "@deepblend/dsh-blender-bundle",
+      "title": {
+        "en": "DeepBlend",
+        "zh": "Blender 场景创作"
+      },
+      "description": {
+        "en": "Create and modify Blender scenes, import models, and preview or export images and video.",
+        "zh": "创建和修改 Blender 场景、导入模型，并预览或导出图片与视频。"
+      },
+      "category": "tools",
+      "version": "0.15.0",
+      "iconReview": {
+        "version": "0.15.0",
+        "integrity": "sha512-teJZOfWaoQJqMkZ0YY6dfGHXzMlVOuGuoQqNOdzvoJDSFE+LAH5vtdZCGu0yq2GCkMo1w2/P0+KdDj10Eme6AQ==",
+        "commit": "7e4779338952cc1342d7cf076161eeae8615e6a6",
+        "path": "packages/deepblend/bundle/assets/logo.png",
+        "sha256": "9153f6a0bace3df66d6119301b61ae9c69c67e4d193687c19316c1780b2bb7f3"
+      }
+    },
+    {
+      "name": "@dmh2002/dsh-connect-qoder",
+      "title": {
+        "en": "Qoder Connector",
+        "zh": "Qoder 模型接入"
+      },
+      "description": {
+        "en": "Connect Qoder models with PAT credentials, regional account pools, check-ins, automatic rotation and credit display.",
+        "zh": "通过 PAT 接入 Qoder 模型，支持分区域账号池、签到、自动换号和积分显示。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "@eduwork/dsh-literature",
+      "title": {
+        "en": "Literature Search",
+        "zh": "文献检索"
+      },
+      "description": {
+        "en": "Search DBLP and arXiv, retrieve BibTeX citations and access available paper full text.",
+        "zh": "检索 DBLP 和 arXiv，获取 BibTeX 引用及可用的论文全文。"
+      },
+      "category": "knowledge",
+      "version": "0.1.3",
+      "iconReview": {
+        "version": "0.1.3",
+        "integrity": "sha512-kPg5lMqYOHtsXiVOlIoTzauTgh1yAVN86znu4hq9X5LOJY4tQSal4ZaBVQ8FYx4pVnBBIhQ0jrmDqJIIP6dbzQ==",
+        "commit": "2b6c0e3b976a57cd5c907e8a871ae22ca1620aa0",
+        "path": "assets/eduwork/icon-red.svg",
+        "sha256": "dd1c390a494e0f448c73bc491b572b702e00dfe1767aa8043478baff723fe92f"
+      }
+    },
+    {
+      "name": "@ephemeral-ai/mayfly",
+      "title": {
+        "en": "Mayfly",
+        "zh": "Mayfly 交互终端"
+      },
+      "description": {
+        "en": "Use an interactive terminal interface with tables, charts, Mermaid diagrams and side conversations.",
+        "zh": "提供交互式终端界面，支持表格、图表、Mermaid 和旁支会话。"
+      },
+      "category": "interface",
+      "version": "0.1.3-rc.2",
+      "iconReview": {
+        "version": "0.1.3-rc.2",
+        "integrity": "sha512-Zrs3EM4L5tba3UcShQmGDYbKs1dRTQgcES7itGOgPDtS0h/kMQDZP6ZPwBXNC0ehFGNEBtkaF1hAnZ1ZPXzTVw==",
+        "commit": "4765ec546faecc3e7632b05263f32053bb2eeb58",
+        "path": "website/public/brand/logo-dark.svg",
+        "sha256": "e95e58cd53e4f98904e93e0025b7e54530268bec8a37a1d9284b4fc264661f48"
+      }
+    },
+    {
+      "name": "@ethanyoq/dsh-ai-novel-writer",
+      "title": {
+        "en": "AI Novel Writer",
+        "zh": "小说项目管理"
+      },
+      "description": {
+        "en": "Manage local novel projects, revision history and writing presets from a sidebar workbench.",
+        "zh": "在侧边工作台管理本地小说项目、修订记录和创作预设。"
+      },
+      "category": "workflow",
+      "version": "0.1.0",
+      "iconReview": {
+        "version": "0.1.0",
+        "integrity": "sha512-5wROPW61UGWTWGuZDk2dbNXECPZnk2w3bjpUlAuhSWKCPeqVQg/BXnzTJGW1Wc8SUS8I4ao8Iaeq8yF/xVhdlg==",
+        "commit": "d21207c856b6d70b1f54215d39f8ae423bb17273",
+        "path": "docs/assets/brand/pagekin-icon-256.png",
+        "sha256": "966eb8531152c200a247eec85aa16d0518d14898470586a34c33ea24a2be1546"
+      }
+    },
+    {
+      "name": "@evomap/dsh-evolver",
+      "title": {
+        "en": "Evolver",
+        "zh": "经验策略评价"
+      },
+      "description": {
+        "en": "Recall experience strategies before tasks and record evaluations from checks and later feedback.",
+        "zh": "在任务前召回经验策略，根据检查结果和后续反馈记录评价。"
+      },
+      "category": "memory",
+      "version": "0.2.1",
+      "iconReview": {
+        "version": "0.2.1",
+        "integrity": "sha512-XDA8STn5WvNqIpcuvQzgY2lpRpTdhii9VHjjHHhnJ818zw1bFGtjIPrq4/1qKNlcKP59Ii4Ex2vi72KZfVPeDA==",
+        "commit": "bba59d18292e5386bd3a37b85631e77a4e47b2f5",
+        "path": "assets/logo.png",
+        "sha256": "2476e47c676c9c340ec9761689da21fa853bc3d71a20c2db013e9722f67c90b7"
+      }
+    },
+    {
+      "name": "@firetruck666/dsh-task-board",
+      "title": {
+        "en": "Task Board",
+        "zh": "会话任务看板"
+      },
+      "description": {
+        "en": "Run board or list tasks through DSH sessions and sync their status in host-side storage.",
+        "zh": "通过 DSH 会话执行看板或清单中的任务，把状态回写到宿主端共享存储。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "@gehennawu/dsh-service",
+      "title": {
+        "en": "DSH Service",
+        "zh": "DSH 服务管理"
+      },
+      "description": {
+        "en": "Restart or upgrade DSH, inspect runtime health, and manage backups and Linux permissions from a web panel.",
+        "zh": "在网页面板中重启或升级 DSH、查看运行状态，并管理备份和 Linux 权限。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "@he0119/dsh-session-manager",
+      "title": {
+        "en": "Session Manager",
+        "zh": "会话迁移与同步"
+      },
+      "description": {
+        "en": "Export and import session packages, relocate workspaces and sessions, and synchronize them between machines.",
+        "zh": "导入导出会话包，迁移工作区与会话目录，并在机器之间同步会话。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "@j62268781-alt/dsh-skills-mcp-manager",
+      "title": {
+        "en": "Skills and MCP Manager",
+        "zh": "技能与 MCP 管理"
+      },
+      "description": {
+        "en": "Manage global or project skills and MCP servers, and inspect the tools exposed by each server.",
+        "zh": "管理全局或项目级技能与 MCP 服务器，并查看服务器提供的工具。"
+      },
+      "category": "skills"
+    },
+    {
+      "name": "@jianyiagi/dsh-prompt-enhancer",
+      "title": {
+        "en": "Prompt Enhancer",
+        "zh": "提示词改写"
+      },
+      "description": {
+        "en": "Rewrite the composer draft through an auxiliary model, or request a command result without changing the draft.",
+        "zh": "通过辅助模型改写输入框草稿，也可用命令查看结果而不修改草稿。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "@jochenyang/dsh-rewind-plugin",
+      "title": {
+        "en": "Rewind",
+        "zh": "消息撤回与隔离"
+      },
+      "description": {
+        "en": "Withdraw turns from the visible conversation and model context while preserving logs and quarantining affected file changes.",
+        "zh": "让撤回回合退出界面和模型上下文，保留日志，并把相关文件改动放入隔离区。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "@klarkxy/dsh-dev-index",
+      "title": {
+        "en": "DSH Dev Index",
+        "zh": "DSH 开发文档"
+      },
+      "description": {
+        "en": "Read official DSH documentation in the plugin page and search docs or npm metadata with native tools.",
+        "zh": "在插件页阅读 DSH 官方文档，并用原生工具检索文档和 npm 元数据。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "@linxin666/dsh-client-ui-market",
+      "title": {
+        "en": "Community Workshop",
+        "zh": "社区工坊"
+      },
+      "description": {
+        "en": "Browse and install community plugins, skins and pets from the web interface.",
+        "zh": "在网页界面浏览并安装社区插件、皮肤和宠物。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "@linxin666/dsh-client-ui-preset-center",
+      "title": {
+        "en": "Preset Center",
+        "zh": "预设中心"
+      },
+      "description": {
+        "en": "Download, register, disable and uninstall community agent presets from the Workshop.",
+        "zh": "在工坊中下载、注册、停用和卸载社区 Agent 预设。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "@linxin666/dsh-client-ui-task-board-github",
+      "title": {
+        "en": "GitHub Task Board",
+        "zh": "GitHub 任务看板"
+      },
+      "description": {
+        "en": "Synchronize GitHub Issues with a task board in the DSH web interface.",
+        "zh": "把 GitHub Issues 同步到 DSH 网页任务看板。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "@liuyu-f/dsh-plugin-session-cascade-delete",
+      "title": {
+        "en": "Session Cascade Delete",
+        "zh": "会话级联删除"
+      },
+      "description": {
+        "en": "Delete sessions and their owned subagents from the interface or a tool, stopping running sessions and clearing stored artifacts.",
+        "zh": "从界面或工具删除会话及其拥有的子 Agent，会先停止运行会话并清理存储产物。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "@log.li/dsh-automode",
+      "title": {
+        "en": "Auto Mode",
+        "zh": "工具权限审批"
+      },
+      "description": {
+        "en": "Apply allow and deny rules plus a classifier before tool execution to handle permission approvals.",
+        "zh": "在工具执行前结合允许、拒绝规则和分类器处理权限审批。"
+      },
+      "category": "development",
+      "version": "0.17.0",
+      "iconReview": {
+        "version": "0.17.0",
+        "integrity": "sha512-jQvq55vcORCZ/wwvIRQbuJCCxDRYTkuV1x90+XslmdIych1v2tVsU/vVqC9m/b5JK6j0xe5moKqBLXbeDD0nXA==",
+        "commit": "b122e9a4ed4ace3c0b21f837cccaefbe21108bd4",
+        "path": "docs/auto-mode-icon.png",
+        "sha256": "632d76e4e50cbf677125dde705aa12814bf733cfef33b93e8c6ddd57b61d04f3"
+      }
+    },
+    {
+      "name": "@louisremi/dsh-always-on",
+      "title": {
+        "en": "Always On",
+        "zh": "容器文件工作台"
+      },
+      "description": {
+        "en": "Download, browse and edit files through the browser when DSH runs in a container without local filesystem access.",
+        "zh": "当 DSH 运行在无法访问本地文件的容器中时，通过浏览器下载、浏览和编辑文件。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "@mokuyoaxis/dsh-iris",
+      "title": {
+        "en": "Iris Media Tools",
+        "zh": "Iris 媒体工具"
+      },
+      "description": {
+        "en": "Generate images, video, music and speech through multiple providers, with transcription and visual analysis tools.",
+        "zh": "接入多家供应商生成图片、视频、音乐和语音，并提供转写与视觉分析工具。"
+      },
+      "category": "tools",
+      "version": "0.2.6",
+      "iconReview": {
+        "version": "0.2.6",
+        "integrity": "sha512-po1NJcrZKEiWnsdEj1I+cKT1FjM45pwNCYH8K25D6q3sxeHwb/eTbxWbwaMMYNYNjLDGiRFo5fXmJepMDpGw7Q==",
+        "commit": "41bb40b63442a59a1e3493d1ddcb398cd9b27a23",
+        "path": "docs/assets/logo/iris-logo.svg",
+        "sha256": "fc1c36bf5f1a50aa6c5eb37897fd6b368f75ed5a73b559414c0094f3f00d6bfc"
+      }
+    },
+    {
+      "name": "@moon16u/dsh-plugin-mcp-console",
+      "title": {
+        "en": "MCP Console by Moon16u",
+        "zh": "MCP 连接控制台"
+      },
+      "description": {
+        "en": "Manage MCP server configuration, startup, reconnection and tool switches, and import JSON configurations.",
+        "zh": "管理 MCP 服务器配置、启停、重连和工具开关，并导入 JSON 配置。"
+      },
+      "category": "integrations",
+      "version": "0.3.7",
+      "iconReview": {
+        "version": "0.3.7",
+        "integrity": "sha512-id1GKXYkHWlOXftNKoJ+yDTQ1hIxTFwPjG8IrPx/3EVuHWeB4uXvFZkwda5kGNk7lt1F5QVjiRgVqmEJuBza8A==",
+        "commit": "5ac9f823c311c8f80f51bf8aab74c8a143168060",
+        "path": "assets/logo.png",
+        "sha256": "58cb52f77cb55358a37d868d37425e8c909e07ac2eecf5308868878b61553693"
+      }
+    },
+    {
+      "name": "@moyu-cn/dsh-knowledge",
+      "title": {
+        "en": "Project Knowledge",
+        "zh": "项目避错与方法库"
+      },
+      "description": {
+        "en": "Store project pitfalls and reusable practices in separate volumes, with monotonic identifiers and synchronized indexes.",
+        "zh": "按分册保存项目踩坑与可复用做法，使用只增不改的编号并同步索引。"
+      },
+      "category": "memory"
+    },
+    {
+      "name": "@mrweicodes/dsh-permgate",
+      "title": {
+        "en": "Permission Gate",
+        "zh": "细粒度权限网关"
+      },
+      "description": {
+        "en": "Review tool calls using global and project rules, with categorized approvals, inline diffs and sandbox escalation handling.",
+        "zh": "结合全局与项目规则审查工具调用，提供分类审批、内联差异和沙箱升级处理。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "@mstar-harness/dsh",
+      "title": {
+        "en": "MStar Harness",
+        "zh": "MStar 工程工作流"
+      },
+      "description": {
+        "en": "Use skills to guide engineering tasks through the harness and agent loop.",
+        "zh": "以技能驱动 Harness 与 Agent 循环，组织工程任务的执行流程。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "@my-dsh/dsh-intelligent-ui",
+      "title": {
+        "en": "Intelligent UI",
+        "zh": "交互式回答界面"
+      },
+      "description": {
+        "en": "Render model-authored openui-lang programs as editable lists, tables, charts, controls and drawings in chat.",
+        "zh": "把模型生成的 openui-lang 程序渲染为对话中的可编辑列表、表格、图表、控件和绘图。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "@nicearrack/dsh-translator",
+      "title": {
+        "en": "Selection Translator",
+        "zh": "划词翻译"
+      },
+      "description": {
+        "en": "Translate selected text using public translation endpoints or a model configured in the current harness.",
+        "zh": "划选文字后，通过公共翻译接口或当前 Harness 已配置的模型翻译。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "@qomob/dsh-madrank",
+      "title": {
+        "en": "Madrank",
+        "zh": "本地用量与排行"
+      },
+      "description": {
+        "en": "View local AI usage and optionally submit anonymous data to a rolling seven-day ranking.",
+        "zh": "查看本地 AI 用量，并可选择匿名参与近七日用量排行。"
+      },
+      "category": "usage"
+    },
+    {
+      "name": "@restregular/dsh-skill-center",
+      "title": {
+        "en": "Session Skill Center",
+        "zh": "会话技能中心"
+      },
+      "description": {
+        "en": "Inspect visible skills and their sources, read SKILL.md, manage invocation permissions, and create or soft-delete skills.",
+        "zh": "查看会话可见技能与来源、阅读 SKILL.md、管理调用权限，并创建或软删除技能。"
+      },
+      "category": "skills"
+    },
+    {
+      "name": "@sligqoer/dsh-usage-stats",
+      "title": {
+        "en": "Usage Stats",
+        "zh": "桌面用量统计"
+      },
+      "description": {
+        "en": "View desktop usage, provider quotas and custom queries, with optional WorkBuddy credits and an extended model selector.",
+        "zh": "查看桌面用量、供应商配额与自定义查询，可选 WorkBuddy 积分和扩展模型选择器。"
+      },
+      "category": "usage"
+    },
+    {
+      "name": "@smalltailqwq/dsh-client-ui-skin-deep-whale-manager",
+      "title": {
+        "en": "Deep Whale Skin Manager",
+        "zh": "深鲸皮肤管理"
+      },
+      "description": {
+        "en": "Switch installed skins and edit each skin's options from Settings.",
+        "zh": "在设置页切换已安装的皮肤，并调整各皮肤自带的选项。"
+      },
+      "category": "appearance"
+    },
+    {
+      "name": "@smalltailqwq/dsh-client-ui-skin-orca-link",
+      "title": {
+        "en": "Orca Link",
+        "zh": "Orca Link 黑鲸主题"
+      },
+      "description": {
+        "en": "Apply a black-whale theme with square corners, straight-line icons and light and dark palettes.",
+        "zh": "提供黑鲸主题、直角界面、线条图标及明暗配色。"
+      },
+      "category": "appearance"
+    },
+    {
+      "name": "@stolyarovmn/dsh-client-ui-schedule-tab",
+      "title": {
+        "en": "Schedule Attention",
+        "zh": "定时任务未读提醒"
+      },
+      "description": {
+        "en": "Add unread-delivery indicators and popup notifications to the native automation task interface.",
+        "zh": "为原生自动化任务界面增加未读投递标记和弹出通知。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "@timestatic/dsh-session-notebook",
+      "title": {
+        "en": "Session Notebook",
+        "zh": "会话笔记本"
+      },
+      "description": {
+        "en": "Capture conversation excerpts or new notes, organize them with tags and search, and manage trash and backups.",
+        "zh": "摘录会话或新建笔记，用标签整理和搜索，并管理回收站与备份。"
+      },
+      "category": "knowledge"
+    },
+    {
+      "name": "@tnnevol/dsh-codebuddy",
+      "title": {
+        "en": "CodeBuddy Connector",
+        "zh": "CodeBuddy 模型接入"
+      },
+      "description": {
+        "en": "Connect CodeBuddy models through browser OAuth, with account switching, model capabilities and quota display.",
+        "zh": "通过浏览器 OAuth 接入 CodeBuddy 模型，支持账号切换、模型能力查看和额度显示。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "@tryao/dsh-wps365-plugin",
+      "title": {
+        "en": "WPS 365 Connector",
+        "zh": "WPS 365 云文档"
+      },
+      "description": {
+        "en": "Read and write WPS 365 cloud documents through the local CLI, with conflict checks before writes; requires an enterprise account.",
+        "zh": "通过本机 CLI 读写 WPS 365 云文档，写入前检查并发冲突，需要企业版账号。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "@v587d/capital-generation",
+      "title": {
+        "en": "Capital Generation",
+        "zh": "A 股数据分析"
+      },
+      "description": {
+        "en": "Query A-share prices, financials, announcements and news, then organize analysis and charts.",
+        "zh": "查询 A 股行情、财务数据、公告和新闻，并整理分析与图表。"
+      },
+      "category": "knowledge"
+    },
+    {
+      "name": "@wulongxi/dsh-skills-hub",
+      "title": {
+        "en": "Skills Hub",
+        "zh": "在线技能中心"
+      },
+      "description": {
+        "en": "Search online skill catalogs, install skills into user or project directories and manage local skills.",
+        "zh": "搜索在线技能目录，把技能安装到用户或项目目录，并管理本地技能。"
+      },
+      "category": "skills"
+    },
+    {
+      "name": "@xiaoso/dsh-run-config",
+      "title": {
+        "en": "Run Configurations",
+        "zh": "运行配置"
+      },
+      "description": {
+        "en": "Save reusable prompts and shell commands globally or per workspace, then run them from session controls.",
+        "zh": "把提示词和 Shell 命令保存为全局或工作区运行配置，从会话入口执行。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "@xiaoso/dsh-tool-plus",
+      "title": {
+        "en": "Tool Plus",
+        "zh": "基础工具增强"
+      },
+      "description": {
+        "en": "Replace stock shell and file tools with persistent Bash, structured reads, multiple edit modes and atomic writes.",
+        "zh": "以持久 Bash、结构化读取、多模式编辑、原子写入和安全删除替换基础工具。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "@xiaoso/dsh-workflow-lite",
+      "title": {
+        "en": "Workflow Lite",
+        "zh": "画布工作流"
+      },
+      "description": {
+        "en": "Connect steps on a canvas and compile the graph into a dispatch plan for the model to execute.",
+        "zh": "在画布上连接步骤，把流程图编译为交给模型执行的派发计划。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "@zheshiyigehenchang/dsh-chat-typography",
+      "title": {
+        "en": "Chat Typography",
+        "zh": "对话排版设置"
+      },
+      "description": {
+        "en": "Adjust conversation fonts, font sizes, line spacing and horizontal margins.",
+        "zh": "调整对话字体、字号、行间距和水平留白。"
+      },
+      "category": "appearance"
+    },
+    {
+      "name": "@zhiqiangme/dsh-autostart-workbuddy",
+      "title": {
+        "en": "WorkBuddy Autostart",
+        "zh": "WorkBuddy 后端管理"
+      },
+      "description": {
+        "en": "Start a local WorkBuddy Panel backend with DSH and sync selected backend models into a provider.",
+        "zh": "随 DSH 启动本地 WorkBuddy Panel 后端，并把选定后端模型同步为模型提供方。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "@zhiqiangme/dsh-opencode2api",
+      "title": {
+        "en": "OpenCode2API Backend",
+        "zh": "OpenCode2API 后端管理"
+      },
+      "description": {
+        "en": "Start a local OpenCode2API backend with DSH and manage backend releases from Settings on Windows.",
+        "zh": "随 DSH 启动本地 OpenCode2API 后端，适用于 Windows，并在插件设置页管理后端版本。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "@zhiqiangme/dsh-tavily-search",
+      "title": {
+        "en": "Tavily Search",
+        "zh": "Tavily 搜索"
+      },
+      "description": {
+        "en": "Provide a Tavily backend for web search, with credential storage, key rotation and failover.",
+        "zh": "为网页搜索接入 Tavily，支持凭据存储、密钥轮换和失败切换。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "@zhz8888/dsh-android-emulator-helper",
+      "title": {
+        "en": "Android Emulator Helper",
+        "zh": "Android 模拟器助手"
+      },
+      "description": {
+        "en": "Manage SDKs, AVDs and emulators, scaffold Kotlin/Compose projects, and build, install, inspect and operate Android apps.",
+        "zh": "管理 SDK、AVD 和模拟器，创建 Kotlin/Compose 工程，并构建、安装、检查和操作 Android 应用。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "@zhz8888/dsh-ios-simulator-helper",
+      "title": {
+        "en": "iOS Simulator Helper",
+        "zh": "iOS 模拟器助手"
+      },
+      "description": {
+        "en": "Expose Xcode project, simulator, build, install, launch, screenshot and log operations as native agent tools.",
+        "zh": "把 Xcode 工程、模拟器、构建、安装、运行、截图和日志操作接为原生 Agent 工具。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "@zilliz/memsearch-dsh",
+      "title": {
+        "en": "Memsearch",
+        "zh": "Memsearch 共享记忆"
+      },
+      "description": {
+        "en": "Share Markdown memory across coding agents, with automatic capture, retrieval and review of skill candidates.",
+        "zh": "在多个编程 Agent 间共享 Markdown 记忆，支持自动记录、检索和技能候选审阅。"
+      },
+      "category": "memory",
+      "version": "0.1.6",
+      "iconReview": {
+        "version": "0.1.6",
+        "integrity": "sha512-bbGaGVFxPLu93Jxv7ZxPZJF3h0SQiqp+5ps0B/U5InZbeMiZxBeeVX244vhukSnvIrdyv9lv6wunG02BjY2iaw==",
+        "commit": "2e64124920130ebf1fea30d05f405a9131f8db83",
+        "path": "assets/logo-icon.jpg",
+        "sha256": "ed536b14545ff913a1289317cc343a3fc07a22bbeda0b37b7fe092854d4ee24a"
+      }
+    },
+    {
+      "name": "beauticode-dsh",
+      "title": {
+        "en": "Beauticode",
+        "zh": "Beauticode 背景"
+      },
+      "description": {
+        "en": "Use local images or videos as backgrounds in the web and desktop interfaces.",
+        "zh": "为网页端和桌面端设置本地图片或视频背景。"
+      },
+      "category": "appearance",
+      "version": "1.0.30",
+      "iconReview": {
+        "version": "1.0.30",
+        "integrity": "sha512-M3t+W8ob/5SBZc5+00sVx7wgFURSxgKI1eTiesLJJIh6mZrvHCWed37HYzTVNz6AEIx0QKWNPBRmsQ9jTXJAcQ==",
+        "commit": "35730da179021eaaa1f6f9f3094bb5fefb536cce",
+        "path": "assets/beauticode-icon-borderless.png",
+        "sha256": "34c40984fc5564177ce834633bee4fb10d8c6c2ccb16aec9848a6f27c0d8cb5a"
+      }
+    },
+    {
+      "name": "better-model-provider",
+      "title": {
+        "en": "Better Model Provider",
+        "zh": "模型能力配置"
+      },
+      "description": {
+        "en": "Edit per-model reasoning levels, endpoint values, input modalities and token limits in Settings.",
+        "zh": "在设置页逐模型编辑推理档位、端点取值、输入模态和 Token 容量。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "billion-context",
+      "title": {
+        "en": "Billion Context",
+        "zh": "Billion Context 上下文压缩"
+      },
+      "description": {
+        "en": "Compress conversation context while retaining history for subsequent work.",
+        "zh": "压缩会话上下文，保留后续工作需要的历史信息。"
+      },
+      "category": "memory",
+      "version": "0.1.202",
+      "iconReview": {
+        "version": "0.1.202",
+        "integrity": "sha512-vCouVcX40Qbo+RdO8vo8F+cV/cutbuoflBpLu0aFpZRxJtygSN743GGQET7jqRCLoT4KzqaQQqQOywjOaBDx0Q==",
+        "commit": "85c27f0ebadbeae6b2c976e8b1752c56a1b8833a",
+        "path": "docs/logo.svg",
+        "sha256": "0dd17836cc529d9a497eb15f896b43b502f39576069bb216e76024a82f600e91"
+      }
+    },
+    {
+      "name": "cc-safety-net",
+      "title": {
+        "en": "CC Safety Net",
+        "zh": "命令安全检查"
+      },
+      "description": {
+        "en": "Check destructive commands and access to sensitive files before tool execution.",
+        "zh": "在工具执行前检查破坏性命令及对密钥等敏感文件的访问。"
+      },
+      "category": "development",
+      "version": "2.6.16",
+      "iconReview": {
+        "version": "2.6.16",
+        "integrity": "sha512-a1kHFof385Jy0qzHPYKds0NlIc+NSAyW5u7jDUpf6c06zCWfW6fpTeyUTFTRYIxWdUZOnPaAf47qFeeJNcWnjg==",
+        "commit": "c2526afe39744f65281304687ba6e41de02559c4",
+        "path": "assets/logo.png",
+        "sha256": "cb3a55878bdd9e4bf6f45d4d4735eaa41754614770c193e66c1478a735464aa3"
+      }
+    },
+    {
+      "name": "codsh-bundle",
+      "title": {
+        "en": "Codsh",
+        "zh": "Codsh 终端工作流"
+      },
+      "description": {
+        "en": "Provide a terminal coding interface and a staged /ship workflow for specifications, tests and acceptance.",
+        "zh": "提供终端编码界面，以及分阶段处理规格、测试和验收的 /ship 工作流。"
+      },
+      "category": "development",
+      "version": "0.27.0",
+      "iconReview": {
+        "version": "0.27.0",
+        "integrity": "sha512-hBLj9/I3J6eawqoTTaQCuz9K/r7ESKPRzEQAH0oNOzhcgHtmudBKlt8pQOPLgpO8fUy7JIn/oZI1bF84JWd8RA==",
+        "commit": "972d36f894f935c9a4bcf60bb870508b4460a419",
+        "path": "assets/logo.svg",
+        "sha256": "9a1ec46ad328586f125c3913a2e067525c574f30b301f2fcd3776e46e84053b8"
+      }
+    },
+    {
+      "name": "ds-bot",
+      "title": {
+        "en": "DS Bot",
+        "zh": "持续运行机器人"
+      },
+      "description": {
+        "en": "Create persistent bots that coordinate through direct messages and group conversations.",
+        "zh": "创建持续运行的机器人，通过机器人间消息和群聊协作。"
+      },
+      "category": "workflow",
+      "version": "0.1.7",
+      "iconReview": {
+        "version": "0.1.7",
+        "integrity": "sha512-xRiXIpDfemkZ2l6lDwu7ZKSnn0a2c26BsZ7e+eEOkQ1AknXOKretK52Yuq1yfG6p4XCObmUiXR1tdGo7EQIStw==",
+        "commit": "e13bc3419d2695a509520d850a07e63f05c34e07",
+        "path": "docs/images/logo.svg",
+        "sha256": "3821ef353358a66cbfa764730ba31ce4085c38a39d126e8d5c16124316b82a27"
+      }
+    },
+    {
+      "name": "dsh-agent-profiles",
+      "title": {
+        "en": "Agent Profiles",
+        "zh": "Agent 角色与记忆"
+      },
+      "description": {
+        "en": "Manage selectable profiles with roles, personality, speaking style, rules and memory, with import/export and injection controls.",
+        "zh": "管理可切换的角色、性格、表达、准则和记忆配置，支持导入导出及注入开关。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "dsh-api-dashboard",
+      "title": {
+        "en": "API Dashboard",
+        "zh": "API 余额与用量看板"
+      },
+      "description": {
+        "en": "Display balances across model providers and estimate session and subagent costs, including DeepSeek peak and off-peak pricing.",
+        "zh": "汇总多家模型供应商余额，估算会话与子 Agent 费用，并区分 DeepSeek 峰谷计价。"
+      },
+      "category": "usage",
+      "version": "1.7.0",
+      "iconReview": {
+        "version": "1.7.0",
+        "integrity": "sha512-3CenzXY1ap30Q/MF8rlFqrNiO43/qU7HcyS5h1IZlkGfnTHT8LkoMJvu4q7FHwUXMNeEwGI4jP/+FBK4lHuhNw==",
+        "commit": "b57f9535c55aa39026931813e09834fa9f4f4d82",
+        "path": "assets/icon.png",
+        "sha256": "e8561b4639f6c5a1e145053ce84f90c98b9d0e96581b86674386057dc185da1b"
+      }
+    },
+    {
+      "name": "dsh-aqua-input-check",
+      "title": {
+        "en": "Aquaculture Record Check",
+        "zh": "养殖投入品记录核对"
+      },
+      "description": {
+        "en": "Check aquaculture input records, including required fields, withdrawal periods and harvest date intervals.",
+        "zh": "核对养殖投入品记录的字段、休药期与起捕日期间隔，提示记录差异。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-archive-check",
+      "title": {
+        "en": "Archive Check",
+        "zh": "档案归档核对"
+      },
+      "description": {
+        "en": "Check archive registers for required fields, duplicate identifiers, retention terms and transfer dates.",
+        "zh": "核对档案台账的必填字段、重复档号、保管期限用词和移交日期。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-attention",
+      "title": {
+        "en": "Attention",
+        "zh": "会话操作提醒"
+      },
+      "description": {
+        "en": "Notify for approvals, questions and completed sessions with interactive cards, a desktop pet and browser wake recovery.",
+        "zh": "在审批、提问和会话完成时提醒，提供操作卡片、桌面宠物和浏览器唤醒重连。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "dsh-auth-gate",
+      "title": {
+        "en": "Auth Gate",
+        "zh": "网页登录网关"
+      },
+      "description": {
+        "en": "Protect the web interface with passwords or shared tokens, session cookies and login rate limits.",
+        "zh": "为网页端添加口令或共享令牌认证、会话 Cookie、登录限速和用户管理命令。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-auto-rename",
+      "title": {
+        "en": "Auto Rename",
+        "zh": "会话自动命名"
+      },
+      "description": {
+        "en": "Name sessions from the first message and stream title suggestions inside the rename dialog.",
+        "zh": "根据首条消息为会话命名，并在重命名弹窗中流式给出标题建议。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "dsh-balance-inquiry",
+      "title": {
+        "en": "Balance Inquiry",
+        "zh": "多平台余额查询"
+      },
+      "description": {
+        "en": "Configure multiple metered accounts or token plans and query their balances from one dashboard.",
+        "zh": "配置多个按量计费账号或 Token 套餐，在同一看板查询余额。"
+      },
+      "category": "usage",
+      "version": "0.5.1",
+      "iconReview": {
+        "version": "0.5.1",
+        "integrity": "sha512-h9CgebGSu9zaKyLKl0SgfI7BnAi3KLXnPkklo8OMXsxrlTrZZ6TzATx9NGPg/G5XKJyIkr3ztxDaDnTLrTFAnQ==",
+        "commit": "6aef671aefc41f97fa207282de398e55da2f722e",
+        "path": "icon.svg",
+        "sha256": "55306774f11cc92bbbe51e70a3750a3d85df3300062780e5dfd8b1a138209c78"
+      }
+    },
+    {
+      "name": "dsh-brewreel",
+      "title": {
+        "en": "Brewreel",
+        "zh": "竖版视频制作"
+      },
+      "description": {
+        "en": "Validate storyboard JSON and render vertical promotional videos locally with Remotion.",
+        "zh": "校验分镜 JSON，并通过 Remotion 在本地渲染竖版宣传视频。"
+      },
+      "category": "tools",
+      "version": "0.6.0",
+      "iconReview": {
+        "version": "0.6.0",
+        "integrity": "sha512-UBwI1rkQcoolzdBpRQ+ydYD+Bn2ID1iPT7QkOXD1/wmPmSSVLxafq6t6Hir6CjnSt0O5itqSJRRMu5qTIduDfQ==",
+        "commit": "217eb1f9c6c047b908bfa95ec03f729bec1247ce",
+        "path": "docs/images/logo.png",
+        "sha256": "90f6a9b47af76405b9118a822e600376ae42ac286e07366ab06c603a8d5ce364"
+      }
+    },
+    {
+      "name": "dsh-browser-computer",
+      "title": {
+        "en": "Browser and Computer",
+        "zh": "浏览器与电脑操控"
+      },
+      "description": {
+        "en": "Connect playwright-mcp and peekaboo-mcp for browser and desktop control, with dependency setup and connection diagnostics.",
+        "zh": "接入 playwright-mcp 与 peekaboo-mcp 操控浏览器和桌面，提供依赖安装与连接诊断。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-cad-design",
+      "title": {
+        "en": "CAD Design",
+        "zh": "参数化 CAD 设计"
+      },
+      "description": {
+        "en": "Create and preview CadQuery or ezdxf designs, and export STEP, STL or DXF using a local Python installation.",
+        "zh": "用本地 Python 的 CadQuery 或 ezdxf 建模预览，并导出 STEP、STL 或 DXF。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-capability-panel",
+      "title": {
+        "en": "Capability Panel",
+        "zh": "会话能力面板"
+      },
+      "description": {
+        "en": "Manage MCP servers, skills and tools per session and inspect their context loading state.",
+        "zh": "按会话管理 MCP 服务器、技能和工具，查看它们在上下文中的加载状态。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "dsh-chat-plus",
+      "title": {
+        "en": "Chat Plus",
+        "zh": "对话与产物工作台"
+      },
+      "description": {
+        "en": "Add a task dashboard, interactive content cards, downloads and workbenches for memory, capabilities, usage and media.",
+        "zh": "提供任务大盘、交互内容卡片和下载功能，以及记忆、能力、用量与媒体工作台。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "dsh-claude-code-desktop-theme",
+      "title": {
+        "en": "Claude Desktop Theme",
+        "zh": "Claude 桌面风格"
+      },
+      "description": {
+        "en": "Apply warm cream surfaces, terracotta accents, serif interface text and the Absolutely code palette.",
+        "zh": "采用暖米色界面、陶土橙强调色、宋体文字和 Absolutely 代码配色。"
+      },
+      "category": "appearance"
+    },
+    {
+      "name": "dsh-client-ui-notes",
+      "title": {
+        "en": "File Notes",
+        "zh": "文件笔记与预览"
+      },
+      "description": {
+        "en": "Browse a file tree and edit Markdown or text with tabs, preview, manual saving and drag-and-drop moves.",
+        "zh": "通过文件树和标签页编辑 Markdown 或文本，提供预览、手动保存和拖拽移动。"
+      },
+      "category": "knowledge"
+    },
+    {
+      "name": "dsh-client-ui-quote",
+      "title": {
+        "en": "Conversation Quote",
+        "zh": "对话划选引用"
+      },
+      "description": {
+        "en": "Quote selected text from chat, file previews or terminals, add comments and open side conversations or source locations.",
+        "zh": "引用对话、文件预览或终端中的选中文字，添加评论，打开侧边对话或跳回原文。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "dsh-connect-atomcode",
+      "title": {
+        "en": "AtomCode Connector",
+        "zh": "AtomCode 侧边咨询"
+      },
+      "description": {
+        "en": "Ask an authenticated local AtomCode CLI for workspace-scoped advice or bounded code reviews with structured findings.",
+        "zh": "调用本机已登录的 AtomCode，进行按工作目录连续的侧边咨询或有界结构化代码评审。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-connect-modelscope-token-plan",
+      "title": {
+        "en": "ModelScope Quota",
+        "zh": "魔搭额度与模型"
+      },
+      "description": {
+        "en": "Display ModelScope balance and request statistics, with optional registration of ModelScope models as a provider.",
+        "zh": "显示魔搭余额和调用统计，并可选择将魔搭模型注册为模型提供方。"
+      },
+      "category": "usage"
+    },
+    {
+      "name": "dsh-connect-opencode",
+      "title": {
+        "en": "OpenCode Connector",
+        "zh": "OpenCode 模型接入"
+      },
+      "description": {
+        "en": "Import free models from a local opencode serve catalog while keeping tool execution in DSH.",
+        "zh": "从本机 opencode serve 目录导入免费模型，并将工具执行留在 DSH。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "dsh-context-toolkit",
+      "title": {
+        "en": "Context Toolkit",
+        "zh": "上下文输出工具箱"
+      },
+      "description": {
+        "en": "Run code in subprocesses and return concise results, or index long material in local SQLite FTS5 for search.",
+        "zh": "在子进程执行代码并返回精简结果，或把长材料存入本地 SQLite FTS5 供检索。"
+      },
+      "category": "tools",
+      "version": "0.3.12",
+      "iconReview": {
+        "version": "0.3.12",
+        "integrity": "sha512-SdoOI3rdHeiF3RuFF2nXMeo0Gf5Zb6iQr+lUYfGjIkbXxrv3cx/X082WVohBSH40bGNPeDTqAjilurhKQDpixg==",
+        "commit": "34caec47e2a67908b82e60cc4bf09dc3dccf4c8a",
+        "path": "icon.svg",
+        "sha256": "3b292a1c904303c33a30157dad9acbcfde5f291a8947884bb47c78560b5cf502"
+      }
+    },
+    {
+      "name": "dsh-context-zip",
+      "title": {
+        "en": "Context Zip",
+        "zh": "交接摘要压缩"
+      },
+      "description": {
+        "en": "Replace the compaction summarizer with a five-section handoff and keep compressed messages readable through a segmented directory.",
+        "zh": "把压缩摘要改为五段式交接文档，并通过分段目录保留被压缩消息的阅读入口。"
+      },
+      "category": "memory"
+    },
+    {
+      "name": "dsh-conversation-recycle-bin",
+      "title": {
+        "en": "Conversation Recycle Bin",
+        "zh": "会话回收站"
+      },
+      "description": {
+        "en": "Preview conversation deletion and optional linked-memory cleanup, with a recycle bin, audit log and per-session rollback.",
+        "zh": "预览会话及可选关联记忆的清理范围，提供回收站、审计日志和逐会话回滚。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "dsh-cpa-switch",
+      "title": {
+        "en": "CPA Switch",
+        "zh": "CPA 账户管理"
+      },
+      "description": {
+        "en": "Manage CLIProxyAPI accounts, balances, check-ins and tasks, with automatic CPA startup and shutdown.",
+        "zh": "管理 CLIProxyAPI 账号、余额、签到与任务，并让 CPA 随 DSH 启停。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "dsh-credits",
+      "title": {
+        "en": "Credits",
+        "zh": "余额与费用总览"
+      },
+      "description": {
+        "en": "Track provider balances, plan quotas, session costs and spending across time ranges.",
+        "zh": "查看供应商余额、套餐额度、会话费用和不同时间范围的累计消耗。"
+      },
+      "category": "usage"
+    },
+    {
+      "name": "dsh-custom-css",
+      "title": {
+        "en": "Custom CSS",
+        "zh": "自定义 CSS 与壁纸"
+      },
+      "description": {
+        "en": "Edit custom CSS or configure wallpapers from the General settings page.",
+        "zh": "在通用设置中编辑自定义 CSS，或通过面板设置壁纸。"
+      },
+      "category": "appearance"
+    },
+    {
+      "name": "dsh-demurrage-ledger",
+      "title": {
+        "en": "Demurrage Ledger",
+        "zh": "滞箱费台账核对"
+      },
+      "description": {
+        "en": "Check overdue days against dates and free periods, and compare declared charges with days multiplied by rates.",
+        "zh": "按日期与免箱期核对超期天数，并比较填报费用与天数乘费率的结果。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-desktop-statusbar",
+      "title": {
+        "en": "Desktop Status Bar",
+        "zh": "桌面统计状态栏"
+      },
+      "description": {
+        "en": "Configure and reorder desktop status fields, with token costs, custom model prices, currencies and account balance.",
+        "zh": "配置和排序桌面状态字段，显示 Token 费用、自定义模型单价、币种和账户余额。"
+      },
+      "category": "usage"
+    },
+    {
+      "name": "dsh-ds-balance",
+      "title": {
+        "en": "DeepSeek Balance",
+        "zh": "DeepSeek 余额"
+      },
+      "description": {
+        "en": "Show the DeepSeek account balance in the sidebar footer and configure it from the plugin page.",
+        "zh": "在侧边栏底部显示 DeepSeek 账户余额，并在插件页配置显示方式。"
+      },
+      "category": "usage"
+    },
+    {
+      "name": "dsh-duck-fleet",
+      "title": {
+        "en": "DuckFleet",
+        "zh": "鸭群多机委派"
+      },
+      "description": {
+        "en": "Register machines and delegate tasks to one or more of them through ACP-backed agent tools.",
+        "zh": "登记机器后，通过基于 ACP 的 Agent 工具向一台或多台机器派发任务。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "dsh-essay-rubric-check",
+      "title": {
+        "en": "Essay Rubric Check",
+        "zh": "作文评分表核对"
+      },
+      "description": {
+        "en": "Check rubric fields, evidence locations, per-item score limits and agreement between item scores and totals.",
+        "zh": "核对评分项、原文定位、单项分值上限，以及各项得分与总分的算术一致性。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-everforest",
+      "title": {
+        "en": "Everforest",
+        "zh": "Everforest 配色"
+      },
+      "description": {
+        "en": "Apply six Everforest light and dark palettes with three contrast levels and per-browser persistence.",
+        "zh": "提供六套 Everforest 明暗配色与三档对比度，并按浏览器保存选择。"
+      },
+      "category": "appearance"
+    },
+    {
+      "name": "dsh-expert-group",
+      "title": {
+        "en": "Expert Group",
+        "zh": "专家子代理协作"
+      },
+      "description": {
+        "en": "Run role-based subagents in parallel with per-role model and reasoning settings and a task sidebar.",
+        "zh": "并行运行按角色配置的子 Agent，为各角色设置模型与思考深度，并提供任务侧栏。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "dsh-fishpai",
+      "title": {
+        "en": "Fishpai",
+        "zh": "鱼排公众号排版"
+      },
+      "description": {
+        "en": "Convert Markdown to inline-styled WeChat articles, with themes, a sidebar workbench and block editing tools.",
+        "zh": "把 Markdown 排成带内联样式的公众号文章，提供主题、侧边工作台和块级改稿工具。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-focus-notify",
+      "title": {
+        "en": "Focus Notify",
+        "zh": "焦点感知提醒"
+      },
+      "description": {
+        "en": "Notify for approvals, questions, plan review and completed replies, accounting for window focus and background sessions.",
+        "zh": "根据窗口焦点和后台会话状态，提醒审批、提问、方案确认与回复完成。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "dsh-gh-pages-artifacts",
+      "title": {
+        "en": "GitHub Pages Artifacts",
+        "zh": "GitHub Pages 产物发布"
+      },
+      "description": {
+        "en": "Publish generated HTML or Markdown to GitHub Pages and manage previously published artifacts.",
+        "zh": "将生成的 HTML 或 Markdown 发布到 GitHub Pages，并管理已发布产物。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "dsh-ghidra",
+      "title": {
+        "en": "Ghidra Bridge",
+        "zh": "Ghidra 逆向桥接"
+      },
+      "description": {
+        "en": "Import binaries and run decompilation and output operations through persistent PyGhidra and GhidraMCP servers.",
+        "zh": "通过持久运行的 PyGhidra 与 GhidraMCP 服务导入二进制、反编译并输出结果。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-git-forge",
+      "title": {
+        "en": "Git Forge Credentials",
+        "zh": "项目 Git 凭据"
+      },
+      "description": {
+        "en": "Manage forge accounts and project authorization, then supply HTTPS credentials through a helper and reject unauthorized hosts.",
+        "zh": "管理代码托管账号和项目授权，通过 Helper 提供 HTTPS 凭据，并拒绝未授权主机。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-grok-byapi",
+      "title": {
+        "en": "Grok by API",
+        "zh": "Grok 媒体与模型"
+      },
+      "description": {
+        "en": "Discover Grok models and run image, video and speech generation with durable local media tasks.",
+        "zh": "发现 Grok 模型，执行图片、视频和语音生成，并在本地持久化媒体任务。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "dsh-group-status",
+      "title": {
+        "en": "Group Status",
+        "zh": "分组会话状态"
+      },
+      "description": {
+        "en": "Summarize running, approval, completion and scheduled-task states on collapsed sidebar groups, with counts and hover details.",
+        "zh": "在收起的侧栏分组上汇总运行、审批、完成和定时任务状态，显示数量与悬停明细。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "dsh-harness-switch",
+      "title": {
+        "en": "Harness Switch",
+        "zh": "Kimi 执行方式切换"
+      },
+      "description": {
+        "en": "Connect Kimi models to native DSH sessions and choose an embedded Kimi core or DSH execution per model.",
+        "zh": "在原生 DSH 会话中接入 Kimi 模型，按模型选择内嵌 Kimi 核心或 DSH 执行方式。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "dsh-hazplan-check",
+      "title": {
+        "en": "HAZOP Worksheet Check",
+        "zh": "HAZOP 分析表核对"
+      },
+      "description": {
+        "en": "Check worksheet fields and consistency between process parameters, guide words and declared deviations.",
+        "zh": "核对 HAZOP 表的要素，以及工艺参数、引导词与所填偏差的一致性。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-herta",
+      "title": {
+        "en": "Herta",
+        "zh": "黑塔角色与语音"
+      },
+      "description": {
+        "en": "Load a Herta persona preset with memory and voice tools, bundled voice clips and character-specific conversation views.",
+        "zh": "加载黑塔角色预设，提供记忆与语音工具、随包语音及专属对话视图。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "dsh-history-viewer",
+      "title": {
+        "en": "History Viewer",
+        "zh": "会话历史查看"
+      },
+      "description": {
+        "en": "Search conversations within projects, read rendered history and export session content locally.",
+        "zh": "按项目搜索会话、阅读渲染后的历史内容，并在本地导出对话。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "dsh-hs-classify",
+      "title": {
+        "en": "HS Hierarchy Check",
+        "zh": "商品编码层级核对"
+      },
+      "description": {
+        "en": "Check chapter, heading and subheading prefixes against declared commodity codes, reporting structural differences.",
+        "zh": "核对章、品目、子目与商品编号的前缀和层级关系，提示结构差异。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-hypatia-auto-memory",
+      "title": {
+        "en": "Hypatia Auto Memory",
+        "zh": "Hypatia 自动记忆"
+      },
+      "description": {
+        "en": "Record sessions in Hypatia and recall relevant material for later conversations.",
+        "zh": "自动把会话记录进 Hypatia，并在后续对话中召回相关内容。"
+      },
+      "category": "memory"
+    },
+    {
+      "name": "dsh-idle-compact",
+      "title": {
+        "en": "Idle Compaction",
+        "zh": "空闲上下文压缩"
+      },
+      "description": {
+        "en": "Compact sessions when context exceeds a token threshold and user inactivity reaches the configured duration.",
+        "zh": "上下文超过 Token 阈值且用户空闲达到配置时长后，自动压缩会话。"
+      },
+      "category": "memory"
+    },
+    {
+      "name": "dsh-job-progress",
+      "title": {
+        "en": "Job Progress",
+        "zh": "后台任务进度"
+      },
+      "description": {
+        "en": "Display background task progress, processing speed and estimated remaining time in a floating panel.",
+        "zh": "在悬浮面板中显示后台任务进度、处理速度和预计剩余时间。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "dsh-jot",
+      "title": {
+        "en": "Jot",
+        "zh": "笔记与待办工作台"
+      },
+      "description": {
+        "en": "Edit and search notes, tasks and documents, with tables, attachments, export and agent collaboration.",
+        "zh": "编辑和搜索笔记、待办与文档，支持表格、附件、导出和 Agent 协作。"
+      },
+      "category": "knowledge",
+      "version": "0.2.14",
+      "iconReview": {
+        "version": "0.2.14",
+        "integrity": "sha512-CftQJZobkzo/D6WHa54dN2jHI2/S2JjXE4AXd52VdiE531/p5/5Bn3gJ+JLQIvDwbi53YDEw3ngbesUyjXtXrA==",
+        "commit": "cf2fbf0266f747a5a6ec8ea59e9dc5d03ceb5463",
+        "path": "assets/readme/jot-icon.svg",
+        "sha256": "f52bdf86469e584e50ed7269d3f85815a093cf1740d18dfd1e0aa6af2bd550bb"
+      }
+    },
+    {
+      "name": "dsh-jujutsu",
+      "title": {
+        "en": "Jujutsu Guard",
+        "zh": "Jujutsu 命令引导"
+      },
+      "description": {
+        "en": "Block Git commands inside Jujutsu workspaces and suggest the corresponding jj commands.",
+        "zh": "在 Jujutsu 工作区中阻止 Git 命令，并提示对应的 jj 命令。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-kiwix-wiki",
+      "title": {
+        "en": "Kiwix Wiki",
+        "zh": "Kiwix 离线百科"
+      },
+      "description": {
+        "en": "Search and read local ZIM collections through a user-run kiwix-serve service, and list available books.",
+        "zh": "通过自行运行的 kiwix-serve 搜索和阅读本地 ZIM 资料，并列出可用书库。"
+      },
+      "category": "knowledge"
+    },
+    {
+      "name": "dsh-labnana",
+      "title": {
+        "en": "Labnana Images",
+        "zh": "Labnana 图像生成"
+      },
+      "description": {
+        "en": "Generate or edit images with Labnana and view subscription balances and estimated credit use.",
+        "zh": "通过 Labnana 生成或编辑图片，并查看订阅余额和积分用量估算。"
+      },
+      "category": "tools",
+      "version": "0.3.5",
+      "iconReview": {
+        "version": "0.3.5",
+        "integrity": "sha512-xKDBOdVL5LmY8tSJyl74S7IMIXGk6LNxG7pgupbIOjaC32+/6vVvZ7nCQyZid9ZLVYz6QTQUXZH//zbb40tJHw==",
+        "commit": "268b7cccdd67236ddebf9ce8ddb295ec8bf33635",
+        "path": "images/logo.webp",
+        "sha256": "fc7428fa6004ff0a18490d6695d828091f323b644d4e8cb5414a9971316e8eb9"
+      }
+    },
+    {
+      "name": "dsh-later",
+      "title": {
+        "en": "Later",
+        "zh": "定时提醒与发送"
+      },
+      "description": {
+        "en": "Schedule reminders or delayed messages from commands and a panel, with delivery handled by the host.",
+        "zh": "通过命令或面板安排提醒和延迟消息，由宿主负责到时投递。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "dsh-liao-usage",
+      "title": {
+        "en": "Liao Usage",
+        "zh": "DeepSeek 与 Grok 用量"
+      },
+      "description": {
+        "en": "Show DeepSeek session costs and balance alongside Grok weekly quota, keeping gateway credentials in the host.",
+        "zh": "显示 DeepSeek 会话费用与余额、Grok 本周剩余额度，网关凭据保存在宿主端。"
+      },
+      "category": "usage"
+    },
+    {
+      "name": "dsh-lobsterai-daddy",
+      "title": {
+        "en": "LobsterAI Accounts",
+        "zh": "LobsterAI 账号面板"
+      },
+      "description": {
+        "en": "Manage LobsterAI accounts from a draggable floating panel, with built-in balance, check-in and account-switching controls.",
+        "zh": "通过可拖动悬浮面板管理 LobsterAI 账号，提供内置余额查询、签到和账号切换。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "dsh-local-file-share",
+      "title": {
+        "en": "Local File Share",
+        "zh": "浏览器本地文件通道"
+      },
+      "description": {
+        "en": "Authorize a browser-local directory and let agent tools read or write it through a private WebSocket relay.",
+        "zh": "在浏览器授权本地目录，通过私有 WebSocket 通道让 Agent 工具读写其中的文件。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-mcp-console",
+      "title": {
+        "en": "MCP Console",
+        "zh": "MCP 服务器管理"
+      },
+      "description": {
+        "en": "Inspect and edit profile MCP servers, manage connections and add servers from the official registry.",
+        "zh": "查看和编辑 Profile 中的 MCP 服务器，管理连接并从官方目录添加服务器。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "dsh-mcp-installer",
+      "title": {
+        "en": "MCP Installer",
+        "zh": "MCP 配置导入"
+      },
+      "description": {
+        "en": "Parse pasted or imported MCP configurations, preview risk notes and write selected servers into the current profile.",
+        "zh": "解析粘贴或导入的 MCP 配置，预览风险提示，把选定服务器写入当前 Profile。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "dsh-mermaid-plus",
+      "title": {
+        "en": "Mermaid Plus",
+        "zh": "Mermaid 图表查看"
+      },
+      "description": {
+        "en": "Render Mermaid diagrams on demand, follow the current theme and open a fullscreen zoom viewer.",
+        "zh": "按需渲染 Mermaid 图表，适配当前主题，并提供全屏缩放查看。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "dsh-mimo-quota",
+      "title": {
+        "en": "MIMO Quota Panel",
+        "zh": "MIMO 用量面板"
+      },
+      "description": {
+        "en": "Build usage and estimated-spend views from session event logs, with model, time, project and conversation filters.",
+        "zh": "从会话事件日志汇总用量与费用估算，支持按模型、时间、项目和会话筛选。"
+      },
+      "category": "usage"
+    },
+    {
+      "name": "dsh-model-kit",
+      "title": {
+        "en": "Model Kit",
+        "zh": "模型参数工具箱"
+      },
+      "description": {
+        "en": "Import provider models, fill missing metadata from models.dev and override model fields or pricing.",
+        "zh": "导入供应商模型，从 models.dev 补充缺失参数，并覆盖模型字段或计价设置。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "dsh-modes",
+      "title": {
+        "en": "Agent Modes",
+        "zh": "Agent 模式管理"
+      },
+      "description": {
+        "en": "Configure capabilities, plugins and system prompts per mode, with previews, version history and approval-gated prompt editing.",
+        "zh": "按模式配置能力、插件和系统提示词，提供预览、历史版本与需审批的提示词编辑。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "dsh-motor-ai-l0",
+      "title": {
+        "en": "Motor AI L0",
+        "zh": "电机需求参数初筛"
+      },
+      "description": {
+        "en": "Parse motor design requirements and filter candidate parameters for downstream calculation tools.",
+        "zh": "解析电机设计需求，初筛候选参数并生成后续计算工具所需数据。"
+      },
+      "category": "tools",
+      "version": "0.6.3",
+      "iconReview": {
+        "version": "0.6.3",
+        "integrity": "sha512-7mDij9DUVYM1IG8BTpLj76IPnwgQMGRnMre3H5XOl3sRRZOmKCYiot9hgMFfyIrIzodu+KwO71DA9PNY3QUIIw==",
+        "commit": "f434e3d8b06adfd9507607dc891524d7b4528148",
+        "path": "assets/icons/icon-512.png",
+        "sha256": "555067dc7d6ae3ea23c18f8ae0e48d484704ab432b9d9484a1414842609fb25f"
+      }
+    },
+    {
+      "name": "dsh-mpkg-wallpaper",
+      "title": {
+        "en": "MPKG Wallpaper",
+        "zh": "MPKG 动态壁纸"
+      },
+      "description": {
+        "en": "Load Wallpaper Engine .mpkg backgrounds with embedded video, scheduled switching, blur and a local rotation library.",
+        "zh": "加载 Wallpaper Engine 的 .mpkg 背景，支持内嵌视频、时段切换、虚化和本地轮换库。"
+      },
+      "category": "appearance"
+    },
+    {
+      "name": "dsh-notification-hook",
+      "title": {
+        "en": "Notification Hook",
+        "zh": "桌面与 Webhook 提醒"
+      },
+      "description": {
+        "en": "Send native desktop notifications or webhooks when tasks complete, fail or wait for confirmation.",
+        "zh": "在任务完成、失败或等待确认时发送桌面原生通知或 Webhook 消息。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "dsh-nsfc-form-check",
+      "title": {
+        "en": "NSFC Form Check",
+        "zh": "基金申请形式核对"
+      },
+      "description": {
+        "en": "Check application structure and potential identity disclosures in document text and metadata using supplied rosters and rules.",
+        "zh": "依据提供的名单和规则，核对基金申请结构及正文、文档属性中的潜在身份泄露。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-oh-my-claude",
+      "title": {
+        "en": "Oh My Claude",
+        "zh": "Claude Code 模型接入"
+      },
+      "description": {
+        "en": "Use an authenticated Claude Code CLI as a model provider, forwarding sessions, approvals and image input.",
+        "zh": "把已登录的 Claude Code CLI 接为模型提供方，转发会话、审批和图片输入。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "dsh-openviking-manager",
+      "title": {
+        "en": "OpenViking Manager",
+        "zh": "OpenViking 记忆管理"
+      },
+      "description": {
+        "en": "Configure the OpenViking memory plugin, diagnose connections and tune session recall scope and injection settings.",
+        "zh": "配置 OpenViking 记忆插件、诊断连接，并调整会话召回范围和注入参数。"
+      },
+      "category": "memory"
+    },
+    {
+      "name": "dsh-openwrite",
+      "title": {
+        "en": "OpenWrite",
+        "zh": "OpenWrite 小说工作台"
+      },
+      "description": {
+        "en": "Manage novel outlines, characters, annotations and review workflows with writing presets and a local Python backend.",
+        "zh": "管理小说大纲、人物、正文批注和审稿流程，提供创作预设及本地 Python 后端。"
+      },
+      "category": "workflow",
+      "version": "0.2.23",
+      "iconReview": {
+        "version": "0.2.23",
+        "integrity": "sha512-YL8/bkzZfOzwto4hwi1MBCtAFGyDqrxxYl8JI+r5NTxEUmUAcUfiKLLRr37wWDBiTdWx086lyGR+HjoWKItSVw==",
+        "commit": "c662440f351436e666b6f996d3bdb3274f351b31",
+        "path": "assets/logo-light.svg",
+        "sha256": "ecef0887dd747fc7ce13e550a5938d0b7436dfa6dd5a1ecd069706ac2ba99d3d"
+      }
+    },
+    {
+      "name": "dsh-ops",
+      "title": {
+        "en": "DSH Ops",
+        "zh": "DSH 命令工具"
+      },
+      "description": {
+        "en": "Provide Bash, PowerShell 7 and Rust-based command tools for DSH on Windows.",
+        "zh": "为 Windows 上的 DSH 提供 Bash、PowerShell 7 和 Rust 命令工具。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-pdf-mineru",
+      "title": {
+        "en": "MinerU PDF",
+        "zh": "MinerU 文档解析"
+      },
+      "description": {
+        "en": "Parse documents with MinerU cloud or self-hosted providers, using background jobs, cached results and shared requests.",
+        "zh": "通过 MinerU 云端或自托管服务解析文档，支持后台任务、产物缓存和请求合并。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-pharos",
+      "title": {
+        "en": "Pharos",
+        "zh": "桌面消息守望"
+      },
+      "description": {
+        "en": "Notify for approvals, questions, completed work and errors through desktop alerts, sounds, title markers and webhooks.",
+        "zh": "通过桌面通知、声音、标题标记和 Webhook 提醒审批、提问、任务完成及错误。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "dsh-plugin-debugging",
+      "title": {
+        "en": "Plugin Debugging",
+        "zh": "插件运行诊断"
+      },
+      "description": {
+        "en": "Inspect plugin runtime behavior and distinguish live configuration changes, restarts and hot reloads.",
+        "zh": "诊断插件运行状态，区分实时配置生效、重启和热重载。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-plugin-discord",
+      "title": {
+        "en": "Discord Bridge",
+        "zh": "Discord 会话桥接"
+      },
+      "description": {
+        "en": "Chat with DSH sessions through Discord messages or threads and answer approvals or questions from either interface.",
+        "zh": "通过 Discord 私信或线程连接 DSH 会话，并可在任一界面回答审批或提问。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "dsh-plugin-pwsh7",
+      "title": {
+        "en": "PowerShell 7 Router",
+        "zh": "PowerShell 7 执行路由"
+      },
+      "description": {
+        "en": "Route the pwsh tool to PowerShell 7 on Windows, with status, diagnostics and portable installation controls.",
+        "zh": "在 Windows 上把 pwsh 工具路由到 PowerShell 7，并提供状态、诊断和便携安装入口。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-plugin-scout",
+      "title": {
+        "en": "Plugin Scout",
+        "zh": "插件发现与安装"
+      },
+      "description": {
+        "en": "Discover DSH plugins on GitHub, inspect trust and compatibility evidence, and install through the official installer.",
+        "zh": "从 GitHub 发现 DSH 插件，检查可信度与兼容性证据，再通过官方安装器安装。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-plugin-security",
+      "title": {
+        "en": "Plugin Security",
+        "zh": "插件证据审查"
+      },
+      "description": {
+        "en": "Review dependency advisories and static behavior evidence; automatic disabling requires a reviewed malicious finding.",
+        "zh": "审查依赖漏洞和插件行为证据，仅在有高置信度恶意审读结论时自动停用。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-plugin-share",
+      "title": {
+        "en": "Plugin Share",
+        "zh": "插件组合分享"
+      },
+      "description": {
+        "en": "Encode a plugin set as a share code or QR code that others can import and install item by item.",
+        "zh": "把插件组合生成分享码或二维码，供他人导入后逐项安装。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "dsh-plugin-usage",
+      "title": {
+        "en": "Plugin Usage",
+        "zh": "用量与参考成本"
+      },
+      "description": {
+        "en": "Aggregate tokens and reference costs by time and model, with filters, cache statistics and configurable token prices.",
+        "zh": "按时间和模型汇总 Token 与参考成本，支持筛选、缓存统计和自定义 Token 单价。"
+      },
+      "category": "usage"
+    },
+    {
+      "name": "dsh-postiz",
+      "title": {
+        "en": "Postiz Connector",
+        "zh": "Postiz 社交发布"
+      },
+      "description": {
+        "en": "Connect Postiz over MCP to inspect channels and posting rules, manage drafts and publish immediately or on schedule.",
+        "zh": "通过 MCP 连接 Postiz，查询渠道与发帖规则、管理草稿，并立即或定时发布。"
+      },
+      "category": "integrations",
+      "version": "0.1.0",
+      "iconReview": {
+        "version": "0.1.0",
+        "integrity": "sha512-F1ap9VL2V88NaOPiAu5FOiYzxixnL2uW/zhQ0pVlL8Z9P+ElHaB7l0hUYZRQePsnHvmpNMroIVIIhUlaQo5gxA==",
+        "commit": "86e02524377cc60a6cd6ef67fd10a3caeade8d2c",
+        "path": "assets/logo.svg",
+        "sha256": "0f49b14acb967866aba5f85c7728aa18c61b03b85c512e0a6bdcef4903dbc66f"
+      }
+    },
+    {
+      "name": "dsh-power-loss-split",
+      "title": {
+        "en": "Power Loss Check",
+        "zh": "线损电量核对"
+      },
+      "description": {
+        "en": "Recalculate energy loss, loss rates and meter totals, reporting arithmetic differences against declared figures.",
+        "zh": "重算线损电量、线损率和计量点合计，提示与填报数值的算术差异。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-ppt-maker",
+      "title": {
+        "en": "PPT Maker",
+        "zh": "演示文稿制作"
+      },
+      "description": {
+        "en": "Create, edit, inspect and export presentations, reverse existing decks and use bundled design systems and templates.",
+        "zh": "创建、编辑、检查和导出演示文稿，逆向已有文件，并使用随包设计系统与模板。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-preset-workshop",
+      "title": {
+        "en": "Preset Workshop",
+        "zh": "预设工作台"
+      },
+      "description": {
+        "en": "Edit personas, prompt sections and tool descriptions per preset, select tools and skills, and import or export JSON/YAML.",
+        "zh": "逐预设编辑人设、提示词段和工具描述，选择工具与技能，并导入导出 JSON 或 YAML。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "dsh-project-guard",
+      "title": {
+        "en": "Project Guard",
+        "zh": "命令后果分析"
+      },
+      "description": {
+        "en": "Explain the consequences of extra-permission requests in full-access mode, with confidence and inspection scope.",
+        "zh": "在完全权限下分析额外授权请求的影响，并标注置信度与已检查范围。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-prompt-zh",
+      "title": {
+        "en": "Chinese Prompts",
+        "zh": "中文提示词管理"
+      },
+      "description": {
+        "en": "Translate supported DSH prompts, edit them per profile and inspect exact-version matching while retaining tool and parameter names.",
+        "zh": "翻译和编辑支持的 DSH 提示词，按 Profile 保存并检查版本匹配，保留工具名与参数名。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "dsh-ptc-cordis-preset",
+      "title": {
+        "en": "PTC Cordis Preset",
+        "zh": "PTC Cordis 预设"
+      },
+      "description": {
+        "en": "Combine PTC coding mode, Cordis tools and preset-authoring skills in switchable agent presets.",
+        "zh": "把 PTC 编码模式、Cordis 工具和预设编写技能组合为可切换的 Agent 预设。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "dsh-pulse",
+      "title": {
+        "en": "Pulse",
+        "zh": "跨会话用量观测"
+      },
+      "description": {
+        "en": "Explore usage and estimated costs across sessions, including model trends, heatmaps, quotas, balance reconciliation and CSV export.",
+        "zh": "查看跨会话用量与费用估算，提供模型趋势、热力图、配额、余额对账和 CSV 导出。"
+      },
+      "category": "usage"
+    },
+    {
+      "name": "dsh-punky-swarm",
+      "title": {
+        "en": "Punky Swarm",
+        "zh": "Punky 多代理编排"
+      },
+      "description": {
+        "en": "Orchestrate local subagents with task dependencies, execution states, isolated sessions and stage checks.",
+        "zh": "在单机上编排子 Agent，管理任务依赖、执行状态、会话隔离和阶段检查。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "dsh-rea-agents",
+      "title": {
+        "en": "REA Agents Connector",
+        "zh": "REA Agents 服务管理"
+      },
+      "description": {
+        "en": "Install a pinned rea-agents release locally, start its MCP service and upgrade through an update control.",
+        "zh": "在本地安装指定版本的 rea-agents、启动其 MCP 服务，并通过更新入口升级。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "dsh-remote-plugin",
+      "title": {
+        "en": "Mobile Remote",
+        "zh": "移动远程控制"
+      },
+      "description": {
+        "en": "Access sessions, approvals and files from mobile clients through a token gateway, with server switching and offline chat caching.",
+        "zh": "通过令牌网关从移动客户端访问会话、审批和文件，支持服务器切换及聊天离线缓存。"
+      },
+      "category": "integrations",
+      "version": "0.8.0-rc.4",
+      "iconReview": {
+        "version": "0.8.0-rc.4",
+        "integrity": "sha512-Szd6ej4j6Myv1aR5EA8k4IQ4BBS+4FSMB419KsKW+VT41w0reSE6Ca66Fu7L1LJkQ/NoxJNvJgFx/AKucAjeHw==",
+        "commit": "24ae6490094f2362bf8a5dcee85a17921d2407b1",
+        "path": "packages/plugin/public/icon.svg",
+        "sha256": "c5fe40566342a665dac6e382a118c8a0ab1a8b0181123600dfc2962868dbc92c"
+      }
+    },
+    {
+      "name": "dsh-restart-now",
+      "title": {
+        "en": "Restart Now",
+        "zh": "桌面端重启"
+      },
+      "description": {
+        "en": "Restart the Windows desktop app through a detached helper, with confirmation, delay and executable path settings.",
+        "zh": "通过独立助手重启 Windows 桌面端，可设置确认、延时和目标程序路径。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-scout",
+      "title": {
+        "en": "Company and Job Scout",
+        "zh": "公司与岗位尽调"
+      },
+      "description": {
+        "en": "Organize sourced company and job research, verify registered entities and generate evidence-bounded reports and interview questions.",
+        "zh": "整理公司与岗位来源证据，核验登记主体，生成有证据边界的报告、核验清单和面试问题。"
+      },
+      "category": "knowledge"
+    },
+    {
+      "name": "dsh-select-quote",
+      "title": {
+        "en": "Selected Text Quotes",
+        "zh": "划选批注"
+      },
+      "description": {
+        "en": "Attach selected conversation text to the next message as editable annotations, retaining source highlights and jump-back links.",
+        "zh": "把对话中的选中文字作为可编辑批注附到下一条消息，保留原文高亮和回跳入口。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "dsh-service-portal",
+      "title": {
+        "en": "Service Portal",
+        "zh": "服务与隧道门户"
+      },
+      "description": {
+        "en": "Manage services and routes through a web console, with Cloudflare tunnels and password login.",
+        "zh": "通过网页控制台管理服务和路由，支持 Cloudflare 隧道与口令登录。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-session-menu",
+      "title": {
+        "en": "Session Menu",
+        "zh": "会话菜单增强"
+      },
+      "description": {
+        "en": "Extend session menus with unread status, information copying, IDE opening and deletion, plus status indicators and configurable actions.",
+        "zh": "扩展会话菜单的未读、信息复制、IDE 打开和删除操作，并提供状态点与动作开关。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "dsh-session-messaging",
+      "title": {
+        "en": "Session Messaging",
+        "zh": "工作区会话通信"
+      },
+      "description": {
+        "en": "Exchange coordination messages between independently started sessions in one workspace and flag potential write-scope conflicts.",
+        "zh": "让同一工作区内独立启动的会话互发协调消息，并提示可能的文件写入范围冲突。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "dsh-showcase",
+      "title": {
+        "en": "Showcase",
+        "zh": "交付证据报告"
+      },
+      "description": {
+        "en": "Create local delivery reports from Git changes, test evidence and responsive interface checks.",
+        "zh": "根据 Git 变更、测试证据和响应式界面检查生成本地交付报告。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-sidenote",
+      "title": {
+        "en": "Sidenote",
+        "zh": "侧边聊天与批注"
+      },
+      "description": {
+        "en": "Open side conversations and annotate selected text beside the main chat.",
+        "zh": "在主对话旁打开侧边聊天，并为选中文字添加批注。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "dsh-skill-browser",
+      "title": {
+        "en": "Skill Browser",
+        "zh": "技能浏览与失效台账"
+      },
+      "description": {
+        "en": "Browse and search local skills, read SKILL.md and record tool outcomes in a skill-failure ledger.",
+        "zh": "浏览和搜索本地技能、阅读 SKILL.md，并把工具结果记录到技能失效台账。"
+      },
+      "category": "skills"
+    },
+    {
+      "name": "dsh-source-control",
+      "title": {
+        "en": "Source Control",
+        "zh": "Git 源代码管理"
+      },
+      "description": {
+        "en": "Browse commit graphs and diffs, stage or discard changes, amend commits and create repositories or pull requests through gh.",
+        "zh": "查看提交图与差异、暂存或丢弃改动、修补提交，并通过 gh 创建仓库或拉取请求。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-sub2api-monitor",
+      "title": {
+        "en": "Sub2API Monitor",
+        "zh": "Sub2API 额度监控"
+      },
+      "description": {
+        "en": "Show account quota, subscription type and daily statistics in the session header, with refresh and error notices.",
+        "zh": "在会话标题栏显示账号额度、订阅类型与今日统计，支持刷新和异常提示。"
+      },
+      "category": "usage"
+    },
+    {
+      "name": "dsh-suggest-actions",
+      "title": {
+        "en": "Suggested Actions",
+        "zh": "下一步建议"
+      },
+      "description": {
+        "en": "Show clickable follow-up suggestions below replies and send a selected suggestion as a user message.",
+        "zh": "在回复下方显示可点击的后续建议，选中后作为用户消息发送。"
+      },
+      "category": "interface",
+      "version": "0.1.9",
+      "iconReview": {
+        "version": "0.1.9",
+        "integrity": "sha512-HOHmsEOwQ9dVV8Z/uj5tv3KIfQQDSpqEovxtt2ozB8wzHc80pcFtrlJhgxdXjaa/B2cqy6QCLQXLs1FYylT2EQ==",
+        "commit": "8e1d69b7440b8c5627fbf2ab76f7f9fdac253c56",
+        "path": "assets/icon.svg",
+        "sha256": "0b2e82671c3a0d286926595c4d259055020172f0e2f551dd76df2d31a2e0ef77",
+        "normalization": "remove-xml-comments"
+      }
+    },
+    {
+      "name": "dsh-switchman",
+      "title": {
+        "en": "Switchman",
+        "zh": "模型派发与交接"
+      },
+      "description": {
+        "en": "Route tasks among model pools and manage context thresholds, delegation, forked backups and handoff documents.",
+        "zh": "在多个模型池之间派发任务，管理上下文阈值、委派、分叉备份和交接文档。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "dsh-system1",
+      "title": {
+        "en": "System One",
+        "zh": "类型化判断工具"
+      },
+      "description": {
+        "en": "Provide typed yes/no decisions, classifications and scores through System One services and agent tools.",
+        "zh": "通过 System One 服务和 Agent 工具提供类型化的是非判断、分类与评分。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-todos",
+      "title": {
+        "en": "Todos",
+        "zh": "待办与项目管理"
+      },
+      "description": {
+        "en": "Manage projects, labels, priorities and recurring tasks, with natural-language capture, statistics, import/export and agent tools.",
+        "zh": "管理项目、标签、优先级和重复任务，支持自然语言添加、统计、导入导出及 Agent 工具。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "dsh-tongflow",
+      "title": {
+        "en": "TongFlow",
+        "zh": "TongFlow 媒体工作流"
+      },
+      "description": {
+        "en": "Organize media projects and assets, then run TongFlow image, voice, music and video workflows on an embedded canvas.",
+        "zh": "按项目整理媒体素材，在内嵌画布中运行 TongFlow 图片、配音、音乐和视频流程。"
+      },
+      "category": "workflow",
+      "version": "0.8.4",
+      "iconReview": {
+        "version": "0.8.4",
+        "integrity": "sha512-/bRRHKSXHvDd9kqok0p7Rug9m/00bfIL8jV76IdMzMnxMhPr421fOtifnWZy+6r9liFYvaF0vkcb+sZUYJWm9A==",
+        "commit": "fce4987200e8ae44db2830e0a2fa2985275d6d36",
+        "path": "public/logo.svg",
+        "sha256": "b8fc012f11717fe29fbc7efb48f33359df292889883ae7a87225f248ec771095"
+      }
+    },
+    {
+      "name": "dsh-tower",
+      "title": {
+        "en": "Tower",
+        "zh": "多代理工作树协作"
+      },
+      "description": {
+        "en": "Plan multi-agent tasks in isolated worktrees and merge results through review gates.",
+        "zh": "规划多代理任务，在隔离工作树中执行，并经审查门禁合并结果。"
+      },
+      "category": "workflow"
+    },
+    {
+      "name": "dsh-tree-view",
+      "title": {
+        "en": "Session Tree",
+        "zh": "会话分支树"
+      },
+      "description": {
+        "en": "Browse, switch and rename conversation branches, or turn a branch into an independent session.",
+        "zh": "用树形视图浏览、切换和重命名会话分支，也可将分支转为独立会话。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "dsh-trust-check",
+      "title": {
+        "en": "Trust Check",
+        "zh": "插件能力检查"
+      },
+      "description": {
+        "en": "List installed plugins' capabilities, prompt injections and install scripts with source locations.",
+        "zh": "列出已装插件的能力、提示词注入和安装脚本，并提供源码位置。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-tsm-agent",
+      "title": {
+        "en": "TSM Agent",
+        "zh": "TSM 语义服务接入"
+      },
+      "description": {
+        "en": "Expose a running tsm-core-dlr vector-and-graph service as MCP tools, with modeling skills and a service-status panel.",
+        "zh": "把运行中的 tsm-core-dlr 向量与图服务接为 MCP 工具，提供建模技能和服务状态面板。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "dsh-vertex-argon",
+      "title": {
+        "en": "Vertex Argon",
+        "zh": "Gemini 与 Vertex AI 配置"
+      },
+      "description": {
+        "en": "Configure Gemini API and Vertex AI decoding, protocols and service tiers, and inspect responses, usage and estimated costs.",
+        "zh": "配置 Gemini API 与 Vertex AI 的解码、协议和服务等级，并检查响应、用量与费用估算。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "dsh-voice-call",
+      "title": {
+        "en": "Voice Call",
+        "zh": "Agent 语音来电"
+      },
+      "description": {
+        "en": "Let agents offer voice calls; accept, reject or defer them, with local speech synthesis after acceptance.",
+        "zh": "让 Agent 发起语音来电，可接听、拒绝或稍后处理，接听后通过本地语音合成播放。"
+      },
+      "category": "tools",
+      "version": "0.3.12",
+      "iconReview": {
+        "version": "0.3.12",
+        "integrity": "sha512-9Gtb0kp6dmcAyfUNp7sABNJ2EYVMZHoI5sg+7IH8w5qXHAyAgFJ3NK66iaJLujU1Ih2ErPQempTs3/1EBHFjyA==",
+        "commit": "d50d1734c01112d2efbe19980309d56458db49da",
+        "path": "docs/logo.svg",
+        "sha256": "856db8bba6f53803878c3d8cdf5f0810a9bca831de30b072b529f5764d1266c7"
+      }
+    },
+    {
+      "name": "dsh-voice-mode",
+      "title": {
+        "en": "Voice Mode",
+        "zh": "全双工语音模式"
+      },
+      "description": {
+        "en": "Provide streaming dictation, optional wake words, spoken replies, live captions and interruption when the user speaks.",
+        "zh": "提供流式听写、可选唤醒词、回复朗读与实时字幕，用户开口时可打断播放。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-vps",
+      "title": {
+        "en": "VPS Deployment",
+        "zh": "VPS 部署与网关"
+      },
+      "description": {
+        "en": "Deploy DSH to a VPS over SSH and manage its HTTPS gateway, service state and upgrades.",
+        "zh": "通过 SSH 把 DSH 部署到 VPS，并管理 HTTPS 网关、服务状态和升级。"
+      },
+      "category": "development",
+      "version": "1.16.1",
+      "iconReview": {
+        "version": "1.16.1",
+        "integrity": "sha512-VHR3bVYBf/LAObF6oM6tm4ZnesyReYegHC7/e810pTwskUzTJxRRX60D6KmxplLUzmerISeHYBg8f/MXWSp6Nw==",
+        "commit": "d4223e07717dce3832d0233a6a12edfceb3fde27",
+        "path": "assets/logo.png",
+        "sha256": "c326a497cc4693d39b36785370780a1fe631f73058f36834c49843b0a151f0ee"
+      }
+    },
+    {
+      "name": "dsh-vps-manager",
+      "title": {
+        "en": "VPS Manager",
+        "zh": "VPS 运维管理"
+      },
+      "description": {
+        "en": "Manage registered VPS hosts over SSH, with terminals, status commands, confirmation gates and file backups.",
+        "zh": "通过 SSH 管理已登记的 VPS，提供终端、状态命令、操作确认和文件备份。"
+      },
+      "category": "development",
+      "version": "0.6.8",
+      "iconReview": {
+        "version": "0.6.8",
+        "integrity": "sha512-klAxyCKdxL4IfleI+rT55/IqcXmpznms5AHdiLZulMQWtekw8qjkdKB03PugfVqdnnJzC+V3QAbt1/4iYNmzhQ==",
+        "commit": "00d77a49b4fcda988e28a489a5ab42e0a4fa78c2",
+        "path": "assets/logo.png",
+        "sha256": "a3eb19f1ff71e9d02bb013293c28a510e3f130fee08b99b99c6d64ecc44761d8"
+      }
+    },
+    {
+      "name": "dsh-vscode-mode",
+      "title": {
+        "en": "VSCode Mode",
+        "zh": "VSCode 编码模式"
+      },
+      "description": {
+        "en": "Add a Monaco editor and review agent edits with per-change acceptance, rejection and rollback.",
+        "zh": "提供 Monaco 文件编辑器，逐处审查、采纳或拒绝 Agent 修改，并支持回滚。"
+      },
+      "category": "development"
+    },
+    {
+      "name": "dsh-vscode-workbench",
+      "title": {
+        "en": "VSCode Workbench",
+        "zh": "VSCode 工作台"
+      },
+      "description": {
+        "en": "Add file browsing, Monaco editing, search and local Git controls to DSH.",
+        "zh": "在 DSH 中提供文件浏览、Monaco 编辑器、搜索和本地 Git 操作面板。"
+      },
+      "category": "development",
+      "version": "0.1.9",
+      "iconReview": {
+        "version": "0.1.9",
+        "integrity": "sha512-qmr/cpqhFygdVi4demV3autrw4f0NFMJTsQk1EUOoR6Nr5uM5rO8DF5zvsiDsSb38wTpPKG9VcWu1XUkJKFMFg==",
+        "commit": "3adfa5644ece6ec933b472087b8f8e003066160e",
+        "path": "assets/dsh-neon-workbench-core.svg",
+        "sha256": "59b42b57b68d3fa6339a91e340933d2dc5acf9764bd57fc828d18fb6ca3ead59"
+      }
+    },
+    {
+      "name": "dsh-web-search-enhanced",
+      "title": {
+        "en": "Enhanced Web Search",
+        "zh": "增强网页搜索"
+      },
+      "description": {
+        "en": "Search through Exa, Firecrawl, Tavily and Tinyfish, with per-session connection and freshness preferences.",
+        "zh": "集成 Exa、Firecrawl、Tavily 和 Tinyfish，支持会话级搜索连接与时效偏好。"
+      },
+      "category": "tools"
+    },
+    {
+      "name": "dsh-webui-studio",
+      "title": {
+        "en": "WebUI Studio",
+        "zh": "网页插件开发工作台"
+      },
+      "description": {
+        "en": "Edit web plugin sources, preview changes and run patch checks and builds from a workbench.",
+        "zh": "在工作台编辑网页插件源码、预览改动，并运行补丁检查和构建。"
+      },
+      "category": "development",
+      "version": "0.3.5",
+      "iconReview": {
+        "version": "0.3.5",
+        "integrity": "sha512-2zUaA97D3nzrLNf2lHZZYoD8dfVlWIhn0X9kfEUFqdmjhQVxxy8khWkmNj4XiA4pAbZBfd+3dMd1eX+kVUIltQ==",
+        "commit": "99fc12eab9185dabf0cac47f68f01efef75e96ca",
+        "path": "assets/harmony-icon.png",
+        "sha256": "ca88b9d2ba70f54aabd2fc1a4fb82af5bad175ccf0b066d105cae1524baacf8c"
+      }
+    },
+    {
+      "name": "dsh-wecom-notification",
+      "title": {
+        "en": "WeCom Notifications",
+        "zh": "企业微信提醒"
+      },
+      "description": {
+        "en": "Send WeCom group-bot messages for approvals, questions, completed tasks, blocked goals and errors.",
+        "zh": "通过企业微信群机器人提醒审批、提问、任务完成、目标阻塞和错误。"
+      },
+      "category": "integrations"
+    },
+    {
+      "name": "dsh-widgets",
+      "title": {
+        "en": "Widgets",
+        "zh": "侧边部件栏"
+      },
+      "description": {
+        "en": "Arrange session statistics, tasks, context, heatmaps, references and quota widgets in a configurable sidebar grid.",
+        "zh": "在可配置侧边网格中排列会话统计、任务、上下文、热力图、引用和额度部件。"
+      },
+      "category": "interface"
+    },
+    {
+      "name": "dsh-workbuddy-connect-functy",
+      "title": {
+        "en": "WorkBuddy Functy",
+        "zh": "WorkBuddy Functy 接入"
+      },
+      "description": {
+        "en": "Connect WorkBuddy desktop models through the Functy fork, with a dashboard, account rotation and quota display.",
+        "zh": "通过 Functy 分支接入 WorkBuddy 桌面模型，提供仪表盘、账号轮换和额度显示。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "dsh-workbuddy-hub",
+      "title": {
+        "en": "WorkBuddy Hub",
+        "zh": "WorkBuddy 模型中枢"
+      },
+      "description": {
+        "en": "Register a WorkBuddy model provider and manage account quotas, daily check-ins, rate-limit cooldowns and switching.",
+        "zh": "注册 WorkBuddy 模型提供方，管理账号额度、每日签到、限流冷却和切换。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "dsh-zed-provider",
+      "title": {
+        "en": "Zed Provider",
+        "zh": "Zed Cloud 模型"
+      },
+      "description": {
+        "en": "Use models from a Zed AI subscription through Zed Cloud and configure their credentials in DSH.",
+        "zh": "通过 Zed Cloud 使用 Zed AI 订阅提供的模型，并在 DSH 中配置凭据。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "dsh-zen-remote",
+      "title": {
+        "en": "Zen Remote",
+        "zh": "Zen 移动远程"
+      },
+      "description": {
+        "en": "Provide a mobile interface and pairing gateway, with installable PWA and push notifications through your proxy or tunnel.",
+        "zh": "提供移动界面和配对网关，通过自建反代或隧道使用可安装、带推送的 PWA。"
+      },
+      "category": "integrations",
+      "version": "2.2.5",
+      "iconReview": {
+        "version": "2.2.5",
+        "integrity": "sha512-yck1lP9SUgLwX+jOsFbjHaNNksRdybkK0dqX2m/SwObwmPVEYgR8FC4e5Ae4Br6C7HnWP370PXICdo+okA/jjg==",
+        "commit": "b9a9588afbe746d3444b7a1eff5aaa20b2732fb1",
+        "path": "pwa/icons/icon.svg",
+        "sha256": "d0c275a711a0434e210e58007dbc5dceb4b9520ed463019f697e1be2be3d621f"
+      }
+    },
+    {
+      "name": "fitmeet-dsh-plugin",
+      "title": {
+        "en": "FitMeet",
+        "zh": "FitMeet 活动协作"
+      },
+      "description": {
+        "en": "Connect FitMeet through per-user OAuth for people, activities, reminders, messages and previewed writes.",
+        "zh": "通过独立用户 OAuth 接入 FitMeet，处理找人、活动、提醒、消息和带预览的写入。"
+      },
+      "category": "integrations",
+      "version": "0.3.2",
+      "iconReview": {
+        "version": "0.3.2",
+        "integrity": "sha512-y1ya1E3WZeamDYVJvk/DrHpWu2eY+bcju90bw5S/b4Dzc5S9xNt6/0kniW96dcWAfQgJTPTDCve6osWAaQ0J9w==",
+        "commit": "4ad3e1eabb7d2c365771050b19fbfc62f9db3568",
+        "path": "assets/fitmeet-icon.png",
+        "sha256": "b8b11724d46bc88fbd2485bb3361c9f964704b76d43ee6c6f847a77d380200b7"
+      }
+    },
+    {
+      "name": "onekey-models",
+      "title": {
+        "en": "TokenDance Models",
+        "zh": "TokenDance 模型网关"
+      },
+      "description": {
+        "en": "Connect TokenDance through OAuth, control catalog visibility and expose chat, media generation and typed decision tools.",
+        "zh": "通过 OAuth 接入 TokenDance，控制模型目录显隐，提供对话、媒体生成和类型化判断工具。"
+      },
+      "category": "providers"
+    },
+    {
+      "name": "win-pilot",
+      "title": {
+        "en": "Win Pilot",
+        "zh": "Win Pilot 电脑操控"
+      },
+      "description": {
+        "en": "Control Windows apps through window targets, UI Automation, screenshots and verified input, with an isolated Chromium option.",
+        "zh": "通过窗口目标、UIA、截图和输入验证操控 Windows 应用，并可使用隔离的 Chromium。"
+      },
+      "category": "tools"
     }
   ]
 }
