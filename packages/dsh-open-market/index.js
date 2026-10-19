@@ -5,7 +5,9 @@ export const name = 'dsh-open-market';
 // Wait for the Custom plugin markets bundle; without it there is no Discover tab to add to.
 export const inject = ['pluginMarket'];
 
-export const INDEX_URL = 'https://polang233.github.io/dsh-plugin-index/index.json';
+export const INDEX_URL = 'https://dshopen.org/index.json';
+// Earlier address of the same index; a profile that already has it needs no second copy.
+const ALIASES = ['https://polang233.github.io/dsh-plugin-index/index.json'];
 const STATE_FILE = '.dsh-open-market.json';
 
 const canonical = url => URL.canParse(url) ? new URL(url).href : url;
@@ -25,7 +27,8 @@ export async function ensureIndex(market, { url = INDEX_URL, dir } = {}) {
   const seeded = Array.isArray(state.added) ? state.added : [];
   if (seeded.includes(canonical(url))) return 'skipped';
   const current = market.listIndexes().map(source => source.url);
-  const present = current.some(source => canonical(source) === canonical(url));
+  const same = new Set([url, ...(url === INDEX_URL ? ALIASES : [])].map(canonical));
+  const present = current.some(source => same.has(canonical(source)));
   if (!present) await market.setIndexes([...current, url]);
   if (dir) await writeFile(join(dir, STATE_FILE), JSON.stringify({ added: [...seeded, canonical(url)] }, null, 2) + '\n');
   return present ? 'present' : 'added';

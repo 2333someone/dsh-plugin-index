@@ -84,3 +84,28 @@ jobs:
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
           node scripts/check-published.mjs "${PAGE_URL%/}/index.json"
+
+  cloudflare:
+    needs: build
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          name: validated-index
+          path: public/
+      - name: Deploy to dshopen.org
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        run: npx -y wrangler@4.151.1 deploy --config cloudflare/wrangler.jsonc
+      - name: Check dshopen.org without redirects
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        run: node scripts/check-published.mjs https://dshopen.org/index.json

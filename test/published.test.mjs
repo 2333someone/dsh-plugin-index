@@ -8,6 +8,7 @@ function fixture({wrongIcon = false, pageRows = 1} = {}) {
   const hash = createHash('sha256').update(bytes).digest('hex');
   return async (url, options) => {
     assert.equal(options.redirect, 'error');
+    assert.equal(options.headers['user-agent'], 'dshopen-check');
     const path = new URL(url).pathname;
     if (path.endsWith('index.json')) return Response.json({format: 1, plugins: [{name: 'example', icon: 'icons/' + hash + '.svg', versions: [{version: '1.0.0'}]}]});
     if (path.endsWith('status.json')) return Response.json({packages: [{name: 'example', version: '1.0.0', checks: ['sha512-integrity', 'bundle-patch-present']}]});

@@ -2,7 +2,7 @@ import { mkdir, readFile, writeFile, copyFile } from 'node:fs/promises';
 import { githubRepository } from './github.mjs';
 import { releaseAge } from './market-display.mjs';
 
-const ORIGIN = 'https://polang233.github.io/dsh-plugin-index/';
+const ORIGIN = 'https://dshopen.org/';
 const INDEX_URL = `${ORIGIN}index.json`;
 const REPOSITORY = 'https://github.com/polang233/dsh-plugin-index';
 const DOCS = `${REPOSITORY}/blob/main/README.en.md`;

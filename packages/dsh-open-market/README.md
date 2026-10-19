@@ -1,6 +1,6 @@
 # dsh-open-market
 
-Brings [Open Plugin Market](https://polang233.github.io/dsh-plugin-index/) into DeepSeek Harness. This community plugin index puts fast-growing, actively maintained and newly published plugins first, so small developers get seen.
+Brings [Open Plugin Market](https://dshopen.org/) into DeepSeek Harness. This community plugin index puts fast-growing, actively maintained and newly published plugins first, so small developers get seen.
 
 把开放插件市场加入 DeepSeek Harness 的「发现」。推荐偏向近期增长快、更新勤、刚上架的插件，让小开发者也能被看到。
 
@@ -14,7 +14,7 @@ Brings [Open Plugin Market](https://polang233.github.io/dsh-plugin-index/) into 
 dsh plugin --profile desktop add "git+https://github.com/polang233/dsh-plugin-index.git#main&path:/packages/dsh-open-market"
 ```
 
-On the next start, `https://polang233.github.io/dsh-plugin-index/index.json` appears in **Discover**.
+On the next start, `https://dshopen.org/index.json` appears in **Discover**.
 重启后，「发现」的索引源里会出现开放插件市场。
 
 ## Behavior / 行为

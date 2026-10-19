@@ -85,3 +85,7 @@ DSH caches a successful index for ten minutes. If a custom domain is added later
 Each listed release is checked for SHA-512 integrity, matching name and version, bundle patch files and any declared `main` file. The generator records the repository, declared license and installation lifecycle script names. It does not inspect all patch references, resolve all dependencies, run an installation or audit the code.
 
 The validator is pinned to `@deepseek-ai/dsh-plugin-market-index@0.2.1-rc.2`. When updating it, rerun tests and verify the index in the target DSH release. The official [format guide](https://deepseek-harness.github.io/deepseek-harness/en/guide/plugin-market) and [reference generator](https://github.com/deepseek-ai/deepseek-harness/tree/master/apps/plugin-market-generator) describe the protocol.
+
+## dshopen.org (Cloudflare)
+
+The Worker in `cloudflare/` serves `public/` as static assets and counts reads of `index.json` in the `dshopen-stats` D1 database; see `https://dshopen.org/stats.json`. GitHub Pages stays up for the earlier address. CI deploys after each build when the `CLOUDFLARE_API_TOKEN` secret is set; otherwise run `pnpm build` and `npx wrangler deploy --config cloudflare/wrangler.jsonc`. Post-deploy checks send the `dshopen-check` user agent and are not counted.

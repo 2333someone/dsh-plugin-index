@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import {githubRepository} from '../../scripts/github.mjs';
 
-const INDEX_URL = 'https://polang233.github.io/dsh-plugin-index/index.json';
+const INDEX_URL = 'https://dshopen.org/index.json';
 for (const language of ['en', 'zh']) {
   const route = language === 'en' ? './' : './zh/';
   test(`${language}: directory filters, language navigation and layout`, async ({ page }, info) => {

@@ -35,3 +35,9 @@ test('does not duplicate an index that is already configured', async () => {
   fake.setIndexes = () => assert.fail('should not rewrite sources');
   assert.equal(await ensureIndex(fake, {}), 'present');
 });
+
+test('treats the earlier github.io address as the same index', async () => {
+  const fake = market(['https://polang233.github.io/dsh-plugin-index/index.json']);
+  fake.setIndexes = () => assert.fail('should not add a second copy');
+  assert.equal(await ensureIndex(fake, {}), 'present');
+});

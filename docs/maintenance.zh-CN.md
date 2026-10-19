@@ -85,3 +85,16 @@ DSH 默认缓存十分钟。未来绑定自有域名时，要同时更新网站�
 每个版本检查 SHA-512、包名与版本、组合包补丁及声明的 `main` 文件；记录源码地址、声明的许可证和安装生命周期脚本名称。不检查所有补丁引用、不解析完整依赖、不执行安装，也不做代码审计。
 
 官方校验器固定为 `@deepseek-ai/dsh-plugin-market-index@0.2.1-rc.2`。升级时应重新运行测试，并在目标 DSH 版本中验证接入。协议细节见[官方格式说明](https://deepseek-harness.github.io/deepseek-harness/en/guide/plugin-market)和[参考生成器](https://github.com/deepseek-ai/deepseek-harness/tree/master/apps/plugin-market-generator)。
+
+## dshopen.org（Cloudflare）
+
+`cloudflare/` 下的 Worker 直接提供 `public/` 里的静态文件，并统计 `index.json` 的读取次数（D1 数据库 `dshopen-stats`），统计结果从 `https://dshopen.org/stats.json` 查看。GitHub Pages 继续保留，旧地址的用户不受影响。
+
+CI 在仓库设置了 `CLOUDFLARE_API_TOKEN` 时，会在每次构建后自动部署。手动部署：
+
+```sh
+pnpm build
+npx wrangler deploy --config cloudflare/wrangler.jsonc
+```
+
+部署后的检查请求带 `dshopen-check` 这个 user-agent，不计入统计。

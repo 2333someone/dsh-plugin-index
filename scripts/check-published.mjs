@@ -47,7 +47,8 @@ export function checkMarketDisplay(index, github, downloads, display, publishers
 }
 
 async function readUrl(url, fetchImpl, maxBytes = 8 * 1024 * 1024) {
-  const response = await fetchImpl(url, {redirect: 'error', signal: AbortSignal.timeout(30000)});
+  // The dshopen.org Worker skips this user agent when counting index reads.
+  const response = await fetchImpl(url, {redirect: 'error', headers: {'user-agent': 'dshopen-check'}, signal: AbortSignal.timeout(30000)});
   if (!response.ok || !response.body) throw new Error('HTTP ' + response.status + ': ' + url);
   const chunks = [];
   let length = 0;

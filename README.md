@@ -2,14 +2,16 @@
 
 <img src="site/logo-256.png" alt="Open Plugin Market" width="96" align="right">
 
-[![Plugins](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpolang233.github.io%2Fdsh-plugin-index%2Findex.json&query=%24.plugins.length&label=plugins&color=2563eb)](https://polang233.github.io/dsh-plugin-index/zh/)
+[![Plugins](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdshopen.org%2Findex.json&query=%24.plugins.length&label=plugins&color=2563eb)](https://dshopen.org/zh/)
+[![Index reads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdshopen.org%2Fstats.json&query=%24.total&label=index%20reads&color=16a34a)](https://dshopen.org/stats.json)
+[![Readers 30d](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdshopen.org%2Fstats.json&query=%24.last30Days.readers&label=readers%20%2830d%29&color=0d9488)](https://dshopen.org/stats.json)
 [![Checks](https://github.com/polang233/dsh-plugin-index/actions/workflows/publish.yml/badge.svg)](https://github.com/polang233/dsh-plugin-index/actions/workflows/publish.yml)
 
 DeepSeek Harness（DSH）的社区插件市场。数据为主、推荐为主，界面保持简洁。
 
 **不按 star 论英雄。** 默认推荐以**最近增长快、更新勤、刚上架**为主，同时参考验证、下载量和 star，同一作者不会霸榜。小开发者的新作品也能出现在首屏，被更多人看到。
 
-[浏览目录](https://polang233.github.io/dsh-plugin-index/zh/) · [English](README.en.md) · [提交插件](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
+[浏览目录](https://dshopen.org/zh/) · [English](README.en.md) · [提交插件](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
 
 ![在 DSH 中浏览和安装插件](docs/images/market-in-dsh.png)
 
@@ -26,8 +28,10 @@ dsh plugin --profile desktop add "git+https://github.com/polang233/dsh-plugin-in
 **方式二：手动添加**。在 **发现 → 添加索引源** 中粘贴：
 
 ```text
-https://polang233.github.io/dsh-plugin-index/index.json
+https://dshopen.org/index.json
 ```
+
+旧地址 `https://polang233.github.io/dsh-plugin-index/index.json` 继续可用，内容相同。
 
 ## 推荐与标签
 
@@ -45,7 +49,11 @@ https://polang233.github.io/dsh-plugin-index/index.json
 
 [填写收录申请](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)，或在 [`data/sources.json`](data/sources.json) 中添加条目后提交 PR。插件需要公开源码、可安装的 npm 版本和明确的许可证，详见 [贡献指南](.github/CONTRIBUTING.md)。在 npm 包中附带自己的 Logo 会优先审核。
 
-每次构建都会核对发布包的完整性、包名、版本和组合包声明，再用官方校验器检查索引格式。包检查不代表代码审计或安装测试。[检查记录](https://polang233.github.io/dsh-plugin-index/status.json)
+每次构建都会核对发布包的完整性、包名、版本和组合包声明，再用官方校验器检查索引格式。包检查不代表代码审计或安装测试。[检查记录](https://dshopen.org/status.json)
+
+## 使用统计
+
+上面的 **index reads** 是 DSH 读取索引的总次数：每次在「发现」里打开或刷新这个市场都会读取一次（DSH 会缓存约 10 分钟）。**readers (30d)** 是近 30 天每天不同读取者的合计，按「IP + 浏览器标识」的加盐哈希按天去重，不保存 IP。明细见 [stats.json](https://dshopen.org/stats.json)。只统计 dshopen.org，旧的 github.io 地址无法统计。
 
 ## 目录结构
 
@@ -54,7 +62,8 @@ data/       收录列表 sources.json 与发布者身份 publishers.json
 scripts/    索引、指标、推荐和网站的生成脚本
 packages/   dsh-open-market 插件
 site/       网站样式与品牌素材
-public/     构建产物，发布到 GitHub Pages
+public/     构建产物，发布到 dshopen.org 和 GitHub Pages
+cloudflare/ dshopen.org 的 Worker：静态页与读取统计
 docs/       维护说明、指标说明、核查记录
 test/       单元测试与浏览器测试
 ```

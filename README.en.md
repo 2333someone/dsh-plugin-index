@@ -4,18 +4,22 @@ A community plugin market for DeepSeek Harness (DSH). It focuses on data and rec
 
 **Not a star contest.** The default order leads with plugins that are **growing fast, updated often or newly published**, also weighs verification, downloads and stars, and keeps any single developer from dominating it. New work from small developers can reach the first screen.
 
-[Browse plugins](https://polang233.github.io/dsh-plugin-index/) · [简体中文](README.md) · [Suggest a plugin](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
+[Browse plugins](https://dshopen.org/) · [简体中文](README.md) · [Suggest a plugin](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
 
 ## Use it
 
 Turn on **Custom plugin markets** under **Plugins → Experimental plugins**, then either:
 
 - **Install the plugin (recommended).** Install `dsh-open-market` from GitHub with `dsh plugin --profile desktop add "git+https://github.com/polang233/dsh-plugin-index.git#main&path:/packages/dsh-open-market"`. It adds the index to your Discover sources once. If you remove the source later, the plugin respects that.
-- **Add the source by hand.** Paste `https://polang233.github.io/dsh-plugin-index/index.json` into **Discover → Add index source**.
+- **Add the source by hand.** Paste `https://dshopen.org/index.json` into **Discover → Add index source**. The earlier `https://polang233.github.io/dsh-plugin-index/index.json` keeps working.
 
 ## Labels and sorting
 
 ✅ Verified · 🔥 Rising · ⚡ Frequent updates · ◷ four update-age buckets · ↓ seven download tiers. The *Default* order favors downloads, stars, plugins with a logo and verified plugins. *✨ Smart picks* lead with recent growth and activity. You can also sort by new stars (7 days), GitHub stars or random. The index refreshes every six hours. See [metrics](docs/market-display.md) for the formula and data sources.
+
+## Usage stats
+
+[stats.json](https://dshopen.org/stats.json) counts reads of the index on dshopen.org. DSH reads it each time Discover opens or refreshes this market, and caches it for about ten minutes. Daily readers are deduplicated by a salted hash of IP and user agent; IPs are not stored.
 
 ## Submit a plugin
 
