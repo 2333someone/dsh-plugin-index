@@ -19,9 +19,9 @@ DeepSeek Harness（DSH）的社区插件市场，数据为主、推荐为主，�
 
 [浏览目录](https://dshopen.org/zh/) · [English](README.en.md) · [提交插件](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
 
-![在 DSH「发现」里浏览开放插件市场](docs/images/dsh-discover-zh.jpg)
+![在 DSH「发现」里浏览开放插件市场](docs/images/dsh-discover-zh.webp)
 
-[![开放插件市场网站](docs/images/home-zh.png)](https://dshopen.org/zh/)
+[![开放插件市场网站](docs/images/home-zh.webp)](https://dshopen.org/zh/)
 
 ## 使用
 
@@ -29,7 +29,7 @@ DeepSeek Harness（DSH）的社区插件市场，数据为主、推荐为主，�
 
 **方式一：手动添加**。在 **发现 → 添加索引源** 中粘贴 `https://dshopen.org/index.json`。
 
-<img src="docs/images/add-index.png" alt="在「发现 → 索引源」中添加 dshopen.org 的索引地址" width="560">
+<img src="docs/images/add-index.webp" alt="在「发现 → 索引源」中添加 dshopen.org 的索引地址" width="560">
 
 **方式二：安装插件**。运行下面的命令安装 `dsh-open-market`，它会自动把索引加入「发现」的索引源。只添加一次，之后你删掉了也不会再加回来。
 

@@ -19,9 +19,9 @@ A community plugin market for DeepSeek Harness (DSH): driven by data and recomme
 
 [Browse plugins](https://dshopen.org/) · [简体中文](README.md) · [Suggest a plugin](https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin.yml)
 
-![Open Plugin Market in the DSH Discover tab](docs/images/dsh-discover-en.jpg)
+![Open Plugin Market in the DSH Discover tab](docs/images/dsh-discover-en.webp)
 
-[![The Open Plugin Market website](docs/images/home-en.png)](https://dshopen.org/)
+[![The Open Plugin Market website](docs/images/home-en.webp)](https://dshopen.org/)
 
 ## Use it
 
@@ -30,7 +30,7 @@ Switch on **Custom plugin markets** under **Plugins → Experimental plugins**, 
 - **Add the source by hand.** Paste `https://dshopen.org/index.json` into **Discover → Add index source**. The earlier `https://polang233.github.io/dsh-plugin-index/index.json` still works.
 - **Install the plugin.** `dsh plugin --profile desktop add "git+https://github.com/polang233/dsh-plugin-index.git#main&path:/packages/dsh-open-market"` installs `dsh-open-market`, which adds the source for you once. Remove it later and it stays removed.
 
-<img src="docs/images/add-index.png" alt="Adding the dshopen.org index URL under Discover → Index sources" width="560">
+<img src="docs/images/add-index.webp" alt="Adding the dshopen.org index URL under Discover → Index sources" width="560">
 
 ## Labels and sorting
 

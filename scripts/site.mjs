@@ -20,7 +20,7 @@ const COPY = {
     intro: 'DeepSeek Harness is built around plugins, yet it ships no list or recommendations for community ones. The October 15 update added an official plugin market: paste one index JSON and you can browse and install community plugins without downloading anything by hand. So we built this index.',
     address: 'Index URL', copy: 'Copy URL', copyTitle: 'Click to copy',
     copied: 'Copied', copySuccess: 'URL copied. Open DSH and add it as an index source.', copyFailure: 'The address is selected. Press Ctrl+C or ⌘C, or use the selection menu to copy it.',
-    showcase: { title: 'How it looks in DSH', text: 'Stars aren\'t everything here. The default picks refresh every day and put fast-growing, actively shipped, genuinely good plugins first, with verification, downloads and stars as supporting signals.', points: ['No single author can flood the list, so a newcomer can make the first screen', 'Rising, Frequent updates and Verified labels at a glance', 'Default order, ✨ Smart picks and Random: every visit turns up something new'], hint: 'Hover the screenshot to switch to the light theme', image: 'dsh-discover-en.jpg', alt: 'The Discover tab of DeepSeek Harness listing Open Plugin Market plugins with labels and install buttons' },
+    showcase: { title: 'How it looks in DSH', text: 'Stars aren\'t everything here. The default picks refresh every day and put fast-growing, actively shipped, genuinely good plugins first, with verification, downloads and stars as supporting signals.', points: ['No single author can flood the list, so a newcomer can make the first screen', 'Rising, Frequent updates and Verified labels at a glance', 'Default order, ✨ Smart picks and Random: every visit turns up something new'], hint: 'Hover the screenshot to switch to the light theme', image: 'dsh-discover-en.webp', alt: 'The Discover tab of DeepSeek Harness listing Open Plugin Market plugins with labels and install buttons' },
     zoom: 'Enlarge screenshot', close: 'Close', stepAlts: ['The Custom plugin markets switch under Plugins → Experimental plugins', 'The Add index source button in Discover', 'The index source dialog with the dshopen.org URL and the Add button'],
     setup: 'Quick start', steps: [
       ['Turn on the market', 'Plugins → Experimental → Custom plugin markets'],
@@ -46,7 +46,7 @@ const COPY = {
     intro: 'DeepSeek Harness 以插件为核心，但官方没有提供社区插件的推荐和列表。10 月 15 日的更新加入了官方插件市场，填入一个索引 JSON 就能浏览和安装社区插件，不用再单独下载处理，方便了很多，于是我们做了这份索引。',
     address: '索引地址', copy: '复制地址', copyTitle: '点击复制',
     copied: '已复制', copySuccess: '地址已复制。打开 DSH，把它添加为索引源。', copyFailure: '地址已选中。按 Ctrl+C 或 ⌘C，或使用选中文字的菜单复制。',
-    showcase: { title: '在 DSH 里的样子', text: '不唯 star 🌟 论。默认推荐每天更新，以最近增长快、更新勤、优质的插件为主，同时参考验证、下载量和 star。', points: ['同一作者不会霸榜，小开发者的新作品也能上首屏', '增长快、更新勤、经过验证等标签一眼可见', '默认排序、✨ 智能推荐和随机，每次都有新发现'], hint: '鼠标移到截图上，切换成浅色主题看看', image: 'dsh-discover-zh.jpg', alt: 'DeepSeek Harness 的「发现」页面，列出开放插件市场的插件、标签和安装按钮' },
+    showcase: { title: '在 DSH 里的样子', text: '不唯 star 🌟 论。默认推荐每天更新，以最近增长快、更新勤、优质的插件为主，同时参考验证、下载量和 star。', points: ['同一作者不会霸榜，小开发者的新作品也能上首屏', '增长快、更新勤、经过验证等标签一眼可见', '默认排序、✨ 智能推荐和随机，每次都有新发现'], hint: '鼠标移到截图上，切换成浅色主题看看', image: 'dsh-discover-zh.webp', alt: 'DeepSeek Harness 的「发现」页面，列出开放插件市场的插件、标签和安装按钮' },
     zoom: '放大截图', close: '关闭', stepAlts: ['「插件 → 实验性插件」中的「自定义插件市场」开关', '「发现」里的「添加索引源」按钮', '填好 dshopen.org 地址的索引源窗口和「添加」按钮'],
     setup: '最简单使用教程', steps: [
       ['开启市场', '插件 → 实验性插件 → 自定义插件市场'],
@@ -66,7 +66,7 @@ const COPY = {
 };
 
 // Real DSH screenshots for the three steps, each cropped around the highlighted control.
-const GUIDE_SIZES = { zh: [[768, 472], [800, 476], [904, 448]], en: [[768, 508], [874, 476], [904, 448]] };
+const GUIDE_SIZES = { zh: [[768, 472], [800, 476], [900, 446]], en: [[768, 508], [874, 476], [900, 446]] };
 const GUIDE_THEME = process.env.GUIDE_THEME === 'dark' ? 'dark' : 'light';
 const SIGNALS = ['verified', 'trending', 'active'];
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -124,7 +124,7 @@ function pluginRow(plugin, language, categories, text, snapshot, root, downloads
   const namedTitle = title && title !== name;
   const icon = typeof plugin.icon === 'string' && /^icons\/[a-f0-9]{64}\.(?:svg|png|jpg|webp)$/.test(plugin.icon) ? root + plugin.icon : undefined;
   // Plugins without their own logo get the market's whale girl, peeking side to side.
-  const avatar = icon ? `<img src="${esc(icon)}" alt="" width="44" height="44" loading="lazy" decoding="async">` : `<img class="avatar-placeholder" style="--peek-delay: -${(position % 7) * 0.45}" src="${root}assets/placeholder-whale.png" alt="" width="54" height="54" loading="lazy" decoding="async">`;
+  const avatar = icon ? `<img src="${esc(icon)}" alt="" width="44" height="44" loading="lazy" decoding="async">` : `<img class="avatar-placeholder" style="--peek-delay: -${(position % 7) * 0.45}" src="${root}assets/placeholder-whale.webp" alt="" width="54" height="54" loading="lazy" decoding="async">`;
   // Sort values mirror the index's sort keys so the website offers the same orders as DSH.
   const keys = plugin.metadata?.sortKeys ?? {};
   const sortData = [['order', position], ['recommended', keys.recommended], ['stars', keys['github-stars']], ['stars-week', keys['stars-week']], ['published', version?.publishTimestamp]]
@@ -222,14 +222,14 @@ function page(index, evidence, language, snapshot, downloads, display) {
         <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
       </div>
       </div>
-      <div class="hero-art" aria-hidden="true"><div class="art-blob"></div><img src="${root}assets/logo.png" alt="" width="560" height="560" decoding="async">${stickers}</div>
+      <div class="hero-art" aria-hidden="true"><div class="art-blob"></div><img src="${root}assets/logo.webp" alt="" width="560" height="560" decoding="async">${stickers}</div>
       <h2 class="section-title steps-title" id="setup-title" data-reveal>${esc(text.setup)}</h2>
-      <ol class="steps" aria-labelledby="setup-title" data-guide="${GUIDE_THEME}">${text.steps.map(([title, detail], at) => `<li data-reveal data-zoom-card style="--reveal-delay: ${at * 90}ms"><h3><span class="step-num" aria-hidden="true">${at + 1}</span>${esc(title)}</h3><button type="button" class="step-shot" data-zoom aria-label="${esc(text.zoom)}: ${esc(title)}"><img src="${root}assets/guide-${at + 1}-${language}-${GUIDE_THEME}.jpg" alt="${esc(detail)}" title="${esc(detail)}" width="${GUIDE_SIZES[language][at][0]}" height="${GUIDE_SIZES[language][at][1]}" loading="lazy" decoding="async"></button></li>`).join('')}</ol>
+      <ol class="steps" aria-labelledby="setup-title" data-guide="${GUIDE_THEME}">${text.steps.map(([title, detail], at) => `<li data-reveal data-zoom-card style="--reveal-delay: ${at * 90}ms"><h3><span class="step-num" aria-hidden="true">${at + 1}</span>${esc(title)}</h3><button type="button" class="step-shot" data-zoom aria-label="${esc(text.zoom)}: ${esc(title)}"><img src="${root}assets/guide-${at + 1}-${language}-${GUIDE_THEME}.webp" alt="${esc(detail)}" title="${esc(detail)}" width="${GUIDE_SIZES[language][at][0]}" height="${GUIDE_SIZES[language][at][1]}" loading="lazy" decoding="async"></button></li>`).join('')}</ol>
     </section>
     <section class="directory-surface" id="plugins" aria-labelledby="directory-title">
     <section class="showcase shell" aria-labelledby="showcase-title">
       <div class="showcase-copy" data-reveal><h2 class="section-title" id="showcase-title">${esc(text.showcase.title)}</h2><p>${esc(text.showcase.text)}</p><ul>${text.showcase.points.map(point => `<li>${esc(point)}</li>`).join('')}</ul></div>
-      <figure class="app-frame" data-reveal><div class="app-bar" aria-hidden="true"><span></span><span></span><span></span></div><picture><source media="(max-width: 620px)" srcset="${root}assets/${text.showcase.image.replace('.jpg', '-narrow.jpg')}" width="800" height="1028"><img src="${root}assets/${text.showcase.image}" alt="${esc(text.showcase.alt)}" width="1600" height="1000" loading="lazy" decoding="async"></picture><picture class="app-light"><source media="(max-width: 620px)" srcset="${root}assets/${text.showcase.image.replace('.jpg', '-narrow-light.jpg')}"><img src="${root}assets/${text.showcase.image.replace('.jpg', '-light.jpg')}" alt="" width="1600" height="1000" loading="lazy" decoding="async"></picture></figure>
+      <figure class="app-frame" data-reveal><div class="app-bar" aria-hidden="true"><span></span><span></span><span></span></div><picture><source media="(max-width: 620px)" srcset="${root}assets/${text.showcase.image.replace('.webp', '-narrow.webp')}" width="800" height="1028"><img src="${root}assets/${text.showcase.image}" alt="${esc(text.showcase.alt)}" width="1600" height="1000" loading="lazy" decoding="async"></picture><picture class="app-light"><source media="(max-width: 620px)" srcset="${root}assets/${text.showcase.image.replace('.webp', '-narrow-light.webp')}"><img src="${root}assets/${text.showcase.image.replace('.webp', '-light.webp')}" alt="" width="1600" height="1000" loading="lazy" decoding="async"></picture></figure>
     </section><div class="directory-zone"><div class="directory shell">
       <div class="directory-heading" data-reveal><h2 class="section-title" id="directory-title">${esc(text.directory)}</h2></div>
       <div class="directory-meta"><ul class="stats"><li><strong>${plugins.length}</strong> ${esc(text.statPlugins)}</li><li><strong>${usedCategories.length}</strong> ${esc(text.statCategories)}</li>${updated ? `<li>${esc(text.updated)} <strong>${esc(updated)}</strong></li>` : ''}</ul></div>
@@ -277,7 +277,7 @@ export async function writeSite(index, evidence, snapshot = {}, downloads = {}, 
   if (index?.format !== 1 || !Array.isArray(index.plugins)) throw new Error('writeSite expects a format-1 plugin index');
   await mkdir(new URL('assets/', output), { recursive: true });
   await mkdir(new URL('zh/', output), { recursive: true });
-  for (const asset of ['site.css', 'site.js', 'logo.png', 'logo-256.png', 'favicon.png', 'apple-touch-icon.png', 'placeholder-whale.png', 'social.png', 'social-zh.png', 'dsh-discover-zh.jpg', 'dsh-discover-en.jpg', 'dsh-discover-zh-narrow.jpg', 'dsh-discover-en-narrow.jpg', 'dsh-discover-zh-light.jpg', 'dsh-discover-en-light.jpg', 'dsh-discover-zh-narrow-light.jpg', 'dsh-discover-en-narrow-light.jpg', ...[1, 2, 3].flatMap(n => ['zh', 'en'].flatMap(lang => ['light', 'dark'].map(theme => `guide-${n}-${lang}-${theme}.jpg`)))]) {
+  for (const asset of ['site.css', 'site.js', 'logo.webp', 'logo-256.png', 'favicon.png', 'apple-touch-icon.png', 'placeholder-whale.webp', 'social.png', 'social-zh.png', ...['zh', 'en'].flatMap(lang => ['', '-light', '-narrow', '-narrow-light'].map(kind => `dsh-discover-${lang}${kind}.webp`)), ...[1, 2, 3].flatMap(n => ['zh', 'en'].flatMap(lang => ['light', 'dark'].map(theme => `guide-${n}-${lang}-${theme}.webp`)))]) {
     await copyFile(new URL(asset, source), new URL(`assets/${asset}`, output));
   }
   await writeFile(new URL('index.html', output), page(index, evidence, 'en', snapshot, downloads, display).replace(/[\t ]+$/gm, ''), 'utf8');

@@ -102,3 +102,7 @@ npx wrangler deploy --config cloudflare/wrangler.jsonc
 ```
 
 部署后的检查请求带 `dshopen-check` 这个 user-agent，不计入统计。
+
+## 图片
+
+原图放在 `site/originals/` 和 `docs/images/originals/`，网站和 README 实际加载的是同名的无损 WebP（按显示尺寸缩放）。替换或新增原图后运行 `node scripts/optimize-images.mjs` 重新生成（需要 `sharp`，可用 `npm i --no-save sharp` 临时安装）。
