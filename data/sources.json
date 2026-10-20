@@ -2307,6 +2307,18 @@
       "category": "memory"
     },
     {
+      "name": "dsh-mobile-web",
+      "title": {
+        "en": "Pocket DSH",
+        "zh": "掌上 dsh"
+      },
+      "description": {
+        "en": "Full chat UI for phones: 6-digit pairing, live session mirroring over SSE, approvals and streaming replies, LAN or reverse-proxy access, installable as a PWA.",
+        "zh": "手机端完整聊天界面：6 位码配对、SSE 实时跟随会话、审批与流式回复，支持局域网或公网反代，可装成 PWA。"
+      },
+      "category": "integrations"
+    },
+    {
       "name": "dsh-model-context-catalog",
       "title": {
         "en": "dsh-model-context-catalog",
